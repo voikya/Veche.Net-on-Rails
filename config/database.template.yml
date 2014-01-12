@@ -1,0 +1,27 @@
+mysql: &mysql
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *mysql
+  database: veche
+  username: veche-net
+  password:
+  host: localhost
+
+test:
+  <<: *mysql
+  database: veche-test
+  username: veche-net
+  password:
+  host: localhost
+
+production:
+  <<: *mysql
+  database: veche
+  username: veche-net
+  password:
+  host: localhost
