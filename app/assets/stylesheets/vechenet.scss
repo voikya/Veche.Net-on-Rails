@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+}
+
+body.vechenet {
+  position: relative;
+  text-align: center;
+  min-height: 100%;
+  margin: 0 auto;
+  background-image: image-url('vechenet-bg.png');
+  height: 100%;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+
+  #container {
+    min-height: 90%;
+    margin: 0 auto -3em;
+    margin-bottom: 3em;
+  }
+
+  #title {
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+  }
+
+  #buttonframe {
+    position: relative;
+    margin: 0 auto;
+    top: 150px;
+    width: 675px;
+    text-align: left;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .button {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    margin-bottom: 10px;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 3px 3px 4px #333;
+  }
+
+  .col1 {
+    float: left;
+  }
+
+  .col2 {
+    float: right;
+  }
+
+  #textdiv {
+    position: relative;
+    top: 30px;
+    margin: 0 8%;
+    padding: 60px 15px 15px 15px;
+    background-color: rgb(204, 204, 255);
+    background-color: rgba(204, 204, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px #333;
+    z-index: 10;
+  }
+
+  #textdivcontents {
+    text-align: left;
+    font-size: small;
+  }
+
+  #footer {
+    position: relative;
+    width: 100%;
+    height: 3em;
+    font-size: small;
+    color: white;
+  }
+
+  #hidden {
+    position: absolute;
+    height: 1px;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  h2 {
+    font-size: large;
+    color: #03C;
+  }
+
+  h3 {
+    font-size: medium;
+    color: #03C;
+    font-style: italic;
+  }
+
+  a {
+    &:link, &:visited {
+      color: #03C;
+      text-decoration: none;
+    }
+
+    &:hover, &:active {
+      color: #900;
+      text-decoration: underline;
+    }
+  }
+
+  span.date {
+    font-weight: bold;
+  }
+}
