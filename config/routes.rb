@@ -9,6 +9,7 @@ VecheNet::Application.routes.draw do
 
   scope 'novegradian', :module => :grammars do
     get '/' => 'novegradian#index', :as => 'novegradian_index'
+    get '/:page' => 'novegradian#show', :as => 'novegradian_grammar_page'
   end
 
   scope 'ochets', :module => :grammars do

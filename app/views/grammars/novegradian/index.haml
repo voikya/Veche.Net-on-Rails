@@ -1,0 +1,57 @@
+- content_for :title, "Grammar of the Novegradian Language"
+- content_for :section_title do
+  Grammar of the Novegradian Language
+  %br
+  Граматика Лизика Новеградескаево
+
+= image_tag 'novegradian/cover.png', :id => 'coverart', :alt => "A Reference Grammar of the Novegradian Language"
+
+%h2 E-Book
+%p The most current version of the Novegradian grammar is available as a pdf e-book here:
+%p
+  = link_to "Reference Grammar of the Novegradian Language", "http://cl.ly/3f3E2G2K0j05/novegradian_web.pdf"
+  (3.3 MB)
+%p &nbsp;
+%p Otherwise, the entire text of the grammar may be browsed online.
+%p &nbsp;
+
+%h2 Online Index of Topics
+%p a. #{link_to "Foreword", novegradian_grammar_page_path(:foreword)}
+%p b. #{link_to "Abbreviations", novegradian_grammar_page_path(:abbreviations)}
+%p 1. #{link_to "Background", novegradian_grammar_page_path(:background)} - Introduction, Relationships, History
+%p 2. #{link_to "Phonology", novegradian_grammar_page_path(:phonology)} - Vowels, Consonants, Allophony, Constraints, Stress
+%p 3. #{link_to "Writing", novegradian_grammar_page_path(:writing)} - Alphabet, Spelling Rules, Foreign Loans
+%p 4. #{link_to "Verbal Morphology", novegradian_grammar_page_path(:verbalmorphology)} - Tenses, Aspects, Conjugation, Participles, Adverbials
+%p 5. #{link_to "Nominal Morphology", novegradian_grammar_page_path(:nominalmorphology)} - Gender, Cases, Declensions, Topicalization
+%p 6. #{link_to "Adjectival Morphology", novegradian_grammar_page_path(:adjectivalmorphology)} - Short Form Adjectives, Topicalized Adjectives, Comparatives, Superlatives
+%p 7. #{link_to "Numerals", novegradian_grammar_page_path(:numerals)} - Cardinals, Ordinals, Animacy
+%p 8. #{link_to "Pronouns", novegradian_grammar_page_path(:pronouns)} - Personal pronouns, Declension, Possessives, Interrogatives, Correlatives
+%p 9. #{link_to "Names", novegradian_grammar_page_path(:names)} - Family names, Patronymics
+%p 10. #{link_to "Derivational Morphology", novegradian_grammar_page_path(:derivation)} - Nominalization, Adjectivalization, Verbalization, Adverbialization, Loaning
+%p 11. #{link_to "Verbal Syntax", novegradian_grammar_page_path(:verbsyntax)} - The Use of the Verb
+%p 12. #{link_to "Nominal Syntax", novegradian_grammar_page_path(:nounsyntax)} - The Use of the Noun
+%p 13. #{link_to "Adjectival and Adverbial Syntax", novegradian_grammar_page_path(:adjectivesyntax)} - The Use of the Adjective, Numbers, The Use of the Adverb
+%p 14. #{link_to "Topicalization", novegradian_grammar_page_path(:topicalization)} - Topic Reference, Topic Change, Examples
+%p 15. #{link_to "Pronominal Syntax", novegradian_grammar_page_path(:pronominalsyntax)} - The Use of the Pronoun
+%p 16. #{link_to "Prepositions", novegradian_grammar_page_path(:prepositions)} - Use, Form, Case Governance
+%p 17. #{link_to "Clauses and Conjunctions", novegradian_grammar_page_path(:conjunctions)} - Coordinating Conjunctions, Subordinating Conjunctions, Reduplication
+%p 18. #{link_to "Questions", novegradian_grammar_page_path(:questions)} - Interrogative Syntax, Echo Questions, Element Extraction
+%p 19. #{link_to "Reported Speech", novegradian_grammar_page_path(:reportedspeech)} - Statements, Commands, Requests, Questions
+%p 20. #{link_to "Discourse Markers", novegradian_grammar_page_path(:discoursemarkers)} - Affirmation, Correction, Mood, Deixis
+%p 21. #{link_to "Emphasis and Word Order", novegradian_grammar_page_path(:emphasis)} - Emphatic Particles, Word Order, Interaction with Topicalization
+%p 22. #{link_to "Spoken Novegradian", novegradian_grammar_page_path(:spoken)} - Reduction, Colloquial Language, New Formations
+%p 23. #{link_to "Dialects", novegradian_grammar_page_path(:dialecs)} - Regional Varieties, Sound Correspondences, Foreign Influences
+%p 24. #{link_to "Historical Phonology and Morphology", novegradian_grammar_page_path(:history)} - Sound Changes, Grammar Changes
+%p 25. #{link_to "Appendices", novegradian_grammar_page_path(:appendices)} - Colors, Time and Date, Kinship, Punctuation, Common Slavic Morphology
+
+%p &nbsp;
+
+%h2 Lexicon
+%p
+  = link_to "Novegradian Lexicon and Dictionary", lexicon_path(:language => :novegradian)
+  (online)
+
+%p &nbsp;
+%p &nbsp;
+%p= link_to "Return to Government Page", government_index_path(:lang => :en)
+%p= link_to "Return to Main Veche.Net Page", root_path

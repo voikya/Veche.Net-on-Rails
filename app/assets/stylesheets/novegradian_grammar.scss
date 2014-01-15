@@ -1,0 +1,54 @@
+$background_color: #D6E1F2;
+$header_color: #990033;
+$divider_color: #3159C5;
+$footer_color: #1171A4;
+$link_color: #3159C5;
+$table_border_bottom_right: #C6D1E2;
+$table_border_top_left: #B6C1D2;
+
+body.grammar.novegradian {
+  background-color: $background_color;
+  background-image: image-url('novegradian/bg.png');
+
+  #footer {
+    color: $footer_color;
+  }
+
+  h1 {
+    color: $header_color;
+  }
+
+  a {
+    color: $link_color;
+  }
+
+  hr {
+    border-top: 3px solid $divider_color;
+    border-bottom: 1px solid $divider_color;
+
+    &.footnote {
+      border: solid 1px $divider_color;
+    }
+  }
+
+  td.label, td.arrow, th {
+    background-color: $background-color;
+  }
+
+  table {
+    border: solid 3px $background_color;
+    border-bottom: solid 2px $table_border_bottom_right;
+    border-right: solid 2px $table_border_bottom_right;
+    border-top: solid 2px $table_border_top_left;
+    border-left: solid 2px $table_border_top_left;
+
+    &.textgloss {
+      border: dotted 1px $table_border_top_left;
+      border-left: solid 5px $table_border_top_left;
+    }
+
+    &.header {
+      color: $header_color;
+    }
+  }
+}
