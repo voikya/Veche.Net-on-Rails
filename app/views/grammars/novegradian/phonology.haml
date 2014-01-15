@@ -1,0 +1,486 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Вонољогя"
+
+= render :partial => 'navigation'
+
+= section "Vowels" do
+  = section "Phonemes" do
+    %p Novegradian has seven phonemic vowels, although only six natively, as shown in the table below.
+    %table
+      %tr
+        %th
+        %th Front
+        %th Central
+        %th Back
+      %tr
+        %th High
+        %td i
+        %td (ɨ)
+        %td u
+      %tr
+        %th Mid
+        %td e
+        %td
+        %td o
+      %tr
+        %th Low
+        %td æ
+        %td
+        %td a
+    %p Note that /o/ and /u/ are obligatorily lip-rounded.
+    %p The low front vowel /æ/ represents the yat, a vowel lost in the standard forms of most other Slavic languages (although sometimes present in dialectical variants). Its actual realization in Novegradian is higher than the cardinal [æ], though still lower than /e/. The vowel /ɨ/ is only found in loanwords from Uralic languages or Russian, never in native words.
+    %p In addition to the above vowels, the following diphthongs in /j/ or /w/ are acceptable: /aj ej oj uj æj ij aw ew ow uw æw iw/.
+
+  = section "Allophones" do
+    = section "Stressed Vowels" do
+      %p Stressed vowels show relatively little variation. There are, however, two positions in which slight changes may occur.
+      %ol
+        %li Word-finally, the mid-level vowels tend to lower slightly. /e/ becomes [ɛ] and /o/ becomes [ɔ]. In some dialects, /o/ may further lower to [ɒ].
+        %li Word-initially, /e/, /æ/, and /o/ may acquire glides, becoming [je], [jæ], and [wo] respectively. This is more prominent on /e/ and /æ/ than on /o/. Unlike in Russian, this also applies to foreign loans.
+
+    = section "Unstressed Vowels" do
+      %p Unstressed vowels tend to be shorter than stressed vowels, and show a clear loss in quality.
+      %ul
+        %li /i u/ - The high vowels change very little, although word-finally they centralize toward (though not all the way to) [ɪ] and [ʊ], respectively. This also occurs before nasal consonants.
+        %li /ɨ/ - Like the other high vowels, it generally changes very little. Word-finally or before nasals, it may either not reduce at all or centralize toward [ɘ]. Both are considered acceptable as long as the speaker is consistent, although the latter pronunciation is becoming increasingly rare.
+        %li /a/ - Pronounced as schwa [ə] in all positions when unstressed.
+        %li /o/ - Word-initially, it acquires a glide as it does when stressed, though it is much weaker than the stressed version. Elsewhere, there is little discernable reduction in the standard.
+        %li /e/ - Word-initially, it acquires a glide as it does when stressed. It is pronounced [e] when word-final or before non-word-final /r l ɫ/, and as [ɛ] elsewhere.
+        %li /æ/ - Pronounced [i~ɪ] when unstressed, merging completely with /i/ (although in initial position it retains the initial [j] glide).
+      %p The vocalic element of each of the diphthongs is subject to the same reductions when unstressed.
+
+    = section "Summary of Vowel Allophony" do
+      %table
+        %tr
+          %th
+          %th /a/
+          %th /e/
+          %th /i/
+          %th /æ/
+          %th /o/
+          %th /u/
+          %th /ɨ/
+        %tr
+          %th Initial Stressed
+          %td a
+          %td jɛ, je
+          %td i
+          %td jæ
+          %td wo
+          %td u
+          %td ɨ
+        %tr
+          %th Medial Stressed
+          %td a
+          %td ɛ, e
+          %td i
+          %td æ
+          %td o
+          %td u
+          %td ɨ
+        %tr
+          %th Final Stressed
+          %td a
+          %td ɛ
+          %td i
+          %td æ
+          %td ɔ
+          %td u
+          %td ɨ
+        %tr
+          %th Initial Unstressed
+          %td ə
+          %td jɛ, je
+          %td i, ɪ
+          %td ji, jɪ
+          %td u̯o
+          %td u, ʊ
+          %td ɨ
+        %tr
+          %th Medial Unstressed
+          %td ə
+          %td ɛ, e
+          %td i, ɪ
+          %td i, ɪ
+          %td o
+          %td u, ʊ
+          %td ɨ
+        %tr
+          %th Final Unstrssed
+          %td ə
+          %td e
+          %td ɪ
+          %td ɪ
+          %td o
+          %td ʊ
+          %td ɨ, ɘ
+
+= section "Consonants" do
+  = section "Phoneme Summary" do
+    %p The Novegradian consonant inventory is summarized in the following table:
+    %table
+      %tr
+        %th
+        %th Labial
+        %th Dental
+        %th Post-<br>Alveolar
+        %th Palatal
+        %th Velar
+      %tr
+        %th Plosive
+        %td p b
+        %td t d
+        %td
+        %td c ɟ
+        %td k g
+      %tr
+        %th Fricative
+        %td β
+        %td s z
+        %td
+        %td ç ʝ
+        %td x γ
+      %tr
+        %th Pal. Fric.
+        %td
+        %td sʲ zʲ
+        %td
+        %td
+        %td
+      %tr
+        %th Nasal
+        %td m
+        %td n
+        %td
+        %td ɲ
+        %td
+      %tr
+        %th Affricate
+        %td
+        %td ts dz
+        %td (tʃ)
+        %td
+        %td
+      %tr
+        %th Other
+        %td w
+        %td r l ɫ
+        %td
+        %td j
+        %td
+  
+  = section "Plosives" do
+    %p Novegradian has eight plosive consonants. These are spread over four points of articulation (labial, dental, palatal, and velar), each distinguishing a voiceless and voiced stop: /p b t d c ɟ k g/. All plosives are pronounced unaspirated in all positions except word-finally, where they can acquire a slight aspiration. The voiced stops /b d ɟ g/ all devoice to [p t c k] word-finally as well.
+    %p The dental and velar consonants /t d k g/ become palatalized to [tʲ dʲ kʲ gʲ] before stressed front vowels as well as before /j/. This can be accompanied by a weak friction (i.e., [t<sup>s</sup>ʲ d<sup>z</sup>ʲ k<sup>x</sup>ʲ g<sup>γ</sup>ʲ]), though full affricatization is non-standard and widely considered uneducated.
+    %p Before the rounded vowels /o u/, all plosives become slightly labialized.
+    %p The exact realization of the palatal consonants /c ɟ/ varies quite a bit. [c ɟ] are considered the most proper forms, although the palatalized velars [kʲ gʲ] are generally regarded as an acceptable variant, particularly in regions where Novegradian is still widely learned as a second language, as in parts of Estonia, Finland, Karelia, and Komi; in these areas /c ɟ/ therefore are not distinguished from /k g/ before stressed front vowels.
+    %p In regions where the [c ɟ] pronunciations are standard, there is often a slight affricatization occurring before any stressed vowel: [c<sup>ç</sup> ɟ<sup>ʝ</sup>]. Word-finally, [c] is still the preferred realization, although it is very common for the preceding vowel to acquire a slight offglide: /ac aɟ/ [a(ɪ̯)c a(ɪ̯)c]. In [kʲ gʲ] regions, the palatalization is completely lost and the glide is mandatory: /ac aɟ/ [aɪ̯k aɪ̯k].
+
+  = section "Fricatives" do
+    %p Novegradian has a total of nine fricative consonants: /β s z sʲ zʲ x γ/. However, their distribution is asymmetric and many have a relatively complex system of allophones that overlap with other phonemes.
+    %p The dental fricatives /s z/ are the least problematic. Although frequently called “dental”, they are in fact laminal alveolar consonants; the traditional classification is mostly one of convenience, perhaps influenced by the fact that the tip of the tongue usually ends up pressed against the back of the lower teeth. Like other dental consonants, they palatalize to [s̻ʲ z̻ʲ] before stressed front vowels, and /z/ devoices to [s̻] word-finally.
+    %p However, confusingly, /sʲ zʲ/ are also considered phonemes in Novegradian. They are pronounced virtually identically to the palatalized allophones of /s z/, and so /s z/ and /sʲ zʲ/ naturally do not contrast before stressed front vowels. However, /sʲ zʲ/ remain palatalized in all cases, and can occur in unstressed syllables and word-finally as well. Without looking at the etymology of a word, the easiest way to tell whether a given [s̻ʲ z̻ʲ] before a stressed front vowel represents /s z/ or /sʲ zʲ/ is to look at other forms of the word where that vowel is either no longer front or the stress has shifted off of it; if the fricatives are still palatalized, then they represent /sʲ zʲ/.
+    %p Like other voiced/voiceless pairs, /zʲ/ devoices to [s̻ʲ] word-finally.
+    %p Immediately before or after an oral plosive, /sʲ zʲ/ are pronounced as postalveolar fricatives [ʃ ʒ]. This also occurs before nasal consonants, but only word-initially, so long as the nasal itself is not palatalized due to a following stressed front vowel; for instance, /ˈsʲna/ [ˈʃna], but /ˈsʲne/ [sʲnʲe].
+    %p The palatal fricatives /ç ʝ/, like the palatal plosives, have two different regional standards regarding their pronunciation. The most common is as true palatal fricatives [ç ʝ]; this one is universally regarded as correct. However, in the same areas where palatal plosives are realized as palatalized velar plosives, these two fricatives will typically be pronounced [xʲ γʲ]; this is considered acceptable in the regions in which it occurs, but is frequently derided by those who pronounce these two consonants as true palatals.
+    %p As with the palatal plosives, [ç ʝ] dialects may insert a palatal glide beforehand when word-final, although this is much less frequent than with the plosives (to the point that some speakers view it as hypercorrection, especially from those who natively use [xʲ γʲ]). In [xʲ γʲ] dialects, however, the glide remains mandatory: /aç aʝ/ [aɪ̯x aɪ̯x]. In all dialects /ʝ/ devoices when word-final, whatever its realization may be.
+    %p The velar fricatives /x γ/ may appear to be a typical voiceless/voiced pair at first glance, but their behavior suggests otherwise. As with the velar plosives, /x/ palatalizes to [xʲ] before stressed front vowels, but /γ/ lenites to little more than a palatal glide [j]. Word-finally, /γ/ also lenites to [j] rather than devoicing to [x]. On the other hand, in certain morphologically-induced environments that trigger allomorphic voicing (to be discussed later), /x/ does voice to /γ/. Perhaps, then, it could be said that /γ/ is the voiced counterpart of /x/, but [x] not the voiceless counterpart of /γ/.
+    %p The voiced bilabial fricative /β/ is the sole unpaired fricative, and with the possible exception of /γ/ it doesn’t behave at all like any of the other fricatives. Whenever it comes in contact with another consonant (with the inconsistent exceptions of the liquids /r l/ and the glide /j/) it lenites to [w]; it does the same word-finally. In rapid speech it may become [w] in <em>all</em> positions except utterance-initially.
+
+  = section "Nasals" do
+    %p There are three nasal consonants in Novegradian: /m n ɲ/. For the most part these consonants are consistent in their pronunciation. /n/, like other dental consonants, becomes palatalized [nʲ] before stressed front vowels. The palatal nasal /ɲ/ is pronounced [ɲ] in all dialects; the realization [nʲ] is not permitted by any standard, although it nevertheless may occasionally be heard.
+
+  = section "Affricates" do
+    %p Novegradian has two native affricates, /ts dz/, and one loan affricate, /tʃ/. All of these behave as though they were a single consonant; this can be emphasized by writing a tiebar above them in phonetic transcription, although for the sake of simplicity this will not be done here unless it is necessarily to contrast the affricates /t͡s d͡z/ from the sequences of discrete phonemes /ts dz/. The affricates /t͡s d͡z/ do in fact contrast with /ts dz/; in the former, the fricative serves as the plosive’s release, while in the latter the plosive has a separate release that occurs before the fricative phoneme begins to be articulated. As with other paired phonemes, /dz/ also devoices to /ts/ when word-final.
+    %p Unlike the other dental consonants, /ts dz/ usually do not become palatalized before front vowels.
+    %p The postalveolar affricate /tʃ/ is only found in loanwords, particularly from Russian and various Western European languages, and is Novegradian’s only post-alveolar phoneme. It is fairly consistently pronounced [tʃ], although the alveolo-palatal pronunciation [tɕ] is common in southern dialects.
+
+  = section "Liquids and Glides" do
+    %p Novegradian has three liquid consonants (two laterals and one rhotic) and two glides.
+    %p The two laterals are the plain dental /l/ (or “clear L”) and the velarized dental /ɫ/ (or “dark L”). The plain /l/ is often pronounced noticeably palatalized, as [lʲ], even when not in a front vowel environment. Before stressed front vowels, it tends to acquire a fricative release [l<sup>ɮ</sup>] or even become a voiced alveolo-palatal fricative [ʑ].
+    %p The velarized lateral /ɫ/ has a fairly consistent realization; it is never weakened to [w] as it did in, e.g., Polish. In coda position it causes preceding vowels to centralize: /aɫ/ [ɐɫ].
+    %p Some linguists prefer to analyze Novegradian as having three laterals: /l lʲ ʟ/, where the first two correspond to traditional /l/ and the last one to traditional /ɫ/. The division of /l/ into two phonemes is an attempt to account for the fact that there are some instances where traditional /l/ is always pronounced palatalized, while in other situations it is optional; this appears to be lexical, with the mandatory palatalization appearing primarily in Russian loanwords that originally contained /lʲ/: револуця [rɛ.βo.ˈlʲu.tsjə] vs non-Russian-loaned биёлогя [bi.jo.ˈl(ʲ)o.gjə].
+    %p The single rhotic is the dental trill /r/. It does not undergo any sort of palatalization, and in normal speech averages about two or three taps.
+    %p The two glides are the palatal glide /j/ and the labiovelar glide /w/, both of which are essential components of diphthongs. They show little allophonic variation.
+
+= section "Syllables" do
+  %p Syllables are usually divided immediately following the vowel whenever possible. This applies across word boundaries as well, meaning a word ending in a consonant is usually slurred together with the following word if it begins with a vowel.
+
+= section "Stress" do
+  %p Stress is Novegradian is primarily lexical; there is no rule that can derive the stressed syllable of a given word using purely phonological principles. The stress of every word must be memorized on an individual basis, and indeed is important for the morphology of the word. It is phonemic, meaning that there are many words and word forms that are distinguished only by their different stresses.
+  %p Novegradian stress is also dynamic, such that it can shift from one syllable to another in different forms or derivations of the same word. However, there are rules regarding this. Any given noun, verb, or adjective has an inherent stress pattern. One this pattern is known for a particular word, it is possible to determine the stressed syllable for all forms of that word. For instance, many words are ‘stem-stressed’ (the stress remains on a single syllable in the stem in all forms) or ‘ending-stressed’ (the stress always falls on a grammatical suffix if one is present); many others have some sort of ‘mobile stress’, where the stressed syllable moves predictably between the stem and ending. These sorts of stresss patterns will be discussed at a later point, along with morphology.
+  %p Accoustically, Novegradian stress is marked by a combination of amplitude and length. Stressed vowels are noticeably louder and more forceful than unstressed vowels, and tend to be articulated for about 50% longer than a pretonic unstressed vowel, and 70% longer than a posttonic unstressed vowel.
+  %p Words of three or fewer syllables may only have a single stressed syllable. Longer words, however, may also have one or more secondarily stressed syllables. For the most part, secondary stress can be determined regularly by identifying the primary stress, and then applying secondary stress to every other syllable in each direction from the primary stress.
+  %p Compound words may or may not have multiple primary stresses. For this to happen, both stems (not counting case endings or linking morphemes) must have at least two syllables each; otherwise one stem will dominate. If either stem consists of only a single syllable while the other has more, the stem containing a single syllable is certain to acquire primary stress.
+
+= section "Phonotactics" do
+  = section "Distribution Restrictions" do
+    %p On a phonemic level, there are no restrictions on the distribution of non-clustered consonants or vowels. Any single consonant may appear in onset or coda position, word-initially, word-medially, or word-finally. Any vowel or diphthong may appear word-initially, word-medially, or word-finally.
+    %p On the surface, however, this is not the case. Most prominently, the word-final devoicing rule ensures that no voiced consonant that also has an unvoiced counterpart may appear at the end of a word without first undergoing devoicing (though see the discussion of interword sandhi below). In a similar vein, [β] cannot occur word-finally as well.
+    %p The main limitations on <em>phonemic</em> distribution, therefore, are to be found in the context of consonant clusters.
+
+  = section "Clusters" do
+    %p Novegradian is quite lenient when it comes to word-internal clusters, where almost anything is permitted except for a consonant + another consonant having the same point of articulation and manner of articulation (eg, -pm- and -pt- are acceptable, while -pp- and -pb- are not). While clusters of two oral stops are technically permitted, they are extremely rare and only occur in loan words, and even then usually optionally: #{t "Нептуне", "Néptune"} [ˈnʲɛp.tʊ.ne, ˈnʲɛ.pɛ.tʊ.ne]. /β/ is generally not tolerated in word-internal clusters—never as the first consonant, and only as the second consonant in high-class speech. Word-initially most two-consonant clusters are allowed, unless there is too great an upshift in sonority (eg, *jd-, although js- can be seen).
+    %p Word-initially, clusters are limited to:
+    %ul
+      %li A non-palatal plosive, fricative, affricate, or /m/ + /r l/: /pr br tr dr kr gr βr sr zr sʲr zʲr xr γr tsr dzr tʃr mr pl bl tl kl gl βl sl zl sʲl zʲl xl γl tsl dzl tʃl ml/
+      %li /s z/ + a non-palatal plosive with the same voicing or a non-palatal nasal: /sp st sk sm sn zb zd zg zm zn/
+      %li /sʲ zʲ/ + any plosive with the same voicing or any nasal: /sʲp sʲt sʲc sʲk sʲm sʲn sʲɲ zʲb zʲd zʲg zʲm zʲn zʲɲ/
+      %li A bilabial or velar plosive + /s z sʲ zʲ/ with the same voicing: /ps ks bz gz psʲ ksʲ bzʲ gzʲ/
+      %li A non-palatal plosive, fricative, affricate, or nasal + /j w/: /pj bj tj dj kj gj βj sj zj xj γj tsj dzj mj nj pw bw tw dw kw gw sw zw sʲw zʲw xw γw tsw dzw tʃw mw nw/ (with the exception of the non-existence of */sʲj zʲj tʃj βw/)
+      %li /dzʲ/
+      %li /spr spl str skr skl/
+      %li /mn/
+    %p Of course, just because an initial cluster is possible doesn’t mean it’s common. In particular, any initial cluster with /zʲ/ as the second element is certain to be a loanword.
+    %p Three-consonant clusters in native words are limited to initial /spr spl str skr skl/ and internal /stw/. They can appear also in loanwords with much greater variety. However, no four-consonant clusters are ever permitted, and loaned clusters will be simplified: #{t "иструкся", "istrúksia"} “instructions” (not **<i>instruksia</i>).
+    %p Word-final clusters are not permitted in the formal language. They may appear in informal and semi-formal spoken Novegradian, however.
+
+  = section "Morpheme Boundaries" do
+    %p Morpheme boundaries generally have little effect on pronunciation. In compounds, assimilation generally does not occur across morpheme boundaries unless the word has been long established. There is even a tendency to preserve allophonic traits in certain compounds (e.g., if the first part of a compound ends in a voiced consonant, it may be pronounced devoiced because that is how it is pronounced in isolation).
+    %p The one exception is that long consonants, which are allowed nowhere else, may appear if one morpheme ends in a consonant and the following begins with the same: љун- “moon” + -н- adjectival suffix → #{t "љунне", "łúnne"} “lunar” [ˈɫunne].
+    %p Generally, Novegradian resolves illegal clusters at morpheme boundaries by inserting an epenthetic vowel, with a few common exceptions:
+    %ul
+      %li /n/+/n/ almost always results in a geminate /nn/
+      %li /s z sʲ zʲ/ + /s/ usually results in a geminate /ss/
+      %li /β/ + a suffix beginning with a plosive, fricative, affricate, or nasal usually results in the /β/ weakening to /w/
+      %li Clusters of /st sk/ + /s n/ may result in the loss of the plosive
+      %li The palatals /c ɟ ɲ/ shift to /t d n/ before /n/; the palatals /ç ʝ/ shift to /x γ/
+      %li If the two consonants have different voicing, the first consonant will acquire the voicing of the second; this only applies when both consonants have contrastive voicing.
+    %p If the two consonants have different voicing, the first consonant will acquire the voicing of the second; this only applies when both consonants have contrastive voicing: /sʲb/ [ʒb]. The same is true of palatalization: /ˈsne/ [ˈsʲnʲe].
+    %p Novegradian typically does not permit any sort of point-of-articulation assimilation other than those listed above. For instance, the word #{t "банке", "bánke"} is always pronounced [ˈban.ke], never **[ˈbaŋ.ke].
+
+  = section "Lexical Boundaries and Interword Sandhi" do
+    %p Consecutive words can often affect each other’s pronunciation. If the second word begins with a voiced consonant that also has an unvoiced counterpart and the first ends in an unvoiced consonant with a voiced counterpart, both are pronounced voiced due to assimilation, meaning the final devoicing in the first word has been cancelled out. Likewise, if the first consonant of the second word is palatalized, the last consonant of the first may be too, although to a much lesser extent.
+
+  = section "Foreign Loans" do
+    %p Recent foreign loans that have not yet been “nativized” are exempt from several phonological rules. They generally will not have any palatalized consonants whatsoever. There was a time when many consonant clusters forbidden in native words would be preserved, but nowadays there is a much greater tendency to adapt these to fit the Novegradian phonology. Many modern-day loans have two spellings, one more accurately reflecting the original pronunciation and one more accurately representing the nativized pronunciation.
+    %p The rule of final devoicing still applies, however. Often the final consonant of a word may be ‘pre-devoiced’, such that it is always pronounced devoiced in all forms of a word. For example, final /g/ in a loan word will often be spelled as &lt;к&gt; <i>k</i>.
+
+= section "Morphophonemic Alterations" do
+  %p Novegradian, like the other Slavic languages, exhibits a large number of morphophonemic alterations, whereby one consonant or vowel is replaced by another on an underlying phonemic level. These changes cannot be described purely in terms of the phonology of the modern language (even though they typically emerged through regular sound changes in earlier stages of the language), but rather by morphological principles.
+  %p Since they are governed by morphology, their usage will be not be discussed in this section. The listing here simply provides an outline of the changes that do occur organized by time period of emergence. It is not exhaustive, but covers the vast majority of predictable morphophonemic alternations in modern standard Novegradian.
+
+  = section "Proto-Indo-European Alterations" do
+    %p Most changes dating from the Proto-Indo-European period result from Indo-European ablaut, and are old enough that they are not immediately apparent; forms with and without a given alternation have diverged so far phonologically and semantically that their modern-day reflexes are no longer recognizable to most as representing the same original root. Compare the roots */gor/- “burn” and */zʲar/- “heat, bitterness” (from the PIE roots *gor- and *gēr- respectively).
+    %p However, a few alternations still have some semi-transparent functions:
+    %ul
+      %li
+        \/o ~ e ~ Ø/:
+        %br
+        \/so.ˈb<span style="text-decoration: underline;">o</span>.re/ “cathedral”
+        %br
+        \/so.b<span style="text-decoration: underline;">e</span>.ˈrun/ “I will gather”
+        %br
+        \/so.ˈ<span style="text-decoration: underline;">br</span>a.tɪ/ “to gather”
+      %li
+        \/o ~ e/:
+        %br
+        \/ˈn<span style="text-decoration: underline;">o</span>.sʲi.tɪ/ “to carry (#{abbrev 'indet'})”
+        %br
+        \/ˈnʲ<span style="text-decoration: underline;">e</span>.stɪ/ “to carry (#{abbrev 'det'})”
+
+  = section "Proto-Slavic Alterations" do
+    %p The Proto-Slavic alternations are old enough that they are present (or at least once were present) in all of the modern Slavic languages. Many have been at least partially undone by later developments, in particular analogy.
+    %ul
+      %li
+        \/β ~ j/:
+        %br
+        \/βwi.da.ˈ<span style="text-decoration: underline;">β</span>a.tɪ/ “to give out”
+        %br
+        \/βwi.da.ˈ<span style="text-decoration: underline;">j</span>un/ “I give out”
+      %li
+        \/k ~ ts/:
+        %br
+        \/ˈpla.<span style="text-decoration: underline;">k</span>le/ “I cried”
+        %br
+        \/ˈpla.<span style="text-decoration: underline;">ts</span>un/ “I cry”
+      %li
+        \/g ~ zʲ/:
+        %br
+        \/ˈma.<span style="text-decoration: underline;">x</span>a.ti/ “to wave”
+        %br
+        \/ˈma.<span style="text-decoration: underline;">sʲ</span>un/ “I wave”
+      %li
+        \/Ø ~ i/:
+        %br
+        \/so.ˈ<span style="text-decoration: underline;">br</span>a.tɪ/ “to gather (#{abbrev 'pf'}”
+        %br
+        \/so.b<span style="text-decoration: underline;">i</span>.ˈra.tɪ/ “to gather (#{abbrev 'impf'})”
+      %li
+        \/o ~ u ~ a/:
+        %br
+        \/po.ˈm<span style="text-decoration: underline;">u</span>.zun/ “I will help (#{abbrev 'pf'})”
+        %br
+        \/po.m<span style="text-decoration: underline;">a</span>.ˈgam/ “I help (#{abbrev 'impf'})”
+      %li
+        \/e ~ æ/:
+        %br
+        \/o.st<span style="text-decoration: underline;">e</span>.ˈget/ “it will be supplied (#{abbrev 'pf'})”
+        %br
+        \/o.st<span style="text-decoration: underline;">æ</span>.ˈgas/ “it is being supplied (#{abbrev 'impf'})”
+      %li
+        \/d ~ s/:
+        %br
+        \/ˈkra.<span style="text-decoration: underline;">d</span>un/ “I steal”
+        %br
+        \/ˈkra.<span style="text-decoration: underline;">s</span>ti/ “to steal”
+      %li
+        \/β ~ Ø/:
+        %br
+        \/zʲi.ˈ<span style="text-decoration: underline;">β</span>un/ “I live”
+        %br
+        \/ˈzʲ<span style="text-decoration: underline;">i.t</span>i/ “to live”
+
+  = section "Common Slavic Alterations" do
+    %p Common Slavic alternations represent changes that began in the time period when Slavic dialects were first beginning to diverge from one another. As a result, the same consonants are affected by Common Slavic sound laws, but result in different reflexes in each of the different branches. These changes tend to still be highly productive.
+    %ul
+      %li
+        \/t ~ c/:
+        %br
+        \/ˈβra.<span style="text-decoration: underline;">t</span>i.ti/ “to return”
+        %br
+        \/ˈβra.<span style="text-decoration: underline;">c</span>un/ “I return”
+      %li
+        \/d ~ ɟ/:
+        %br
+        \/ˈβi.<span style="text-decoration: underline;">d</span>æ.ti/ “to see”
+        %br
+        \/ˈβi.<span style="text-decoration: underline;">ɟ</span>un/ “I see”
+      %li
+        \/s ~ ç/:
+        %br
+        \/ˈte.<span style="text-decoration: underline;">s</span>a.ti/ “to hew”
+        %br
+        \/ˈte.<span style="text-decoration: underline;">ç</span>un/ “I hew”
+      %li
+        \/z ~ ʝ/:
+        %br
+        \/βe.ˈ<span style="text-decoration: underline;">z</span>a.ti/ “to tie”
+        %br
+        \/ˈβe.<span style="text-decoration: underline;">ʝ</span>un/ “I tie”
+      %li
+        \/sk, st ~ sʲc/:
+        %br
+        \/e.ˈ<span style="text-decoration: underline;">sk</span>a.ti/ “to seek”
+        %br
+        \/ˈe.<span style="text-decoration: underline;">sʲc</span>un/ “I seek”
+      %li
+        \/zg, zd ~ zʲɟ/:
+        %br
+        \/ˈæ.<span style="text-decoration: underline;">zd</span>i.ti/ “to go [by vehicle]”
+        %br
+        \/ˈæ.<span style="text-decoration: underline;">zʲɟ</span>un/ “I go [by vehicle]”
+      %li
+        \/n ~ ɲ/:
+        %br
+        \/xra.ˈ<span style="text-decoration: underline;">n</span>i.ti/ “to keep”
+        %br
+        \/xra.ˈ<span style="text-decoration: underline;">ɲ</span>un/ “I keep”
+      %li
+        \/d ~ g/:
+        %br
+        \/ˈda.<span style="text-decoration: underline;">d</span>at/ “they give”
+        %br
+        \/ˈda.<span style="text-decoration: underline;">g</span>li/ “they gave”
+      %li
+        \/p, pj ~ pl/:
+        %br
+        \/ˈku.<span style="text-decoration: underline;">p</span>i.ti/ “to store, amass”
+        %br
+        \/ˈku.<span style="text-decoration: underline;">pl</span>un/ “I store, amass”
+      %li
+        \/b, bj ~ bl/:
+        %br
+        \/lu.ˈ<span style="text-decoration: underline;">b</span>i.ti/ “to love”
+        %br
+        \/lu.ˈ<span style="text-decoration: underline;">bl</span>un/ “I love”
+      %li
+        \/m, mj ~ ml/:
+        %br
+        \/ˈzʲe.<span style="text-decoration: underline;">mj</span>a/ “land (#{abbrev 'nom.sg'})”
+        %br
+        \/ˈzʲe<span style="text-decoration: underline;">m.l</span>u/ “land (#{abbrev 'acc.sg'})”
+      %li
+        \/β, βj ~ wl, βl/:
+        %br
+        \/a.ˈ<span style="text-decoration: underline;">v</span>i.ti/ “to reveal”
+        %br
+        \/ˈa<span style="text-decoration: underline;">w.l</span>un/ “I reveal”
+      %li
+        \/k, g ~ jc/:
+        %br
+        \/ˈmo.<span style="text-decoration: underline;">g</span>le/ “I could”
+        %br
+        \/ˈmo<span style="text-decoration: underline;">j.c</span>i/ “to be able”
+      %li
+        \/o, e, i ~ Ø/:
+        %br
+        \/o<span style="text-decoration: underline;">k.ˈn</span>o/ “window (#{abbrev 'nom.sg'})”
+        %br
+        \/o.ˈg<span style="text-decoration: underline;">o</span>n/ “windows (#{abbrev 'gen.pl'})”
+      %li
+        \/am, an ~ a/:
+        %br
+        \/ˈd<span style="text-decoration: underline;">am</span>.be/ “oak (#{abbrev 'nom.sg'})”
+        %br
+        \/ˈd<span style="text-decoration: underline;">a</span>b/ “oaks (#{abbrev 'gen.pl'})”
+      %li
+        \/a ~ u/:
+        %br
+        \/ˈkr<span style="text-decoration: underline;">a</span>.ta/ “steep (#{abbrev 'nom.sg.fem.indef'})”
+        %br
+        \/kr<span style="text-decoration: underline;">u</span>.ˈda.ja/ “steep (#{abbrev 'nom.sg.fem.def'})”
+      %li
+        \/e ~ i/:
+        %br
+        \/ˈt<span style="text-decoration: underline;">e</span>zʲ.ka/ “heavy (#{abbrev 'nom.sg.fem.indef'})”
+        %br
+        \/t<span style="text-decoration: underline;">i</span>zʲ.ˈka.ja/ “heavy (#{abbrev 'nom.sg.fem.def'})”
+      %li
+        \/i ~ j ~ ej/:
+        %br
+        \/ˈp<span style="text-decoration: underline;">i</span>.ti/ “to drink”
+        %br
+        \/ˈp<span style="text-decoration: underline;">j</span>un/ “I drink”
+        %br
+        \/ˈp<span style="text-decoration: underline;">ej</span>/ “drink!”
+
+  = section "Novegradian Alterations" do
+    %p These changes occurred after the complete breakup of the Slavic languages, and so were isolated to the Novegradian language and lack analogues in the other Slavic languages except by coincidence.
+    %ul
+      %li
+        \/β(j) ~ l/:
+        %br
+        \/ˈkro.<span style="text-decoration: underline;">j</span>a/ “roof (#{abbrev 'nom.sg'})”
+        %br
+        \/ˈna kro<span style="text-decoration: underline;">l</span>/ “on the roof”
+      %li
+        \/mj ~ ɲ/:
+        %br
+        \/ˈzʲe.<span style="text-decoration: underline;">mj</span>a/ “land (#{abbrev 'nom.sg'})”
+        %br
+        \/ˈna zʲe<span style="text-decoration: underline;">ɲ</span>/ “on the ground”
+      %li
+        \/β ~ w/:
+        %br
+        \/zo.ˈ<span style="text-decoration: underline;">β</span>un/ “I call”
+        %br
+        \/ˈz<span style="text-decoration: underline;">w</span>a.ti/ “to call”
+      %li
+        \/o ~ a/:
+        %br
+        \/ˈk<span style="text-decoration: underline;">o</span>.sʲa/ “cat”
+        %br
+        \/ˈk<span style="text-decoration: underline;">a</span>.sʲka/ “cat (#{abbrev 'dimin'})”
+      %li
+        \/o ~ u/:
+        %br
+        \/ˈn<span style="text-decoration: underline;">o</span>.sʲi.ti/ “to carry”
+        %br
+        \/ˈn<span style="text-decoration: underline;">u</span>.sit/ “he/she carries”
+    %p One additional change that developed during this stage complicates most of the others: a voicing of unclustered voiceless consonants before an historical stressed vowel. As a result, nearly every one of the alternations above that lists an unvoiced consonant could also involve its voiced equivalent. For example, the /s ~ ç/ change can also appear as /z ~ ç/, as in /pi.ˈ<span style="text-decoration: underline;">z</span>a.ti/ “to write” ~ /ˈpi.<span style="text-decoration: underline;">ç</span>un/ “I write”, where <i>pizáti</i> comes from an earlier <i>pisáti</i>.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
