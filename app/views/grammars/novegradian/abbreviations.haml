@@ -1,0 +1,235 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Сократеньи"
+
+= render :partial => 'navigation'
+
+%table
+  %thead
+    %tr
+      %th Abbreviation
+      %th Meaning
+  %tbody
+    %tr
+      %td= abbrev '1'
+      %td First Person
+    %tr
+      %td= abbrev '2'
+      %td Second Person
+    %tr
+      %td= abbrev '3'
+      %td Third Person
+    %tr
+      %td= abbrev 'abs'
+      %td Absolute Pronoun
+    %tr
+      %td= abbrev 'acc'
+      %td Accusative
+    %tr
+      %td= abbrev 'act'
+      %td Active Voice
+    %tr
+      %td= abbrev 'adj'
+      %td Adjective
+    %tr
+      %td= abbrev 'adv'
+      %td Adverb
+    %tr
+      %td= abbrev 'coll'
+      %td Colloquial(ly)
+    %tr
+      %td= abbrev 'comp'
+      %td Comparative
+    %tr
+      %td= abbrev 'cond'
+      %td Conditional
+    %tr
+      %td= abbrev 'cs'
+      %td (Late) Common Slavic
+    %tr
+      %td= abbrev 'dat.impers'
+      %td Impersonal Dative
+    %tr
+      %td= abbrev 'datins'
+      %td Dative/Instrumental (also "D/I")
+    %tr
+      %td= abbrev 'def'
+      %td Definite
+    %tr
+      %td= abbrev 'det'
+      %td Determinate
+    %tr
+      %td= abbrev 'dimin'
+      %td Diminutive
+    %tr
+      %td= abbrev 'dist'
+      %td Distributive
+    %tr
+      %td= abbrev 'dl'
+      %td Dual
+    %tr
+      %td= abbrev 'dur'
+      %td Durative
+    %tr
+      %td= abbrev 'emph'
+      %td Emphatic
+    %tr
+      %td= abbrev 'excess'
+      %td Excessive Degree
+    %tr
+      %td= abbrev 'expl'
+      %td Overt Expletive
+    %tr
+      %td= abbrev 'f'
+      %td Feminine
+    %tr
+      %td= abbrev 'fem'
+      %td Feminine
+    %tr
+      %td= abbrev 'fut'
+      %td Future
+    %tr
+      %td= abbrev 'gen'
+      %td Genitive
+    %tr
+      %td= abbrev 'ie'
+      %td Indo-European
+    %tr
+      %td= abbrev 'impf'
+      %td Imperfective
+    %tr
+      %td= abbrev 'inch'
+      %td Inchoative
+    %tr
+      %td= abbrev 'indef'
+      %td Indefinite
+    %tr
+      %td= abbrev 'indet'
+      %td Indeterminate
+    %tr
+      %td= abbrev 'inf'
+      %td Infinitive
+    %tr
+      %td= abbrev 'intens'
+      %td Intensive Degree
+    %tr
+      %td= abbrev 'intr'
+      %td Intransitive
+    %tr
+      %td= abbrev 'iter'
+      %td Iterative
+    %tr
+      %td= abbrev 'lat'
+      %td Lative
+    %tr
+      %td= abbrev 'lit'
+      %td Literally
+    %tr
+      %td= abbrev 'loc'
+      %td Locative
+    %tr
+      %td= abbrev 'm'
+      %td Masculine
+    %tr
+      %td= abbrev 'masc'
+      %td Masculine
+    %tr
+      %td= abbrev 'mid'
+      %td Middle Voice
+    %tr
+      %td= abbrev 'n'
+      %td Neuter
+    %tr
+      %td= abbrev 'neg'
+      %td Negative
+    %tr
+      %td= abbrev 'neut'
+      %td Neuter
+    %tr
+      %td= abbrev 'nom'
+      %td Nominative
+    %tr
+      %td= abbrev 'nov'
+      %td Novegradian
+    %tr
+      %td= abbrev 'ocs'
+      %td Old Church Slavonic
+    %tr
+      %td= abbrev 'on'
+      %td Old Novegradian
+    %tr
+      %td= abbrev 'opt'
+      %td Optative
+    %tr
+      %td= abbrev 'part'
+      %td Partitive
+    %tr
+      %td= abbrev 'pass'
+      %td Passive Voice
+    %tr
+      %td= abbrev 'pf'
+      %td Perfective
+    %tr
+      %td= abbrev 'pie'
+      %td Proto-Indo-European
+    %tr
+      %td= abbrev 'pl'
+      %td Plural
+    %tr
+      %td= abbrev 'poet'
+      %td Poetic or Flowery Style
+    %tr
+      %td= abbrev 'poss'
+      %td Possessive Adjective
+    %tr
+      %td= abbrev 'ptcp'
+      %td Participle
+    %tr
+      %td= abbrev 'q'
+      %td Interrogative/Question Particle
+    %tr
+      %td= abbrev 'qual.rel'
+      %td Qualitative Relative Pronoun
+    %tr
+      %td= abbrev 'reflx'
+      %td Reflexive
+    %tr
+      %td= abbrev 'reflx.poss'
+      %td Reflexive Possessive Pronoun
+    %tr
+      %td= abbrev 'rel'
+      %td Relative Pronoun
+    %tr
+      %td= abbrev 'sg'
+      %td Singular
+    %tr
+      %td= abbrev 'sl'
+      %td Slang
+    %tr
+      %td= abbrev 'subj'
+      %td Subjunctive
+    %tr
+      %td= abbrev 'sup'
+      %td Supine
+    %tr
+      %td= abbrev 'super'
+      %td Superlative
+    %tr
+      %td= abbrev 'tel'
+      %td Telic
+    %tr
+      %td= abbrev 'top'
+      %td Topical Marker
+    %tr
+      %td= abbrev 'tr'
+      %td Transitive
+    %tr
+      %td= abbrev 'tri'
+      %td Trial Superlative
+    %tr
+      %td= abbrev 'voc'
+      %td Vocative
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
