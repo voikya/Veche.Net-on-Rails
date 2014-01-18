@@ -1,0 +1,58 @@
+- adjective ||= []
+
+%table
+  - if title
+    %tr
+      %th{:colspan => 6}= title
+  %tr
+    %th
+    %th Masculine
+    %th Neuter
+    %th Feminine
+    %th{:rowspan => 9}
+    %th Plural
+  %tr
+    %th Nominative
+    %td= t(adjective[:nom][:masc][:cyr], adjective[:nom][:masc][:lat], :linebreak => true)
+    %td= t(adjective[:nom][:neut][:cyr], adjective[:nom][:neut][:lat], :linebreak => true)
+    %td= t(adjective[:nom][:fem][:cyr], adjective[:nom][:fem][:lat], :linebreak => true)
+    %td= t(adjective[:nom][:pl][:cyr], adjective[:nom][:pl][:lat], :linebreak => true)
+  %tr
+    %th Genitive
+    %td{:colspan => 2}= t(adjective[:gen][:com][:cyr], adjective[:gen][:com][:lat], :linebreak => true)
+    %td= t(adjective[:gen][:fem][:cyr], adjective[:gen][:fem][:lat], :linebreak => true)
+    %td= t(adjective[:gen][:pl][:cyr], adjective[:gen][:pl][:lat], :linebreak => true)
+  %tr
+    %th
+      Accusative
+      %br
+      = abbrev('anim')
+    %td{:colspan => 2}= t(adjective[:gen][:com][:cyr], adjective[:gen][:com][:lat], :linebreak => true)
+    %td= t(adjective[:gen][:fem][:cyr], adjective[:gen][:fem][:lat], :linebreak => true)
+    %td= t(adjective[:gen][:pl][:cyr], adjective[:gen][:pl][:lat], :linebreak => true)
+  %tr
+    %th
+      Accusative
+      %br
+      = abbrev('inan')
+    %td= t(adjective[:acc][:masc][:cyr], adjective[:acc][:masc][:lat], :linebreak => true)
+    %td= t(adjective[:acc][:neut][:cyr], adjective[:acc][:neut][:lat], :linebreak => true)
+    %td= t(adjective[:acc][:fem][:cyr], adjective[:acc][:fem][:lat], :linebreak => true)
+    %td= t(adjective[:acc][:pl][:cyr], adjective[:acc][:pl][:lat], :linebreak => true)
+  %tr
+    %th Dat./Instr.
+    %td{:colspan => 2}= t(adjective[:dat][:com][:cyr], adjective[:dat][:com][:lat], :linebreak => true)
+    %td= t(adjective[:dat][:fem][:cyr], adjective[:dat][:fem][:lat], :linebreak => true)
+    %td= t(adjective[:dat][:pl][:cyr], adjective[:dat][:pl][:lat], :linebreak => true)
+  %tr
+    %th Partitive
+    %td{:colspan => 3}= t(adjective[:par][:sg][:cyr], adjective[:par][:sg][:lat], :linebreak => true)
+    %td= t(adjective[:par][:pl][:cyr], adjective[:par][:pl][:lat], :linebreak => true)
+  %tr
+    %th Locative
+    %td{:colspan => 3}= t(adjective[:loc][:sg][:cyr], adjective[:loc][:sg][:lat], :linebreak => true)
+    %td= t(adjective[:loc][:pl][:cyr], adjective[:loc][:pl][:lat], :linebreak => true)
+  %tr
+    %th Lative
+    %td{:colspan => 3}= t(adjective[:lat][:sg][:cyr], adjective[:lat][:sg][:lat], :linebreak => true)
+    %td= t(adjective[:lat][:pl][:cyr], adjective[:lat][:pl][:lat], :linebreak => true)

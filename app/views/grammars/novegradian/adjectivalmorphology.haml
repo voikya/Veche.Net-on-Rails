@@ -1,0 +1,240 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Морпољогя прилежим ймѣн"
+
+= render :partial => 'navigation'
+
+= section "Definitions and Features" do
+  %p The Novegradian adjective is quite similar to the noun, and historically is closely related. Like nouns, they decline for gender and number, though unlike nouns they do so in order to agree with their head. They also decline for agreement in gender in the singular, though not in the plural (and adjectives do not inflect for the dual). Adjective endings are very similar, though not identical, to the endings of various nominal declensions—masculine singular like the masculine fourth declension singular, neuter singular like the neuter third declension singular, feminine singular like the first declension singular, and plural like the fourth declension plural.
+  %p Adjectives declension also features “definiteness”, a two-way distinction between “indefinite” (or “non-topical”) and “definite” (or “topical”) forms. The indefinite adjectives have the noun-like declension, while the definite adjectives have more of a pronoun-like declension, historically having originated from the indefinite forms plus the Proto-Slavic anaphoric pronoun *j-.
+  %p Another uniquely adjectival quality is known as “degree”, which specifies the intensity of the meaning of the adjective. There are two primary degrees, known as “absolute” (the base form) and “comparative” (meaning ‘more X’); and four secondary degrees whose morphological marking is for the most part optional: superlative, intensive, excessive, and trial superlative.
+
+= section "Regular Adjective Declension" do
+  %p Novegradian adjectives must agree with the noun they modify in gender, number, and case. The same endings are used for all adjectives, as there aren’t multiple declensions. The genders all coalesce in the plural<sup>1</sup>. Demonstrated with #{t "цервене", "cérvene"} “red” (singular on the left, plural on the right):
+  - adjective = { :nom => { :masc => { :cyr => "цервен-е", :lat => "cérvene" },
+                            :neut => { :cyr => "цервен-о", :lat => "cérveno" },
+                            :fem  => { :cyr => "цервен-а", :lat => "cérvena" },
+                            :pl   => { :cyr => "цервен-и", :lat => "cérveni" } },
+                  :gen => { :com  => { :cyr => "цервен-а", :lat => "cérvena" },
+                            :fem  => { :cyr => "цервен-ѣ", :lat => "cérveně" },
+                            :pl   => { :cyr => "цервен-Ø", :lat => "cérven" } },
+                  :acc => { :masc => { :cyr => "цервен-Ø", :lat => "cérven" },
+                            :neut => { :cyr => "цервен-о", :lat => "cérveno" },
+                            :fem  => { :cyr => "цервен-у", :lat => "cérvenu" },
+                            :pl   => { :cyr => "цервен-и", :lat => "cérveni" } },
+                  :dat => { :com  => { :cyr => "цервен-ом", :lat => "cérvenom" },
+                            :fem  => { :cyr => "цервен-ой", :lat => "cérvenoi" },
+                            :pl   => { :cyr => "цервен-ами", :lat => "cérvenami" } },
+                  :par => { :sg   => { :cyr => "цервен-а", :lat => "cérvena" },
+                            :pl   => { :cyr => "цервен-оу", :lat => "cérvenou" } },
+                  :loc => { :sg   => { :cyr => "цервен-ѣ", :lat => "cérveně" },
+                            :pl   => { :cyr => "цервен-ѣх", :lat => "cérveněh" } },
+                  :lat => { :sg   => { :cyr => "цервен-ун", :lat => "cérvenun" },
+                            :pl   => { :cyr => "цервен-и", :lat => "cérveni" } } }
+  = render 'adjective_table', :title => nil, :adjective => adjective
+  %p The endings as a whole are very similar to the nominal endings, as they were in both Common Slavic and Proto-Indo-European (though note, for instance, the partitive singular in <i>-a</i>, not <i>-ok</i>/<i>-ek</i>). The stress also never shifts. If the adjective stem ends in a cluster, an epenthetic /o/ will be inserted in the #{abbrev 'gen.pl'} as in the nominal declension. The w+consonant rule seen in nouns also applies here: #{abbrev 'nom.sg.masc'} #{t "глауне", "gláune"} “important” → #{abbrev 'gen.pl'} #{t "глаун", "gláun"} [ˈgla.won] (dialectical главон).
+  %p If the noun an adjective modifies is animate and the direct object of a sentence, the genitive case form of the adjective must be used, since the noun will also be in the genitive.
+
+= section "Definite Adjective Declension" do
+  %p The definite adjectives are derived from the Common Slavic definites, formed by attaching the declined anaphoric pronoun *-j- to the end of the “indefinite” forms, those shown in the chart above. Since the anaphoric pronoun was in origin a demonstrative, it had the effect of strengthening the adjective and serving as a sort of ‘pointer’ to single a certain noun out of a group. The distinction between definite and indefinite adjectives was lost in most other Slavic languages, except in East Slavic, where both forms were preserved but with wholly different functions. The definite adjective still survives with something close to its original function in the Baltic languages and in North Slavic. In Novegradian, they have also become entwined with the topicalization system.
+  - adjective = { :nom => { :masc => { :cyr => "цервен-ей", :lat => "cérvenei" },
+                            :neut => { :cyr => "цервен-ое", :lat => "cervénoie" },
+                            :fem  => { :cyr => "цервен-ая", :lat => "cervénaia" },
+                            :pl   => { :cyr => "цервен-ие", :lat => "cervénije" } },
+                  :gen => { :com  => { :cyr => "цервен-аево", :lat => "cervenáievo" },
+                            :fem  => { :cyr => "цервен-ѣе", :lat => "cervéněie" },
+                            :pl   => { :cyr => "цервен-их", :lat => "cervénih" } },
+                  :acc => { :masc => { :cyr => "цервен-ий", :lat => "cérvenij" },
+                            :neut => { :cyr => "цервен-ое", :lat => "cervénoie" },
+                            :fem  => { :cyr => "цервен-аю", :lat => "cervénaiu" },
+                            :pl   => { :cyr => "цервен-ие", :lat => "cervénije" } },
+                  :dat => { :com  => { :cyr => "цервен-ием", :lat => "cervénijem" },
+                            :fem  => { :cyr => "цервен-оюн", :lat => "cervénoiun" },
+                            :pl   => { :cyr => "цервен-иеми", :lat => "cerveníjemi" } },
+                  :par => { :sg   => { :cyr => "цервен-аево", :lat => "cervenáievo" },
+                            :pl   => { :cyr => "цервен-овево", :lat => "cervenóvevo" } },
+                  :loc => { :sg   => { :cyr => "цервен-ѣѣм", :lat => "cervéněiěm" },
+                            :pl   => { :cyr => "цервен-иех", :lat => "cervénijeh" } },
+                  :lat => { :sg   => { :cyr => "цервен-уюн", :lat => "cervénuiun" },
+                            :pl   => { :cyr => "цервен-ѣѣ", :lat => "cervéněiě" } } }
+  = render 'adjective_table', :title => nil, :adjective => adjective
+  %p The inanimate accusative masculine singular ending -ий is phonetically [əj].
+  %p There are two stress patterns seen in definite adjectives. The first (and more common) is known as the antepenultimate system, like цервене above, where:
+  %ul
+    %li In the masculine nominative singular and masculine inanimate accusative singular, the stress is on the same syllable as in its indefinite forms.
+    %li In the genitive plural, it falls on the penult, as the ending <i>-ih</i> is a contraction of an earlier <i>-ijih</i>.
+    %li In all other forms (including the genitive plural if the stem ends in a cluster), stress falls on the antepenultimate syllable.
+  %p The other system is ending-stress, where:
+  %ul
+    %li In the masculine nominative singular and masculine inanimate accusative singular, the stress is on the same syllable as in its indefinite forms.
+    %li In all other forms, the stress is on the first syllable of the ending.
+  %p Which adjectives use which pattern must be memorized. However, most adjectives that include the derivational suffix #{t "-ск-", "-sk-"} use ending-stress.
+  %p As the stress moves around, consonants may voice as they do with nouns: #{abbrev 'nom.sg.masc'} #{t "великей", "velíkei"} “great”, #{abbrev 'gen.sg.masc'} #{t "велигаево", "veligáievo"}.
+  %p The shifting stress can sometimes cause vowel changes as well, for historical reasons. This is usually the result of a former nasal vowel. Adjectives with a vowel change in their definite forms are always ending-stressed. The normal vowel (as seen in the indefinite forms) is kept in the nominative singular masculine, but changes in all other definite forms. One of the most common examples is #{t "крате", "kráte"} “steep”. When declined in the nominative case as a definite adjective, the forms are: #{t "кратей", "krátei"}, #{t "крудая", "krudáia"}, #{t "крудое", "krudóie"}, #{t "крудие", "krudíje"}.
+  %p Because there are so few adjectives with such a vowel change, there has been a tendency across the years to regularize them. In standard Novegradian the change in крате is required, but others, such as #{t "тежке", "téźke"} “heavy” → #{t "тижкая", "tiźkáia"}, are now rarely seen outside of poetry and highly formal registers. The regularized #{t "тежкая", "teźkáia"} has supplanted тижкая in the standard.
+
+= section "Comparatives" do
+  %p Novegradian, as with several other Slavic languages, only has a comparative degree of adjectives. A superlative can be formed, but it is generally not used unless the context cannot disambiguate the situation.
+  %p The comparative is formed quite regularly by adding #{t "-ш-", "-ś-"} immediately after the stem, or a stressed #{t "-ейш-", "-éiś-"} if it ends in a fricative, affricate, or if an unwieldy cluster would form, and then adding a slight variant of the regular adjective endings (see below). The addition of -ш- causes the stress in all forms to shift over one syllable (if possible) toward the end of the word, unless it would cause the syllable beginning in <i>ś</i> to be accented (in other words, the stress will move to the right by one syllable if anything but the last syllable of the stem is usually stressed). If the stem is of non-Slavic origin, ends in a velar consonant, and the root is monosyllabic, the #{t "-ейш-", "-éiś-"} ending is generally used.
+  %ul
+    %li #{t "цервене", "cérvene"} “red” → #{t "цервенше", "cervénśe"} “redder”
+    %li #{t "плоне", "plóne"} “full” → #{t "плонше", "plónśe"} “fuller”
+    %li #{t "интересне", "interésne"} “interesting” → #{t "интереснейше", "interesnéiśe"} “more interesting”
+    %li #{t "приглубе", "priglúbe"} “deep” → #{t "приглубше", "priglúbśe"} “deeper”
+    %li #{t "вайке", "váike"} “difficult” → #{t "вайгейше", "vaigéiśe"} “more difficult” (note the voicing)
+  %p Monosyllabic roots ending in /s z t d/ as well as native Slavic roots ending in /k g x/ usually undergo palatalization to /ç ʝ c ɟ/ and /sʲ zʲ sʲ/ respectively instead of taking the full ending -ейш-. If the palatalized consonant is intervocalic, proper pronunciation calls for a geminate consonant, though a single consonant is more common in unrestricted speech.
+  %ul
+    %li #{t "вуисе", "vuíse"} “high” → #{t "вуихье", "vuíhje"} “higher” (pronounced /ˈβwiççe/ or /ˈβwiçe/)
+    %li #{t "близе", "blíze"} “close” → #{t "блиғье", "blíğje"} “closer” (pronounced /ˈbliʝʝe/ or /ˈbliʝe/)
+    %li #{t "горде", "górde"} “proud” → #{t "горгье", "górgje"} “prouder” (pronounced /ˈgorɟe/)
+    %li #{t "велике", "velíke"} “great” → #{t "велише", "velíśe"} “greater” (pronounced /βeˈlisʲsʲe/ or /βeˈlisʲsʲe/)
+    %li #{t "драге", "dráge"} “expensive” → #{t "драже", "dráze"} “more expensive” (pronounced /ˈdrazʲzʲe/ or /ˈdrazʲe/)
+  %p However, the suffix -к- seen with many adjectives inherited from Common Slavic drops in the comparative before the stem undergoes palatalization. If the consonant immediately before it is a fricative, it may convert back into a plosive before palatalizing, since the suffix that originally forced its lenition is now gone.
+  %ul
+    %li #{t "вазке", "vázke"} (#{abbrev 'CS'} *ǫz-ъk-ъ) “narrow” → #{t "вағье", "váğje"}
+    %li #{t "глазке", "glázke"} (#{abbrev 'CS'} *glad-ъk-ъ) “narrow” → #{t "глагье", "glágje"}
+    %li #{t "леғке", "léğke"} (#{abbrev 'CS'} *leg-ъk-ъ) “easy, light” → #{t "леже", "léźe"}
+    %li #{t "меғке", "méğke"} (#{abbrev 'CS'} *męg-ъk-ъ) “soft, mild” → #{t "меже", "méźe"}
+    %li #{t "слазке", "slázke"} (#{abbrev 'CS'} *slad-ъk-ъ) “sweet” → #{t "слагье", "slágje"}
+  %p Final -st- palatalizes to /sʲc/:
+  %ul
+    %li #{t "исте", "íste"} “true, genuine” → #{t "ишкье", "íśkje"}
+    %li #{t "просте", "próste"} “simple” → #{t "прошкье", "próśkje"}
+    %li #{t "пусте", "púste"} “empty” → #{t "пушкье", "púśkje"}
+  %p /β/ becomes /w/ before -ше; however, a small set of adjectives with stems ending in /β/ take -ейше instead, mostly those where the /β/ is not derivational, but part of the root).
+  %ul
+    %li #{t "годове", "godóve"} “ready” → #{t "годоуше", "godóuśe"}
+    %li #{t "лѣниве", "lěníve"} “lazy” → #{t "лѣниўше", "lěníwśe"}
+    %li #{t "нове", "nóve"} “new” → #{t "новейше", "novéiśe"}
+  %p Adjectives ending in /nne/ (i.e., a root ending in /n/ followed by the derivational affix <i>-n-</i>) generally lose one /n/ and then add -ше. However, the geminate remains in spelling:
+  %ul
+    %li #{t "истинне", "ístinne"} “true, genuine” → #{t "истиннше", "ístinnśe"}
+    %li #{t "оединне", "oiédinne"} “lonely” → #{t "оединнше", "oiedínnśe"}
+  %p The adjective пунтне púntne [ˈpun.ne] “exact, accurate” has the comparative form пунтше púntśe [ˈpun.sʲe]. While irregular in spelling, in pronunciation it is regular according to the above rule.
+  %p And there are some adjectives that are simply irregular, shown in the following table:
+  %table
+    %tr
+      %th Adjective
+      %th Meaning
+      %th Comparative
+    %tr
+      %td= t("авине", "ávine")
+      %td clear, obvious
+      %td= t("аунше", "áunśe")
+    %tr
+      %td= t("болише", "bóliśe")
+      %td big
+      %td= t("болше", "bólśe")
+    %tr
+      %td= t("вељке", "véłke")
+      %td damp, humid
+      %td= t("велже", "vélźe")
+    %tr
+      %td= t("ғодене", "ğódene")
+      %td worthy
+      %td= t("ғоднейше", "ğodnéiśe")
+    %tr
+      %td= t("добре", "dóbre")
+      %td good
+      %td= t("суѣше", "suě́śe")
+    %tr
+      %td= t("куризке", "kurízke")
+      %td spicy
+      %td= t("куришкье", "kuríśkje")
+    %tr
+      %td= t("малене", "málene")
+      %td small
+      %td= t("менише", "méniśe")
+    %tr
+      %td= t("ниске", "níske")
+      %td low
+      %td= t("нижне", "níźne")
+    %tr
+      %td= t("позне", "pózne")
+      %td late
+      %td
+        = t("позше", "pózśe")
+        [ˈposʲ.sʲe]
+    %tr
+      %td= t("тежке", "téźke")
+      %td heavy
+      %td= t("теже", "téźe")
+    %tr
+      %td= t("тољсте", "tółste")
+      %td fat, thick
+      %td
+        = t("тољшкье", "tółśkje")
+        [ˈtow.ʃce]
+    %tr
+      %td= t("туирде", "tuírde")
+      %td hard, firm
+      %td= t("туергье", "tuérgje")
+    %tr
+      %td= t("худе", "húde")
+      %td bad
+      %td= t("хуже", "húźe")
+  %p Comparative adjectives use the same endings as other adjectives, with one difference: any suffixes that begin with /o/ are changed to /e/, for both types of adjectives. The genitive epenthetic vowel also becomes /e/. #{t "Цервенше", "cervénśe"}, therefore, declines like this:
+  - adjective = { :nom => { :masc => { :cyr => "цервен-ш-е", :lat => "cervénśe" },
+                            :neut => { :cyr => "цервен-ш-е", :lat => "cervénśe" },
+                            :fem  => { :cyr => "цервен-ш-а", :lat => "cervénśa" },
+                            :pl   => { :cyr => "цервен-ш-и", :lat => "cervénśi" } },
+                  :gen => { :com  => { :cyr => "цервен-ш-а", :lat => "cervénśa" },
+                            :fem  => { :cyr => "цервен-ш-ѣ", :lat => "cervénśě" },
+                            :pl   => { :cyr => "цервен-еш-Ø", :lat => "cervéneś" } },
+                  :acc => { :masc => { :cyr => "цервен-ш-е", :lat => "cervénśe" },
+                            :neut => { :cyr => "цервен-ш-е", :lat => "cervénśe" },
+                            :fem  => { :cyr => "цервен-ш-у", :lat => "cervénśu" },
+                            :pl   => { :cyr => "цервен-ш-и", :lat => "cervénśi" } },
+                  :dat => { :com  => { :cyr => "цервен-ш-ем", :lat => "cervénśem" },
+                            :fem  => { :cyr => "цервен-ш-ей", :lat => "cervénśei" },
+                            :pl   => { :cyr => "цервен-ш-ами", :lat => "cervénśami" } },
+                  :par => { :sg   => { :cyr => "цервен-ш-а", :lat => "cervénśa" },
+                            :pl   => { :cyr => "цервен-ш-еу", :lat => "cervénśeu" } },
+                  :loc => { :sg   => { :cyr => "цервен-ш-ѣ", :lat => "cervénśě" },
+                            :pl   => { :cyr => "цервен-ш-ѣх", :lat => "cervénśěh" } },
+                  :lat => { :sg   => { :cyr => "цервен-ш-ун", :lat => "cervénśun" },
+                            :pl   => { :cyr => "цервен-ш-и", :lat => "cervénśi" } } }
+  = render 'adjective_table', :title => "Indefinite Declension", :adjective => adjective
+  - adjective = { :nom => { :masc => { :cyr => "цервен-ш-ей", :lat => "cervénśei" },
+                            :neut => { :cyr => "цервен-ш-ее", :lat => "cervénśeie" },
+                            :fem  => { :cyr => "цервен-ш-ая", :lat => "cervénśaia" },
+                            :pl   => { :cyr => "цервен-ш-ие", :lat => "cervénśije" } },
+                  :gen => { :com  => { :cyr => "цервен-ш-аево", :lat => "cervenśáievo" },
+                            :fem  => { :cyr => "цервен-ш-ѣе", :lat => "cervénśěie" },
+                            :pl   => { :cyr => "цервен-ш-их", :lat => "cervénśih" } },
+                  :acc => { :masc => { :cyr => "цервен-ш-ий", :lat => "cervénśij" },
+                            :neut => { :cyr => "цервен-ш-ее", :lat => "cervénśeie" },
+                            :fem  => { :cyr => "цервен-ш-аю", :lat => "cervénśaiu" },
+                            :pl   => { :cyr => "цервен-ш-ие", :lat => "cervénśije" } },
+                  :dat => { :com  => { :cyr => "цервен-ш-ием", :lat => "cervénśijem" },
+                            :fem  => { :cyr => "цервен-ш-еюн", :lat => "cervénśeiun" },
+                            :pl   => { :cyr => "цервен-ш-иеми", :lat => "cervenśíjemi" } },
+                  :par => { :sg   => { :cyr => "цервен-ш-аево", :lat => "cervenśáievo" },
+                            :pl   => { :cyr => "цервен-ш-евево", :lat => "cervenśévevo" } },
+                  :loc => { :sg   => { :cyr => "цервен-ш-ѣѣм", :lat => "cervénśěiěm" },
+                            :pl   => { :cyr => "цервен-ш-иех", :lat => "cervénśijeh" } },
+                  :lat => { :sg   => { :cyr => "цервен-ш-уюн", :lat => "cervénśuiun" },
+                            :pl   => { :cyr => "цервен-ш-ѣѣ", :lat => "cervénśěiě" } } }
+  = render 'adjective_table', :title => "Definite Declension", :adjective => adjective
+
+= section "Superlatives" do
+  %p A superlative may be made by attaching the prefix #{t "най-", "nai-"} to the comparative form: #{t "найвелише", "naivelíśe"} “greatest”, #{t "найболше", "naibólśe"} “largest”, #{t "найхуже", "naihúźe"} “worst”. When an adjective begins with a vowel, that vowel takes its iotafied form, though the й in the prefix is still redundantly written: авине “clear” → #{t "найяунше", "naiiáunśe"}.
+  %p This prefix is to be avoided when at all possible; it is considered poor style to overuse it.
+
+= section "Other Degrees and Prefixes" do
+  %p In addition to the comparative and superlative, Novegradian adjectives can mark two other degrees—the intensive and the excessive. Like the superlative, these are both prefixial and optional. However, unlike the superlative, their use is encouraged, as overuse of adverbs to express the same concept is considered poor style.
+  %p The prefix #{t "пре-", "pre-"} means “very”, and intensifies the quality already expressed by the adjective. It is attached to the absolute degree of the adjective (i.e., the base definite or indefinite form, never a comparative base) and is generally unstressed. On a few adjectives, it is almost required in place of seperate adverbials (e.g., #{t "прекрасне", "prekrásne"} “very beautiful”, almost never #{t "**велем красне", "vélem krásne"}).
+  %p The stressed prefix #{t "во-", "vó-"} means “too (much)”, and indicates excess. It is added to the comparative base of an adjective: #{t "воблиғье", "vóbliğje"} “too close”.
+  %p If either prefix is added to an adjective beginning with a vowel, that vowel takes its iotafied form: #{t "преявине", "preiávine"} “very evident”. If they are added to an adjective that already has a lexical prefix with no functional load (e.g., #{t "приглубе", "priglúbe"} “deep”, since **глубе does not exist), the lexical prefix may drop in many cases: #{t "воглубе", "vóglube"} “too deep”, not #{t "*воприглубе", "*vópriglube"}.
+  %p There is one other adjective degree known as the “trial superlative”, formed by the prefix #{t "тре-", "tre-"}. It is frequently and productively used in literature and storytelling, but has very limited functionality elsewhere.
+  %p In literature and liturgical contexts, it is used to indicate a superlative, though it also has connotations of great importance: #{t "тресуете", "tresuéte"} “thrice-holy, most holy”. It is also used hyperbolically, as in the common folkloric opening #{t "На Тредевитиех Жемлах, на Тредежитѣѣм Царестўѣ", "Na Tredevítijeh Źemláh, na Tredeźítěiěm Cárestuě"} “In the Thrice-Nine Lands, in the Thrice-Ten Tsardom”, used to refer to a far away land.
+
+  %p &nbsp;
+
+  %hr.footnote
+
+  %p 1) Dual nouns take plural adjective agreement, with one exception: adjectives modifying a noun in the dative/instrumental dual take the ending #{t "-ама", "-ama"}, rather than the plural -ами. This is generally not considered to be a true dual declension, but rather simply a case of “ending spreading”, as is also occasionally seen in the dative/instrumental of personal names. Both of these phenomena are discussed more in depth later in this grammar.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
