@@ -1,0 +1,29 @@
+%table
+  %tr
+    %th{:colspan => 6}
+      = t(infinitive[:cyr], infinitive[:lat])
+      = surround "“", "”" do
+        = meaning
+      = surround '(', ')' do
+        = abbrev(aspect)
+  %tr
+    %th 1Sg
+    %td= t(cyrillic[0], latin[0], :linebreak => true)
+    %th 1Dl
+    %td= t(cyrillic[3], latin[3], :linebreak => true)
+    %th 1Pl
+    %td= t(cyrillic[6], latin[6], :linebreak => true)
+  %tr
+    %th 2Sg
+    %td= t(cyrillic[1], latin[1], :linebreak => true)
+    %th 2Dl
+    %td= t(cyrillic[4], latin[4], :linebreak => true)
+    %th 2Pl
+    %td= t(cyrillic[7], latin[7], :linebreak => true)
+  %tr
+    %th 3Sg
+    %td= t(cyrillic[2], latin[2], :linebreak => true)
+    %th 3Dl
+    %td= t(cyrillic[5], latin[5], :linebreak => true)
+    %th 3Pl
+    %td= t(cyrillic[8], latin[8], :linebreak => true)
