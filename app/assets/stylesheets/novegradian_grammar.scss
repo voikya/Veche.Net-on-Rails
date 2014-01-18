@@ -51,4 +51,8 @@ body.grammar.novegradian {
       color: $header_color;
     }
   }
+
+  span.cyrillic-numeral {
+    text-decoration: overline;
+  }
 }

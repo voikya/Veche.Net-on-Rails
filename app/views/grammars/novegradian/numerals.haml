@@ -1,0 +1,592 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Цедакьи ймѣни"
+
+= render :partial => 'navigation'
+
+= section "Definitions and Features" do
+  %p Numerals form a separate class in Novegradian, demonstrating behavior somewhere in between nouns/pronouns and adjectives. Like adjectives, they are modifiers of nouns; however, agreement is limited to the digits one through four, and that agreement is limited to gender (1-4) and number (1 only), animacy for all numbers, and case for all numerals but only in a few specific circumstances. They also lack many other typical adjectival features, such as the definite/indefinite distinction, grades of comparison, and the ability to be used as a predicate.
+  %p On the other hand, they also frequently cause the noun they modify to agree with themselves. Often the case of the entire noun phrase is marked on the numeral, with the noun instead having some other case forced on it in agreement. Numerals also often cause the distinction of number to be neutralized on the noun (since, after all, the numeral marks number even more specifically).
+  %p There are also a few derivative forms of numbers that will be discussed here which function as other parts of speech. These include ordinal numbers, which are true adjectives, and a variety of adverbial numerals.
+
+= section "Inanimate Numerals" do
+  %p The numerals used with inanimate nouns descend from the basic Common Slavic set of numerals. The numerals 1-10 are:
+  %table
+    %tr
+      %th Number
+      %th
+        Nominative
+        %br
+        Accusative
+      %th
+        Genitive
+        %br
+        Locative
+      %th
+        Dative
+        %br
+        Instrumental
+    %tr
+      %th 1
+      %td
+        = t("едене", "iédene")
+        %br
+        = t("една", "iédna")
+        %br
+        = t("едно", "iédno")
+      %td
+      %td
+    %tr
+      %th 2
+      %td
+        = t("дова", "dóva")
+        %br
+        = t("довѣ", "dóvě")
+      %td= t("довух", "dóvuh")
+      %td= t("довѣма", "dóvěma")
+    %tr
+      %th 3
+      %td
+        = t("три", "trí")
+        %br
+        = t("трѣ", "trě́")
+      %td= t("трех", "tréh")
+      %td= t("трем", "trém")
+    %tr
+      %th 4
+      %td= t("цетири", "cétiri")
+      %td= t("цетирех", "cétireh")
+      %td= t("цетирем", "cétirem")
+    %tr
+      %th 5
+      %td= t("пети", "péti")
+      %td= t("петех", "péteh")
+      %td= t("петем", "pétem")
+    %tr
+      %th 6
+      %td= t("шести", "śésti")
+      %td= t("шестех", "śésteh")
+      %td= t("шестем", "śéstem")
+    %tr
+      %th 7
+      %td= t("шеньи", "śénji")
+      %td= t("шемех", "śémeh")
+      %td= t("шемем", "śémem")
+    %tr
+      %th 8
+      %td= t("осме", "ósme")
+      %td= t("осмех", "ósmeh")
+      %td= t("осмем", "ósmem")
+    %tr
+      %th 9
+      %td= t("девити", "déviti")
+      %td= t("девитех", "déviteh")
+      %td= t("девитем", "dévitem")
+    %tr
+      %th 10
+      %td= t("дешити", "déśiti")
+      %td= t("дешитех", "déśiteh")
+      %td= t("дешитем", "déśitem")
+  %p Едене “one” is a true pronominal adjective, and declines regularly according to the inanimate adjective declension paradigm (although the central /e/ disappears in all forms other than the #{abbrev 'nom'}/#{abbrev 'acc'} masculine singular): #{t "една", "iédna"}, #{t "едно", "iédno"}, etc. Like most other pronominal adjectives, it lacks definite forms. The only quirky form is its genitive plural (and therefore animate accusative as well), which is #{t "едних", "iedníh"}, not #{t "**едон", "*iedón"}.
+  %p Дова “two” has two forms in the nominative/accusative: #{t "дова", "dóva"} with masculine and neuter nouns, and #{t "довѣ", "dóvě"} with feminine. There are only two other forms for other cases: #{t "довух", "dóvuh"} (#{abbrev 'gen'}/#{abbrev 'loc'}) and #{t "довѣма", "dóvěma"} (#{abbrev 'datins'}). In other cases, the #{abbrev 'nom'}/#{abbrev 'acc'} form is used, including gender agreement. Три/трѣ “three” declines similarly, only having gender agreement in the #{abbrev 'nom'}/#{abbrev 'acc'}.
+  %p Цетири “four” and higher decline similarly (see above), but without any gender agreement. Novegradian numeral declension, as can be seen above, has undergone a significant amount of analogical levelling; only two patterns remain, that used by “two” and that used by all other numerals.
+  %p The teens are created by taking the digit and adding #{t "-нацити", "-náciti"} (a contracted form of Old Novegradian на дешѧте “upon ten”; the <i>-i</i> is by analogy with дешити and the other numbers 5-9). The incorporated digit may undergo substantial reductions:
+  %table
+    %tr
+      %th Number
+      %th
+        Nominative
+        %br
+        Accusative
+      %th
+        Genitive
+        %br
+        Locative
+      %th
+        Dative
+        %br
+        Instrumental
+    %tr
+      %th 11
+      %td= t("единацити", "iedináciti", :linebreak => true)
+      %td= t("единацитех", "iedináciteh", :linebreak => true)
+      %td= t("единацитем", "iedinácitem", :linebreak => true)
+    %tr
+      %th 12
+      %td= t("дуанацити", "duanáciti", :linebreak => true)
+      %td= t("дуанацитех", "duanáciteh", :linebreak => true)
+      %td= t("дуанацитем", "duanácitem", :linebreak => true)
+    %tr
+      %th 13
+      %td= t("тринацити", "trináciti", :linebreak => true)
+      %td= t("тринацитех", "trináciteh", :linebreak => true)
+      %td= t("тринацитем", "trinácitem", :linebreak => true)
+    %tr
+      %th 14
+      %td= t("цетренацити", "cetrenáciti", :linebreak => true)
+      %td= t("цетренацитех", "cetrenáciteh", :linebreak => true)
+      %td= t("цетренацитем", "cetrenácitem", :linebreak => true)
+    %tr
+      %th 15
+      %td= t("пиннацити", "pinnáciti", :linebreak => true)
+      %td= t("пиннацитех", "pinnáciteh", :linebreak => true)
+      %td= t("пиннацитем", "pinnácitem", :linebreak => true)
+    %tr
+      %th 16
+      %td= t("шеснацити", "śesnáciti", :linebreak => true)
+      %td= t("шеснацитех", "śesnáciteh", :linebreak => true)
+      %td= t("шеснацитем", "śesnácitem", :linebreak => true)
+    %tr
+      %th 17
+      %td= t("шеннацити", "śennáciti", :linebreak => true)
+      %td= t("шеннацитех", "śennáciteh", :linebreak => true)
+      %td= t("шеннацитем", "śennácitem", :linebreak => true)
+    %tr
+      %th 18
+      %td= t("осмнацити", "osmnáciti", :linebreak => true)
+      %td= t("осмнацитех", "osmnáciteh", :linebreak => true)
+      %td= t("осмнацитем", "osmnácitem", :linebreak => true)
+    %tr
+      %th 19
+      %td= t("деунацити", "deunáciti", :linebreak => true)
+      %td= t("деунацитех", "deunáciteh", :linebreak => true)
+      %td= t("деунацитем", "deunácitem", :linebreak => true)
+  %p The incorporated digit no longer shows any sort of case declension or gender agreement, so there are no forms like **дуѣнацити or **довухнацитех.
+  %p The decades 20-90 work by taking a unit and affixing -дешити to it (literally “two-tens”, “three-tens”, etc). When declined, both halves take affixes:
+  %table
+    %tr
+      %th Number
+      %th
+        Nominative
+        %br
+        Accusative
+      %th
+        Genitive
+        %br
+        Locative
+      %th
+        Dative
+        %br
+        Instrumental
+    %tr
+      %th 20
+      %td= t("дуадешити", "duadéśiti", :linebreak => true)
+      %td= t("дўудешитех", "dwudéśiteh", :linebreak => true)
+      %td= t("дуѣдешитем", "duědéśitem", :linebreak => true)
+    %tr
+      %th 30
+      %td= t("тридешити", "tridéśiti", :linebreak => true)
+      %td= t("тредешитех", "tredéśiteh", :linebreak => true)
+      %td= t("тредешитем", "tredéśitem", :linebreak => true)
+    %tr
+      %th 40
+      %td= t("цетирдешити", "cetirdéśiti", :linebreak => true)
+      %td= t("цетиредешитех", "cetiredéśiteh", :linebreak => true)
+      %td= t("цетиредешитем", "cetiredéśitem", :linebreak => true)
+    %tr
+      %th 50
+      %td= t("пиздешити", "pizdéśiti", :linebreak => true)
+      %td= t("питедешитех", "pitedéśiteh", :linebreak => true)
+      %td= t("питедешитем", "pitedéśitem", :linebreak => true)
+    %tr
+      %th 60
+      %td= t("шездешити", "śezdéśiti", :linebreak => true)
+      %td= t("шестедешитех", "śestedéśiteh", :linebreak => true)
+      %td= t("шестедешитем", "śestedéśitem", :linebreak => true)
+    %tr
+      %th 70
+      %td= t("шендешити", "śendéśiti", :linebreak => true)
+      %td= t("шемедешитех", "śemedéśiteh", :linebreak => true)
+      %td= t("шемедешитем", "śemedéśitem", :linebreak => true)
+    %tr
+      %th 80
+      %td= t("осендешити", "osendéśiti", :linebreak => true)
+      %td= t("осмедешитех", "osmedéśiteh", :linebreak => true)
+      %td= t("осмедешитем", "osmedéśitem", :linebreak => true)
+    %tr
+      %th 90
+      %td= t("девидешити", "devidéśiti", :linebreak => true)
+      %td= t("девитедешитех", "devitedéśiteh", :linebreak => true)
+      %td= t("девитедешитем", "devitedéśitem", :linebreak => true) 
+  %p Any other whole numbers below 100 can be formed by placing a digit after a decade, and dropping the #{t "-ти", "-ti"} from the decade. Only the last digit declines: #{t "дуадеши шеньи", "duadéśi śénji"} “twenty-seven”.
+  %p The hundreds are compounds of units plus forms of the word #{t "сто", "stó"} “hundred”. In their forms, older dual and genitive cases may be seen. These numbers no longer decline for case and are invariable.
+  %table
+    %tr
+      %th Number
+      %th Novegradian
+    %tr
+      %th 100
+      %td= t("сто", "stó")
+    %tr
+      %th 200
+      %td= t("дуѣсти", "duě́sti")
+    %tr
+      %th 300
+      %td= t("триста", "trísta")
+    %tr
+      %th 400
+      %td= t("цетреста", "cétresta")
+    %tr
+      %th 500
+      %td= t("пицот", "picót")
+    %tr
+      %th 600
+      %td= t("шестот", "śestót")
+    %tr
+      %th 700
+      %td= t("шемсот", "śemsót")
+    %tr
+      %th 800
+      %td= t("осемсот", "osemsót")
+    %tr
+      %th 900
+      %td= t("девицот", "devicót")
+  %p Higher numbers are made using the regular nouns #{t "тишикьа", "tíśikja"} “thousand” (second declension), #{t "милёне", "milióne"} “million”, #{t "билёне", "bilióne"} “billion”, etc. If the number immediately before it is between 2 and 4, it takes its genitive singular form (e.g., 2000 = #{t "довѣ тишикьин", "dóvě tíśikjin"}) and if it is between 5 and 9, the genitive plural (e.g., 7 million = #{t "шеньи милён", "śénji milión"}). See section 13.8.
+  %p 2,840,527 would therefore be rendered #{t "дова милёна, осемсот цетирдешити тишикьи, пицот дуадеши шеньи", "dóva milióna, osemsót cetirdéśiti tíśikji, picót duadéśi śénji"}. The commas are required in the written form, but there is no audible pause in pronunciation.
+  %p Since сто “hundred” no longer declines, #{t "сотока", "sótoka"} is used to represent “hundred” when used nominally: #{t "сотоки долареу", "sótoki dólareu"} “hundreds of dollars”. Since it is grammatically a noun and not a numeral, the following noun must be in the genitive or partitive plural.
+  %p There are two other “irregular” numeral forms: the non-declining #{t "пољтругаста", "połtrugásta"} “150” and #{t "пољтрекьаста", "połtrekjásta"} “250” (literally meaning “one and half hundred” and “two and a half hundred”; see section 7.6 below). The form пољтругаста is required for 150; **сто пиздешити is not allowed. Some variation between пољтрецаста and дуѣсти пиздешити exists, the latter being more common in most circumstances, but the former being required before certain nouns, such as units of currency.
+
+= section "Animate Numerals" do
+  %p The modern Novegradian animate numerals come from the Common Slavic collective numerals, actually nouns denoting a group of something (e.g., #{t "доваин", "dóvajin"} “a group of two, pair”). There is no form for “one”.
+  %table
+    %tr
+      %th Number
+      %th
+        Nominative
+        %br
+        Accusative
+      %th
+        Genitive
+        %br
+        Locative
+      %th
+        Dative
+        %br
+        Instrumental
+    %tr
+      %th 2
+      %td= t("доваин", "dóvajin", :linebreak => true)
+      %td= t("доваех", "dóvaieh", :linebreak => true)
+      %td= t("доваем", "dóvaiem", :linebreak => true)
+    %tr
+      %th 3
+      %td= t("троин", "trójin", :linebreak => true)
+      %td= t("троех", "tróieh", :linebreak => true)
+      %td= t("троем", "tróiem", :linebreak => true)
+    %tr
+      %th 4
+      %td= t("цетеро", "cétero", :linebreak => true)
+      %td= t("цетерех", "cétereh", :linebreak => true)
+      %td= t("цетерем", "céterem", :linebreak => true)
+    %tr
+      %th 5
+      %td= t("пентеро", "péntero", :linebreak => true)
+      %td= t("пентерех", "péntereh", :linebreak => true)
+      %td= t("пентерем", "pénterem", :linebreak => true)
+    %tr
+      %th 6
+      %td= t("шестеро", "śéstero", :linebreak => true)
+      %td= t("шестерех", "śéstereh", :linebreak => true)
+      %td= t("шестерем", "śésterem", :linebreak => true)
+    %tr
+      %th 7
+      %td= t("шентеро", "śéntero", :linebreak => true)
+      %td= t("шентерех", "śéntereh", :linebreak => true)
+      %td= t("шентерем", "śénterem", :linebreak => true)
+    %tr
+      %th 8
+      %td= t("озентеро", "ozéntero", :linebreak => true)
+      %td= t("озентерех", "ozéntereh", :linebreak => true)
+      %td= t("озентерем", "ozénterem", :linebreak => true)
+    %tr
+      %th 9
+      %td= t("девестеро", "devéstero", :linebreak => true)
+      %td= t("девестерех", "devéstereh", :linebreak => true)
+      %td= t("девестерем", "devésterem", :linebreak => true)
+    %tr
+      %th 10
+      %td= t("дежестеро", "deźéstero", :linebreak => true)
+      %td= t("дежестерех", "deźéstereh", :linebreak => true)
+      %td= t("дежестерем", "deźésterem", :linebreak => true)
+  %p Higher numbers consisting of a single word all take #{t "-еро", "-ero"} regularly: #{t "тридешитеро", "tridéśitero"} “thirty”, #{t "шеснацитеро", "śesnácitero"} “sixteen”. “Hundred”, “thousand”, and higher terms use the same forms as the inanimate.
+  %p Like the inanimate digits, these numerals also have a genitive/locative form and a dative/instrumental form. The #{abbrev 'gen'}/#{abbrev 'loc'} is formed by adding #{t "-ех", "-eh"} to the root, and the #{abbrev 'datins'} by adding #{t "-ем", "-em"}. The roots for 4-10 can be found by dropping the /o/, and for 2-3 by dropping the /in/.
+  %p For any higher numbers, the forms are the same as the inanimate numerals, except that if the very last element is 2-9 (or a teen, or a multiple of 10 less than 100), it will be in its animate form rather than inanimate: 727 = #{t "шемсот дуадеши шентеро", "śemsót duadéśi śéntero"}.
+
+= section "Ordinals" do
+  %p The digits 1-10 each have their own ordinal adjective. All are derived directly from the cardinal numeral except for “first” and “second”, which are suppletive forms.
+  %table
+    %tr
+      %th Ordinal
+      %th Novegradian
+    %tr
+      %th 1st
+      %td= t("пирве", "pírve")
+    %tr
+      %th 2nd
+      %td= t("друге", "drúge")
+    %tr
+      %th 3rd
+      %td= t("трите", "tríte")
+    %tr
+      %th 4th
+      %td= t("цедирте", "cedírte")
+    %tr
+      %th 5th
+      %td= t("пете", "péte")
+    %tr
+      %th 6th
+      %td= t("шесте", "śéste")
+    %tr
+      %th 7th
+      %td= t("шенме", "śénme")
+    %tr
+      %th 8th
+      %td= t("осме", "ósme")
+    %tr
+      %th 9th
+      %td= t("девете", "dévete")
+    %tr
+      %th 10th
+      %td= t("дешете", "déśete")
+  %p All higher numbers up to 100 that are one word (i.e., the teens and decades) can be converted to ordinals by simply adding -е (or other adjective endings) to the numeral: #{t "шендешите", "śendéśite"} “seventieth”. The hundreds are formed the same way, although all the fossilized forms of сто just become -сот-: #{t "соте", "sóte"} “hundredth”, #{t "дуѣсоте", "duěsóte"} “two hundredth”, etc. Higher numbers do the same, but with -н- inserted - #{t "тишитне", "tíśitne"} “thousandth”, #{t "милённе", "miliónne"} “millionth”.
+  %p Only the last portion of the number appears in its ordinal form, while the rest appears as a cardinal number. “1572nd” would be #{t "тишикьа пицот шендеши друге", "tíśikja picót śendéśi drúge"}.
+
+= section "Derivative Forms" do
+  %p The numerals from two to ten have nominalized forms, while two to seven have a number of adverbial forms.
+  %p The nominalized numerals function similarly to collectives. They indicate a small group, either animate or inanimate, that is viewed as a unit. The most common inanimate usage is in reference to playing cards: #{t "тройка", "tróika"} “three (card)”. The most common animate usage is in reference to groups of people: тройка “trio, group of three, triumvirate”. They are formed by affixing #{t "-(и)ка", "-(i)ka"} to the stem of the animate numeral. Note that for the numerals four through ten, the <i>-er-</i> suffix reduces to just <i>-r-</i>. “5” also loses its <i>-n-</i>.
+  %p The various adverbs exist only up to seven. They fall into three classes: adverbs of comparison, adverbs of intensity, and adverbs of accompaniment.
+  %p The adverbs of comparison modify comparative adjectives, meaning “X times as much”: #{t "драже надуоин", "dráźe naduójin"} “twice as expensive”. On its own, it can also mean “X-fold”: #{t "овелицит надуоин", "ovelícit naduójin"} “it will increase twofold”. For two and three, it is formed by prefixing <i>na-</i> “on” to the animate form of the numeral, although in the case of “two” some other alterations occur. For four through seven, they are formed by prefixing <i>na-</i> to the animate form, while reducing the ending <i>-ero</i> to <i>-ro</i>.
+  %p The adverbs of intensity modify other adjectives and adverbs, meaning “X as” as in #{t "надуоци сложне", "naduóici slóźne"} “twice as difficult, doubly difficult”, and verbs, meaning “for the Xth time”: #{t "натройци", "natróici"} “for the third time”. It is formed the same way as the nominalized numbers, except the prefix <i>na-</i> is seen in all forms and the suffix <i>-ka</i> is replaced with <i>-ci</i> (or in older texts or dialectically, <i>-ki</i>).
+  %p The adverbs of accompaniment clarify how many people are involved in a certain action, indicating accompaniment with verbs of motion and cooperative work with other verbs: #{t "они шли троем", "oní ślí tróiem"} “the three of them went”. For two and three, the forms are identical to the dative-instrumental form of the animate numeral. For four through seven, the ending <i>-rom</i> is added to the the animate stem, an historical variant of the instrumental.
+  %p These forms are all shown in the following table.
+  %table
+    %tr
+      %th Number
+      %th Nominalization
+      %th
+        Adverb of
+        %br
+        Comparison
+      %th
+        Adverb of
+        %br
+        Intensity
+      %th
+        Adverb of
+        %br
+        Accompaniment
+    %tr
+      %th 2
+      %td= t("дуойка", "duóika", :linebreak => true)
+      %td= t("надуоин", "naduójin", :linebreak => true)
+      %td= t("надуойци", "naduóici", :linebreak => true)
+      %td= t("доваем", "dóvaiem", :linebreak => true)
+    %tr
+      %th 3
+      %td= t("тройка", "tróika", :linebreak => true)
+      %td= t("натроин", "natrójin", :linebreak => true)
+      %td= t("натройци", "natróici", :linebreak => true)
+      %td= t("троем", "tróiem", :linebreak => true)
+    %tr
+      %th 4
+      %td= t("цетрика", "cétrika", :linebreak => true)
+      %td= t("нацетро", "nacétro", :linebreak => true)
+      %td= t("нацетрици", "nacétrici", :linebreak => true)
+      %td= t("цетром", "cétrom", :linebreak => true)
+    %tr
+      %th 5
+      %td= t("петрика", "pétrika", :linebreak => true)
+      %td= t("напетро", "napétro", :linebreak => true)
+      %td= t("напетрици", "napétrici", :linebreak => true)
+      %td= t("петром", "pétrom", :linebreak => true)
+    %tr
+      %th 6
+      %td= t("шестрика", "śéstrika", :linebreak => true)
+      %td= t("нашестро", "naśéstro", :linebreak => true)
+      %td= t("нашестрици", "naśéstrici", :linebreak => true)
+      %td= t("шестром", "śéstrom", :linebreak => true)
+    %tr
+      %th 7
+      %td= t("шентрика", "śéntrika", :linebreak => true)
+      %td= t("нашентро", "naśéntro", :linebreak => true)
+      %td= t("нашентрици", "naśéntrici", :linebreak => true)
+      %td= t("шентром", "śéntrom", :linebreak => true)
+    %tr
+      %th 8
+      %td= t("озентрика", "ozéntrika", :linebreak => true)
+      %td
+      %td
+      %td
+    %tr
+      %th 9
+      %td= t("девестрика", "devéstrika", :linebreak => true)
+      %td
+      %td
+      %td
+    %tr
+      %th 10
+      %td= t("дежестрика", "deźéstrika", :linebreak => true)
+      %td
+      %td
+      %td
+
+= section "Fractions" do
+  %p Novegradian already has its own words for the numbers 0.5, 1.5, and 2.5, which are #{t "пољ", "pół"}, #{t "пољтруга", "połtrugá"}, and #{t "пољтрекьа", "połtrekjá"}, respectively. All other halves are formed as пољ + the genitive form of the number above: #{t "пољ девитех", "pół déviteh"} “8.5”, literally “half of nine”.
+  %p Other fractions are made using an ordinal followed by the feminine noun #{t "цести", "césti"} “portion”: #{t "трита цести", "tríta césti"} “one-third”, literally “the third portion”. A cardinal number before it changes the value: #{t "довѣ тритѣ цести", "dóvě trítě cestí"} “two-thirds”, literally “two third portions” (the word “portion” must be put in the genitive case as per the rules of number agreement described later).
+  %p The noun цести may be omitted in exchange for making the ordinal definite. However, the case and gender must be the same: #{t "довѣ тритѣе", "dóvě trítěie"}.
+  %p Novegradian does have distinct words for “third” and “quarter”, #{t "трете", "tréte"} and #{t "цетуерте", "cetuérte"} respectively, but these are only used in practical physical contexts such as dividing a piece of land or foods like cakes. They never appear in more abstract mathematical contexts (e.g., the number 1/4 is always called #{t "цедиртая", "cedírtaia"}, never #{t "цетуерте", "cetuérte"}) or when the object being quantified is not something that is physically divided and partitioned (e.g., #{t "цедиртая зе луд", "cedírtaia ze lúd"} “a fourth of the people”, never *цетуерте зе луд).
+  %p When reading decimals, digits to the right of the decimal are read individually, not as a whole. The decimal mark itself (“,”) is called #{t "зарѣзе", "zárěze"}. Thus, 0,75 is read as #{t "ноље зарѣзе шеньи пети", "nółe zárěze śénji péti"}.
+
+= section "The Singulative One" do
+  %p In addition to the regular numeral #{t "едене", "iédene"} for “one”, Novegradian also has the so-called “singulative one” #{t "пољ", "pół"}, identical in form but not in function with the word for “half”. It is used to emphasize that a given noun is one out of what is normally expected to be a group of more than one. Some nouns, such as “leg”, almost always take пољ instead of едене, since legs usually come in two or four: #{t "пољ ногѣ", "pół nogě́"} “one leg”. For nouns that do not necessarily come in groups, there is a semantic difference between the use of едене and пољ. For example, #{t "едене вѣне", "iédene vě́ne"} means “one ship” being discussed on its own, while #{t "пољ вѣна", "pół vě́na"} may better be translated as “one of the ships”, with the implication that this ship is part of a fleet.
+  %p Not all instances of “one of the X” in English may be translated into Novegradian using пољ. This can only be done if there is some inherent connection between the one item and the rest of the group, such as the leg or ship in a fleet above. It cannot be used in a sentence such as “This is one of the cities I have visited”; this requires едене as the connection between “this [city]” and “cities I have visited” is too weak and entirely dependent on a single person, rather than being anything inherent.
+  %p “One boot” may be distinguished from “half of a boot” by the case of the noun after пољ: genitive for “one”, partitive for “half”: #{t "пољ сабога", "pół sabóga"} “one boot”, #{t "пољ сабогек", "pół sabógek"} “half of a boot”<sup>1</sup>.
+
+= section "Indefinite Numerals" do
+  %p Modern Novegradian has three standard indefinite numerals. #{t "Сотоки", "sótoki"} (first declension plural) means “hundreds (of)”, and is used much as in English, utilizing the nominalized form of the numeral #{t "сто", "stó"} “one hundred”. The noun #{t "тема", "temá"} (first declension singular; literally “darkness”) refers to an uncountable multitude, generally used like English “thousands of” or “tens of thousands of”. The phrase #{t "тема-тем", "temá-tem"} (first declension singular; as it literally means “darkness of darknesses”, only the first part declines) is stylistically marked and poetically refers to a seemingly infinite number of something. All of these require the following noun to be in the partitive plural: #{t "тема-тем гуѣздоу", "temá-tem guězdóu"} “a multitude (infinite number of) stars”.
+  %p There is no close equivalent to English “tens of” or “dozens of”. Any of a number of non-numerical nouns may be used: #{t "грамада", "gramáda"} “crowd”, #{t "множестуо", "mnóźestuo"} “multitude”, #{t "ред", "réd"} “row”, etc.
+
+= section "Use of Symbols" do
+  %p In Novegradian, the comma marks decimals and the full stop separates numerals. “Ten thousand point five” is therefore rendered 10.000,5.
+  %p Novegradian has an unusual system for positioning unit symbols. This includes percents (%), currency symbols ($, €, руб, мк, etc), and symbols for weights and measures (л, км, г, etc). In speech, the units may be placed either before or after the number, with slightly different meanings (described in a later section). In writing, the placement of these symbols mirrors their position in speech, so that all may be placed either before or after the number. This leads to unusual sights (by non-Novegradian standards) such as %90, 9.95$, or км400.
+
+= section "Cyrillic Numerals" do
+  %p Much like Roman numerals in the West, Novegradian still uses the old Cyrillic numeral system (referred to as #{t "старей стиле", "stárei stíle"} “old style”) in certain situations. It is common to see them on clocks, for writing dates, on lists, marking days of the week (where 1 is Monday and 7 is Sunday), occasionally as page numbers, and often on tombstones.
+  %p Derived from the Greek numeral system, the old Cyrillic system includes a number of letters no longer used in Novegradian, much less any Slavic language. For numeration, though, they continue to be used. Every unit from 1-9, ten from 10-90, and hundred from 100-900 are assigned a letter. These are then ordered, largest first, and their values added up. The letter assignments are:
+  %table
+    %tr
+      %th Letter
+      %th Value
+      %th{:rowspan => 10}
+      %th Letter
+      %th Value
+      %th{:rowspan => 10}
+      %th Letter
+      %th Value
+    %tr
+      %td А
+      %td 1
+      %td І
+      %td 10
+      %td Р
+      %td 100
+    %tr
+      %td В
+      %td 2
+      %td К
+      %td 20
+      %td С
+      %td 200
+    %tr
+      %td Г
+      %td 3
+      %td Л
+      %td 30
+      %td Т
+      %td 300
+    %tr
+      %td Д
+      %td 4
+      %td М
+      %td 40
+      %td У
+      %td 400
+    %tr
+      %td Е
+      %td 5
+      %td Н
+      %td 50
+      %td Ф
+      %td 500
+    %tr
+      %td Ѕ
+      %td 6
+      %td Ѯ
+      %td 60
+      %td Х
+      %td 600
+    %tr
+      %td З
+      %td 7
+      %td О
+      %td 70
+      %td Ѱ
+      %td 700
+    %tr
+      %td И
+      %td 8
+      %td П
+      %td 80
+      %td W
+      %td 800
+    %tr
+      %td Ѳ
+      %td 9
+      %td Ч
+      %td 90
+      %td Ц
+      %td 900
+  %p The one exception to the highest-value first rule is in the teens, where the “decimal I” always follows the unit instead of preceding it. Numbers in the thousands are formed using the symbol ҂, which multiplies the value of whatever letter follows it by 1000.
+  %p When adequate fonts are unavailable, a few substitutions are common: Ѳ becomes 8, Ѯ becomes Кс, Ѱ becomes Пс, and W becomes W from the Latin script. Since most of these characters are not typed very frequently, it generally is not a problem.
+  %p Traditionally a titlo, a diacritic consisting of a short jagged line, was written over the next-to-last letter in a number. In modern times generally a single, long overline is drawn over an entire number.
+  %p Examples (with both modern and traditional styles in the ‘Cyrillic’ column):
+  %table
+    %tr
+      %th{:colspan => 2}
+      %th Western
+      %th Breakdown
+    %tr
+      %td
+        %span.cyrillic-numeral ДІ
+      %td д҃і
+      %td 14
+      %td 4+10
+    %tr
+      %td
+        %span.cyrillic-numeral КГ
+      %td к҃г
+      %td 23
+      %td 20+3
+    %tr
+      %td
+        %span.cyrillic-numeral РА
+      %td р҃а
+      %td 101
+      %td 100+1
+    %tr
+      %td
+        %span.cyrillic-numeral ѰОЗ
+      %td ѱо҃з
+      %td 777
+      %td 700+70+7
+    %tr
+      %td
+        ҂
+        %span.cyrillic-numeral АФПЕ
+      %td ҂афп҃е
+      %td 1585
+      %td (1000×1)+500+80+5
+    %tr
+      %td
+        ҂
+        %span.cyrillic-numeral АЦИІ
+      %td аци҃і
+      %td 1918
+      %td (1000×1)+900+8+10
+    %tr
+      %td
+        ҂
+        %span.cyrillic-numeral ВЗ
+      %td ҂в҃з
+      %td 2007
+      %td (1000×2)+7
+        
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Alternatively, “half of a boot” may also be expressed using the preposition #{t "зе", "ze"} “from” plus the genitive case: #{t "пољ зе сабога", "pół ze sabóga"}.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
