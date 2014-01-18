@@ -1,0 +1,20 @@
+- title ||= ""
+- stress ||= []
+
+%table
+  %tr
+    %th{:colspan => (stress.size * 2 + 1)}= title
+  %tr
+    %th{:rowspan => 2}
+    - stress.keys.each do |pattern_name|
+      %th{:colspan => 2}= pattern_name
+  %tr
+    - stress.size.times do
+      %th Sg
+      %th Pl
+  - ["Nom.", "Gen.", "Acc.", "D/I", "Par.", "Loc.", "Lat."].each_with_index do |label, idx|
+    %tr
+      %th= label
+      - stress.keys.each do |pattern|
+        %td= stress[pattern][:sg][idx]
+        %td= stress[pattern][:pl][idx]

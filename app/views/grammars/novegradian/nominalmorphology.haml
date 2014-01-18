@@ -1,0 +1,869 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Морпољогя истекь ймѣн"
+
+= render :partial => 'navigation'
+
+= section "Definitions and Features" do
+  %p The basic structure of the Novegradian noun is similar to the verb. A noun consists of a stem made up of a root and zero or more derivational affixes, plus declensional affixes.
+  %p Nouns are declined according to one of six regular declension classes, which will be discussed in section 5.2 below. These declension classes provide a set series of endings and stress patterns for the nouns within them.
+  %p All nouns have an inherent gender, either masculine, feminine, or neuter. Gender cannot be predicted from a primitive stem, though many derived stems include suffixes with a predefined gender (e.g., the gerundive <i>-nj-</i> is always masculine). Gender is much easier to determine when examining a fully-declined noun, as there is a fairly high correspondence between gender and declension class, although this is far from universal.
+  %p In addition to gender, there is also a secondary system of noun classes occurring alongside: animacy, a feature present in varying extents in all of the Slavic languages. Masculine and feminine nouns may be either animate or inanimate; neuter nouns are always inanimate. Unlike gender, there is no correlation between animacy and declension class.
+  %p Novegradian nouns decline to indicate two non-inherent features: number and case. Most nouns have two numbers, a singular and a plural, although a small, closed set also have dual forms with limited usage. There are eight cases in the standard written language—nominative, genitive, accusative, dative/instrumental, partitive, locative, and lative—and nine in the spoken language, which includes a vocative<sup>1</sup>.
+  %p The citation form of all nouns is the nominative singular.
+
+= section "Declensions and Genders" do
+  %p Novegradian is considered as having six basic nominal declensions, in Indo-European terms derived from the ā, jā, ŭ, jŏ, and ĭ stems, as well as a sixth “consonantal” stem. The jā and consonantal declensions contain a relatively small set of nouns, so Novegradian is generally said to have four primary stems.
+  %p The six declensions may be referenced by either a number or a name. The names—A, Ja, O, E, I, or Consonant—derive from what is considered to be the most characteristic feature of that declension. For A- and Ja-stems, this is the nominative singular ending; for O- and E-stems, it is the vowel most prevalent throughout the declension; for I-stems, it is a combination of both; and for Consonant-stems, it is the a reference to the unique augmented stems seen in most declined forms.
+  %p The Novegradian A-stem, or First Declension, derives from the IE ā-stem and consists almost entirely of feminine nouns, with only a few masculine nouns, mostly archaic or foreign. Examples include #{t "нига", "níga"} “book” (#{abbrev 'f'}), #{t "шестра", "śéstra"} “sister” (#{abbrev 'f'}), #{t "олака", "ólaka"} “street, path” (#{abbrev 'f'}), #{t "слуга", "slúga"} “servant” (#{abbrev 'm'}).
+  %p The Ja-stem, or Second Declension, derives from the IE jā-stem (i.e., an ā-stem with a root-final /j/). In Proto-Slavic, this was just a variant of the above A-stem, though it has diverged significantly in Novegradian. All such nouns are feminine. Examples include #{t "жемя", "źémia"} “land” (#{abbrev 'f'}), #{t "каля", "kália"} “fish” (#{abbrev 'f'}), #{t "дужа", "duźá"} “person, soul” (#{abbrev 'f'}).
+  %p The O-stem, or Third Declension, derives from the IE ŭ-stem and neuter ŏ-stem. These nouns are mostly neuter with a smaller number of masculine nouns, and in the nominative singular generally ends in /o/ for neuter nouns and a consonant (i.e., zero ending) for masculine nouns. Examples include #{t "дум", "dúm"} “house” (#{abbrev 'm'}), #{t "сад", "sád"} “garden, orchard” (#{abbrev 'm'}), #{t "асто", "ásto"} “year” (#{abbrev 'n'}), #{t "окно", "oknó"} “window” (#{abbrev 'n'}).
+  %p The E-stem, or Fourth Declension, derives from the IE masculine ŏ- and jŏ-stems. Novegradian is unique amonst the Slavic languages for having merged the masculine ŏ-stem with the jŏ-stem; in all of the others the masculine ŏ- and ŭ-stems were merged. These nouns include a large number of both masculine and neuter nouns, all ending in /e/. Examples include #{t "словѣке", "slově́ke"} “Slav” (#{abbrev 'm'}), #{t "возе", "vóze"} “car” (#{abbrev 'm'}), #{t "море", "móre"} “sea” (#{abbrev 'n'}), #{t "поле", "póle"} “field” (#{abbrev 'n'}).
+  %p The I-stem, or Fifth Declension, derives from the IE ĭ-stem. These nouns can be either masculine or feminine. Examples include #{t "панти", "pánti"} “way” (#{abbrev 'm'}), #{t "нокьи", "nókji"} “night” (#{abbrev 'f'}), #{t "рыши", "rýśi"} “cheese” (#{abbrev 'm'}), #{t "дожгьи", "doźgjí"} “rain” (#{abbrev 'm'}).
+  %p The Consonant-stem, or Sixth Declension, consists of nouns that acquire a suffix in all forms but the nominative singular. They may be of any gender. Many such nouns have reacquired this consonant in the nominative singular by analogy, but still take sixth declension endings. Examples include #{t "мати", "máti"} “mother” (<i>-r-</i>) (#{abbrev 'f'}), #{t "небесо", "nébeso"} “sky, heaven” (<i>-s-</i>) (#{abbrev 'n'}), #{t "ймѣно", "jmě́no"} “name” (<i>-n-</i>) (#{abbrev 'n'}). Former IE ū-stem nouns also have generally fallen into this class, with the consonantal suffix <i>-v-</i>: #{t "керкуа", "kérkua"} “church” (#{abbrev 'f'}).
+
+= section "Animacy" do
+  %p Nouns in Slavic languages display a curious property known as animacy, where nouns referring to humans or animals decline differently than other nouns in some forms. Novegradian in particular has made significant use of animacy, having given it wider usage than most other Slavic languages. The animacy of a noun must be known in order to properly decline the accusative case and to modify nouns with numerals.
+  %p Animate nouns refer to humans or animals. This includes personal names as well as professions. Body parts are not included, nor are living but inanimate forms of life such as plants. Microbes such as bacteria and viruses are all considered inanimate as well. Animacy is a fixed feature, so nouns may not switch between animate and inanimate declensions.
+  %p Some Slavic linguists prefer to group the system of animacy in with the system of gender, since this can be done relatively cleanly. In such an analysis, Novegradian has a total of five noun classes: masculine animate, masculine inanimate, feminine animate, feminine inanimate, and neuter.
+
+= section "The First (A) Declension" do
+  %p The citation form of first declension nouns, the nominative singular, always ends in -a. The endings are attached directly onto the root. The first half of the table represents the singular, and the second, the plural.
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "нига", :def => "book"},
+                :nom     => {:cyr => "ниг-а", :lat => "níga"},
+                :gen     => {:cyr => "ниг-ѣ", :lat => "nígě"},
+                :acc     => {:cyr => "ниг-у", :lat => "nígu"},
+                :dat     => {:cyr => "ниг-ой", :lat => "nígoi"},
+                :par     => {:cyr => "ниг-ок", :lat => "nígok"},
+                :loc     => {:cyr => "ниг-ѣ", :lat => "nígě"},
+                :lat     => {:cyr => "ниг-ун", :lat => "nígun"} },
+              { :meaning => {:cyr => "лейра", :def => "camp"},
+                :nom     => {:cyr => "лейр-а", :lat => "léira"},
+                :gen     => {:cyr => "лейр-ѣ", :lat => "leirě́"},
+                :acc     => {:cyr => "лейр-у", :lat => "leirú"},
+                :dat     => {:cyr => "лейр-ой", :lat => "leirói"},
+                :par     => {:cyr => "лейр-ок", :lat => "leirók"},
+                :loc     => {:cyr => "лейр-ѣ", :lat => "leirě́"},
+                :lat     => {:cyr => "лейр-ун", :lat => "leirún"} },
+              { :meaning => {:cyr => "шестра", :def => "sister"},
+                :nom     => {:cyr => "шестр-а", :lat => "śéstra"},
+                :gen     => {:cyr => "шестр-ѣ", :lat => "śestrě́"},
+                :acc     => {:cyr => "шестр-ѣ", :lat => "śestrě́"},
+                :dat     => {:cyr => "шестр-ой", :lat => "śestrói"},
+                :par     => {:cyr => "шестр-ок", :lat => "śestrók"},
+                :loc     => {:cyr => "шестр-ѣ", :lat => "śestrě́"},
+                :lat     => {:cyr => "шестр-ун", :lat => "śestrún"} },
+              { :meaning => {:cyr => "нога", :def => "leg, foot"},
+                :nom     => {:cyr => "ног-а", :lat => "nogá"},
+                :gen     => {:cyr => "ног-ѣ", :lat => "nogě́"},
+                :acc     => {:cyr => "ног-у", :lat => "nógu"},
+                :dat     => {:cyr => "ног-ой", :lat => "nogói"},
+                :par     => {:cyr => "ног-ок", :lat => "nógok"},
+                :loc     => {:cyr => "ног-ѣ", :lat => "nogě́"},
+                :lat     => {:cyr => "ног-ун", :lat => "nógun"} } ]
+  = render 'noun_table', :title => "First Declension Singular", :forms => forms, :nouns => nouns
+  - forms -= [:meaning]
+  - nouns = [ { :nom     => {:cyr => "ниг-и", :lat => "nígi"},
+                :gen     => {:cyr => "ниг-Ø", :lat => "níg"},
+                :acc     => {:cyr => "ниг-и", :lat => "nígi"},
+                :dat     => {:cyr => "ниг-ам", :lat => "nígam"},
+                :par     => {:cyr => "ниг-оу", :lat => "nígou"},
+                :loc     => {:cyr => "ниг-ах", :lat => "nígah"},
+                :lat     => {:cyr => "ниг-и", :lat => "nígi"} },
+              { :nom     => {:cyr => "лейр-и", :lat => "léiri"},
+                :gen     => {:cyr => "леёр-Ø", :lat => "leiór"},
+                :acc     => {:cyr => "лейр-и", :lat => "léiri"},
+                :dat     => {:cyr => "лейр-ам", :lat => "leirám"},
+                :par     => {:cyr => "лейр-оу", :lat => "leiróu"},
+                :loc     => {:cyr => "лейр-ах", :lat => "leiráh"},
+                :lat     => {:cyr => "лейр-и", :lat => "léiri"} },
+              { :nom     => {:cyr => "шестр-и", :lat => "śéstri"},
+                :gen     => {:cyr => "шестор-Ø", :lat => "śestór"},
+                :acc     => {:cyr => "шестор-Ø", :lat => "śestór"},
+                :dat     => {:cyr => "шестр-ам", :lat => "śestrám"},
+                :par     => {:cyr => "шестр-оу", :lat => "śestróu"},
+                :loc     => {:cyr => "шестр-ах", :lat => "śestráh"},
+                :lat     => {:cyr => "шестр-и", :lat => "śéstri"} },
+              { :nom     => {:cyr => "ног-и", :lat => "nógi"},
+                :gen     => {:cyr => "ног-Ø", :lat => "nóg"},
+                :acc     => {:cyr => "ног-и", :lat => "nógi"},
+                :dat     => {:cyr => "ног-ам", :lat => "nogám"},
+                :par     => {:cyr => "ног-оу", :lat => "nogóu"},
+                :loc     => {:cyr => "ног-ах", :lat => "nogáh"},
+                :lat     => {:cyr => "ног-и", :lat => "nógi"} } ]
+  = render 'noun_table', :title => "First Declension Plural", :forms => forms, :nouns => nouns
+  %p For the most part this declension is very straightforward, except for the genitive and accusative forms. If the stem of the noun ends in any sort of consonant cluster (above, /jr/ and /str/), an /o/ is inserted immediately before the last consonant in the genitive plural. Also, as in other Slavic languages, a special animacy distinction appears in the accusative case: Any noun referring to a person or animal, in this case “sister”, will use the genitive case form in place of the accusative case. The form #{t "**шестр-у", "śestru"} is nonexistent.
+  %p Most of these forms derive directly from Common Slavic, although some comments can be made about the origins of certain forms. Both the accusative and lative singulars derive from the Common Slavic accusative *-ǫ. In Old Novegradian this uncoupled and became -ун. Due to various phonological and speech-related factors, the /n/ wore away in many positions, leaving the modern accusative. The places where it remained were the lative functions of the old accusative, thereby splitting the case in two. Over time the range and use of the lative expanded. The lative plural continues the original accusative plural, and is distinct from the modern accusative plural only for animate nouns (as the genitive spreading of animate nouns did not at first affect nouns in this situation); for practical purposes, it could be said that the lative plural is identical in form to the nominative plural.
+  %p The dative and instrumental cases began to merge in the 1600s or 1700s, when their plural endings (-аме and -ами, respectively) began to conflate in speech. By the late 19th century the merger was complete, when the instrumental singular form began to take over the dative singular, although the original dative form still survives in some irregularly-declining nouns and in fixed expressions.
+  %p The origin of the partitive singular is not completely clear. It may have come from a Uralic language, or more likely it may have its origins in the same formation (a diminutive?) that created the Russian partitive nouns чайку “[some] tea” and кофейку “[some] coffee”. The partitive plural ending, on the other hand, certainly comes from the IE ŭ-stem genitive plural ending (CS *-ovъ), freed for use when the ŭ-stem merged with the neuter ŏ-stem to form the Novegradian O-stem.
+  %p There are four stress patterns that can appear on first declension nouns. They can be stem-stressed (like нига above), which are always stressed on the same syllable except in the partitive and lative plurals; they can be ending-stressed, which is rather rare, but which are always stressed on the first syllable after the stem; they can be mobile-stressed, like нога above, where stress moves around predictably; or they can be “double-consonant mobile”, like лейра and шестра, whose roots always end in a consonant cluster. The stress patterns are summarized below. “S” refers to stress on the stem, and “E” to stress on the ending. “G” refers to the special stress pattern unique to the genitive plural, where the last syllable is stressed, whether it is part of the stem or an epenthetic vowel.
+  - stress = { "Stem"      => { :sg => %w(S S S S S S S), :pl => %w(S G S/G S E S S) },
+               "Ending"    => { :sg => %w(E E E E E E E), :pl => %w(E G E/G E E E E) },
+               "Mobile"    => { :sg => %w(E E S/E E S E S), :pl => %w(S G S/G E E E S) },
+               "2C Mobile" => { :sg => %w(S E E E E E E), :pl => %w(S G S/G E E E S) } }
+  = render 'noun_stress_table', :title => "First Declension Stress Patterns", :stress => stress
+
+= section "The Second (Ja) Declension" do
+  %p This declension is relatively small, but always listed after the A Declension because of its historical relationship to it. All of these nouns are feminine, and end in either -а or -я in their citation forms.
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "жемя", :def => "land"},
+                :nom     => {:cyr => "жем-я", :lat => "źémia"},
+                :gen     => {:cyr => "жем-ин", :lat => "źémin"},
+                :acc     => {:cyr => "жемл-у", :lat => "źémlu"},
+                :dat     => {:cyr => "жем-ей", :lat => "źeméi"},
+                :par     => {:cyr => "жемл-ок", :lat => "źemlók"},
+                :loc     => {:cyr => "жем-и", :lat => "źemí"},
+                :lat     => {:cyr => "жемл-ун", :lat => "źemlún"} },
+              { :meaning => {:cyr => "каля", :def => "fish"},
+                :nom     => {:cyr => "кал-я", :lat => "kália"},
+                :gen     => {:cyr => "кал-ин", :lat => "kálin"},
+                :acc     => {:cyr => "кал-ин", :lat => "kálin"},
+                :dat     => {:cyr => "кал-ей", :lat => "kaléi"},
+                :par     => {:cyr => "кал-ёк", :lat => "kaliók"},
+                :loc     => {:cyr => "кал-и", :lat => "kalí"},
+                :lat     => {:cyr => "кал-юн", :lat => "kaliún"} },
+              { :meaning => {:cyr => "дужа", :def => "person"},
+                :nom     => {:cyr => "дуж-а", :lat => "duźá"},
+                :gen     => {:cyr => "дуж-ин", :lat => "duźín"},
+                :acc     => {:cyr => "дуж-ин", :lat => "duźín"},
+                :dat     => {:cyr => "дуж-ей", :lat => "duźéi"},
+                :par     => {:cyr => "дуж-ок", :lat => "duźók"},
+                :loc     => {:cyr => "душ-и", :lat => "dúśi"},
+                :lat     => {:cyr => "дуж-ун", :lat => "duźún"} },
+              { :meaning => {:cyr => "дакьа", :def => "dacha"},
+                :nom     => {:cyr => "дакь-а", :lat => "dákja"},
+                :gen     => {:cyr => "дакь-ин", :lat => "dákjin"},
+                :acc     => {:cyr => "дакь-у", :lat => "dákju"},
+                :dat     => {:cyr => "дагь-ей", :lat => "dagjéi"},
+                :par     => {:cyr => "дагь-ок", :lat => "dagjók"},
+                :loc     => {:cyr => "дагь-и", :lat => "dagjí"},
+                :lat     => {:cyr => "дагь-ун", :lat => "dagjún"} } ]
+  = render 'noun_table', :title => "Second Declension Singular", :forms => forms, :nouns => nouns
+  - forms -= [:meaning]
+  - nouns = [ { :nom     => {:cyr => "жем-ѣ", :lat => "źémě"},
+                :gen     => {:cyr => "жемел-и", :lat => "źeméli"},
+                :acc     => {:cyr => "жем-ѣ", :lat => "źémě"},
+                :dat     => {:cyr => "жемл-ам", :lat => "źemlám"},
+                :par     => {:cyr => "жемл-оу", :lat => "źemlóu"},
+                :loc     => {:cyr => "жемл-ах", :lat => "źemláh"},
+                :lat     => {:cyr => "жем-ѣ", :lat => "źémě"} },
+              { :nom     => {:cyr => "кал-ѣ", :lat => "kálě"},
+                :gen     => {:cyr => "кал-и", :lat => "káli"},
+                :acc     => {:cyr => "кал-и", :lat => "káli"},
+                :dat     => {:cyr => "кал-ям", :lat => "kaliám"},
+                :par     => {:cyr => "кал-ёу", :lat => "kalióu"},
+                :loc     => {:cyr => "кал-ях", :lat => "kaliáh"},
+                :lat     => {:cyr => "кал-ѣ", :lat => "kálě"} },
+              { :nom     => {:cyr => "дуж-ѣ", :lat => "duźě́"},
+                :gen     => {:cyr => "душ-и", :lat => "dúśi"},
+                :acc     => {:cyr => "душ-и", :lat => "dúśi"},
+                :dat     => {:cyr => "душ-ам", :lat => "dúśam"},
+                :par     => {:cyr => "дуж-оу", :lat => "duźóu"},
+                :loc     => {:cyr => "душ-ах", :lat => "dúśah"},
+                :lat     => {:cyr => "дуж-ѣ", :lat => "duźě́"} },
+              { :nom     => {:cyr => "дакь-ѣ", :lat => "dákjě"},
+                :gen     => {:cyr => "дакь-и", :lat => "dákji"},
+                :acc     => {:cyr => "дакь-ѣ", :lat => "dákjě"},
+                :dat     => {:cyr => "дагь-ам", :lat => "dagjám"},
+                :par     => {:cyr => "дагь-оу", :lat => "dagjóu"},
+                :loc     => {:cyr => "дагь-ах", :lat => "dagjáh"},
+                :lat     => {:cyr => "дакь-ѣ", :lat => "dákjě"} } ]
+  = render 'noun_table', :title => "Second Declension Plural", :forms => forms, :nouns => nouns
+  %p The /l/ sporadically appearing in the declension of жемя in place of /j/ is due to a change in Common Slavic that was only partially undone in Novegradian. The /l/ acquired after the labial consonants /p b β m/ drops whenever followed by a front vowel /i e æ/, and occasionally before /a/. This can be seen in the declension of any noun ending in -пя, -бя, -вя, or -мя in the nominative singular—the /l/ only appears before /o u a/ (except in the nominative singular). It is still present in the genitive plural, where the infixed /e/ seperates it from the consonants preceding it. Even non-native nouns ending in labial + я follow this pattern, which they gained through analogy: #{t "Шербя", "Śérbia"} “Serbia-#{abbrev 'nom'}”, #{t "Шерблу", "Śérblu"} “Serbia-#{abbrev 'acc'}”.
+  %p The words дужа and дакьа display another phenomenon found in all declensions. A single unclustered consonant becomes voiced immediately before the stressed syllable, leading to many such alternations in their declension. This does not work in reverse - if the consonant was originally voiced, it will always be voiced. Дужа in an earlier form of Novegradian was pronounced [du.ˈsʲa].
+  %p Nouns like дужа and дакьа (with no /j/ element) that are found in this declension once did have /j/, but it merged with the preceding consonant during the Common Slavic period. In this instance, the original forms in Common Slavic were *duxja and *datja. Such nouns decline exactly the same way as nouns that still have the /j/ element, except in spelling iotafied consonants are not used (e.g., о where каля has ё, а where it has я, etc).
+  %p The lative plural, as in the first declension, is identical to the accusative plural inanimate nouns only; for animate nouns, it is identical to the nominative.
+  %p There are two stress patterns displayed in this declension, both mobile. The first is known as Stem-Nominative (like жемя, каля, and дакьа above), where the stress in the nominative singular is on the stem. The second is Ending-Nominative (like дужа above), where the stress in the nominative singular is on the ending. Summarized below (where G again represents the special genitive plural stress pattern—stress on the last syllable before the ending):
+  - stress = { "Stem"   => { :sg => %w(S S S E E E S), :pl => %w(S G S/G E E E S) },
+               "Ending" => { :sg => %w(E E E E E S E), :pl => %w(E G E/G S E S E) } }
+  = render 'noun_stress_table', :title => "Second Declension Stress Patterns", :stress => stress
+
+= section "The Third (O) Declension" do
+  %p The third declension consists of masculine and neuter nouns that end in /o/ or a consonant in their citation forms. Both masculine and neuter nouns decline identically in all numbers and case aside from nominative singular and inanimate accusative singular, where masculine nouns take -Ø and neuter nouns take -o.
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "дум", :def => "house", :note => abbrev('m')},
+                :nom     => {:cyr => "дум-Ø", :lat => "dúm"},
+                :gen     => {:cyr => "дум-у", :lat => "dúmu"},
+                :acc     => {:cyr => "дум-Ø", :lat => "dúm"},
+                :dat     => {:cyr => "дум-ом", :lat => "dúmom"},
+                :par     => {:cyr => "дум-ок", :lat => "dumók"},
+                :loc     => {:cyr => "дум-ѣ", :lat => "dúmě"},
+                :lat     => {:cyr => "дум-он", :lat => "dumón"} },
+              { :meaning => {:cyr => "асто", :def => "year", :note => abbrev('n')},
+                :nom     => {:cyr => "аст-о", :lat => "ásto"},
+                :gen     => {:cyr => "аст-у", :lat => "ástu"},
+                :acc     => {:cyr => "аст-о", :lat => "ásto"},
+                :dat     => {:cyr => "аст-ом", :lat => "ástom"},
+                :par     => {:cyr => "аст-ок", :lat => "astók"},
+                :loc     => {:cyr => "аст-ѣ", :lat => "ástě"},
+                :lat     => {:cyr => "аст-он", :lat => "astón"} },
+              { :meaning => {:cyr => "окно", :def => "window", :note => abbrev('n')},
+                :nom     => {:cyr => "окн-о", :lat => "oknó"},
+                :gen     => {:cyr => "окн-у", :lat => "óknu"},
+                :acc     => {:cyr => "окн-о", :lat => "oknó"},
+                :dat     => {:cyr => "окн-ом", :lat => "oknóm"},
+                :par     => {:cyr => "окн-у", :lat => "óknu"},
+                :loc     => {:cyr => "окн-ѣ", :lat => "okně́"},
+                :lat     => {:cyr => "окн-он", :lat => "oknón"} },
+              { :meaning => {:cyr => "яблоко", :def => "apple", :note => abbrev('n')},
+                :nom     => {:cyr => "яблок-о", :lat => "iábloko"},
+                :gen     => {:cyr => "яблок-у", :lat => "iábloku"},
+                :acc     => {:cyr => "яблок-о", :lat => "iábloko"},
+                :dat     => {:cyr => "яблок-ом", :lat => "iáblokom"},
+                :par     => {:cyr => "яблок-у", :lat => "iábloku"},
+                :loc     => {:cyr => "яблок-ѣ", :lat => "iáblokě"},
+                :lat     => {:cyr => "яблог-он", :lat => "iablogón"} } ]
+  = render 'noun_table', :title => "Third Declension Singular", :forms => forms, :nouns => nouns
+  - forms -= [:meaning]
+  - nouns = [ { :nom     => {:cyr => "дум-а", :lat => "dumá"},
+                :gen     => {:cyr => "дум-Ø", :lat => "dúm"},
+                :acc     => {:cyr => "дум-а", :lat => "dumá"},
+                :dat     => {:cyr => "дум-ам", :lat => "dumám"},
+                :par     => {:cyr => "дум-оу", :lat => "dúmou"},
+                :loc     => {:cyr => "дум-ѣх", :lat => "dumě́h"},
+                :lat     => {:cyr => "дум-и", :lat => "dúmi"} },
+              { :nom     => {:cyr => "аст-а", :lat => "astá"},
+                :gen     => {:cyr => "асот-Ø", :lat => "ásot"},
+                :acc     => {:cyr => "аст-а", :lat => "astá"},
+                :dat     => {:cyr => "аст-ам", :lat => "astám"},
+                :par     => {:cyr => "аст-оу", :lat => "ástou"},
+                :loc     => {:cyr => "аст-ѣх", :lat => "astě́h"},
+                :lat     => {:cyr => "аст-и", :lat => "ásti"} },
+              { :nom     => {:cyr => "окн-а", :lat => "okná"},
+                :gen     => {:cyr => "огон-Ø", :lat => "ogón"},
+                :acc     => {:cyr => "окн-а", :lat => "okná"},
+                :dat     => {:cyr => "окн-ам", :lat => "oknám"},
+                :par     => {:cyr => "окн-оу", :lat => "oknóu"},
+                :loc     => {:cyr => "окн-ѣх", :lat => "okně́h"},
+                :lat     => {:cyr => "окн-и", :lat => "okní"} },
+              { :nom     => {:cyr => "яблог-а", :lat => "iablogá"},
+                :gen     => {:cyr => "яблок-Ø", :lat => "iáblok"},
+                :acc     => {:cyr => "яблог-а", :lat => "iablogá"},
+                :dat     => {:cyr => "яблог-ам", :lat => "iablogám"},
+                :par     => {:cyr => "яблок-оу", :lat => "iáblokou"},
+                :loc     => {:cyr => "яблог-ѣх", :lat => "iablogě́h"},
+                :lat     => {:cyr => "яблок-и", :lat => "iábloki"} } ]
+  = render 'noun_table', :title => "Third Declension Plural", :forms => forms, :nouns => nouns
+  %p The third declension is, by and large, very regular. Other than the two nominative singular endings, the only inflectional variation can occur in the partitive and genitive singulars. The usual partitive ending is #{t "-ок", "-ok"}, but if the root ends in /k/ or a cluster containing /k/, the genitive singular stands in instead to avoid cacophony. This also applies to the fourth declension. In addition, animate third declension nouns always take the genitive/accusative singular in <i>-a</i>, never in <i>-u</i>: #{t "син", "sín"} “son” → #{t "сина", "sína"}, #{t "бовор", "bóvor"} “beaver” → #{t "бовора", "bóvora"}. This is part of a strong language-wide tendency for masculine animate nouns to take the ending <i>-a</i> in the animate accusative singular, no matter the declension.
+  %p Note that the lative plural is <em>always</em> distinct in the third declension. The ending <i>-i</i> is inherited for masculine nouns (#{abbrev 'CS'} #{abbrev 'acc.pl'} *-y), but spread to neuter nouns by analogy (#{abbrev 'CS'} #{abbrev 'acc.pl'} *-a).
+  %p There are only two stress patterns. The more common is stem-nominative, like дом, асто, and яблоко above, where the stress in the nominative singular is on the stem; this naturally includes all masculine nouns, as they have no ending in this form. The other is ending-nominative, like окно above, where the stress in the nominative singular is on the ending.
+  - stress = { "Stem-Nom."   => { :sg => %w(S S S S E S E), :pl => %w(E S S/E E S E S) },
+               "Ending-Nom." => { :sg => %w(E S S/E E E E E), :pl => %w(E G E/G E E E E) } }
+  = render 'noun_stress_table', :title => "Third Declension Stress Patterns", :stress => stress
+
+= section "The Fourth (E) Declension" do
+  %p The fourth declension is the largest in the language. Such nouns, always ending in /e/ in their citation forms, are usually masculine or neuter.
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "словѣке", :def => "Slav", :note => abbrev('m')},
+                :nom     => {:cyr => "словѣк-е", :lat => "slově́ke"},
+                :gen     => {:cyr => "словѣк-а", :lat => "slově́ka"},
+                :acc     => {:cyr => "словѣк-а", :lat => "slově́ka"},
+                :dat     => {:cyr => "словѣк-ем", :lat => "slově́kem"},
+                :par     => {:cyr => "словѣк-а", :lat => "slově́ka"},
+                :loc     => {:cyr => "словѣк-ѣ", :lat => "slově́kě"},
+                :lat     => {:cyr => "словѣк-ен", :lat => "slově́ken"} },
+              { :meaning => {:cyr => "возе", :def => "car", :note => abbrev('m')},
+                :nom     => {:cyr => "воз-е", :lat => "vóze"},
+                :gen     => {:cyr => "воз-а", :lat => "vóza"},
+                :acc     => {:cyr => "воз-Ø", :lat => "vóz"},
+                :dat     => {:cyr => "воз-ем", :lat => "vózem"},
+                :par     => {:cyr => "воз-ек", :lat => "vozék"},
+                :loc     => {:cyr => "воз-ѣ", :lat => "vózě"},
+                :lat     => {:cyr => "воз-ен", :lat => "vózen"} },
+              { :meaning => {:cyr => "море", :def => "sea", :note => abbrev('n')},
+                :nom     => {:cyr => "мор-е", :lat => "móre"},
+                :gen     => {:cyr => "мор-а", :lat => "móra"},
+                :acc     => {:cyr => "мор-е", :lat => "móre"},
+                :dat     => {:cyr => "мор-ем", :lat => "mórem"},
+                :par     => {:cyr => "мор-ек", :lat => "morék"},
+                :loc     => {:cyr => "мор-ѣ", :lat => "mórě"},
+                :lat     => {:cyr => "мор-ен", :lat => "morén"} },
+              { :meaning => {:cyr => "поле", :def => "field", :note => abbrev('n')},
+                :nom     => {:cyr => "пол-е", :lat => "póle"},
+                :gen     => {:cyr => "пол-а", :lat => "póla"},
+                :acc     => {:cyr => "пол-е", :lat => "póle"},
+                :dat     => {:cyr => "пол-ем", :lat => "pólem"},
+                :par     => {:cyr => "пол-ек", :lat => "polék"},
+                :loc     => {:cyr => "пол-ѣ", :lat => "pólě"},
+                :lat     => {:cyr => "пол-ен", :lat => "polén"} } ]
+  = render 'noun_table', :title => "Fourth Declension Singular", :forms => forms, :nouns => nouns
+  - forms -= [:meaning]
+  - nouns = [ { :nom     => {:cyr => "словѣц-и", :lat => "slově́ci"},
+                :gen     => {:cyr => "словѣц-Ø", :lat => "slově́c"},
+                :acc     => {:cyr => "словѣц-Ø", :lat => "slově́c"},
+                :dat     => {:cyr => "словѣѕ-ам", :lat => "slovědzám"},
+                :par     => {:cyr => "словѣц-еу", :lat => "slově́ceu"},
+                :loc     => {:cyr => "словѣц-ѣх", :lat => "slově́cěh"},
+                :lat     => {:cyr => "словѣц-ѣ", :lat => "slově́cě"} },
+              { :nom     => {:cyr => "воз-и", :lat => "vózi"},
+                :gen     => {:cyr => "воз-Ø", :lat => "vóz"},
+                :acc     => {:cyr => "воз-и", :lat => "vózi"},
+                :dat     => {:cyr => "воз-ам", :lat => "vozám"},
+                :par     => {:cyr => "воз-еу", :lat => "vózeu"},
+                :loc     => {:cyr => "воз-ѣх", :lat => "vózěh"},
+                :lat     => {:cyr => "воз-ѣ", :lat => "vózě"} },
+              { :nom     => {:cyr => "мор-и", :lat => "móri"},
+                :gen     => {:cyr => "мор-Ø", :lat => "mór"},
+                :acc     => {:cyr => "мор-и", :lat => "móri"},
+                :dat     => {:cyr => "мор-ам", :lat => "morám"},
+                :par     => {:cyr => "мор-еу", :lat => "móreu"},
+                :loc     => {:cyr => "мор-ѣх", :lat => "morě́h"},
+                :lat     => {:cyr => "мор-ѣ", :lat => "mórě"} },
+              { :nom     => {:cyr => "пол-и", :lat => "póli"},
+                :gen     => {:cyr => "пол-Ø", :lat => "pól"},
+                :acc     => {:cyr => "пол-и", :lat => "póli"},
+                :dat     => {:cyr => "пол-ам", :lat => "polám"},
+                :par     => {:cyr => "пол-еу", :lat => "póleu"},
+                :loc     => {:cyr => "пол-ѣх", :lat => "polě́h"},
+                :lat     => {:cyr => "пол-ѣ", :lat => "pólě"} } ]
+  = render 'noun_table', :title => "Fourth Declension Plural", :forms => forms, :nouns => nouns
+  %p The fourth declension is the most complex declension in Novegradian. In addition to the typical predictable deviations from the completely regular paradigm seen in other declensions, the fourth declension also has a number of variant forms that are harder to predict.
+  %p Certain irregularities are predictable and have already been discussed in the context of other declensions: animate nouns have the same accusative and genitive, the lative plural is identical to the accusative plural for inanimate nouns and the nominative plural for animate nouns, the genitive singular replaces the partitive to avoid /k/-/k/ cacophony, and if the stem ends in a cluster, an epenthetic vowel is inserted in the genitive plural. However, unlike in other declensions, the genitive epenthetic vowel here is always /e/: #{t "вѣтре", "vě́tre"} “wind” → #{t "вѣтер", "vě́ter"} “of winds”.
+  %p Many fourth declension nouns referring to people, such as словѣке above, undergo palatalization in the plural. This phenomenon is discussed later, in section 5.13.2 below.
+  %p Unlike most other Slavic languages, the nominative and accusative singular of inanimate masculine nouns are distinguished, as the nominative takes the ending <i>-e</i> while the accusative singular takes nothing (unless a zero ending would cause an illegal cluster, in which case <i>-e</i> does appear in the accusative as well).
+  %p The productive lative plural ending is <i>-ě</i> for all fourth declension nouns, making it distinct from both the nominative and accusative plurals. However, there are two sorts of exceptions:
+  %ol
+    %li In certain frozen expressions, neuter nouns may take stressed <i>-á</i> in the lative plural: #{t "вуийсти на мора", "vuíjsti na morá"} “put to sea, set sail”. However, this is not productive, and the normal lative plural of море remains #{t "морѣ", "mórě"}.
+    %li A very small group of animate masculine nouns have lative forms (both singular and plural) that are identical to their genitive forms, and historically are in fact derived from the genitive rather than the accusative. This group consists nearly entirely of people who, at least in the 11th-16th centuries, were perceived as authority figures or, broadly, those at the top of the social hierarchy: #{t "царе", "cáre"} “tsar (#{abbrev 'nom.sg'})” → #{t "цара", "cára"} “tsar (#{abbrev 'lat.sg'})” (not **царен), #{t "суетенике", "suétenike"} “priest (#{abbrev 'nom.sg'})” → #{t "суетениц", "suétenic"} “priests (#{abbrev 'lat.pl'})” (not **суетеницѣ), etc. This group has steadily been shrinking with time, however, as more and more of the words in this class simply become obsolete, aided by the  general infrequency of usage of the lative case with animate nouns. Nowadays this class is widely regarded as obsolescent in most genres outside of poetry and history<sup>2</sup>, and the regular lative endings are accepted.
+  %p There are two possible endings for the genitive singular in the fourth declension for masculine nouns, <i>-a</i> and <i>-u</i>. The former is by far the most common, at least in terms of the number of nouns to which it applies. The latter is used primarily in the following circumstances:
+  %ol
+    %li Mass nouns, including substances, materials, natural phenomena, and foods: #{t "клѣбу", "klě́bu"} “of bread”, #{t "снѣгу", "sně́gu"} “of snow”, #{t "воску", "vósku"} “of wax”.
+    %li Abstract nouns with no plural: #{t "оспѣху", "óspěhu"} “of success”, #{t "страху", "stráhu"} “of fear” (except nouns ending in #{t "-нье", "-nje"}: #{t "виденьа", "vidénja"} “of sight”).
+    %li Names of rivers and countries/regions in eastern Europe: #{t "Новеграду", "Novegrádu"} “of Novegrad [country]” (cf. #{t "Новеграда", "Novegráda"} “of Novegrad Velikei [city]”), #{t "Дунаю", "Dunáiu"} “of the Danube”, #{t "Дону", "Dónu"} “of the Don”.
+  %p Loanwords that entered the language after about 1400 AD always take the normal suffix <i>-a</i>. Abstract nouns and substances that can easily appear in the plural always take <i>-a</i> as well: #{t "надвида", "nádvida"} “of an opinion”. Neuter fourth declension nouns cannot take <i>-u</i> under any circumstances.
+  %p Finally, one last case ‘split’ occurs in the dative/instrumental. Personal names and the nouns #{t "маже", "máźe"} “man” and #{t "друге", "drúge"} “friend” take the singular ending #{t "-ой", "-oi"}, while all nouns take #{t "-ом", "-om"} as usual: #{t "другой", "drúgoi"} “friend (#{abbrev 'datins.sg'})”, #{t "Николаёй", "Nikoláioi"} “Nikolai (#{abbrev 'datins'})”. The dative/instrumental plural is #{t "-ам", "-am"} for all nouns.
+  %p A few other miscellaneous irregularities, many of which apply to the fourth declension, will be discussed in sections 5.10 through 5.13.
+  %p For all this morphological variation, there are surprisingly only two stress patterns, one belonging to masculine (former ŏ-stem) nouns and one belonging to neuter (former jŏ-stem) nouns.
+  - stress = { "Masculine" => { :sg => %w(S S S S E S S), :pl => %w(S S S E S S S) },
+               "Neuter"    => { :sg => %w(S S S S E S E), :pl => %w(S S S E S E S) } }
+  = render 'noun_stress_table', :title => "Fourth Declension Stress Patterns", :stress => stress
+
+= section "The Fifth (I) Declension" do
+  %p The fifth declension consists of both masculine and feminine nouns ending in -и. Many case forms have collapsed together, yet the fifth declension may have one of the most complicated paradigms due to several variant endings depending on gender and animacy. For this reason, it is typically divided into three subdeclensions: Va (consisting of animate nouns), Vb (consisting of feminine inanimate nouns), and Vc (consisting of a small group of masculine inanimate nouns).
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "гости", :def => "guest", :note => "Va"},
+                :nom     => {:cyr => "гост-и", :lat => "gósti"},
+                :gen     => {:cyr => "гост-я", :lat => "góstia"},
+                :acc     => {:cyr => "гост-я", :lat => "góstia"},
+                :dat     => {:cyr => "гост-ем", :lat => "gostém"},
+                :par     => {:cyr => "гост-ек", :lat => "góstek"},
+                :loc     => {:cyr => "гост-и", :lat => "gostí"},
+                :lat     => {:cyr => "гост-ин", :lat => "góstin"} },
+              { :meaning => {:cyr => "нокьи", :def => "night", :note => "Vb"},
+                :nom     => {:cyr => "нокь-и", :lat => "nókji"},
+                :gen     => {:cyr => "ногь-и", :lat => "nogjí"},
+                :acc     => {:cyr => "нокь-и", :lat => "nókji"},
+                :dat     => {:cyr => "ногь-юм", :lat => "nogjiúm"},
+                :par     => {:cyr => "нокь-ек", :lat => "nókjek"},
+                :loc     => {:cyr => "ногь-и", :lat => "nogjí"},
+                :lat     => {:cyr => "нокь-ин", :lat => "nókjin"} },
+              { :meaning => {:cyr => "кости", :def => "bone", :note => "Vb"},
+                :nom     => {:cyr => "кост-и", :lat => "kósti"},
+                :gen     => {:cyr => "кост-и", :lat => "kostí"},
+                :acc     => {:cyr => "кост-и", :lat => "kósti"},
+                :dat     => {:cyr => "кост-юм", :lat => "kostiúm"},
+                :par     => {:cyr => "кост-ек", :lat => "kóstek"},
+                :loc     => {:cyr => "кост-и", :lat => "kostí"},
+                :lat     => {:cyr => "кост-ин", :lat => "kóstin"} },
+              { :meaning => {:cyr => "панти", :def => "way", :note => "Vc"},
+                :nom     => {:cyr => "пант-и", :lat => "pánti"},
+                :gen     => {:cyr => "пант-и", :lat => "pantí"},
+                :acc     => {:cyr => "пант-и", :lat => "pánti"},
+                :dat     => {:cyr => "пант-ем", :lat => "pantém"},
+                :par     => {:cyr => "пант-ек", :lat => "pántek"},
+                :loc     => {:cyr => "пант-и", :lat => "pantí"},
+                :lat     => {:cyr => "пант-ин", :lat => "pántin"} } ]
+  = render 'noun_table', :title => "Fifth Declension Singular", :forms => forms, :nouns => nouns
+  - forms -= [:meaning]
+  - nouns = [ { :nom     => {:cyr => "гост-ие", :lat => "góstie"},
+                :gen     => {:cyr => "гост-ей", :lat => "gostéi"},
+                :acc     => {:cyr => "гост-ей", :lat => "gostéi"},
+                :dat     => {:cyr => "гост-ям", :lat => "gostiám"},
+                :par     => {:cyr => "гост-еу", :lat => "gósteu"},
+                :loc     => {:cyr => "гост-их", :lat => "góstih"},
+                :lat     => {:cyr => "гост-и", :lat => "gósti"} },
+              { :nom     => {:cyr => "нокь-ие", :lat => "nókjie"},
+                :gen     => {:cyr => "нокь-ей", :lat => "nókjei"},
+                :acc     => {:cyr => "нокь-ие", :lat => "nókjie"},
+                :dat     => {:cyr => "ногь-ям", :lat => "nogjiám"},
+                :par     => {:cyr => "нокь-еу", :lat => "nókjeu"},
+                :loc     => {:cyr => "нокь-их", :lat => "nókjih"},
+                :lat     => {:cyr => "нокь-и", :lat => "nókji"} },
+              { :nom     => {:cyr => "кост-ие", :lat => "kóstie"},
+                :gen     => {:cyr => "кост-ей", :lat => "kostéi"},
+                :acc     => {:cyr => "кост-ие", :lat => "kóstie"},
+                :dat     => {:cyr => "кост-ям", :lat => "kostiám"},
+                :par     => {:cyr => "кост-еу", :lat => "kósteu"},
+                :loc     => {:cyr => "кост-их", :lat => "kóstih"},
+                :lat     => {:cyr => "кост-и", :lat => "kósti"} },
+              { :nom     => {:cyr => "пант-ие", :lat => "pántie"},
+                :gen     => {:cyr => "пант-ей", :lat => "pántei"},
+                :acc     => {:cyr => "пант-ие", :lat => "pántie"},
+                :dat     => {:cyr => "пант-ям", :lat => "pantiám"},
+                :par     => {:cyr => "пант-еу", :lat => "pánteu"},
+                :loc     => {:cyr => "пант-их", :lat => "pántih"},
+                :lat     => {:cyr => "пант-и", :lat => "pánti"} } ]
+  = render 'noun_table', :title => "Fifth Declension Plural", :forms => forms, :nouns => nouns
+  %p Group Va, the animate nouns, was formed from a merger of animate ĭ-stems (all masculine) and animate masculine jŏ-stems, and so displays a few influences from jŏ-stem endings. Most significant is the genitive singular/animate accusative singular ending #{t "-я", "-ia"} rather than the usual #{t "-и", "-i"}. This is also part of a general trend in Novegradian to mark all singular masculate animate accusatives in <i>-a</i>, regardless of declension.
+  %p The most distinctive feature of Group Vb, the feminine nouns, is the dative/instrumental singular #{t "-юм", "-ium"}, deriving from the Common Slavic instrumental *-ьjǫ. The /m/ instead of expected /n/ is by analogy with the dative/instrumental singular endings in other declensions.
+  %p Group Vc, the masculine nouns, is very small, since the majority of historically masculine ĭ-stems or jŏ-stems were either animate or assimilated into the fourth declension, and even in colloquial speech there remains a strong tendency to do the same to the remaining Vc nouns. These lack both of the distinctive features given above.
+  %p The lative plural is always distinct from both the nominative and accusative plurals. On the other hand, the ending is simply <i>-i</i>, which already is used by over half of the singular endings, at least among inanimate nouns.
+  %p Each of the three subdeclensions has its own stress pattern. In addition, a few Vc nouns such as #{t "дожгьи", "doźgjí"} “rain” with ending stress have their own particular pattern.
+  - stress = { "Va"         => { :sg => %w(S S S E S E S), :pl => %w(S E E E S S S) },
+               "Vb"         => { :sg => %w(S E S E S E S), :pl => %w(S S S E S S S) },
+               "Vc"         => { :sg => %w(S E S E S E S), :pl => %w(S S S E S S S) },
+               "End-Stress" => { :sg => %w(E S E E E E E), :pl => %w(S S S E S S S) } }
+  = render 'noun_stress_table', :title => "Fifth Declension Stress Patterns", :stress => stress
+
+= section "The Sixth (Consonantal) Declension" do
+  %p The sixth declension consists of nouns of all genders that acquire a suffix in all forms other than the nominative singular (or inanimate accusative singular), or nouns that at some point did, but have since regularized the system. These suffixes were at one point part of the noun stem, but by Common Slavic they had dropped from the nominative singular by regular sound changes. The nouns below are #{t "мати", "máti"} “mother” (r-stem), #{t "небесо", "nébeso"} “sky, heaven” (s-stem, reattached), and #{t "ймѣно", "jmě́no"} “name”<sup>3</sup> (n-stem, reattached). In additional, Proto-Slavic ū-stem nouns such as #{t "керкуа", "kérkua"} “church” have been reanalyzed as consonantal stems with <i>-v-</i>.
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "мати", :def => "mother"},
+                :nom     => {:cyr => "мат-и", :lat => "máti"},
+                :gen     => {:cyr => "мат-ер-а", :lat => "mátera"},
+                :acc     => {:cyr => "мат-ер-а", :lat => "mátera"},
+                :dat     => {:cyr => "мат-ер-ем", :lat => "máterem"},
+                :par     => {:cyr => "мат-ер-ек", :lat => "materék"},
+                :loc     => {:cyr => "мат-ер-е", :lat => "mátere"},
+                :lat     => {:cyr => "мат-ер-ин", :lat => "máterin"} },
+              { :meaning => {:cyr => "небесо", :def => "sky"},
+                :nom     => {:cyr => "неб-ес-о", :lat => "nébeso"},
+                :gen     => {:cyr => "неб-ес-а", :lat => "nébesa"},
+                :acc     => {:cyr => "неб-ес-о", :lat => "nébeso"},
+                :dat     => {:cyr => "неб-ес-ем", :lat => "nébesem"},
+                :par     => {:cyr => "неб-ез-ек", :lat => "nebezék"},
+                :loc     => {:cyr => "неб-ес-е", :lat => "nébese"},
+                :lat     => {:cyr => "неб-ес-ин", :lat => "nébesin"} },
+              { :meaning => {:cyr => "ймѣно", :def => "name"},
+                :nom     => {:cyr => "йм-ѣн-о", :lat => "jmě́no"},
+                :gen     => {:cyr => "йм-ѣн-а", :lat => "jmě́na"},
+                :acc     => {:cyr => "йм-ѣн-о", :lat => "jmě́no"},
+                :dat     => {:cyr => "йм-ѣн-ем", :lat => "jmě́nem"},
+                :par     => {:cyr => "йм-ѣн-ек", :lat => "jměnék"},
+                :loc     => {:cyr => "йм-ѣн-е", :lat => "jmě́ne"},
+                :lat     => {:cyr => "йм-ѣн-ин", :lat => "jmě́nin"} },
+              { :meaning => {:cyr => "керкуа", :def => "church"},
+                :nom     => {:cyr => "керк-уа", :lat => "kérkua"},
+                :gen     => {:cyr => "керк-ев-а", :lat => "kérkeva"},
+                :acc     => {:cyr => "керк-уа", :lat => "kérkua"},
+                :dat     => {:cyr => "керк-ев-ем", :lat => "kérkevem"},
+                :par     => {:cyr => "керк-ев-ек", :lat => "kerkevék"},
+                :loc     => {:cyr => "керк-ев-е", :lat => "kérkeve"},
+                :lat     => {:cyr => "керк-ев-ин", :lat => "kérkevin"} } ]
+  = render 'noun_table', :title => "Sixth Declension Singular", :forms => forms, :nouns => nouns
+  - forms -= [:meaning]
+  - nouns = [ { :nom     => {:cyr => "мат-ер-и", :lat => "máteri"},
+                :gen     => {:cyr => "мад-ер-Ø", :lat => "madér"},
+                :acc     => {:cyr => "мад-ер-Ø", :lat => "madér"},
+                :dat     => {:cyr => "мат-ер-ми", :lat => "mátermi"},
+                :par     => {:cyr => "мат-ер-оу", :lat => "máterou"},
+                :loc     => {:cyr => "мат-ер-ѣх", :lat => "máterěh"},
+                :lat     => {:cyr => "мад-ер-и", :lat => "madéri"} },
+              { :nom     => {:cyr => "неб-ес-и", :lat => "nébesi"},
+                :gen     => {:cyr => "неб-ес-Ø", :lat => "nebés"},
+                :acc     => {:cyr => "неб-ес-и", :lat => "nébesi"},
+                :dat     => {:cyr => "неб-ес-ми", :lat => "nébesmi"},
+                :par     => {:cyr => "неб-ес-оу", :lat => "nébesou"},
+                :loc     => {:cyr => "неб-ес-ѣх", :lat => "nébesěh"},
+                :lat     => {:cyr => "неб-ес-и", :lat => "nebési"} },
+              { :nom     => {:cyr => "йм-ѣн-и", :lat => "jmě́ni"},
+                :gen     => {:cyr => "йм-ѣн-Ø", :lat => "jmě́n"},
+                :acc     => {:cyr => "йм-ѣн-и", :lat => "jmě́ni"},
+                :dat     => {:cyr => "йм-ѣн-ми", :lat => "jmě́nmi"},
+                :par     => {:cyr => "йм-ѣн-оу", :lat => "jmě́nou"},
+                :loc     => {:cyr => "йм-ѣн-ѣх", :lat => "jmě́něh"},
+                :lat     => {:cyr => "йм-ѣн-и", :lat => "jmě́ni"} },
+              { :nom     => {:cyr => "керк-ев-и", :lat => "kérkevi"},
+                :gen     => {:cyr => "керк-еу-Ø", :lat => "kerkéu"},
+                :acc     => {:cyr => "керк-ев-и", :lat => "kérkevi"},
+                :dat     => {:cyr => "керк-еу-ми", :lat => "kérkeumi"},
+                :par     => {:cyr => "керк-ев-оу", :lat => "kérkevou"},
+                :loc     => {:cyr => "керк-ев-ѣх", :lat => "kérkevěh"},
+                :lat     => {:cyr => "керк-ев-и", :lat => "kerkévi"} } ]
+  = render 'noun_table', :title => "Sixth Declension Plural", :forms => forms, :nouns => nouns
+  %p The extended root seen in sixth declension nouns is almost always of the form <i>-eC-</i>. The only exception is ймѣно “name”, which has <i>-ěn-</i> rather than <i>-en-</i>, the result of the /e/ lengthening in Old Novegradian to compensate for the dropped vowel in the first syllable (now just the asyllabic root *jm-).
+  %p The /β/ in the extended stem of nouns like керкуа lenites to /w/ before another consonant or at the end of a word. The /nm/ in the dative/instrumental plural #{t "ймѣнми", "jmě́nmi"} is frequently pronounced /nn/ in all but the most careful speech.
+  %p The lative plural of all sixth declension nouns is <i>-i</i>, following the common trend of matching the inanimate accusative, except it also features a stress shift.
+  %p There is a single stress pattern for such nouns, but it differs from those of other declensions because there are three syllables the stress can generally fall on: the primary stem (P), the initial part of the stem not including the consonantal suffix (such as *мат-, *неб-, *йм-, *керк- above); the secondary or vanishing stem (S), which contains the consonantal suffix (*-ер-, *-ес-, *-ен-, *-ев- above); and the case suffix ending (E). For nouns such as ймѣно, in which the primary stem has no vowel, stress intended for the primary stem falls on the secondary stem.
+  - stress = { "Masculine" => { :sg => %w(P P P P E P P), :pl => %w(P S P/S S P P S) }}
+  = render 'noun_stress_table', :title => "Sixth Declension Stress Patterns", :stress => stress
+  %p Although this declension contains the fewest nouns, it does include a number of fairly common words. Other sixth declension nouns include: (#{abbrev 'nom.pl'} in parentheses)
+  %ul
+    %li #{t "бокуа", "bókua"} (#{t "бокеви", "bókevi"}) “barrel”
+    %li #{t "вантуа", "vántua"} (#{t "вантеви", "vántevi"}) “duck”
+    %li #{t "врѣмено", "vrě́meno"} (#{t "врѣмени", "vrě́meni"}) “time, season”
+    %li #{t "докьи", "dókji"} (#{t "докьери", "dókjeri"}) “daughter”
+    %li #{t "дрѣво", "drě́vo"} (#{t "дрѣвеси", "drě́vesi"}) “tree, wood”
+    %li #{t "еле", "iéle"} (#{t "елени", "iéleni"}) “deer”
+    %li #{t "каме", "káme"} (#{t "камени", "kámeni"}) “stone”
+    %li #{t "кољо", "kóło"} (#{t "кољеси", "kółesi"}) “wheel”
+    %li #{t "моркуа", "mórkua"} (#{t "моркеви", "mórkevi"}) “carrot”
+    %li #{t "оху", "óhu"} (#{t "охеси", "óhesi"}) “ear”
+    %li #{t "пламе", "pláme"} (#{t "пламени", "plámeni"}) “flame”
+    %li #{t "реме", "réme"} (#{t "ремени", "rémeni"}) “belt”
+    %li #{t "слово", "slóvo"} (#{t "словеси", "slóvesi"}) “word”
+    %li #{t "тѣло", "tě́lo"} (#{t "тѣлеси", "tě́lesi"}) “body”
+    %li #{t "шѣме", "śě́me"} (#{t "шѣмени", "śě́meni"}) “seed”
+  %p ...as well as a handful of other terms. Not all of these nouns displayed vanishing consonants in Proto-Slavic. Some, such as еле “deer” and perhaps реме “belt” had already been regularized in Common Slavic, but Novegradian later returned them to the consonantal declension by analogy. On the other hand, a small set of nouns that were irregular in Common Slavic have been completely regularized in Novegradian and have been removed from the consonantal declension, such as #{t "степеньи", "stépenji"} “extent” (originally “step”, now fifth declension), #{t "око", "óko"} “eye” (now third declension), and #{t "дене", "déne"} “day” (now fourth declension). 
+
+= section "The Vocative Case" do
+  %p A very small set of nouns reflect the original Slavic vocative case, used when calling out the name of someone. The native vocative case has been completley lost in Novegradian; all of these words were borrowed from Church Slavonic, coming from the religious vocabulary of the language and preserved through the long-time usage of Church Slavonic in the Orthodox church.
+  %p There are three in common usage:
+  %table
+    %tr
+      %th Nominative
+      %th Vocative
+      %th Meaning
+    %tr
+      %td= t("боғе", "bóğe", :linebreak => true)
+      %td= t("боже", "bóźe", :linebreak => true)
+      %td God
+    %tr
+      %td= t("ғосподи", "ğóspodi", :linebreak => true)
+      %td= t("ғосподи", "ğospodí", :linebreak => true)
+      %td Lord
+    %tr
+      %td= t("Иезусе Христос", "Iezúse Hristós", :linebreak => true)
+      %td= t("Иезусе Христе", "Iezúse Hristé", :linebreak => true)
+      %td Jesus Christ
+  %p Even though vocative form of #{t "Иезусе", "Iezúse"} “Jesus” appears identical to the nominative, it is still considered to be distinct. In older texts with jers, they were spelled differently (#{abbrev 'nom'} Иисоусъ vs. #{abbrev 'voc'} Иисоусе), and in the modern spoken language, where /e/ is usually dropped from the end of nominative forms, the vocative ending /e/ is preserved.
+  %p Although no longer functionally a vocative, the vocative form of Church Slavonic отец “father” is seen in the Novegradian name for the Lord’s Prayer, the #{t "отченаше", "otčenáśe"} (lit. “O Our Father”).
+  %p A modern vocative, unrelated to the historical one, has reemerged in the colloquial language from a contracted form of the possessive adjective #{t "мой", "mói"} “my”. This is discussed further in section 22.4.4.
+
+= section "The Dual" do
+  %p Although the dual is no longer a productive force in the Novegradian nominal system, it still is used with a small set of nouns, the most commonly used of which are body parts that come in pairs.
+  %p The dual appears only in the first, third, fourth, fifth (Vb), and sixth declensions. It is demonstrated in the chart on the following page with #{t "рока", "róka"} “hand/arm”, #{t "око", "óko"} “eye”, #{t "плукье", "plúkje"} “lung”, #{t "лохти", "lóhti"} “elbow”, and the irregular #{t "оху", "óhu"} “ear”.
+  %p Many cases have collapsed together in the dual. There are only three sets of endings, and partitive forms do not exist.
+  - forms = [:meaning, :nom, :gen, :acc, :dat, :par, :loc, :lat]
+  - nouns = [ { :meaning => {:cyr => "рока", :def => "hand, arm", :note => "I"},
+                :nom     => {:cyr => "рок-ѣ", :lat => "rókě"},
+                :gen     => {:cyr => "рок-у", :lat => "róku"},
+                :acc     => {:cyr => "рок-ѣ", :lat => "rókě"},
+                :dat     => {:cyr => "рог-ома", :lat => "rogóma"},
+                :par     => nil,
+                :loc     => {:cyr => "рок-у", :lat => "róku"},
+                :lat     => {:cyr => "рок-ѣ", :lat => "rókě"} },
+              { :meaning => {:cyr => "око", :def => "eye", :note => "III"},
+                :nom     => {:cyr => "ок-и", :lat => "óki"},
+                :gen     => {:cyr => "ок-у", :lat => "óku"},
+                :acc     => {:cyr => "ок-и", :lat => "óki"},
+                :dat     => {:cyr => "ог-ома", :lat => "ogóma"},
+                :par     => nil,
+                :loc     => {:cyr => "ок-у", :lat => "óku"},
+                :lat     => {:cyr => "ок-и", :lat => "óki"} },
+              { :meaning => {:cyr => "плукье", :def => "lung", :note => "IV"},
+                :nom     => {:cyr => "плукь-ѣ", :lat => "plúkjě"},
+                :gen     => {:cyr => "плукь-у", :lat => "plúkju"},
+                :acc     => {:cyr => "плукь-ѣ", :lat => "plúkjě"},
+                :dat     => {:cyr => "плугь-ема", :lat => "plugjéma"},
+                :par     => nil,
+                :loc     => {:cyr => "плукь-у", :lat => "plúkju"},
+                :lat     => {:cyr => "плукь-ѣ", :lat => "plúkjě"} },
+              { :meaning => {:cyr => "лохти", :def => "elbow", :note => "V"},
+                :nom     => {:cyr => "лохт-и", :lat => "lóhti"},
+                :gen     => {:cyr => "лохт-ю", :lat => "lóhtiu"},
+                :acc     => {:cyr => "лохт-и", :lat => "lóhti"},
+                :dat     => {:cyr => "лохт-има", :lat => "lóhtima"},
+                :par     => nil,
+                :loc     => {:cyr => "лохт-ю", :lat => "lóhtiu"},
+                :lat     => {:cyr => "лохт-и", :lat => "lóhti"} },
+              { :meaning => {:cyr => "оху", :def => "ear", :note => "VI"},
+                :nom     => {:cyr => "ох-ес-е", :lat => "óhese"},
+                :gen     => {:cyr => "ох-ес-у", :lat => "óhesu"},
+                :acc     => {:cyr => "ох-ес-е", :lat => "óhese"},
+                :dat     => {:cyr => "о-ес-ма", :lat => "oiésma"},
+                :par     => nil,
+                :loc     => {:cyr => "ох-ес-у", :lat => "óhesu"},
+                :lat     => {:cyr => "ох-ес-е", :lat => "óhese"} } ]
+
+  = render 'noun_table', :title => "Dual", :forms => forms, :nouns => nouns
+
+= section "Zero-Ending Locative Case" do
+  %p Some monosyllabic nouns in the first, third, and fourth declensions take a zero-form ending in the locative singular in certain circumstances. This is the result of the stress in a prepositional phrase shifting off the noun and onto the preposition, weakening the locative ending to the point of it disappearing entirely. A more specific account of this phenomenon, along with a description of what nouns it can apply to, can be found in section 16.6.
+  %p Since this phenonemon is the result of a stress shift to the preposition, it never occurs when the locative is used in isolation without a preposition or when any modifier appears between the noun and the preposition: #{t "на мор", "ná mor"} “at sea”, #{t "морѣ", "mórě"} “at sea, in the sea”, #{t "на Варижескѣѣм морѣ", "na Variźeskě́iěm mórě"} “on the Baltic Sea”.
+  %p Due to the relative age of this change, voiced consonants that end up in final position as a result of this ending loss always unvoice or, in the case of /γ/ and /β/, lenite. However, this change is never indicated in spelling: #{t "о Боғ", "ó Boğ"} “about God” [ˈwo.boj].
+  %p Monosyllabic second declension nouns may also be affected, but only if the roots end in /m/ or /β/. In such cases, /m/ becomes /ɲ/ and /β/ becomes /l/: #{t "на жень", "ná źenj"} “on the land” (#{t "жемя", "źémia"} “land”), #{t "на крол", "ná krol"} “on the roof” (#{t "кровя", "króvia"} “roof”).
+
+= section "Irregular Nouns" do
+  = section "Common Nominal Alterations" do
+    %p The most common nominal alteration is consonant voicing induced by stress. A regular phonetic change caused virtually all consonants to voice immediately before the stressed syllable, unless they 1) are at the beginning of a word or 2) are part of a consonant cluster. Although this sound change is no longer affecting new loans, analogy continues to be a very powerful force. These alterations can clearly be seen in the nouns previously demonstrated throughout this section.
+    %p Because this sound change is no longer active, confusion often arose as to when it “should” be analogically applied. In the original change, for example, clusters with /j/ could block the voicing process, yet a number of loans adopted after this period do show voicing after /j/ + a consonant cluster, because the /j/ was thought to be more of a vocalic element. As a result, later loans in all parts of speech, such as #{t "вайке", "váike"} “difficult, trying” from Finnish, show voiced forms (e.g., #{t "вайгейше", "vaigéiśe"} “more difficult”) that are now considered standard.
+    %p Stress-induced voicing does not occur across morpheme boundaries. Analogy once again prevents this. It may only occur if for some reason the word in question becomes dissociated from whatever word was derived from, such as the preposition #{t "погољом", "pogółom"} “around, throughout”, historically related to #{t "кољо", "kóło"} “wheel”.
+    %p Due to the lenition of /β/ word-finally or before another consonant, many words display a /β~w/ alternation. Word-finally, this is generally not reflected in spelling: #{t "крев", "krév"} “blood (#{abbrev 'nom.sg'})” is [ˈkrɛw], while #{t "крева", "kréva"} “blood (#{abbrev 'gen.sg'})” is [ˈkrɛ.βə].
+    %p When a historical /β/ occurs in a stem-final cluster, however, the situation is more interesting. In most forms of the word, it will be vocalized (generally in spelling as well): #{t "насауте", "násaute"} “loading” [ˈna.səw.te]. In the genitive plural, however, what should happen? Should a vowel be inserted, since there was originally was /βt/ cluster, or should nothing happen, because the original /β/ has vocalized? Many dialects revert to the original /β/, given #{t "насавет", "násavet"}. This is considered nonstandard, however. In the standard language, the /β/ does not revert: #{t "насаут", "násaut"}. However, the spelling hides that a vowel has still been inserted, with an apparently reanalysis of the original /β/ as /w/: [ˈna.sə.wɛt]. In the standard dialect, therefore, it is proper to not reflect the fact that there was ever a consonant there, but to insert a vowel in speech nonetheless.
+    %p Some masculine fourth-declension nouns whose stems end in vowel+/l/ elide this /l/ to /j/ in the nominative singular, accusative singular, and genitive plural. This only applies to the oldest layer of vocabulary, consisting of words that entered the language prior to about 1300 AD: #{t "клагое", "klagóie"} “church bell (#{abbrev 'nom.sg'})”, #{t "клаголи", "klagóli"} “church bells (#{abbrev 'nom.pl'})”; #{t "аньее", "ánjeie"} “angel (#{abbrev 'nom.sg'})”, #{t "аньеля", "anjeliá"} “angels (#{abbrev 'nom.pl'})”. This does not, however, apply to the agentive suffix #{t "-теле", "-tele"}.
+
+  = section "Collective Plurals" do
+    %p Many masculine terms referring to people (or epicene nouns that refer to people of either sex) in the plural take a suffix /j/, originally a collective suffix applied to kinship terms, which may cause consonant alterations. For example, the singular root for “friend” is <i>*drug-</i> (#{abbrev 'nom.sg'} #{t "друге", "drúge"}), while the plural root is <i>*drug-j-</i> → <i>*druź-</i> (#{abbrev 'nom.pl'} #{t "дружи", "drúźi"}); “son” is <i>*sin-</i> in the singular (#{abbrev 'nom.sg'} #{t "син", "sín"}), while the plural is <i>*sin-j-</i> → <i>*sinj-</i> (#{abbrev 'nom.pl'} #{t "синьа", "sinjá"}); “brother” is <i>*brat-</i> (#{abbrev 'nom.sg'} #{t "брате", "bráte"}) in the singular and <i>*brat-j-</i> → <i>*brakj-</i> (#{abbrev 'nom.pl'} #{t "бракьи", "brákji"}) in the plural. This has since spread to many other masculine nouns referring to people by analogy (e.g., #{t "студенте", "studénte"} “student” → #{t "студенкьи", "studénkji"}). The reflexes of this /j/ are visible in all plural forms in all cases, but absent in all singular forms.
+    %p Words that end in a consonant that does not easily palatalize (i.e., not /t d s z n k g x γ/) instead acquire a /j/ that only appears in the nominative plural: #{abbrev 'nom.sg'} #{t "царе", "cáre"} “tsar” → #{abbrev 'nom.pl'} #{t "царя", "cariá"}. Note that such nouns in the fourth declension take the third declension #{abbrev 'nom.pl'} ending <i>-a</i>. The lative plural of such nouns offers two possibilities, due to the fact that it is relatively uncommon to use the lative with animate nouns—either the form will be identical to the nominative plural (#{abbrev 'lat.pl'} #{t "царя", "cariá"}) or, more commonly, the regular ending #{t "-и", "-i"} is used (#{abbrev 'lat.pl'} #{t "цари", "cári"}). Both variants are acceptable.
+    %p Some nouns have an unexpected consonant appear in the collective plurals reflecting an older pronunciation. For example, #{t "боғе", "bóğe"} “god” has the plural form #{t "божя", "boźiá"} because the /ɣ/ was /g/ at the time of this change. The /j/ here, however, is completely unexpected and probably was introduced at a later date.
+
+  = section "Animals" do
+    %p Novegradian has a productive suffix #{t "-ин", "-in"} used to form animal diminutives, which refer to their young cubs/calves/foals/etc. Originally only usable on a small set of domesticated animals, in modern Novegradian it may be applied to any large mammal whose name has long been established in Novegradian (i.e., it can’t be applied to words that only entered the language in the last few hundred years).
+    %p Examples of some of the oldest forms include #{t "кожлин", "koźlín"} “young goat, kid” (from #{t "кожеле", "koźéle"} “goat”) and #{t "агнин", "agnín"} “lamb” (from Common Slavic *agnъ, original root no longer present in Novegradian). Interestingly, #{t "дѣдин", "dědín"} “child” is often used alongside the original #{t "дѣтинко", "dě́tinko"} “child”, especially in the plural. A more recent example is #{t "левин", "levín"} “lion cub”, from #{t "леве", "léve"} “lion”.
+    %p While their formation is quite simple, their plurals are more complex. There are two possible forms.
+    %p One is made by dropping the suffix -ин in all forms but the nominative singular, and then declining the noun regularly in the fourth declension. However, this is rare for all nouns except those whose bases are no longer used in Novegradian, like агнин “lamb”. Otherwise the word would be very similar if not identical to the ‘adult’ form when declined.
+    %p The other method is to drop the suffix -ин in all forms other than the nominative singular, as above, and add the suffix #{t "-ет-", "-ét-"} in its place. It then conjugates as though it were a sixth declension noun. The only exception is that the nominative plural ending is #{t "-ет-е", "-et-e"} instead of the expected #{t "-ет-и", "-et-i"}. This pattern is used for most such nouns, although агнин and similar nouns may freely decline without the suffix as well.
+    %p Both declensions of агнин:
+    %table
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 2} Regular
+        %th{:colspan => 2} Suffixial
+      %tr
+        %th Sg
+        %th Pl
+        %th Sg
+        %th Pl
+      %tr
+        %th Nominative
+        %td= t("агн-ин", "agnín", :linebreak => true)
+        %td= t("агн-и", "ágni", :linebreak => true)
+        %td= t("агн-ин", "agnín", :linebreak => true)
+        %td= t("агн-ет-е", "ágnete", :linebreak => true)
+      %tr
+        %th Genitive
+        %td= t("агн-а", "ágna", :linebreak => true)
+        %td= t("аген-Ø", "ágen", :linebreak => true)
+        %td= t("агн-ет-а", "ágneta", :linebreak => true)
+        %td= t("агн-ет-Ø", "agnét", :linebreak => true)
+      %tr
+        %th Accusative
+        %td= t("агн-а", "ágna", :linebreak => true)
+        %td= t("аген-Ø", "ágen", :linebreak => true)
+        %td= t("агн-ет-а", "ágneta", :linebreak => true)
+        %td= t("агн-ет-Ø", "agnét", :linebreak => true)
+      %tr
+        %th Dat./Instr.
+        %td= t("агн-ем", "ágnem", :linebreak => true)
+        %td= t("агн-ам", "agnám", :linebreak => true)
+        %td= t("агн-ет-ем", "ágnetem", :linebreak => true)
+        %td= t("агн-ет-ми", "ágnetmi", :linebreak => true)
+      %tr
+        %th Partitive
+        %td= t("агн-ек", "agnék", :linebreak => true)
+        %td= t("агн-еу", "ágneu", :linebreak => true)
+        %td= t("агн-ед-ек", "agnedék", :linebreak => true)
+        %td= t("агн-ет-оу", "ágnetou", :linebreak => true)
+      %tr
+        %th Locative
+        %td= t("агн-ѣ", "ágně", :linebreak => true)
+        %td= t("агн-ѣх", "ágněh", :linebreak => true)
+        %td= t("агн-ет-ѣ", "ágnetě", :linebreak => true)
+        %td= t("агн-ет-ѣх", "ágnetěh", :linebreak => true)
+      %tr
+        %th Lative
+        %td= t("агн-ен", "ágnen", :linebreak => true)
+        %td= t("агн-ѣ", "ágně", :linebreak => true)
+        %td= t("агн-ет-ин", "ágnetin", :linebreak => true)
+        %td= t("агн-ет-и", "agnéti", :linebreak => true)
+
+  = section "Nationalities" do
+    %p Novegradian uses the suffix #{t "-ѣнинe", "-ě́nine"} on a place name to indicate people from there. Most commonly it is used with country and city names, but virtually any place name or toponym can be used. It declines as a normal fourth declension noun in the singular, but in the plural the suffix #{t "-ѣнин-", "-ě́nin-"} collapses to #{t "-ѣнь-", "-ě́nj-"}. In addition, the nominative plural ending is <i>-е</i> instead of the expected -и; the lative plural remains -ѣ.
+    %p The declension of #{t "новеграгьѣнинe", "novegragjě́nine"} “Novegradian”:
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Pl
+      %tr
+        %th Nominative
+        %td= t("новеграгь-ѣн-ин-е", "novegragjě́nine", :linebreak => true)
+        %td= t("новеграгь-ѣнь-е", "novegragjě́nje", :linebreak => true)
+      %tr
+        %th Genitive
+        %td= t("новеграгь-ѣн-ин-а", "novegragjě́nina", :linebreak => true)
+        %td= t("новеграгь-ѣнь-Ø", "novegragjě́nj", :linebreak => true)
+      %tr
+        %th Accusative
+        %td= t("новеграгь-ѣн-ин-а", "novegragjě́nina", :linebreak => true)
+        %td= t("новеграгь-ѣнь-Ø", "novegragjě́nj", :linebreak => true)
+      %tr
+        %th Dat./Instr.
+        %td= t("новеграгь-ѣн-ин-ем", "novegragjě́ninem", :linebreak => true)
+        %td= t("новеграгь-ѣнь-ам", "novegragjěnjám", :linebreak => true)
+      %tr
+        %th Partitive
+        %td= t("новеграгь-ѣн-ин-ек", "novegragjěninék", :linebreak => true)
+        %td= t("новеграгь-ѣнь-еу", "novegragjě́njeu", :linebreak => true)
+      %tr
+        %th Locative
+        %td= t("новеграгь-ѣн-ин-ѣ", "novegragjě́nině", :linebreak => true)
+        %td= t("новеграгь-ѣнь-ѣх", "novegragjě́njěh", :linebreak => true)
+      %tr
+        %th Lative
+        %td= t("новеграгь-ѣн-ин-ен", "novegragjě́ninen", :linebreak => true)
+        %td= t("новеграгь-ѣнь-ѣ", "novegragjě́njě", :linebreak => true)
+
+  = section "Suppletion" do
+    %p There is only one true suppletive noun pair in Novegradian, where the declension of a noun involves two completely unrelated stems: дужа ~ луди (<i>duźá</i> ~ <i>lúdi</i>) “person ~ people”, where *душ- is the stem in all the singular forms and *луд- in all the plural forms. The use of *луд- as a plural stem with a suppletive singular predates Common Slavic.
+  
+  = section "Христос" do
+    %p The name #{t "Христос", "Hristós"} “Christ” has an irregular declension. In all forms other than the nominative it takes regular third declension endings with the stem <i>*Hrist-</i>, with the exception of using the fourth declension genitive/accusative <i>-a</i>. The nominative, however, bears the ending <i>-os</i> borrowed from Greek. As mentioned in section 5.10 above, it also has a distinct vocative form. The ending is stressed in all cases.
+    %table
+      %tr
+        %th
+      %tr
+        %th Nominative
+        %td= t("Христ-ос", "Hristós", :linebreak => true)
+      %tr
+        %th Genitive
+        %td= t("Христ-а", "Hristá", :linebreak => true)
+      %tr
+        %th Accusative
+        %td= t("Христ-а", "Hristá", :linebreak => true)
+      %tr
+        %th Dat./Instr.
+        %td= t("Христ-ом", "Hristóm", :linebreak => true)
+      %tr
+        %th Partitive
+        %td= t("Христ-ѣ", "Hristě́", :linebreak => true)
+      %tr
+        %th Lative
+        %td= t("Христ-он", "Hristón", :linebreak => true)
+      %tr
+        %th Vocative
+        %td= t("Христ-е", "Hristé", :linebreak => true)
+
+  = section "Other Irregularities" do
+    %p A number of nouns just have irregularities that few or no other nouns have, usually the result of sound changes.
+    %p The noun #{t "вѣтуа", "vě́tua"} “branch” switches declensions. In the singular, it is sixth declension, much like керкуа “church”. In the plural, though, it switches to the fifth declension, its root becoming #{t "*вѣтў-", "*vě́tw-"}. It derives from Common Slavic *větvь, so had it developed regularly, it would be entirely fifth declension. However, its singular forms all underwent metathesis to aid in pronunciation, at which point it appeared much like a sixth declension noun containing the <i>-ev-</i> suffix. Tthe plural forms never switched declensions because the fifth declension plural endings contain a /j/ in several forms (#{abbrev 'nom.pl'} #{t "вѣтуие", "vě́tuije"} [ˈβæ.twi.je], #{abbrev 'gen.pl'} #{t "вѣтўей", "vě́twei"} [ˈβæ.twej]), which was reminiscent of the collective suffix which was still largely productive at the time of this metathesis.
+    %p The noun #{t "мраука", "mráuka"} “ant” similarly switches declensions, though this is the result of different suffixes being added to the root in the singular and plural. The Common Slavic singular was *morvi. In the singular the stem is <i>*mrauk-</i> (first declension), with a diminutive affix acting as a singulative. In the plural the stem is <i>*mravj-</i> (fourth declension), with the collective suffix <i>-j-</i> (#{abbrev 'nom.pl'} #{t "мравя", "mraviá"}, #{abbrev 'gen.pl'} #{t "мравей", "mrávei"}).
+    %p A less extreme declension switch occurs in #{t "егла", "iégla"} “fir tree, spruce”, which declines as a regular first declension noun in all cases except for the genitive plural, where it switches to the fifth declension: #{t "еглей", "iéglei"} instead of expected #{t "**егол", "iegól"}.
+    %p The noun #{t "оху", "óhu"} “ear” (from Common Slavic *uxo) is a sixth declension s-stem noun. It is actually completely regular, but has an irregular spelling that more accurately reflects its pronunciation. Due to voicing rules, the /x/ regularly voices to /γ/ before the stress. However, since the following vowel is a stressed /e/, the /γ/ is lenited into [j], and is completely deleted in the written form. Therefore оху (plural #{t "охеси", "óhesi"}) has a genitive plural #{t "оес", "oiés"}, because *охес → *оғес → оес.
+    %p A very small set of nouns have a nasal consonant in all forms but the genitive plural, the result of an original nasal vowel that had uncoupled. For example, Common Slavic *rǫbъ became Novegradian #{t "рамбе", "rámbe"} “hem, seam” in order to keep it more distinct from #{t "рабе", "rábe"} “serf” (an early Russian loan). This /m/ is found in all forms except the genitive plural, which is #{t "раб", "ráb"}. The reason for this is that there was a time when the pronunciation of all the forms of this word varied between [ramb-] and [rãb-]. When the epenthetic /o ~ e/ first started to be introduced (by analogy with the feminine nouns), the nasal was still at least somewhat vocalic, meaning there was no final cluster and no need for an epenthetic vowel. Later the nasal fully uncoupled in all forms except the genitive plural, because if it had, the result would have been *рамб, a final cluster not allowed in Novegradian.
+    %p An even smaller set has a genitive plural epenthetic vowel /i/ instead of the usual /e/, such as #{t "сайме", "sáime"} “party, gathering, social event” (#{abbrev 'gen.pl'} #{t "саим", "sajím"}). The reason for this becomes clear when the Common Slavic form, prior to yer-loss, is examined. In this case it was *sǫ-jьmъ. The front yer ь was unstressed and lost in all forms except the genitive plural, where it was preserved by a stress shift.
+    %p Two nouns, both derived from nouns ending in *-CCьko in Common Slavic, have a consonant reappear in the genitive plural that had been dropped in all other forms, the result of the epenthetic vowel breaking up what had been a more complex consonant cluster: #{t "соунце", "sóunce"} “sun (#{abbrev 'nom.sg'})” → #{t "солнец", "solnéc"} “of suns (#{abbrev 'gen.pl'}), #{t "шерце", "śérce"} “heart (#{abbrev 'nom.sg'})” → #{t "шердец", "śerdéc"} “of hearts (#{abbrev 'gen.pl'})”. Both of these also have irregular final stress in the genitive plural. A related phenomenon is the irregular #{t "шеуте", "śéute"} “whisper (#{abbrev 'nom.sg'})” → #{t "шебет", "śebét"} “of whispers (#{abbrev 'gen.pl'})”, derived from Common Slavic *šьpъtъ; compare Old Novegradian #{abbrev 'nom.sg'} шепте and #{abbrev 'gen.pl'} шепетъ.
+    %p Many nouns that through sound changes have developed an extremely reduced form (such as simply CV or CV+glide) add additional suffixes to keep the word more distinct. In some cases, however, this suffixation is incomplete. The noun #{t "тае", "táie"} “secret”, for example, has its original weak root <i>*tai-</i> in the singular, but the suffixed <i>*tain-</i> in the plural: #{t "тайни", "táini"} “secrets”, though no singular **тайна exists.
+    %p There are very few instances of consonants other than /β/ lost through reduction that reappear in certain forms, as analogy usually eliminates such irregularities. However, a few still survive, as in the word #{t "цка", "cká"} “board, plank”, which is pronounced /ska/. There is only an /s/ in all forms, despite the spelling, except in the genitive plural, where the epenthetic vowel restores the original affricate: #{t "ѕек", "dzék"}.
+    %p The word #{t "ки", "kí"} “hammer” is notable for being the shortest noun in the Novegradian language. In all forms other than the nominative singular, accusative singular, and genitive plural the stem is <i>*kij-</i> (e.g., genitive singular #{t "кию", "kíju"}, dative/instrumental singular #{t "киём", "kíjom"}). The genitive plural is spelt #{t "кий", "kíj"}, though is pronounced identically to the nominative/accusative form #{t "ки", "kí"}. This word is typically analyzed as having a single underlying stem <i>*kij-</i> in all forms that merely simplifies the /ij/ diphthong when it meets a word boundary.
+
+  = section "Indeclinable Nouns" do
+    %p More recent loans that contain a very non-Novegradian-like ending (such as a stressed -и or -у, or any -ы) or contain a vowel that is integral to the root and would be awkward to drop when declined (such as #{t "ковѐ", "kóve"} “coffee” or #{t "метро", "metró"} “metro, subway”) tend to not decline at all, neither for case nor number. They rely on surrounding modifiers such as adjectives as well as context to imply the case and gender rather than to indicate it directly.
+    %p However, nouns that end in an unstressed /i/ almost never become indeclinable, even if the /i/ is considered integral, because the fourth declension endings almost all begin with /i/ anyways. Nouns like #{t "такси", "táksi"} “taxi” can therefore decline normally and almost never lose the /i/.
+    %p Indeclinable nouns tend to remain indeclinable only for a short time, generally no more than a few decades. After this point they have been a regular part of the language for long enough that they no longer feel “foreign” and speakers begin to lose the feeling that the final vowels are integral parts of the word. However, nouns that have a non-Novegradian ending, such as #{t "кангуру", "kangurú"} “kangaroo”, cannot be nativized without actually modifying the root, since they do not fit into Novegradian declension patterns. In this particular case, the colloquial variant #{t "кангуре", "kangúre"} has almost completely replaced кангуру in casual speech.
+
+  = section "Pluralia Tantum" do
+    %p Pluralia tantum are nouns with no singular form. Novegradian has a large number of pluralia tantum in the fourth declension that are semantically singular, but grammatically plural; morphologically the singular and plural are not distinguished. Examples include #{t "крѣуностия", "krěunostijá"} “fortress”, #{t "сцестия", "scestijá"} “luck”, and #{t "брения", "brénija"} “dirt”. Also included are a number of geographical terms such as #{t "Повољжия", "Povółźija"} “region around the Volga River”. This #{t "-ия", "-ija"} was originally a collective (and still is, to a certain degree) that has since also became a means to convert abstract nouns into concrete ones (such as крѣуности “firmness” → крѣуностия “fortress”). In Old Novegradian all such collectives adopted fourth declension endings, but with the suffix <i>-ij(a)</i> in all forms, sometimes replacing the usual suffix vowels; however, the lative plural is formed with -и-и, which spread analogically due to its near-universality across declensions and displaced the original accusative-derived -и-я.
+    %table
+      %tr
+        %th{:colspan => 3} Plurale Tantum Declension
+      %tr
+        %th
+        %td сцестия “luck”
+        %td орадия “tool”
+      %tr
+        %th Nominative
+        %td= t("сцест-и-я", "scestijá", :linebreak => true)
+        %td= t("орад-и-я", "orádija", :linebreak => true)
+      %tr
+        %th Genitive
+        %td= t("сцест-ий-Ø", "scéstij", :linebreak => true)
+        %td= t("орад-ий-Ø", "orádij", :linebreak => true)
+      %tr
+        %th Accusative
+        %td= t("сцест-и-я", "scestijá", :linebreak => true)
+        %td= t("орад-и-я", "orádija", :linebreak => true)
+      %tr
+        %th Dat./Instr.
+        %td= t("сцест-и-ям", "scestijám", :linebreak => true)
+        %td= t("орад-и-ям", "orádijam", :linebreak => true)
+      %tr
+        %th Partitive
+        %td= t("сцест-и-еу", "scestijéu", :linebreak => true)
+        %td= t("орад-и-еу", "orádijeu", :linebreak => true)
+      %tr
+        %th Locative
+        %td= t("сцест-и-ях", "scestijáh", :linebreak => true)
+        %td= t("орад-и-ях", "orádijah", :linebreak => true)
+      %tr
+        %th Lative
+        %td= t("сцест-и-и", "scestijí", :linebreak => true)
+        %td= t("орад-и-и", "orádiji", :linebreak => true)
+    %p Outside of this class, pluralia tantum nouns are often not that different from English, such as #{t "очки", "óčki"} “glasses” or #{t "ножики", "nóźiki"} “scissors”, while others may seem very strange, such as #{t "сутоки", "sútoki"} “astronomical day, day and night”. Such pluralia tantum almost always fall in the fourth declension.
+    %p On the other hand, Novegradian also has a number of singularia tantum with no plural form that seem unusual from an English perspective, such as #{t "љуке", "łúke"} “onion”, #{t "еғьика", "iéğjika"} “blackberry”, and #{t "рѣмода", "rě́moda"} “cranberry”. This is common for many fruits and vegetables.
+
+= section "The Topicalization Marker" do
+  %p One interesting development in the Novegradian nominal system was the creation of the topicalization marker #{t "-то", "-to"}, derived from an older demonstrative. This same demonstrative became a definite article in South Slavic and gained quasi-topical function in Russian some of the time, but Novegradian has formed a true topic marker. It is an enclitic postfix added to the end of a noun after it has been fully declined. The marker itself has several different forms; which one is used depends on a sort of vowel harmony.
+  %p In the nominative case and inanimate accusative, it has the following forms:
+  %table
+    %tr
+      %th Form
+      %th Number
+      %th Used...
+      %th Example
+    %tr
+      %td= t("-от", "-ot")
+      %td Sg
+      %td after a consonant
+      %td #{t "дом-от", "dom-ót"} “house”
+    %tr
+      %td= t("-то", "-to")
+      %td Sg
+      %td after a noun ending in /o/, or nouns not fitting in any other category
+      %td
+        #{t "еутро-то", "iéutro-to"} “morning”
+        %br
+        #{t "мати-то", "máti-to"} “mother”
+    %tr
+      %td= t("-та", "-ta")
+      %td Sg
+      %td after a noun ending in /a/
+      %td #{t "коша-та", "kóśa-ta"} “cat”
+    %tr
+      %td= t("-те", "-te")
+      %td Sg
+      %td after a noun ending in /e/
+      %td
+        #{t "возе-те", "vóze-te"} “car”
+        %br
+        #{t "море-те", "móre-te"} “sea”
+    %tr
+      %td= t("-ти", "-ti")
+      %td Pl
+      %td when the plural ends in /i/ or /e/
+      %td #{t "нокьие-ти", "nókjie-ti"} “nights”
+    %tr
+      %td= t("-та", "-ta")
+      %td Pl
+      %td when the plural endings in /a/
+      %td #{t "дома-та", "domá-ta"} “homes”
+  %p In all other cases, there are only two forms.
+  %table
+    %tr
+      %th Form
+      %th Number
+      %th Used...
+      %th Example
+    %tr
+      %td= t("-те", "-te")
+      %td Sg/Pl
+      %td when the fully-declined form ends in a front vowel /æ e i/
+      %td #{t "морѣ-те", "mórě-te"} “at sea”
+    %tr
+      %td= t("-то", "-to")
+      %td Sg/Pl
+      %td when the fully-declined form ends in a back vowel /a o u ɨ/ or a consonant
+      %td
+        #{t "нигу-то", "nígu-to"} “book (#{abbrev 'acc.sg'})”
+        %br
+        #{t "жемлун-то", "źemlún-to"} “towards land”
+  %p Note that the form #{t "-от", "-ót"} is always stressed, while all of the other variants are always unstressed. Because of this, words ending in a single unvoiced consonant will voice before -от, although only in speech, never in writing: #{t "лѣс-от", "lěs-ót"} “forest” [li.ˈzot].
+  %p If the noun in the nominative singular ends in #{t "-уа", "-ua"}, the /a/ is lost and the stem behaves as though it ended in a consonant: #{t "керкуа", "kérkua"} “church” → #{t "керкў-от", "kerkw-ót"}, #{t "Москуа", "Moskuá"} “Moscow” → #{t "Москў-от", "Moskw-ót"}.
+  %p There is only one spelling peculiarity associated with the topical clitic: When a word ends in /j/ or /je/ (which loses its /e/ before the topical clitic), the ending -от is respelt #{t "-ёт", "-iot"}, essentially indicating the /j/ twice: #{t "Андрее", "Andréie"} “Andrei” → #{t "Андрей-ёт", "Andrei-iót"}. This comes from a time when the dash was often stylistically omitted; in the late nineteenth and early twentieth centuries, for instance, this would often have been written Андреёт.
+  %p Nouns with roots that end in an /l/ that is dropped in the nominative case have it reappear when topicalized, and always take the suffix #{t "-от", "-ot"}: #{t "аньее", "ánjeie"} “angel” → #{t "аньел-от", "anjel-ót"}.
+  %p Indeclinable nouns always take the suffix -то, no matter what vowel they end in: #{t "метро-то", "metró-to"} “metro”, #{t "кавѐ-то", "kavé-to"} “café”. The same applies to all morphological duals.
+  %p There is one exception to the regular rules above, although it is limited to poetry and older texts (largely from the 18th century). Although the dative/instrumental plural ending ends is -ам today, in the 17th century and earlier it was #{t "-ами", "-ami"}. Also in the 17th century vowel harmony started to appear. As a result, -те was always used after the instrumental plural since it ended with a front vowel at this point, and this continued to be standard long after the vowel disappeared. At no point was it “officially” changed to -то -to (which is used after oblique consonantal endings), but -те had almost completely fallen out of use in this position by the early 19th century in most writing in favor of the more regular -то.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The standard written language also includes three vocatives, though they would better be described as loaned idioms from Old Church Slavonic rather than native retensions of the original Slavic vocative. See section 5.10.
+%p 2) Due to the fact that historians will often have this entire class at their disposal, while in modern usage feudal terms like “lord” and “posadnik” simply have very limited use.
+%p 3) The initial й in ймѣно is generally not pronounced except when the previous word ends in a vowel. In isolation ймѣно is pronounced /ˈmæ.no/ with no trace of the /j/, although some speakers do exhibit a slight lengthening of the /m/ as though in compensation: [ˈm:æ.no].
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

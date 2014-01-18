@@ -1,0 +1,53 @@
+- title ||= ""
+- nouns ||= []
+- forms ||= []
+
+%table
+  %tr
+    %th{:colspan => (nouns.size + 1)}= title
+  - if forms.include? :meaning
+    %tr
+      %th
+        - nouns.each do |noun|
+          %td
+            = noun[:meaning][:cyr]
+            %br
+            “#{noun[:meaning][:def]}”
+            - if noun[:meaning][:note]
+              = surround "(", ")" do
+                = noun[:meaning][:note].html_safe
+  - if forms.include? :nom
+    %tr
+      %th Nominative
+      - nouns.each do |noun|
+        %td= t(noun[:nom][:cyr], noun[:nom][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :gen
+    %tr
+      %th Genitive
+      - nouns.each do |noun|
+        %td= t(noun[:gen][:cyr], noun[:gen][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :acc
+    %tr
+      %th Accusative
+      - nouns.each do |noun|
+        %td= t(noun[:acc][:cyr], noun[:acc][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :dat
+    %tr
+      %th Dat./Instr.
+      - nouns.each do |noun|
+        %td= t(noun[:dat][:cyr], noun[:dat][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :par
+    %tr
+      %th Partitive
+      - nouns.each do |noun|
+        %td= t(noun[:par][:cyr], noun[:par][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :loc
+    %tr
+      %th Locative
+      - nouns.each do |noun|
+        %td= t(noun[:loc][:cyr], noun[:loc][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :lat
+    %tr
+      %th Lative
+      - nouns.each do |noun|
+        %td= t(noun[:lat][:cyr], noun[:lat][:lat], :linebreak => true) rescue "—"
