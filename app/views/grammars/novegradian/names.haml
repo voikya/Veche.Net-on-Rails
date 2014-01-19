@@ -1,0 +1,260 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Ймѣни"
+
+= render :partial => 'navigation'
+
+%p As in other Slavic cultures, an individual’s name consists of three parts: a given name, a patronymic, and a family name.
+
+= section "Given Names" do
+  = section "Common Given Names" do
+    %p The given name (Novegradian #{t "ймѣно", "jmě́no"}) is given to a child at birth. Native Novegradian names are either of pre-Christian or Biblical origin.
+    %p Some common Biblical and Christian names include the following, along with their English cognate:
+    %table
+      %tr
+        %th Novegradian
+        %th Gender
+        %th English
+      %tr
+        %td= t("Александре", "Aleksándre")
+        %td M
+        %td Alexander
+      %tr
+        %td= t("Ана", "Ána")
+        %td F
+        %td Anna
+      %tr
+        %td= t("Андрее", "Andréie")
+        %td M
+        %td Andrew
+      %tr
+        %td= t("Еване", "Ieváne")
+        %td M
+        %td John
+      %tr
+        %td= t("Екатерина", "Iekaterína")
+        %td F
+        %td Catherine
+      %tr
+        %td= t("Елена", "Ieléna")
+        %td F
+        %td Helen
+      %tr
+        %td= t("Ерина", "Ierína")
+        %td F
+        %td Irene
+      %tr
+        %td= t("Ёрие", "Iórije")
+        %td M
+        %td George
+      %tr
+        %td= t("Константине", "Konstantíne")
+        %td M
+        %td Constantine
+      %tr
+        %td= t("Маря", "Mária")
+        %td F
+        %td Mary
+      %tr
+        %td= t("Марке", "Márke")
+        %td M
+        %td Mark
+      %tr
+        %td= t("Михаиле", "Mihajíle")
+        %td M
+        %td Michael
+      %tr
+        %td= t("Надаля", "Nadália")
+        %td F
+        %td Natalie
+      %tr
+        %td= t("Николае", "Nikoláie")
+        %td M
+        %td Nicholas
+      %tr
+        %td= t("Павиле", "Pávile")
+        %td M
+        %td Paul
+      %tr
+        %td= t("Петре", "Pétre")
+        %td M
+        %td Peter
+      %tr
+        %td= t("Совя", "Sóvia")
+        %td F
+        %td Sophia
+      %tr
+        %td= t("Татяна", "Tatiána")
+        %td F
+        %td 
+      %tr
+        %td= t("Шергее", "Śergéie")
+        %td M
+        %td Serge
+    %p Some common pre-Christian names include:
+    %table
+      %tr
+        %th Novegradian
+        %th Gender
+      %tr
+        %td= t("Веховладе", "Véhovlade")
+        %td M
+      %tr
+        %td= t("Владимире", "Vladímire")
+        %td M
+      %tr
+        %td= t("Вѣра", "Vě́ra")
+        %td F
+      %tr
+        %td= t("Крежимире", "Kreźímire")
+        %td M
+      %tr
+        %td= t("Мециславе", "Mecisláve")
+        %td M
+      %tr
+        %td= t("Невида", "Névida")
+        %td F
+      %tr
+        %td= t("Нина", "Nína")
+        %td F
+      %tr
+        %td= t("Радя", "Rádia")
+        %td F
+      %tr
+        %td= t("Ростиславе", "Rostisláve")
+        %td M
+      %tr
+        %td= t("Станимире", "Stanímire")
+        %td M
+      %tr
+        %td= t("Ярина", "Iarína")
+        %td F
+      %tr
+        %td= t("Ярославе", "Iároslave")
+        %td M
+  
+  = section "Diminutives" do
+    %p Novegradian, not unusually for Slavic languages, has a rich system of dimunitives with several different ‘levels’, indicating different degrees of closeness or distance felt toward the person being talked about. These may be divided into three broad classes, known as personal diminutives, hypocoristics, and pejoratives.
+    %p Most native names have a personal diminutive form, commonly used by friends and family. Personal diminutives are highly irregular in formation, and sometimes may bear no resemblence to the original name. Generally, however, male diminutives are formed by adding #{t "-я", "-ia"} to a part of the name, and female diminutives by contraction or #{t "-ка", "-ka"}. Personal diminutives generally do not exist for names of foreign origin unless gained by analogy with a similar native name.
+    %p Examples, from the list of names above:
+    %table
+      %tr
+        %th Name
+        %th Diminutive
+        %th{:rowspan => 19}
+        %th Name
+        %th Diminutive
+      %tr
+        %td= t("Александре", "Aleksándre", :linebreak => true)
+        %td= t("Саша", "Sáśa", :linebreak => true)
+        %td= t("Веховладе", "Véhovlade", :linebreak => true)
+        %td= t("Веша", "Véśa", :linebreak => true)
+      %tr
+        %td= t("Ана", "Ána", :linebreak => true)
+        %td= t("Аня", "Ánia", :linebreak => true)
+        %td= t("Владимире", "Vladímire", :linebreak => true)
+        %td= t("Владя", "Vládia", :linebreak => true)
+      %tr
+        %td= t("Еване", "Ieváne", :linebreak => true)
+        %td= t("Ваня", "Vánia", :linebreak => true)
+        %td= t("Вѣра", "Vě́ra", :linebreak => true)
+        %td none
+      %tr
+        %td= t("Екатерина", "Iekaterína", :linebreak => true)
+        %td= t("Катя", "Kátia", :linebreak => true)
+        %td= t("Крежимире", "Kreźímire", :linebreak => true)
+        %td= t("Креша", "Kréśa", :linebreak => true)
+      %tr
+        %td= t("Елена", "Ieléna", :linebreak => true)
+        %td= t("Лена", "Léna", :linebreak => true)
+        %td= t("Мециславе", "Mecisláve", :linebreak => true)
+        %td= t("Меця", "Mécia", :linebreak => true)
+      %tr
+        %td= t("Ерина", "Ierína", :linebreak => true)
+        %td= t("Ера", "Iéra", :linebreak => true)
+        %td= t("Невида", "Névida", :linebreak => true)
+        %td= t("Нива", "Níva", :linebreak => true)
+      %tr
+        %td= t("Ёрие", "Iórije", :linebreak => true)
+        %td= t("Оржа", "Órźa", :linebreak => true)
+        %td= t("Нина", "Nína", :linebreak => true)
+        %td= t("Нинка", "Nínka", :linebreak => true)
+      %tr
+        %td= t("Константине", "Konstantíne", :linebreak => true)
+        %td= t("Костя", "Kóstia", :linebreak => true)
+        %td= t("Радя", "Rádia", :linebreak => true)
+        %td= t("Ражка", "Ráźka", :linebreak => true)
+      %tr
+        %td= t("Маря", "Mária", :linebreak => true)
+        %td= t("Маша", "Máśa", :linebreak => true)
+        %td= t("Ростиславе", "Rostisláve", :linebreak => true)
+        %td= t("Роша", "Róśa", :linebreak => true)
+      %tr
+        %td= t("Марке", "Márke", :linebreak => true)
+        %td= t("Марике", "Maríke", :linebreak => true)
+        %td= t("Станимире", "Stanímire", :linebreak => true)
+        %td= t("Станя", "Stánia", :linebreak => true)
+      %tr
+        %td= t("Михаиле", "Mihajíle", :linebreak => true)
+        %td= t("Миша", "Míśa", :linebreak => true)
+        %td= t("Ярина", "Iarína", :linebreak => true)
+        %td= t("Рина", "Rína", :linebreak => true)
+      %tr
+        %td= t("Надаля", "Nadália", :linebreak => true)
+        %td= t("Надаша", "Nadáśa", :linebreak => true)
+        %td= t("Ярославе", "Iarosláve", :linebreak => true)
+        %td= t("Яреша", "Iaréśa", :linebreak => true)
+      %tr
+        %td= t("Николае", "Nikoláie", :linebreak => true)
+        %td= t("Коля", "Kólia", :linebreak => true)
+        %td{:colspan => 2, :rowspan => 6}
+      %tr
+        %td= t("Павиле", "Pávile", :linebreak => true)
+        %td= t("Паша", "Páśa", :linebreak => true)
+      %tr
+        %td= t("Петре", "Pétre", :linebreak => true)
+        %td= t("Петя", "Pétia", :linebreak => true)
+      %tr
+        %td= t("Совя", "Sóvia", :linebreak => true)
+        %td= t("Соука", "Sóuka", :linebreak => true)
+      %tr
+        %td= t("Татяна", "Tatiána", :linebreak => true)
+        %td= t("Таня", "Tánia", :linebreak => true)
+      %tr
+        %td= t("Шергее", "Śergéie", :linebreak => true)
+        %td= t("Шержа", "Śérźa", :linebreak => true)
+
+  %p Hypocoristic diminutives are generally used between people who have an intimate relationship, including a husband and wife, boyfriend and girlfriend, and parent and child. For male names, these are usually formed by adding <i>-ka</i>, <i>-ocka</i>, <i>-oska</i>, or <i>-ośka</i> to the common diminutive form (or full given name if one does exist). For women, the most common suffixes are <i>-enka</i>, <i>-enocka</i>, <i>-enoska</i>, and <i>-enośka</i>, also added to the common diminutive or full given name, although if the common diminutive is formed by <i>-ka</i>, the full name must be used as a base: #{t "Нина", "Nína"} → #{t "Ниненка", "Nínenka"}, not <i>*Ninkenka</i>. These processes are more productive, with intimate diminutives existing even for foreign names so long as they are in accordance with Novegradian phonotactics. Examples: #{t "Ваношка", "Vánośka"} “Ieváne”, #{t "Надашенка", "Nadáśenka"} “Nadália”, #{t "Мецоска", "Mécoska"} “Mecisláve”, #{t "Раденошка", "Radénośka"} “Rádia”.
+  %p The endings #{t "-ше", "-śe"} and #{t "-иле", "-íle"} (feminine #{t "-ша", "-śa"} and #{t "-ила", "-íla"}), generally added to a clipped form of the regular given name, fall somewhere in between the personal diminutives and hypocoristics. The latter suffix originated as a generalization of the perceived suffix -иле in many names of Greek origin (#{t "Михаиле", "Mihajíle"}, #{t "Данииле", "Danijíle"}, #{t "Кириле", "Kiríle"}, #{t "Гаврииле", "Gavrijíle"}, etc.). Examples: #{t "Еваше", "Ieváśe"} “Ieváne”, #{t "Яроше", "Iaróśe"} “Iarosláve”, #{t "Мециле", "Mecíle"} “Mecisláve”, #{t "Марила", "Maríla"} “Mária”, #{t "Татяша", "Tatiáśa"} “Tatiána”, and so on.
+  %p The pejorative is the opposite of all the above, expressing some disdain and distance from a person. Pejoratives exist only for names viewed as Novegradian, or at least Slavic, and not for foreign names. The most common suffixes are <i>-ulia</i> and <i>-uhia</i>, added to the common diminutive base, or the full given name if there is no common diminutive or it ends in <i>-ka</i>. Examples: #{t "Вануля", "Vanúlia"} “Ieváne”, #{t "Петрухя", "Petrúhia"} “Pétre”, #{t "Тануля", "Tanúlia"} “Tatiána”, #{t "Радухя", "Radúhia"} “Rádia”.
+
+  = section "Variants" do
+    %p Many of the Christian names have a number of common variant forms, generally of dialectical or Church Slavonic origin.
+    %p When many names of Greek Christian origin were introduced into Novegradian, a number of variations were introduced into common speech as people were first introduced to these new names. In particular, unstressed initial vowels are prone to loss or change. Sometimes they drop completely, as in #{t "Катерина", "Katerína"} from #{t "Екатерина", "Iekaterína"}. The initial vowels /a (j)e/ also frequently change to /o/: #{t "Ондрее", "Ondréie"} (from #{t "Андрее", "Andréie"}), #{t "Олександре", "Oleksándre"} (from #{t "Александре", "Aleksándre"}), #{t "Олена", "Oléna"} (from #{t "Елена", "Ieléna"}). There are also occasionally alternations between final <i>-ije</i> and <i>-eie</i>: #{t "Алекшее", "Alékśeie"} (from #{t "Алекшие", "Alékśije"}), #{t "Андрие", "Andríje"} (from #{t "Андрее", "Andréie"}).
+    %p Sometimes larger clusters of consonants are simplified: #{t "Костантине", "Kostantíne"} (from #{t "Константие", "Konstantíne"}; note the diminutive #{t "Костя", "Kóstia"}), #{t "Александе", "Aleksánde"} (from #{t "Александре", "Aleksándre"}).
+    %p Pre-Christian names ending in <i>-ve</i> may alternate with a diphthong in <i>-u</i>: #{t "Мецислау", "Mecisláu"} (from #{t "Мециславе", "Mecisláve"}), #{t "Ростислау", "Rostisláu"} (from #{t "Ростиславе", "Rostisláve"}).
+    %p Since the 16th century, many of the Church Slavonic forms of names have been reintroduced alongside older Novegradian pronunciations. Thus it is not uncommon to see #{t "Иване", "Iváne"} alongside #{t "Еване", "Ieváne"}, #{t "Наталя", "Natália"} alongside #{t "Надаля", "Nadália"}, and #{t "Юрие", "Iúrije"} (or rarely #{t "Гёргие", "Giórgije"}) alongside #{t "Ёрие", "Iórije"}.
+    %p Some Christian names ending in #{t "-иле", "-íle"} also exist in Novegradian without it, the result of its reanalysis as a diminutive suffix: #{t "Миха", "Míha"} (from #{t "Михаиле", "Mihajíle"}), #{t "Кире", "Kíre"} (from #{t "Кириле", "Kiríle"}), #{t "Дание", "Dánije"} (from #{t "Данииле", "Danijíle"}).
+    %p Most of the above variants are still widely used, though certain forms may be more common in some regions than in others. Only the simplifications of clusters as in <i>Kostantíne</i> and <i>Aleksánde</i> are undeniably dying out, increasingly being viewed as an uneducated pronunciation.
+
+= section "Patronymics" do
+  %p The Novegradian patronymic (#{t "оцино", "ócino"}) is derived from the name of one’s father, and is frequently used in place of the last name when addressing someone. The suffix #{t "-овице", "-óvice"} is used for men, and #{t "-оуна", "-óuna"} for women. A man whose father’s name was #{t "Петре", "Pétre"} therefore would have the patronymic #{t "Петровице", "Petróvice"}, and a woman would have the patronymic #{t "Петроуна", "Petróuna"}. In some parts of the country, especially in the north, the masculine patronymic ending is instead #{t "-овуце", "-ovuce"}, #{t "-оуце", "-ouce"}, or rarely, #{t "-оце", "-oce"}, and the feminine ending may occasionally be #{t "-онна", "-onna"} or rarely #{t "-она", "-ona"}. Variants of all these forms with /e/ in place of /o/ are not infrequent.
+
+= section "Surnames" do
+  %p Surnames (Novegradian #{t "вамиля", "vamília"}) in Novegradian are adjectives, and decline to agree with the person bearing the name. They are generally derived from names, places, qualities, or things by means of four main suffixes: -оу, -ине, -аре, and -ей.
+  %p #{t "-Ей", "-ei"} (feminine form #{t "-ая", "-aia"}) is only found on true adjectives, generally a physical characteristic or place name. These types of surnames date back from before all surnames were inherited, and were often used to distinguish two people in a small town who had the same given names. Examples include #{t "Новей", "Nóvei"} “New”, #{t "Старей", "Stárei"} “Elder”, #{t "Церней", "Cérnei"} “Dark”, #{t "Мудрей", "Múdrei"} “Wise”. When combined with the -ск- suffix, these can also be geographic references: #{t "Прусскей", "Prússkei"} “Prussian”, #{t "Сумескей", "Súmeskei"} “Finnish”, #{t "Сизолескей", "Sizóleskei"} “from the Sizóla (Sysola) River”.  Despite the nominative case forms looking like definite adjectives, in all other cases they decline as indefinite.
+  %p #{t "-Оу", "-ou"} (feminine form #{t "-ова", "-ova"}) comes from the old genitive ending, and is probably the most common Novegradian surname suffix. It was originally used to indicate one’s origin or ancestry: #{t "Цахоу", "Cáhou"} “Czech”, #{t "Русоу", "Rúsou"} “Russian”, #{t "Петроу", "Pétrou"} “[son of] Peter”, #{t "Московоу", "Moskóvou"} “Muscovite”. The ending #{t "-слау", "-slau"} “glory”, originally only for given names, may also be seen in surnames: #{t "Боғеслау", "Bóğeslau"} “glory of God”. When declined, the final /u/ becomes a /β/ in all oblique forms. The variant #{t "-еу", "-eu"} (feminine #{t "-ева", "-eva"}) is also very common.
+  %p #{t "-Ине", "-ine"} (feminine form #{t "-ина", "-ina"}) is the conflation of two different suffixes—the Slavic #{t "-ине", "-ine"} and the Finnish #{t "-ен", "-en"}. Both Slavic and Uralic roots will therefore often be seen with this suffix: #{t "Рѣкине", "Rě́kine"} “[from the] River”, #{t "Лѣтине", "Lě́tine"} “[from the] South”, #{t "Маркунине", "Markúnine"} “[son of] Markus”.
+  %p #{t "-Аре", "-are"} (feminine form #{t "-ара", "-ara"}), sometimes seen in the iotated form -яре/-яра, was often used to indicate a profession: #{t "Каляре", "Kaliáre"} “Fisher”, #{t "Тегаре", "Tegáre"} “Weaver”, #{t "Сељаре", "Sełáre"} “Farmer”.
+  %p Due to the great variety of cultures the Novegradians have historically been in contact with and the cultures currently within Novegrad, many names consist of a foreign root plus a Novegradian suffix. Naturally, it is often much harder to identify the origins of these sorts of names.
+  %p Surnames agree in gender with the person bearing the name. When a woman marries a man, she takes the feminine form of her husband’s name. Other than those names ending in -ей/-ая, these surnames are all declined as fourth declension (masculine) or first declension (feminine) nouns.
+
+= section "Foreign Names" do
+  %p Since native Novegradian surnames are adjectives, or at the very least possess strong adjectival qualities, all parts of a name must decline to the appropriate case in a given sentence: #{t "Яс повастале Лева Прокорова", "Iás povástale Léva Prokórova"} “I met Léve Prokórou”.
+  %p By analogy with this pattern, foreign names must do the same, even though non-Novegradian last names are usually not adjectives: #{t "Яс повастале Ўинстона Чурчила", "Iás povástale Wínstona Čúrčila"} “I met Winston Churchill”. This only applies when the end of the name conforms to Novegradian morphology; otherwise it is indeclinable.
+  %p Masculine names will always decline according to whatever declension seems the most appropriate given the structure of the name; thus names ending in a consonant will usually take the fourth declension, names ending in /a/ will take the first, and so on. This applies even when the two parts of the name belong to two completely different declensions; for instance, #{t "Бараке Обама", "Bárake Obáma"} has the accusative form #{t "Барака Обамѣ", "Báraka Obámě"}, with the first name declining like a fourth declension noun and the surname as a first declension noun.
+  %p With feminine names, the situation is more complicated. If the name ends in /a/ or /i/ (i.e., it clearly belongs to either the first, second, or fifth declensions), then it is fully capable of declining. If it ends in anything else, it is undeclinable; a name like “Elizabeth” becomes #{t "’Елизабет", "Elízabet"} in all cases. Notice that non-declining names like “Elizabeth” do not need to take any case endings at all, while declining masculine names like “Michael” must take fourth declension endings: #{t "Майкле", "Máikle"}. Feminine surnames ending in a consonant will generally decline normally, however: the accusative of #{t "’Елизабет Коллинсе", "Elízabet Kóllinse"} is thus #{t "’Елизабет Коллинса", "Elízabet Kóllinsa"}, with a non-declining first name and a declining surname.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
