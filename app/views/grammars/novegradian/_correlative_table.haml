@@ -1,0 +1,17 @@
+- alignment ||= "left"
+- correlatives ||= {}
+
+%table{:style => "float: #{alignment}"}
+  %tr
+    %th
+    - correlatives.keys.each do |label|
+      %th= label
+  - [:determiner, :quality, :person, :thing, :place, :direction, :origin, :time, :amount, :way, :reason].each do |correlative_class|
+    %tr
+      %th= correlative_class.to_s.titleize
+      - correlatives.keys.each do |grouping|
+        %td
+          - if correlatives[grouping][correlative_class]
+            = t(correlatives[grouping][correlative_class][:cyr], correlatives[grouping][correlative_class][:lat])
+            %br
+            “#{correlatives[grouping][correlative_class][:eng]}”

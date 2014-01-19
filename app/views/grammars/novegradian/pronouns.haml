@@ -1,0 +1,926 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Окағьакьи ймѣни"
+
+= render :partial => 'navigation'
+
+= section "Definitions and Features" do
+  %p Pronouns are a diverse class of wordforms that syntactically fill the same role as nouns (hence the term “pronoun”). They serve as standins for other nouns or noun phrases, known as antecedents, that have been previously mentioned or that can otherwise be determined from context.
+  %p Pronouns come in many different varieties. Among these are personal pronouns (standing in for a noun), demonstrative pronouns (indicating which noun is meant), interrogative pronouns (asking what noun is meant), and various others.
+  %p Included in this section are a number of other pro-forms such as possessive adjectives and interrogative adverbs, as well as miscellaneous determiners that follow a pronominal declension paradigm in Novegradian.
+
+= section "Personal Pronouns" do
+  %p The personal pronouns stand in for other nouns, indicating that noun’s person, number, and case, as well as gender in the third person singular. There are three subdeclensions in the first and second persons—one used by the singulars and the reflexive, one by the duals, and one by the plurals. The third person pronouns form a separate class; each one has its own unique declension, mirroring fairly closely the endings of definite adjectives, which share a common origin.
+
+  = section "First and Second Persons" do
+    %p The first and second person pronouns are descended directly from the Common Slavic ones, with the exception of the nominative dual forms, which come from “we-two” and “you-two”.
+    %table
+      %tr
+        %th
+        %th 1Sg
+        %th 1Dl
+        %th 1Pl
+        %th 2Sg
+        %th 2Dl
+        %th 2Pl
+      %tr
+        %th Nom.
+        %td= t("яс", "iás")
+        %td= t("надуа", "naduá")
+        %td= t("муи", "muí")
+        %td= t("ти", "tí")
+        %td= t("вадуа", "vaduá")
+        %td= t("вуи", "vuí")
+      %tr
+        %th Gen.
+        %td= t("мене", "mené")
+        %td= t("наю", "náiu")
+        %td= t("насе", "náse")
+        %td= t("тебе", "tebé")
+        %td= t("ваю", "váiu")
+        %td= t("васе", "váse")
+      %tr
+        %th Acc.
+        %td= t("мене", "mené")
+        %td= t("наю", "náiu")
+        %td= t("насе", "náse")
+        %td= t("тебе", "tebé")
+        %td= t("ваю", "váiu")
+        %td= t("васе", "váse")
+      %tr
+        %th D/I
+        %td= t("мнѣ", "mně́")
+        %td= t("нама", "náma")
+        %td= t("наме", "náme")
+        %td= t("тибѣ", "tibě́")
+        %td= t("вама", "váma")
+        %td= t("ваме", "váme")
+      %tr
+        %th Par.
+        %td= t("мене", "mené")
+        %td= t("наю", "náiu")
+        %td= t("насе", "náse")
+        %td= t("тебе", "tebé")
+        %td= t("ваю", "váiu")
+        %td= t("васе", "váse")
+      %tr
+        %th Loc.
+        %td= t("мнѣ", "mně́")
+        %td= t("наю", "náiu")
+        %td= t("насе", "náse")
+        %td= t("тибѣ", "tibě́")
+        %td= t("ваю", "váiu")
+        %td= t("васе", "váse")
+      %tr
+        %th Lat.
+        %td= t("ме", "mé")
+        %td= t("на", "ná")
+        %td= t("ни", "ní")
+        %td= t("те", "té")
+        %td= t("ва", "vá")
+        %td= t("вуи", "vuí")
+    %p When the genitive took over as the direct object of accusative sentences with animate nouns, the same thing happened in the pronouns—the original accusative form disappeared in favor of the genitive. Interestingly, it is the lative case that now uses the original accusative pronouns, because the lative arose as a variant of the accusative when not used as a direct object, meaning the genitive never replaced it anywhere. The partitive, whose functions were originally performed by the genitive, also shares the genitive pronouns.
+    %p The locative case is always syncretic, having the same form as another case, but which one depends on the pronoun. In the singular pronouns it is always identical with the dative/instrumental, while in the dual and plural pronouns it matches the genitive.
+    %p The reflexive pronoun **ши conjugates exactly the same as ти—#{t "шебе, шибѣ, ше", "śebé, śibě́, śé"}. The nominative form is of course hypothetical, as a reflexive form can never be used as the subject of a sentence.
+    %p The pronoun #{t "яс", "iás"} loses its final /s/, becoming /ja/, whenever the following word begins with a fricative consonant. This reduction is not indicated in writing, however.
+
+  = section "Third Person" do
+    %p Common Slavic originally lacked third person pronouns, but later formed them in oblique cases using the anaphoric pronoun *j-. The relation between the forms of the Novegradian third person pronouns and the endings taken by definite adjectives can be seen clearly.
+    %table
+      %tr
+        %th
+        %th
+          3Sg
+          %br
+          (#{abbrev 'm'}/#{abbrev 'n'})
+        %th
+          3Sg
+          %br
+          (#{abbrev 'f'})
+        %th 3Dl
+        %th 3Pl
+      %tr
+        %th Nom.
+        %td= t("оне", "óne")
+        %td= t("она", "oná")
+        %td= t("ондуа", "onduá")
+        %td= t("они", "oní")
+      %tr
+        %th Gen.
+        %td= t("ево", "ievó")
+        %td= t("ѣ", "iě́")
+        %td= t("ею", "iéiu")
+        %td= t("их", "íh")
+      %tr
+        %th Acc.
+        %td= t("ево", "ievó")
+        %td= t("ѣ", "iě́")
+        %td= t("ею", "iéiu")
+        %td= t("их", "íh")
+      %tr
+        %th D/I
+        %td= t("ему", "iemú")
+        %td= t("ей", "iéi")
+        %td= t("ема", "iemá")
+        %td= t("име", "íme")
+      %tr
+        %th Par.
+        %td= t("ево", "ievó")
+        %td= t("ѣ", "iě́")
+        %td= t("ею", "iéiu")
+        %td= t("их", "íh")
+      %tr
+        %th Loc.
+        %td= t("ем", "iém")
+        %td= t("ей", "iéi")
+        %td= t("ею", "iéiu")
+        %td= t("их", "íh")
+      %tr
+        %th Lat.
+        %td= t("неи", "néji")
+        %td= t("нею", "néiu")
+        %td= t("нея", "néia")
+        %td= t("неѣ", "néiě")
+    %p The anaphoric pronoun was never allowed to stand on its own in its original nominative/accusative case form, so an old demonstrative pronoun он- with endings was used to stand in its place. This nominative form is to be avoided when at all possible.
+    %p The original accusative was replaced by the genitive, avoiding the problem of the lone anaphoric pronoun. In the lative form of the old accusative, however, an epenthetic /n/ was acquired to allow the nominative form to stand on its own, in a way. The /n/ likely came from the prepositions that usually preceded nouns in this case, several of which ended in an /n/ which was lost at a later point (e.g., Novegradian во “into” ← Common Slavic *vъn, although this /n/ reemerges in certain situations).
+    %p There is also a second set of third person pronouns, this one derived from the former demonstrative *to, the same that cliticizes to nouns to topicalize them. True to this function, however, this set cannot be used to refer to third person nouns that are not topicalized. Within the realm of topicalized nouns, however, то and оне exist in free variation.
+    %p These forms do not mark gender, only case and optionally number. The singular forms may refer to plural antecedents (especially when in the nominative case, since #{t "ти", "tí"} could potentially mean either “they” or “you”).
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Pl
+      %tr
+        %th Nom.
+        %td= t("то", "tó")
+        %td= t("ти", "tí")
+      %tr
+        %th Gen.
+        %td= t("тово", "tovó")
+        %td= t("тѣх", "tě́h")
+      %tr
+        %th Acc.
+        %td= t("тово", "tovó")
+        %td= t("тѣх", "tě́h")
+      %tr
+        %th D/I
+        %td= t("тѣм", "tě́m")
+        %td= t("тѣми", "tě́mi")
+      %tr
+        %th Par.
+        %td= t("тово", "tovó")
+        %td= t("тѣх", "tě́h")
+      %tr
+        %th Loc.
+        %td= t("том", "tóm")
+        %td= t("тѣх", "tě́h")
+      %tr
+        %th Lat.
+        %td= t("то", "tó")
+        %td= t("ти", "tí")
+  
+  = section "Possessives" do
+    %p Possession can be indicated in two ways in Novegradian—with the possessive adjectives inherited from Common Slavic, or using an analytic construction borrowed from the Finnic languages.
+    %p The inherited adjectives are #{t "мой", "mói"} (#{abbrev '1sg'}), #{t "туой", "tuói"} (#{abbrev '2sg'}), #{t "суой", "suói"} (#{abbrev 'reflx'}), #{t "наин", "nájin"} (#{abbrev '1dl'}), #{t "ваин", "vájin"} (#{abbrev '2dl'}), #{t "наш", "náś"} (#{abbrev '1pl'}>), and #{t "ваш", "váś"} (#{abbrev '2pl'}). The three singular adjectives decline the same way, the duals a different way, and the plurals according to a third pattern.
+    %table
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 4} мой/туой/суой
+        %th{:rowspan => 9}
+        %th{:colspan => 4} наин/ваин
+        %th{:rowspan => 9}
+        %th{:colspan => 4} наш/ваш
+      %tr
+        %th M
+        %th N
+        %th F
+        %th Pl
+        %th M
+        %th N
+        %th F
+        %th Pl
+        %th M
+        %th N
+        %th F
+        %th Pl
+      %tr
+        %th Nom.
+        %td= t("мой", "mói", :linebreak => true)
+        %td= t("мое", "moié", :linebreak => true)
+        %td= t("моя", "moiá", :linebreak => true)
+        %td= t("мои", "mojí", :linebreak => true)
+        %td= t("наин", "nájin", :linebreak => true)
+        %td= t("нае", "náie", :linebreak => true)
+        %td= t("ная", "náia", :linebreak => true)
+        %td= t("наи", "náji", :linebreak => true)
+        %td= t("наш", "náś", :linebreak => true)
+        %td= t("наше", "náśe", :linebreak => true)
+        %td= t("наша", "náśa", :linebreak => true)
+        %td= t("наши", "náśi", :linebreak => true)
+      %tr
+        %th Gen.
+        %td= t("моево", "moievó", :linebreak => true)
+        %td= t("моево", "moievó", :linebreak => true)
+        %td= t("моей", "moiéi", :linebreak => true)
+        %td= t("моих", "mojíh", :linebreak => true)
+        %td= t("наево", "náievo", :linebreak => true)
+        %td= t("наево", "náievo", :linebreak => true)
+        %td= t("наей", "náiei", :linebreak => true)
+        %td= t("наих", "nájih", :linebreak => true)
+        %td= t("нашево", "náśevo", :linebreak => true)
+        %td= t("нашево", "náśevo", :linebreak => true)
+        %td= t("нашѣ", "náśě", :linebreak => true)
+        %td= t("наших", "náśih", :linebreak => true)
+      %tr
+        %th Acc.
+        %td= t("мой", "mói", :linebreak => true)
+        %td= t("мое", "moié", :linebreak => true)
+        %td= t("мою", "moiú", :linebreak => true)
+        %td= t("мои", "mojí", :linebreak => true)
+        %td= t("наин", "nájin", :linebreak => true)
+        %td= t("нае", "náie", :linebreak => true)
+        %td= t("наю", "náiu", :linebreak => true)
+        %td= t("наи", "náji", :linebreak => true)
+        %td= t("наш", "náś", :linebreak => true)
+        %td= t("наше", "náśe", :linebreak => true)
+        %td= t("нашу", "náśu", :linebreak => true)
+        %td= t("наши", "náśi", :linebreak => true)
+      %tr
+        %th D/I
+        %td= t("моим", "mojím", :linebreak => true)
+        %td= t("моим", "mojím", :linebreak => true)
+        %td= t("моей", "moiéi", :linebreak => true)
+        %td= t("моими", "mojími", :linebreak => true)
+        %td= t("наим", "nájim", :linebreak => true)
+        %td= t("наим", "nájim", :linebreak => true)
+        %td= t("наей", "náiei", :linebreak => true)
+        %td= t("наими", "nájimi", :linebreak => true)
+        %td= t("нашим", "náśim", :linebreak => true)
+        %td= t("нашим", "náśim", :linebreak => true)
+        %td= t("нашѣ", "náśě", :linebreak => true)
+        %td= t("нашими", "náśimi", :linebreak => true)
+      %tr
+        %th Par.
+        %td= t("моево", "moievó", :linebreak => true)
+        %td= t("моево", "moievó", :linebreak => true)
+        %td= t("моей", "moiéi", :linebreak => true)
+        %td= t("моих", "mojíh", :linebreak => true)
+        %td= t("наево", "náievo", :linebreak => true)
+        %td= t("наево", "náievo", :linebreak => true)
+        %td= t("наей", "náiei", :linebreak => true)
+        %td= t("наих", "nájih", :linebreak => true)
+        %td= t("нашево", "náśevo", :linebreak => true)
+        %td= t("нашево", "náśevo", :linebreak => true)
+        %td= t("нашѣ", "náśě", :linebreak => true)
+        %td= t("наших", "náśih", :linebreak => true)
+      %tr
+        %th Loc.
+        %td= t("моем", "moiém", :linebreak => true)
+        %td= t("моем", "moiém", :linebreak => true)
+        %td= t("моей", "moiéi", :linebreak => true)
+        %td= t("моих", "mojíh", :linebreak => true)
+        %td= t("наем", "náiem", :linebreak => true)
+        %td= t("наем", "náiem", :linebreak => true)
+        %td= t("наей", "náiei", :linebreak => true)
+        %td= t("наих", "nájih", :linebreak => true)
+        %td= t("нашем", "náśem", :linebreak => true)
+        %td= t("нашем", "náśem", :linebreak => true)
+        %td= t("нашѣ", "náśě", :linebreak => true)
+        %td= t("наших", "náśih", :linebreak => true)
+      %tr
+        %th Lat.
+        %td= t("мой", "mói", :linebreak => true)
+        %td= t("мое", "moié", :linebreak => true)
+        %td= t("мою", "moiú", :linebreak => true)
+        %td= t("мои", "mojí", :linebreak => true)
+        %td= t("наин", "nájin", :linebreak => true)
+        %td= t("нае", "náie", :linebreak => true)
+        %td= t("наю", "náiu", :linebreak => true)
+        %td= t("наи", "náji", :linebreak => true)
+        %td= t("наш", "náś", :linebreak => true)
+        %td= t("наше", "náśe", :linebreak => true)
+        %td= t("нашу", "náśu", :linebreak => true)
+        %td= t("наши", "náśi", :linebreak => true)
+    %p In the third person, the possessive pronouns are #{t "ево", "ievó"} (#{abbrev 'masc.sg'}/#{abbrev 'neut.sg'}), #{t "ѣ", "iě́"} (#{abbrev 'f.sg'}>), #{t "ею", "iéiu"} (#{abbrev 'dl'}), and #{t "ех", "iéh"} (#{abbrev 'pl'}) in all cases, derived from the anaphoric pronoun. They do not agree with the noun they modify in any way.
+    %p All of the above forms, however, are considered a little formal, though not extremely so, and in all but formal writing the analytic forms are dominant. They are formed using the prepostion #{t "о", "o"} “at” with a pronoun in the genitive case: #{t "о мене", "o mené"} “my” (lit. “at me”). In the third person, /n/ is inserted in between, attached to the pronoun: #{t "о нево", "o nevó"} “his”. These forms are required to go after the possessed noun, never before. In much of the northern and eastern parts of the Republic of Novegrad, it is common to use the lative case instead of the genitive, giving о ме, о неи, etc, instead.
+
+= section "Demonstrative Pronouns" do
+  %p Novegradian has only one main demonstrative pronoun, #{t "ше", "śé"}, which can be translated as either “this” or “that”, depending on context. It originally meant just “this”, but its use increased as the other demonstratives were lost, and may have acquired wider usage due to influence from the Finnish pronoun/demonstrative se “it, that”. The adjective form declines using the same sorts of endings as the possessive adjectives.
+  %table
+    %tr
+      %th
+      %th M
+      %th N
+      %th F
+      %th Pl
+    %tr
+      %th Nom.
+      %td= t("ше", "śé")
+      %td= t("ше", "śé")
+      %td= t("ша", "śá")
+      %td= t("ши", "śí")
+    %tr
+      %th Gen.
+      %td= t("шево", "śevó")
+      %td= t("шево", "śevó")
+      %td= t("шей", "śéi")
+      %td= t("ших", "śíh")
+    %tr
+      %th Acc.
+      %td= t("ше", "śé")
+      %td= t("ше", "śé")
+      %td= t("шу", "śú")
+      %td= t("ши", "śí")
+    %tr
+      %th D/I
+      %td= t("шим", "śím")
+      %td= t("шим", "śím")
+      %td= t("шей", "śéi")
+      %td= t("шими", "śími")
+    %tr
+      %th Par.
+      %td= t("шево", "śevó")
+      %td= t("шево", "śevó")
+      %td= t("шей", "śéi")
+      %td= t("ших", "śíh")
+    %tr
+      %th Loc.
+      %td= t("шем", "śém")
+      %td= t("шем", "śém")
+      %td= t("шей", "śéi")
+      %td= t("ших", "śíh")
+    %tr
+      %th Lat.
+      %td= t("ше", "śé")
+      %td= t("ше", "śé")
+      %td= t("шу", "śú")
+      %td= t("ши", "śí")
+  %p When used on its own as a pronoun, the masculine/neuter form is used.
+  %p If distance (i.e., “that” as opposed to “this”) needs to be emphasized, the defective demonstrative #{t "он-", "on-"}, the same one forming the nominative third person pronouns, may be used. When used as adjectives (or perhaps just pronouns in apposition), only the forms #{t "оне", "óne"} (#{abbrev 'm'}/#{abbrev 'n'}), #{t "она", "oná"} (#{abbrev 'f'}), and #{t "они", "oní"} (#{abbrev 'pl'}) exist<sup>1</sup>.
+
+= section "Absolute Pronouns" do
+  %p The absolute pronouns are special pronominal forms used in isolation, when the verb and environment they should appear in is completely implied by context. In particular, they are used in response to questions such as “Who...?” and “Which...?”. The phenominon is similar to the colloquial English habit of answering questions like “Who did this?” with “Me” in place of “I did”, or answering “Which do you want?” with “That one” in place of “I want that one”.
+  %p They were originally formed by adding the topical #{t "-то", "-to"} to the personal and demonstrative pronouns, but have since undergone their own phonological evolution. There are two variant spellings, an older one more clearly preserving their origin, and a newer one more accurately reflecting colloquial speech. Both are seen frequently, although the newer spellings are becoming more common as fewer and fewer speakers use the older variants in speech<sup>2</sup>.
+  %p The absolute personal pronouns are as follows. They are shown alongside the topicalized personal pronouns for comparison.
+  %table
+    %tr
+      %th
+      %th Old Spelling
+      %th New Spelling
+      %th
+        Topicalized
+        %br
+        Pronoun
+    %tr
+      %th 1Sg
+      %td= t("яс-ёт", "ias-iót")
+      %td= t("язёт", "iaziót")
+      %td= t("яс-от", "ias-ót")
+    %tr
+      %th 2Sg
+      %td= t("ти-те", "tí-te")
+      %td= t("тите", "títe")
+      %td= t("ти-то", "tí-to")
+    %tr
+      %th 3Sg M/N
+      %td= t("он-ёт", "on-iót")
+      %td= t("нёт", "niót")
+      %td= t("оне-то", "óne-to")
+    %tr
+      %th 3Sg F
+      %td= t("она-та", "oná-ta")
+      %td= t("ната", "náta")
+      %td= t("она-та", "oná-ta")
+    %tr
+      %th 1Dl
+      %td= t("надуа-та", "naduá-ta")
+      %td= t("надуата", "naduáta")
+      %td= t("надуа-то", "naduá-to")
+    %tr
+      %th 2Dl
+      %td= t("вадуа-та", "vaduá-ta")
+      %td= t("вадуата", "vaduáta")
+      %td= t("вадуа-то", "vaduá-to")
+    %tr
+      %th 3Dl
+      %td= t("ондуа-та", "onduá-ta")
+      %td= t("дуата", "duáta")
+      %td= t("ондуа-то", "onduá-to")
+    %tr
+      %th 1Pl
+      %td= t("муи-то", "muí-to")
+      %td= t("муито", "muíto")
+      %td= t("муи-то", "muí-to")
+    %tr
+      %th 2Pl
+      %td= t("вуи-то", "vuí-to")
+      %td= t("вуито", "vuíto")
+      %td= t("вуи-то", "vuí-to")
+    %tr
+      %th 3Pl
+      %td= t("они-те", "oní-te")
+      %td= t("ните", "níte")
+      %td= t("они-то", "oní-to")
+  %p Note how the /o/ of the third person forms drops in the new spelling, more accurately reflecting speech. The /o/ is only preserved in the speech of older speakers.
+  %p The demonstrative pronoun ше similarly has absolute forms:
+  %table
+    %tr
+      %th
+      %th Old Spelling
+      %th New Spelling
+      %th
+        Topicalized
+        %br
+        Pronoun
+    %tr
+      %th Masc Sg
+      %td= t("ше-ёт", "śe-iót")
+      %td= t("шёт", "śiót")
+      %td= t("ше-то", "śé-to")
+    %tr
+      %th Neut Sg
+      %td= t("ше-то", "śé-to")
+      %td= t("шёто", "śéto")
+      %td= t("ше-то", "śé-to")
+    %tr
+      %th Fem Sg
+      %td= t("ша-та", "śá-ta")
+      %td= t("шата", "śáta")
+      %td= t("ша-та", "śá-ta")
+    %tr
+      %th Pl
+      %td= t("ши-те", "śí-te")
+      %td= t("шите", "śíte")
+      %td= t("ши-то", "śí-to")
+
+= section "Interrogative Pronouns" do
+  %p Novegradian has two interrogative pronouns that have a full pronominal declension, four with an adjectival declension, and several others that don’t decline at all.
+  %p The two declining pronouns are #{t "цой", "cói"} “what?” and #{t "хой", "hói"} “who?” Being pronouns, they decline using the same sort of endings used by the anaphoric pronoun:
+  %table
+    %tr
+      %th
+      %th
+        цой
+        %br
+        “what?”
+      %th
+        хой
+        %br
+        “who?”
+    %tr
+      %th Nom.
+      %td= t("цой", "cói")
+      %td= t("хой", "hói")
+    %tr
+      %th Gen.
+      %td= t("цево", "cevó")
+      %td= t("ково", "kovó")
+    %tr
+      %th Acc.
+      %td= t("цой", "cói")
+      %td= t("ково", "kovó")
+    %tr
+      %th D/I
+      %td= t("цему", "cemú")
+      %td= t("кому", "komú")
+    %tr
+      %th Par.
+      %td= t("цево", "cevó")
+      %td= t("ково", "kovó")
+    %tr
+      %th Loc.
+      %td= t("цем", "cém")
+      %td= t("кем", "kém")
+    %tr
+      %th Lat.
+      %td= t("це", "cé")
+      %td= t("ке", "ké")
+  %p The /j/ present in the nominative forms comes from the anaphoric pronoun *j-, which was inserted to reinforce the otherwise highly reduced nominative forms<sup>3</sup>.
+  %p The interrogatives #{t "каде", "kadé"} “what kind of?”<sup>4</sup>, #{t "какове", "kákove"} “what kind of?” (in free variation with каде), and #{t "котре", "kótre"} “which?” decline as adjectives, because they directly modify a noun. They are all regular.
+  %p The word #{t "кей", "kéi"} is an emphatic interrogative, which can mean “what?”, “which?”, or “what kind of?” depending on the context. It is adjectival as well, but only declines using the definite endings (#{t "кей", "kéi"}, #{t "кая", "káia"}, #{t "кое", "kóie"}, #{t "кие", "kíje"}).
+  %p Other interrogatives, which do not decline, include:
+  %ul
+    %li #{t "куде", "kudé"} “where?”
+    %li #{t "куди", "kudí"} “to where?”
+    %li #{t "оскуд", "oskúd"} “from where?”
+    %li #{t "койда", "kóida"} “when?”
+    %li #{t "зацем", "zácem"} “why?”
+    %li #{t "како", "káko"} “how?”
+    %li #{t "колкѣ", "kólkě"} “how much/many?”
+  %p Old Novegradian #{t "цей", "céi"} “whose?” is no longer used, having been replaced by #{t "о ково", "o kovó"} “at whom”.
+
+= section "Negative and Indefinite Pronouns" do
+  %p The indefinite and negative pronouns (“some-X, no-X”) are all formed by adding affixes to the interrogative pronouns. The indefinite pronouns are formed from some form of the suffix #{t "-ш", "-ś"}, a reduced form of an earlier demonstrative pronoun. The negatives are formed with the prefix #{t "не-", "ne-"}. The addition of these affixes can cause other changes to occur, as they would interfere with the original balance of stress and yer vowels.
+  %p The negative and indefinite forms of цой and хой have a complete declension:
+  %table
+    %tr
+      %th
+      %th
+        цеш
+        %br
+        “something”
+      %th
+        кош
+        %br
+        “someone”
+      %th
+        нецой
+        %br
+        “nothing”
+      %th
+        нехой
+        %br
+        “no one”
+    %tr
+      %th Nom.
+      %th= t("цеш", "céś", :linebreak => true)
+      %th= t("кош", "kóś", :linebreak => true)
+      %th= t("нецой", "nécoi", :linebreak => true)
+      %th= t("нехой", "néhoi", :linebreak => true)
+    %tr
+      %th Gen.
+      %th= t("цевош", "cevóś", :linebreak => true)
+      %th= t("ковош", "kovóś", :linebreak => true)
+      %th= t("нецево", "necevó", :linebreak => true)
+      %th= t("неково", "nekovó", :linebreak => true)
+    %tr
+      %th Acc.
+      %th= t("цеш", "céś", :linebreak => true)
+      %th= t("ковош", "kovóś", :linebreak => true)
+      %th= t("нецево", "necevó", :linebreak => true)
+      %th= t("неково", "nekovó", :linebreak => true)
+    %tr
+      %th D/I
+      %th= t("цемуш", "cemúś", :linebreak => true)
+      %th= t("комуш", "komúś", :linebreak => true)
+      %th= t("нецему", "necemú", :linebreak => true)
+      %th= t("некому", "nekomú", :linebreak => true)
+    %tr
+      %th Par.
+      %th= t("цевош", "cevóś", :linebreak => true)
+      %th= t("ковош", "kovóś", :linebreak => true)
+      %th= t("нецево", "necevó", :linebreak => true)
+      %th= t("неково", "nekovó", :linebreak => true)
+    %tr
+      %th Loc.
+      %th= t("цемеш", "cémeś", :linebreak => true)
+      %th= t("кемеш", "kémeś", :linebreak => true)
+      %th= t("нецем", "nécem", :linebreak => true)
+      %th= t("некем", "nékem", :linebreak => true)
+    %tr
+      %th Lat.
+      %th= t("цеш", "céś", :linebreak => true)
+      %th= t("кош", "kóś", :linebreak => true)
+      %th= t("нецой", "nécoi", :linebreak => true)
+      %th= t("нехой", "néhoi", :linebreak => true)
+  %p The indefinite and negative adverbs are formed the same way, but do not decline.
+  %table
+    %tr
+      %th
+      %th Indefinite
+      %th Negative
+    %tr
+      %th
+        куде
+        %br
+        “where?”
+      %td
+        = t("кудеш", "kudéś")
+        %br
+        “somewhere”
+      %td
+        = t("некуде", "nékude")
+        %br
+        “nowhere”
+    %tr
+      %th
+        куди
+        %br
+        “to where?”
+      %td
+        = t("кудиш", "kudíś")
+        %br
+        “to somewhere”
+      %td
+        = t("некуди", "nekúdi")
+        %br
+        “to nowhere”
+    %tr
+      %th
+        оскуд
+        %br
+        “from where?”
+      %td
+        = t("оскудаш", "oskúdaś")
+        %br
+        “from somewhere”
+      %td
+        = t("невоскуд", "nevoskúd")
+        %br
+        “from nowhere,
+        %br
+        not from anywhere”
+    %tr
+      %th
+        койда
+        %br
+        “when?”
+      %td
+        = t("кодаш", "kódaś")
+        %br
+        “at some time”
+      %td
+        = t("некойда", "nekóida")
+        %br
+        “never”
+    %tr
+      %th
+        како
+        %br
+        “how?”
+      %td
+        = t("какош", "kákoś")
+        %br
+        “somehow”
+      %td
+        = t("некако", "nékako")
+        %br
+        “by no means”
+  %p The negative adjective #{t "некаде", "nekadé"} “no kind of” is regular. The indefinite counterpart, #{t "каде-ш", "kadé-ś"} “some kind of”, is a little more complicated. The plain interrogative #{t "каде", "kadé"} is declined regularly, then the suffix #{t "-(е)ш", "-(e)ś"} is added to the end. Orthographically, it is separated from the adjective base with a hyphen. For example, the nominative indefinite and definite forms are:
+  %table
+    %tr
+      %th
+      %th M
+      %th N
+      %th F
+      %th Pl
+    %tr
+      %th Indefinite
+      %td= t("каде-ш", "kadé-ś", :linebreak => true)
+      %td= t("кадо-ш", "kadó-ś", :linebreak => true)
+      %td= t("када-ш", "kadá-ś", :linebreak => true)
+      %td= t("кади-ш", "kadí-ś", :linebreak => true)
+    %tr
+      %th Definite
+      %td= t("кадей-еш", "kadéi-eś", :linebreak => true)
+      %td= t("кадое-ш", "kadóie-ś", :linebreak => true)
+      %td= t("кадая-ш", "kadáia-ś", :linebreak => true)
+      %td= t("кадие-ш", "kadíje-ś", :linebreak => true)
+  %p #{t "Какове", "kákove"} does not have indefinite or negative forms. Those of #{t "каде", "kadé"} are used instead.
+
+= section "Determiners" do
+  %p Common determiners in Novegradian include #{t "вехе", "véhe"} “all”, #{t "многе", "mnóge"} “many, much”, #{t "кожне", "kóźne"} “each, every”, #{t "таде", "tadé"} “such”, #{t "видоре", "vidóre"} “other”, #{t "саме", "sáme"} “same”, and #{t "оба", "óba"} “both”.
+  %p Кожне, таде, видоре, and саме are all treated as normal adjectives. Многе, despite how it looks, is not an adjective and does not decline (although the form многие, borrowed from Russian and declined like a plural definite adjective, is used to mean “many people”); there is an adjective многе, but it means “multiple”. Оба is declined exactly the same way as the numeral дова “two”, including having a feminine form #{t "обѣ", "óbě"}. Вехе takes a pronominal declension like ше or мой, but with a very large number of irregularities:
+  %table
+    %tr
+      %th
+      %th M
+      %th N
+      %th F
+      %th Pl
+    %tr
+      %th Nom.
+      %td= t("вехе", "véhe", :linebreak => true)
+      %td= t("оғо", "oğó", :linebreak => true)
+      %td= t("оға", "oğá", :linebreak => true)
+      %td= t("вие", "vijé", :linebreak => true)
+    %tr
+      %th Gen.
+      %td= t("вихево", "vihevó", :linebreak => true)
+      %td= t("вихево", "vihevó", :linebreak => true)
+      %td= t("вией", "vijéi", :linebreak => true)
+      %td= t("виех", "vijéh", :linebreak => true)
+    %tr
+      %th Acc.
+      %td= t("вех", "véh", :linebreak => true)
+      %td= t("оғо", "oğó", :linebreak => true)
+      %td= t("оғу", "oğú", :linebreak => true)
+      %td= t("вие", "vijé", :linebreak => true)
+    %tr
+      %th D/I
+      %td= t("вехѣм", "véhěm", :linebreak => true)
+      %td= t("вехѣм", "véhěm", :linebreak => true)
+      %td= t("вией", "vijéi", :linebreak => true)
+      %td= t("виѣми", "vijě́mi", :linebreak => true)
+    %tr
+      %th Par.
+      %td= t("вихево", "vihevó", :linebreak => true)
+      %td= t("вихево", "vihevó", :linebreak => true)
+      %td= t("вией", "vijéi", :linebreak => true)
+      %td= t("виех", "vijéh", :linebreak => true)
+    %tr
+      %th Loc.
+      %td= t("вием", "vijém", :linebreak => true)
+      %td= t("вием", "vijém", :linebreak => true)
+      %td= t("вией", "vijéi", :linebreak => true)
+      %td= t("виех", "vijéh", :linebreak => true)
+    %tr
+      %th Lat.
+      %td= t("вех", "véh", :linebreak => true)
+      %td= t("оғо", "oğó", :linebreak => true)
+      %td= t("оғу", "oğú", :linebreak => true)
+      %td= t("вие", "vijé", :linebreak => true)
+  %p The first consonant varies between /β ~ Ø/, the root-internal vowel between /i ~ e ~ o/, and the second consonant between /x ~ γ ~ j/. The rules are basically as follows:
+  %ol
+    %li The vowel is /e/ when stressed, /i/ when unstressed and the following syllable contains a front vowel, and /o/ when unstressed and the following syllable contains a back vowel.
+    %li If the root-internal vowel is /o/, the first consonant is zero. If the vowel is anything else, the first consonant is /β/.
+    %li If the syllable immediately after the root is unstressed, the root-final consonant is /x/. If the syllable is stressed and contains a back vowel, the root-final consonant is /γ/. If it is stressed and contains a front vowel, the root-final consonant is /j/.
+  %p The neuter form, #{t "оғо", "oğó"}, can be used by itself as a pronoun to mean “everything”. The plural, #{t "вие", "vijé"}, can be used to mean “everyone”.
+
+= section "Correlatives Tables" do
+  %p The above information dealing with pro-forms and determiners, along with other minor classes of determiners, may be summarized in a series of correlatives tables.
+
+  - correlatives = { "Interrogative" => { :determiner => { :cyr => "котре", :lat => "kótre", :eng => "which?" },
+                                          :quality    => { :cyr => "каде", :lat => "kadé", :eng => "what kind?" },
+                                          :person     => { :cyr => "хой", :lat => "hói", :eng => "who?" },
+                                          :thing      => { :cyr => "цой", :lat => "cói", :eng => "what?" },
+                                          :place      => { :cyr => "куде", :lat => "kudé", :eng => "where?" },
+                                          :direction  => { :cyr => "куди", :lat => "kudí", :eng => "whither?" },
+                                          :origin     => { :cyr => "оскуд", :lat => "oskúd", :eng => "whence?" },
+                                          :time       => { :cyr => "койда", :lat => "kóida", :eng => "when?" },
+                                          :amount     => { :cyr => "колкѣ", :lat => "kólkě", :eng => "how much?" },
+                                          :way        => { :cyr => "како", :lat => "káko", :eng => "how?" },
+                                          :reason     => { :cyr => "зацем", :lat => "zácem", :eng => "why?" } },
+                     "Proximal"      => { :determiner => { :cyr => "ше", :lat => "śé", :eng => "this" },
+                                          :quality    => { :cyr => "таде", :lat => "tadé", :eng => "such" },
+                                          :person     => { :cyr => "ше", :lat => "śé", :eng => "this" },
+                                          :thing      => { :cyr => "ше", :lat => "śé", :eng => "this" },
+                                          :place      => { :cyr => "суде", :lat => "sudé", :eng => "here" },
+                                          :direction  => { :cyr => "суди", :lat => "sudí", :eng => "hither" },
+                                          :origin     => { :cyr => "оцуда", :lat => "ocúda", :eng => "hence" },
+                                          :time       => { :cyr => "соѕаса", :lat => "sodzása", :eng => "now" },
+                                          :amount     => { :cyr => "толкѣ", :lat => "tólkě", :eng => "this much" },
+                                          :way        => { :cyr => "тако", :lat => "táko", :eng => "this way, thus" } },
+                     "Distal"        => { :determiner => { :cyr => "ше", :lat => "śé", :eng => "that" },
+                                          :quality    => { :cyr => "таде", :lat => "tadé", :eng => "that kind" },
+                                          :person     => { :cyr => "ше", :lat => "śé", :eng => "that" },
+                                          :thing      => { :cyr => "ше", :lat => "śé", :eng => "that" },
+                                          :place      => { :cyr => "тамо", :lat => "támo", :eng => "there" },
+                                          :direction  => { :cyr => "туди", :lat => "tudí", :eng => "thither" },
+                                          :origin     => { :cyr => "остуда", :lat => "ostúda", :eng => "thence" },
+                                          :time       => { :cyr => "тойда", :lat => "tóida", :eng => "then" },
+                                          :amount     => { :cyr => "толкѣ", :lat => "tólkě", :eng => "that much" },
+                                          :way        => { :cyr => "тако", :lat => "táko", :eng => "that way" } } }
+  = render 'correlative_table', :alignment => 'left', :correlatives => correlatives
+
+  = section "Interrogative Forms" do
+    %p The interrogative forms have mostly been discussed already. They are the bases upon which a number of other correlatives are based. Almost all of them have a stem containing /k/, while all the others are derived from stems that once contained *k in Pre-Proto-Slavic. This -k-, therefore, is considered the primary marker of interrogatives, in much the same way  most English interrogatives contain “wh” or Latin interrogatives contain “qu”. Various other suffixes were then added to this interrogative base to achieve the variety of meanings now expressed. While clear traces of many of these derivations remain clear in the modern language, they have long since lost any semblence of productivity.
+
+  = section "Proximal Forms" do
+    %p Proximal forms have the basic meaning of “this”; that is, referencing something in close proximity to the speaker.
+    %p A few familiar forms appear in the table to the left, along with a few patterns that are beginning to emerge. The demonstrative #{t "ше", "śé"} “this”, in addition to its usual function as a proximal determiner, may also be used as a pronoun standing in for a person or thing. However, depending on context, “this person” or “this thing” can just as easily be represented using person pronouns, in particular the third person forms.
+    %p Several of the proximal adverbs are derived from their interrogative counterparts by replacing /k/ with /s/, specifically the three locative adverbs “here”, “hither/to here”, and “hence/from here” (although this is obscured in this last one due to the merger of a final prefixial *-t to a root-initial *s- in Common Slavic *otъ-sǫd-, giving modern /ts/). A few others instead replace /k/ with /t/ (таде, толкѣ, тако); this is strictly speaking a marker of the distal, but has spread to a number of the proximal forms as well when distinct proximal forms ceased to exist.
+    %p The word #{t "соѕаса", "sodzása"} “now” originally meant “with the time/hour”, although the Russian calque #{t "шеѕас", "śedzás"} (lit. “this hour”) exists in free variation.
+    %p No distinct form exists for “for this reason”; this must be expressed periphrastically, using an expression such as #{t "по шей приѕинѣ", "po śéi pridzíně"} (lit. “because of this reason”) or #{t "за шей приѕиной", "za śéi pridzínoi"} (lit. “for this reason, for the goal of this reason”).
+
+  = section "Distal Forms" do
+    %p The distal forms convey the basic meaning of “that”, referencing something located further away from the speaker, whether physically or metaphorically.
+    %p The dominant pattern seen here is the presence of /t/ where the interrogative forms had /k/. This sort of interrogative/proximal/distal K/S/T triplet is common in some form or another throughout the Indo-European family (cf. the English analogues <u>wh</u>ere/<u>h</u>ere/<u>th</u>ere, <u>wh</u>ence/<u>h</u>ence/<u>th</u>ence, <u>wh</u>en/Ø/<u>th</u>en, etc). While this pattern has been disrupted by sound change, it still does seem to have some analogical force<sup>5</sup>.
+    %p As before, the distal person and distal thing categories can also be represented using personal pronouns.
+    %p The distal place category breaks the otherwise strong K/S/T trend in locative adverbs. While the distal /t/ is present, it is attached to a different base than the others, an exception that seems to go back to Proto-Indo-European.
+    %p As before, the gap in the above table must be filled with a periphrastic expression such as по шей приѕинѣ. The “reason” category does not distinguish proximal and distal forms except when great emphasis is needed (e.g., truly distal #{t "по она приѕниѣ", "po oná pridzíně"} “for that reason [discussed quite a while previously]”.
+
+  - correlatives = { "Indefinite" => { :determiner => { :cyr => "нѣкотре", :lat => "ně́kotre", :eng => "some" },
+                                       :quality    => { :cyr => "каде-ш", :lat => "kadé-ś", :eng => "some kind of" },
+                                       :person     => { :cyr => "кош", :lat => "kóś", :eng => "someone" },
+                                       :thing      => { :cyr => "цеш", :lat => "céś", :eng => "something" },
+                                       :place      => { :cyr => "кудеш", :lat => "kudéś", :eng => "somewhere" },
+                                       :direction  => { :cyr => "кудиш", :lat => "kudíś", :eng => "to somewhere" },
+                                       :origin     => { :cyr => "оскудаш", :lat => "oskúdaś", :eng => "from somewhere" },
+                                       :time       => { :cyr => "кодаш", :lat => "kódaś", :eng => "sometime" },
+                                       :amount     => { :cyr => "нѣколкѣ", :lat => "ně́kolkě", :eng => "some amount" },
+                                       :way        => { :cyr => "какош", :lat => "kákoś", :eng => "somehow" } },
+                     "Negative"   => { :determiner => { :cyr => "не ше", :lat => "ne śé", :eng => "no" },
+                                       :quality    => { :cyr => "некаде", :lat => "nekadé", :eng => "no kind of" },
+                                       :person     => { :cyr => "нехой", :lat => "néhoi", :eng => "no one" },
+                                       :thing      => { :cyr => "нецой", :lat => "nécoi", :eng => "nothing" },
+                                       :place      => { :cyr => "некуде", :lat => "nékude", :eng => "nowhere" },
+                                       :direction  => { :cyr => "некуди", :lat => "nekúdi", :eng => "to nowhere" },
+                                       :origin     => { :cyr => "невоскуд", :lat => "nevoskúd", :eng => "from nowhere" },
+                                       :time       => { :cyr => "некойда", :lat => "nekóida", :eng => "never" },
+                                       :way        => { :cyr => "некако", :lat => "nékako", :eng => "no way" } },
+                     "Universal"  => { :determiner => { :cyr => "кожне", :lat => "kóźne", :eng => "every" },
+                                       :quality    => { :cyr => "веяде", :lat => "veiáde", :eng => "every kind" },
+                                       :person     => { :cyr => "вие", :lat => "vijé", :eng => "everyone" },
+                                       :thing      => { :cyr => "оғо", :lat => "oğó", :eng => "everything" },
+                                       :place      => { :cyr => "веходе", :lat => "vehodé", :eng => "everywhere" },
+                                       :time       => { :cyr => "вехода", :lat => "vehodá", :eng => "always" } } }
+  = render 'correlative_table', :alignment => "left", :correlatives => correlatives
+
+  = section "Indefinite Forms" do
+    %p The indefinite forms were for the most part discussed previously. Most of them are formed from the corresponding interrogative with the addition of -ш, which in the case of the “person”, “thing”, and “time” categories results in some minor alterations to the root, generally preserving an older form<sup>6</sup>.
+    %p The “determiner” and “amount” forms feature the prefix *ně-, which in Common Slavic was a common marker of indefiniteness, but in Novegradian gradually fell out of use and is now limited to just these two words.
+    %p The difference in meaning between the adjective нѣкотре “some” and the quantifier нѣколкѣ “some amount (of)” is rather subtle and will be explained in section 15.7. Very generally, the former represents a value that is determinate or fixed, but simple not mentioned, while the latter represents a value that is random or indeterminate.
+    %p The gap in the “reason” category can be filled using expressions such as #{t "по кадей-еш приѕинѣ", "po kadéi-eś pridzíně"} “for some reason (lit. “for some sort of reason”).
+  
+  = section "Negative Forms" do
+    %p The negative forms, as previously discussed, are generally formed by adding не- to the interrogative forms, sometimes causing shifts in stress toward the prefix. The “origin” form introduces an epenthetic /β/ to prevent hiatus.
+    %p The form #{t "некойда", "nekóida"} “never” is completely regular in the standard, though the form #{t "некода", "nékoda"} is a very widespread dialectical/poetic variant.
+    %p The negative determiner #{t "не ше", "ne śé"} “no [noun]” is always written as two words, though phonetically it acts as one—the particle не (always pronounced [nə]) and the declining demonstrative adjective: #{t "не ша дужа", "ne śá duźá"} “no person, not one person”<sup>7</sup>. The original Common Slavic *ni has been lost in Novegradian.
+    %p The negative amount gap can be filled with #{t "некадо сколицестуо", "nekadó skolícestuo"} “no [kind of] amount” or #{t "не ше сколицестуо", "ne śé skolícestuo"} “no amount”. The negative reason gap can be filled with #{t "по некадѣ приѕинѣ", "po nekadě́ pridzíně"} “for no reason”.
+  
+  = section "Universal Forms" do
+    %p The universal forms convey the basic sense of “all” or “every”—a totality.
+    %p The determiner category can be filled either by the adjective #{t "кожне", "kóźne"} “every” or the pronominal adjective #{t "вехе", "véhe"} “all”, depending on whether a distributive or total sense is needed.
+    %p The other single-word categories are filled by forms of вехе or derivatives of it. The “person” and “thing” categories use the plural and neuter declensions of вехе respectively. The forms #{t "веходе", "vehodé"} “everywhere” and #{t "вехода", "vehodá"} “always” come from вехе plus the base of the interrogative: вехода (#{abbrev 'CS'} form *vьхъ-gъda ← *vьxъ + *(kъ)-gъda, where the *kъ- is the same interrogative element found in most other interrogative words). The adjective of quality #{t "веяде", "veiáde"} “every kind” comes from “all” + (ка)де.
+    %p There is also the adverb #{t "веғаде", "veğáde"} “everywhere, all over”, with a similar meaning to веходе. The former implies more of a scattering, while the later suggests complete coverage.
+    %p All other categories are periphrastic. One of the more interesting constructions is #{t "на вие ходѣ", "na vijé hódě"} “to everywhere, in all directions”, a reanalysis of веходе as вехе “all” + ходе “direction”. Of course, a variety of other alternatives exist as well. The most common forms for each category are: #{t "на вие ходѣ", "na vijé hódě"} “in all directions” (direction), #{t "од виех ход", "od vijéh hód"} “from all directions” (origin), #{t "вие сколицестуа", "vijé skolicestuá"} “all amounts [of]”, #{t "виѣми позобам", "vijě́mi pozóbam"} “by all means” (way), #{t "по виех приѕинѣх", "po vijéh pridzíněh"} “for all reasons” (reason).
+   
+  - correlatives = { "Indeterminate" => { :determiner => { :cyr => "котре", :lat => "kótre", :eng => "any, whichever" },
+                                          :quality    => { :cyr => "каде-ко", :lat => "kadé-ko", :eng => "whatever kind" },
+                                          :person     => { :cyr => "хой-ко", :lat => "hói-ko", :eng => "whoever" },
+                                          :thing      => { :cyr => "цой-ко", :lat => "cói-ko", :eng => "whatever" },
+                                          :place      => { :cyr => "куде-ко", :lat => "kudé-ko", :eng => "wherever" },
+                                          :direction  => { :cyr => "куди-ко", :lat => "kudí-ko", :eng => "to wherever" },
+                                          :time       => { :cyr => "койда-ко", :lat => "kóida-ko", :eng => "whenever" },
+                                          :amount     => { :cyr => "колкѣ-ко", :lat => "kólkě-ko", :eng => "however much" },
+                                          :way        => { :cyr => "како-ко", :lat => "káko-ko", :eng => "however" } },
+                     "Deficient"     => { :determiner => { :cyr => "малокотре", :lat => "malokótre", :eng => "few" },
+                                          :person     => { :cyr => "малохой", :lat => "malohói", :eng => "few people" },
+                                          :thing      => { :cyr => "малоцой", :lat => "malocói", :eng => "few things" },
+                                          :place      => { :cyr => "малокуде", :lat => "malokudé", :eng => "in few places" },
+                                          :time       => { :cyr => "малокойда", :lat => "malokóida", :eng => "seldom" } } }
+  = render 'correlative_table', :alignment => "left", :correlatives => correlatives
+
+  = section "Indeterminate Forms" do
+    %p The indeterminate forms indicate, logically, the indeterminate nature of the item or quality in question, without regard to its exact identity or quantity. Its basic sense is like that of English “any”.
+    %p For most of the correlative categories, it is formed by suffixing #{t "-ко", "-ko"} to the interrogative form, in writing separated by a hyphen. In the case of declining forms like цой-ко, хой-ко, and каде-ко, the stem is fully declined first, and then the clitic is added, as was the case for the indefinite forms in -ш.
+    %p Colloquially, the clitic reduces to just -к, and the stress shifts to the vowel immediately before it: #{t "койда-к", "koidá-k"} “whenever”, #{t "како-к", "kakó-k"} “however”, #{t "ково-к", "kovó-k"} “whomever (#{abbrev 'acc'})”. However, the nominative forms хой-ко and цой-ко tend to retain the /o/, as well as any other form ending in a consonant.
+    %p Disregarding the contradictory name, there is also an indeterminate determiner; it is the adjective #{t "котре", "kótre"} without any clitic, previously seen as the interrogative “which?”.
+    %p The two gaps are most often filled by #{t "од котра мѣсту", "od kótra mě́stu"} “from any place” and #{t "по кадѣ-ко приѕинѣ", "po kadě́-ko pridzíně"} “for whatever kind of reason”.
+  
+  = section "Deficient Forms" do
+    %p The deficient forms suggest a lack of sufficient quantity, or more generally a small quantity, though not necessarily in a negative light.
+    %p All existing deficient correlatives are formed by prefixing #{t "мало-", "malo-"} to the interrogative stem. Otherwise they decline regularly.
+    %p Alternative phrasings are possible for all forms, most commonly using the adverb #{t "немноге", "nemnóge"} “not many, few” plus a noun: #{t "немноге луд", "nemnóge lúd"} “few people”. The gaps are almost always filled with немноге constructions: #{t "немноге род", "nemnóge ród"} “few kinds [of]”, #{t "од немноге мѣсот", "od nemnóge mě́sot"} “from few places”, etc.
+  
+  = section "Other Forms" do
+    %p A small number of other correlatives exist that do not fit neatly into the tables above, or else require a class all to themselves.
+    %p There is a single locative based on the stem <i>*ien-</i> (← #{abbrev 'CS'} *in- “other”): #{t "енде", "iendé"} “elsewhere, somewhere else”. This stem has a cognate adjective #{t "ене", "iéne"}, although it is no longer productive and is only found in the conjunction/preposition #{t "ене неж", "iéne neź"} “different from, unlike”. A second cognate adjective, #{t "енаке", "ienáke"} “another”, is similarly unproductive and is only found in a few fixed expressions (although its adverbial form #{t "енакѣ", "ienákě"} “otherwise” is quite common).
+    %p The adjective of universal quality #{t "веяде", "veiáde"} “every kind of” has a notable dialectical variant #{t "хаде", "hadé"}. This form, common throughout the Novegradian north and east, actually shares a common origin with веяде; both ultimately derive from Old Novegradian вьхаде. Хаде is not accepted in formal writing, but is very common in speech in these areas.
+    %p Novegradian also frequently makes use of rhyming compounds based on the proximal and distal forms of various correlatives to indicate a sort of random universality or widespread distribution. These are more dependent on keeping up the S~T pattern than using actual correlatives, so such “compounds” make use of a number of nonce words: #{t "суде-туде", "sudé-tudé"} “here and there”, #{t "суди-туди", "sudí-tudí"} “hither and thither, back and forth”, #{t "оцуда-остуда", "ocúda-ostúda"} “hence and thence, from all over”, #{t "сойда-тойда", "sóida-tóida"} “now and then, occasionally”, and #{t "солкѣ-толкѣ", "sólkě-tólkě"} “a random amount, a jumble”. These are all acceptable in the standard language, though none of the nonce forms are allowed in isolation.
+
+= section "Relative Pronouns" do
+  %p There are two sorts of relative constructions in use in Novegradian.
+  %p When the relative clause is pegged to a noun, there are two relative adjectives that may be used: #{t "котре", "kótre"} and #{t "какове", "kákove"}. The former links a relative clause specifically to the noun it modifies (e.g., “This is the book that I do not like”). The latter links the relative clause to a quality of the noun it modifies, or to the class it forms a part of (e.g., “This is the book, the type of which I do not like”/”This is the kind of book I don’t like”). Both decline as regular adjectives, agreeing in gender and number with the noun they modify, but in case with the noun’s position in the relative clause.
+  %p However, when there is no noun to subordinate the clause to (e.g., “I know that he’s coming tomorrow” or “Remember who helped you”), a different construction must be used. Here the relativizer consists of two parts: a form of #{t "то", "tó"}, declined according to its function in the main clause, and a relative pronoun (generally цой or хой), declined according to its function in the subclause. То declines using just the neuter and plural pronominal endings, identical to то when used as a personal pronoun, except with animacy distinguished in the accusative.
+  %table
+    %tr
+      %th
+      %th Sg
+      %th Pl
+    %tr
+      %th Nom.
+      %td= t("то", "tó", :linebreak => true)
+      %td= t("ти", "tí", :linebreak => true)
+    %tr
+      %th Gen.
+      %td= t("тово", "tovó", :linebreak => true)
+      %td= t("тѣх", "tě́h", :linebreak => true)
+    %tr
+      %th
+        Acc.
+        %br
+        (#{abbrev 'anim'})
+      %td= t("тово", "tovó", :linebreak => true)
+      %td= t("тѣх", "tě́h", :linebreak => true)
+    %tr
+      %th
+        Acc.
+        %br
+        (#{abbrev 'inan'})
+      %td= t("то", "tó", :linebreak => true)
+      %td= t("ти", "tí", :linebreak => true)
+    %tr
+      %th D/I
+      %td= t("тѣм", "tě́m", :linebreak => true)
+      %td= t("тѣми", "tě́mi", :linebreak => true)
+    %tr
+      %th Par.
+      %td= t("тово", "tovó", :linebreak => true)
+      %td= t("тѣх", "tě́h", :linebreak => true)
+    %tr
+      %th Loc.
+      %td= t("том", "tóm", :linebreak => true)
+      %td= t("тѣх", "tě́h", :linebreak => true)
+    %tr
+      %th Lat.
+      %td= t("то", "tó", :linebreak => true)
+      %td= t("ти", "tí", :linebreak => true)
+  %p These are then followed immediately by a form of цой/хой. Note that if these pronouns are supposed to appear in the nominative (which they most frequently are), they appear as #{t "це", "ce"} or #{t "ко", "ko"}, respectively, because the (historical) <i>-to-</i> element in them drops. The two halves of the relativizer are written as one word, hyphenated: #{t "тѣх-ко", "tě́h-ko"} “those.#{abbrev 'gen'}-who.#{abbrev 'nom'}”.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The distinct neuter singular form #{t "оно", "onó"} is sometimes seen in older texts, but is now considered archaic.
+%p 2) This is one of relatively few cases where a very colloquial feature gains currency in the written standard. Formal Novegradian, due to its historical ties with literary Russian, has long been reluctant to accept non-Slavic features such as a distinct class of pronouns that have evolved to a point where the older, etymological spelling is wholly out of date. The acceptance of the absolute pronouns has been aided by their strongly discourse-connected function; they are, therefore, rarely seen in formal writing, but extremely common in informal writing, which tends to much more closely reflect speech anyways. The rarity of their use in formal contexts and the gradual loss of the pronunciation reflected in the old spelling system has resulted in the effective takeover of the new forms.
+%p 3) Despite their appearance, the nominative forms do descend from #{abbrev 'CS'} *čьto and *kъto, the same source as Russian что and кто, rather than unsuffixed pronouns. Sound changes eventually caused the loss of the distinctive /t/ suffix: чьто → цто → цо → цой, къто → хто → хо → хой.
+%p 4) From Old Novegradian каге (cf. Russian какой), with /g/ → /d/ by dissimilation.
+%p 5) For instance, the word #{t "суде", "sudé"} “here” is a Novegradian innovation based on #{t "куде", "kudé"} “where?”, the K/S/T pattern, and influence from other words such as #{t "оцуда", "ocúda"} “hence/from here”. Had this word developed regularly from Common Slavic *sьde, it would have appeared in Novegradian as #{t "**шиде", "śidé"} (cf. Russian где “where?”, здесь “here”).
+%p 6) In the case of цой “what?” and хой “who?”, no *-to element was added in Common Slavic; the interrogative stems descend from CS *čьto, *kъto, while the indefinite stems descend from CS *čь-, *kъ- more directly. The yod in койда “when?” results from the lenition of ON *коғда, and was lost in the indefinite form for prosodic reasons.
+%p 7) Due to the pronunciation, in informal writing imitating speech this construction is usually written as a single word and with the letter А: #{t "наша дужа", "naśá duźá"}. This is little risk of confusion with the possessive adjective наш because the possessive adjectives in general are very rarely used in speech. Therefore, in the written standard, “no person” is не ша дужа while “our person” is наша дужа, while colloquially “no person” is наша дужа and “our person” is дужа о нас (semiformal) or дужа онас (informal).
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
