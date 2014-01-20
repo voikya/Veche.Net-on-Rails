@@ -1,0 +1,1804 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Словотуорекьая морпољогя"
+
+= render :partial => 'navigation'
+
+%p Derivational morphology is a very important class of word-formation dealing with the actual process of creating new lexical items. Whereas most of the morphology thus far discussed concerns taking existing words and modifying them by adding affixes to a stem, derivational morphology describes where these stems come from in the first place.
+%p Throughout this section, affixes and other processes will be described as being either productive or unproductive. Productive processes are those which are still actively at work in the language, that could potentially be applied to many new roots and all speakers would immediately understand the novel meaning of the result. One of the most productive derivational affixes in modern English is -ness, which serves to nominalize an adjective. An unproductive process was likely once able to generate new words, but no longer can; it merely appears as a relic on a number of words, often with a somewhat unclear distribution across words and function. An English example might be -end, seen in words such as “reverend” and “dividend”, but which is virtually useless in terms of coining new expressions.
+
+= section "Sources of New Words" do
+  = section "Creation" do
+    %p The most basic method of word creation is to create a new root from scratch. This is also one of the rarest methods, because new words are rarely made up without any prior base except for onomatopoeia: #{t "жиже", "źíźe"} “buzz”, #{t "яве", "iáve"} “woof”. These can then be put through the same internal derivation processes any other roots can, yielding related forms such as #{t "жижати", "źiźáti"} “buzz” and #{t "явати", "iávati"} “yap, chatter”.
+    %p If the onomatopoeia happens to have an appropriate phonetic structure, part of the word can be reanalyzed as an ending, the most common examples being found in nursery words: #{t "мама", "máma"} “mother” and #{t "тата", "táta"} “father”, both of which have been reanalyzed as first declension nouns with the roots *мам- and *тат-.
+
+  = section "Borrowing" do
+    %p As the speakers of Novegradian travelled and came in contact with speakers of other languages, they frequently borrowed commonly-used vocabulary, technical terminology, local names for unknown items and new inventions, and local idioms. Some of the primary sources for new loans include Russian, Finnish, Komi, Swedish, French, German, and English.
+
+    = section "Russian and Other Slavic Languages" do
+      %p Of all the Slavic languages, Novegradian has had the most contact with Russian, and Russian still has significant usage in some parts of the Republic of Novegrad. When couplets appear, the Russian one usually has become more specialized in meaning, although it is not necessarily any more or less formal than the Novegradian equivalent. Common patterns in Russian loans is the pattern CoroC/ColoC/CereC/CeleC (where C represents any consonant) where Novegradian has CraC/ClaC/CreC/CleC, the use of Ё and Е where Novegradian and Е and Ѣ respectively, and the presence of historical palatalized consonants where Novegradian has none.
+      %table
+        %tr
+          %th Novegradian
+          %th Meaning
+          %th Russian Loan
+          %th Meaning
+        %tr
+          %td= t("граде", "gráde")
+          %td city
+          %td= t("городе", "górode")
+          %td downtown
+        %tr
+          %td= t("куѣте", "kuě́te")
+          %td color
+          %td= t("цуете", "cuéte")
+          %td tint, shade
+        %tr
+          %td= t("гуѣзда", "guě́zda")
+          %td star
+          %td= t("зуезда", "zuezdá")
+          %td celebrity
+        %tr
+          %td= t("плайкьи", "pláikji")
+          %td cry
+          %td= t("плакати", "plákati")
+          %td mourn
+        %tr
+          %td= t("злате", "zláte")
+          %td golden
+          %td= t("золоте", "zólote")
+          %td richly-decorated
+        %tr
+          %td= t("брѣге", "brě́ge")
+          %td beach
+          %td= t("береге", "bérege")
+          %td shore
+        %tr
+          %td= t("кониге", "kónige")
+          %td king
+          %td= t("кеняжи", "keniáźi")
+          %td prince
+      %p Loans from other languages sometimes pass through Russian first. This is especially true of Church Slavonic, which Russian borrowed many religious terms from which were then in turn borrowed by Novegradian: #{t "воскрезати", "voskrezáti"} “resurrect”, #{t "соборе", "sobóre"} “cathedral”, #{t "Пасха", "Pashá"} “Pascha (Easter)”, #{t "вечерня", "večérnia"} “vespers”, #{t "иконостасе", "ikonostáse"} “ikonostasis”.
+
+    = section "The Uralic and Baltic Languages" do
+      %p As the Republic expanded, many speakers of local languages came under the rule of Novegrad and began an exchange of vocabulary. The primary contributors to Novegradian vocabulary have been Finnish, Karelian, and Komi, with more limited influence from Nenets, Saami, Estonian, Lithuanian, and Latvian.
+      %p The types of words borrowed tend to vary widely. From Karelian and Komi came a number of terms relating to hunting, fishing, and high-latitude forces, as well as many terms for natural phenomena. From Finnish came some of the same, as well as many terms for animals, plants, and nautical terminology. The Baltic languages were the source of some terms dealing with trade. In more recent years Komi and Finnish have once again become major contributors to colloquial speech.
+      %table
+        %tr
+          %th{:colspan => 2} Komi Loans
+        %tr
+          %td
+            = t("аття", "attiá")
+            %br
+            “thanks”
+          %td
+            = t("баля", "bália")
+            %br
+            “lamb”
+        %tr
+          %td
+            = t("вадя", "vádia")
+            %br
+            “swamp”
+          %td
+            = t("ѕоре", "dzóre")
+            %br
+            “crash, crackle”
+        %tr
+          %td
+            = t("куламе", "kúlame")
+            %br
+            “net”
+          %td
+            = t("сортасе", "sortáse")
+            %br
+            “kindling”
+        %tr
+          %td
+            = t("сутда", "sutda")
+            %br
+            “floor (of a house)”
+          %td
+            = t("травеше", "travéśe")
+            %br
+            “useless labor”
+        %tr
+          %td
+            = t("цеве", "céve")
+            %br
+            “empty field, clearing”
+          %td
+            = t("юва", "iúva")
+            %br
+            “(drinking) water”
+      %table
+        %tr
+          %th{:colspan => 2} Finnish Loans
+        %tr
+          %td
+            = t("вѣне", "vě́ne")
+            %br
+            “boat”
+          %td
+            = t("каля", "kália")
+            %br
+            “fish”
+        %tr
+          %td
+            = t("коске", "kóske")
+            %br
+            “rapids”
+          %td
+            = t("лейра", "léira")
+            %br
+            “camp”
+        %tr
+          %td
+            = t("мурайшеке", "muráiśeke")
+            %br
+            “cloudberry”
+          %td
+            = t("нѣда", "ně́da")
+            %br
+            “marten”
+        %tr
+          %td
+            = t("пиғоке", "piğóke")
+            %br
+            “sap”
+          %td
+            = t("сарене", "sárene")
+            %br
+            “(small) island”
+        %tr
+          %td
+            = t("шелга", "śélga")
+            %br
+            “ridge”
+          %td
+            = t("юрке", "iúrke")
+            %br
+            “vertical, plumb”
+
+    = section "French, German, and Swedish" do
+      %p The majority of loans from Swedish, German, and French entered Novegradian after 1600 AD, and largely consist of technical and scientific terminology, as well as other words for things common in the West. French functioned briefly as a prestige language among the nobility in Novegrad, but not as many loans entered everyday language as in Russian. However, other French and German loans did enter Novegradian by way of Russian, primarily in the 19th and 20th centuries.
+      %table
+        %tr
+          %th{:colspan => 2} French Loans
+        %tr
+          %td
+            = t("аваря", "avária")
+            %br
+            “accident”
+          %td
+            = t("адресе", "adrése")
+            %br
+            “address”
+        %tr
+          %td
+            = t("гараже", "garáźe")
+            %br
+            “garage”
+          %td
+            = t("демокрася", "demokrásia")
+            %br
+            “democracy”
+        %tr
+          %td
+            = t("душе", "dúśe")
+            %br
+            “shower”
+          %td
+            = t("езампла", "iezámpla")
+            %br
+            “example”
+        %tr
+          %td
+            = t("едаже", "iedáźe")
+            %br
+            “story (of a building)”
+          %td
+            = t("кавѐ", "kavé")
+            %br
+            “café”
+        %tr
+          %td
+            = t("килограме", "kilográme")
+            %br
+            “kilogram”
+          %td
+            = t("оранже", "oránźe")
+            %br
+            “orange (fruit)”
+      %table
+        %tr
+          %th{:colspan => 2} German Loans
+        %tr
+          %td
+            = t("аутека", "autéka")
+            %br
+            “pharmacy”
+          %td
+            = t("аутобусе", "áutobuse")
+            %br
+            “bus”
+        %tr
+          %td
+            = t("генераље", "generáłe")
+            %br
+            “general”
+          %td
+            = t("идѣя", "idě́ia")
+            %br
+            “idea”
+        %tr
+          %td
+            = t("милидаре", "milidáre")
+            %br
+            “military”
+          %td
+            = t("ругзаке", "rugzáke")
+            %br
+            “backpack”
+        %tr
+          %td
+            = t("сољдате", "sółdate")
+            %br
+            “soldier”
+          %td
+            = t("танцати", "tancáti")
+            %br
+            “dance”
+        %tr
+          %td
+            = t("турма", "túrma")
+            %br
+            “tower”
+          %td
+            = t("универсидате", "universidáte")
+            %br
+            “university”
+
+    = section "English" do
+      %p English has been the primary source of loans in the 20th century, mostly having to do with technology, food, and modern conveniences.
+      %table
+        %tr
+          %th{:colspan => 2} English Loans
+        %tr
+          %td
+            = t("вутбоље", "vutbółe")
+            %br
+            “football”
+          %td
+            = t("еропорте", "ieropórte")
+            %br
+            “airport”
+        %tr
+          %td
+            = t("интѣрнете", "intěrnéte")
+            %br
+            “internet”
+          %td
+            = t("ковѐ", "kóve")
+            %br
+            “coffee”
+        %tr
+          %td
+            = t("командовати", "komandováti")
+            %br
+            “to command”
+          %td
+            = t("компютре", "kompiútre")
+            %br
+            “computer”
+        %tr
+          %td
+            = t("радиё", "rádijo")
+            %br
+            “radio”
+          %td
+            = t("рекорде", "rekórde")
+            %br
+            “record”
+        %tr
+          %td
+            = t("такси", "táksi")
+            %br
+            “taxi”
+          %td
+            = t("телевоне", "televóne")
+            %br
+            “telephone”
+
+  = section "Calquing" do
+    %p Novegradians have long been proud of their language, and often have turned to calques or partial calques instead of loans when it is possible to decompose the foreign word. Many such cases have since become the only accepted forms and have outcompeted their original loaned counterparts, such as #{t "неборѣзе", "neborě́ze"} “skyscraper” or #{t "вуисопанти", "vuisopánti"} “highway”<sup>1</sup> (both English calques, where #{t "скайскрейпре", "skaiskréipre"} and #{t "хайвее", "haivéie"} have fallen into disuse). Others exist in free variation with the loan word, such as #{t "презуоне", "prezuóne"} “telephone” alongside #{t "телевоне", "televóne"}.
+    %p Doublets often form with terms of scientific studies, for example, where both a foreign and native word exist, although the latter does not necessarily have to be a calque of the first.
+    %table
+      %tr
+        %th Native
+        %th Loaned
+        %th Meaning
+      %tr
+        %td= t("лизиковѣденье", "lizikovědénje", :linebreak => true)
+        %td= t("лингуистике", "linguístike", :linebreak => true)
+        %td linguistics
+      %tr
+        %td= t("живовѣденье", "źivovědénje", :linebreak => true)
+        %td= t("биёлогя", "bijológia", :linebreak => true)
+        %td biology
+      %tr
+        %td= t("жемловѣденье", "źemlovědénje", :linebreak => true)
+        %td= t("геёлогя", "geiológia", :linebreak => true)
+        %td geology
+      %tr
+        %td= t("вѣровѣденье", "věrovědénje", :linebreak => true)
+        %td= t("теёлогя", "teiológia", :linebreak => true)
+        %td theology
+
+  = section "Internal Derivation" do
+    %p Finally, the last method of word creation involves using the complex derivational morphology present in Novegradian. This is the primary method of vocabulary expansion and the focus of the rest of this section.
+
+= section "Suffixial Derivation" do
+  = section "Nominalization" do
+    = section "People from Nouns" do
+      %p Certain suffixes added to nouns indicate a person connected in some way to that noun, most often a resident (if a place) or a practitioner of a trade (if a noun connected to an occupation). These suffixes generally have both a masculine and feminine form, with the masculine one used for mixed or unknown groups.
+      %p The suffixes #{t "-(е)це", "-(e)ce"} (#{abbrev 'masc'}) or #{t "-(и)ца", "-(i)ca"} (#{abbrev 'fem'}) attached to a place name indicate someone from that place. This is most frequently used with city names and indefinite geographic terms, and less commonly with country and region names.
+      - headers = ["Word", "Meaning", :arrow, "Person", "Meaning"]
+      - words = [ [ { :cyr => "Новеграде", :lat => "Novegráde" },
+                    "Novegrad (city)",
+                    :arrow,
+                    [ { :cyr => "новеградеце", :lat => "novegrádece" }, { :cyr => "новеградица", :lat => "novegrádica" } ],
+                    "Novegradian" ],
+                  [ { :cyr => "Москуа", :lat => "Moskuá" },
+                    "Moscow",
+                    :arrow,
+                    [ { :cyr => "москоуце", :lat => "moskóuce" }, { :cyr => "москоуца", :lat => "moskóuca" } ],
+                    "Muscovite" ],
+                  [ { :cyr => "шѣвере", :lat => "śě́vere" },
+                    "north",
+                    :arrow,
+                    [ { :cyr => "шѣверце", :lat => "śě́verce" }, { :cyr => "шѣверца", :lat => "śě́verca" } ],
+                    "northerner" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p With country and region names, the suffix #{t "-ѣнинe", "-ě́nine"} (with the irregular declension, as described earlier) is used. It is highly productive and causes mutation in the consonant before the suffix, if possible. If the stem ends in vowel + /j/, however, the result can be unpredictable; sometimes another consonant will be inserted, and at other times the /j/ remains in place. All of these forms are epicene, meaning they can agree with either gender as appropriate without an overt morphological change.
+      - words = [ [ { :cyr => "Новеграде", :lat => "Novegráde" },
+                    "Novegrad",
+                    :arrow,
+                    { :cyr => "новеграгьѣнине", :lat => "novegragjě́nine" },
+                    "Novegradian" ],
+                  [ { :cyr => "Норуегя", :lat => "Noruégia" },
+                    "Norway",
+                    :arrow,
+                    { :cyr => "норуежѣнине", :lat => "norueźě́nine" },
+                    "Norwegian" ],
+                  [ { :cyr => "Англия", :lat => "Ánglija" },
+                    "England",
+                    :arrow,
+                    { :cyr => "англиѕѣнине", :lat => "anglidzě́nine" },
+                    "English(man)" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p Adding #{t "-нике/-ника", "-nike/-nika"}, #{t "-аке/-ака", "-ake/-aka"}, #{t "-аре/-ара", "-are/-ara"}, or #{t "-цике/-цика", "-cike/-cika"} to a noun usually creates a practitioner of a trade related to the base.
+      - words = [ [ { :cyr => "нига", :lat => "níga" },
+                    "book",
+                    :arrow,
+                    { :cyr => "нигаре/а", :lat => "nigáre(a)" },
+                    "bookkeeper" ],
+                  [ { :cyr => "такси", :lat => "táksi" },
+                    "taxi",
+                    :arrow,
+                    { :cyr => "таксияре/а", :lat => "taksijáre(a)" },
+                    "taxi driver" ],
+                  [ { :cyr => "месо", :lat => "méso" },
+                    "meat",
+                    :arrow,
+                    { :cyr => "меснике/а", :lat => "mésnike(a)" },
+                    "butcher" ],
+                  [ { :cyr => "политика", :lat => "polítika" },
+                    "politics",
+                    :arrow,
+                    { :cyr => "политинике/а", :lat => "politínike(a)" },
+                    "politician" ],
+                  [ { :cyr => "море", :lat => "móre" },
+                    "sea",
+                    :arrow,
+                    { :cyr => "мораке/а", :lat => "moráke(a)" },
+                    "sailor" ],
+                  [ { :cyr => "трамвае", :lat => "tramváie" },
+                    "streetcar",
+                    :arrow,
+                    { :cyr => "трамвайцике/а", :lat => "tramváicike(a)" },
+                    "streetcar worker" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-(е)це/-(и)ца", "-(e)ce/-(i)ca"} can also form professions from a tool.
+      - words = [ [ { :cyr => "тоборе", :lat => "tobóre" },
+                    "axe",
+                    :arrow,
+                    { :cyr => "тоборце/а", :lat => "tobórce(a)" },
+                    "axeman" ],
+                  [ { :cyr => "стрѣла", :lat => "strělá" },
+                    "arrow",
+                    :arrow,
+                    { :cyr => "стрѣлце/а", :lat => "strě́lce(a)" },
+                    "archer" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p A profession may be formed from a compound noun denoting some sort of field ending in the gerundive #{t "-нье", "-nje"} by simply dropping that ending. The feminine equivalent is formed by then adding -(и)ца.
+      - words = [ [ { :cyr => "жемловѣденье", :lat => "źemlovědénje" },
+                    "geology",
+                    :arrow,
+                    [ { :cyr => "жемловѣде", :lat => "źemlově́de" }, { :cyr => "жемловѣдица", :lat => "źemlově́dica" } ],
+                    "geologist" ],
+                  [ { :cyr => "нигопизанье", :lat => "nigopizánje" },
+                    "bookwriting",
+                    :arrow,
+                    [ { :cyr => "нигописе", :lat => "nigopíse" }, { :cyr => "нигописца", :lat => "nigopísca" } ],
+                    "bookwriter, author" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-(и)ца", "-(i)ca"} may be used to form a feminine noun from a masculine noun with no feminine equivalent, usually foreign borrowings: #{t "ауторе", "autóre"} “author” → #{t "ауторца", "autórca"}.
+      %p Although not a native suffix, it should be noted that the agentive suffix #{t "-исте", "-iste"} forms its feminine counterpart with #{t "-иска", "-iska"}, the result of the simplification of an earlier *ист-ка: #{t "артисте", "artíste"} “(male) artist” → #{t "артиска", "artíska"} “female artist”.
+
+    = section "Nouns from Other Nouns" do
+      %p The suffixes #{t "-нике/-ника", "-nike/-nika"} can be used for inanimate objects as well, indicating something often used together with the base. -Нике is used when the base is masculine or neuter, and -ника if it is feminine.
+      - headers = [ "Word", "Meaning", :arrow, "Noun", "Meaning" ]
+      - words = [ [ { :cyr => "цае", :lat => "cáie" },
+                    "tea",
+                    :arrow,
+                    { :cyr => "цайнике", :lat => "cáinike" },
+                    "teapot" ],
+                  [ { :cyr => "соли", :lat => "sóli" },
+                    "salt",
+                    :arrow,
+                    { :cyr => "солника", :lat => "sólnika" },
+                    "salt shaker" ],
+                  [ { :cyr => "гажета", :lat => "gaźéta" },
+                    "newspaper",
+                    :arrow,
+                    { :cyr => "гажетника", :lat => "gaźétnika" },
+                    "newspaper rack" ],
+                  [ { :cyr => "бенжине", :lat => "benźíne" },
+                    "gasoline",
+                    :arrow,
+                    { :cyr => "бенжиннике", :lat => "benźínnike" },
+                    "gas pump" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-ина", "-ina"} has a singulative function, used to create singular nouns from collective nouns or nouns that otherwise lack a singular. It is in origin the feminine counterpart to #{t "-ине", "-ine"}, as is seen in the #{t "-ѣнинe", "-ě́nine"} suffix denoting nationality described earlier. It is also used fairly productively to make singular nouns out of collectives with the #{t "-ия", "-ija"} suffix, though note the spelling.
+      - words = [ [ { :cyr => "грахе", :lat => "gráhe" },
+                    "peas",
+                    :arrow,
+                    { :cyr => "грашина", :lat => "gráśina" },
+                    "pea" ],
+                  [ { :cyr => "луди", :lat => "lúdi" },
+                    "people",
+                    :arrow,
+                    { :cyr => "лудина", :lat => "lúdina" },
+                    "human being" ],
+                  [ { :cyr => "грозне", :lat => "grózne" },
+                    "grapes",
+                    :arrow,
+                    { :cyr => "грознина", :lat => "gróznina" },
+                    "grape" ],
+                  [ { :cyr => "бѣлия", :lat => "bělijá" },
+                    "sheets, linens",
+                    :arrow,
+                    { :cyr => "бѣлеина", :lat => "bě́ljina" },
+                    "sheet, linen" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-(е)стуо", "-(e)stuo"} attached to a noun indicates “the state of being X” (cf. English -hood, -ship) or “the organization composed of X” (cf. -dom, -ment). If the noun ends in the agentive suffix #{t "-ителе", "-ítele"}, it is replaced by the suffix #{t "-я", "-ia"}. Mutations can occur.
+      - words = [ [ { :cyr => "царе", :lat => "cáre" },
+                    "tsar",
+                    :arrow,
+                    { :cyr => "царестуо", :lat => "cárestuo" },
+                    "kingdom, tsardom" ],
+                  [ { :cyr => "боғе", :lat => "bóğe" },
+                    "god",
+                    :arrow,
+                    { :cyr => "божестуо", :lat => "bóźestuo" },
+                    "godhood" ],
+                  [ { :cyr => "правителе", :lat => "pravítele" },
+                    "ruler",
+                    :arrow,
+                    { :cyr => "правястуо", :lat => "práviastuo" },
+                    "government" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffixes #{t "-ике", "-ike"} (#{abbrev 'masc'}), #{t "-ка", "-ka"} (#{abbrev 'fem'}), and #{t "-ко", "-ko"} (#{abbrev 'neut'}) are in origin diminutives that have acquired a new, fixed meaning. They keep the gender of the noun they were derived from. Mutations frequently occur. In addition, with the feminine and neuter endings only, any /o/ in the preceding syllable shifts to /a/.
+      - words = [ [ { :cyr => "граде", :lat => "gráde" },
+                    "city",
+                    :arrow,
+                    { :cyr => "градике", :lat => "grádike" },
+                    "town" ],
+                  [ { :cyr => "велке", :lat => "vélke" },
+                    "wolf",
+                    :arrow,
+                    { :cyr => "велцике", :lat => "vélcike" },
+                    "wolf pup" ],
+                  [ { :cyr => "гуѣзда", :lat => "guě́zda" },
+                    "star",
+                    :arrow,
+                    { :cyr => "гуѣжка", :lat => "guě́źka" },
+                    "bright point of light" ],
+                  [ { :cyr => "нига", :lat => "níga" },
+                    "book",
+                    :arrow,
+                    { :cyr => "нижка", :lat => "níźka" },
+                    "booklet" ],
+                  [ { :cyr => "море", :lat => "móre" },
+                    "sea",
+                    :arrow,
+                    { :cyr => "марко", :lat => "márko" },
+                    "bay" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p Some nouns lack a true plural form, and instead form their “plurals” using the collective suffix <i>-ij-a</i>. In Old Novegradian these collectives were grammatically singular and neuter, though in modern Novegradian are plural. Small vowel alterations can be triggered due to stress changes, as in the case of вагле “coal” below.
+      - words = [ [ { :cyr => "листе", :lat => "líste" },
+                    "leaf",
+                    :arrow,
+                    { :cyr => "листия", :lat => "listijá" },
+                    "leaves, foliage" ],
+                  [ { :cyr => "куѣте", :lat => "kuě́te" },
+                    "flower, color",
+                    :arrow,
+                    { :cyr => "куѣтия", :lat => "kuětijá" },
+                    "flowers" ],
+                  [ { :cyr => "дрѣво", :lat => "drě́vo" },
+                    "tree, wood",
+                    :arrow,
+                    { :cyr => "дрѣвия", :lat => "drěvijá" },
+                    "timber, lumber" ],
+                  [ { :cyr => "вагле", :lat => "vágle" },
+                    "[a] coal",
+                    :arrow,
+                    { :cyr => "вуглия", :lat => "vuglijá" },
+                    "coal" ],
+                  [ { :cyr => "каме", :lat => "káme" },
+                    "stone",
+                    :arrow,
+                    { :cyr => "камния", :lat => "kamnijá" },
+                    "stones" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p Some nouns have both a true plural and a collective plural, with slightly different meanings. Compare, for instance, plural листи “pages, sheets of paper” and collective листия “leaves, foliage”.
+      - headers = [ "Word", "Meaning", :arrow, "Plural Sense", "Collective Sense" ]
+      - words = [ [ { :cyr => "листе", :lat => "líste" },
+                    "leaf",
+                    :arrow,
+                    "pages, sheets",
+                    "leaves, foliage" ],
+                  [ { :cyr => "куѣте", :lat => "kuě́te" },
+                    "flower, color",
+                    :arrow,
+                    "colors",
+                    "flowers" ],
+                  [ { :cyr => "дрѣво", :lat => "drě́vo" },
+                    "tree, wood",
+                    :arrow,
+                    "trees",
+                    "timber, lumber" ],
+                  [ { :cyr => "вагле", :lat => "vágle" },
+                    "[a] coal",
+                    :arrow,
+                    "[multiple] coals",
+                    "coal" ],
+                  [ { :cyr => "каме", :lat => "káme" },
+                    "stone",
+                    :arrow,
+                    "[multiple, countable] stones",
+                    "[uncountable] stones" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-ишкьа", "-iśkja"} added to fruits and vegetables mark a place where that fruit or vegetable is grown. It is limited to fruits well known in the Novegradian-speaking region for the last several hundred years; terms such as #{t "ананасишкьа", "ananásiśkja"} “pineapple plantation” tend to be ironic or playful. Seemingly irregular forms such as яблонишкьа below actually derive from the name of the tree, rather than the name of the fruit (#{t "яблоньа", "iablónja"} “apple tree”).
+      - headers = [ "Word", "Meaning", :arrow, "Noun", "Meaning" ]
+      - words = [ [ { :cyr => "яблоко", :lat => "iábloko" },
+                    "apple",
+                    :arrow,
+                    { :cyr => "яблонишкьа", :lat => "iablóniśkja" },
+                    "apple orchard" ],
+                  [ { :cyr => "грозне", :lat => "grózne" },
+                    "grapes",
+                    :arrow,
+                    { :cyr => "грознишкьа", :lat => "grózniśkja" },
+                    "vineyard" ],
+                  [ { :cyr => "ягода", :lat => "iágoda" },
+                    "berry",
+                    :arrow,
+                    { :cyr => "ягодишкьа", :lat => "iágodiśkja" },
+                    "berry field" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "People from Adjectives" do
+      %p The suffixes -(е)це (#{abbrev 'masc'}) and -(и)ца (#{abbrev 'fem'}) are used to create words for people displaying the qualities of the base adjective.
+      - headers = [ "Word", "Meaning", :arrow, "Person", "Meaning" ]
+      - words = [ [ { :cyr => "старе", :lat => "stáre" },
+                    "old",
+                    :arrow,
+                    { :cyr => "старце/а", :lat => "stárce(a)" },
+                    "old man/woman" ],
+                  [ { :cyr => "вайке", :lat => "váike" },
+                    "difficult, trying",
+                    :arrow,
+                    { :cyr => "вайкеце/ица", :lat => "váikece(ica)" },
+                    "difficult person" ],
+                  [ { :cyr => "жољте", :lat => "źółte" },
+                    "yellow",
+                    :arrow,
+                    { :cyr => "жољтеце/ица", :lat => "źółtece(ica)" },
+                    "sickly person" ],
+                  [ { :cyr => "вайгове", :lat => "vaigóve" },
+                    "strong",
+                    :arrow,
+                    { :cyr => "вайгоуце/а", :lat => "vaigóuce(a)" },
+                    "strong person" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The pejorative suffixes #{t "-охе/-оха", "-ohe/-oha"} and #{t "-ухце/-уха", "-uhece/-uha"} are frequently used instead on bases with a negative connotation.
+      - words = [ [ { :cyr => "старе", :lat => "stáre" },
+                    "old",
+                    :arrow,
+                    { :cyr => "старухце/уха", :lat => "starúxce(uha)" },
+                    "old coot" ],
+                  [ { :cyr => "дурне", :lat => "dúrne" },
+                    "foolish",
+                    :arrow,
+                    { :cyr => "дурнохе/а", :lat => "durnóxe(a)" },
+                    "fool" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "Nouns from Adjectives" do
+      %p There are a number of endings for deriving abstract nouns from adjectives, each relating in some way to what the adjective is describing. The ending #{t "-ости/-ности", "-osti/-nosti"} is default.
+      - headers = [ "Word", "Meaning", :arrow, "Noun", "Meaning" ]
+      - words = [ [ { :cyr => "бѣле", :lat => "bě́le" },
+                    "white",
+                    :arrow,
+                    { :cyr => "бѣлости", :lat => "bě́losti" },
+                    "whiteness" ],
+                  [ { :cyr => "шилне", :lat => "śílne" },
+                    "strong-willed",
+                    :arrow,
+                    { :cyr => "шилности", :lat => "śílnosti" },
+                    "strength" ],
+                  [ { :cyr => "красне", :lat => "krásne" },
+                    "beautiful",
+                    :arrow,
+                    { :cyr => "красности", :lat => "krásnosti" },
+                    "beauty" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p Note that when derived from an imperfective active participle, the participial ending -кь- becomes -т- (i.e., it depalatalizes) before the ending -ности: #{t "самостоекье", "samostoiékje"} “independent” (lit. “self-standing”) → #{t "самостоетности", "samostoiétnosti"} “independence”.
+      %p The suffix #{t "-ота", "-ota"} describes a physical aspect.
+      - words = [ [ { :cyr => "вуисе", :lat => "vuíse" },
+                    "high",
+                    :arrow,
+                    { :cyr => "вуизота", :lat => "vuizóta" },
+                    "height" ],
+                  [ { :cyr => "(при)глубе", :lat => "priglúbe" },
+                    "deep",
+                    :arrow,
+                    { :cyr => "глубота", :lat => "glubóta" },
+                    "depth" ],
+                  [ { :cyr => "преме", :lat => "préme" },
+                    "straight",
+                    :arrow,
+                    { :cyr => "примота", :lat => "primóta" },
+                    "straightness" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The stressed ending #{t "-ия", "-ijá"} derives from an older collective form and means “a collection of things that are X” (or, less commonly, “thing that is X”, though it remains morphologically plural).
+      - words = [ [ { :cyr => "бѣле", :lat => "bě́le" },
+                    "white",
+                    :arrow,
+                    { :cyr => "бѣлия", :lat => "bělijá" },
+                    "whites, sheets" ],
+                  [ { :cyr => "близе", :lat => "blíze" },
+                    "close",
+                    :arrow,
+                    { :cyr => "близия", :lat => "blizijá" },
+                    "relatives" ],
+                  [ { :cyr => "остре", :lat => "óstre" },
+                    "sharp",
+                    :arrow,
+                    { :cyr => "острия", :lat => "ostrijá" },
+                    "blade, cutting edge" ],
+                  [ { :cyr => "страве", :lat => "stráve" },
+                    "healthy",
+                    :arrow,
+                    { :cyr => "стравия", :lat => "stravijá" },
+                    "health" ],
+                  [ { :cyr => "боғате", :lat => "boğáte" },
+                    "wealthy",
+                    :arrow,
+                    { :cyr => "сбожия", :lat => "sboźijá" },
+                    "wealth" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The last two of the above, страве and боғате, use the collective suffix to form a simple nominalization. These are historically compounds, the former related to дрѣво “tree” and the latter to боғе “God”.
+      %p The suffixes #{t "-(о)те", "-(o)te"} (#{abbrev 'masc'}), #{t "-ата", "-ata"} (#{abbrev 'fem'}), and #{t "-ото", "-oto"} (#{abbrev 'neut'}) form nouns that display the quality of the adjective, both animate and inanimate. They are derived from the adjective modifying a declining form of the old demonstrative #{t "то", "to"} “that” that have since been reanalyzed as regular nouns: #{t "красноте", "krásnote"} “handsome man”, #{t "красната", "krásnata"} “beautiful woman”.
+
+    = section "People from Verbs" do
+      %p A person can be derived from a verb stem using the same sort of endings nouns use: -(е)це/-(и)ца and (less commonly) -аре/-ара, as well as the suffixes #{t "-теле/-делика", "-tele/-délika"} and the more colloquial #{t "-исе/-иска", "-ise/-iska"} (from Komi).
+      - headers = [ "Word", "Meaning", :arrow, "Person", "Meaning" ]
+      - words = [ [ { :cyr => "ледѣти", :lat => "ledě́ti" },
+                    "fly",
+                    :arrow,
+                    { :cyr => "ледеце/ица", :lat => "ledéce(íca)" },
+                    "pilot" ],
+                  [ { :cyr => "торгати", :lat => "torgáti" },
+                    "sell",
+                    :arrow,
+                    { :cyr => "торгеце/ица", :lat => "torgéce(íca)" },
+                    "trader" ],
+                  [ { :cyr => "ковати", :lat => "kóvati" },
+                    "forge",
+                    :arrow,
+                    { :cyr => "коваре/а", :lat => "kováre(a)" },
+                    "blacksmith" ],
+                  [ { :cyr => "оѕити", :lat => "odzíti" },
+                    "teach",
+                    :arrow,
+                    { :cyr => "оѕителе/делика", :lat => "odzítele(délika)" },
+                    "teacher" ],
+                  [ { :cyr => "пизати", :lat => "pizáti" },
+                    "write",
+                    :arrow,
+                    { :cyr => "пизателе/делика", :lat => "pizátele(délika)" },
+                    "writer" ],
+                  [ { :cyr => "пити", :lat => "píti" },
+                    "drink",
+                    :arrow,
+                    { :cyr => "пивисе/ка", :lat => "pivíse(ka)" },
+                    "frequent drinker (#{abbrev 'sl'})" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "Nouns from Verbs" do
+      %p Using a verb stem alone, with no ending, creates a noun associated with the verb, although the sense of the nominalization varies dramatically from verb to verb. Both perfective and imperfective verbs may be used.
+      - headers = [ "Word", "Meaning", :arrow, "Noun", "Meaning" ]
+      - words = [ [ { :cyr => "воходити", :lat => "vohodíti" },
+                    "go in, enter",
+                    :arrow,
+                    { :cyr => "воходе", :lat => "vóhode" },
+                    "entrance" ],
+                  [ { :cyr => "видѣти", :lat => "víděti" },
+                    "see",
+                    :arrow,
+                    { :cyr => "виде", :lat => "víde" },
+                    "view" ],
+                  [ { :cyr => "овидѣти", :lat => "ovíděti" },
+                    "see (#{abbrev 'pf'})",
+                    :arrow,
+                    { :cyr => "овиде", :lat => "óvide" },
+                    "glance" ],
+                  [ { :cyr => "вожити", :lat => "voźíti" },
+                    "transport",
+                    :arrow,
+                    { :cyr => "возе", :lat => "vóze" },
+                    "automobile, car" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p There is a tendency, though not an absolute one, to stress any verbal prefixes, such as <i>о-</i> and <i>vo-</i> above.
+      %p Resultatives are generally formed the same way, although can only be formed from perfective verbs. The endings theme vowel + #{t "-нье", "-nje"} or #{t "-ни", "-ni"} will sometimes be seen for collective resultatives, but are no longer productive.
+      - words = [ [ { :cyr => "напизати", :lat => "napizáti" },
+                    "write (#{abbrev 'pf'})",
+                    :arrow,
+                    { :cyr => "написе", :lat => "nápise" },
+                    "letter, note" ],
+                  [ { :cyr => "пойскати", :lat => "poiskáti" },
+                    "search (#{abbrev 'pf'})",
+                    :arrow,
+                    { :cyr => "поиске", :lat => "pójiske" },
+                    "search" ],
+                  [ { :cyr => "содати", :lat => "sodáti" },
+                    "give (#{abbrev 'pf'})",
+                    :arrow,
+                    { :cyr => "содани", :lat => "sódani" },
+                    "tribute" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p A few nominalizations are simply irregular: #{t "лубити", "lubíti"} “love” → #{t "лубова", "lubóva"} “love”<sup>2</sup>, #{t "пѣти", "pě́ti"} → #{t "пѣшне", "pě́śne"} “song”<sup>3</sup>, #{t "жити", "źíti"} “live” → #{t "житени", "źíteni"} “life”<sup>4</sup>.
+      %p There are many suffixes used for turning a verb into an abstract noun. The most common is the gerundive #{t "-нье", "-nje"} (formed identically to the perfective participle, but with -нь- instead of -н-). Less common are #{t "-а", "-a"} and #{t "-ба", "-ba"}.
+      - words = [ [ { :cyr => "цидати", :lat => "cidáti" },
+                    "read",
+                    :arrow,
+                    { :cyr => "циданье", :lat => "cidánje" },
+                    "reading" ],
+                  [ { :cyr => "рѣѕити", :lat => "rědzíti" },
+                    "say, read aloud",
+                    :arrow,
+                    { :cyr => "рѣѕенье", :lat => "rědzénje" },
+                    "[faculty of] speech" ],
+                  [ { :cyr => "видѣти", :lat => "víděti" },
+                    "see",
+                    :arrow,
+                    { :cyr => "виденье", :lat => "vidénje" },
+                    "[sense of] vision" ],
+                  [ { :cyr => "вѣcти", :lat => "vě́sti" },
+                    "know",
+                    :arrow,
+                    { :cyr => "вѣденье", :lat => "vědénje" },
+                    "knowledge" ],
+                  [ { :cyr => "бѣгати", :lat => "bě́gati" },
+                    "run",
+                    :arrow,
+                    { :cyr => "бѣга", :lat => "běgá" },
+                    "running, flight" ],
+                  [ { :cyr => "традити", :lat => "tradíti" },
+                    "lose",
+                    :arrow,
+                    { :cyr => "трада", :lat => "tradá" },
+                    "loss" ],
+                  [ { :cyr => "служити", :lat => "sluźíti" },
+                    "serve",
+                    :arrow,
+                    { :cyr => "служба", :lat => "slúźba" },
+                    "service" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p Verbs that form their perfective participles with -т- rather than -н- form gerundives with -кь- instead of -нь-: #{t "накрити", "nakríti"} “serve (a meal)” → #{t "накрикье", "nakríkje"} “course (of a meal)”.
+      %p The suffix #{t "-ти", "-ti"} is a non-productive nominalizer historically related to the infinitive ending. Such nouns are often similar to or identical to the infinitives of the verbs from which they are derived. Verbs whose roots end in /k g/ take the suffix #{t "-кьи", "-kji"} as in the infinitive, but without the preceding glide.
+      - words = [ [ { :cyr => "вѣcти", :lat => "vě́sti" },
+                    "know",
+                    :arrow,
+                    { :cyr => "вѣcти", :lat => "vě́sti" },
+                    "piece of news" ],
+                  [ { :cyr => "владѣти", :lat => "vladě́ti" },
+                    "own, control",
+                    :arrow,
+                    { :cyr => "власти", :lat => "vlásti" },
+                    "authority, rule" ],
+                  [ { :cyr => "мерети", :lat => "meréti" },
+                    "die",
+                    :arrow,
+                    { :cyr => "сморти", :lat => "smórti" },
+                    "death" ],
+                  [ { :cyr => "пейкьи", :lat => "péikji" },
+                    "bake",
+                    :arrow,
+                    { :cyr => "пекьи", :lat => "pékji" },
+                    "oven" ],
+                  [ { :cyr => "помойкьи", :lat => "pomóikji" },
+                    "help",
+                    :arrow,
+                    { :cyr => "помокьи", :lat => "pómokji" },
+                    "help, assistance" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The endings #{t "-оке", "-oke"}, #{t "-гло", "-glo"}, and #{t "-ане", "-áne"} turn a verb into some sort of tool or instrument used to perform that action. #{t "-Ане", "-áne"} also frequently derives nouns from other nouns.
+      - words = [ [ { :cyr => "рѣзати", :lat => "rězáti" },
+                    "cut",
+                    :arrow,
+                    { :cyr => "рѣзоке", :lat => "rězóke" },
+                    "saw, blade" ],
+                  [ { :cyr => "правити", :lat => "práviti" },
+                    "govern, rule",
+                    :arrow,
+                    { :cyr => "правигло", :lat => "práviglo" },
+                    "rule" ],
+                  [ { :cyr => "муити", :lat => "muíti" },
+                    "wash",
+                    :arrow,
+                    { :cyr => "муигло", :lat => "muíglo" },
+                    "soap" ],
+                  [ { :cyr => "пити", :lat => "píti" },
+                    "drink",
+                    :arrow,
+                    { :cyr => "пиване", :lat => "piváne" },
+                    "drinking glass" ],
+                  [ { :cyr => "юва", :lat => "iúva" },
+                    "[drinking] water",
+                    :arrow,
+                    { :cyr => "юване", :lat => "iuváne" },
+                    "water bottle" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The endings #{t "-иша", "-iśa"} and #{t "-ишкье", "-iśkje"} (#{abbrev 'neut'}) mark the location where something takes place. The latter is limited to open spaces, but less common and not predictable.
+      - words = [ [ { :cyr => "класти", :lat => "klásti" },
+                    "bury",
+                    :arrow,
+                    { :cyr => "кладиша", :lat => "kládiśa" },
+                    "cemetary, graveyard" ],
+                  [ { :cyr => "вуислати", :lat => "vuisláti" },
+                    "send forth",
+                    :arrow,
+                    { :cyr => "вуисланиша", :lat => "vuislániśa" },
+                    "embassy" ],
+                  [ { :cyr => "ледѣти", :lat => "ledě́ti" },
+                    "fly",
+                    :arrow,
+                    { :cyr => "ледиша", :lat => "lédiśa" },
+                    "airfield" ],
+                  [ { :cyr => "еграти", :lat => "iegráti" },
+                    "play",
+                    :arrow,
+                    { :cyr => "егришкье", :lat => "iegríśkje" },
+                    "playground" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-лньа", "-lnja"}, added to the past-tense stem of a verb, is similar to the above, but most commonly derives names of rooms. If the past tense is irregular, generally this form will be irregular as well (cf. ѣдалньа below, past tense ѣгле).
+      - words = [ [ { :cyr => "кубати", :lat => "kubáti" },
+                    "bathe",
+                    :arrow,
+                    { :cyr => "кубалньа", :lat => "kubálnja" },
+                    "bathroom" ],
+                  [ { :cyr => "спати", :lat => "spáti" },
+                    "sleep",
+                    :arrow,
+                    { :cyr => "спалньа", :lat => "spálnja" },
+                    "bedroom" ],
+                  [ { :cyr => "(за)цегати", :lat => "zacegáti" },
+                    "wait for",
+                    :arrow,
+                    { :cyr => "цегалньа", :lat => "cegálnja" },
+                    "waiting room" ],
+                  [ { :cyr => "ѣсти", :lat => "iě́sti" },
+                    "eat",
+                    :arrow,
+                    { :cyr => "ѣдалньа", :lat => "iědálnja" },
+                    "dining room" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "Nouns from Phrases" do
+      %p The suffix #{t "-ка", "-ka"} is sometimes used to turn common multi-word expressions into a single noun. Such nouns tend to appear in the plural. Sometimes they are also limited to set expressions, as in the case of the second example below.
+      - headers = [ "Phrase", "Meaning", :arrow, "Noun/Idiom", "Meaning" ]
+      - words = [ [ { :cyr => "не вѣм", :lat => "ne vě́m" },
+                    "I don't know",
+                    :arrow,
+                    { :cyr => "невѣмки", :lat => "nevě́mki" },
+                    "I-don't-knows" ],
+                  [ { :cyr => "о мене", :lat => "o mené" },
+                    "I have",
+                    :arrow,
+                    { :cyr => "нет в оменекѣх", :lat => "nét v omenékěh" },
+                    "not on someone,<br>not in someone's possession" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "Diminutives and Pejoratives" do
+      %p Diminutives in Novegradian, as in other Slavic languages, are used very frequently. However, their formation can be quite complicated.
+      %p The most basic suffixes are #{t "-ике", "-ike"} (#{abbrev 'masc'}), #{t "-ка", "-ka"} (#{abbrev 'fem'}), and #{t "-ко", "-ko"} (#{abbrev 'neut'}), preserving the original gender of the noun. These cause palatalization of the last consonant of the stem if it ends in a velar consonant, or lenition if it otherwise ends in a plosive. If the vowel preceding the feminine or neuter endings is /o/, it becomes /a/ in the diminutive.
+      %p However, there are many alternative forms, to the point that any word can have multiple diminutive forms, sometimes even five or more. Frequent variants include doubling (#{t "-ишике, -ишка, -ишко", "-iśike, -iśka, -iśko"}) or even tripling (#{t "-ишицеке, -ишицка, -ишицко", "-iśiceke, -iśicka, -iśicko"}), an /n/ suffix (#{t "-ене, -ена, -ено", "-ene, -ena, -eno"}), an /sʲ/ (i#{t "-еше, -еша, -ешо", "-eśe, -eśa, eśo"}), other vowel variants (#{t "-еке, -оке", "-eke, -oke"}), and numerous combinations of the above.
+      %p Pejoratives are easier to form, though still not entirely regular. They are created using the suffixes #{t "-охе/-оха", "-ohe/-oha"}, #{t "-ахе/-аха", "-ahe/-aha"}, and #{t "-ухе/-уха", "-uhe/-uha"}. The suffixes do not correspond to gender. When used with a noun that ends in -(е)це/-(и)ца, however, the pejorative must be placed before these agenitive suffixes.
+      %p Note that these forms are distinct from those used for personal names, although there is some overlap.
+    
+    = section "Foreign Suffixes" do
+      %p A number of foreign suffixes from Western European languages have entered Novegradian starting from around the 18th century, and have gained varying levels of productivity.
+      %p The most productive foreign suffix is #{t "-аця", "-acia"} or #{t "-ася", "-asia"}, equivalent to English -tion. The former was the original form (borrowed from German or Polish) and the latter a later one (borrowed from Swedish and perhaps influenced by French), though colloquially more and more nouns in -аця are switching to -ася, which better fits Novegradian phonotactics. Along with -аця is #{t "-изме", "-izme"}, equivalent to English -ism.
+      %p Less common suffixes include the agenitives #{t "-исте", "-iste"} (cf. English -ist), #{t "-оре", "-ore"} (cf. English -or), #{t "-аре", "-are"} (cf. English -arian), and #{t "-аже", "-aźe"} (cf. English -age, from French).
+      %table
+        %tr
+          %th Suffix
+          %th Example
+          %th Meaning
+        %tr
+          %td= t("-аця", "-acia", :linebreak => true)
+          %td= t("стаця", "stácia", :linebreak => true)
+          %td station
+        %tr
+          %td= t("-ася", "-asia", :linebreak => true)
+          %td= t("инвормася", "invormásia", :linebreak => true)
+          %td information
+        %tr
+          %td= t("-изме", "-izme", :linebreak => true)
+          %td= t("комунизме", "komunízme", :linebreak => true)
+          %td communism
+        %tr
+          %td= t("-исте", "-iste", :linebreak => true)
+          %td= t("юристе", "iuríste", :linebreak => true)
+          %td lawyer
+        %tr
+          %td= t("-оре", "-ore", :linebreak => true)
+          %td= t("емпираторе", "iempirátore", :linebreak => true)
+          %td emperor
+        %tr
+          %td= t("-аре", "-are", :linebreak => true)
+          %td= t("ветеринаре", "veterináre", :linebreak => true)
+          %td veterinarian
+        %tr
+          %td= t("-аже", "-aźe", :linebreak => true)
+          %td= t("персонаже", "personáźe", :linebreak => true)
+          %td personage, character
+
+  = section "Adjectivalization" do
+    = section "Adjectives from Nouns" do
+      %p The two most common adjective types in Novegradian are those formed with the #{t "-н-", "-n-"} suffix and those formed with the #{t "-ск-", "-sk-"} suffix.
+      %p Н-suffix forms are usually relative (non-comparable), but can frequently be qualitative (comparable) as well. They generally mean ‘possessing the qualities of X’. This and other suffixes are added to the noun stem, adding an epenthetic vowel if needed, and then declined with normal adjective endings. The last consonant of the root is prone to mutation if it is a velar consonant.
+      - headers = [ "Word", "Meaning", :arrow, "Adjective", "Meaning" ]
+      - words = [ [ { :cyr => "велке", :lat => "vélke" },
+                    "wolf",
+                    :arrow,
+                    { :cyr => "велцене", :lat => "vélcene" },
+                    "lupine" ],
+                  [ { :cyr => "дрѣво", :lat => "drě́vo" },
+                    "tree, wood",
+                    :arrow,
+                    { :cyr => "дрѣвне", :lat => "drě́vne" },
+                    "wooden" ],
+                  [ { :cyr => "боғе", :lat => "bóğe" },
+                    "god",
+                    :arrow,
+                    { :cyr => "божне", :lat => "bóźne" },
+                    "god(like)" ],
+                  [ { :cyr => "граде", :lat => "gráde" },
+                    "city",
+                    :arrow,
+                    { :cyr => "градне", :lat => "grádne" },
+                    "urban" ],
+                  [ { :cyr => "стаље", :lat => "stáłe" },
+                    "steel",
+                    :arrow,
+                    { :cyr => "стаљне", :lat => "stáłne" },
+                    "steel" ],
+                  [ { :cyr => "нокьи", :lat => "nókji" },
+                    "night",
+                    :arrow,
+                    { :cyr => "нокне", :lat => "nókne" },
+                    "night(time),<br>nocturnal" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The behavior of root-final /c/ before the adjectival -н- is somewhat complex. If it derives from an historical *kt, it becomes /k/: #{t "нокьи", "nókji"} “night” (Common Slavic *noktь) → #{t "нокне", "nókne"} “night(time)”. If it derives from an historical *tj, it becomes /t/: #{t "тишикьа", "tíśikja"} “thousand” (Common Slavic *tysętja) → #{t "тишитне", "tíśitne"} “thousandth”. Root-final /ɟ/ always becomes /d/ since it always falls into this second class. The palatal fricatives /ç/ and /ʝ/ are unaffected, however.
+      %p Ск-suffix forms are almost always relative, and are used most often to turn a place name into an adjective. This is the most productive form of adjective derivation.
+      - words = [ [ { :cyr => "Новеграде", :lat => "Novegráde" },
+                    "Novegrad",
+                    :arrow,
+                    { :cyr => "новеградеске", :lat => "novegrádeske" },
+                    "Novegradian" ],
+                  [ { :cyr => "Германя", :lat => "Germánia" },
+                    "Germany",
+                    :arrow,
+                    { :cyr => "германеске", :lat => "germáneske" },
+                    "German" ],
+                  [ { :cyr => "Кидае", :lat => "Kidáie" },
+                    "China",
+                    :arrow,
+                    { :cyr => "кидайске", :lat => "kidáiske" },
+                    "Chinese" ],
+                  [ { :cyr => "Англия", :lat => "Ánglija" },
+                    "England",
+                    :arrow,
+                    { :cyr => "английске", :lat => "английске" },
+                    "English" ],
+                  [ { :cyr => "Нева", :lat => "Nevá" },
+                    "Nevá (river)",
+                    :arrow,
+                    { :cyr => "неуске", :lat => "néuske" },
+                    "of the Nevá" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The definite suffixes <i>-skei</i>/<i>-skoie</i>/<i>-skaia</i> are often used in place names.
+      %p It is not always predictable what will happen to the final consonant or vowel of a noun when the -ск- suffix is added. This is highly dependent on both the ending of the noun and when the adjective form first appeared in the language.
+      %p For first declension nouns, there are two options. Most commonly, /e/ is inserted between the root and the suffix, with no palatalization: #{t "Вољга", "Vółga"} “Volga” → #{t "вољгеске", "vółgeske"}. Many other nouns, however, use the older suffix <i>-ine-</i>, again with no palatalization: #{t "Вишера", "Víśera"} “Víśera” → #{t "вишеринеске", "viśeríneske"}. This form is most common for adjectivalizing local place names. For this reason, overuse of <i>-ine-</i> tends to sound “rustic”.
+      %p Second declension nouns, however, almost universally use <i>-ine-</i>: #{t "Вагря", "Vágria"} “Hungary” → #{t "огринеске", "ogríneske"}. Apparent exceptions, such as #{t "сумеске", "súmeske"} for “Finnish” when “Finland” is #{t "Сумя", "Súmia"}, are usually not directly related. In this case, the example is derived from an older name for Finland, #{t "Суме", "Súme"}.
+      %p Third and fourth declension nouns can basically be divided into three phases, based on when the adjective first came into use. The oldest words (roughly prior to 1100 AD) generally add /e/ to the root and show no palatalization: #{t "Новеграде", "Novegráde"} “Novegrad” → #{t "новеградеске", "novegrádeske"}. Middle period nouns (roughly 1100 to 1800) use the /e/ suffix as well, but the root ends in /t d k g x/, they will generally palatalize: #{t "Цахя", "Cáhia"} “Czech [Republic]” → #{t "цашеске", "cáśeske"}. This is largely due to Russian and Church Slavonic influence. New period nouns (roughly post 1800) have returned to the original system of /e/ without palatalization: #{t "Ираке", "Iráke"} “Iraq” → #{t "иракеске", "irákeske"}.
+      %p Fifth declension nouns almost always use the /e/ suffix without palatalization: #{t "Дони", "Dóni"} “Denmark” → #{t "донеске", "dóneske"}. However, sometimes the connecting suffix is /i/, but this is rare and usually a regionalism.
+      %p There are no sixth declension nouns that take the -ск- suffix.
+      %p However, there are certain root-final consonants that trigger exceptions to the above rules, no matter the declension of the noun:
+      %ul
+        %li /j/: Roots ending in /j/ have no connecting morpheme between the root and the -ск- suffix: #{t "Кидае", "Kidáie"} “China” → #{t "кидайске", "kidáiske"}.
+        %li /ij/: Roots ending in /ij/ follow the same rule as above, but orthographic -ий- is usually just pronounced /i/ (or colloquially, /aj/): #{t "Англия", "Ánglija"} → #{t "английске", "anglíjske"}.
+        %li /β/: Root-final /β/ almost always reduces to /w/ with no connecting morpheme: #{t "Нева", "Nevá"} → #{t "неуске", "néuske"}.
+        %li /s/: Roots ending in /s/ generally have no connecting morpheme. Orthographic -сс- is pronounced simply as /s/: #{t "Пруся", "Prúsia"} “Prussia” → #{t "прусске", "prússke"}. There is some variation here, however: second declension nouns whose roots end in /s/ sometimes may still take <i>-ine-</i> (and #{t "прузинеске", "pruzíneske"} for “Prussian” may be seen in a number of place names).
+      %p A small set of nouns can take an adjective ending without any suffix (e.g., #{t "злато", "zláto"} “gold” → #{t "злате", "zláte"} “golden”), but this is relatively uncommon unless there is some sort of prefix involved as well.
+      %p The endings #{t "-ов-", "-ov-"} and #{t "-оу-н-", "-oun-"}, derived from the old genitive ending still seen in the partitive plural, form relative adjectives (cf. English -ic, -al). Note that fourth declension bases will generally take #{t "-ев-", "-ev-"} and #{t "-еу-н-", "-eun-"} instead.
+      %p #{t "-ив-", "-iv-"} forms qualitative adjectives, and carries roughly the same meaning as English -ful. #{t "-аљ-н-", "-ałn-"} (from English -al) is generally only found in loanwords. #{t "-ице-ск-", "-icesk-"} and the reduced form #{t "-е-ск-", "-esk-"} are used when the root ends in /s z ts dz/ derive from a combination of English -ic with the Slavic <i>-sk-</i>, but have since spread to almost any abstract noun ending in -(и)я by analogy, even if the English equivalent never had -ic (e.g., “information” below).
+      - words = [ [ { :cyr => "лизике", :lat => "lizíke" },
+                    "language",
+                    :arrow,
+                    { :cyr => "лизикеве", :lat => "lizíkeve" },
+                    "linguistic" ],
+                  [ { :cyr => "небесо", :lat => "nébeso" },
+                    "sky",
+                    :arrow,
+                    { :cyr => "небезоуне", :lat => "nebezóune" },
+                    "celestial" ],
+                  [ { :cyr => "вѣра", :lat => "vě́ra" },
+                    "faith",
+                    :arrow,
+                    { :cyr => "вѣриве", :lat => "věríve" },
+                    "faithful" ],
+                  [ { :cyr => "сцестия", :lat => "scestijá" },
+                    "luck",
+                    :arrow,
+                    { :cyr => "сцестиве", :lat => "scéstive" },
+                    "lucky" ],
+                  [ { :cyr => "центре", :lat => "céntre" },
+                    "center",
+                    :arrow,
+                    { :cyr => "центраљне", :lat => "centráłne" },
+                    "central" ],
+                  [ { :cyr => "хедерася", :lat => "hederásia" },
+                    "federation",
+                    :arrow,
+                    { :cyr => "хедераљне", :lat => "hederáłne" },
+                    "federal" ],
+                  [ { :cyr => "исторя", :lat => "istória" },
+                    "history",
+                    :arrow,
+                    { :cyr => "историцеске", :lat => "istoríceske" },
+                    "historical" ],
+                  [ { :cyr => "инвормася", :lat => "invormásia" },
+                    "information",
+                    :arrow,
+                    { :cyr => "инвормасеске", :lat => "invormáseske" },
+                    "informational" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+      %p The suffix #{t "-ив-", "-iv-"} is also used productively to derive adjectives from abstract nominals that end in -ости: #{t "милости", "mílosti"} “mercy” → #{t "милостиве", "milóstive"} “merciful, gracious”.
+      %p The suffix #{t "-ист-", "-íst-"} means “full of”, but more literally than -ив-. It is somewhat literary, however, having been more or less completely replaced by the prefix #{t "много-", "mnogo-"}, described later: #{t "гора", "góra"} “mountain” → #{t "гористе", "goríste"} “mountainous”.
+      %p The suffixes #{t "-ат-", "-át-"} and #{t "-овит-", "-ovit-"} are a non-productive means of making adjectives out of concrete nominals. They are only found on a handful of words, such as #{t "роге", "róge"} “horn” → #{t "рогате", "rogáte"} “horned”, or #{t "плоде", "plóde"} “fruit, offspring” → #{t "плодовите", "plodovíte"} “fruitful, currently producing a great quantity of fruit”.
+      %p The suffix #{t "-оват-", "-ovát-"} weakens an adjective, meaning “rather X” or “X-ish”: #{t "шинье", "śínje"} “blue” → #{t "шиньовате", "śinjováte"} “bluish”.
+      %p The suffix #{t "-осн-", "-osn-"}, of Komi origin, means “covered/coated/spattered with X”: #{t "крев", "krév"} “blood” → #{t "кревосне", "krevósne"} “blood-spattered”, #{t "цервене", "cérvene"} “red” → #{t "цервеносне", "cervenósne"} “spotty red”.
+      %p The suffix #{t "-ѣн-", "-ěn-"} means “made of”, and is attached to bases of various materials: #{t "лене", "léne"} “flax” → #{t "ленѣне", "léněne"} “linen”, #{t "мѣди", "mě́di"} “copper (noun)” → #{t "мѣдѣне", "mě́děne"} “copper (#{abbrev 'adj'})”.
+      %p The suffix #{t "-ушн-", "-uśn-"} is a pejorative, forming adjectives with negative connotations from nouns. It is historically related to the nominal pejorative suffix -ух-, but can be applied to nouns that never take this suffix as well: #{t "клапе", "klápe"} “boy” → #{t "клапушне", "hlapúśne"} “boyish”, #{t "дѣвушка", "dě́vuśka"} “girl” → #{t "дѣвушне", "děvúśne"} “girlish”, #{t "старце", "stárce"} “old man” → #{t "старушне", "starúśne"} “senile”, #{t "суиньа", "suínja"} “wild pig” → #{t "суиньушне", "suinjúśne"} “piggish”.
+      %p The prefix #{t "бес-", "bes-"} means “without”, much like the English suffix -less. Note that when it is added to adjectives with the <i>-n-</i> suffix, they generally tend to switch to the <i>-ov-</i>/<i>-ev-</i> suffix: #{t "соунце", "sóunce"} “sun” → #{t "солнецне", "solnécne"} “sunny” → #{t "бессоунцеве", "bessóunceve"} “sunless”; #{t "вѣтре", "vě́tre"} “wind” → #{t "вѣтрене", "vě́trene"} “windy” → #{t "бесвѣтреве", "besvě́treve"} “windless”.
+      %p Many animals have two adjective forms, although their meanings are identical. The adjective endings are allowed to be added directly onto the root of the animal with a <i>-j-</i> intermediary (which is frequently absorbed by the consonant before it), so that both j-suffix and n-suffix animal terms will be seen. The former were originally descended from true possessive adjectives, which have largely been lost as a productive force in Novegradian. Quite a few have become extremely irregular, such as тоце “avian” below (from Common Slavic *pъtъk-j-ъ). The j-suffix forms are increasingly rare outside of technical fields such as taxonomy or biology.
+      - words = [ [ { :cyr => "велке", :lat => "vélke" },
+                    "wolf",
+                    :arrow,
+                    [ { :cyr => "велцене", :lat => "vélcene" }, { :cyr => "велце", :lat => "vélce" } ],
+                    "lupine, wolf’s" ],
+                  [ { :cyr => "каля", :lat => "kália" },
+                    "fish",
+                    :arrow,
+                    [ { :cyr => "калиене", :lat => "káliene" }, { :cyr => "калие", :lat => "kálie" } ],
+                    "piscine, fish’s" ],
+                  [ { :cyr => "коша", :lat => "kóśa" },
+                    "cat",
+                    :arrow,
+                    [ { :cyr => "кошне", :lat => "kóśne" }, { :cyr => "кошие", :lat => "kóśie" } ],
+                    "feline, cat’s" ],
+                  [ { :cyr => "поска", :lat => "póska" }, 
+                    "bird",
+                    :arrow,
+                    [ { :cyr => "посцене", :lat => "póscene" }, { :cyr => "тоце", :lat => "tóce" } ],
+                    "avian, bird’s" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "Adjectives from Verbs" do
+      %p Adjectives can be derived from verbs, but generally not without the help of some sort of adjectival prefix. The verb root is isolated, the prefix added, and then this stem is otherwise treated as though it were a noun, using the same sort of endings (-ов-, -ив-, -н-). See the “Noun and Adjective Prefixes” section below for more information. The three verbal participles are also used to modify nouns, and do not require any sort of additional prefixes.
+      %p There is one exception, however, known as the “necessitive participle”, though despite the name it is generally not viewed as a true participle by Indo-Europeanists. It is formed by adding the suffix #{t "-телне", "-telne"} to the infinitive stem. If the infinitive stem ends in /t d s z k g/ (i.e., the infinitive ends in #{t "-сти", "-sti"} or #{t "-йкьи", "-ikji"}), then the suffix #{t "-ителне", "-ítelne"} is used, with palatalization of /k g/ to /ts dz/. These adjectives have the meaning “that must be Xed” for transitive verbs and “that must X” for intransitive verbs:
+      %ul
+        %li #{t "рѣѕити", "rědzíti"} “say” → #{t "рѣѕителне", "rědzítelne"} “that must be said”
+        %li #{t "видѣти", "víděti"} “see” → #{t "видѣтелне", "vidě́telne"} “that must be seen”
+        %li #{t "жити", "źíti"} “live” → #{t "жителне", "źítelne"} “that must live”
+        %li #{t "плайкьи", "pláikji"} “cry” → #{t "плацителне", "placítelne"} “that must cry”
+        %li #{t "класти", "klásti"} “bury” → #{t "кладителне", "kladítelne"} “that must be buried”
+        %li #{t "исти", "ísti"} “go” → #{t "идителне", "idítelne"} “that must go”
+      %p When negated with the prefix #{t "не-", "ne-"}, the necessitive participle indicates improperness or impossibility:
+      %ul
+        %li
+          = t("нерѣѕителне", "nerědzítelne")
+          “that must not be said”
+        %li
+          = t("невидѣтелне", "nevidě́telne")
+          “that must not be seen”
+        %li
+          = t("нежителне", "neźítelne")
+          “that must not live”
+        %li
+          = t("неплацителне", "neplacítelne")
+          “that must not cry”
+        %li
+          = t("некладителне", "nekladítelne")
+          “that must not be buried”
+        %li
+          = t("неидителне", "nejidítelne")
+          “that must not go” 
+      %p The passive imperfective participle also has one additional idiomatic function. It can indicate possibility, much like the English suffix -able/-ible: #{t "видиме", "vidíme"} “visible”, #{t "дадоме", "dádome"} “givable”, etc.
+
+    = section "Adjective Diminutives" do
+      %p Diminutive forms of adjectives also exist, which generally imply a sense of closeness or ‘cuteness’, and so are particularly common when speaking with children, or when modifying affectionately diminutive nouns. They are formed using the suffixes #{t "-енк-", "-enk-"}, #{t "-инк-", "-ink-"}, #{t "-еник-", "-enik-"}, and #{t "-иник-", "-inik-"} attached to an adjectival stem. These diminutives cannot be used with adjectives already containing the suffixes <i>-n-</i> or <i>-sk-</i>, but are otherwise quite productive. Sometimes other suffixes are dropped when diminutive endings are added, as in слазке below.
+      %p Some example diminutives:
+      - headers = [ "Word", "Meaning", :arrow, "Diminutive", "Meaning" ]
+      - words = [ [ { :cyr => "добре", :lat => "dóbre" },
+                    "good",
+                    :arrow,
+                    { :cyr => "добренке", :lat => "dóbrenke" },
+                    "good" ],
+                  [ { :cyr => "слазке", :lat => "slázke" },
+                    "sweet",
+                    :arrow,
+                    { :cyr => "сладинке", :lat => "sládinke" },
+                    "sweet" ],
+                  [ { :cyr => "тољсте", :lat => "tółste" },
+                    "fat",
+                    :arrow,
+                    { :cyr => "тољстинике", :lat => "tołstiníke" },
+                    "chubby" ] ]
+      = render 'derivation_table', :headers => headers, :words => words
+
+    = section "Complex Adjectives" do
+      %p Novegradian makes use of a small set of “complex adjectives”, two adjectives modifying a single noun that both decline, but are written as a single hyphenated word without any sort of conjunction, that take on new meanings separate from those of the two adjectives forming them. These include #{t "старе-младе", "stáre-mláde"} “of all ages” (lit. “old-young”), #{t "диляне-краске", "diliáne-kráske"} “of uneven length” (lit. “long-short”), #{t "шинье-цервене", "śínje-cérvene"} “multicolored, motley” (lit. “blue-red”). The two adjectives composing each complex adjective are opposites or near-opposites, and the new form represents a variation everywhere in between the two.
+
+  = section "Verbalization" do
+    %p Any part of speech can generally be converted into a verb by taking the root and treating that as a verbal root, then assigning it a conjugation class, theme vowel, etc. The first and second conjugations are used for most such derivations, although the third is occasionally seen as well. If the root is in the second or third conjugation and ends in a consonant prone to mutation, that consonant will likely mutate due to analogy with other verbs, even if the root is foreign. For this reason, many foreign roots end up in the non-mutating first conjugation.
+    - headers = [ "Word", "Meaning", :arrow, "Verb", "Meaning" ]
+    - words = [ [ { :cyr => "каля", :lat => "kália" },
+                  "fish",
+                  :arrow,
+                  { :cyr => "каляти", :lat => "káliati" },
+                  "to fish" ],
+                [ { :cyr => "душе", :lat => "dúśe" },
+                  "shower",
+                  :arrow,
+                  { :cyr => "душитиш", :lat => "dúśitiś" },
+                  "to take a shower" ],
+                [ { :cyr => "крев", :lat => "krév" },
+                  "blood",
+                  :arrow,
+                  { :cyr => "кревити", :lat => "krevíti" },
+                  "to bleed" ],
+                [ { :cyr => "команда", :lat => "kománda" },
+                  "command",
+                  :arrow,
+                  { :cyr => "командовати", :lat => "komandováti" },
+                  "to command" ],
+                [ { :cyr => "заутроке", :lat => "záutroke" },
+                  "breakfast",
+                  :arrow,
+                  { :cyr => "заутрогати", :lat => "zautrogáti" },
+                  "to eat breakfast" ],
+                [ { :cyr => "цервене", :lat => "cérvene" },
+                  "red",
+                  :arrow,
+                  { :cyr => "цервенити", :lat => "cerveníti" },
+                  "to redden" ],
+                [ { :cyr => "близе", :lat => "blíze" },
+                  "close, near",
+                  :arrow,
+                  { :cyr => "ближити", :lat => "bliźíti" },
+                  "to draw [smth] near" ],
+                [ { :cyr => "плоне", :lat => "plóne" },
+                  "full",
+                  :arrow,
+                  { :cyr => "плонити", :lat => "ploníti" },
+                  "to fill" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p Simple verbalization can only be done with a handful of nouns, but is productive with many adjectives, albeit only qualitative ones. Most other verbalization requires some sort of prefix, which will be discussed later. The suffix <i>-ov-</i> in the first conjugation, however, is extremely productive for converting nouns into verbs, as in #{t "командовати", "komandováti"} above.
+    %p The suffix #{t "-изир-", "-izir-"} (cf. English -ize) acts similarly to -овати, but always has a causative and transformative sense. It is only used with foreign roots. The ending -изирати is third declension.
+    - words = [ [ { :cyr => "скандаље", :lat => "skándałe" },
+                  "scandal",
+                  :arrow,
+                  { :cyr => "скандаљизирати", :lat => "skandałizírati" },
+                  "scandalize" ],
+                [ { :cyr => "Америка", :lat => "Amérika" },
+                  "America",
+                  :arrow,
+                  { :cyr => "американизирати", :lat => "amerikanizírati" },
+                  "americanize" ],
+                [ { :cyr => "оспидаље", :lat => "ospidáłe" },
+                  "hospital",
+                  :arrow,
+                  { :cyr => "оспидаљизирати", :lat => "ospidałizírati" },
+                  "hospitalize" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    t%p There are a few general tendencies that can be noted regarding the conjugations that derived verbs are placed in. The second conjugation (with <i>-i-</i> as the infinitive thematic vowel), for example, tends to indicate some sort of transformation or causation (as in #{t "сухе", "súhe"} “dry” → #{t "сушити", "súśiti"} “dry, make dry”). The third conjugation ending #{t "-нати", "-nati"}, known as a ‘punctual’, marks a single instanteous action, especially physical ones, such as #{t "крикнати", "kriknáti"} “shout (#{abbrev 'pf'})” and #{t "метнати", "metnáti"} “hurl, strike (#{abbrev 'pf'})”. Nearly all verbs ending in -нати are perfective, since after all a single instantaneous action can’t be progressive or prolonged.
+    %p There are also a few pairs of verbs affixes (namely <i>-i-</i>/<i>-na-</i> and <i>-i-</i>/<i>-ě-</i>) worth noting that no longer have productive force, but nevertheless are prominant.
+    %p A number of transitive second conjugation verbs (i.e., having the suffix <i>-i-</i> in the infinitive) have intransitive counterparts with <i>-na-</i>: #{t "гашити", "gáśiti"} “extinguish, put out [a flame, etc.]”, #{t "гаснати", "gasnáti"} “go out”; #{t "меражити", "meráźiti"} “freeze (#{abbrev 'tr'})”, #{t "морзнати", "morznáti"} “freeze (#{abbrev 'intr'}), go numb”; #{t "миғцити", "miğcíti"} “soften (#{abbrev 'tr'})”, #{t "миғнати", "miğnáti"} “soften (#{abbrev 'intr'}), get soft”.
+    %p Several causative verbs in <i>-i-</i> also have stative counterparts in <i>-ě-</i> (third conjugation). This is especially common with adjective bases: #{t "шиньити", "śinjíti"} “make blue”, #{t "шиньѣти", "śinjě́ti"} “appear blue”, #{t "желенити", "źeleníti"} “make green”, #{t "желенѣти", "źeleně́ti"} “appear green, be envious”.
+    %p Although these patterns are no longer productive, they have had sporadic influence on other verbs as a result of analogy. For example, the former relationship has been applied to the verb #{t "омѣти", "omě́ti"} “know how to” to create the new verb #{t "омити", "omíti"} “teach how to”.
+
+  = section "Adverbialization" do
+    %p Novegradian, unlike many other Slavic languages, has a distinct adverbial form, formed from adjectives by adding #{t "-ѣ", "-ě"} to the stem. Many nouns in the dative-instrumental case may also take on an adverbial function. When dealing with adjectives derived from place names, the prefixed prefix #{t "на-", "na-"} must be added, or #{t "н-", "n-"} if it begins with a vowel.
+    - headers = [ "Word", "Meaning", :arrow, "Adverb", "Meaning" ]
+    - words = [ [ { :cyr => "кладне", :lat => "kládne" },
+                  "cold",
+                  :arrow,
+                  { :cyr => "кладнѣ", :lat => "kládně" },
+                  "coldly" ],
+                [ { :cyr => "добре", :lat => "dóbre" },
+                  "good",
+                  :arrow,
+                  { :cyr => "добрѣ", :lat => "dóbrě" },
+                  "well" ],
+                [ { :cyr => "русске", :lat => "rússke" },
+                  "Russian",
+                  :arrow,
+                  { :cyr => "нарусскѣ", :lat => "narusskě" },
+                  "in the Russian way" ],
+                [ { :cyr => "английске", :lat => "anglíjske" },
+                  "English",
+                  :arrow,
+                  { :cyr => "нанглийскѣ", :lat => "nanglíjskě" },
+                  "in the English way" ],
+                [ { :cyr => "зле", :lat => "zlé" },
+                  "angry",
+                  :arrow,
+                  { :cyr => "злѣ", :lat => "zlě́" },
+                  "angrily" ],
+                [ { :cyr => "лѣтене", :lat => "lě́tene" },
+                  "summer",
+                  :arrow,
+                  { :cyr => "лѣтенем", :lat => "lě́tenem" },
+                  "during the summer" ],
+                [ { :cyr => "вецере", :lat => "vécere" },
+                  "evening",
+                  :arrow,
+                  { :cyr => "вецерем", :lat => "vécerem" },
+                  "during the evening" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+
+= section "Prefixial Derivation" do
+  = section "Noun and Adjective Prefixes" do
+    %p The following prefixes are attached directly onto a noun or adjective to change the meaning, in much the same way noun and adjective prefixes work in English. Many adjectivalizations require some sort of prefix related to the meaning—for example, #{t "приглубе", "priglúbe"} “deep” requires the prefix при-, meaning “touching” or “close to”, the intention here being “close to the bottom”; *глубе alone has no meaning. Similarly, the prefixless *видеце (from “see” and the agentive suffix) is meaningless, but with a prefix, #{t "безвидеце", "bezvídece"} becomes “blind man” (without-see-#{abbrev 'agent'}). All of these prefixes are highly productive.
+    %p It should be noted that there is a great deal of overlap between substantive and verbal prefixes, with many identical forms, although often different meanings. The distinction between the two is further confused  by the ability of prefixed verbs to form derived nouns and adjectives that still bear a verbal prefix. For this reason, this section will avoid deverbal forms as much as possible.
+
+    = section "Без-" do
+      %p The most basic sense of без- is “without”, corresponding roughly with English -less. Before voiceless consonants, it takes the form #{t "бес-", "bes-"}. With adjectives, it generally forces the suffix -ов-/-ев-. Abstract nouns will usually acquire the collective suffix -ия unless another abstract marker (e.g., -ости) is present.
+      %p It can be added to a small set of primitive nouns referring to body parts to form adjectives without need of a suffix, as in безроке below.
+      %p Examples:
+      %ul
+        %li #{t "безвидеце", "bezvídece"} “blind man” (← #{t "видѣти", "víděti"} “see”)
+        %li #{t "безнадѣгьове", "beznadě́gjove"} “hopeless” (← #{t "надѣгьа", "nadě́gja"} “hope”)
+        %li #{t "бесшилия", "besśilijá"} “weakness” (← #{t "шила", "śíla"} “strength”)
+        %li #{t "бескараљности", "beskaráłnosti"} “impunity” (← #{t "караљне", "karáłne"} “punishable”)
+        %li #{t "безроке", "bezróke"} “armless” (← #{t "рока", "róka"} “arm, hand”)
+
+    = section "Вмес-" do
+      %p The prefix вмес- means “between” or “among”, often corresponding to English inter-.
+      %p Examples:
+      %ul
+        %li #{t "вмеснародне", "vmesnaródne"} “international” (← #{t "народе", "naróde"} “nation”)
+        %li #{t "вмессужѣдне", "vmessuźě́dne"} “communal” (← #{t "cужѣде", "suźě́de"} “neighbor”)
+        %li #{t "вмесоблостина", "vmesoblóstina"} “interregional highway” (← #{t "облости", "óblosti"} “region”)
+
+    = section "Во-" do
+      %p The prefix во- means “in”, “into”, or “inside”, corresponding with certain functions of English in-, as well as most functions of intra-. Before a stem beginning with a vowel, it will reduce to simply #{t "в-", "v-"}.
+      %p Examples:
+      %ul
+        %li #{t "воидрове", "vojidróve"} “intranuclear” (← #{t "идро", "idró"} “nucleus”)
+        %li #{t "вовенне", "vovénne"} “intravenous” (← #{t "вена", "véna"} “vein”)
+        %li #{t "вовозе", "vóvoze"} “import” (← #{t "вожити", "vóźiti"} “transport”)
+
+    = section "Вонѣ-" do
+      %p The basic sense of вонѣ- is “outside”, much like English “extra-”. Befores stems beginning with a vowel, it reduces to #{t "вон-", "von-"}.
+      %p Examples:
+      %ul
+        %li #{t "вонѣклѣсцене", "voněklě́scene"} “extracellular” (← #{t "клѣска", "klě́ska"} “cell”)
+        %li #{t "вонѣкрайске", "voněkráiske"} “foreign” (← #{t "крае", "kráie"} “boundary”)
+
+    = section "До-" do
+      %p The prefix до- means “before” or “up to”, and corresponds to certain senses of English pre-. Formerly, it could only be used with adjectives, with #{t "пред-", "pred-"} filling in the same role for nouns; nowadays, however, до- is frequently used with both nouns and adjectives, and forms with пред- are gradually disappearing.
+      %p Examples:
+      %ul
+        %li #{t "доисторицеске", "dojistoríceske"} “prehistoric” (← #{t "исторя", "istória"} “history”)
+        %li #{t "довоенне", "dovoiénne"} “prewar, antebellum” (← #{t "война", "voiná"} “war”)
+        %li #{t "доплоне", "doplóne"} “full to the brim” (← #{t "плоне", "plóne"} “full”)
+        %li #{t "дожитенне", "doźítenne"} “lifelong” (← #{t "житени", "źíteni"} “life”)
+
+    = section "За-" do
+      %p За- means “after” or “beyond”/”behind”, in both spatial and temporal senses. This can be metaphorically extended to mean a sudden appearance. The first sense only corresponds to English post-; the others do not have a close equivalent.
+      %p Examples:
+      %ul
+        %li #{t "загорне", "zagórne"} “beyond the mountains” (← #{t "гора", "góra"} “mountain”)
+        %li #{t "завоенне", "zavoiénne"} “postwar” (← #{t "война", "voiná"} “war”)
+        %li #{t "захоте", "záhote"} “desire, craving” (← #{t "хотѣти", "hótěti"} “want”)
+
+    = section "Кољ-" do
+      %p The prefix кољ- means “around” or “surrounding”, corresponding  very closely to English circum- or peri-. For the most part it is not used in native coinages, but rather only in calques of scientific or technical terms from other languages, and only forms adjectives. It has the variant form #{t "кол-", "kol-"} before a stem beginning with a front vowel or /j/.
+      %p Examples:
+      %ul
+        %li #{t "кољжемне", "kołźémne"} “circumterrestrial” (← #{t "жемя", "źémia"} “land”)
+        %li #{t "кољљунне", "kołłúnne"} “circumlunar” (← #{t "љуна", "łuná"} “moon”)
+        %li #{t "кољшердецне", "kołśerdécne"} “pericardial” (← #{t "шерце", "śérce"} “heart”)
+
+    = section "Много-" do
+      %p The prefix много- fairly transparently means “many”; semantically, it is similar to English poly- or multi-, but is much more frequent. This is the closest productive equivalent to the -ist- adjective suffix seen in Russian and other Slavic languages, which is disappearing in Novegradian. Before stems beginning in /k/ or /g/, it contracts to #{t "мно-", "mno-"}.
+      %p Examples:
+      %ul
+        %li #{t "многорокове", "mnogorókove"} “many-armed” (← #{t "рока", "róka"} “arm”)
+        %li #{t "многорне", "mnogórne"} “mountainous” (← #{t "гора", "góra"} “mountain”)
+        %li #{t "многоворне", "mnogovórne"} “talkative” (← #{t "говорити", "govoríti"} “talk”)
+        %li #{t "многоедажне", "mnogoiedáźne"} “multistory” (← #{t "едаже", "iedáźe"} “floor, story”)
+
+    = section "На-" do
+      %p На- means “on top of”. It has no clear English equivalent.
+      %p Examples:
+      %ul
+        %li #{t "навоцнике", "navócnike"} “contact lens” (← #{t "око", "óko"} “eye”)
+        %li #{t "нанижника", "naníźnika"} “book cover” (← #{t "нига", "níga"} “book”)
+        %li #{t "настуљне", "nastúłne"} “desktop (#{abbrev 'adj'})” (← #{t "стуље", "stúłe"} “table”)
+    
+    = section "Над-" do
+      %p The prefix над- means “over” or “above”, corresponding to the English prefixes super- and over-. When the stem begins with a plosive consonant, it lenites to #{t "наз-", "naz-"}.
+      %p However, this prefix does not have the sense of excess than English over- can have (e.g., “overstep”); nor the sense of “to a great degree” that super- can have (e.g., “superconductivity”), which is handled by the compound пренад-. It covers strictly a literal sense of “over”.
+      %p Examples:
+      %ul
+        %li #{t "наджемне", "nadźémne"} “overhead, elevated” (← #{t "жемя", "źémia"} “land”)
+        %li #{t "назкадовуше", "nazkadóvuśe"} “overseer” (← #{t "кадовуше", "kadóvuśe"} “guard”)
+        %li #{t "назгуѣздене", "nazguě́zdene"} “heavely (poet.)” (← #{t "гуѣзда", "guě́zda"} “star”)
+
+    = section "Не-" do
+      %p The prefix не- performs simple negation, like English un-, non- or a-. With qualitative adjectives, however, it tends to be more of a mild negation, somewhat like English “good” and the mild negative “not good” as opposed to “bad”.
+      %p Examples:
+      %ul
+        %li #{t "невидне", "nevídne"} “invisible” (← #{t "видѣти", "víděti"} “see”)
+        %li #{t "невовисяљне", "nevovisiáłne"} “unofficial” (← #{t "овисяљне", "ovisiáłne"} “official”)
+        %li #{t "недобре", "nedóbre"} “not good” (← #{t "добре", "dóbre"} “good”)
+
+    = section "Па-" do
+      %p The prefix па- does not translate easily into English. When used in a spatial sense, it means “right before” or “immediately by/along”. When used more abstractly, it indicates insufficiency (particularly in the sense of “failure to be sufficient” as opposed to “not yet sufficient”) or more broadly something that is an alternative or secondary, inferior  version of the base stem (though not necessarily with negative connotations). It also often drops stress either onto or toward itself, though this isn’t a universal tendency.
+      %p Examples:
+      %ul
+        %li #{t "павобѣдоке", "pavóbědoke"} “brunch, morning snack” (← #{t "обѣде", "óběde"} “lunch”)
+        %li #{t "паежерия", "paiéźerija"} “lakeshore” (← #{t "ежеро", "iéźero"} “lake”)
+        %li #{t "павецере", "pavécere"} “twilight” (← #{t "вецере", "vécere"} “evening”)
+        %li #{t "пажемка", "paźémka"} “strawberry” (← #{t "жемя", "źémia"} “land”)
+        %li #{t "пакусе", "pákuse"} “aftertaste” (← #{t "(во)кусе", "(vó)kuse"} “taste”)
+        %li #{t "павука", "pávuka"} “pseudoscience” (← #{t "(на)вука", "(na)vúka"} “science”)
+
+    = section "По-" do
+      %p The prefix по-, though very common with verbs and deverbals, is not very common with other nouns and adjectives. It most commonly is used to mean “along” various geographical features. It also has very limited use in the temporal/benefactive sense “for the occasion of”/”upon”.
+      %p Examples:
+      %ul
+        %li #{t "побрѣжне", "pobrě́źne"} “coastal” (← #{t "брѣге", "brě́ge"} “beach”)
+        %li #{t "Поневия", "Ponevijá"} “region around the Nevá River” (← #{t "Нева", "Nevá"} “Nevá River”)
+        %li #{t "посмортене", "posmórtene"} “upon one’s death”<sup>5</sup> (← #{t "сморти", "smórti"} “death”)
+
+    = section "Под-" do
+      %p The prefix под- means “under”, both physically and metaphorically. It also often indicates some sort of alternate to the base stem. Before stems beginning with a plosive, it lenites to #{t "поз-", "poz-"}.
+      %p Examples:
+      %ul
+        %li #{t "подводне", "podvódne"} “underwater” (← #{t "вода", "vóda"} “water”)
+        %li #{t "подюданьеве", "podiudánjeve"} “below freezing” (← #{t "юданье", "iudánje"} “freezing”)
+        %li #{t "подходе", "pódhode"} “back entrance” (← #{t "ходити", "hóditi"} “go, walk”)
+        %li #{t "подиѣзде", "pódiězde"} “back route” (← #{t "ѣздити", "iě́zditi"} “go by vehicle”)
+
+    = section "Пра-" do
+      %p The prefix пра- means “preceeding” or “ancestral”, and corresponds very closely to English proto- or, in the context of people, great-. Other than this last sense, it is generally a technical term. The prefix also tends to be stressed equally or nearly equally as much as the stem; for this reason, it was for a long time written hyphenated, though doing so is generally considered dated nowadays.
+      %p Examples:
+      %ul
+        %li #{t "прагуѣзда", "práguě́zda"} “proto-star” (← #{t "гуѣзда", "guě́zda"} “star”)
+        %li #{t "прагерманеске", "prágermáneske"} “proto-Germanic” (← #{t "германеске", "germáneske"} “German”)
+        %li #{t "прадѣда", "prádě́da"} “great grandfather” (← #{t "дѣда", "dě́da"} “grandfather”)
+
+    = section "Пре-" do
+      %p With noun and adjective bases, пре- means “across”. This corresponds most closely with English trans-.
+      %p Examples:
+      %ul
+        %li #{t "прешибиреске", "preśibíreske"} “trans-Siberian” (← #{t "Шибире", "Śibíre"} “Siberia”)
+        %li #{t "преятлантицеске", "preiatlantíceske"} “trans-Atlantic” (← #{t "атлантицеске", "atlantíceske"} “Atlantic”)
+
+    = section "Пред-" do
+      %p The prefix пред- means “before” when forming nouns. It is falling out of use (except on deverbals) as nouns formed with до- have been gaining acceptance. For example, the only acceptable form for “prehistory” was once #{t "предисторя", "predistória"}, but now the form #{t "доисторя", "dojistória"} is far more common.
+    
+    = section "При-" do
+      %p The prefix при- means, roughly, “adjoining”, “close”, or “toward”. It does not have a close English equivalent, although ad- approximates the first sense. However, при- is much more productive in Novegradian than ad- is in English.
+      %p Examples:
+      %ul
+        %li #{t "примореске", "primóreske"} “maritime” (← #{t "море", "móre"} “sea”)
+        %li #{t "притоке", "prítoke"} “tributary [river]” (← #{t "токе", "tóke"} “flow”)
+        %li #{t "притољке", "prítołke"} “aftershock” (← #{t "тољке", "tółke"} “tremor”)
+
+    = section "Проти-" do
+      %p The prefix проти- means “against”, and behaves much like English anti- or sometimes counter-. Before stems beginning with a vowel, it becomes #{t "против-", "protiv-"}.
+      %p Examples:
+      %ul
+        %li #{t "противирусне", "protivírusne"} “antiviral” (← #{t "вирусе", "víruse"} “virus”)
+        %li #{t "протирѣѕия", "protirě́dzija"} “contradiction” (← #{t "рѣѕити", "rědzíti"} “say”)
+        %li #{t "противоздушне", "protivozdúśne"} “anti-aircraft” (← #{t "воздушне", "vozdúśne"} “aerial”)
+
+    = section "Со-" do
+      %p The prefix со- means “with” or “together”, corresponding to English co- or con-.
+      %p Examples:
+      %ul
+        %li #{t "соврѣменне", "sovrě́menne"} “modern” (← #{t "врѣмено", "vrě́meno"} “time”)
+        %li #{t "согуѣздия", "soguědzijá"} “constellation” (← #{t "гуѣзда", "guě́zda"} “star”)
+        %li #{t "сотоке", "sótoke"} “confluence” (← #{t "токе", "tóke"} “flow”)
+
+    = section "Compound Prefixes" do
+      %p Novegradian also employs three compound substantive prefixes, formed from two of the previously-discussed unary prefixes: #{t "пренад-", "prenad-"}, #{t "недо-", "nedo-"}, and #{t "напроти-", "naproti-"}.
+      %p Пренад- corresponds strongly to English super- when used in the sense of “to a great extent”: #{t "преназпроводимости", "prenazprovodímosti"} “superconductivity” (← #{t "проводимости", "provodímosti"} “conductivity”).
+      %p Недо- marks insufficiency like па-; however, while па- suggests failure to be sufficient, недо- is more neutral, often signifying that something simply is not yet sufficient. Compare, for instance, #{t "паросуие", "párosuije"} “underdevelopment” (suggesting mismanagement) versus #{t "недоросуие", "nedorosuíje"} “underdevelopment” (suggesting the process of development has only just begun).
+      %p Напроти- denotes opposition or rivalry, and is often used to calque English counter-: #{t "напротиреволуця", "nàprotirevolúcia"} “counterrevolution” (← #{t "револуця", "revolúcia"} “revolution”).
+
+    = section "Notes on Formation" do
+      %p Whenever a prefix that must end in a vowel is added to a base that begins with a vowel, a prothetic consonant must be added to prevent hiatus. This is entirely dependent on the second vowel. If it is /a e i æ/, the consonant is /j/. If it is /o u ɨ/, the consonant is /β/. In the case of /e i æ u/, there is no visible orthographic change.
+      %p When a prefix is added to a root that has undergone the historical TorT or TolT sound change (thus having a modern Novegradian form CraC or ClaC, where “C” represents any consonant), the /a/ is shifted to /o/: #{t "граде", "gráde"} “city” → #{t "пригроде", "prígrode"} “suburb”.
+      %p There are two other prefixes that appear in many common nouns, though are no longer productive: #{t "су-/са-", "su-/sa-"} and #{t "о-/об-", "o-/ob-"}. The former derives from Proto-Slavic *sǫ-, so the vowel depends on the dominant stress pattern. It generally indicates some sort of connection, close relationship, or accompaniment: #{t "самраке", "sámrake"} “twilight” (from #{t "мраке", "mráke"} “darkness, gloom”), #{t "сурва", "survá"} “blizzard” (from #{t "ровати", "rováti"} “tear up”), #{t "сутма", "sutmá"} “shadow” (from #{t "тема", "temá"} “darkness”), #{t "сужѣде", "suźě́de"} “neighbor” (from #{t "шѣдѣти", "śědě́ti"} “sit”). The latter (basically *ob-, but frequently reducing to just *o-) means “around”. When it is prefixed to a word beginning in /β/, the /β/ always drops: #{t "власти", "vlásti"} “authority, rule” → #{t "облости", "óblosti"} “region, province”. All of these words have largely been dissociated from their original bases.
+      %p When a numeral is prefixed to a noun or adjective, it appears in its genitive form minus any final consonants: #{t "довуногате", "dovunogáte"} “bipedal, two-legged”. If the numeral does not decline, it is simply added as-is: #{t "столѣтия", "stolětijá"} “century, centennial”<sup>6</sup>. The numeral “one” always prefixes as an adjective with a neutral <i>-o-</i> ‘linking morpheme’  (i.e., as #{t "едно-", "iedno-"}). The same rules apply to the numeral #{t "пољ", "pół"} “half”, which prefixed as the genitive #{t "пољу-", "połu-"}.
+
+  = section "Place Names" do
+    %p There are five prefixes commonly used to form region names, all based on a more specific geographic term. All region names formed this way must take the collective suffix #{t "-ия", "-ija"}, which triggers palatalization of velar consonants only.
+    %p The prefix #{t "по-", "po-"} with a place name means “region along”. It is particularly common with river names, but can also be used with other generic geographic features that are linear, such as “road” or “railroad”. The prefix #{t "па-", "pa-"} is similar, but expresses a greater immediacy.
+    - headers = [ "Word", "Meaning", :arrow, "Region Name", "Meaning" ]
+    - words = [ [ { :cyr => "Вољга", :lat => "Vółga" },
+                  "Volga River",
+                  :arrow,
+                  [ { :cyr => "Повољжия", :lat => "Povółźija" }, { :cyr => "Павољжия", :lat => "Pávołźija" } ],
+                  "Volga region<br><br>Volga riverside" ],
+                [ { :cyr => "Нева", :lat => "Nevá" },
+                  "Nevá River",
+                  :arrow,
+                  [ { :cyr => "Поневия", :Lat => "Ponévija" }, { :cyr => "Паневия", :lat => "Pánevija" } ],
+                  "Nevá region<br><br>Nevá riverside" ],
+                [ { :cyr => "далница", :lat => "dálnica" },
+                  "highway",
+                  :arrow,
+                  { :cyr => "падалниция", :lat => "pádalnicija" },
+                  "highway shoulder, roadside" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The prefix #{t "при-", "pri-"} does the same, but marks the area along a coastline.
+    - words = [ [ { :cyr => "балтицеске", :lat => "baltíceske" },
+                  "Baltic (sea)<sup>7</sup>",
+                  :arrow,
+                  { :cyr => "Прибалтия", :lat => "Pribáltija" },
+                  "Baltic states" ],
+                [ { :cyr => "ежеро Ладожеское", :lat => "iéźero Ladoźeskóie" },
+                  "Lake Ladoga",
+                  :arrow,
+                  { :cyr => "Приладожия", :lat => "priladóźija" },
+                  "Ladoga region" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p #{t "Под-", "pod-"} (or #{t "поз-", "poz-"} before plosive consonants) marks the region around a city.
+    - words = [ [ { :cyr => "Новеграде", :lat => "Novegráde" },
+                  "Novegrad",
+                  :arrow,
+                  { :cyr => "Подновеградия", :lat => "Podnovegrádija" },
+                  "Novegrad region" ],
+                [ { :cyr => "Москуа", :lat => "Moskuá" },
+                  "Moscow",
+                  :arrow,
+                  { :cyr => "Подмоскевия", :lat => "Podmoskévija" },
+                  "Moscow region" ],
+                [ { :cyr => "Лондоне", :lat => "Lóndone" },
+                  "London",
+                  :arrow,
+                  { :cyr => "Подлондония", :lat => "Podlóndonija" },
+                  "London region" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p #{t "За-", "za-"} is used with names of or terms referring to physical features, most often mountain ranges, to mean “land beyond”, much like trans- may be used in English.
+    - words = [ [ { :cyr => "Кауказе", :lat => "Kaukáze" },
+                  "Caucasus",
+                  :arrow,
+                  { :cyr => "Закауказия", :lat => "Zakaukázija" },
+                  "Transcaucasia" ],
+                [ { :cyr => "влаке", :lat => "vláke" },
+                  "portage",
+                  :arrow,
+                  { :cyr => "Завлация", :lat => "Zavlácija" },
+                  "Zavolotia<br><i>(central Novegrad)</i>" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p #{t "До-", "do-"} may occasionally be used to mean “land on this side of” (English cis-), but this is rare: #{t "Докауказия", "Dokaukázija"} “Ciscaucasia”.
+
+  = section "Verb Prefixes" do
+    %p Verbs share many of the same prefixes nouns and adjectives use, although they function somewhat differently. Verbal prefixes in Novegradian are in many cases roughly equivalent to phrasal verbs in English, allowing a single verb root to spawn a wide variety of related verbs. These prefixes are highly productive, especially for verbs of motion.
+    %p The prefixes from which the perfective form of a verb is chosen are the same as the derivational prefixes. Where по- may turn one verb perfective, for another it may be solely derivational.
+    %p Note, though, that all verbs created through prefixial derivation are strictly speaking perfective. Most such verbs then back-derive an imperfective form using the suffix #{t "-ов-/-ав-", "-ov-/-av-"}: #{t "дати", "dáti"} (#{abbrev 'impf'}) → #{t "содати", "sodáti"} (#{abbrev 'pf'}); #{t "предати", "predáti"} (#{abbrev 'pf'}) → #{t "предавати", "predaváti"} (#{abbrev 'impf'}). Almost all back-derived imperfectives are first conjugation; the one exception is -давати, which is third.
+    %p A smaller set of verbs, all second conjugation, derive imperfective forms by shifting directly to the first conjugation without the aid of an overt suffix. If the root-final consonant can undergo palatalization, it will; in other words, /s(ʲ) z(ʲ) t d n p b m β/ → /ç ʝ c ɟ ɲ pl bl ml wl/, with some allowances for stress-related voicing. Examples: #{t "вуишити", "vuíśiti"} “raise” → #{t "вуиғьати", "vuiğjáti"}, #{t "прицинити", "priciníti"} “cause” → #{t "прициньати", "pricinjáti"}, #{t "соправити", "sopráviti"} → #{t "сопраулати", "sopráulati"}. In speech, however, these types of imperfectives are becoming increasingly uncommon.
+
+    = section "Без-" do
+      %p The prefix без- marks removal. Semantically, it is similar to English dis-, although in practice there is a rather low correspondence between the two. It becomes #{t "бес-", "bes-"} before voiceless consonants. While it does occasionally occur on its own, it is by far more common in the compound form #{t "обез-", "obez-"}, where the <i>о-</i> reinforces the transformative sense of без-. Most of the verbs that take plain без- take обез- in the perfective.
+      %p Examples:
+      %ul
+        %li #{t "безвѣрити", "bezvě́riti"} “cause smby to lose faith in” (← #{t "вѣрити", "vě́riti"} “believe”)
+        %li #{t "безоружити", "bezoruźíti"} “disarm” (← #{t "оружия", "orúźija"} “weaponry”)
+        %li #{t "бесстрашити", "besstráśiti"} “insure” (← #{t "страшити", "stráśiti"} “frighten”)
+
+    = section "Во-" do
+      %p The prefix во- marks some sort of movement or action into something else, and is comparable to English in-. It becomes #{t "в-", "v-"} before stems beginning with a vowel, and occasionally in other situations as well (see section 10.3.3.19).
+      %p Examples:
+      %ul
+        %li #{t "вокражити", "vokráźiti"} “encircle” (← #{t "краге", "kráge"} “circle”)
+        %li #{t "войсти", "vóisti"} “walk in[to]” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "влѣти", "vlě́ti"} “instil” (← #{t "лѣти", "lě́ti"} “pour”)
+      
+    = section "Вуи-" do
+      %p The basic meaning of the prefix вуи- is “out of”, and it is the opposite of во-. However, metaphorical extensions of this meaning are very common; for example, вуи- may also refer to any sort of distribution from one source to many, revelations/sharing of information, or the fulfilment of a difficult action. This wide array of meanings makes it hard to compare to any English constructions; the closest analogy is probably to be found in phrasal verbs with “out”.
+      %p Examples:
+      %ul
+        %li #{t "вуийсти", "vuíjsti"} “exit, walk out” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "вуижити", "vuiźíti"} “survive, live out” (← #{t "жити", "źíti"} “live”)
+        %li #{t "вуикриѕати", "vuikridzáti"} “shout out” (← #{t "криѕати", "kridzáti"} “shout”)
+        %li #{t "вуидати", "vuidáti"} “issue, give out” (← #{t "дати", "dáti"} “give”)
+        %li #{t "вуилѣти", "vuilě́ti"} “pour out, empty” (← #{t "лѣти", "lě́ti"} “pour”)
+        %li #{t "вуипуидати", "vuipuidáti"} “demand” (← #{t "пуидати", "puidáti"} “ask”)
+        %li #{t "вуитуорити", "vuituóriti"} “produce, manufacture” (← #{t "туорити", "tuoríti"} “create”)
+        %li #{t "вуибрати", "vuibráti"} “choose, pick out” (← #{t "брати", "bráti"} “take, bring”)
+
+    = section "До-" do
+      %p The prefix до- means “up to/reaching” or “additional”.
+      %p Examples:
+      %ul
+        %li #{t "доцидати", "docidáti"} “read up to” (← #{t "цидати", "cidáti"} “read”)
+        %li #{t "доѣсати", "doiě́sati"} “go up to/as far as [a place]” (← #{t "ѣсати", "iě́sati"} “go by vehicle”)
+        %li #{t "догрѣти", "dogrě́ti"} “heat up [to]” (← #{t "грѣти", "grě́ti"} “heat”)
+        %li #{t "довѣсти", "dově́sti"} “understand” (← #{t "вѣсти", "vě́sti"} “know”)
+        %li #{t "додати", "dodáti"} “add, tack onto” (← #{t "дати", "dáti"} “give”)
+      %p While the sense of “additional” is undeniably derivational, many believe the former sense of “up to/reaching” has become grammaticalized. For example, the prefix до- is virtually required on the verb whenever the preposition до “up to” is present in the same sentence, and this can be done freely with any verb. This function is sometimes known as the “telic prefix”, which will be discussed further in section 11.15.
+
+    = section "За-" do
+      %p The prefix за- is hard to describe. It covers a wide array of meanings that are often contradictory, and the exact role it plays in the historical derivation of many verbs is no longer clear. This is part of why за- has become one of the most common simple perfectivizing suffixes with no lexical content of its own. The four most common senses, however, are: inchoateness/beginning an action (and by extension causatives in general); movement or action behind something; some sort of exchange or action that occurs with clear benefit to the subject; and an action done quickly, often viewed as not being quite as thorough as the base action it was derived from. In addition, with verbs of motion, it indicates performing an action while in the process of doing something else (e.g., “stop by [while on the way to...]”, “drop off [while on the way to...]”, etc.).
+      %p Examples:
+      %ul
+        %li #{t "зайсти", "záisti"} “stop by, drop by” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "зашинати", "zaśináti"} “fall asleep” (← #{t "спати", "spáti"} “sleep”)
+        %li #{t "затемнѣти", "zatemně́ti"} “darken suddenly” (← #{t "темнѣти", "temně́ti"} “become dark”)
+        %li #{t "забоити", "zabójiti"} “conquer, take in battle” (← #{t "бое", "bóie"} “battle”)
+        %li #{t "закрити", "zakríti"} “veil, screen” (← #{t "крити", "kríti"} “cover”)
+        %li #{t "запизати", "zapizáti"} “note” (← #{t "пизати", "pizáti"} “write”)
+        %li #{t "залежити", "zaleźíti"} “establish” (← #{t "лежити", "leźiti"} “lie [down]”)
+        %li #{t "забуити", "zabuíti"} “forget” (← #{t "буити", "buíti"} “be”)
+
+    = section "На-" do
+      %p The prefix на- generally indicates action on or onto something. When in the middle voice, it may indicate an action completed to exhaustion.
+      %p Examples:
+      %ul
+        %li #{t "найсти", "náisti"} “come upon, find” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "наѣстиш", "naiě́stiś"} “eat one’s fill” (← #{t "ѣсти", "iě́sti"} “eat”)
+        %li #{t "надумати", "nadúmati"} “think over” (← #{t "думати", "dúmati"} “ponder”)
+        %li #{t "наработатиш", "narabótatiś"} “have done a lot of work” (← #{t "работати", "rabótati"} “work”)
+        %li #{t "настубати", "nastubáti"} “step on, tread on” (← #{t "стубати", "stubáti"} “step”)
+
+    = section "Над-" do
+      %p The prefix над- means “over”. Before bases beginning with plosives, it lenites to #{t "наз-", "naz-"}.
+      %p Examples:
+      %ul
+        %li #{t "наздати", "nazdáti"} “increase” (← #{t "дати", "dáti"} “give”)
+        %li #{t "назпизати", "nazpizáti"} “write over, superscribe” (← #{t "пизати", "pizáti"} “write”)
+        %li #{t "надсуѣдати", "nadsuědáti"} “suggest as an alternative” (← #{t "суѣдати", "suědáti"} “suggest”)
+        %li #{t "назтемнѣти", "naztemně́ti"} “eclipse, overshadow” (← #{t "темнѣти", "temně́ti"} “become dark”)
+
+    = section "О-" do
+      %p The prefix о- is the result of the merger of two older prefixes. One marked simple transformations, and so is very common with deadjectival and denominal bases, as well as “around” or “about”. The other suggests movement away from something.
+      %p Examples:
+      %ul
+        %li #{t "обрати", "obráti"} “take away” (← #{t "брати", "bráti"} “bring, take”)
+        %li #{t "одужити", "oduźíti"} “kill (poet.)” (← #{t "духе", "dúhe"} “breath”)
+        %li #{t "овелицити", "ovelíciti"} “increase, enlarge” (← #{t "велике", "velíke"} “great”)
+        %li #{t "овратити", "ovrátiti"} “turn, rotate” (← #{t "вратити", "vrátiti"} “return, turn back”)
+        %li #{t "ознати", "oznáti"} “acknowledge” (← #{t "знати", "znáti"} “recognize”)
+        %li #{t "опизати", "opizáti"} “describe” (← #{t "пизати", "pizáti"} “write”)
+        %li #{t "ойсти", "óisti"} “leave” (← #{t "исти", "ísti"} “go, walk”)
+
+    = section "От-" do
+      %p The prefix от-, which becomes ос- before bases beginning with a plosive, indicates movement away, much like о-. However, о- suggests movement out of sight, while от- suggests movement just a short distance away, while remaining in sight<sup>8</sup>. It also frequently indicates physical removal (and thus is more literal than без-), a mistake in performing an action, or the undoing or reciprocation of an action performed by another party.
+      %p Examples:
+      %ul
+        %li #{t "осдати", "osdáti"} “answer, respond” (← #{t "дати", "dáti"} “give”)
+        %li #{t "отѣйграти", "otěigráti"} “win back” (← #{t "еграти", "iegráti"} “play”)
+        %li #{t "осцидати", "oscidáti"} “misread” (← #{t "цидати", "cidáti"} “read”)
+        %li #{t "отлежити", "otleźíti"} “set aside” (← #{t "лежити", "leźíti"} “lie down”)
+        %li #{t "отношити", "otnóśiti"} “carry off, deliver” (← #{t "ношити", "nóśiti"} “carry”)
+        %li #{t "отрѣзати", "otrězáti"} “cut off [from]” (← #{t "рѣзати", "rězáti"} “cut”)
+
+    = section "Па-" do
+      %p The prefix па- has a variety of different meanings. It originally spread to verbs via denominals; in early Common Slavic the nominal prefix па- was more or less considered a variant of по-. In these original verbs derived from nouns, the function of па- can be very opaque. However, over time it developed a sense of insufficiency or absence in nouns (see section 10.3.1.12), and this sense spread to verbs. As a result, most productive use of the verbal prefix па- nowadays indicates insufficiency. There is a strong tendency to stress the prefix.
+      %p Examples:
+      %ul
+        %li #{t "пагубити", "págubiti"} “ruin” (← #{t "губити", "gubíti"} “destroy”)
+        %li #{t "пажити", "páźiti"} “pasture” (← #{t "жити", "źíti"} “live”)
+        %li #{t "пакормити", "pákormiti"} “underfeed” (← #{t "кормити", "kórmiti"} “feed”)
+
+    = section "По-" do
+      %p By far the most common meaning of по- is “for a while”; that is, it indicates durative aspect. This is a highly productive process, as it can be applied to virtually any verb. A secondary sense, far less common, is as an inchoative.
+      %p Examples:
+      %ul
+        %li #{t "поговорити", "pogovoríti"} “talk for a bit” (← #{t "говорити", "govoríti"} “talk”)
+        %li #{t "побуити", "pobuíti"} “stay for some time” (← #{t "буити", "buíti"} “be”)
+        %li #{t "полубити", "polubíti"} “fall in love” (← #{t "лубити", "lubíti"} “love”)
+
+    = section "Под-" do
+      %p The basic meaning of под- is “under” or “from under”. However, it has acquired a number of metaphorical extensions of this original sense. It can indicate approach to another person (not an object), or it can weaken the sense of a verb. It can also be used as a generic prefix of politeness when attached to verbs of human interaction. Before bases beginning with a plosive, the prefix becomes #{t "поз-", "poz-"}.
+      %p Examples:
+      %ul
+        %li #{t "позпизати", "pozpizáti"} “sign” (← #{t "пизати", "pizáti"} “write”)
+        %li #{t "подмотрѣти", "podmótrěti"} “spy on” (← #{t "мотрѣти", "mótrěti"} “watch”)
+        %li #{t "подѣскоцити", "poděskóciti"} “jump out” (← #{t "скоцити", "skóciti"} “jump”)
+        %li #{t "подрѣѕити", "podrědzíti"} “say [please]” (← #{t "рѣѕити", "rědzíti"} “say”)
+        %li #{t "подѣгрѣти", "poděgrě́ti"} “warm up a little bit” (← #{t "грѣти", "grě́ti"} “heat up”)
+        %li #{t "подѣйсти", "póděisti"} “walk up to” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "подсушити", "podsúśiti"} “dry a little” (← #{t "сушити", "súśiti"} “dry”)
+
+    = section "Пре-" do
+      %p The prefix пре- has five primary senses. The original is physical action across something. It can also indicate repetition, thoroughness, reciprocation, and excess.
+      %p Examples:
+      %ul
+        %li #{t "предумати", "predúmati"} “think over, ponder” (← #{t "думати", "dúmati"} “muse”)
+        %li #{t "предати", "predáti"} “transmit, broadcast” (← #{t "дати", "dáti"} “give”)
+        %li #{t "премирити", "premíriti"} “cease fire” (← #{t "мире", "míre"} “peace”)
+        %li #{t "преговорити", "pregovoríti"} “hold talks” (← #{t "говорити", "govoríti"} “talk”)
+        %li #{t "премотрѣти", "premótrěti"} “revise, reconsider” (← #{t "мотрѣти", "mótrěti"} “watch”)
+        %li #{t "премѣстити", "preměstíti"} “relocate, move” (← #{t "мѣсто", "mě́sto"} “place”)
+        %li #{t "препизати", "prepizáti"} “rewrite” (← #{t "пизати", "pizáti"} “write”)
+        %li #{t "препизатиш", "prepizátiś"} “correspond, write one another” (← #{t "пизати", "pizáti"} “write”)
+        %li #{t "престубити", "prestubíti"} “infringe, violate” (← #{t "стубати", "stubáti"} “step” [i.e., overstep])
+        %li #{t "прегрѣти", "pregrě́ti"} “overheat” (← #{t "грѣти", "grě́ti"} “heat up”)
+
+    = section "Пред-" do
+      %p The prefix пред- means “before” or “in front”. It lenites to #{t "през-", "prez-"} before bases beginning with a plosive.
+      %p Examples:
+      %ul
+        %li #{t "предвидѣти", "predvíděti"} “foresee” (← #{t "видѣти", "víděti"} “see”)
+        %li #{t "предсудити", "predsudíti"} “prejudge” (← #{t "судити", "sudíti"} “judge”)
+        %li #{t "предрѣѕити", "predrědzíti"} “foretell, predict” (← #{t "рѣѕити", "rědzíti"} “say”)
+    
+    = section "При-" do
+      %p The prefix при- conveys a variety of meanings all denoting some sort of closeness. It often indicates motion toward, arrival, preparation, invitation, appearance of emotions or ideas, and attentiveness.
+      %p Examples:
+      %ul
+        %li #{t "прийсти", "príjsti"} “arrive, approach” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "применѣти", "primeně́ti"} “remember, recall” (← #{t "менѣти", "meně́ti"} “seem, suppose”)
+        %li #{t "придумати", "pridúmati"} “think up” (← #{t "думати", "dúmati"} “muse”)
+        %li #{t "привезати", "privezáti"} “tie to” (← #{t "везати", "vezáti"} “tie”)
+        %li #{t "призуати", "prizuáti"} “invite” (← #{t "зуати", "zuáti"} “call”)
+        %li #{t "припозобити", "pripozóbiti"} “adjust for, adapt to” (← #{t "позоба", "pozóba"} “means, method”)
+        %li #{t "прислухѣти", "prislúhěti"} “listen attentively” (← #{t "слухѣти", "slúhěti"} “listen”)
+        %li #{t "прийграти", "prijgráti"} “join a game” (← #{t "еграти", "iegráti"} “play”)
+
+    = section "Про-" do
+      %p The prefix про- primarily indicates motion through or past something. In addition, it may indicate a somewhat haphazard or not entirely focused action, especially one that results in some sort of error or mistake.
+      %p Examples:
+      %ul
+        %li #{t "пройсти", "próisti"} “go through; go past” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "пропизати", "propizáti"} “jot down” (←  #{t "пизати", "pizáti"} “write”)
+        %li #{t "прослухѣти", "proslúhěti"} “not catch someone’s words” (← #{t "слухѣти", "slúhěti"} “listen”)
+        %li #{t "прожити", "proźíti"} “live through” (← #{t "жити", "źíti"} “live”)
+        %li #{t "пролѣти", "prolě́ti"} “spill” (← #{t "лѣти", "lě́ti"} “pour”)
+    
+    = section "Роз-" do
+      %p The prefix роз- indicates separation or distribution. It may also indicate an action is completely out of control. Before bases beginning with an unvoiced consonant, it becomes <i>ros-</i>.
+      %p Examples:
+      %ul
+        %li #{t "роздати", "rozdáti"} “distribute” (← #{t "дати", "dáti"} “give”)
+        %li #{t "розлѣти", "rozlě́ti"} “flood” (← #{t "лѣти", "lě́ti"} “pour”)
+        %li #{t "розиѣсти", "roziě́sti"} “erode, eat away at” (← #{t "ѣсти", "iě́sti"} “eat”)
+        %li #{t "розбрати", "rozbráti"} “take apart, examine” (← #{t "брати", "bráti"} “bring, take”)
+        %li #{t "росуити", "rosuíti"} “unwind, evolve” (← #{t "вити", "víti"} “twist”)
+        %li #{t "розѣйсти", "rózěisti"} “part ways” (← #{t "исти", "ísti"} “go, walk”)
+
+    = section "Со-" do
+      %p The prefix со- indicates joining many things together (the opposite of роз-), getting off of or down from something (and occasionally removal), or an exhaustive action.
+      %p Examples:
+      %ul
+        %li #{t "собрати", "sobráti"} “gather” (← #{t "брати", "bráti"} “bring, take”)
+        %li #{t "сойсти", "sóisti"} “get off” (← #{t "исти", "ísti"} “go, walk”)
+        %li #{t "снести", "snésti"} “bring down” (← #{t "нести", "nésti"} “carry”)
+        %li #{t "сократити", "sokrátiti"} “cut short” (← #{t "кратити", "krátiti"} “shorten”)
+        %li #{t "сожитиш", "soźítiś"} “get accustomed to” (← #{t "жити", "źíti"} “live”)
+        %li #{t "совинити", "soviníti"} “forgive, pardon” (← #{t "винити", "viníti"} “blame”)
+        %li #{t "согорѣти", "sogorě́ti"} “burn out, go out” (← #{t "горѣти", "gorě́ti"} “burn, glow”)
+    
+    = section "Notes on Formation" do
+      %p The interaction of the prefixes #{t "в(о)-", "v(o)-"} and #{t "с(о)-", "s(o)-"} with the verb root can be somewhat complex at times. Generally, the preferred prefixes are the vocalic forms во- and со-. However, before /l/ (and usually before /m n/, and irregularly before /r/), the vowel will drop: во + ливати → #{t "вливати", "vliváti"} “pour in, instil”. Before /β/, the realization depends on stress. If the first syllable of the verb root is unstressed, then the vocalic prefixes are used: со + винити → #{t "совинити", "soviníti"} “pardon”. If the first syllable of the verb root is stressed, then the vowel is dropped and the /β/ elides to /w/: со + вити → #{t "суити", "suíti"} “twist”.
+      %p However, when deverbalized, the vowel may reappear even though it is absent in the verb: #{t "вложити", "vloźíti"} “invest” → #{t "вологе", "vóloge"} “investment”. Sometimes both vowelless and vowelled derivatives exist with different semantics.
+      %p With the exception of в(о)- and с(о)-, the standard epenthetic vowel used with verbal prefixes is -ѣ-. This occurs, for instance, when a prefix ending with a consonant is applied to a base that begins with a consonant cluster. There are also certain verb stems beginning with /i/ or /(j)e/ that reduce to /j/ when any prefix is added, which will then require this additional -ѣ-: #{t "исти", "ísti"} “go, walk” → ##{t "подѣйсти", "póděisti"} “walk up to”.
+
+= section "Compounds" do
+  %p Novegradian has two kinds of compounds—linked and unlinked, referring to whether or not there is a ‘linking morpheme’. Both are very common, although the ‘linked’ form is used more often in recent constructs.
+
+  = section "Unlinked Compounds" do
+    %p Unlinked compounds for the most part are limited to adverbs and conjunctions. Nouns and adjectives are rarely formed with unlinked compounds, with the exception of compounds incorporating a numeral as the first element.
+    %p Taking a number in its genitive form and attaching it to an adjective or noun is a common method of substantive creation: #{t "довуногате", "dòvunogáte"} “bipedal”, #{t "дешитанлико", "dèśitángliko"} “decagon”, #{t "полувѣке", "pòluvě́ke"} “half-century”.
+    %p Many modern adverbs come from historical compounds, where what was originally a phrase became fused into a single unit:
+    %ul
+      %li #{t "вноу", "vnóu"} “again” ← во “in” + нов(е) “new”
+      %li #{t "воврехѣ", "vovréhě"} “[located] above” ← во “in” + врехѣ “top (#{abbrev 'loc'})”
+      %li #{t "вонизѣ", "vonízě"} “[located] below” ← во “in” + низѣ “bottom (#{abbrev 'loc'})”
+      %li #{t "слѣва", "slě́va"} “from the left” ← со “from” + лѣва “left (#{abbrev 'gen'})”
+      %li #{t "коправом", "koprávom"} “toward the right” ← ко “toward” + правом “right (#{abbrev 'datins'})”
+      %li #{t "хоиж", "hójiź"} “who (#{abbrev 'emph'})” ← хой “who” + же (an emphatic particle)
+      %li #{t "шеден", "śedén"} “today” ← ше “this” + ден “day (#{abbrev 'acc'})”
+      %li #{t "занок", "zánok"} ← за “behind” + нокьи “night”
+      %li #{t "вецераш", "véceraś"} “yesterday” ← вецера “evening (#{abbrev 'gen'})” + ш(ево) “this”
+
+  = section "Linked Compounds" do
+    %p Linked compounds feature a fill vowel, most commonly /o/, separating the two components of the compound. If the second element begins with a vowel, the fill vowel may be dropped; this is optional, but generally preferred.
+    - headers = [ "Word 1", "Word 2", :arrow, "Compound" ]
+    - words = [ [ "#{t "рока", "róka"}<br>“hand”",
+                  "#{t "пизанье", "pizánje"}<br>“writing”",
+                  :arrow,
+                  "#{t "рокопизанье", "ròkopizánje"}<br>handwriting" ],
+                [ "#{t "шѣверне", "śě́verne"}<br>“northern”",
+                  "#{t "Америка", "Amérika"}<br>“America”",
+                  :arrow,
+                  "#{t "Шѣверн(о)америка", "Śěvern(o)amérika"}<br>“North America”" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p When the second element is a verb, but the compound itself is not, the verb will appear as just the root alone.
+    - words = [ [ "#{t "жемя", "źémia"}<br>“land”",
+                  "#{t "вѣсти", "vě́sti"}<br>“know”",
+                  :arrow,
+                  "#{t "жемловѣде", "źemlově́de"}<br>“geologist”" ],
+                [ "#{t "вода", "vóda"}<br>“water”",
+                  "#{t "родити", "rodíti"}<br>“bear”",
+                  :arrow,
+                  "#{t "водороде", "vodoróde"}<br>“hydrogen”" ],
+                [ "#{t "вино", "vinó"}<br>“wine”",
+                  "#{t "лубити", "lubíti"}<br>“love”",
+                  :arrow,
+                  "#{t "винолубе", "vinolúbe"}<br>“wine connoisseur”" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Вуисопанти, in turn, is increasingly giving way to the fully native #{t "далница", "dálnica"}.
+%p 2) CS *ljuby, a ū-stem noun that for some reason underwent an irregular evolution in Novegradian.
+%p 3) CS *pěsnь, consisting of a suffix *-snь that had already ceased to be productive before the Common Slavic period.
+%p 4) Unclear. CS forms *žitьje and *žiznь are reconstructed; житени almost appears to be a cross between these two, but this is unlikely. The most common explanation is that this derives from an extended Pre-Old Novegradian form *žizьnь that underwent dissimilation, perhaps influenced by forms such as the previously-mentioned *žitьje. If this is the case, then житени originally had the same derivational suffix as пѣшне above.
+%p 5) For example, #{t "посмортене обред", "posmórtene óbred"} “funereal rite”.
+%p 6) This compound includes the now-defunct stem *lět- for “year”.
+%p 7) The Baltic Sea itself is known in Novegradian as #{t "Варижеское море", "Variźeskóie móre"} “Varangian Sea”, but the adjective балтицеске has been loaned for most other purposes.
+%p 8) Compare, for instance, #{t "ойсти", "óisti"} “leave” and #{t "отѣйсти", "ótěisti"} “walk away”, both from #{t "исти", "ísti"} “go, walk”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

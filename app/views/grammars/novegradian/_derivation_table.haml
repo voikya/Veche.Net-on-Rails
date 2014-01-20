@@ -1,0 +1,25 @@
+- headers ||= []
+- words ||= []
+
+%table
+  %tr
+    - headers.each do |header|
+      - if header == :arrow
+        %th
+      - else
+        %th= header
+  - words.each do |word|
+    %tr
+      - word.each do |col|
+        - if col.is_a? Hash
+          -# String + Transliteration
+          %td= t(col[:cyr], col[:lat], :linebreak => true)
+        - elsif col.is_a? String
+          -# English Gloss
+          %td= col.html_safe
+        - elsif col.is_a? Array
+          -# Multiple Strings + Transliterations
+          %td= col.map{|c| t(c[:cyr], c[:lat], :linebreak => true)}.join("<br>").html_safe
+        - elsif col == :arrow
+          -# Arrow
+          %th.arrow →

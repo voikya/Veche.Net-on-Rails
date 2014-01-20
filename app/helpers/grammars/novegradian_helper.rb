@@ -18,6 +18,7 @@ module Grammars
       'ACT' => "Active Voice",
       'ADJ' => "Adjective",
       'ADV' => "Adverb",
+      'AGENT' => "Agentive",
       'ANIM' => "Animate",
       'COLL' => "Colloquial",
       'COMP' => "Comparative",
