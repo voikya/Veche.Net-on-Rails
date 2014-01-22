@@ -48,6 +48,7 @@ module Grammars
       @subsubsection = 0
       @subsubsubsection = 0
       @section_context = :chapter
+      @example_index = 0
 
       render params[:page]
     end

@@ -20,6 +20,7 @@ module Grammars
       'ADV' => "Adverb",
       'AGENT' => "Agentive",
       'ANIM' => "Animate",
+      'CLITIC' => "Clitic",
       'COLL' => "Colloquial",
       'COMP' => "Comparative",
       'COND' => "Conditional",
@@ -40,6 +41,7 @@ module Grammars
       'FUT' => "Future",
       'GEN' => "Genitive",
       'IE' => "Indo-European",
+      'IMPER' => "Imperative",
       'IMPF' => "Imperfective",
       'IMPF/PF' => "Imperfective/Perfective",
       'IMPERS' => "Impersonal",
@@ -58,6 +60,7 @@ module Grammars
       'MASC' => "Masculine",
       'MID' => "Middle Voice",
       'N' => "Neuter",
+      'N*' => "Intrusive 'N'",
       'NEG' => "Negative",
       'NEUT' => "Neuter",
       'NOM' => "Nominative",
@@ -67,6 +70,7 @@ module Grammars
       'OPT' => "Optative",
       'PART' => "Partitive",
       'PASS' => "Passive Voice",
+      'PAST' => "Past",
       'PF' => "Perfective",
       'PIE' => "Proto-Indo-European",
       'PL' => "Plural",
@@ -87,6 +91,7 @@ module Grammars
       'TOP' => "Topic Marker",
       'TR' => "Transitive",
       'TRI' => "Trial Superlative",
+      'V*' => "Intrusive 'V'",
       'VOC' => "Vocative"
     }
 
@@ -96,7 +101,7 @@ module Grammars
       str.each do |s|
         meaning << (@@abbreviations_hash[s.upcase] or raise "Abbreviation #{s.upcase} is not defined")
       end
-      "<abbr title='#{meaning.join(' ')}'>#{string}</abbr>".html_safe
+      "<abbr title='#{meaning.join(' ')}'>#{string.gsub('*', '')}</abbr>".html_safe
     end
   end
 end

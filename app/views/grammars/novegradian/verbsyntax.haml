@@ -1,0 +1,1181 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Синтаксе дѣянь"
+
+= render :partial => 'navigation'
+
+%p So far, there has been extensive discussion of the mechanics of Novegradian morphology, with only occasional references to principles of usage. All major aspects of word formation have now been covered. From this point on, the focus will be on Novegradian syntax—how the language assembles words into meaningful sentences. This description will begin with the use of the verb.
+%p Novegradian verbs must agree in person and number (or in some situations, gender) with the grammatical subject of the sentence. Although a dual verbal form still exists, it is generally no longer marked on nouns. It must be used whenever the subject has an explicit dual quality (e.g., a dual pronoun or an anaphor such as “both”), is quantified with the numeral “two”, is known to be a pair or natural dual (e.g., “my parents”), or is a compound subject with two elements (e.g., “Nikoláie and Névida”). Otherwise, if there is more than one of the noun, the plural must be used, excepting mass nouns such as “water” or “rice” which require the singular.
+
+= section "The Copula буити “Be”" do
+  = section "In the Present Tense" do
+    %p The actual present tense forms of буити are frequently dropped in normal situations. Simple equative clauses are almost always of the form <span class="pattern">[noun_phrase Ø complement]</span>, with a zero-form copula. In written texts, this is indicated with an en-dash. The complement must be in the dative/instrumental case if it is a noun, or in the nominative case if it is an adjective.
+    = example_sentence "Яс – лѣгарем.",
+                       "Iás – lěgárem.",
+                       "I.{nom} Ø doctor-{datins.sg}",
+                       "I am a doctor."
+    = example_sentence "Ша нига – велем интересна.",
+                       "Śá níga – vélem interésna.",
+                       "this-{nom.sg.fem} book-{nom.sg} Ø very interesting-{nom.sg.fem}",
+                       "This book is very interesting."
+    %p The dash is often dropped if a word immediately before or after it has a topicalization marker attached (e.g., “Ша нига-та велем интересна”).
+    %p The full present tense forms of ‘to be’ tend only to be used in the modern language for contrastive purposes or for emphasis. In addition, there is a regularly-used present tense in the negative formed by combining the negative particle не ne with the positive present tense forms whose usage is required and not optional in negated sentences.
+    = example_sentence "Оне нет лѣгара-то, но есм яс.",
+                       "Óne nét lěgára-to, no iésm iás.",
+                       "he.{nom} be.{3sg.neg} doctor-{gen.sg}-{top}, but be.{1sg} I.{nom}",
+                       "He isn’t a doctor, but I am."
+    = example_sentence "Нет велем суде кладно.",
+                       "Nét vélem sudé kládno.",
+                       "be.{3sg.neg} very here cold-{nom.sg.neut}",
+                       "It’s not very cold here."
+    %p A pronoun with no copula or a copula with no pronoun are roughly equivalent in meaning. The use of a pronoun places slightly more emphasis on identity, while the verb places slightly more emphasis on the role or state. For this reason, sentences like 5 below have a slightly greater tendency to use a pronoun, while 6 is more likely to use a verb. However, the distinction is subtle enough that no mistake would be perceived if they were switched.
+    = example_sentence "Яс германьѣнинем.",
+                       "Iás germanjě́ninem.",
+                       "I.{nom} Ø German-{datins.sg}",
+                       "He isn’t a doctor, but I am."
+    = example_sentence "Есм царем.",
+                       "Iésm cárem.",
+                       "be.{1sg} tsar-{datins.sg}",
+                       "I am tsar."
+    %p In the third person, the use of the copula when the subject is explicit is much less marked than in other persons, and so will often be seen with no particular emphatic force apparent. This is very common when the subject and complement are separated, as below, but it is not unusual to see sentences as simple as #{t "“Оне ест...”", "óne iést..."} “he is...”
+    = example_sentence "Дѣвушка направѣ ест миловоюн о мене.",
+                       "Dě́vuśka naprávě iést milóvoiun o mené.",
+                       "girl-{nom.sg} on_right be.{3sg} girlfriend-{datins.sg.fem} at I.{gen}",
+                       "The girl on the right is my girlfriend."
+    %p The third person forms #{t "ест", "iést"} and #{t "есат", "iésat"} are frequently replaced by the clitic forms #{t "е", "ie"} and #{t "су", "su"}, especially in speech. The former may further reduce to just /j/ (orthographically “-и”) when immediately following a nominative case noun ending in a vowel, pronoun ending in a vowel, or the interrogative #{t "куде", "kudé"} “where?”. It can also appear after #{t "цой", "cói"} “what?” and #{t "хой", "hói"} “who?”, although the glide in the pronoun disappears orthographically: #{t "цо-и", "có-i"} “what is...?”, #{t "хо-и", "hó-i"} “who is...?”<sup>1</sup>. It is not permitted in other situations, including after a relative clause or after an adjective modifying a nominative-case noun.
+    = example_sentence "Они су дружам о мене.",
+                       "Oní su druźám o mené.",
+                       "they.{nom} be.{3pl.clitic} friend-{datins.pl} at I.{gen}",
+                       "They are friends of mine."
+    = example_sentence "Е интересно!",
+                       "Ie interésno!",
+                       "be.{3sg.clitic} interesting-{nom.sg.neut}",
+                       "It’s interesting!"
+    = example_sentence "Она-и студентой в универсидатѣ.",
+                       "Oná-i studéntoi v universidátě.",
+                       "she.{nom}-be.{3sg.clitic} student-{fem}-{datins.sg} in university-{loc.sg}",
+                       "She is a student at the university."
+    = example_sentence "Куде-и о мене мобиле?",
+                       "Kudé-i o mené móbile?",
+                       "where-be.{3sg.clitic} at I.{gen} mobile_phone-{nom.sg}",
+                       "Where is my cell phone?"
+    %p There is one quirky use of the clitic “be” with verbs of motion that is discussed in section 11.18.1 below.
+
+  = section "In the Past and Future" do
+    %p In the past and future, буити functions like any other verb, and always has a non-zero form. Technically, it is the only verb that has a distinct future tense, formed using the present/future endings with the root *бад-. It is negated normally, using the separate particle #{t "не", "ne"} rather than a distinct verb form.
+    = example_sentence "Вецераш ондуа буилѣ во Новеградѣ. Занок не бадета.",
+                       "Véceraś onduá buílě vo Novegrádě. Zánok ne bádeta.",
+                       "yesterday they.{nom.dl} be-{past}-{dl} in Novegrad-{loc}. Tomorrow {neg} be.{fut}-{3dl}",
+                       "Yesterday the two of them were in Novegrad. Tomorrow they won’t be."
+
+  = section "In Existential Clauses" do
+    %p The third person present and future forms of буити, both positive and negative, are regularly used in existential clauses. The verb must agree in number with the noun whose existence is being described, and in the past tense, in gender as well. When positive and in the present tense, the verb is generally non-zero if the existence of the subject has not been confirmed or is in question, and is zero-form if its existence is known. Clitic forms may not be used in an extistencial sense. When negative, the subject must be in the genitive case and the verb in the neuter singular or plural.
+    = example_sentence "Многе нигоу есат во шем нижарѣ.",
+                       "Mnóge nigóu iésat vo śém niźárě.",
+                       "many book-{part.pl} be.{3pl} in this-{loc.sg.masc} bookstore-{loc.sg}",
+                       "There are many books in this bookstore."
+    = example_sentence "Шеден не буило добрѣ предакьѣ по телевизей.",
+                       "Śedén ne buílo dóbrě predákjě po televizéi.",
+                       "today {neg} be-{past}-{neut} good-{gen.sg.fem} program-{gen.sg} on television-{datins.sg}",
+                       "There wasn’t a good program on TV today."
+    = example_sentence "Гажета-та тамо на стољѣ.",
+                       "Gaźéta-ta támo na stółě.",
+                       "newspaper-{nom.sg}-{top} Ø there on table-{loc.sg}",
+                       "The newspaper is over there on the table."
+    %p These third person forms of буити are still used even if the object of existence is a first- or second-person pronoun, though it still agrees in number. In such sentences the existencial буити tends to imply presence rather existence. The sentences #{t "Ест яс", "Iést iás"} and #{t "Есат вуи", "Iésat vuí"} mean roughly “I am here” and “You all are here” respectively; *Есм яс and *Есте вуи (with “proper” verbal agreement) may not be used as existentials. The negative existentials are identical in structure, although the pronoun appears in the genitive case instead: #{t "мене нет", "mené nét"} “I am not here”, #{t "васе несат", "váse nésat"} “You all are not here”.
+    %p This existential copula can be used with an adverb of condition, weather, or time as well. Such sentences may be completely impersonal (leading to sentences consisting solely of an adverb or impersonal adjective, as in sentence 16, or may include a noun in the dative-instrumental case to indicate feeling or perception, as in 17.
+    = example_sentence "Кладно.",
+                       "Kládno.",
+                       "cold-{nom.sg.neut} Ø",
+                       "It’s cold."
+    = example_sentence "Мнѣ хокьакьо.",
+                       "Mně́ hókjakjo.",
+                       "I.{datins} Ø want-{act.impf.ptcp}-{nom.sg.neut}",
+                       "I feel bored",
+                       :comment => "(lit. “To me it is wanting [of something]”)"
+    
+  = section "In the Iterative" do
+    %p Буити also has an iterative or habitual counterpart, the first conjugation verb #{t "буивати", "buiváti"}. It is used whenever the act of being occurs repeatedly, although not necessarily regularly. Буивати acts more like a normal verb in that it lacks a future tense and has a merged present-future, and no morphological negative form. When in the past tense, it is implied that the action no longer occurs.
+    = example_sentence "Яс буивале Москеве кожно асто.",
+                       "Iás buivále Móskeve kóźno ásto.",
+                       "I.{nom} be.{iter}-{past}-{masc} Moscow-{loc} every-{acc.sg.neut} year-{acc.sg}",
+                       "I used to be in Moscow every year."
+    = example_sentence "Буиваст предакьа интересна кожну соботу вецерем.",
+                       "Buivást predákja interésna kóźnu sobótu vécerem.",
+                       "be.{iter}-{3sg} program-{nom.sg} interesting-{nom.sg.fem} every-{acc.sg.fem} Saturday-{acc.sg} evening-{datins.sg}",
+                       "There’s an interesting show on every Saturday evening."
+
+  = section "As a Fill Verb" do
+    %p Although not technically a function of the copula, the verb буити is used as a generic filler verb when another verb has been dropped (much like “do” does in English).
+    = example_sentence "Яс зацегале Михѣ со Натажей. Оне пришле, а-на не буила.",
+                       "Iás zacegále Míhě so Nataźéi. Óne priślé, a-ná ne builá.",
+                       "I.{nom} wait-{past}-{masc} Míha-{gen} with Natáśa-{datins}. He-{nom} arrive.{pf}-{past}-{masc}, whereas-she-{nom} {neg} be-{past}-{fem}",
+                       "I was waiting for Míha and Natáśa. He came, but she didn’t."
+    = example_sentence "Супе нет вокусне, а кура-та ест.",
+                       "Súpe nét vókusne, a kúra iést.",
+                       "soup-{nom.sg} be.{neg.3sg} tasty-{nom.sg.masc}, whereas chicken-{nom.sg}-{top} be-{3sg}",
+                       "The soup isn’t very good, but the chicken is."
+
+= section "The Imperfective" do
+  %p The imperfective is the default, unmarked form of the Novegradian verb. It represents an action not viewed as being complete or still in the process of happening, as well as habitual or ongoing actions.
+
+  = section "In the Present/Future" do
+    %p The imperfective present/future tense is used for all actions happening at the present moment, or at the time of the statement, and habitual actions that continue into the present.
+    = example_sentence "Яс живун в Елсинки.",
+                       "Iás źivún v Ielsinkí.",
+                       "I.{nom} live-{1sg} in Helsinki-{loc}",
+                       "I live in Helsinki."
+    = example_sentence "Муи худим школун кожне ден.",
+                       "Muí húdim śkólun kóźne dén.",
+                       "we.{nom} go.{indet}-{1pl} school-{lat.sg} every-{acc.sg.masc} day-{acc.sg}",
+                       "We go to school every day."
+    %p The same form indicates the imperfective future when there is any other sort of indication that the action takes place in the future, such as an adverb of time or just simple context. Use of this form (as opposed to the perfective future) makes no statement either way as to whether the action is to be viewed as ‘completed’ or not.
+    = example_sentence "Занок егье цидам ше магазин.",
+                       "Zánok iegjé cidám śé magazín.",
+                       "tomorrow still read-{1sg} this-{acc.sg.masc} magazine-{acc.sg}",
+                       "Tomorrow I’ll still be reading this magazine."
+    = example_sentence "Зав еужиной идем на брѣген.",
+                       "Zav iéuźinoi idém na brě́gen.",
+                       "behind-{v*} dinner-{datins.sg} go.{det}-{1pl} on beach-{lat.sg}",
+                       "After dinner we’re going to the beach."
+
+  = section "In the Past" do
+    %p Imperfective verbs in the past tense represent actions done in the past and that are not viewed as being ‘complete’ actions, or no statement is made regarding completion.
+    = example_sentence "Яс говориле со Николаёй, койда пришла Таша.",
+                       "Iás govoríle so Nikoláioi, kóida priślá Táśa.",
+                       "I.{nom} speak-{past}-{masc} with Nikoláie-{datins}, when arrive.{pf}-{past}-{fem} Táśa-{nom}",
+                       "I was speaking with Nikolai when Táśa came.",
+                       :comment => "(implying the conversation had not ended)"
+    = example_sentence "Она мотрѣла кино-то, но ей интересно не буило.",
+                       "Oná motrě́la kinó-to, no iéi interésno ne buílo.",
+                       "she.{nom} watch-{past}-{fem} movie-{acc.sg}-{top}, but she.{datins} interesting-{nom.sg.neut} {neg} be-{past}-{neut}",
+                       "She watched the movie, but didn’t find it interesting.",
+                       :comment => "(implying the entire film was not seen when the judgment was made)"
+    %p Negated past actions are almost always imperfective, since actions that never occurred cannot be viewed as complete.
+    = example_sentence "Яс не кренале овокь-то во марнатѣ.",
+                       "Iás ne krenále óvokj-to vo marnátě.",
+                       "I.{nom} {neg} buy-{past}-{masc} fruit-{gen.pl}-{top} in store-{loc.sg}",
+                       "I didn’t buy the fruit in the store."
+    
+  = section "In the Future" do
+    %p The periphrastic future, formed using the future tense of ‘be’ plus an infinitive, is used to express the future when it cannot be expressed properly in the present-future tense, or it would be too confusing to do so. Often it will also be used when it is clear that the action is in the future in order to further emphasize or clarify. It is most often seen in the negative.
+    = example_sentence "Надуа со Вѣрой не бадева вастати Марка во кавѐ шеден вецерем.",
+                       "Naduá so Vě́roi ne bádeva vástati Márka vo kavé śedén vécerem.",
+                       "we.{nom.dl} with Vě́ra-{datins} {neg} be.{fut}-{1dl} meet-{inf} Márke-{acc} in café-{loc.sg} today evening-{datins.sg}",
+                       "Vě́ra and I won’t be able to meet Márke in the café tonight."
+    = example_sentence "Владителе Ревела соѕаса не бадет осдавати за пуидам.",
+                       "Vladítele Révela sodzása ne bádet osdaváti za puidám.",
+                       "governor-{nom.sg} Tallinn-{gen} now {neg} be.{fut}-{3sg} answer.{impf}-{inf} for question-{datins.pl}",
+                       "The Governor of Tallinn is currently not answering questions.",
+                       :comment => "(lit. “will not answer now”)"
+    %p The infinitive verb can never be perfective.
+
+  = section "In the Future Hypothetical" do
+    %p The future hypothetical is an analytic construction formed from the future tense of ‘be’ plus the past tense form of another verb (which was originally a participle). The imperfective future hypothetical, which can only appear negated, indicates that an action is being presumed not to have taken place. It is most commonly found after the particle #{t "анно", "ánno"} “if”. The term “future” is only used because of the presence of the future tense form of буити. Interestingly, the negative particle не may be placed either before буити (as is required in the future tense) or between буити and the main verb (which is never allowed in the future tense). The main verb still agrees with its subject in gender and number, as though it were fully independent.
+    = example_sentence "Анно вуи рагѣ егье не бадете приймѣли, призуоните мнѣ.",
+                       "Ánno vuí ragě́ iegjé ne bádete prijmě́li, prizuoníte mně́.",
+                       "if you.{nom.pl} money-{gen.sg} still {neg} be.{fut}-{2pl} receive-{past}-{pl}, call-{2pl.imper} I.{datins}",
+                       "If you haven’t received the money yet, call me."
+    = example_sentence "Анно Марке-те шево бадет не довѣгле, о ме треба оѕити вноу.",
+                       "Ánno Márke-te śevó bádet ne dově́gle, o mé tréba odzíti vnóu.",
+                       "if Márke-{nom}-{top} this-{gen.sg} be.{fut}-{3sg} {neg} understand-{past}-{masc}, at I.{lat} need-{nom.sg} teach-{inf} again",
+                       "If Márke hasn’t understood this [yet], I need to teach him again."
+
+= section "The Perfective" do
+  %p The Novegradian perfective aspect (not to be confused with perfect aspect) marks actions that are viewed as complete and whole, and is the counterpart of the imperfective aspect. More emphasis is also placed on the conditions surrounding the action, meaning some sort of nominal or adverbial element is always required, most often a direct object. That is, a sentence like #{t "яс ѣгле", "ias iě́gle"} “I ate (#{abbrev 'impf'})” is grammatical, but #{t "**яс сиѣгле", "ias siě́gle"} “I ate (#{abbrev 'pf'})” is not, unless a direct object is provided or clearly implied; native speakers perceive it as a sentence fragment.
+
+  = section "In the Future" do
+    %p The present/future forms, which could imply either tense for imperfective verbs, always indicate the future in perfective verbs (since an action cannot be completed at the present moment, or else it would already be complete). The perfective future indicates that the action is to be completed within a contextually-specified time.
+    = example_sentence "Яс занок напихьун ше документе.",
+                       "Iás zánok napíhjun śé dokuménte.",
+                       "I.{nom} tomorrow write.{pf}-{1sg} this-{acc.sg.masc} document-{acc.sg}",
+                       "I’ll write [and complete] this document tomorrow."
+    %p Several common verbs only have a perfective future, and no imperfective (i.e., analytic) future. The most common are #{t "мойкьи", "móikji"} “be able to” and #{t "хотѣти", "hótěti"} “want”, which become #{t "сомойкьи", "somóikji"} and #{t "захотѣти", "zahótěti"}, respectively.
+    = example_sentence "Оне сомузет наценати проехте-те, койда приймѣет иструксю.",
+                       "Óne somúzet nacenáti proiéhte-te kóida prijmě́iet istrúksiu.",
+                       "he.{nom} be_able.{pf}-{3sg} begin-{inf} project-{nom.sg}-{top}, when receive-{3sg} instructions-{acc.sg}",
+                       "He’ll be able to begin the project once he receives instructions."
+    %p The difference between the perfective and imperfective can best be explained using examples identical in all ways but for aspect. In example 35 below, the conjunction койда “when” changes its meaning predictably when the aspects of verbs around it are manipulated. In example 36, the adverb #{t "соѕаса", "sodzása"} “now” modifies the verbs.
+    = example_sentence "Они оѣсали, койда надуа егралѣ/пройгралѣ на шахмат.",
+                       "Oní oiě́sali, kóida naduá iegrálě/proigrálě na śáhmat.",
+                       "they.{nom} leave.{pf}-{past}-{pl}, when we.{nom.dl} play-{past}-{dl}/play.{pf}-{past}-{dl} on chess-{acc.sg}",
+                       { "Imperfective" => "They left while we were playing chess.", "Perfective" => "They left once we had finished our game of chess." }
+    = example_sentence "Яс соѕаса миеюн/омиеюн суои одѣгьѣ.",
+                       "Iás sodzása miéiun/omiéiun suojí odě́gjě.",
+                       "I.{nom} now wash-{1sg}/wash.{pf}-{1sg} {reflx.poss}-{acc.pl} clothing-{acc.pl}",
+                       { "Imperfective" => "I’m washing my clothes now.", "Perfective" => "I’m just about to finish washing my clothes." }
+
+  = section "In the Past" do
+    %p Perfective verbs are most often used in the past tense, where they indicate that an action was successfully “completed”.
+    = example_sentence "Они вецераш законцили план-от, котрий подѣлали.",
+                       "Oní véceraś zakóncili plan-ót, kótrij podě́lali.",
+                       "they.{nom} yesterday finish.{pf}-{past}-{pl} plan-{acc.sg}-{top}, {rel}-{acc.sg.masc.def} spend_time_on-{past}-{pl}",
+                       "Yesterday they finished the plan they were making."
+    = example_sentence "Ти кодаш ли цидала/процидала шу нигу?",
+                       "Tí kódaś li cidála/procidála śú nígu?",
+                       "you.{nom} sometime {q} read-{past}-{fem}/read.{pf}-{past}-{fem} this-{acc.sg.fem} book-{acc.sg}",
+                       { "Imperfective" => "Have you ever read this book before?", "Perfective" => "Did you ever finish this book?" }
+
+  = section "In the Future Hypothetical" do
+    %p The perfective future hypothetical (formed using the future tense of “be” plus the past perfective form of the main verb) marks an action temporarily assumed to have happened, and is therefore the positive form of the imperfective future hypothetical.
+    = example_sentence "Прошкьите мене-то анно цеш продиуно ваме бадун сорѣѕиле.",
+                       "Prośkjíte mené-to ánno céś prodíuno váme bádun sorědzíle.",
+                       "forgive.{pf}-{2pl.imper} I.{acc}-{top} if something.{acc} offensive-{acc.sg.neut} you.{datins.pl} be.{fut}-{1sg} say.{pf}-{past}-{masc}",
+                       "Forgive me if I have said something offensive."
+
+= section "Possession" do
+  = section "Have" do
+    %p Possession in Novegradian is indicated using a periphrastic construction, literally meaning “at X there is Y”. The construction likely originates from Finnish, the native verb “have” having been lost centuries ago. The preposition #{t "о", "o"} is followed by the possessor in the genitive case, and then the possessed object in whichever case is most appropriate. If the subject (the possessed object) is definite, it will often appear with a topicalization marker. When negated, the non-possessed object must be in the genitive.
+    = example_sentence "О мене доваин сина с едной докьерем.",
+                       "O mené dóvajin sína s iednói dókjerem.",
+                       "at I.{gen} Ø two.{anim}-{nom} son-{gen.sg} with one-{datins.sg.fem} daughter-{datins.sg}",
+                       "I have two sons and a daughter."
+    = example_sentence "Новей возе-те на паркишѣ е ов Андрея.",
+                       "Nóvei vóze-te na párkiśě ie ov Andréia.",
+                       "new-{nom.sg.masc.def} car-{nom.sg}-{top} on parking_lot-{loc.sg} be.{3sg.clitic} at-{v*} Andréie-{gen}",
+                       "The new car in the lot is Andréie’s."
+    %p In other tenses the copula is non-zero and must agree in person, gender, and number (whichever are applicable) with the possessed noun, the grammatical subject. The iterative буивати may also be used.
+    = example_sentence "О нею буиле велем болише дум близе Неуграда.",
+                       "O néiu buíle vélem bóliśe dúm blíze Néugrada.",
+                       "at {n*}-they.{gen.dl} be-{past}-{masc} very large-{nom.sg.masc} house-{nom.sg} near Néugrade-{loc}",
+                       "The two of them used to have a very large house near Néugrade."
+    = example_sentence "О нѣ цазам буивати проблемоу со суоим ланкьом.",
+                       "O ně́ cazám buiváti problemóu so suojím lankjóm.",
+                       "at {n*}-she.{gen} sometimes be.{iter}-{3pl} problem-{part.pl} with {reflx.poss}-{datins.sg.neut} hip-{datins.sg}",
+                       "She has some problems with her hip from time to time."
+    %p Expressions such as “I want to have a cat”, normal in English, are illegal in Novegradian. They would be rendered with a single verb: #{t "Яс кошѣ хокьун", "Iás kóśě hókjun"}, literally “I want a cat”.
+    %p The above constructions may only be used if the possessor is animate. If the possessor is inanimate, a construction such as “there is X in Y” must be used. “Ест ли” and “есат ли” reduce to #{t "е-ли", "ié-li"} “is there?” and #{t "су-ли", "sú-li"} “are there?” in questions, though “еста ли” does not reduce.
+    = example_sentence "Е-ли универсидате во вашем градѣ?",
+                       "Ié-li universidáte vo váśem grádě?",
+                       "be.{3sg.clitic}-{q} university-{nom.sg} in your.{pl}-{loc.sg.masc} city-{loc.sg}",
+                       "Does your city have a university?",
+                       :comment => "(lit. “Is there a university in your city?”)"
+    %p Note, however, that the verb #{t "ношити", "nóśiti"} (literally “carry”) is used to mean “have on one’s person” when followed by the preposition #{t "ими", "imí"} “with”:
+    = example_sentence "Нусиш ли ими рагу зав обѣдем?",
+                       "Núsiś li imí rágu zav óbědem?",
+                       "carry.{indet}-{2sg} {q} with money-{acc.sg} for-{v*} lunch-{datins.sg}",
+                       "Do you have money for lunch?"
+
+  = section "Need" do
+    %p Need is expressed using the same sort of construction, where the possessed noun is #{t "треба", "tréba"} “need, necessity”. Unlike the normal possessive construction, however, the lative pronouns are generally used in place of the genitive, but if the possessor is not a pronoun, the genitive case is still used (see examples 46 and 47 below). If what is needed is a noun, it will appear in the genitive case after треба, literally meaning “need of X”.
+    = example_sentence "О ме треба туоево насуѣта.",
+                       "O mé tréba tuoievó násuěta.",
+                       "at I.{lat} Ø need-{nom.sg} your-{gen.sg.masc} advice-{gen.sg}",
+                       "I need your advice."
+    = example_sentence "О Крежимира нет требѣ болша воза.",
+                       "O Kreźímira nét trébě bólśa vóza.",
+                       "at Kreźímire-{gen} be.{neg.3sg} need-{gen.sg} large.{comp}-{gen.sg.masc} car-{gen.sg}",
+                       "Kreźímire doesn’t need a bigger car."
+    %p If what is needed is an action, the verb is placed after треба in either the infinitive or supine form. The supine is used when there is physical movement involved, the infinitive otherwise.
+    = example_sentence "О неи треба оѕитиш тѣм-како ше дѣлати бес помогьи.",
+                       "O néji tréba odzítiś tě́m-kako śé dě́lati bes pomogjí.",
+                       "at he.{lat} Ø need-{nom.sg} teach-{inf}-{mid} {rel.datins.sg}-how this-{nom.sg} do-{inf} without help-{gen.sg}",
+                       "He needs to learn how to do this without help."
+    = example_sentence "О ме многе требок омуит наш песе.",
+                       "O mé mnóge trébok omuít náś pése.",
+                       "at I.{lat} Ø much need-{part.sg} wash.{pf}-{sup} our-{nom.sg.masc} dog-{nom.sg}",
+                       "I really need to [go] wash our dog."
+
+= section "Using Two Verbs" do
+  %p When there are two verbs present in a single clause, the first conjugates in agreement with the grammatical subject, and the second remains in the infinitive or supine. The rules for which are the same as used with треба to express necessity: the infinitive if the action is seen as not involving movement, the supine if seen as involving movement. The tendencies for individual verbs vary among speakers, and closer to the Russian border, the infinitive may be used in all situations.
+  = example_sentence "Яс радеюн еграт на вутбољ.",
+                     "Iás radéiun iegrát na vutbół.",
+                     "I.{nom} enjoy-{1sg} play-{sup} on football-{acc.sg}",
+                     "I enjoy playing/going to play football."
+  = example_sentence "Муи нашнем работати трес три дена.",
+                     "Muí naśném rabótati tres trí déna.",
+                     "we.{nom} begin.{pf}-{1pl} work-{inf} within three.{acc} day-{gen.sg}",
+                     "We’ll start working in three days."
+  %p The entire phrase is negated by negating the main verb.
+  = example_sentence "Не хокьун ис.",
+                     "Ne hókjun ís.",
+                     "{neg} want-{1sg} go-{sup}",
+                     "I don’t want to go."
+  %p If both verbs are negated, the action is perceived as involuntary.
+  = example_sentence "Яс не могле не волубитиш во нею.",
+                     "Iás ne mógle ne volubítiś vo néiu.",
+                     "I.{nom} {neg} be_able-{past}-{masc} {neg} fall_in_love-{inf}-{mid} in she.{lat}",
+                     "I couldn’t help but fall in love with her.",
+                     :comment => "(lit. “I couldn’t not fall in love”)"
+  %p If a verb fills the subject slot of a sentence rather than the direct object, that verb may only be in the infinitive and its own local direct objects must be placed before it. In such sentences #{t "ше", "śe"} “this” or #{t "ше-и", "śé-i"} “this is” are often used as resumptive pronouns.
+  = example_sentence "Ниги цидати ше-и вешелом дѣлом.",
+                     "Nígi cidáti śé-i véśelom dě́lom.",
+                     "Book-{nom.pl} read-{inf} this-{nom.sg}-be.{3sg.clitic} merry-{datins.sg.neut} matter-{datins.sg}",
+                     "Reading books is fun.",
+                     :comment => "(lit. “To read books, this is a merry matter.”)"
+  = example_sentence "Мнѣ стоит ли ше кренати?",
+                     "Mně́ stójit li śé krenáti?",
+                     "I.{datins} be_worth-{3sg} {q} this-{nom.sg} buy-{inf}",
+                     "Is it worth it for me to buy this?"
+  %p If the infinitive verb is negated, however, then its direct object is free to move around and be placed either before or after it.
+  = example_sentence "Не страшити позок ше-и бадет сложено.",
+                     "Ne stráśiti pozók śé-i bádet slóźeno.",
+                     "{neg} frighten-{inf} bird-{gen.pl} this-{nom.sg}-be.{3sg.clitic} be.{fut}-{3sg} difficult-{nom.sg.neut}",
+                     "Not frightening the birds will be difficult."
+
+= section "Verbs of Motion" do
+  %p Verbs of motion in Novegradian display a three-way contrast of imperfective determinate, imperfective indeterminate, and perfective, instead of the two-way distinction of perfective and imperfective found in other verbs. They also freely take directional prefixes.
+
+  = section "Imperfective Determinate Verbs" do
+    %p Determinate verbs of motion refer to a single trip or action with a specific destination.
+    = example_sentence "Яс соѕаса ѣдун думове: тамо бадун трес пиннацити минут.",
+                       "Iás sodzása iě́dun dumóve: támo bádun tres pinnáciti minút.",
+                       "I.{nom} now go_by_vehicle.{det}-{1sg} homeward: there be.{fut}-{1sg} within fifteen-{acc} minute-{gen.pl}",
+                       "I’m going home now; I’ll be there in fifteen minutes."
+    = example_sentence "О нею треба ис на работун занок.",
+                       "O néiu tréba ís na rabótun zánok.",
+                       "at she-{lat} need-{nom.sg} go.{det}-{sup} on work-{lat.sg} tomorrow",
+                       "She has to go to work tomorrow."
+    %p It is also the default form used when talking about the action in general.
+    = example_sentence "Она радеет плут кожне лѣтен.",
+                       "Oná radéiet plút kóźne lě́ten.",
+                       "she.{nom} enjoy-{3sg} swim.{det}-{sup} every-{acc.sg.masc} summer-{acc.sg}",
+                       "She loves to go swimming every summer."
+    %p A determinate verb in the past tense implies a one-way trip; that is, the subject went somewhere, and as of the present, is still in that location.
+    %p Determinate verbs are also generally required when duration is specified, since the indefinite nature of indeterminate verbs means they generally cannot take a specific durational argument.
+    = example_sentence "Муи ледѣли пети пор.",
+                       "Muí leděli péti pór.",
+                       "we.{nom} fly.{det}-{past}-{pl} five-{acc} hour-{gen.pl}",
+                       "We flew for five hours."
+    %p The simple future (буити + infinitive) is never used with imperfective verbs of motion (though note 11.6.8 below). It can, however, be implied using the present-future tense and adverbs of time.
+
+  = section "Imperfective Indeterminate Verbs" do
+    %p Indeterminate verbs of motion express three main concepts: multiple directions, uncertain direction, or multiple events.
+    %p “Multiple directions” most often refers to a round trip. These verbs will often be translated into English using the verb “to be”, and in this sense can only be found in the past tense.
+    = example_sentence "Муи ѣздили Вранцюн во лутану.",
+                       "Muí iě́zdili Vranciún vo lútanu.",
+                       "we.{pl} go_by_vehicle.{indet}-{past}-{pl} France-{lat} in February-{acc.sg}",
+                       "We were in France in February."
+    = example_sentence "Надуа ходилѣ кинотеятрен зав еужиной.",
+                       "Naduá hódilě kinoteiátren zav iéuźinoi.",
+                       "we.{nom.dl} go.{indet}-{past}-{dl} movie_theatre-{lat.sg} after-{v*} dinner-{datins.sg}",
+                       "We went to the movie theatre after dinner [and later left]."
+    %p When the direction is uncertain, these verbs take on the meaning of “wander”.
+    = example_sentence "Надуа со дѣвушкой о мене ходилѣ на паркѣ.",
+                       "Naduá so dě́vuśkoi o mené hódilě na párkě.",
+                       "we.{nom.dl} with girl-{datins.sg} at I.{gen} go.{indet}-{past}-{dl} on park-{loc.sg}",
+                       "My girlfriend and I were walking around the park."
+    %p Habitual actions also use the indeterminate form.
+    = example_sentence "Яс лидам на США кожна дова асту.",
+                       "Iás lidám na SŚA kóźna dóva ástu.",
+                       "I fly.{indet}-{1sg} on USA-[{lat.pl}] every-{gen.sg.neut} two-{acc.neut} year-{gen.sg}",
+                       "I fly to the US every two years."
+    %p Indeterminate verbs of motion cannot appear in the future tense, only in the past and present.
+
+  = section "Perfective Verbs of Motion" do
+    %p Perfective verbs of motion are formed using the prefix #{t "по-", "po-"} and the determinate imperfective form. It refers directly to the setting off of an action. This type of perfective has limited use in Novegradian, however, and only ever appears in the future tense.
+    = example_sentence "Она пойдет кренат клѣбек со млегом зе марната трес пору.",
+                       "Oná poidét krenát klěbék so mlegóm ze marnáta tres póru.",
+                       "she.{nom} go.{pf}-{3sg} buy-{sup} bread-{part.sg} with milk-{datins.sg} from store-{gen.sg} within hour-{acc.sg}",
+                       "She will go to buy some bread and milk from the store within an hour."
+    = example_sentence "Самоледе-те поледит во пољ петѣе.",
+                       "Samoléde-te poledít vo pół pétěie.",
+                       "airplane-{nom.sg}-{top} fly.{pf}-{3sg} in half-{acc.sg} fifth-{gen.sg.fem.def}",
+                       "The airplane leaves at 4:30."
+
+  = section "Prefixed Verbs of Motion" do
+    %p Imperfective verbs of motion (both determinate and indeterminate) freely take directional prefixes to further elaborate on the action. The prefixes #{t "при-", "pri-"} and #{t "о-", "o-"} are the most common, meaning “arrive” and “depart” respectively. Prefixed indeterminate verbs are effectively imperfective, and determinate verbs perfective.
+    = example_sentence "Они занок ко наме приѣдут.",
+                       "Oní zánok ko náme prijě́dut.",
+                       "they.{3pl} tomorrow toward we.{datins} arrive_by_vehicle.{pf}-{3pl}",
+                       "They’ll arrive at our place tomorrow."
+    = example_sentence "Анно ти страшиш позок, вие оледат.",
+                       "Ánno tí stráśiś pozók, vijé oledát.",
+                       "if you.{nom} scare-{2sg} bird-{acc.pl}, all-{nom.pl} fly_away.{pf}-{3pl}",
+                       "If you scare the birds, they’ll all fly off."
+    %p In other cases, a sort of ‘preposition agreement’ may be seen, where direction is marked both on the verb and on the preposition following it.
+    = example_sentence "Оне вошле во библиёдекун.",
+                       "Óne voślé vo biblijodékun.",
+                       "he.{nom} in-go-{past}-{masc} in library-{lat.sg}",
+                       "He walked into the library."
+    = example_sentence "Како доѣcати дов Онежеска?",
+                       "Káko doiě́sati dov Onéźeska?",
+                       "how up_to-go_by_vehicle-{inf} up_to-{v*} Onéźeske-{gen}",
+                       "How do you get to Onéźeske?"
+
+  = section "Verbs of Motion with Other Verbs" do
+    %p When verbs of motion are used in combination with other verbs in the same clause, the other verb must be in the supine form (since the verb of motion guarantees that there is movement involved).
+    = example_sentence "Они идут калёу љовит.",
+                       "Oní idút kalióu łóvit.",
+                       "they.{3pl} go.{det}-{3pl} fish-{part.pl} catch-{sup}",
+                       "They’re going out to catch some fish."
+    = example_sentence "Иди пизат ей написе!",
+                       "Idí pizát iéi nápise!",
+                       "go.{det}-{2sg.imper} write-{sup} she.{datins} letter-{nom.sg}",
+                       "Go write her a letter!"
+    %p The construction исти + verb does not express the future tense as in English, but indicates that some sort of relocation is required before the action can be performed.
+
+  = section "Complements of Verbs of Motion" do
+    %p The complement of a prefixed verb of motion, representing either destination, may appear either with or without a preposition. However, there is a strong tendency to include the preposition due to the phenominon of “preposition agreement” mentioned earlier. Example 69 above, for example, could just as easily be written #{t "Оне вошле библиёдекун", "Óne voślé biblijodékun"}.
+    %p However, with simple unprefixed verbs of motion (that is, the basic determinate, indeterminate, or perfective forms), the rules are more complicated. There are four possible structures for the complement, and each has a slightly different meaning.
+    %ul
+      %li If the complement is in the lative case and there is no preposition, simple allative motion is expressed: исти Новеграден “go to Novegrad”.
+      %li If the complement is in the lative case and there is a preposition, either во or на as appropriate, specific motion into is expressed: исти на Новеграден “go into Novegrad”.
+      %li If the complement is in the dative-instrumental case and there is no preposition, motion by way of is expressed: исти Новеградем “go by way of Novegrad”.
+      %li If the complement is in the dative-instrumental case and there is a preposition (i.e., #{t "ко", "ko"}), motion towards the general area is expressed: исти ко Новеградем “go towards Novegrad, to into the neighborhood of Novegrad”. However, if the object of the preposition is a person, then it means simply “to” or “to the home of”: #{t "исти ко Маркой", "ísti ko Márkoi"} “go to Márke’s”.
+
+  = section "Исти/Ходити, Ѣсати/Ѣздити, Брести/Бродити" do
+    %p The three verbs of motion исти ~ ходити, ѣсати ~ ѣздити, and брести ~ бродити deserve further examination in terms of when they are semantically appropriate.
+    %p The pair исти/ходити means “to go on foot”, and thus refers primarily to short distances.
+    = example_sentence "Они шли ко сужѣгьам.",
+                       "Oní ślí ko suźěgjám.",
+                       "they.{nom} go.{det}-{past}-{pl} toward neighbor-{datins.pl}",
+                       "They went to the neighbors’ house."
+    %p The pair ѣсати/ѣздити means “to go by vehicle”.
+    = example_sentence "Муи ѣдем Осташковен на цетири дена.",
+                       "Muí iě́dem Óstaśkoven na cétiri déna.",
+                       "we.{nom} go_by_vehicle.{det}-{1pl} Óstaśkou-{lat} on four-{acc} day-{gen.sg}",
+                       "We’re going to Óstaśkou for four days."
+    %p However, buses, trams, trains, and other forms of ground transportation that run on a schedule also use исти/ходити when the motion of the vehicle in question is being described. Cars, trucks, and other non-scheduled vehicles must use ѣсати/ѣздити.
+    = example_sentence "Аутобусе соѕаса прийдет.",
+                       "Áutobuse sodzása prijdét.",
+                       "bus-{nom.sg} now arrive.{pf}-{3sg}",
+                       "The bus will arrive in just a moment."
+    = example_sentence "Вози вех ден па вех граден ѣздат.",
+                       "Vózi véh dén pa véh gráden iě́zdat.",
+                       "car-{nom.pl} all-{acc.sg.masc} day-{masc.sg} along all-{lat.sg.fem} city-{lat.sg} go_by_vehicle.{indet}-{3pl}",
+                       "Cars drive about the city all day long."
+    %p The pair брести/бродити is uniquely Novegradian, and means “walk on an unstable surface”. This primarily refers to mud, snow, or shallow water (i.e., that one can walk or wade through, but not swim). It competes with both исти/ходити and ѣсати/ѣздити, that is, it can be used to describe both walking proper and conveyance by ground vehicles.
+    = example_sentence "Дѣдете вие бредут во школун во снѣгѣ за сурвой.",
+                       "Dě́dete vijé bredút vo śkólun vo sně́gě za survói.",
+                       "child-{nom.pl} all-{nom.pl} go_over_unstable_surface.{det}-{3pl} in school-{lat.sg} in snow-{loc.sg} after blizzard-{datins.sg}",
+                       "The children are walking to school in the snow after the blizzard."
+    = example_sentence "Не старайтеш брес ногам или возем по розлитѣх драгѣх.",
+                       "Ne staráiteś brés nogám íli vózem po rozlítěh drágěh.",
+                       "{neg} try-{2pl.imper}-{mid} go_over_unstable_surface-{sup} foot-{datins.pl} or car-{datins.sg} along flood-{pass.pf.ptcp}-{loc.pl} road-{loc.pl}",
+                       "Do not attempt to walk or drive on flooded roads.",
+                       :comment => "(lit. “go [брести] by foot or by car”)"
+    %p When used with the prepositions ими/со “with”, it can also indicate hauling something across this surface. This prepositional phrase must immediately follow the verb, as it has become somewhat of a fixed expression.
+    = example_sentence "Оне старасци пребродит со кунем трес рѣгѣ.",
+                       "Óne starásci prebrodít so kúnem tres rěgě́.",
+                       "he.{nom} try-{3sg}-{mid} ford-{sup} with horse-{datins.sg} across river-{gen.sg}",
+                       "He is trying to get his horse across the river.",
+                       :comment => "(lit. “ford with the horse across the river”)"
+    %p The original sense of the pair брести/бродити in Common Slavic was “ford (a river, etc.)”, although this meaning too has drifted in many of the individual modern-day Slavic languages.
+
+  = section "The Future of Unprefixed Imperfective Verbs of Motion" do
+    %p For the most part, the unprefixed imperfective verbs of motion lack a true future tense. Generally the perfective must be used, or if the time the event takes place is in the near future, the present determinate may be used as an implied future: #{t "яс пойдун/идун трес три дена", "Iás poidún/idún tres trí déna"} “I will leave/am leaving in three days”. The indeterminate present can never be used as an implied future.
+    %p However, there are times, albeit generally infrequently, when some specific quality of the imperfective verbs of motion is needed in the future tense. The perfective, for instance, cannot express duration (**поѣдун трѣ порѣ “I will drive for three hours”) or iteration (**пойдун кожну шемицу “I will go every week”), since perfective verbs by definition can refer only to a single moment in time. The determinate and indeterminate seemingly must be used in these cases. However, since approximately the mid-19th century, the future tense forms of буити cannot be with unprefixed imperfective verbs of motion.
+    %p In place of the буити future, a quirky paraphrase is used that involves the Novegradian possessive construction. This future is formed with the standard о “at” + genitive possessive, followed by the active imperfective participle in the neuter singular, followed by the future tense forms of буити in either the third person singular, or matching whatever the logical subject of the sentence is. The participle must always been in the neuter singular, as it acts impersonally. The use of the third person singular future form of “be” is older and more formal, but the agreeing form is now widely accepted as well. The resulting construction is virtually impossible to translate literally; it is seemingly both impersonal and personal at the same time.
+    = example_sentence "О насе трѣ порѣ ѣдакьо бадет/бадем Ригун.",
+                       "O náse trě́ pórě iědákjo bádet/bádem Rígun.",
+                       "at we.{gen} three.{acc.fem} hour-{gen.sg} go_by_vehicle.{det}-{ptcp.act.impf}-{nom.sg.neut} be.{fut}-{3sg}/be.{fut}-{1pl} Riga-{lat}",
+                       "We will drive for three hours to Riga."
+    = example_sentence "Ов Анастасин ходекьо мужеѣ бадет кожне ден, койда бадет во Паришѣ.",
+                       "Ov Anastásin hodékjo muźéiě bádet kóźne dén, kóida bádet vo Paríśě.",
+                       "at-{v*} Anastásia-{gen} go.{indet}-{act.impf.ptcp}-{nom.sg.neut} museum-{lat.pl} be.{fut}-{3sg} every-{acc.sg.masc} day-{acc.sg}, when be.{fut}-{3sg} in Paris-{loc}",
+                       "Anastásia will go to museums every day while she is in Paris.",
+                       :comment => "(lit. “will be in Paris”)"
+    %p If the logical subject is a pronoun, the reflexive form #{t "о шебе", "o śebé"} may never be used, even if the буити is agreeing and encoding subject information as well. For example, in 80 above, **О шебе ѣдакьо бадем is not grammatical.
+    %p This workaround may be avoid entirely if the verb of motion is not the direct complement of “to be”, such as in constructions of necessity. Sentence 82 below literally means “at me there will be need of going...”, so the noun “need” intervenes between the copula and the verb of motion. Saying “**О ме треба бадет о мене ѣздекьо буит” for “I will have to go” is completely ungrammatical and sounds outright comical to native ears.
+    = example_sentence "О ме треба бадет ѣздит Торген кожне мѣшици.",
+                       "O mé tréba bádet iě́zdit Tórgen kóźne mě́śici.",
+                       "at I.{lat} need-{nom.sg} be.{fut}-{3sg} go_by_vehicle.{indet}-{sup} Tórge-{lat} every-{acc.sg.masc} month-{acc.sg}",
+                       "I will have to go to Tórge every month."
+
+= section "The Subjunctive in Simple Clauses" do
+  %p The subjunctive mood’s primary functions are in hypothetical clauses, and therefore it usually requires more than one clause in a sentence. Such usage will be described later. However, it may appear in simple clauses in polite requests, most often in question form. The subjunctive particle itself generally appears as the second element in a sentence, meaning it will most often appear after the pronoun or verb.
+  = example_sentence "Ти би со мнѣ шла?",
+                     "Tí bi so mně́ ślá?",
+                     "you.{nom} {subj.sg} with I.{datins} go.{det}-{past}-{fem}",
+                     "Would you like to come with me?"
+  = example_sentence "Вуи бу хотѣли шѣдѣци?",
+                     "Vuí bu hótěli śědě́ci?",
+                     "you.{nom.pl} {subj.pl} want-{past}-{pl} sit-{sup}-{mid}",
+                     "Would you all like to sit down?"
+  %p By following an interrogative pronoun with the subjunctive particle би, the interrogative is transformed into a hypothetical indefinite pronoun.
+  = example_sentence "Куде бу они омѣстовалиш, найдем.",
+                     "Kudé bu oní oměstováliś, naidém.",
+                     "where {subj.pl} they.{nom} locate-{past}-{pl}-{mid}, find.{pf}-{1pl}",
+                     "Wherever they may be, we will find them."
+  = example_sentence "Торгай ше тѣм о ково би буила велна рага.",
+                     "Torgái śé tě́m o kovó bi builá vélna rága.",
+                     "sell-{2sg.imper} this-{acc.sg} {rel.datins.sg} at who-{gen} {subj.sg} be-{past}-{pl} enough-{nom.sg.fem} money-{nom.sg}",
+                     "Sell it to whomever has has enough money."
+  %p When the subjunctive particle is placed at the beginning of the sentence and stressed, it usually translates as “if only”, expressing a wish. If the subject is singular, #{t "би", "bi"} is replaced by #{t "буиле", "buíle"}, the /l/ added to reinforce this usually unstressed particle and eventually resulting in its “merger” with the past tense of буити. The dual and plural forms remain unchaged.
+  = example_sentence "Бис ондуа приходилѣ.",
+                     "Bís onduá prihódilě.",
+                     "{subj.dl} they.{nom.dl} arrive-{past}-{dl}",
+                     "If only the two of them had come."
+  %p When the main verb is “be”, it usually is dropped to avoid repetition.
+  = example_sentence "Буиле яс боғате!",
+                     "Buíle iás boǧáte!",
+                     "{subj.sg} I.{nom} rich-{nom.sg.masc}",
+                     "If only I were rich!",
+                     :comment => "(Буиле яс буиле боғате is also acceptable, but uncommon)"
+
+= section "The Imperative" do
+  %p The primary function of five imperative forms is to express a command or request. The first person imperatives are equivalent to English “Let’s X” (the dual if there if one other person, the plural if more).
+  = example_sentence "Затули дуери-ти койда ти ойдеш.",
+                     "Zatulí duéri-ti kóida tí oidéś.",
+                     "close.{pf}-{2sg.imper} door-{nom.sg}-{top} when you.{nom} leave.{pf}-{2sg}",
+                     "Close the door when you leave."
+  = example_sentence "Пойдѣмте вецерем ѣс во ресторанѣ „Олимпя‟.",
+                     "Poidě́mte vécerem iě́s vo restoráně “Olímpia”.",
+                     "go.{pf}-{1pl.imper} evening-{datins.sg} eat-{sup} in restaurant-{loc.sg} Olympia-{nom.sg}",
+                     "Let’s go eat at the Olympia restaurant tonight."
+  = example_sentence "Воходите, прухьун.",
+                     "Vohodíte, prúhjun.",
+                     "enter-{2pl.imper} ask-{1sg}",
+                     "Come in, please."
+  %p Negative imperatives are formed with не and the regular imperative.
+  = example_sentence "Не дѣлай шево!",
+                     "Ne dě́lai śévo!",
+                     "{neg} do-{2sg.imper} this-{gen.sg}",
+                     "Don’t do that!"
+  %p A hortative mood (“Let X do Y”) is formed using the imperfective imperative form of #{t "дати", "dáti"} “give”, a noun or pronoun in the dative/instrumental case, and a perfective verb in the infinitive or supine.
+  = example_sentence "Дай мнѣ оис!",
+                     "Dái mně́ ójis!",
+                     "give-{2sg.imper} I.{datins} leave.{pf}-{sup}",
+                     "Let me leave!"
+  %p While the subject pronoun is generally dropped in imperatives, they may be left in to create an informal request or urging. This can be made more rude by topicalizing the subject pronoun.
+  = example_sentence "Ти иди!",
+                     "Tí idí!",
+                     "you.{nom} go.{det}-{2sg.imper}",
+                     "Why don’t you go?"
+  = example_sentence "Ти-то иди!",
+                     "Tí-to idí!",
+                     "you.{nom}-{top} go.{det}-{2sg.imper}",
+                     "You there, go!"
+  %p The sole optative #{t "буди", "budí"}, historically a third person imperative, means “let X be”. It always appears at the beginning of the sentence and is immediately followed by a noun or pronoun in the nominative case. The noun can only be third person, but may be of any number.
+  = example_sentence "Буди они страви!",
+                     "Budí oní strávi!",
+                     "be.{opt} they.{nom} healthy-{nom.pl}",
+                     "May they be healthy!"
+  %p Other optatives may be formed with the particles #{t "ати", "áti"} or #{t "ат", "at"} followed by a verb in the present or future tense.
+  = example_sentence "Ати вѣцнѣ живет Великей Новеграде!",
+                     "Áti vě́cně źivét Velíkei Novegráde!",
+                     "{opt} eternal-{adv} live-{3sg} Great-{nom.sg.masc.def} Novegrad-{nom}",
+                     "Long live Great Novegrad!",
+                     :comment => "(lit. “May Great Novegrad live eternally”)"
+
+= section "Causatives" do
+  %p Many causative pairs in Novegradian exist as two distinct verbs. Some, such as #{t "омирати", "omiráti"} “die” and #{t "забитати", "zabitáti"} “kill” (cause to die), bear no relation to one another. Verbs of position have derived causatives, elaborated upon in section 11.18.4 below. Stative verbs are generally made causative with a prefix, generally #{t "о-", "o-"} or #{t "за-", "za-"}: #{t "мољцати", "mołcáti"} “be silent” → #{t "замољцати", "zamołcáti"} “silence”. Adjectives are almost always verbalized and rarely appear unmodified in analytic causatives, either with a prefix: #{t "нове", "nóve"} “new” → #{t "оновити", "onóviti"} “renew, revitalize”; or without one: #{t "сухе", "súhe"} “dry” → #{t "сушити", "súśiti"} “dry”.
+  %p Analytic causatives are more complex. Novegradian lacks a single causativizing verb; which verb to use is highly dependent on the nature of the action involved.
+  %p Firstly, if the causative can be rephrased using a more specific verb, it is. In example 98 below, “ask” is far more specific than a generic causative like English “have”, and so is greatly preferred.
+  = example_sentence "Яс попрожиле ево тово-це оскриваст дуери.",
+                     "Iás poproźíle ievó tovó-ce oskrivást duéri.",
+                     "I.{nom} ask.{pf}-{past}-{masc} he-{acc} {rel.gen.sg}-that.{nom} open-{3sg} door-{acc.sg}",
+                     "I had him open the door.",
+                     :comment => "(lit. “asked”)"
+  %p The most common causative construction is #{t "содавати/содати", "sodaváti/sodáti"} “hand over” + supine, with the subject of the supine verb in the dative/instrumental. If this oblique ‘subject’ is absent, the supine verb must be middle voice.
+  = example_sentence "Яс содагле Владимирой муит возе.",
+                     "Iás sodágle Vladímiroi muít vóze.",
+                     "I.{nom} hand_over.{pf}-{past}-{masc} Vladímire-{datins} wash-{sup} car-{nom.sg}",
+                     "I had Vladímire wash the car."
+  = example_sentence "Яс содагле воз муици.",
+                     "Iás sodágle vóz muíci.",
+                     "I.{nom} hand_over.{pf}-{past}-{masc} car-{acc.sg} wash-{sup}-{mid}",
+                     "I had the car washed."
+  %p Note above how “car” appears as the object of the supine verb in sentence 99, but as the object of содати in sentence 100. This impacts how it receives case marking, as the objects of non-negated non-finite verbs appear in the nominative case.
+  %p This same construction is used even if the object cannot logically be “handed over”.
+  = example_sentence "Ти мене содаеш разѣис сон ума.",
+                     "Tí mené sodaiéś rázějis son úma.",
+                     "you.{nom} I.{acc} hand_over-{2sg} go_apart.{pf}-{sup} from-{n*} mind-{gen.sg}",
+                     "You’re driving me crazy.",
+                     :comment => "(lit. “You are handing me over to part from the mind”)"
+  %p The phrase “make somebody (into) something” is handled using the constructions #{t "превратити X во Y", "prevrátiti X vo Y"} “convert X into Y”, #{t "дѣлати Y зе X", "dě́lati Y ze X"} “make Y out of X”, or another more specific verb.
+  = example_sentence "Содѣлали зе нево президента.",
+                     "Sodě́lali ze nevó prezidénta.",
+                     "make.{pf}-{past}-{pl} from {n*}-he.{gen} president-{acc.sg}",
+                     "They made him president."
+  %p If the verb being made causative is normally intransitive, the construction used is #{t "остати", "ostáti"} “leave (as)” + active imperfective participle in the indefinite dative/instrumental case.
+  = example_sentence "Яс остале ево плацакьом.",
+                     "Iás ostále ievó plácakjom.",
+                     "I.{nom} leave.{pf}-{past}-{masc} he.{acc} cry-{act.impf.ptcp}-{datins.sg.masc}",
+                     "I made him cry."
+
+= section "The Passive Voice" do
+  %p There are two primary means of forming the passive voice in Novegradian. One, using participles, will be discussed later. The other form derives from the old reflexive pronoun *sę, which has fused to the main verb in the form #{t "-шин", "-śin"}. The patient (grammatical subject) appears in the nominative case, and the passive verb conjugates in agreement.
+  = example_sentence "Будове-те наѕалней Новеградескаево Сударестуонаево Универсидата забудовалешин в асто 1695.",
+                     "Budóve-te nadzálnei Novegradeskáievo Sudarestuonáievo Universidáta zabudováleśin v ásto 1695.",
+                     "building-{nom.sg}-{top} original-{nom.sg.masc.def} Novegrad-{adj}-{gen.sg.masc.def} State-{adj}-{gen.sg.masc.def} University-{gen.sg} build.{pf}-{past}-{masc}-{pass} in year-{acc.sg} 1695",
+                     "The original building of Novegrad State University was built in 1695."
+  = example_sentence "Многе лудеу забюцин анно бадет буила война.",
+                     "Mnóge lúdeu zabiúcin ánno bádet builá voiná.",
+                     "many.{nom} people-{part.pl} kill.{pf}-{3pl}-{pass} if be.{fut}-{3sg} be-{past}-{fem} war-{nom.sg}",
+                     "Many people will be killed if there is a war."
+  %p The negated form of the above, while allowed in the standard, is not allowed in some dialects near the Russian border. These dialects will instead use a negated passive participle.
+  %p If the agent is to be indicated, it appears in the dative/instrumental case after the preposition #{t "на", "na"} “on”. This preposition was originally not necessary, but became so once the dative merged with the instrumental. Compare:
+  = example_sentence "Сумя забоилашин на Царем Мециславой <span class='cyrillic-numeral'>В</span>.",
+                     "Súmia zabójilaśin na Cárem Mecislávoi Drugíjem.",
+                     "Finland-{nom} conquer.{pf}-{past}-{fem}-{pass} on tsar-{datins.sg} Mecisláu-{datins.sg} Second-{datins.sg.masc.def}",
+                     "Finland was conquered by Tsar Mecisláu II."
+  = example_sentence "Ше подар покреналешин Яриной.",
+                     "Śé pódar pokrenáleśin Iarínoi.",
+                     "this-{nom.sg.masc} present-{nom.sg} buy.{pf}-{past}-{masc}-{pass} Iarína-{datins}",
+                     "This present was bought for Iarína."
+  %p Where English uses the construction <span class="pattern">adjective + infinitive</span>, Novegradian uses <span class="pattern">passive + adverb</span>.
+  = example_sentence "Ша нига цидасцин леғкѣ.",
+                     "Śá níga cidáscin léğkě.",
+                     "this-{nom.sg.fem} book-{nom.sg} read-{3sg}-{pass} easy-{adv}",
+                     "This book is easy to read.",
+                     :comment => "(lit. “is read easily”)"
+  %p When there are multiple verbs in the same clause, the passive suffix goes on whichever comes last, whether it be the auxiliary or primary.
+  = example_sentence "Анно шеден оне-то видѣле не бадецин, кудеж то?",
+                     "Ánno śedén óne-to víděle ne bádecin, kudéź to?",
+                     "if today he.{nom}-{top} see-{past}-{masc} {neg} be.{fut}-{3sg}-{pass}, where-{emph} Ø {top}",
+                     "If he hasn’t been seen today, where could he be?"
+
+= section "The Middle Voice" do
+  = section "The Standard Middle Voice" do
+    %p The middle voice describes verbs that appear syntactically active but semantically passive. In Novegradian such verbs are almost always intransitive, and frequently have some sort of reflexive or reciprocal quality. However, a middle voice verb and a true reflexive construction with the pronoun шебе are rarely interchangeable.
+    = example_sentence "О ме треба муитиш.",
+                       "O mé tréba muítiś.",
+                       "at I.{lat} need-{nom.sg} wash-{inf}-{mid}",
+                       "I need to wash up."
+    = example_sentence "Они школѣ оѕаци лизикем русскием с английксием.",
+                       "Oní śkólě odzáci lizíkem rússkijem s anglíjskijem.",
+                       "they.{nom} school-{loc.sg} learn-{3pl}-{mid} language-{datins.sg} Russian-{datins.sg.masc.def} with English-{datins.sg.masc.def}",
+                       "They’re learning Russian and English in school."
+    %p If the subject is plural, the middle voice is usually reciprocal.
+    = example_sentence "Ондуа спориташ о трағаниех.",
+                       "Onduá spóritaś o trağánijeh.",
+                       "they.{nom.dl} fight-{3dl}-{mid} about trivial-{loc.pl.def}",
+                       "The two of them are fighting over nothing.",
+                       :comment => "(lit. “trivialities”)"
+    %p Middle voice verbs like these are distinct from their active voice counterparts used with reflexive pronouns, though this usage will be discussed later. There are also a few verbs that require the middle voice and lack an active form, such as #{t "боятиш", "boiátiś"} “fear” and #{t "старатиш", "starátiś"} “try, attempt”.
+    = example_sentence "Яс боялеш темѣ, койда буиле младе.",
+                       "Iás boiáleś temě́, kóida buíle mláde.",
+                       "I.{nom} fear-{past}-{masc}-{mid} darkness-{gen.sg}, when be-{past}-{masc} young-{nom.sg.masc}",
+                       "I was afraid of the dark when I was young."
+    = example_sentence "Постарамши вуийгровати, но вѣм то-це Вехевладе велем добрѣ еграст.",
+                       "Postarámśi vuijgrováti, no vě́m tó-ce Vehevláde vélem dóbrě iegrást.",
+                       "try.{pf}-{1sg}-{mid} win-{inf}, but know-{1sg} {rel.nom.sg}-that.{nom} Vehevláde-{nom} very good-{adv} play-{3sg}",
+                       "I’ll try to win, but I know that Vehevláde plays very well."
+    %p Many verbs describing natural processes require the middle voice when intransitive, such as “melt”, “blow”, “cool”, and “rain”. In the case of “rain” and “snow”, the middle voice form is only used when there is a true subject<sup>2</sup> (generally небесо “sky”) and the active voice is used if the verb is impersonal.
+    = example_sentence "Койда леде таеци, станет водой.",
+                       "Kóida léde táieci, stánet vodói.",
+                       "when ice-{nom.sg} melt-{3sg}-{mid}, become-{3sg} water-{datins.sg}",
+                       "When ice melts, it becomes water."
+    = example_sentence "Небесо занок надо би дожгьитиш.",
+                       "Nébeso zánok nádo bi dóźgjitiś.",
+                       "sky-{nom.sg} tomorrow should {subj.sg} rain-{inf}-{mid}",
+                       "It’s supposed to rain tomorrow.",
+                       :comment => "(but Занок надо би дожгьити.)"
+    %p The difference between the three voices can best be illustrated with verbs that can appear in all three. For example, #{t "мѣньаст", "měnjást"} (active) means “(he) changes (something)”, #{t "мѣньасцин", "měnjáscin"} (passive) means “(something) is changed”, and #{t "мѣньасци", "měnjásci"} (middle) means “(something) changes”.
+
+  = section "The Dispositional Middle Voice" do
+    %p The dispositional middle voice refers to a special use of the middle voice to indicate one’s feelings toward the performance of an action. The verb is conjugated in the 3rd person singular (or neuter singular in the past) and the logical subject appears in the dative/instrumental. This structure is usually translated as “feel like” or ”don’t feel like”.
+    = example_sentence "Мнѣ плацеци.",
+                       "Mně́ pláceci.",
+                       "I.{nom} cry-{3sg}-{mid}",
+                       "I feel like crying."
+    = example_sentence "Нама не хотѣлош нав еужинун шеден вецерем.",
+                       "Náma ne hótěloś nav iéuźinun śedén vécerem.",
+                       "we.{datins.dl} {neg} want-{past}-{neut}-{mid} on-{v*} dinner-{lat.sg} today evening-{datins.sg}",
+                       "We didn’t feel like going to dinner tonight.",
+                       :comment => "(or, more accurately, “didn’t feel like wanting [to go] to dinner”)"
+    %p “Feel like” is not always the best translation for this construction. Sometimes the dispositional middle voice implies more of a perceived (in)ability.
+    = example_sentence "Ему не еграсци добрѣ.",
+                       "Iemú ne iegrásci dóbrě.",
+                       "he.{datins} {neg} play-{3sg}-{mid} good-{adv}",
+                       "He can’t seem to play well."
+
+  = section "The Middle Voice in Generic Commands" do
+    %p An infinitive in the middle voice (whether or not the active equivalent is transitive or not) may be used in generic commands that are addressed to the public at large, rather than any specific person or people. This will often be seen on signage, for example.
+    = example_sentence "Не куритиш блиғье 10 метер од вохода.",
+                       "Ne kúritiś blíğje 10 méter od vóhoda.",
+                       "{neg} smoke-{inf}-{mid} near-{comp}-{nom.sg.neut} 10 meter-{gen.pl} from entrance-{gen.sg}",
+                       "No Smoking Within 10 Meters of Entrance"
+
+= section "The Adverbial Participles" do
+  = section "As Adverbials" do
+    %p The adverbial participles are a means of indicating when or how an action was performed by relating it to another action. They mark that an action either is simultaneous with or just follows the action of the main verb, while also indicating that the former is in some sense subordinate to the latter. The imperfective participle is roughly equivalent to “while X-ing”, and the perfective to “having X-ed” or “after X-ing”. They may appear either at the beginning or at the end of a sentence, although if they come in the beginning, they must be offset from the main clause with a comma.
+    = example_sentence "Оне цидале гажету заутрогаен.",
+                       "Óne cidále gaźétu zautrogáien.",
+                       "he.{nom} read-{past}-{masc} newspaper-{acc.sg} eat_breakfast-{impf.adv}",
+                       "He was reading the newspaper while eating breakfast."
+    %p More often than not, the adverb will be accompanied by some sort of modifier, such as a direct object or prepositional phrase. The same punctuation rules apply.
+    = example_sentence "Вуиходин зе думу, оне сорѣѕиле „Погойна нокьи‟.",
+                       "Vuihodín ze dúmu, óne sorědzíle “Pogóina nókji”.",
+                       "leave-{impf.adv} from house-{gen.sg}, he.{nom} say.{pf}-{past}-{masc} \"Peaceful-{nom.sg.fem} night-{nom.sg}\"",
+                       "Leaving the house, he said ‘Good night’."
+    = example_sentence "Содѣлаве суои ороки, Маша тобирво говорит со дружам пов интѣрнетѣ.",
+                       "Sodě́lave suojí oróki, Máśa tobírvo govorít só druźam pov intěrnétě.",
+                       "do.{pf}-{pf.adv} {reflx.poss}-{acc.pl} lesson-{acc.pl}, Máśa-{nom} now speak-{3sg} with friend-{datins.pl} on-{v*} internet-{loc.sg}",
+                       "Having finished her homework, Máśa is now talking with her friends online."
+    %p Verbal adverbs may also take passive or middle voice endings, as appropriate.
+    = example_sentence "Она шебе спалила стараеш пригодовити субек.",
+                       "Oná śebé spalíla staráieś prigodóviti subék.",
+                       "she.{nom} {reflx.acc} burn.{pf}-{past}-{fem} try-{impf.adv}-{mid} prepare.{pf}-{inf} soup-{part.sg}",
+                       "She burnt herself trying to prepare some soup."
+    %p They may also be freely negated, in which case the prefix #{t "не-", "ne-"} is attached directly to the adverb.
+    = example_sentence "Она мнѣ оғо сорѣѕила, нетайнин нецево.",
+                       "Oná mně́ oğó sorědzíla, netainín necevó.",
+                       "she.{nom} I.{datins} all-{acc.sg.neut} say.{pf}-{past}-{fem}, {neg}-keep_secret-{impf.adv} nothing.{gen}",
+                       "She told me everything, hiding nothing."
+    = example_sentence "Вуи говорите невѣди тово-це пробуиваст.",
+                       "Vuí govoríte nevědí tovó-ce probuivást.",
+                       "you.{nom.pl} speak-{2pl} {neg}-know-{impf.adv} {rel.gen.sg}-that.{nom} happen-{3sg}",
+                       "You speak without knowing what is happening."
+
+  = section "As Verbs" do
+    %p An imperfective adverbial participle may have a different subject than the main verb. The participle must be offset from the rest of the sentence no matter its location, and it must come first within its clause, before any other pronouns, etc. The conjunction #{t "койда", "kóida"} “when” must be used as well, placed in front of the participial clause. Such constructions indicate a possible reanalysis of these participles as finite verb forms, at least in some instances. The same may be done with perfective participles, although their use in this way is optional, as the past perfective may freely be used in their place.
+    = example_sentence "Оне пришле ко мнѣ, койда мотрин яс телевизю.",
+                       "Óne priślé ko mně́, kóida motrín iás televíziu.",
+                       "he.{nom} arrive.{pf}-{past}-{masc} toward I.{datins}, when watch-{impf.adv} I.{nom} television-{acc.sg}",
+                       "He arrived at my place while I was watching television."
+    = example_sentence "Койда законциве надуа говорити, яс навешале презуон.",
+                       "Kóida zakóncive naduá govoríti, iás navéśale prezuón.",
+                       "when finish.{pf}-{pf.adv} we.{nom.dl} speak-{inf}, I.{nom} hang_up.{pf}-{past}-{masc} telephone-{acc.sg}",
+                       "Once we had finished talking, I hung up the telephone."
+    %p The adverbial participles can also function in place of sentence-level neuter participles (i.e., participles modifying a clause rather than a nominal phrase). No conjunction is needed in this case.
+    = example_sentence "Новеграде-те витежиле Москуа во битўу при Шелони в асто 1471, сохранаен суою самостоетности.",
+                       "Novegráde-te víteźile Moskuá vo bítwu pri Śeloní v asto 1471, sohranáien suoiú samostoiétnosti.",
+                       "Novegrad-{nom}-{top} defeat.{pf}-{past}-{masc} Moscow-{acc} in battle-{acc.sg} at Śelóni-{loc} in year-{acc.sg} 1471, preserve-{impf.adv} {reflx.poss}-{acc.sg.fem} independence-{acc.sg}",
+                       "Novegrad defeated Muscovy in the Battle of Śelóni in 1471, preserving its independence."
+
+= section "The Participles" do
+  %p The other participles have three main functions: to modify a noun as an adjective, to subordinate a whole clause to a noun, or to serve as an independent verb form.
+  %p When used as simple adjectives, the participles will decline in exactly the same way other adjectives would. The active imperfective means “that is X-ing”, the passive perfective “that has been X-ed”, and the passive imperfective “that is being X-ed”. However, unlike most adjectives, it must be placed before the noun it modifies (unless it heads a subordinated clause, in which case it may come either before or after; or if the participle has lost its participial force and acts as a normal adjective). If the participle is used alone without an accompanying noun, it can generally be assumed to be “person” or “people”.
+  = example_sentence "Яс вуиброхьун ше спалин клѣб.",
+                     "Iás vuibróhjun śé spálin klě́b.",
+                     "I.{nom} throw_out.{pf}-{1sg} this-{acc.sg.masc} burn.{pf}-{pass.pf.ptcp}-{acc.sg.masc} bread-{acc.sg}",
+                     "I’m going to throw out the burnt toast."
+  %p More often these participles are used to subordinate a clause. The participle must be placed after the noun it modifies (with a comma in between) if the clause follows the noun. If the subclause contains its own subject, it must be indicated the same way as in a passive sentence: на + dative/instrumental.
+  = example_sentence "Нина – дѣвушкой, шѣдекьой на шем стуљѣ.",
+                     "Nína – dě́vuśkoi, śědékjoi na śém stúłě.",
+                     "Nína-{nom} Ø girl-{datins.sg}, sit-{act.impf.ptcp}-{datins.sg.fem} on that-{loc.sg.masc} chair-{loc.sg}",
+                     "Nína’s the girl who’s sitting on that chair."
+  = example_sentence "Ша курта – покреновина во Римѣ.",
+                     "Śá kúrta – pokrenóvina vo Rímě.",
+                     "this-{nom.sg.fem} coat-{nom.sg} Ø buy.{pf}-{pass.pf.ptcp}-{nom.sg.fem} in Rome-{loc}",
+                     "This coat was bought in Rome."
+  = example_sentence "Ниги, цидами шеғод школѣ, нови есат.",
+                     "Nígi, cidámi śeğód śkólě, nóvi iésat.",
+                     "Book-{nom.pl}, read-{pass.impf.ptcp}-{nom.pl} this_year school-{loc.sg}, new-{nom.pl} be.{3pl}",
+                     "The books being read at school this year are new."
+  %p If the clause is not too long, it may also be placed before the noun it is subordinated to. This generally emphasizes the clause.
+  = example_sentence "Напизан на ней напис яс шеден приймѣле.",
+                     "Napizán na néi nápis iás śedén prijmě́le.",
+                     "write.{pf}-{pass.pf.ptcp}-{acc.sg.masc} on {n*}-she.{datins} letter-{acc.sg} I.{nom} today receive-{past}-{masc}",
+                     "I received the letter she had written today."
+  %p When a participle modifies an entire clause rather than a nominal phrase, it must be in its neuter singular indefinite form. Using the same example as the equivalent construction involving adverbial participles:
+  = example_sentence "Новеграде-те витежиле Москуа во битўу при Шелони в асто 1471, сохранакьо суою самостоетности.",
+                     "Novegráde-te víteźile Moskuá vo bítwu pri Śeloní v asto 1471, sohranákjo suoiú samostoiétnosti.",
+                     "Novegrad-{nom}-{top} defeat.{pf}-{past}-{masc} Moscow-{acc} in battle-{acc.sg} at Śelóni-{loc} in year-{acc.sg} 1471, preserve-{act.impf.ptcp}-{nom.sg.neut} {reflx.poss}-{acc.sg.fem} independence-{acc.sg}",
+                     "I received the letter she had written today."
+  %p When a noun is modified with an active imperfective participle across a copula, it indicates the subject’s like or dislike of participating in that activity. The construction is identical to the progressive in English, but never has a progressive sense.
+  = example_sentence "Она нет танцакьа.",
+                     "Oná nét tancákja.",
+                     "she.{nom} be.{3sg.neg} dance-{act.impf.ptcp}-{nom.sg.fem}",
+                     "She doesn’t particularly enjoy dancing."
+  = example_sentence "Несм пякье.",
+                     "Nésm piákje.",
+                     "be.{1sg.neg} drink-{act.impf.ptcp}-{nom.sg.masc}",
+                     "I don’t drink."
+  %p The two passive participles can also act as pseudo-verbs (technically буити + the participle). Such constructions have the same meaning as the morphological passive formed with the clitic -шин, although the rules for when they are used differ. The passive participles will be used in passive sentences:
+  %ul
+    %li when the verb comes before the subject, if marked:
+  = example_sentence "Рогьене яс Германи.",
+                     "Rógjene iás Germaní.",
+                     "bear-{pass.pf.ptcp}-{nom.sg.masc} Ø I.{nom} Germany-{loc}",
+                     "I was born in Germany."
+  %ul
+    %li when the passive and reflexive meanings of the verb are very different. Keeping in mind that the passive enclitic -шин was originally reflexive, there are many verbs for which the semantic drift of reflexive to passive never could occur. An example is #{t "видѣти", "víděti"} “see”, which means “see oneself” when reflexive and “be seen” when passive, and as such, the passive form **видѣтишин never came into being. There is no way to objectively predict which verbs failed to acquire a morphological passive<sup>3</sup>.
+  = example_sentence "Оне буиле овидѣне вецераш на шестрой моей.",
+                     "Óne buíle ovíděne véceraś na śestrói moiéi.",
+                     "he.{nom} be-{past}-{masc} see.{pf}-{pass.pf.ptcp}-{nom.sg.masc} yesterday on sister-{datins.sg} my-{datins.sg.fem}",
+                     "He was seen by my sister yesterday."
+  %ul
+    %li when there needs to be added emphasis or topicalization on the verb. The participles are viewed as being ‘stronger’ in meaning than the morphological passive.
+
+= section "The Conditional" do
+  %p The conditional is a defunct verb form in modern Novegradian. It frequently appeared in “if” and future “when” clauses in medieval Novegradian up until around the 16th century, though was already beginning to disappear by the 14th. Nowadays the few remnants have been completely lexicalized and survive only in a few idioms.
+  %p The conditional was identical to the present-future in all forms except the third person singular. A-conjugation verbs form the #{abbrev '3sg'} by dropping the final #{t "-ст", "-st"} of the present-future and replacing it with #{t "-е", "-ie"}. E-conjugation verbs simply drop the final #{t "-т", "-t"} of the present-future. I-conjugation verbs lack a distinct conditional conjugation, being identical to the present-future. Athematic verbs drop the final #{t "-ст", "-st"} and add nothing.
+  = example_sentence "Анно оғодено баде Боғем.",
+                     "Ánno oğódeno báde Bóğem.",
+                     "if pleasing-{nom.sg.neut} be-{3sg.cond} God-{datins.sg}",
+                     "If God wills.",
+                     :comment => "(lit. “If it is pleasing to God”)"
+  = example_sentence "Анно слѣпей слѣбаево веде, и оба падета.",
+                     "Ánno slě́pei slěbáievo vedé, i óba pádeta.",
+                     "if blind-{nom.sg.masc.def} blind-{gen.sg.masc.def} lead-{3sg.cond}, and both.{nom.masc} fall.{pf}-{3dl}",
+                     "If a blind man leads a blind man, both will fall."
+  = example_sentence "Анно соунце не заходит дов еутрена дена.",
+                     "Ánno sóunce ne zahódit dov iéutrena déna.",
+                     "if sun-{nom.sg} {neg} set-{3sg.cond} until-{v*} morning-{adj}-{gen.sg.masc} day-{gen.sg}",
+                     "If the sun doesn’t set til tomorrow.",
+                     :comment => "(English equivalent: “There’s no time to lose”)"
+  = example_sentence "Койда велке зашинае.",
+                     "Kóida vélke zaśináie.",
+                     "when wolf-{nom.sg} fall_asleep-{3sg.cond}",
+                     "When the wolf falls asleep!",
+                     :comment => "(English equivalent: “It’s too dangerous”)"
+  = example_sentence "Койда дене потемнѣе.",
+                     "Kóida déne potemně́ie.",
+                     "when day-{nom.sg} darken.{pf}-{3sg.cond}",
+                     "When the day darkens.",
+                     :comment => "(English equivalent: “Not anytime soon”)"
+
+= section "Non-Derivational Use of Verb Prefixes" do
+  %p Not all verb prefixes serve solely a derivational function. Several also serve important grammatical functions<sup>4</sup>. The main prefixes with a strong grammatical and aspectual function in other verbs are #{t "до-", "do-"}, #{t "за-", "za-"}, #{t "по-", "po-"}, and #{t "под-", "pod-"}.
+  %p #{t "До-", "do-"} is a marker of telicity. It indicates that an action has been completed thoroughly, and therefore cannot take indefinite or partitive quantities as arguments. Notice how the telic sentence in 145a is grammatical, but the atelic one in 145b is nonsensical.
+  = example_sentence "Яс допиле дова литра ювок.",
+                     "Iás dopíle dóva lítra iúvok.",
+                     "I.{nom} {tel}-drink-{past}-{masc} two-{acc.masc} liter-{gen.sg} water-{part.sg}",
+                     "I drank two liters of water.",
+                     :subindex => "a"
+  = example_sentence "**Яс допиле ювок.",
+                     "**Iás dopíle iúvok.",
+                     "I.{nom} {tel}-drink-{past}-{masc} water-{part.sg}",
+                     "I drank some water.",
+                     :no_increment => true, :subindex => "b"
+  %p До- also has a stronger cessative connotation than the perfective form of a verb; it indicates that a process is being finished, with little regard to what has happened thus far. Compare the prefixed #{t "доцидати", "docidáti"} in 146a with the perfective #{t "процидати", "procidáti"} in 146b, both translated as “read”.
+  = example_sentence "Яс доцидам шу нигу занок.",
+                     "Iás docidám śú nígu zánok.",
+                     "I.{nom} {tel}-read.{pf}-{1sg} this-{acc.sg.fem} book-{acc.sg} tomorrow",
+                     "I will finish reading this book tomorrow.",
+                     :subindex => "a", :comment => "(I have already started.)"
+  = example_sentence "Яс процидам шу нигу занок.",
+                     "Iás procidám śú nígu zánok.",
+                     "I.{nom} read.{pf}-{1sg} this-{acc.sg.fem} book-{acc.sg} tomorrow",
+                     "I will finish reading this book tomorrow.",
+                     :no_increment => true, :subindex => "b", :comment => "(I will read the entire book tomorrow.)"
+  %p The prefix #{t "за-", "za-"}, on the other hand, has a strong inchoative connotation. It represents only the beginning of an action, carrying no information on what happens afterwards. It represents a single point in time, and cannot be drawn out, though it implies a process will take place. Compare the inchoative #{t "зазуонити", "zazuoníti"} in 147a to the perfective #{t "позуонити", "pozuoníti"} in 147b, both meaning “ring”. The perfective usage in this statement is ungrammatical because the perfective aspect does not allow for an open, continuing process such as this.
+  = example_sentence "Оне зазуониле клаголем, и клагол-от зуониле пору.",
+                     "Óne zazuoníle klagólem, i klagol-ót zuoníle póru.",
+                     "he.{nom} {inch}-ring.{pf}-{past}-{masc} church_bell-{datins.sg}, and bell-{nom.sg}-{top} ring-{past}-{masc} hour-{acc.sg}",
+                     "He rang the church bell, and it rang for an hour.",
+                     :subindex => "a"
+  = example_sentence "**Оне позуониле клаголем, и клагол-от зуониле пору.",
+                     "**Óne pozuoníle klagólem, i klagol-ót zuoníle póru.",
+                     "he.{nom} ring.{pf}-{past}-{masc} church_bell-{datins.sg}, and bell-{nom.sg}-{top} ring-{past}-{masc} hour-{acc.sg}",
+                     "He rang the church bell, and it rang for an hour.",
+                     :no_increment => true, :subindex => "b"
+  %p The prefix #{t "по-", "po-"} frequently indicates durative aspect, meaning an action is being performed for a period of time, definite or indefinite. When a time limit is placed on a stative action, the prefix often is required when the subject is human, and optional when the subject is anything else. Without a specified time period, the prefix can just mean “for some time”.
+  = example_sentence "Вецераш муи поговорили пору.",
+                     "Véceraś muí pogovoríli póru.",
+                     "yesterday we.{nom} {dur}-talk-{past}-{pl} hour-{acc.sg}",
+                     "Yesterday we talked for an hour.",
+                     :subindex => "a"
+  = example_sentence "**Вецераш муи говорили пору.",
+                     "**Véceraś muí govoríli póru.",
+                     "yesterday we.{nom} talk-{past}-{pl} hour-{acc.sg}",
+                     "Yesterday we talked for an hour.",
+                     :no_increment => true, :subindex => "b"
+  = example_sentence "Вецераш муи поговорили.",
+                     "Véceraś muí pogovoríli.",
+                     "yesterday we.{nom} {dur}-talk-{past}-{pl}",
+                     "Yesterday we talked a little while.",
+                     :no_increment => true, :subindex => "c"
+  %p The prefix #{t "под-", "pod-"}, literally “under” or “sub-”, often indicates a degree of deference or politeness on the part of the subject with verbs describing social interaction. Thus “Подрѣѕите мнѣ, прошим...” (“Tell me, please, ...”) essentially means the same thing as “Сорѣѕите мнѣ, прошим...”, but is far more common when speaking to someone one does not know well or who is of a higher rank.
+  %p These are not the only functions for these prefixes, however. For many verbs they are simply derivative, but their productive aspectual function for many stative verbs must also be understood.
+
+= section "Agreement with Non-Nominative Subjects" do
+  %p The subject of a sentence may appear in only three cases other than the nominative: the accusative, genitive, and partitive. When these cases may be used in such a way will be discussed in the section on nominal syntax. However, it is important to note that whenever the subject is not in the nominative case, verbs in the past tense take neuter agreement, no matter the gender of the actual noun. Plurality, however, is maintained—if the subject is plural, the verb preserves plural agreement.
+  = example_sentence "Суде буилѣ пару порцаскоу.",
+                     "Sudé buílě páru porcaskóu.",
+                     "here be-{past}-{dl} pair-{acc.sg} glove-{part.pl}",
+                     "There were a pair of gloves here."
+  = example_sentence "Луд собуивалиш шеньи.",
+                     "Lúd sobuiváliś śénji.",
+                     "people-{gen.pl} remain-{past}-{pl}-{mid} seven-{nom}",
+                     "There were seven people left."
+
+= section "Impersonal Constructions" do
+  %p Impersonal constructions are those that lack an overt subject. These must be distinguished from instances of pronoun drop, as impersonals do not allow for the insertion of a true subject. They fall into a number of subclasses.
+
+  = section "Natural Forces" do
+    %p As previously mentioned, many natural forces, particularly those relating to weather, as well as states such as being “cold” or “warm”, are constructed impersonally in Novegradian.
+    %p Verbs such as “rain”, “blow”, or “get dark” conjugate in the third person singular (or neuter singular in the past), with no apparent subject. Nouns or pronouns in the dative/instrumental case may be added to describe whom the process of the verb is affecting.
+    = example_sentence "Дожгьило шемицу.",
+                       "Dóźgjilo śémicu.",
+                       "rain-{past}-{neut} week-{acc.sg}",
+                       "It rained for a week."
+    = example_sentence "Тибѣ ли не домет?",
+                       "Tibě́ li ne domét?",
+                       "you.{datins} {q} {neg} blow-{3sg}",
+                       "Is the draft getting you?",
+                       :comment => "(lit. “Is (it) blowing to you?”)"
+    = example_sentence "Воунѣ темнѣет.",
+                       "Vóuně temně́iet.",
+                       "outside darken-{3sg}",
+                       "It’s getting dark outside."
+    %p Adjectives of condition appear in the neuter, with nouns in the dative/instrumental used to specify who is being described.
+    = example_sentence "Анно тибѣ кладно бадет буило, яс содам суою курту.",
+                       "Ánno tibě́ kládno bádet buílo, iás sodám suoiú kúrtu.",
+                       "if you.{datins} cold-{nom.sg.neut} be.{fut}-{3sg} be-{past}-{neut}, I.{nom} give.{pf}-{1sg} {reflx.poss}-{acc.sg.fem} jacket-{acc.sg}",
+                       "If you’re cold, I’ll give you my jacket."
+
+  = section "Human Emotions, States, and Senses" do
+    %p Phrases describing human emotions, states, and senses operate on a similar principle.
+    = example_sentence "Ему меражито.",
+                       "Iemú meraźíto.",
+                       "he.{datins} Ø sad-{nom.sg.neut}",
+                       "He feels sad."
+    %p Some verbs may take an additional argument in the dative-instrumental case after the preposition на “on”. Formerly these required a simple instrumental case noun, but the preposition became mandatory once the dative and instrumental merged.
+    = example_sentence "[Ей] пахнет на розам.",
+                       "[Iéi] pahnét na rózam.",
+                       "[she.{datins}] smell-{3sg} on rose-{datins.pl}",
+                       "It smells like roses [to her]."
+    %p The origin of a feeling may be described using #{t "од", "od"} “from” + #{abbrev 'gen'}.
+    = example_sentence "Мнѣ везно од нево.",
+                       "Mně́ vézno od nevó.",
+                       "I.{datins} happy-{nom.sg.neut} from {n*}-he.{gen}",
+                       "He makes me feel happy.",
+                       :comment => "(lit. “It is happy to me from him.”)"
+    %p Many conditions, such as pain and illness, are described impersonally.
+    = example_sentence "Мнѣ болит во желудокѣ.",
+                       "Mně́ bolít vo źelúdokě.",
+                       "I.{datins} hurt-{3sg} in stomach-{loc.sg}",
+                       "My stomach hurts.",
+                       :comment => "(lit. “It hurts to me in the stomach”)"
+    = example_sentence "Еванем затемнѣло в оку.",
+                       "Ievánem zatemně́lo v óku.",
+                       "Ieváne-{datins} darken_suddenly-{past}-{neut} in eye-{loc.dl}",
+                       "Ieváne passed out.",
+                       :comment => "(lit. “To Ieváne it darkened in the eyes”)"
+
+  = section "Generic Subjects" do
+    %p The generic subject construction has a similar function to the passive, and can be formed from any verb. It is formed by conjugating the verb into the third person plural and not indicating any subject. As such, it does not exist in the past tense or in derived tenses such as the subjunctive. Note that no explicit subject is allowed, not even the pronoun #{t "они", "oní"} “they”, which narrows the scope of the verb from generic to having a specific antecedent. Due to the lack of subject, any direct object must appear in the nominative case, unless it is a pronoun, in which case it retains the accusative case.
+    = example_sentence "Оскривати марнате в осмаю еутром.",
+                       "Oskriváti marnáte v ósmaiu iéutrom.",
+                       "open-{3pl} store-{nom.sg} in eighth-{acc.sg.fem.def} morning-{datins.sg}",
+                       "They open the store at 8 AM."
+    = example_sentence "На Вранци ѣдит слимаки.",
+                       "Na Vrancí iě́dit slimáki.",
+                       "on France-{loc} eat-{3pl} snail-{nom.pl}",
+                       "They eat snails in France."
+
+  = section "Subject Absorption" do
+    %p Subject absorption represents a variant of the -шин passive. Whereas in normal passives the -шин clitic (originally a reflexive pronoun) “absorbs” the accusative and forces the verb’s primary argument to take the nominative, in this particular construction it instead absorbs the nominative and forces its argument to take the accusative. It may be described as a cross between the generic subject as above and the passive. It is like the generic subject in that the subject is eliminated and the object remains (though it retains the accusative case), and is like the passive in that an agent may be specified in a prepositional phrase. This construction generally places greater topical emphasis on the object of the verb. Past tense verbs always take neuter agreement.
+    = example_sentence "Нигу процидалошин за три дена.",
+                       "Nígu procidálośin za trí déna.",
+                       "book-{acc.sg} read.{pf}-{past}-{neut}-{pass} in three.{acc.masc} day-{gen.sg}",
+                       "They read the book in three days."
+    %p Compare the following three examples, using subject absorption (163), the passive (164), and the generic subject (165).
+    = example_sentence "Школу забудовалошин на строителам.",
+                       "Śkólu zabudoválośin na strójitelam.",
+                       "school-{acc.sg} build.{pf}-{past}-{neut}-{pass} on builder-{datins.pl}",
+                       "The school was built by the workers.",
+                       :comment => "(topical emphasis on “school”)"
+    = example_sentence "Школа забудовалашин на строителам.",
+                       "Śkóla zabudoválaśin na strójitelam.",
+                       "school-{nom.sg} build.{pf}-{past}-{fem}-{pass} on builder-{datins.pl}",
+                       "The school was built by the workers.",
+                       :comment => "(emphasis on process, that is, building)"
+    = example_sentence "Школа будовати.",
+                       "Śkóla budováti.",
+                       "school-{nom.sg} build-{3pl}",
+                       "They are building a school."
+    %p Nominative absorption is also used in generic sentences when the person or people speaking wish to include themselves within that generic subject, or to make it less ‘distant’ than how the normal #{abbrev '3pl'} generic subject can feel. The verb appears in the #{abbrev '3sg'} (nonpast) or neuter (past).
+    = example_sentence "Помагасцин бѣдниеми.",
+                       "Pomagáscin bědníjemi.",
+                       "help-{3sg}-{pass} poor-{datins.pl.def}",
+                       "One helps the poor."
+    = example_sentence "Есцин суде везно.",
+                       "Iéscin sudé vézno.",
+                       "be.{3sg}-{pass} here happy-{nom.sg.neut}",
+                       "One is happy here."
+
+  = section "Overt Expletives" do
+    %p Overt expletives are stand-in dummy pronouns that can take the place of the subject in impersonal sentences. In Novegradian these are #{t "ото", "óto"} and #{t "вото", "vóto"}, which must appear at the beginning of the sentence and are identical in meaning; their distribution is mostly dialectical. These particles may only appear for inherently impersonal verbs as described in sections 11.17.1 and 11.17.2 above, and only when there is no dative/instrumental pronominal modifier present. Their use, however, is completely optional.
+    %p Sentences such as 151 and 153 in section 11.17.1 can also be used with the overt expletive:
+    = example_sentence "Ото дожгьило шемицу.",
+                       "Óto dóźgjilo śémicu.",
+                       "{expl} rain-{past}-{neut} week-{acc.sg}",
+                       "It rained for a week."
+    = example_sentence "Ото воунѣ темнѣет.",
+                       "Óto vóuně temně́iet.",
+                       "{expl} outside darken-{3sg}",
+                       "It’s getting dark outside."
+    %p Setence 156 in section 11.17.2 is grammatical with an overt expletive if the pronoun ей is removed, but not if it is kept: **Ото ей пахнет на розам.
+    = example_sentence "Ото пахнет на розам.",
+                       "Óto pahnét na rózam.",
+                       "{expl} smell-{3sg} on rose-{datins.pl}",
+                       "It smells like roses."
+
+  = section "Use of Specific Verbs" do
+    %p Many individual verbs have certain quirks or usage notes that deserve further explanation. Some of these are covered here, others in the lexicon.
+
+    = section "Исти and Ѣсати ‘to go’" do
+      %p The verb буити “to be” is dropped entirely when its presence can be inferred—when a phrase consists solely of two noun phrases, a noun phrase and a prepositional phrase, a noun phrase and an adjective, etc. In the same way, verbs such as исти and ѣсати may be dropped when their existence is implied, such as when a sentence consists of a noun and a directional phrase.
+      = example_sentence "Ти би хотѣла со мнѣ?",
+                         "Tí bi hótěla so mně́?",
+                         "you.{nom} {subj.sg} want-{past}-{fem} with I.{datins}",
+                         "Do you want [to come] with me?"
+      = example_sentence "Яс во граден.",
+                         "Iás vo gráden.",
+                         "I.{nom} in city-{lat.sg}",
+                         "I’m off to the city."
+      %p After the interrogatives #{t "куди", "kudí"} “to where?” and #{t "оскуд", "oskúd"} “from where?”, the clitic form #{t "е", "ie"} of the verb “to be” may appear if the subject of the sentence is singular and third person. This is becoming increasingly common. If the subject is in any other person or number, no clitic may appear, not even the plural clitic form #{t "су", "su"}.
+      = example_sentence "Куди е оне?",
+                         "Kudí ie óne?",
+                         "to_where be.{3sg.clitic} he.{nom}",
+                         "Where is he going?"
+      = example_sentence "Оскуд они?",
+                         "Oskúd oní?",
+                         "from_where they.{nom}",
+                         "Where did they come from?",
+                         :comment => "(not **Оскуд су они?)"
+
+    = section "Надо би ‘should’" do
+      %p The particle #{t "надо", "nádo"} is equivalent to the English modals “should”, “must”, or “supposed to”. It is followed by a verb in its infinitive or supine form. Надо itself does not decline in any way, but it must be followed by a subjunctive particle that agrees with its subject in number (би/бис/бу). This was originally a single word, надобѣ, that was later reanalyzed as надо + би due to the phonetic reduction of Ѣ. Like the subjunctive particle elsewhere, it generally appears in the second slot in a clause, although it is also attracted to the space immediately after надо. The sentence may be made impersonal (“it is supposed to”) by leaving out the subject entirely.
+      = example_sentence "Яс би надо ис думове пред неж настубит нокьи.",
+                         "Iás bi nádo ís dumóve pred néź nastubít nókji.",
+                         "I.{nom} {subj.sg} should go-{sup} homeward before than advance.{pf}-{3sg} night-{nom.sg}",
+                         "I should go home before night comes."
+      = example_sentence "Они надо бу оставити насмиятиш над Велесем.",
+                         "Oní nádo bu ostáviti nasmijátis nad Vélesem.",
+                         "they.{nom} should {subj.pl} stop.{pf}-{inf} taunt-{inf}-{mid} over Veles-{datins}",
+                         "They ought to stop taunting the devil.",
+                         :comment => "(i.e., tempting fate)"
+      
+    = section "Музеби ‘may/might’" do
+      %p The word #{t "музеби", "múzebi"} covers the role of “may/might” in Novegradian, and incorporates the subjunctive particle within itself. The subjunctive particle must agree in number with its subject, and following it may be a verb in any tense.
+      = example_sentence "Ондуа музебис прийдета нимзанок.",
+                         "Onduá múzebis prijdéta nimzánok.",
+                         "they.{nom.dl} may-{dl} arrive-{3dl} day_after_tomorrow",
+                         "Maybe the two of them will arrive the day after tomorrow."
+      = example_sentence "Оне музеби праве.",
+                         "Óne múzebi práve.",
+                         "he.{nom} may-{sg} Ø correct-{nom.sg.masc}",
+                         "He might be right."
+
+    = section "Verbs of Position" do
+      %p Novegradian tends to be more specific than English when it comes to describing the position of something. Where English would use “be”, Novegradian will generally use #{t "лежити", "leźíti"} “lie” or #{t "стояти", "stoiáti"} “stand”, the former if the object is more horizontal than vertical, the latter if it’s more vertical than horizonatal. If it is hanging, #{t "вижѣти", "viźě́ti"} is used. #{t "Шѣдѣти", "śědě́ti"} “sit” is used much as in English.
+      = example_sentence "Мѣмецеске словенике лежит на стуљ.",
+                         "Měméceske slóvenike leźít ná stuł.",
+                         "German-{nom.sg.masc} dictionary-{nom.sg} lie-{3sg} on table-{loc.sg}",
+                         "The German dictionary is on the table."
+      = example_sentence "Монументе стоит центрѣ Кременнаево парка.",
+                         "Monuménte stojít céntrě Kremennáievo párka.",
+                         "monument-{nom.sg} stand-{3sg} center-{loc.sg} kremlin-{adj}-{gen.sg.masc.def} park-{gen.sg}",
+                         "The monument is in the center of Krémennei Park."
+      %p Each of these also has an active form meaning “come to be X”: #{t "шѣсти", "śě́sti"} “sit up, sit down”, #{t "лейкьи", "léikji"} “lie down”, #{t "вуиставати", "vuistaváti"} “get up, stand” and #{t "повишѣти", "povíśěti"} “hang”; and a causative form meaning “make be X”: #{t "садити", "sadíti"} “seat”, #{t "ложити", "lóźiti"} “lay down”, #{t "ставити", "stáviti"} “put, stand”, and #{t "вешати", "véśati"} “hang up”. The first four are all intransitive, the last four all transitive, and all of these eight verbs are considered perfective.
+      %p In addition, taking the base forms described earlier and adding the middle voice suffix to them causes them to act in the same way as their active counterparts, so that вуиставати and стоятиш both mean “stand up”.
+      %p Compare:
+      %ul
+        %li
+          = t("Оне лежиле в оспидаљѣ.", "Óne leźíle v ospidáłě.", :linebreak => true)
+          %br
+          “He was in the hospital.” (#{abbrev 'impf'})
+        %li
+          = t("Оне полежиле в оспидаљѣ.", "Óne poleźíle v ospidáłě.", :linebreak => true)
+          %br
+          “He had been in the hospital.” (#{abbrev 'pf'})
+        %li
+          = t("Оне легле в оспидаљѣ.", "Óne légle v ospidáłě.", :linebreak => true)
+          %br
+          “He was admitted to the hospital.” (#{abbrev 'pf'})
+        %li
+          = t("Оне лежилеш в оспидаљѣ.", "Óne leźíleś v ospidáłě.", :linebreak => true)
+          %br
+          “He was admitted to the hospital.” (#{abbrev 'pf'})
+        %li
+          = t("Ложили ево в оспидаљѣ.", "Lóźili ievó v ospidáłě.", :linebreak => true)
+          %br
+          “They put him in the hospital.” (#{abbrev 'pf'})
+      %p Note that the active and causative forms specify only coming into a certain position, not what position something is coming from. Therefore шѣсти can mean both “sit down” and “sit up”, depending on context.
+
+    = section "Other Copulas" do
+      %p In addition to буити, Novegradian has four other primary copulas: #{t "стати", "státi"} (present-future stem *стан-), #{t "казатиш", "kazátiś"}, #{t "шияти", "śijáti"}, and #{t "иститиш", "istítiś"}.
+      %p #{t "Стати", "státi"} is equivalent to “become”, and is the active counterpart of буити. It is used whenever a change of state occurred or is to occur, more or less as in English. Whenever English has a choice between “be” and “become”, however, стати should be used in Novegradian. Like буити, its complement should always be in the dative/instrumental case if it is a noun.
+      = example_sentence "Яс хокьун стати лѣгарем.",
+                         "Iás hókjun státi lěgárem.",
+                         "I.{nom} want-{1sg} become-{inf} doctor-{datins.sg}",
+                         "I want to be a doctor.",
+                         :comment => "(lit. “become”)"
+      %p #{t "Казатиш", "kazátiś"} (originally meaning “say” or “show”, but whose meaning drifted under Russian influence) means “seem”.
+      = example_sentence "Кағьеци тѣм-це яс не приѣсале познѣ.",
+                         "Káğjeci tě́m-ce iás ne prijě́sale pózně.",
+                         "seem-{3sg}-{mid} {rel.datins.sg}-that.{nom} I.{nom} {neg} arrive.{pf}-{past}-{masc} late-{adv}",
+                         "It seems I didn’t arrive late."
+      = example_sentence "Ех традицѣ ваме музут казатиш далоками.",
+                         "Iéh tradícě váme múzut kazátiś dalókami.",
+                         "their tradition-{nom.pl} you.{pl.nom} be_able-{3pl} seem-{inf}-{mid} strange-{datins.pl}",
+                         "Their traditions may seem strange to you."
+      %p #{t "Шияти", "śijáti"} also means “seem” or “look” and is synonomous with казатиш in most circumstances, although it cannot be used impersonally as in example 182 above. Although both are considered standard, шияти is far more common colloquially. If the appearance is an emotion, the verb must be followed by #{t "од", "od"} “from” plus the genitive of the nominalized form of the adjective (184). If it is not an emotion, or if the emotion lacks a nominalized form, then шияти is followed a bare definite adjective in the dative/instrumental case, agreeing with the subject in gender and number (185).
+      = example_sentence "Они велем шияяти од частий.",
+                         "Oní vélem śijáiati od částij.",
+                         "they.{nom} very seem-{3pl} from happiness-{gen.pl}",
+                         "They seem very happy."
+      = example_sentence "Ех традицѣ ваме музут шияти далогиеми.",
+                         "Iéh tradícě váme múzut śijáti dalogíjemi.",
+                         "their tradition-{nom.pl} you.{pl.nom} be_able-{3pl} seem-{inf} strange-{datins.pl.def}",
+                         "Their traditions may seem strange to you."
+      %p #{t "Иститиш", "istítiś"} is usually translated simply as “be”. It differs from буити in that it stresses existence or identity, while буити simply equates. It is therefore sometimes glossed as “exists as” or “is defined as” (and in fact it is almost always used for defining words or names).
+      = example_sentence "Љуна-та истици самосуойном сукладникем Жемин.",
+                         "Łuná-ta istíci samosuóinom sukládnikem Źémin.",
+                         "moon-{nom.sg}-{def} exist-{3sg}-{mid} natural-{datins.sg.masc} satellite-{datins.sg} Earth-{gen.sg}",
+                         "The Moon is a natural satellite of the Earth."
+      %p Note that unlike буити, when стати, казатиш, or иститиш are negated, their complements remain in the dative/instrumental case, never switching to the genitive.
+
+    = section "Оѕити ‘teach’" do
+      %p The verb #{t "оѕити", "odzíti"} “teach” in Novegradian and in several other Slavic languages takes seemingly unusual arguments. All other ditransitive verbs, such as “give”, put the direct object in the accusative case and an indirect modifier (usually a person) in the dative/instrumental: I gave him.#{abbrev 'datins'} a book.#{abbrev 'acc'}. One would expect a similar pattern for “teach”: **I taught him.#{abbrev 'datins'} Novegradian.#{abbrev 'acc'}. However, this is not the case. Instead, the direct object (the topic being taught) must be in the dative/instrumental, and the person being taught in the animate accusative, a seemingly backwards configuration.
+      = example_sentence "Яс науѕиле ево новеградескием лизикем.",
+                         "Iás naudzíle ievó novegradeskíjem lizíkem.",
+                         "I.{nom} teach.{pf}-{past}-{masc} he.{acc} Novegradian-{datins.sg.masc.def} language-{datins.sg}",
+                         "I taught him Novegradian."
+      %p The reasoning for this becomes clear when the verb’s etymology is revealed. In some ancestor of the language (pre-Proto-Slavic or Proto-Balto-Slavic), this verb meant “make accustomed (to)”, where the case marking makes more sense.
+      %p However, when the verb is made passive, there is apparently some confusion as to how the cases ought to be marked. The subject being taught may appear either in the dative/instrumental (as would be expected) or in the accusative (which semantically makes more sense).
+      = example_sentence "Оне науѕилешин новеградескием лизикем/новеградеский лизик.",
+                         "Óne naudzíleśin novegradeskíjem lizíkem/novegrádeskij lizík.",
+                         "he.{nom} teach.{pf}-{past}-{masc}-{pass} Novegradian-{datins.sg.masc.def} language-{datins.sg}/Novegradian-{acc.sg.masc.def} language-{acc.sg}",
+                         "He was taught Novegradian."
+      %p When the verb is used in the middle voice with a dative/instrumental subject, it means “learn”. Again, the reasoning becomes clear when the original meaning is examined, which would have been roughly “accustom oneself to something”.
+      = example_sentence "Яс науѕилеш новеградескием лизикем.",
+                         "Iás naudzíleś novegradeskíjem lizíkem.",
+                         "I.{nom} teach.{pf}-{past}-{masc}-{mid} Novegradian-{datins.sg.masc.def} language-{datins.sg}",
+                         "I learned Novegradian."
+
+    = section "Хотѣти ‘want’" do
+      %p #{t "Хотѣти", "hótěti"} “want” is unique in that it can be used with both infinitives and subordinated clauses as well as direct objects. Clauses may be used in any situation, although infinitives can only be used if the subject of “want” and the other verb are the same:
+      = example_sentence "Яс хокьун работати.",
+                         "Iás hókjun rabótati.",
+                         "I.{nom} want-{1sg} work-{inf}",
+                         "I want to work."
+      %p If the subject of “want” and the other verb are different, then the subclause must be in the subjunctive mood if it is intended as an indirect command. Without the subjunctive mood, хотѣти takes on the meaning “to wish”.
+      = example_sentence "Яс хокьун то-це ти би работале.",
+                         "Iás hókjun tó-ce tí bi rabótale.",
+                         "I.{nom} want-{1sg} {rel.acc.sg}-that.{nom} you.{nom} {subj.sg} work-{past}-{masc}",
+                         "I want you to work."
+      = example_sentence "Она хокьет то-це надуа сомузева вастатиш цешкьѣ.",
+                         "Oná hókjet tó-ce naduá somuzeva vástatiś céśkjě.",
+                         "she.{nom} want-{3sg} {rel.acc.sg}-that.{nom} we.{nom.dl} be_able.{pf}-{1dl} meet-{inf}-{mid} often-{comp}-{adv}",
+                         "She wishes we could see each other more often."
+
+    = section "Мойкьи and Омѣти ‘be able’" do
+      %p Novegradian has two words that mean “be able” or “can”: #{t "мойкьи", "móikji"} and #{t "омѣти", "omě́ti"}. Мойкьи indicates physical ability or permission, while омѣти refers to having the knowledge to do something.
+      = example_sentence "Яс не омѣюн говорити нарусскѣ.",
+                         "Iás ne omě́iun govoríti narússkě.",
+                         "I.{nom} {neg} know_how-{1sg} speak-{inf} on-Russian-{adv}",
+                         "I can’t speak Russian (as I don’t know how)."
+      = example_sentence "Яс не музун говорити нарусскѣ.",
+                         "Iás ne múzun govoríti narússkě.",
+                         "I.{nom} {neg} be_able-{1sg} speak-{inf} on-Russian-{adv}",
+                         "I can’t speak Russian (as I am physically incapable or have been disallowed)."
+
+    = section "Буиле + Past Tense Constructions" do
+      %p Although not considered a separate tense like the future hypothetical, there is a special construction involving the past tense forms of буити followed by the past tense form of another verb, which takes on the meaning “was about to”. Both verbs are conjugated according to agreement in gender and/or number with their subject.
+      = example_sentence "Оне буиле вуискоциле, но острашилешин.",
+                         "Óne buíle vuískocile, no ostráśileśin",
+                         "he.{nom} be-{past}-{masc} leap.{pf}-{past}-{masc}, but frighten.{pf}-{past}-{masc}-{pass}",
+                         "He was about to jump, but got scared."
+      %p This construction cannot be negated. It may only be used with positive verbs.
+
+    = section "Animals and Humans" do
+      %p Novegradian verbs tend to be specific in indicating whether various actions are performed by people or by animals. Generally they require entirely different verbs, and either the verbs cannot logically be interchanged or would take on a different meaning if switched. The most common such example is the concept of the verbs “to live” and “to reside”, which for human subjects is rendered with #{t "жити", "źíti"} and for animal subjects with #{t "ходити", "hóditi"} (which also means “walk” or “go”, used even if the animal is not actually capable of walking).
+      = example_sentence "Яс живун во маленѣ градикѣ.",
+                         "Iás źivún vo máleně grádikě.",
+                         "I.{nom} live-{1sg} in small-{loc.sg.masc} city-{dimin}-{loc.sg}",
+                         "I live in a small city."
+      = example_sentence "Шем ежерѣ худат многе шкьугоу.",
+                         "Śém iéźerě húdat mnóge śkjugóu.",
+                         "this-{loc.sg.neut} lake-{loc.sg} walk-{3pl} many.{nom} pike-{part.pl}",
+                         "Many pike live in that lake."
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) There is a very slight different in pronunciation between цой/хой and цо-и/хо-и. When the latter are followed by a word beginning with a vowel, the glide becomes long: /tsojjV xojjV/. When the following word begins with a consonant, however, there is absolutely no difference; in this case, the choice between цой/хой and цо-и/хо-и in writing has no significance in the sense of “what/who is...?”. 
+%p 2) This, however, is rather uncommon.
+%p 3) Interestingly, the form видѣтищин does eixst, but it can only be used in one situation—modifying a noun with an adverb: #{t "видицин леғкѣ", "vídicin léğkě"} “[it] is easily seen”.
+%p 4) Prefix/preposition ‘agreement’ in verbs of motion was described earlier, in section 11.6.4.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
