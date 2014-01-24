@@ -1,0 +1,644 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Синтаксе истекь ймѣн"
+
+= render :partial => 'navigation'
+
+= section "The Nominative Case" do
+  %p The nominative case marks the subject of a sentence, as well as all adjectives modifying the subject, whether directly or across a copula. It has also served as a vocative since the original vocative was lost, calling out to or identifying specific persons or things.
+  = example_sentence "Еване еужинаст.",
+                     "Ieváne ieuźinást.",
+                     "Ieváne-{nom} eat_dinner-{3sg}",
+                     "Ieváne is eating dinner."
+  = example_sentence "Небесо – плаво.",
+                     "Nébeso – plávo.",
+                     "sky-{nom.sg} Ø light_blue-{nom.sg.neut}",
+                     "The sky is blue."
+  = example_sentence "Ташенка! Кудеж ти буила?",
+                     "Táśenka! Kudéź tí builá?",
+                     "Táśa-{dimin}-{nom}! where-{emph} you.{nom} be-{past}-{fem}",
+                     "Táśa! Where have you been?"
+  %p The nominative is also the citation form of nouns and adjectives, meaning all words outside of a proper context within a sentence will appear in the nominative. This includes dictionary entries, signs, and various other expressions.
+  = example_sentence "Добре дене, друге мой!",
+                     "Dóbre déne, drúge mói!",
+                     "good-{nom.sg.masc} day-{nom.sg}, friend-{nom.sg} my-{nom.sg.masc}",
+                     "Good afternoon, my friend!"
+  = example_sentence "На знакѣ напизано „Рошзийска Граница – 15 километер‟.",
+                     "Na znákě napizáno “Rośzíjska Graníca - 15 kilométer”.",
+                     "on sign-{nom.sg} write.{pf}-{pf.pass.ptcp}-{nom.sg.neut} “Russian-{nom.sg.fem} Border-{nom.sg} - 15 kilometer-{gen.pl}”",
+                     "The sign said, ‘Russian Border - 15 kilometers’."
+  %p The nominative case has one quirky usage, a Baltic areal feature. The direct object of a verb in the infinitive, supine, or imperative, as well as of any impersonal verbs lacking a true subject, takes the nominative case, not the accusative. This is frequently seen, for example, in the traditional opening line of Novegradian laws:
+  = example_sentence "Дай наме Боғе проявити прауда новеградеская.",
+                     "Dái náme Bóğe proiáviti práuda novegradeskáia.",
+                     "give-{2sg.imper} we.{datins} God-{nom.sg} carry_out.{pf}-{inf} truth-{nom.sg} Novegradian-{nom.sg.fem.def}",
+                     "May God help us to carry out the law of Novegrad."
+  %p However, this does not apply if the direct object is a pronoun, where the regular accusative forms will be used, or if the verb is negated, in which case the expected genitive forms are used.
+
+= section "The Genitive Case" do
+  = section "Basic Functions" do
+    %p The genitive case has four primary functions in Novegradian: indicating possession, indicating absence, indicating animate direct objects, and marking the object of certain prepositions. It is also used after certain numbers, but that usage will be discussed later.
+    %p When there is a possessor-possessed relationship in a clause, the possessor appears in the genitive case.
+    = example_sentence "Киѕа-та Катин вехода набѣгаст на травун видорих.",
+                       "Kidzá-ta Kátin vehodá nabě́gast na travún vidórih.",
+                       "small_dog-{nom.sg}-{top} Kátia-{gen} always run_on-{3sg} on grass-{lat.sg} other-{gen.pl.def}",
+                       "Kátia’s dog always gets into other people’s lawns."
+    %p Novegradian does not generally allow for multiple nouns in the genitive case to be strung together; while #{t "коша докьера Ростислава", "kóśa dókjera Rostisláva"} for “Rostisláu’s daughter’s cat” is grammatical, it is very poor style and sounds forced. To express such ideas, Novegradian speakers prefer to use multiple periphrastic genitives and redundant possessive marking: #{t "коша о Ростислава о докьера ево", "kóśa o Rostisláva o dókjera iévó"} (lit. “the cat at Rostisláu at his daughter”). Notice the order of the possessors, and how the top level possessor always comes first.
+    %p The direct object of negated verbs appears in the genitive case rather than the accusative. The same is true of subjects of verbs of existence.
+    = example_sentence "Яс некада написа не приймѣле.",
+                       "Iás nekadá nápisa ne prijmě́le.",
+                       "I.{nom} no_kind-{gen.sg} letter-{gen.sg} {neg} receive-{past}-{masc}",
+                       "I didn’t receive any letters."
+    = example_sentence "Радин-то суде нет.",
+                       "Rádin-to sudé nét.",
+                       "Rádia-{gen}-{top} here be.{3sg.neg}",
+                       "Rádia’s not here."
+    %p When the direct object of a verb is animate (i.e., a person or animal), its accusative form is replaced by the genitive, even when positive. This same phenomenon is the reason why the genitive case pronouns replaced the original accusative case forms. When хой “who” appears as the direct object, it must be in the genitive as well since it always refers to an animate being, while цой “what” uses the accusative, since it usually refers to something inanimate. This is generally referred to as the “animate accusative”.
+    = example_sentence "Она кѣловала Николая.",
+                       "Oná kělovála Nikoláia.",
+                       "she.{nom} kiss-{past}-{fem} Nikoláie-{acc}",
+                       "She kissed Nikoláie."
+    = example_sentence "Яс овидѣле медуѣда во лѣс.",
+                       "Iás ovíděle meduě́da vó lěs.",
+                       "I.{nom} see.{pf}-{past}-{fem} bear-{acc.sg} in forest-{loc.sg}",
+                       "I saw a bear in the forest."
+    %p And like most other cases, the genitive ‘governs’ certain prepositions, meaning their objects must appear in the genitive. These mostly deal with absence or movement away, and include #{t "бес", "bes"} “without”, #{t "близе", "blíze"} “near”, #{t "вон", "von"} “far from”, #{t "деля", "délia"} “for”, #{t "до", "do"} “until, up to”, #{t "за", "za"} “because of”, #{t "зе", "ze"} “from”, #{t "кроми", "krómi"} “except for”, #{t "од", "od"} “away from”, #{t "противе", "prótive"} “against”, #{t "со", "so"} “from on; off of”, and so forth. Animate nouns must also use the genitive case form after prepositions that normally require the accusative case, as the genitive form has spread analogically to these prepositional phrases.
+    = example_sentence "Вие идут спираньен-то кроми мене.",
+                       "Vijé idút spiránjen-to krómi mené.",
+                       "all-{nom.pl} go.{det}-{3pl} party-{lat.sg}-{top} except I.{gen}",
+                       "Everyone’s going to the party except for me."
+    = example_sentence "Старая керкў-от забудована зе дрѣвеса.",
+                       "Stáraia kerkw-ót zabudována ze drě́vesa.",
+                       "old-{nom.sg.fem.def} church-{nom.sg}-{top} Ø build.{pf}-{pass.pf.ptcp}-{nom.sg.fem} from wood-{gen.sg}",
+                       "The old church was built out of wood."
+    %p When a noun phrase modifies an adjective modifying another noun phrase, the second noun phrase will often appear in the genitive.
+    = example_sentence "Оне мнѣ желе стоған плон ювѣ.",
+                       "Óne mně́ źéle stoğán plón iúvě.",
+                       "he.{nom} I.{datins} bring.{pf}-{past}-{masc} glass-{acc.sg} full-{acc.sg.masc} drinking_water-{gen.sg}",
+                       "He brought me a glass full of water."
+
+  = section "The Genitive of Negation" do
+    %p The genitive of negation is an important concept in Novegradian, and deserves a more detailed examination. The basic principle remains that the direct object of a negated verb appears in the genitive; however, the implementation of this is more complex.
+    %p Some verbs, such as #{t "помагати", "pomagáti"} “help”, take core arguments that are not in the accusative case when positive. In this particular case, the logical patient takes the dative/instrumental. When such verbs are negated, these arguments do not change their case. That is, only arguments that would be in the accusative when the verb is positive become genitive when the verb is negated.
+    = example_sentence "Оне мнѣ не помагале.",
+                       "Óne mně́ ne pomagále.",
+                       "he.{nom} I.{datins} {neg} help-{past}-{masc}",
+                       "He did not help me."
+    %p The negated complement of a copula takes the genitive case.
+    = example_sentence "Несм юриста.",
+                       "Nésm iurísta.",
+                       "be.{1sg.neg} lawyer-{gen.sg}",
+                       "I am not a lawyer."
+    %p The logical subject of the negated existencial буити “be” appears in the genitive. This does not apply to the copular буити as in example 10 above, only the existential form. In the past tense, the verb shows neuter agreement.
+    = example_sentence "Ѣ не буило о Мартина.",
+                       "Iě́ ne buílo o Mártina.",
+                       "she.{gen} {neg} be-{past}-{neut} at Mártine-{gen}",
+                       "She was not at Mártine’s house."
+    %p The subject of a negated verb in the passive or middle voice appears in the genitive as well, and the verb takes neuter agreement if in the past tense or a tense derived from the past such as the future hypothetical. In other tenses, verb agreement is normal.
+    = example_sentence "Некадаево мераза-то мнѣ не прицувасцин.",
+                       "Nekadáievo meráza-to mně́ ne pricúvascin.",
+                       "no_kind-{gen.sg.masc.def} freeze-{gen.sg}-{top} I.{datins} {neg} feel-{3sg}-{pass}",
+                       "It doesn’t feel cold to me at all.",
+                       :comment => "(lit. “No freeze was felt to me”)"
+    = example_sentence "Николая не муилош пред неж пришле.",
+                       "Nikoláia ne muíloś pred neź priślé.",
+                       "Nikoláie-{gen} {neg} wash-{past}-{neut}-{mid} before than arrive.{pf}-{past}-{masc}",
+                       "Nikoláie didn’t wash before coming."
+    %p However, if the passive or middle voice verb appears in the infinitive or supine, the subject remains in the nominative case and verb agreement is normal. This includes verbs carrying their own semantic load (such as “want to...”) and verbs with a solely grammatical function (such as the imperfective future with буити).
+    = example_sentence "Она не хотѣла молитиш.",
+                       "Oná ne hótěla molítiś.",
+                       "she.{nom} {neg} want-{past}-{fem} pray-{inf}-{mid}",
+                       "She didn’t want to pray."
+    = example_sentence "Не бадем тривожитиш вомножко.",
+                       "Ne bádem trivóźitis vómnoźko.",
+                       "{neg} be.{fut}-{1pl} worry-{inf}-{mid} too_much",
+                       "We’re not going to worry too much."
+    %p The genitive object, however, persists in multi-verb constructions. This overrides the rule stating the direct object of an infinitive takes the nominative case, since the noun is still a direct object.
+    = example_sentence "Наталя не лубит вѣдати суоево дена роденьа.",
+                       "Natália ne lúbit vě́dati suoievó déna rodénja.",
+                       "Natália {neg} love-{3sg} celebrate-{inf} {reflx.poss}-{gen.sg.masc} day-{gen.sg} birth-{gen.sg}",
+                       "Natália doesn’t like celebrating her birthday."
+    %p Subordinators, such as the то-це construction, follow the same rule as nouns. If it would appear accusative when its parent verb is positive, it appears in the genitive when it is negated. If it would normally take an oblique case, then it keeps that oblique case. The genitive of negation does not persist into the subordinated clause.
+    = example_sentence "Надуа не рѣѕилѣ тово-це завратива шебе ко шестоюн.",
+                       "Naduá ne rědzílě tovó-ce zavrátiva śebé ko śestóiun.",
+                       "we.{nom.dl} {neg} say-{past}-{dl} {rel.gen.sg}-that.{nom} return.{pf}-{1dl} {reflx.acc} toward sixth-{datins.sg.fem.def}",
+                       "We didn’t say that we’d be back by six."
+    = example_sentence "Она нецево не бадет признавати тѣми-ково не соцедоваст вѣроғоденами.",
+                       "Oná necevó ne bádet priznaváti těmi-kovó ne socédovast věroğódenami.",
+                       "she.{nom} nothing.{gen} {neg} be.{fut}-{3sg} admit-{inf} {rel.datins.pl}-who.{gen} {neg} consider-{3sg} trustworthy-{datins.pl}",
+                       "She won’t admit anything to those who she doesn’t consider trustworthy."
+    %p The genitive of negation can persist to adverbial adjuncts formed from nouns, though this is not required. Generally, if the adjunct is genitive, it represents a partial negation; if the adjunct is accusative, it represents total negation (compare examples 26 and 27).
+    = example_sentence "Ша каля килограма не вагасци.",
+                       "Śá kália kilográma ne vágasci.",
+                       "this-{nom.sg.fem} fish-{nom.sg} kilogram-{gen.sg} {neg} weigh-{3sg}-{mid}",
+                       "This fish does not weigh a kilogram."
+    = example_sentence "Оне не спале порѣ вецераш вецерем.",
+                       "Óne ne spále porě́ véceraś vécerem.",
+                       "he.{nom} {neg} sleep-{past}-{masc} hour-{gen.sg} yesterday evening-{datins.sg}",
+                       "He didn’t sleep an hour last night.",
+                       :comment => "(he slept for some other amount of time)"
+    = example_sentence "Оне не спале пору вецераш вецерем.",
+                       "Óne ne spále póru véceraś vécerem.",
+                       "he.{nom} {neg} sleep-{past}-{masc} hour-{acc.sg} yesterday evening-{datins.sg}",
+                       "He didn’t sleep an hour last night.",
+                       :comment => "(he didn’t sleep at all)"
+    %p Adjuncts following the adverb ни <i>ni</i> “not (even)” always take the genitive.
+    = example_sentence "О те нет требѣ пладити ни тенгѣ.",
+                       "O té nét trébě pladíti ni tengě́.",
+                       "at you.{lat} be.{3sg.neg} need-{gen.sg} pay-{inf} not_even tenga-{gen.sg}",
+                       "You don’t have to pay anything at all.",
+                       :comment => "(lit. “...not even a tenga”)"
+    
+  = section "Verbs Requiring the Genitive" do
+    %p A number of verbs require complements in the genitive case, instead of or in addition to a direct object in the accusative. While these must be memorized, they can be grouped into two broad categories:
+    %ul
+      %li Verbs denoting striving or expectation: #{t "жедати", "źedáti"} “crave, hunger for, thirst for”, #{t "зацегати", "zacegáti"} “wait for”, #{t "ескати", "ieskáti"} “seek, look for”, #{t "прожити", "proźíti"} “ask [someone] for”, #{t "цаяти", "cáiati"} “expect, look forward to”, #{t "цегати", "cegáti"} “expect, foresee”.
+      %li Verbs denoting deprivation: #{t "боятиш", "boiátiś"} “be afraid of, fear”, #{t "лити", "líti"} “deprive of”, #{t "плакати", "plákati"} “mourn the loss of”, #{t "стидитиш", "stíditiś"} “be ashamed of”.
+    %p The latter category once had many more verbs (including many with the prefix <i>ot-</i>), but these have been steadily giving way to other constructions, most often prepositional phrases with #{t "од", "od"} “from”. Even the four listed above in speech (though not in writing) may be used with од + #{abbrev 'gen'} instead of a simple genitive. The first category, however, still consistently requires the genitive without any prepositions.
+    = example_sentence "Яс зацегам тово-койда ондуа прийдета.",
+                       "Iás zacegám tovó-kóida onduá prijdéta.",
+                       "I.{nom} wait-{1sg} {rel.gen.sg}-when they.{nom.dl} arrive.{pf}-{3dl}",
+                       "I am waiting for the two of them to arrive."
+    = example_sentence "Яс ѣ попрожила рагѣ.",
+                       "Iás iě́ poproźíla rágě.",
+                       "I.{nom} she.{acc} ask.{pf}-{past}-{fem} money-{gen.sg}",
+                       "I asked her for money."
+    = example_sentence "Вуи не музете мене лити (од) прав моих.",
+                       "Vuí ne múzete mené líti (od) práv mojíh.",
+                       "you.{nom.pl} {neg} be_able-{2pl} I.{acc} deprive-{inf} (from) right-{gen.pl} my-{gen.pl}",
+                       "You cannot deprive me of my rights."
+
+  = section "The Initial Topical Genitive" do
+    %p The initial topic genitive is a unique construction in the Slavic languages used to topicalize a quantified noun, generally stressing both the number involved and the identity of the quantified noun. The basic format of this construction is as follows: <span class="pattern">categorical (#{abbrev 'gen.pl'}) + topic marker + verb (#{abbrev 'neut'}) + quantifier + noun</span>.
+    %p The categorical is a noun that has a broad semantic domain that encompasses the quantified noun. For example, if the quantified noun is “week”, the categorical might be “time”. If it is “boy”, the categorical might be “people”. If it is “bottle”, the categorical might be “water”. How specific the categorical is depends on how specific the quantified noun is and what the speaker is trying to emphasize. This categorical always appears at the beginning of the sentence and in the genitive case. It is usually plural, unless the noun has no plural form, though refer to the comment alongside sentence 34 for an exception. The categorical also always appears with the topical clitic -то attached.
+    %p The verb will always appear in the third person singular or in the neuter singular.
+    = example_sentence "Луд-то буило дежестеро души.",
+                       "Lúd-to buílo deźéstero dúśi.",
+                       "people-{gen.pl}-{top} be-{past}-{neut} ten.{anim}-{nom} soul-{gen.pl}",
+                       "There were ten people.",
+                       :comment => "(or, perhaps, “As for people, there were ten”)"
+    = example_sentence "Ювѣ-то вуипилошин трѣ буделкѣ.",
+                       "Iúvě-to vuípilośin trě́ budélkě.",
+                       "water-{gen.sg}-{top} drink.{pf}-{past}-{neut}-{pass} three.{inan}-{nom.fem} water-{gen.sg}",
+                       "Three bottles of water were drunk.",
+                       :comment => "(or, “As for water, three bottles were drunk”)"
+    %p However, the categorical noun will appear in the genitive singular even if it has a plural form if the plural has a connotation inappropriate to the meaning of the sentence. For example, in the following example sentence, #{t "врѣмено", "vrě́meno"} “time” does have a plural form, but that generally means “periods of time” or “seasons”, neither of which are appropriate for the intended meaning “Two weeks passed”. Two weeks do not represent seasons, nor are they two discreet periods of time, but two units of a single measure of time.
+    = example_sentence "Врѣмена-то минало довѣ шемицѣ.",
+                       "Vrě́mena-to minálo dóvě śémicě.",
+                       "time-{gen.sg}-{top} pass.{pf}-{past}-{neut} two.{inan}-{nom.fem} week-{gen.sg}",
+                       "Two weeks passed."
+    %p Alternatively, no quantified noun has to be given. The numeral may simply stand alone at the end of the sentence, in which case it must appear in its animate form, whether or not the implied quantified noun is animate. In such cases, the categorical is interpreted as the quantified noun. However, the numeral #{t "едене", "iédene"} “one” may not be left alone this way, nor any number ending in it (21, 31, 101, etc); since it is a true adjective, it must quantify something.
+    %p Sentences like 35 below are often jokingly cited as an example of why Novegradian is so difficult to learn. Quite literally, nothing in the sentence is agreeing as it “should”: the subject is masculine and plural, but the verb is neuter and singular; the noun is inanimate, but the numeral is animate; the numeral is three, which calls for the genitive singular, but the noun is in the genitive plural.
+    = example_sentence "Напис-то собуивалош троин.",
+                       "Nápis-to sobuiváloś trójin.",
+                       "letter-{gen.pl}-{top} remain-{past}-{neut}-{mid} three.{anim}-{nom}",
+                       "There were three notes left behind."
+    %p Some other instances of the topical genitive are harder to classify. The following is a common usage that can only work with the numeral “one” (unless the name is omitted, in which case any number may be used).
+    = example_sentence "Друж-то моих пришло една Наташа.",
+                       "Drúź-to mojíh priśló iédna Natáśa.",
+                       "friend-{gen.pl}-{top} my-{gen.pl} arrive.{pf}-{past}-{neut} one-{nom.sg.fem} Natáśa-{nom}",
+                       "Of my friends, only Natáśa came."
+
+  = section "The Qualitative Genitive" do
+    %p The qualitative genitive refers to the use of the definite genitive form of adjectives (i.e., adjectives being used as substantives) after the pronouns #{t "цой", "cói"} “what”, #{t "нецой", "nécoi"} “nothing”, and #{t "цеш", "céś"} “something”. Note that this may only be done when the pronoun is in the nominative or accusative cases; otherwise the adjective must agree in case.
+    = example_sentence "Они овидѣли цеш страшнаево.",
+                       "Oní ovíděli céś straśnáievo.",
+                       "they.{nom} see.{pf}-{past}-{pl} something.{acc} scary-{gen.sg.neut.def}",
+                       "They saw something frightening."
+    %p The qualitative genitive may also be used when the verb “to be” is between the pronoun and adjective.
+    = example_sentence "Цо-и новаево?",
+                       "Có-i nováievo?",
+                       "what.{nom}-be.{3sg.clitic} new-{gen.sg.neut.def}",
+                       "What’s new?"
+    %p The qualitative genitive may also be used after the genitive form of нецой—#{t "нецево", "necevó"}—but only when it is a negated direct object or a negated essentencial construction. This is distinguished from mere case agreement (when mandated by prepostions or possessive constructions) by the use of the definite adjective in the qualitative construction.
+    = example_sentence "Оне не дѣласт нецево добраево.",
+                       "Óne ne dělast nécevo dobráievo.",
+                       "he.{nom} {neg} do-{3sg} nothing-{gen} good-{gen.sg.neut.def}",
+                       "He doesn’t do anything good.",
+                       :comment => "(Genitive of negation—definite adjective required)"
+    = example_sentence "Оне старасци сокривати од цевош худа.",
+                       "Óne starásci sokriváti od cevóś húda.",
+                       "he.{nom} try-{3sg}-{mid} hide-{inf} from something-{gen} bad-{gen.sg.neut}",
+                       "He is trying to avoid something bad.",
+                       :comment => "(Preposition governs genitive—indefinite adjective required)"
+
+= section "The Accusative Case" do
+  %p The Novegradian accusative case has three primary functions: indicating an inanimate direct object in non-negative sentences, indicating time or duration, and marking the object of a small set of prepositions.
+  %p It marks the direct object of a finite verb as long as the verb is positive and the object refers to something that is not a person or animal. For neuter nouns and inanimate masculine O-stems and I-stems, the nominative and accusative are identical.
+  = example_sentence "Ондуа мотрита телевизю.",
+                     "Onduá mótrita televíziu.",
+                     "they.{nom.dl} watch-{3dl} television-{acc.sg}",
+                     "The two of them are watching television."
+  %p When some sort of unit of time appears in the accusative, it represents duration (example 42) when used with non-specific units of time (minute, hour, year) or when something is to be performed (example 43) when used with a specific time period (Tuesday, summer, November).
+  = example_sentence "Оне буиле со суоими дружам оғу нокьи.",
+                     "Óne buíle so suojími druźám oğú nókji.",
+                     "he.{nom} be-{past}-{masc} with {reflx.poss}-{datins.pl} friend-{datins.pl} all-{acc.sg.fem} night-{acc.sg}",
+                     "He was with his friends all night."
+  = example_sentence "Зайдета ко наме дѣда со бабой во ледану за Рогьестуом.",
+                     "Zaidéta ko náme dě́da so báboi vo lédanu za Rógjestuom.",
+                     "visit.{pf}-{3dl} toward we.{datins} grandfather-{nom.sg} with grandmother-{datins.sg} in January-{acc.sg} behind Christmas-{datins}",
+                     "Grandfather and grandmother are coming to visit us in January for Christmas."
+  %p As shown in example 43, these time expressions may freely be preceded by the preposition #{t "во", "vo"} “in”, although this is only common with units of time of a month or greater (во ледану “in January”, в асто 2001 “in the year 2001”, во вѣк дуадешитей “in the 20th century”, etc). However, it is required before the word #{t "пора", "porá"} “hour” when referring to a time of day, since пора means both “(for) one hour” and “one o’clock”.
+  = example_sentence "Яс вуийдун во пору.",
+                     "Iás vuijdún vo póru.",
+                     "I.{nom} go_out.{pf}-{1sg} in hour-{acc.sg}",
+                     "I’m going out at 1:00."
+  = example_sentence "Яс вуийдун пору.",
+                     "Iás vuijdún póru.",
+                     "I.{nom} go_out.{pf}-{1sg} hour-{acc.sg}",
+                     "I’m going out for an hour."
+  %p When describing duration of time <em>after</em> an event occurs, the preposition #{t "на", "na"} must be used.
+  = example_sentence "Оне послалешин ко Волоғдой на шемицу.",
+                     "Óne posláleśin ko Voloğdói na śémicu.",
+                     "he.{nom} send.{pf}-{past}-{masc}-{pass} toward Vóloğda-{datins} on week-{acc.sg}",
+                     "He was sent to Vóloğda for a week."
+  %p When a modifier such as a numeral or #{t "многе", "mnóge"} “many” is used in front of a measure of time, the noun itself will appear in the genitive or partitive according to rules described later. Technically it is the modifiers that are considered to be in the accusative case.
+  = example_sentence "Она тамо работала дова асту.",
+                     "Oná támo rabótala dóva ástu.",
+                     "she.{nom} there work-{past}-{fem} two-{acc.neut} year-{gen.sg}",
+                     "She worked there for two years."
+  %p Duration before an action occurs is handled using #{t "по", "po"}, or more formally, #{t "трес", "tres"}. However, трес is frequently used before пора “hour” in all circumstances to prevent syllable repetition.
+  = example_sentence "Яс ойдун Грецюн по [трес] три дена.",
+                     "Iás oidún Gréciun po [tres] trí déna.",
+                     "I.{nom} leave.{pf}-{1sg} Greece-{lat} on three-{acc} day-{gen.sg}",
+                     "I leave for Greece in three days."
+  = example_sentence "Оне би надо мнѣ призуонити трес пору.",
+                     "Óne bi nádo mně́ prizuoníti tres póru.",
+                     "he.{nom} {subj.sg} should I.{datins} call_toward-{inf} across hour-{acc.sg}",
+                     "He should call me within an hour."
+  %p The accusative case once could be used with many prepositions of direction and movement, but these are all handled by the lative in modern speech. The use of the accusative case in these instances may still be seen occasionally in highly formal language or in poetry.
+  %p The accusative has one quirky usage. If the subject of an existencial verb such as #{t "буити", "buíti"} “be” is quantified, the quantifier appears in the accusative case. This stems from a general tendency to place quantified adjuncts in the accusative (as in time expressions) combined with the somewhat nebulous status of arguments of existencial verbs in Novegradian. If in the past tense, the verb will always take neuter agreement.
+  = example_sentence "Во шахуѣ буило пару сабогеу.",
+                     "Vo śáhuě buílo páru sabógeu.",
+                     "in closet-{loc.sg} be-{past}-{neut} pair-{acc.sg} boot-{part.pl}",
+                     "There were a pair of boots in the closet."
+
+= section "The Dative-Instrumental Case" do
+  %p The dative-instrumental case represents two original cases that merged in form. However, the functions of each original case remain intact.
+
+  = section "The Dative" do
+    %p The primary functions of the dative are in marking indirect objects and in impersonal constructions.
+    %p As the indirect object, the dative marks who benefits from an action or who it is done for. It can often be translated using “to” in English.
+    = example_sentence "Яс показале име вотограхѣ зе поезда суоево.",
+                       "Iás pokazále íme votográhě ze póiezda suoievó.",
+                       "I.{nom} show.{pf}-{past}-{masc} they.{datins} photograph-{acc.pl} from trip-{gen.sg} {reflx.poss}-{gen.sg.masc}",
+                       "I showed them photos from my trip."
+    = example_sentence "Яс сорѣѕиле Михаилой то-це несм дума шу шемицу.",
+                       "Iás sorědzíle Mihajíloi tó-ce nésm dúma śú śémicu.",
+                       "I.{nom} tell.{pf}-{past}-{masc} Mihajíle-{datins} {rel.acc.sg}-that.{nom} be.{1sg.neg} at_home this-{acc.sg.fem} week-{acc.sg}",
+                       "I told Mihajíle that I wouldn’t be home this week."
+    %p Impersonal constructions consist of an adverb/neuter adjective or middle voice verb, and have no true subject. Introducing a noun in the dative case creates a new semantic subject.
+    = example_sentence "Мнѣ кладно.",
+                       "Mně́ kládno.",
+                       "I.{datins} cold-{nom.sg.neut}",
+                       "I feel cold."
+    = example_sentence "Мнѣ кағьеци тѣм-це оне дуракем.",
+                       "Mně́ káğjeci tě́m-ce óne durákem.",
+                       "I.{datins} seem-{3sg}-{mid} {rel.datins.sg}-that.{nom} he.{nom} Ø idiot-{datins.sg}",
+                       "It seems to me that he’s an idiot."
+    %p When used with an infinitive, an inherent quality or unavoidability is implied.
+    = example_sentence "Виѣми омирати.",
+                       "Vijě́mi omiráti.",
+                       "all-{datins.pl} die-{inf}",
+                       "Everyone must [one day] die."
+    %p The “dative subject” uses the same construction, with an infinitive plus a dative pronoun. It generally indicates a perceived obligation. This can only be done with dative pronouns; with dative nouns this construction is very archaic.
+    = example_sentence "Куде мнѣ спати?",
+                       "Kudé mně́ spáti?",
+                       "where I.{datins} sleep-{inf}",
+                       "Where should I sleep?"
+    = example_sentence "Ему тамо егье не работати.",
+                       "Iemú támo iegjé ne rabótati.",
+                       "he.{datins} there more {neg} work-{inf}",
+                       "He shouldn’t work there anymore."
+    = example_sentence "Мнѣ оходити.",
+                       "Mně́ ohóditi.",
+                       "I.{datins} leave-{inf}",
+                       "I ought to leave."
+    %p With a noun and subjunctive marker, a wish (optative mood) may be indicated. This usage tends to be stylistically marked.
+    = example_sentence "Мир со частиям бис тибѣ.",
+                       "Mír so častijám bis tibě́.",
+                       "peace-{nom.sg} with happiness-{datins.pl} {subj.dl} you.{datins}",
+                       "Peace and happiness be with you."
+    %p The most common usage of the dative case alongside a noun is when telling age.
+    = example_sentence "Вама ож осмнацити азот. Лигѣ вама вожити.",
+                       "Váma oź osmnáciti azót. Ligě́ váma vóźiti.",
+                       "you.{datins.dl} already eighteen-{nom} year-{gen.pl}. Allowed you.{datins.dl} drive-{inf}",
+                       "You two are eighteen years old. You’re allowed to drive."
+    %p A few prepositions require the dative, most commonly #{t "ко", "ko"} “to, toward”. It may also be seen with a number of verbal adverbs or participles functioning as pseudoprepositions.
+    = example_sentence "Неможено емворати кино-то ко нигой.",
+                       "Nemóźeno iemvórati kinó-to ko nígoi.",
+                       "impossible-{nom.sg.neut} compare-{inf} film-{nom.sg}-{top} to book-{datins.sg}",
+                       "You can’t compare the film to the book."
+    = example_sentence "Наш проехте науреме законцилешин дигаен ехортем Еринѣ.",
+                       "Náś proiéhte náureme zakóncileśin digáien iéhortem Ieríně.",
+                       "our-{nom.sg.masc} project on_time finish.{pf}-{past}-{masc}-{pass} thank-{adv.impf} effort-{datins.sg} Ierína-{gen}",
+                       "Our project was finished on time thanks to Ierína’s hard work."
+    %p A number of adjectives capable of taking nominal complements require them to be in the dative case: #{t "равене", "rávene"} “equal (to)”, #{t "ғодене", "ğódene"} “worthy (of), deserving (of)”, #{t "овинене", "ovínene"} “guilty (of)”. However, these gradually are being replaced by prepositional phrases; овинене is falling out of use in favor of #{t "виниве", "viníve"}, which takes #{t "во", "vo"} “in” + #{abbrev 'loc'}, and равене nowadays frequently takes its complement as #{t "со", "so"} “with” + #{abbrev 'datins'}.
+    = example_sentence "Она-и ғодена нашѣ хуалой.",
+                       "Oná-i ğódena náśě hualói.",
+                       "she.{nom}-be.{3sg.clitic} worthy-{nom.sg.fem} our-{datins.sg.fem} praise-{datins.sg}",
+                       "She is deserving of our praise."
+    %p The so-called “inalienable dative” is a dative complement used with verbs whose direct object is a body part. It completely replaces any sort of possessive marker specifying whose body part is being discussed.
+    = example_sentence "Ше тамо песе мнѣ накузале року.",
+                       "Śé támo pése mně́ nakuzále róku.",
+                       "that-{nom.sg.masc} there dog-{nom.sg} I.{datins} bite.{pf}-{past}-{masc} hand-{acc.sg}",
+                       "That dog bit my hand."
+    = example_sentence "Слези закривали ей оки.",
+                       "Slézi zakriváli iéi óki.",
+                       "tear-{nom.pl} veil.{impf}-{past}-{pl} she.{datins} eye-{acc.dl}",
+                       "Tears clouded her eyes."
+    %p This is frequently extended metaphorically to things closely associated with the body such as clothing or senses (66, 67) or to things towards which someone feels a strong personally attachment (68).
+    = example_sentence "Ѣ гласе рѣғьет мнѣ слух.",
+                       "Iě́ gláse rě́ğjet mně́ slúh.",
+                       "her voice-{nom.sg} cut-{3sg} I.{datins} hearing-{acc.sg}",
+                       "Her voice is grating on my ears.",
+                       :comment => "(lit. “cuts at my hearing”)"
+    = example_sentence "Яс шибѣ зацернила сукню вином.",
+                       "Iás śibě́ zacerníla súkniu vinóm.",
+                       "I.{nom} {reflx.datins} soil.{pf}-{past}-{fem} dress-{acc.sg} wine-{datins.sg}",
+                       "I spilt some wine on my dress."
+    = example_sentence "Заводне ексалате наме забредит воздух.",
+                       "Závodne eksaláte náme zabredít vózduh.",
+                       "factory-{adj}-{nom.sg.masc} exhaust-{nom.sg} we.{datins} pollute-{3sg} air-{acc.sg}",
+                       "Factory emissions are polluting our air."
+
+  = section "The Instrumental" do
+    %p The instrumental serves to mark the complement of a copular verb, the means by which an action was performed, and the object of certain prepositions.
+    %p The complement of a copular verb must appear in the instrumental case if nominal. If an adjective, the same case must be used as the subject.
+    = example_sentence "Она оғу житени хотѣла стати оѕиделикой.",
+                       "Oná oğú źíteni hótěla státi odzidélikoi.",
+                       "she.{nom} all-{acc.sg.fem} life-{acc.sg} want-{past}-{fem} become-{inf} teacher-{fem}-{datins.sg}",
+                       "She wanted to be a teacher her entire life."
+    = example_sentence "Ши – постариеми дружам-то моими.",
+                       "Śí – postaríjemi druźám-to mojími.",
+                       "this-{nom.pl} Ø long_time-{datins.pl.def} friend-{datins.pl}-{top} my-{datins.pl}",
+                       "These are my old friends."
+    %p A noun in the instrumental case by itself, without any prepositions, indicates the means by which an action is performed. It is often translated as “with”.
+    = example_sentence "Яс шле думове ногам.",
+                       "Iás ślé dumóve nogám.",
+                       "I.{nom} go.{det}-{past}-{masc} homeward foot-{datins.pl}",
+                       "I went home on foot."
+    = example_sentence "Они жели вотограхѣ суоим вотапаратем.",
+                       "Oní źéli votográhě suojím votaparátem.",
+                       "they.{nom} take.{pf}-{past}-{pl} photograph-{acc.pl} {reflx.poss}-{datins.sg.masc} camera-{datins.sg}",
+                       "They took photographs with their camera."
+    %p The most common prepositions the instrumental case is used with are all locative—#{t "зад", "zad"} “behind”, #{t "над", "nad"} “over”, #{t "под", "pod"} “under”, #{t "пред", "pred"} “in front of”, #{t "со", "so"} “with”, etc. The last is particularly important because it is used to connect nouns to make compound nominal phrases, similar to English “and” in certain circumstances.
+    %p The instrumental is also used to mark the agent in a passive sentence (after the preposition #{t "на", "na"}), the complement of certain verbs or other expressions of emotion or feeling (73, 74) and sometimes as adverbs of time when used with a specific period, such as “evening”, “summer”, “Tuesdays”, etc (75, 76). When used with a day of the week or a month, the meaning is always plural (“every Tuesday”, “every May”), even though the form itself is grammatically singular.
+    = example_sentence "Надуа велем шебе гордива тибѣ.",
+                       "Naduá vélem śebé gordíva tibě́.",
+                       "we.{nom.dl} very {poss.acc} pride-{1dl} you.{datins}",
+                       "We’re very proud of you.",
+                       :comment => "(lit. “We pride ourselves very much by you.”)"
+    = example_sentence "Яс – доволне тѣм-це пробуивало.",
+                       "Iás - dovólne tě́m-ce probuiválo.",
+                       "I.{nom} Ø content-{nom.sg.masc} {rel.datins.sg}-that.{nom} happen-{past}-{neut}",
+                       "I’m satisfied with what happened."
+    = example_sentence "Вецерем снѣге надо би настубити.",
+                       "Vécerem sně́ge nádo bi nastubíti.",
+                       "evening-{datins.sg} snow-{nom.sg} should {subj.sg} approach.{pf}-{inf}",
+                       "It’s supposed to start snowing this evening."
+    = example_sentence "Годе Пасха вѣдецин траваной или куѣтаной.",
+                       "Góde Pashá́ vě́decin trávanoi ili kuě́tanoi.",
+                       "holiday-{nom.sg} Pascha-{nom} celebrate-{3sg}-{pass} April-{datins.sg} or May-{datins.sg}",
+                       "Pascha is always observed in April or May."
+
+= section "Partitive Case" do
+  %p The partitive case is primarily used to indicate some sort of partial quality of the noun it modifies, and is often equivalent to the English quantifier “some”. Nouns following non-negative non-nummerical quantifiers such as #{t "многе", "mnóge"} “many, much”, as well as less less abstract ones such as #{t "кило", "kílo"} “kilograms” (indeclinable) and #{t "стоғане", "stoğáne"} “a glass [of]”, must also be in the partitive. Partitive nouns may be the subject, object, or indirect object. The partitive case dominates over the nominative, accusative, and genitive (i.e., a subject, object, or possessor can be in the partitive instead of the nominative, accusative, or genitive), but if other cases are involved, a secondary modifier such as #{t "немноге", "nemnóge"} “a few, a little bit” must be used. Strictly it is the modifier that takes the necessary case (despite not declining to indicate it), allowing the following noun to use the partitive case. Note that the partitive cannot be used as the subject of a sentence by itself without the help of an adverb, but may appear alone as the direct object.
+  %p When used with a count noun, the partitive generally means “part/some of”. If it is a mass noun, it means “some”.
+  = example_sentence "Многе лудеу не радеют спорта.",
+                     "Mnóge lúdeu ne radéiut spórta.",
+                     "many.{nom} people-{part.pl} {neg} enjoy-{3pl} sports-{gen.sg}",
+                     "Many people do not like sports."
+  = example_sentence "Яс хокьун пити. Музеш ли принес мнѣ ювок?",
+                     "Iás hókjun píti. Múześ li prinés mně́ iúvok?",
+                     "I.{nom} want-{1sg} drink-{inf}. be_able-{2sg} {q} bring_to.{pf}-{sup} I.{datins} drinking_water-{part.sg}",
+                     "I’m thirsty. Could you bring me some water?"
+  = example_sentence "О тебе ли дружеу, вѣдакьоу то-како елехтроники репарати?",
+                     "O tebé li drúźeu, vědákjou tó-kako ielehtróniki reparáti?",
+                     "at you.{gen} {q} friend-{part.pl}, know-{act.impf.ptcp}-{part.pl} {rel.acc.sg}-how electronic-{nom.pl} repair-{inf}",
+                     "Do you have any friends who know how to repair electronics?"
+  = example_sentence "Яс вехода пюн стоған комподек разом со заутрокем.",
+                     "Iás vehodá piún stoğán kompodék rázom so záutrokem.",
+                     "I.{nom} always drink-{1sg} glass-{acc.sg} compote-{part.sg} together with breakfast-{datins.sg}",
+                     "I always drink a glass of compote with breakfast."
+  = example_sentence "Оне мене науѕиле немноге английскоу словесоу.",
+                     "Óne mené naudzíle nemnóge anglíjskou slóvesou.",
+                     "he.{nom} I.{acc} teach.{pf}-{past}-{masc} a_few.{datins} English-{part.pl} word-{part.pl}",
+                     "He taught me a few words in Russian.",
+                     :comment => "(where немноге is treated as though it were dative/instrumental)"
+  %p The use of the partitive after another noun almost always specifies that noun as some sort of unit of measurement, while the genitive means the noun is literal. Compare:
+  = example_sentence "Николае сиѣгле цашу субек.",
+                     "Nikoláie siě́gle cáśu subék.",
+                     "Nikoláie-{nom} eat.{pf}-{past}-{masc} bowl-{acc.sg} soup-{part.sg}",
+                     "Nikoláie ate a bowl of soup.",
+                     :comment => "(Partitive: He ate the soup)"
+  = example_sentence "Николае сиѣгле цашу супу.",
+                     "Nikoláie siě́gle cáśu súpu.",
+                     "Nikoláie-{nom} eat.{pf}-{past}-{masc} bowl-{acc.sg} soup-{gen.sg}",
+                     "Nikoláie ate a bowl of soup.",
+                     :comment => "(Genitive: He ate the bowl as well as the soup)"
+  %p The partitive may not appear as the direct object of a negated sentence. Since the partitive indicates a partial or indefinite amount, it would be illogical to use it in such a situation, since the amount is certain: none. The genitive of negation therefore has no need to compete with the partitive in such environments.
+  %p When the direct object of a positive verb is a mass noun or some other sort of singulare tantum (e.g., abstract nouns lacking a plural), it will almost always appear in the partitive case rather than in the accusative. It is, after all, illogical to ask for all water or all support.
+  = example_sentence "Принези мнѣ ювок. (**юву)",
+                     "Prinezí mně iúvok.",
+                     "bring.{pf}-{2sg.imper} I.{datins} water-{part.sg}",
+                     "Bring me some water."
+  = example_sentence "Яс ешкьун позперок. (**позперу)",
+                     "Iás iéśkjun pózperok.",
+                     "I.{nom} seek-{1sg} support-{part.sg}",
+                     "I am looking for some support."
+  = example_sentence "Муи преддержим вашѣ бесобасенностек. (**бесобасенности)",
+                     "Muí preddérźim váśě besobásennostek.",
+                     "we.{nom} ensure-{1pl} your.{pl}-{part.sg.fem} safety-{part.sg}",
+                     "We will guarantee your safety."
+  %p The above descriptions apply only the the standard dialect, however. Since much of the Novegradian-speaking population is either bilingual in a Uralic language or come in frequent contact with one of them, the rules for the use of the partitive vary drastically. Common dialectical features include:
+  %ul
+    %li Using the partitive singular and plural instead of the genitive with numerals.
+    %li Using the partitive to mark the direct object of an imperfective verb in some circumstances (to emphasize incompletion).
+    %li Using the partitive singular to mark the direct object of a progressive atelic verb (present/future tense only) with no clear ending or result, such as “love”, “think”, “enjoy”, and many other verbs not describing physical action.
+  %p While not considered standard, these uses are gaining increasing acceptance in written texts from areas where they are common in speech. Many newspapers published in Helsinki, for example, will occasionally include these features, while newspapers from Novegráde Velíkei never will.
+
+= section "The Locative Case" do
+  %p The locative case is used to indicate the location of an object or action, in either a literal or temporal sense. There are six prepositions it is commonly used with: #{t "во", "vo"} “in”, #{t "на", "na"} “on”, #{t "о", "o"} “about”, #{t "па", "pa"} “near”, #{t "по", "po"} “along, upon”, and #{t "при", "pri"} “at, in the presence/time of”.
+  = example_sentence "Яс работам во школѣ.",
+                     "Iás rabótam vo śkólě.",
+                     "I.{nom} work-{1sg} in school-{loc.sg}",
+                     "I work in a school."
+  %p Unlike all other modern Slavic languages, Novegradian retains the ability to use locative case nouns on their own, without the aid of a preposition. This is only done with locative nouns when the implied preposition is obvious.
+  = example_sentence "Новеградескей Парламенте стоит оликѣ Прусскѣѣм.",
+                     "Novegrádeskei Parlaménte stojít ólikě Prusskě́iěm.",
+                     "Novegradian-{nom.sg.masc.def} Parliament-{nom.sg} stand-{3sg} street-{loc.sg} Prussian-{loc.sg.fem.def}",
+                     "The Novegradian Parliament is located on Prusskáia Street."
+  %p When expressing a temporal meaning, prepositions usually are not dropped unless the expression refers to a single moment of time (89) or has become a fixed expression, such as with the seasons (90). Fixed time expressions such as #{t "вецерѣ", "vécerě"} “in the evening” may overlap with similar constructions made from other cases (e.g., dative/instrumental #{t "вецерем", "vécerem"} or accusative #{t "во вецер", "vo vécer"}), although there is no real difference in meaning.
+  = example_sentence "Селебранье нацинасци пољункьах.",
+                     "Selebránje nacinásci połunkjáh.",
+                     "celebration-{nom.sg} begin-{3sg}-{mid} midnight-{loc.pl}",
+                     "The celebrations will begin at midnight."
+  = example_sentence "Жимѣ вехода буиваст многе снѣгек со ледем.",
+                     "Źímě vehodá buivást mnóge sněgék so lédem.",
+                     "winter-{loc.sg} always be.{iter}-{3sg} much snow-{part.sg} with ice-{datins.sg}",
+                     "There’s always a lot of snow and ice in winter."
+  
+= section "The Lative Case" do
+  %p The lative case is used to mark the direction or destination of a verb of motion, or a verb implying motion. It may be used with any preposition of position (“in”, “on”, “behind”, “under”, etc), thereby giving them a directional meaning (“into”, “onto”, “to the back of”, “to the underside of”). Like the locative case, any preposition may be dropped if it can be inferred, although in practice this only means во and на. Preposition loss is much more common when the noun is pushed forward or backward from its most unmarked position. A prepositionless lative also can frequently mean simply “to”, while with на or во the more specific meanings “onto” and “into” are stressed.
+  = example_sentence "Ѣдун Зюрихен за бизнесем.",
+                     "Iě́dun Ziúrihen za bíznesem.",
+                     "go_by_vehicle.{det}-{1sg} Zürich-{lat} for business-{datins.sg}",
+                     "I’m going to Zürich on business."
+  = example_sentence "Повастамеш во кавѐ пред неж кинотеятрен пойдем.",
+                     "Povástameś vo kavé pred néź kinoteiátren poidém.",
+                     "meet.{pf}-{1pl}-{mid} in café-{loc.sg} before that movie_theatre-{lat.sg} go.{pf}-{1pl}",
+                     "We’ll meet up at the coffee shop before going to the theater."
+  = example_sentence "Ана сокрила напис-то од нево под озянен.",
+                     "Ána sokríla nápis-to od nevó pod oziánen.",
+                     "Ána-{nom} hide.{pf}-{past}-{fem} letter-{acc.sg}-{top} from {n*}-he.{gen} under bed-{lat.sg}",
+                     "Ána hid his letter under under her bed.",
+                     :comment => "(lit. “letter from him”, since he is not in possession)"
+
+= section "The Use of the Dual Number" do
+  %p The dual number in Novegradian nouns has very limited functionality. It may only appear in two situations.
+  %p The most common is after the numeral дова “two” as well as the pronoun оба “both”, where the dual must be used if the noun has a distinct dual. This is discussed further in section 13.8. However, it generally may not occur in isolation. If the quantifier is removed, the noun must appear in the plural. Compare:
+  = example_sentence "Еграст на клавир обѣма суоима рогама.",
+                     "Iegrást na klavír óběma suojíma rogáma.",
+                     "play-{3sg} on piano-{acc.sg} both-{datins} {reflx.poss}-{datins.dl} hand-{datins.dl}",
+                     "He plays the piano with both of his hands."
+  = example_sentence "Еграст на клавир суоими рокам.",
+                     "Iegrást na klavír suojími rókam.",
+                     "play-{3sg} on piano-{acc.sg} {reflx.poss}-{datins.pl} hand-{datins.pl",
+                     "He plays the piano with his hands."
+  %p Notice that dual nouns generally take plural agreement with adjectives, with the exception of the dative/instrumental dual, which takes #{t "-ма", "-ma"}; whether this is a holdover or simply a case of ending matching is debatable<sup>1</sup>.
+  %p However, there are a number of set expressions that call for dual forms even without a numeral. Some, such as #{t "сами суои оки", "sámi suojí óki"} “one’s own eyes”, can even decline.
+  = example_sentence "Яс ше-то овидѣле самама суоима огома!",
+                     "Iás śé-to ovíděle sámama suojíma ogóma!",
+                     "I.{nom} this-{nom.sg}-{top} see.{pf}-{past}-{masc} same-{datins.dl} {reflx.poss}-{datins.dl} eye-{datins.dl}",
+                     "I saw it with my own two eyes!"
+
+= section "Case Assignment of Deverbative Phrases" do
+  %p The case borne by a modifier of a deverbalized noun depends on the cases of the arguments of the original verb.
+  %p If the semantic patient (not necessarily the direct object) of the verb is in the accusative case, nouns modifying the deverbalized noun take the genitive.
+  %table
+    %tr
+      %th Original Verb
+      %th Deverbal Noun Phrase
+    %tr
+      %td
+        = t("цидати", "cidáti", :linebreak => true)
+        %br
+        “read”
+      %td
+        = t("циданье ниг", "cidánje níg", :linebreak => true)
+        %br
+        “the reading of books”
+    %tr
+      %td
+        = t("видѣти", "víděti", :linebreak => true)
+        %br
+        “see”
+      %td
+        = t("виде наступнаево", "víde nastupnáievo", :linebreak => true)
+        %br
+        “a view of the future”
+    %tr
+      %td
+        = t("традити", "tradíti", :linebreak => true)
+        %br
+        “waste, lose”
+      %td
+        = t("трада рагѣ", "tradá rágě", :linebreak => true)
+        %br
+        “a waste of money”
+    %tr
+      %td
+        = t("росуити", "rosuíti", :linebreak => true)
+        %br
+        “develop”
+      %td
+        = t("росуие промуисли", "rósuije promuislí", :linebreak => true)
+        %br
+        “the development of industry”
+  %p In such constructions, it is ambiguous whether the modifying noun is “agent-like” or “patient-like” relative to the deverbal; context must be used. For example, #{t "описе Марка", "ópise Márka"} can mean either “a description of Márke” (where “Márke” is acting more like the patient of the verb “describe”) or “a description that Márke made” (where “Márke” is acting more like the agent of “describe”).
+  %p If the primary patient of a verb does not use the accusative case, however, the agent-like and patient-like deverbatives are distinguished. A modifier is used in the genitive case if it is agent-like, and in the original case of the verbal patient if it is patient-like. The three verbs in the table below, for instance, mark their patients using the dative/instrumental case.
+  %table
+    %tr
+      %th Original Verb
+      %th Agent-Like Deverbal
+      %th Patient-Like Deverbal
+    %tr
+      %td
+        = t("помойкьи", "pomóikji", :linebreak => true)
+        %br
+        “help”
+      %td
+        = t("помокьи Михаила", "pómokji Mihajíla", :linebreak => true)
+        %br
+        “help given by Mihajíle”
+      %td
+        = t("помокьи Михаилой", "pómokji Mihajíloi", :linebreak => true)
+        %br
+        “help for Mihajíle”
+    %tr
+      %td
+        = t("славити", "sláviti", :linebreak => true)
+        %br
+        “glorify”
+      %td
+        = t("слава Боға", "sláva Bóğa", :linebreak => true)
+        %br
+        “glory of God”
+      %td
+        = t("слава Боғем", "sláva Bóğem", :linebreak => true)
+        %br
+        “glory to God”
+    %tr
+      %td
+        = t("хуалити", "hualíti", :linebreak => true)
+        %br
+        “praise”
+      %td
+        = t("хуала Совин", "hualá Sóvin", :linebreak => true)
+        %br
+        “praise given by Sóvia”
+      %td
+        = t("хуала Совей", "hualá Sovéi", :linebreak => true)
+        %br
+        “praise for Sóvia”
+  %p This distinction between agentive and patientive modifiers is also present in many nouns not directly related to a verb, but it more irregular and harder to predict. It is apparent in #{t "примене Цара", "prímene Cára"} “a monument made by the Tsar” versus #{t "примене Царем", "prímene Cárem"} “a monument to the Tsar”.
+
+= section "Assignment of Cases in Appositive Noun Phrases" do
+  %p Appositive noun phrases are phrases with two nouns placed side-by-side, with one serving to modify or define the other. In Novegradian, generally only the first element is declined, while the second appears in the nominative.
+  = example_sentence "Оне живет во градѣ Арханьейске.",
+                     "Óne źivét vo grádě Arhánjeiske.",
+                     "he.{nom} live-{3sg} in city-{loc.sg} Arhánjeiske-{nom}",
+                     "He lives in the city of Arhánjeiske."
+  = example_sentence "Яс науѕиле суоим другой Кеша нѣкотроу латўискоу словесоу.",
+                     "Iás naudzíle suojím drúgoi Kéśa ně́kotrou látwiskou slóvesou.",
+                     "I.{nom} teach.{pf}-{past}-{masc} {reflx.poss}-{datins.sg.masc} friend-{datins.sg} Kéśa-{nom} several-{part.pl} Latvian-{part.pl} word-{part.pl}",
+                     "I taught my friend Kéśa some Latvian words."
+  %p This also applies to titles of films, books, newspapers, etc. If an appositive construction is present, the title appears in the nominative. Otherwise, it appears in whatever case is grammatically conditioned.
+  = example_sentence "Яс процидале нигу Толстаево „Война со миром‟.",
+                     "Iás procidále nígu Tolstáievo “Voiná so mírom”.",
+                     "I.{nom} read.{pf}-{past}-{masc} book-{acc.sg} Tolstoy-{gen} “War-{nom.sg} with peace-{datins.sg}”",
+                     "I read Tolstoy’s book ‘War and Peace’."
+  = example_sentence "Яс процидале „Войну со миром‟ Толстаево.",
+                     "Iás procidále “Voinú so mírom” Tolstáievo.",
+                     "I.{nom} read.{pf}-{past}-{masc} “War-{acc.sg} with peace-{datins.sg}” Tolstoy-{gen}",
+                     "I read Tolstoy’s ‘War and Peace’."
+  %p The noun #{t "рѣга", "rěgá"} “river” is more complicated as an appositive. It can either occur before the river name, in which case it acts as a normal appositive construction, or can appear after, in which case both nouns decline identically. This only applies when the river name is nominal, never adjectival.
+  = example_sentence "Оне владѣет дакьу по рѣгѣ Моста (Мостѣ рѣгѣ).",
+                     "Óne vladě́iet dákju po rěgě́ Mostá (Mostě́ rěgě́).",
+                     "he.{nom} own-{3sg} dacha-{acc.sg} along river-{loc.sg} Mostá-{nom} (Mostá-{loc} river-{loc.sg})",
+                     "He owns a dacha on the River Mostá (Mostá River)."
+  %p Personal titles, however, act in the exact opposite way. If the title occurs before the name, then both decline identically. If the title occurs after the name, then the name declines, but the title appears in the nominative. Only a limited set of titles are allowed to appear after the name, however; these are mostly confined to political titles.
+  = example_sentence "Яс пройшкьун велигаево кеняжя Ярослава (Ярослава великей кеняжи).",
+                     "Iás próiśkjun veligáievo keniáźia Iarosláva (Iarosláva velíkei keniáźi).",
+                     "I.{nom} research-{1sg} great-{acc.sg.masc.def} prince-{acc.sg} Yaroslav-{gen} (Yaroslav-{gen} great-{nom.sg.masc.def} prince-{nom.sg})",
+                     "I am researching Grand Prince Yaroslav (Yaroslav the Grand Prince)."
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Traditionally, it is regarded as the latter. This issue is examined further in the section on adjectival syntax.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
