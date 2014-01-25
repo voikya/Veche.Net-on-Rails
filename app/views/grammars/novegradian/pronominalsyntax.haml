@@ -1,0 +1,364 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Синтаксе окағьакь ймѣн"
+
+= render :partial => 'navigation'
+
+= section "Personal Pronouns" do
+  %p Nominative case personal pronouns are frequently omitted if the verb makes it clear what the subject is. They are more frequently used with past tense verbs (which do not encode person) and non-declining verbal forms, such as adverbial participles. The third person nominative pronouns are avoided whenever possible, even in the past, and are generally only found for emphasis or contrast (and even when used for those reasons, they will often be replaced by the topical pronoun то). Pronouns in any other case are not optional unless they have been topicalized.
+  %p #{t "Яс", "iás"} “I” is pronounced /ja/ before fricative consonants (i.e., the /s/ is dropped), although this is not indicated in spelling. In highly-formal situations, this variant will often be pronounced [jah], with the original /s/ preserved only as a slight aspiration.
+  %p The oblique third person pronouns have a peculiarity not seen elsewhere. Forms beginning with a vowel or /j/ acquire an epenthetic /n/ when following a preposition: #{t "о нево", "o nevó"} “at him”. When the preposition has both a vowelled and an unvowelled form (со, во, ко), the /n/ will instead be added to the preposition: #{t "сон ему", "son iemú"} “with him”.
+
+= section "Possessive Adjectives" do
+  %p The Novegradian possessive adjectives perform both adjectival (“my”, “your”, “our”, etc) and pronominal (“mine”, “yours”, “ours”) functions. They must agree in gender, number, and case with the noun they modify. Possessive adjectives must precede any adjectives modifying the same noun, unless they are on the opposite side of that noun (мой старе возе, мой возе старе, возе мой старе, and also старе возе мой “my old car”, but never **старе мой возе). They have no distinct topicalized form.
+  %p The third person possessive adjectives, although identical to some of the oblique forms of the third person pronouns, do not undergo the same alternations. They never acquire an epenthetic /n/ (#{t "о ево провезора", "o ievó provezóra"} “at his professor”), but still cause an /n/ to appear on the prepositions во, со, and ко (#{t "сон ево провезорем", "son ievó provezórem"} “with his professor”).
+  %p Normally the rules for the placement of possessive adjectives are quite fluid, but in one situation their position is fixed. When modifying a kinship term (outlined in the appendix) or the word #{t "друге", "drúge"} “friend”, they must be placed after the noun: тата мой “my father”, never *мой тата.
+  %p On the whole, possessive adjectives are not used as frequently as in English and other languages. If it is clear who the possessor is, than there is no need to indicate it.
+  = example_sentence "Прошкьите то-це яс приѣсале познѣ, но рухнике воза мирале.",
+                     "Próśkjite tó-ce iás prijě́sale pózně, no rúhnike vóza mirále.",
+                     "forgive-{2pl.imper} {rel.nom.sg}-that.{nom} I.{nom} arrive_by_vehicle.{pf}-{past}-{masc} late-{adv}, but engine-{nom.sg} car-{gen.sg} stop_working-{past}-{masc}",
+                     "Forgive me for arriving late, but my car’s engine quit."
+  %p In less formal language (that is to say, outside of business, government, and news media), possessive pronouns are less frequently used<sup>1</sup>. In their place are the phrases #{t "о мене", "o mené"}, #{t "о тебе", "o tebé"}, etc, the same as used for indicating possession in place of a verb “to have” (at + genitive case). These phrases are positioned after the noun: #{t "возе о мене", "vóze o mené"} “my car”. This is most common for nouns in the nominative case, though not exclusively so, relagating the former possessive adjectives to largely oblique cases. This is common in informal and semiformal writing, including in many modern non-academic books.
+  %p For the most part the possessive adjectives and the о мене construction are fully interchangeable; however, the о мене construction cannot be used to describe “upward” family relationships, while “downward” or “equal” relationships may use either. That is, #{t "**мати о мене", "máti o mené"} “my mother” is unacceptable, while #{t "докьи о мене", "dókji o mené"} “my daughter” is fine.
+  %p In English, a plural possessive with plural possessed noun has an ambiguous meaning. For example, “their cars” could mean that each person has one car (and is thus equivalent to “his car + her car + ...”), that each has multiple cars (equivalent to “his cars + her cars + ...”), or that several people share several common cars (equivalent to “their car + their car + ...”). There are therefore four combinations of a plural possessor and any noun with distinct meanings:
+  %ol
+    %li their car (multiple people share a single common car)
+    %li their cars (multiple people share several common cars)
+    %li their cars (each person has one car)
+    %li their cars (each person has multiple cars)
+  %p Standard Novegradian, however, groups senses 1 and 3 together, and 2 and 4 together. 1 and 3 (where each possessor or collective possessor has a single instance of the possessed item) are expressed with a singular noun, while 2 and 4 (where each possessor or collective possessor has multiple items) use a plural noun.
+  %ol
+    %li #{t "ех возе", "iéh vóze"} (multiple people share a single common car)
+    %li #{t "ех вози", "iéh vózi"} (multiple people share several common cars)
+    %li #{t "ех возе", "iéh vóze"} (each person has one car)
+    %li #{t "ех вози", "iéh vózi"} (each person has multiple cars)
+  %p This ambiguity is removed entirely in the colloquial language, where the distributive senses (3 and 4) require the distributive particle #{t "по", "po"}: #{t "ех по возе/и", "iéh po vóze/i"}.
+
+= section "Reflexive Pronouns" do
+  %p Novegradian has a single reflexive pronoun and reflexive possessive adjective used to refer back to the subject of a sentence. They are used in all persons.
+  = example_sentence "Яс напизале шибѣ ноту.",
+                     "Iás napizále śibě́ nótu.",
+                     "I.{nom} write.{pf}-{past}-{masc} {reflx.datins} note-{acc.sg}",
+                     "I wrote myself a note."
+  = example_sentence "Мнѣ кладно за тово-це соѕаса срѣда жимѣ, на жень пољ метра снѣгек, и суою курту забуиле.",
+                     "Mně́ kládno za tovó-ce sodzása srě́da źimě́, ná źenj pół métra sněgék, i suoiú kúrtu zabuíle.",
+                     "I.{datins} cold-{nom.sg.neut} for {top.gen.sg}-that.{nom} now Ø middle-{nom.sg} winter-{gen.sg}, on ground-{loc.sg} Ø half-{nom.sg} meter-{gen.sg} snow-{part.sg}, and {reflx.poss}-{acc.sg.fem} coat-{acc.sg} forget.{pf}-{past}-{masc}",
+                     "I’m cold because it’s the middle of winter, there’s half a meter of snow on the ground, and I forgot my coat."
+  %p Whereas English can repeat a possessive adjective so that a sentence contains multiple explicit references to the subject (e.g., “<em>I</em> am reading <em>my</em> book”), Novegradian requires the use of the reflexive pronoun or adjective whenever the subject is referenced: #{t "Яс цидам суою нигу", "Iás cidám suoiú nígu"}. This also has the effect of creating a fourth person in certain contexts:
+  %p
+    = t("Оне цидаст суою нигу.", "Óne cidást suoiú nígu.", :linebreak => true)
+    %br
+    “He is reading his [own] book” (reflexive adjective points back to subject)
+  %p
+    = t("Оне цидаст ево нигу.", "Óne cidást ievó nígu.", :linebreak => true)
+    %br
+    “He is reading his [somone else’s] book” (non-reflexive adjective cannot refer to subject, another participant is inferred)
+  %p Again, in non-formal situations, #{t "о шебе", "o śebé"} can be used, but this is less common.
+  %p The reflexive possessive adjectives can, in certain sentences, be used to refer to a noun that is not technically the subject, but is viewed as being the logical agent. This is especially common in possessive constructions.
+  = example_sentence "О ме треба ѣсти суоя еужина пред неж охогьун.",
+                     "O mé tréba iě́sti suoiá iéuźina pred neź ohógjun.",
+                     "at I.{lat} need-{nom.sg} eat-{inf} {reflx.poss}-{nom.sg.fem} dinner-{nom.sg} before than leave-{1sg}",
+                     "I need to eat my dinner before leaving.",
+                     :comment => "(lit. “There is need at me...”, where “need” is the grammatical subject)"
+  = example_sentence "Ево залубленье шибѣ ест ево хужем акостуом.",
+                     "Ievó zalublénje śibě iést ievó húźem ákostuom.",
+                     "his infatuation-{nom.sg} {reflx.datins} be.{3sg} his worse-{datins.sg.neut} quality-{datins.sg}",
+                     "His infatuation with himself is his worst quality.",
+                     :comment => "(Notice how ево was required in all positions without a reflexive sense)"
+
+= section "Demonstrative Pronouns" do
+  %p The demonstrative adjective #{t "ше", "śé"} functions in much the same way as the possessive adjectives, agreeing in gender, case, and number with the noun it modifies. When used as a pronoun instead of an adjective, the neuter form must be used if singular, and the plural if plural.
+  %p No distinction between “this” and “that” is formally made. If it is necessary to express one over the other and context is not sufficient, an adverbial modifier may be used: #{t "ша суде нига", "śá sudé níga"} “this book [here]”, #{t "ша тамо нига", "śá támo níga"} “that book [there]”. Alternatively, the distal can be expressed using the base *он-: #{t "она нига", "oná níga"} “that book”. Both methods are frequently seen.
+  %p The adjective #{t "саме", "sáme"} “same” generally calls for a demonstrative adjective (“that same X”). While not a requirement, it has become so common that many sentences may seem awkward without it.
+  = example_sentence "Яс родене во шем градѣ-те самѣѣм, како она.",
+                     "Iás rodéne vo śém grádě-te sáměiěm, kako oná.",
+                     "I.{nom} Ø bear-{pass.pf.ptcp}-{nom.sg.masc} in this-{loc.sg.masc} city-{loc.sg}-{top} same-{loc.sg.masc}, as she.{nom} Ø",
+                     "Iás rodéne vo śém grádě-te sáměiěm, kako oná."
+  %p The same may be said of the expression #{t "ше суой", "śé suói"}, meaning “one’s own”:
+  = example_sentence "О кожних – по шим суоими дѣлам.",
+                     "O kóźnih – po śím suojími dělám.",
+                     "at each-{gen.pl} Ø {dist} this-{datins.pl} {reflx.poss}-{datins.pl} matter-{datins.pl}",
+                     "To each his own."
+  %p The topicalized demonstratives #{t "ше-то", "śé-to"} and #{t "оно-то", "onó-to"} (a fossilized neuter form of the pronoun он-) are used to mean “the latter” and “the former” respectively. Ше-то declines just like ше “this” with -то tacked onto the end of every form, while оно-то declines like оне “he” with the exception of this nominative form and the inanimate accusative, and the fact that it does not acquire n- after prepositions. Unlike in English, the standard order is “the latter” followed by “the former”.
+  = example_sentence "Ти музеш туди ѣздит или тренем или самоледем. На шем-то буистрейше, а на ем-то интереснейше.",
+                     "Tí múześ tudí iězdit íli trénem íli samolédem. Na śem-to buistréiśe, a na iém-to interesnéiśe.",
+                     "you.{nom} be_able-{2sg} thence go_by_vehicle.{indet}-{sup} either train-{datins.sg} or airplane-{datins.sg}. on latter-{loc.sg}-{top} fast-{comp}-{nom.sg.neut}, whereas on former-{loc.sg.masc}-{top} interesting-{comp}-{nom.sg.neut}",
+                     "You can take either the train or a plane. The latter is quicker, but the former is more interesting."
+
+= section "Absolute Pronouns" do
+  %p The absolute pronouns are used whenever personal or demonstrative pronouns appear in isolation, the verb that they are the subject of having been dropped.
+  = example_sentence "„Хой ше содѣлале?‟ „Язёт.‟",
+                     "“Hói śé sodě́lale?” “Iaziót.”",
+                     "“who.{nom} this-{acc.sg.neut} do.{pf}-{past}-{masc}?” “I.{abs}”",
+                     "Who did this?” “Me."
+  = example_sentence "„Котрий хокьеш?‟ „Шёт.‟",
+                     "“Kótrij hókjeś?” “Śiót.”",
+                     "“which-{acc.sg.masc.def} want-{2sg}?” “this.{masc.sg.abs}”",
+                     "Which one do you want?” “This one."
+
+= section "Interrogative Pronouns" do
+  = section "Pronominal Interrogatives" do
+    %p Novegradian has two pronominally-declining interrogative pronouns: #{t "цой", "cói"} and #{t "хой", "hói"}, meaning “what” and “who” respectively. The former is used to substitute for inanimate nouns, and the latter for animate nouns. There is no gender or number distinction, and they are generally placed toward the beginning of the sentence.
+    = example_sentence "Со кем ти поговорила?",
+                       "So kém tí pogovoríla?",
+                       "with who.{datins} you.{nom} talk_a_bit.{pf}-{past}-{fem}?",
+                       "Who were you talking with?"
+    %p Хой calls for masculine singular agreement. Цой requires neuter singular agreement.
+    = example_sentence "Цоиж суде пробуивало?",
+                       "Cójiź sudé probuiválo?",
+                       "what.{nom}-{emph} here happen-{past}-{neut}?",
+                       "What happened here?"
+    %p However, if the speaker expects a plural answer, both may optionally be replaced by #{t "котрие", "kótrije"} “which ones?”.
+    = example_sentence "Со котриеми ти поговорила?",
+                       "So kotríjemi tí pogovoríla?",
+                       "with which-{datins.pl.def} you.{nom} talk_a_bit.{pf}-{past}-{fem}?",
+                       "Who all were you talking with?"
+    %p Multiple questions are always placed together, unlike in English, and tend to be fronted.
+    = example_sentence "Хой куди койда идет?",
+                       "Hói kudí kóida idét?",
+                       "who.{nom} to_where when go.{det}-{3sg}?",
+                       "Who’s going where when?"
+    %p The suffix #{t "-ж", "-ź"} (or #{t "-иж", "-iź"} after /j/, or #{t "-же", "-źe"} after another consonant) is attached to a pronoun to emphasize it (compare English “what?” and “what in the world?”, or less polite variants). It is most commonly seen on хой and цой, which become #{t "хоиж", "hójiź"} and #{t "цоиж", "cójiź"}.
+
+  = section "Adjectival Interrogatives" do
+    %p Novegradian has four adjectival interrogatives, which decline as adjectives and must agree with the noun they modify.
+    %p #{t "Котре", "kótre"} means “which”, and has both indefinite and definite forms. It is used to select a single noun out of a group. Note that it is also equivalent to English “what” immediately followed by a noun.
+    = example_sentence "Со котрѣ странѣ ти?",
+                       "So kótrě straně́ tí?",
+                       "from which-{gen.sg.fem} country-{gen.sg} Ø you.{nom}?",
+                       "What country are you from?"
+    %p #{t "Каде", "kadé"} means “what kind”, and also has both indefinite and definite forms. It also has a non-interrogative exclamatory function, equivalent to English “What a...!”
+    = example_sentence "Кадое шеден поврѣме-те?",
+                       "Kadóie śedén póvrěme-te?",
+                       "what_kind-{nom.sg.neut.def} today weather-{nom.sg}-{top} Ø",
+                       "How’s the weather today?",
+                       :comment => "(lit. “What kind of weather is there today?”)"
+    = example_sentence "Кадей красней дум-от!",
+                       "Kadéi krásnei dum-ót!",
+                       "what_kind-{nom.sg.masc.def} beautiful-{nom.sg.masc.def} house-{nom.sg}-{top}",
+                       "What a beautiful house!"
+    %p #{t "Какове", "kákove"} also means “what kind”, and is largely interchangeable with каде. However, it cannot be used exclamatorily, so Каковое шеден поврѣме? is grammatical, but **Каковей красней дум-от is not. Both каде and какове are in common use.
+    %p #{t "Кей", "kéi"} is a generic emphatic interrogative, which can be translated many ways in English, but often as “what”. It is always definite (#{t "кей", "kéi"}, #{t "кая", "káia"}, #{t "кое", "kóie"}, #{t "кие", "kíje"}, etc), although the noun it modifies does not need to be topicalized. It is similar to the emphatic цоиж, although it tends to have a more menacing, demeaning, or sarcastic connotation. For example, Цоиж суде пробуивало? means “What happened here?” and is more of an expression of shock, while Кое ше? “What is this?” tends to sound angrier.
+    = example_sentence "Кая керда?",
+                       "Káia kérda?",
+                       "{q.emph}-{nom.sg.fem.def} chance-{nom.sg}",
+                       "What are the odds?"
+
+  = section "Non-Declining Interrogatives" do
+    %p Non-decling interrogatives include adverbial interrogatives (which do not affect nouns around them) and an interrogative determiner (which modifies a noun, but forces it to agree with itself).
+    %p Adverbial interrogatives include #{t "куде", "kudé"} “where”, #{t "куди", "kudí"} “to where”, #{t "оскуд", "oskúd"} “from where”, #{t "койда", "kóida"} “when”, #{t "зацем", "zácem"} “why”, and #{t "како", "káko"} “how”.
+    %p The sole interrogative determiner in Novegradian is #{t "колкѣ", "kólkě"} “how many, how much”. The noun that follows it must always be in the partitive case. Verbs agree with whatever the number of the noun is.
+    = example_sentence "Колкѣ лудеу есат во шей комнатѣ?",
+                       "Kólkě lúdeu iésat vo śéi kómnatě?",
+                       "how_many people-{part.pl} be.{3pl} in this-{loc.sg.fem} room-{loc.sg}?",
+                       "How many people are in that room?"
+    %p #{t "Како", "káko"} may be followed by an indefinite adjective to indicate “how X is...?”
+    = example_sentence "Како диляна е ша драга?",
+                       "Káko diliána ié śá drága?",
+                       "how long-{nom.sg.fem} be.{3sg} this-{nom.sg.fem} road-{nom.sg}",
+                       "How long is that road?"
+
+= section "Indefinite and Negative Pronouns" do
+  %p The indefinite and negative pronouns are formed fairly regularly from the interrogative pronouns or adjectives. Indefinite pronouns (“some-X”) involve the suffix -ш (related to the demonstrative ше) and negative pronouns (“no-X”) involve the prefix не-. All have neuter singular agreement, except for #{t "кош", "kóś"} “someone” and #{t "неке", "néke"} “no one”, which have masculine singular agreement. Novegradian has phrasal polarity agreement, so if negative pronouns are present, the verb must also be negated.
+  = example_sentence "Яс неково не видѣле.",
+                     "Iás nekovó ne víděle.",
+                     "I.{nom} no_one.{gen} {neg} see-{past}-{masc}",
+                     "I didn’t see anyone.",
+                     :comment => "(lit. “I didn’t see no one”)"
+  %p The interrogative pronouns by themselves, without any affixes, can be used to represent a wider degree of indefinite pronouns (“any-X”). Хой and цой decline as normal, and indeclinable pronouns naturally do not decline.
+  = example_sentence "Хой суде музет мнѣ помагати?",
+                     "Hói sudé múzet mně́ pomagáti?",
+                     "who.{nom} here be_able-{3sg} I.{nom} help-{inf}",
+                     "Can anyone here help me?",
+                     :comment => "(identical in form to “Who here can help me?”)"
+  = example_sentence "О ме треба куди ис.",
+                     "O mé tréba kudí ís.",
+                     "at I.{lat} need-{nom.sg} to_where go.{det}-{sup}",
+                     "I need a place to go to."
+  %p However, negative verbs are not needed if the negated element is non-nominative, as in example 24 below.
+  = example_sentence "Нецем пизати.",
+                     "Nécem pizáti.",
+                     "nothing.{datins} write-{inf}",
+                     "There is nothing to write with."
+  %p The exception to the above rule is that if the negated element is the object of a prepositional phrase, the negative copula is needed as the pronoun cannot be negated directly.
+  = example_sentence "Нет со кем говорити.",
+                     "Nét so kém govoríti.",
+                     "be.{3sg.neg} with who.{datins} talk-{inf}",
+                     "There is no one to talk to."
+  %p The negated neuter form of кей, #{t "некое", "nékoie"}, is used as an emphatic way of saying “nothing”. The genitive form #{t "негаево", "negáievo"} exists in free variation.
+  = example_sentence "Яс шле ко престауленьем, како ти присуѣдале, но некое (негаево) не довѣдале.",
+                     "Iás ślé ko prestaulénjem, káko tí prisuědále, no nékoie (negáievo) ne dově́dale.",
+                     "I.{nom} go.{det}-{past}-{masc} to presentation-{datins.sg}, as you.{nom} advise.{pf}-{past}-{masc}, but no_sort-{acc.sg.neut.def} (no_sort-{gen.sg.neut.def}) {neg} understand-{past}-{masc}",
+                     "I went to the presentation like you suggested, but I didn’t understand a thing."
+  %p There are two indefinite forms that mean “some, a bit, a few, several” (quantitatively) when modifying a noun. #{t "Нѣколкѣ", "ně́kolkě"} indicates an indefinite number whose true value is to some degree up to chance. For example, if you ask someone to bring “a few” bottles of water, you have no way of knowing at that moment how many will actually be brought, because there is no set value. The noun following нѣколкѣ must be in the partitive plural, no matter its function in the sentence. Нѣколкѣ, like многе “many”, is indeclinable, but is considered as being the bearer of the (invisible) case markings. Only count nouns may be used, never mass nouns (which would just use the partitive alone).
+  = example_sentence "Принези мнѣ нѣколкѣ юванеу.",
+                     "Prinezí mně́ ně́kolkě iuváneu.",
+                     "carry_to.{pf}-{2sg.imper} I.{datins} several water_bottle-{part.pl}",
+                     "Bring me a few bottles of water."
+  %p The adjective #{t "нѣкотре", "ně́kotre"} also means “some”, but is used when either the actual quantity is known to the speaker but is not being mentioned (as in example 28) or is unknown to be the speaker, but is still a set value (as in example 29). If they are the subject or direct object, both the adjective and the noun it modifies will be in the partitive plural (as in 28 and 29). If in any other position (including after a prepositon requiring the accusative case), the adjective will be definite, singular, and in whatever case the situation would normally call for, and the noun will be in the partitive plural (as in example 30).
+  = example_sentence "Хокьун то-це ти содѣлале би нѣкотроу вѣкьеу деля мене.",
+                     "Hókjun tó-ce tí sodě́lale bi ně́kotrou vě́kjeu délia mené.",
+                     "want-{1sg} {rel.acc.sg}-that.{nom} you.{nom} do.{pf}-{past}-{masc} {subj.sg} several-{part.pl} thing-{part.pl} for I.{gen}",
+                     "I want you to do a few things for me."
+  = example_sentence "Есат нѣкотроу доброу отелеу деля иностранец городѣ Торга.",
+                     "Iésat ně́kotrou dóbrou otéleu délia inostránec górodě Tórga.",
+                     "be.{3pl} several-{part.pl} good-{part.pl} hotel-{part.pl} for foreigner-{gen.pl} downtown-{loc.sg} Tórge-{gen}",
+                     "There are a few good hotels for foreigners in downtown Tórge."
+  = example_sentence "Оне напизале суой план на нѣкотрѣѣм листеу папиерек, но толкѣ едене музун найсти.",
+                     "Óne napizále suói plán na ně́kotrě́iěm lísteu papierék, no tólkě iédene múzun náisti.",
+                     "he.{nom} write.{pf}-{past}-{masc} {reflx.poss}-{acc.sg.masc} plan-{acc.sg} on several-{loc.sg.masc.def} sheet-{part.pl} paper-{part.sg}, but only one-{nom.sg.masc} be_able-{1sg} find.{pf}-{inf}",
+                     "He wrote his plan down on several sheets of paper, but I can only find one."
+  %p Where English requires an indefinite article and a broad categorical term, Novegradian frequently uses the adjective #{t "каде-ш", "kadé-ś"} “some sort of”. This stresses that a member of the class is intended, not the entire class:
+  = example_sentence "Яс хокьун то-це вѣм каде-ш романеске лизик.",
+                     "Iás hókjun tó-ce věm kadé-ś románeske lizík.",
+                     "I.{nom} want-{1sg} {rel.acc.sg}-that.{nom} know-{1sg} some_kind_of-{acc.sg.masc} Romance-{acc.sg.masc} language-{acc.sg}",
+                     "I wish I knew a Romance language."
+
+= section "Relative Pronouns" do
+  %p Novegradian has three primary relative pronoun constructions: #{t "котре", "kótre"}, #{t "какове", "kákove"}, and #{t "то-це/то-ко", "tó-ce/tó-ko"}.
+
+  = section "Котре" do
+    %p Котре is used to tie a relative clause to a noun, much like English “that”, “which”, or “who(m)”. It is placed immediately after the noun being modified, and agrees with it in gender, number, and topicalization/definiteness only. The case it takes derives not from the noun it is modifying, but rather from its function in the relative clause. In writing, a comma is placed between the main clause and the relative clause containing котре.
+    = example_sentence "Она-и дѣвушкой-то, котрѣе овидѣле яс вецераш.",
+                       "Oná-i dě́vuśkoi-to, kótrěie ovíděle iás véceraś.",
+                       "she.{nom}-be.{3sg.clitic} girl-{datins.sg}-{top}, {rel}-{gen.sg.fem.def} see.{pf}-{past}-{masc} I.{nom} yesterday",
+                       "She’s the girl I saw yesterday."
+    %p This sort of usage can frequently be replaced by a participle, as both participles and котре are frequently used for subordination. However, there are some situations where a participle could not be used properly. This includes situations where a perfective active participle would be needed, which Novegradian lacks:
+    = example_sentence "Ше-и мажой-то, котрей поговориле со мнѣ во треневѣ стаѕи.",
+                       "Śé-i máźoi-to, kótrei pogovoríle so mně́ vo trénevě stadzí.",
+                       "this.{nom.sg.neut}-be.{3sg.clitic} man-{datins.sg}-{top}, {rel}-{nom.sg.masc.def} talk_for_a_while.{pf}-{past}-{masc} with I.{datins} in train-{adj}-{loc.sg.fem} station-{loc.sg}",
+                       "This is the man who talked a bit with me in the train station."
+    %p If the noun is the object of a preposition in the relative clause, котре also must be used. The preposition will be moved in front of котре, and since котре is now separated from the noun it modifies by a preposition, it must appear in its definite form.
+    = example_sentence "Она-и дѣвушкой-то, со котроюн поговориле яс.",
+                       "Oná-i dě́vuśkoi-to, so kótroiun pogovoríle iás.",
+                       "she.{nom}-be.{3sg.clitic} girl-{datins.sg}-{top}, with {rel}-{datins.sg.fem.def} talk_for_a_while.{pf}-{past}-{masc} I.{nom}",
+                       "She’s the girl with whom I was talking yesterday."
+
+  = section "Какове" do
+    %p Какове, known as the qualitative relative pronoun, is similar to котре in its function, but quite different in its meaning. While котре links a clause to a noun, какове links a clause to a class of noun, of which the noun being modified is an example. See examples 35 and 36 below to see how it works.
+    = example_sentence "Ше – нигой, какову не радеюн.",
+                       "Śé - nígoi, kákovu ne radéiun.",
+                       "this-{nom.sg.neut} Ø book-{datins.sg}, {qual.rel}-{acc.sg.fem} {neg} enjoy-{1sg}",
+                       "This is the kind of book that I don’t like."
+    = example_sentence "Оне – дужей, со каковоюн неможено работати.",
+                       "Óne – duźéi, so kakóvoiun nemóźeno rabótati.",
+                       "he.{nom} Ø person-{datins.sg}, with {qual.rel}-{datins.sg.fem.def} not_possible work-{inf}",
+                       "He’s the kind of person who’s impossible to work with."
+    %p These sorts of phrases can easily be reworded using котре and a noun such as #{t "класе", "kláse"} “class” or #{t "роде", "róde"} “kind, sort”, but doing so is substandard style, and generally a mark of non-native speakers.
+
+  = section "Relative Pronouns Filling Multiple Gaps" do
+    %p If the clause subordinated by котре or какове has multiple verbs, a single relative pronoun may serve as an argument of both verbs if the case called for by both verbs is the same. If the cases are different, the pronoun must be repeated.
+    = example_sentence "дѣвушка, котра воходила и шала",
+                       "dě́vuśka, kótra vohódila i śalá",
+                       "girl-{nom.sg}, {rel}-{nom.sg.fem} enter-{past}-{fem} and sit-{past}-{fem}",
+                       "the girl who<sub>NOM</sub> walked in and [she]<sub>NOM</sub> sat down"
+    = example_sentence "дѣвушка, котрѣ яс овидѣле и познале",
+                       "dě́vuśka, kótrě iás ovíděle i poznále",
+                       "girl-{nom.sg}, {rel}-{acc.sg.fem} I see.{pf}-{past}-{masc} and recognize.{pf}-{past}-{masc}",
+                       "the girl whom<sub>ACC</sub> I saw and recognized [her]<sub>ACC</sub>"
+    = example_sentence "дѣвушка, котрѣ яс познале и котроюн яс подигале",
+                       "dě́vuśka, kótrě iás poznále i kótroiun iás podigále",
+                       "girl-{nom.sg}, {rel}-{acc.sg.fem} I recognize.{pf}-{past}-{masc} and {rel}-{datins.sg.fem.def} I.{nom} thank.{pf}-{past}-{masc}",
+                       "the girl whom<sub>ACC</sub> I recognized and thanked [her]<sub>DATINS</sub>"
+    %p If the prepositions are not identical, the pronoun must be repeated as well, even if the cases are the same.
+    = example_sentence "дѣвушка, котрой яс помогле и со котроюн яс поговориле",
+                       "dě́vuśka, kótroi iás pomógle i so kótroiun iás pogovoríle",
+                       "girl-{nom.sg}, {rel}-{datins.sg.fem} I.{nom} help.{pf}-{past}-{masc} and with {rel}-{datins.sg.fem.def} I.{nom} talk_for_a_time.{pf}-{past}-{masc}",
+                       "the girl whom<sub>DATINS</sub> I helped and spoke with [her]<sub>DATINS</sub>"
+    %p If the required cases are different, but the surface form of the pronoun is identical for each, a single pronoun generally may be used.
+    = example_sentence "дѣвушки, котор яс зацегале и овидѣле",
+                       "dě́vuśki, kótor iás zacegále i ovíděle",
+                       "girl-{nom.pl}, {rel}-{gen.pl}/{anim.acc.pl} I.{nom} wait-{past}-{masc} and see.{pf}-{past}-{masc}",
+                       "the girls who<sub>GEN</sub> I waited for and saw [them]<sub>ACC</sub>"
+    %p However, there is one important exception. Even if the cases are identical and there are no prepositions involved, if one is semantically “agent-like” and the other “patient-like”, a single pronoun may not be used. In example 42 below, for example, the “girl” is a patient-like argument relative to “give”, but an agent-like argument relative to “be cold”.
+    = example_sentence "дѣвушка, котрой яс дариле подар и котроюн буило кладно",
+                       "dě́vuśka, kótroi iás dárile pódar i kótroiun buílo kládno",
+                       "girl-{nom.sg}, {rel}-{datins.sg.fem} I.{nom} gift.{pf}-{past}-{masc} gift-{acc.sg} and {rel}-{datins.sg.fem.def} be-{past}-{neut} cold-{nom.sg.neut}",
+                       "the girl whom<sub>DATINS</sub> I gave a gift and [she]<sub>DATINS</sub> was cold"
+
+  = section "То-це/То-ко" do
+    %p The last kind of relativizer in Novegradian is a phrase consisting of the relative pronoun то (considered part of the main clause) and an interrogative form (often це or ко, part of the subordinate clause), brought together as a single hypenated word. This method is used whenever there is no noun present to attach a relative clause to, such as #{t "Вѣм то-це прийдет", "Vě́m tó-ce prijdét"} “I know that he will come”. In this sentence, the first half, то, appears in the accusative singular as the object of вѣсти “know”, and the second half in the nominative singular. The same construction is used to express phrases such as “that which”, “those who”. The second half only declines when the concept represented by то functions as something other than the subject of the subject in the subordinate clause: ти-ково оне не видѣле “those whom he did not see”.
+    %p Sometimes the meaning can be somewhat ambiguous, generally the result of the nominative and accusative case forms of це being identical:
+    %ul
+      %li
+        = t("Вѣм то-це оне думаст.", "Vě́m tó-ce óne dúmast.", :linebreak => true)
+        %br
+        “I know that he is thinking”, structured as [I know it][that he is thinking]. Here <i>to</i> is in the accusative case and <i>ce</i> is in the nominative.
+      %li
+        = t("Вѣм то-це оне думаст.", "Vě́m tó-ce óne dúmast.", :linebreak => true)
+        %br
+        “I know what he is thinking” or “I know that which he is thinking”, structured are [I know][that which][he is thinking]. Here both to and ce are in the accusative case (since “that which” is the object of the thinking), but the form is identical because це is identical in both the nominative and accusative cases.
+    %p The difference between the two examples above is established through context and differing intonation. In the first example, emphasis is on the fact that he is thinking, so думаст will have a stronger sentence-level stress on it. In the latter, emphasis is on whatever he is thinking about, so то-це will receive a stronger sentence stress.
+    %p The two halves can only be separated by a preposition modifying the second half: #{t "ти со кем оне говориле", "tí so kém óne govoríle"} “those with whom he was speaking”.
+    %p Other interrogative elements may be used in the second half, although they are much less common: #{t "не вѣст то-како ше дѣлати", "ne vě́st to-káko śé dě́lati"} “He doesn’t know how to do this”. In this situation, како by itself may work just as well.
+
+= section "‘Each Other’" do
+  %p There are two ways of expressing “each other”: verbally or pronominally.
+  %p Many middle-voice verbs with a plural subject inherently mean “each other”: #{t "Ондуа препизовасташ", "Onduá prepizovástaś"} “The two of them are writing each other, corresponding”. This is not true of all verbs, though: #{t "Ондуа миееташ", "Onduá miéietaś"} “The two of them are washing [themselves]”.
+  %p More commonly, the two-part reciprocal pronoun #{t "друх друга", "drúh drúga"} is used. The first part is unchanging, and represents a subject. The second part declines (fourth declension animate singular) to whatever case the other individual (who is not the subject) would be in. Prepositions may be placed in between the two halves, but the second half will have to be in whatever case that preposition requires.
+  = example_sentence "Ондуа видѣлѣ друх друга.",
+                     "Onduá vídělě drúh drúga.",
+                     "they.{nom.dl} see-{past}-{dl} one_another-{nom} one_another-{acc}",
+                     "The two of them saw one another."
+  = example_sentence "Они осбѣгали друх од друга.",
+                     "Oní osběgáli drúh od drúga.",
+                     "they.{nom} run_away-{past}-{pl} one_another-{nom} from one_another-{gen}",
+                     "They ran away from one another",
+                     :comment => "(lit. “They ran away one from another”)"
+  = example_sentence "Ондуа вехода думаста друх о другѣ.",
+                     "Onduá vehodá dúmasta drúh o drúgě.",
+                     "they.{nom.dl} always think-{3dl} one_another-{nom} about one_another-{loc}",
+                     "The two of them always think about each other",
+                     :comment => "(lit. “The two of them always think one about another”)"
+
+= section "Redundant Pronouns" do
+  %p When the subject of a sentence is a third person dual or plural pronoun, whether implicit or explicit, it is common to further specify the relationship between the individuals being referred to using the construction <span class="pattern">noun.#{abbrev 'nom'} with noun.#{abbrev 'datins'}</span>. The first noun is always singular, while the second may be singular or plural. The two nouns are almost always closely associated semantically. This construction is frequently used even if the relationship is already clearly established contextually, and tends to be located after the verb.
+  = example_sentence "Ондуа ож ошлѣ тата со мамой.",
+                     "Onduá oź oślě́ táta so mámoi.",
+                     "they.{nom.dl} already leave.{pf}-{past}-{dl} father-{nom.sg} with mother-{datins.sg}",
+                     "They have already gone (dad and mom, that is)."
+  = example_sentence "Они вие шли на спираньен друге со дружам.",
+                     "Oní vijé ślí na spiránjen drúge so druźám.",
+                     "they.{pl} all.{nom.pl} go.{det}-{past}-{pl} on party-{lat.sg} friend-{nom.sg} with friend-{datins.pl}",
+                     "They all went to the party (and they’re all friends)."
+  = example_sentence "Ондуа шѣдита воунѣ миловей со миловоюн.",
+                     "Onduá śědíta vóuně mílovei so milóvoiun.",
+                     "they.{nom.dl} sit-{3dl} outside boyfriend-{nom.sg} with girlfriend-{datins.sg}",
+                     "They’re sitting outside (and they’re boyfriend and girlfriend)."
+  %p Novegradian also makes frequent use of resumptive pronouns. When a compound phrase with two or more independent clauses is relativized, resumptive pronouns are often, though not necessarily, left in the place of the displaced relative pronoun for all verbs after the first. If the antecedent is topicalized, the form #{t "то", "tó"} is used; if it is not topicalized, regular personal pronouns are used.
+  = example_sentence "Оне провезорем-то, котраево Радя лубит а Наталя ненавигьит тово.",
+                     "Óne provezórem-to, kotráievo Rádia lúbit a Natália nenavígjit tovó.",
+                     "he.{nom} Ø professor-{datins.sg}-{top}, {rel}-{acc.sg.masc.def} Rádia-{nom} love-{3sg} whereas Natália-{nom} hate-{3sg} {top.acc.sg}",
+                     "He’s the professor who Rádia loves but Natália hates [him]."
+  = example_sentence "Оне – едене зе провезор, котор Радя лубит а Наталя ненавигьит их.",
+                     "Óne – iédene ze provezór, kótor Rádia lúbit a Natália nenavígjit íh.",
+                     "he.{nom} Ø one-{nom.sg.masc} from professor-{gen.pl}, {rel}-{acc.pl.masc.def} Rádia-{nom} love-{3sg} whereas Natália-{nom} hate-{3sg} they.{acc}",
+                     "He’s one of the professors who Rádia loves but Natália hates [them]."
+
+= section "Еноке/Енка" do
+  %p The gendered quasi-pronouns #{t "еноке", "iénoke"} (masculine singular), #{t "енка", "iénka"} (feminine singular), and #{t "енки", "iénki"} (plural) do not translate directly into English. The closest equivalent is “the other one[s]” or “the rest [of us/you/them]”, when there is a specific person or people in mind. They decline as regular first (енка) or fourth (еноке/енки) declension animate nouns.
+  %p These pronouns are used far more frequently than “the others” is in English, and is pretty much the standard way of referring to other people within a particular defined group.
+  = example_sentence "Муи егье не охудим. Егье зацегаме доваех енок.",
+                     "Muí iegjé ne ohúdim. Iegjé zacegáme dóvaieh ienók.",
+                     "we.{nom} still {neg} leave-{1pl}. still wait-{1pl} two.{anim}-{gen} other_people-{gen.pl}",
+                     "We can’t leave yet. We’re still waiting for two other people."
+  = example_sentence "Муи соглағьамеш со тибѣ, но енки тако не муислат.",
+                     "Muí soglağjámeś so tibě, no iénki táko ne muislát.",
+                     "we.{nom} agree-{1pl}-{mid} with you.{datins} but other_people-{nom.pl} thus {neg} think-{3pl}",
+                     "We agree with you, but the others do not."
+  = example_sentence "Ото и есат Надаля, Елена и Суѣтлана. Ну и куде-и енка?",
+                     "Óto i iésat Nadália, Ieléna i Suětlána. Nu i kudé-i iénka?",
+                     "{expl} {emph} be.{3pl} Nadália-{nom}, Ieléna-{nom} and Suětlána-{nom}. so {emph} where-be.{3sg.clitic} other_female_person-{nom.sg}?",
+                     "Here’s Nadália, Ieléna, and Suětlána. So where’s the other girl?",
+                     :comment => "(not nearly as rude-sounding as in English)"
+  %p The definite adjective #{t "видорей/видорая/видорие", "vidórei/vidóraia/vidórije"} “[the] other[s]” cannot be substituted without a change in meaning. Еноке and its variants refer to a closed group of people, while видорей refer to an open, indefinite set. If видорих were substituted in example sentence 51 above, it would mean “We are waiting for two more people”, that is, any two people rather than two specific people. If видорие were substituted in sentence 52, it would mean “We agree with you, but other people do not”—again with a more indefinite sense. Видорая in sentence 53 would be nonsensical, perhaps like asking “Where is someone?”.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Though note the possessive forms described in section 22.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
