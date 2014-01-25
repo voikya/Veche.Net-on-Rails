@@ -1,0 +1,1219 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Оказанье тем"
+
+= render :partial => 'navigation'
+
+= section "Topics" do
+  %p The topic of a sentence refers to what the sentence is about, which is not always necessarily the subject. In conversation, one topic may be used over many sentences, or just one. All languages have some way of marking the topic, often by fronting it to the beginning of the clause. Novegradian, on the other hand, has developed a distinct topic marker, #{t "то", "to"}, which was originally a demonstrative. This older usage can be seen reflected in the formation of the subordinating conjunction #{t "то-це", "tó-ce"}. As a clitic, it may attach itself to any noun or pronoun, although never to any other parts of speech<sup>1</sup>. A topicalized noun will generally (although not necessarily) move toward the front of the clause as well, dragging prepositions and some adverbs along with it. The definite form of adjectives used with topicalized nouns derives from the Proto-Slavic anaphoric pronoun *-j-, which was also the source of the oblique forms of the third-person pronouns.
+  %p Topic marking is used frequently in Novegradian writing and discourse, but has been largely ignored in examples thus far because it means very little without context. Longer texts or transcripts of conversations are necessary to adequately demonstrate its usage. For this reason, in section 14.5 at the end of this chapter there is a transcript of a brief conversation as well as an example of topicalization in formal writing.
+
+= section "Marking the Topic" do
+  %p The topic marker is attached to the end of the fully-declined noun, separated in writing with a hyphen. It undergoes a sort of vowel harmony where the vowel of the marker changes according to the last vowel of the word it was attached to.
+  %p In the nominative and inanimate accusative cases, there are six such forms. -от, with a metathesized vowel, is used after nouns ending in a consonant. -та is used after any singular noun ending in /a/, regardless of gender. -те is used after a noun ending in /e/. The plain -то is used in all other singular situations (neuter nouns in /o/, nouns in /i/, etc). -ти is used after all nominative/accusative plural nouns ending in either /i/ or /e/ and -та after all plural nouns ending in /a/.
+  %p In the oblique cases as well as the animate accusative, all of these forms collapse into just two. -те is used whenever the previous word ends in a front vowel /æ e i/ and -то when it ends in a back vowel /a o u ɨ/ or consonant.
+  %p For pronouns, the rules are slightly different. A combination of phonological rules (first and second persons) and natural gender (third person) comes in play. First and second person pronouns in any case have only two forms, -то after forms ending a vowel and -от after forms ending in a consonant: #{t "яс-от", "ias-ót"} “I.#{abbrev 'nom'}”, #{t "мене-то", "mené-to"} “I.#{abbrev 'acc'}”. In the third person, -то is used for all masculine, neuter, dual, and plural pronouns regardless of case, and -та is used for all feminine pronouns: #{t "она-та", "oná-ta"} “she.#{abbrev 'nom'}”, #{t "ѣ-та", "iě́-ta"} “she.#{abbrev 'acc'}”.
+  %p The same set of rules used with the third person (-та for feminine, -то for all others) apply to other pronouns such as ше, вехе, едене, and others that display gender. Interrogative pronouns all take -от, and almost always appear in their ‘emphatic’ forms with the suffix -ж: #{t "цоиж-от", "cojiź-ót"} “what...?”
+  = example_sentence "Мариѣ-то овидѣле яс вецераш. Не со тѣм говориле ож многе астоу!",
+                     "Maríjě-to ovíděle iás véceraś. Ne so tě́m govoríle oź mnóge ástou!",
+                     "Maríja-{acc}-{top} see.{pf}-{past}-{masc} I.{nom} yesterday. {neg} with {top.datins.sg} speak-{past}-{masc} already many year-{part.pl}",
+                     "I saw Maríja yesterday. I haven’t spoken with her in years!"
+  = example_sentence "Хоиж-от ко нама пришле цетуерге?",
+                     "Hojiź-ót ko náma priślé cetuérge?",
+                     "who-{emph}-{top} toward we.{datins.dl} arrive.{pf}-{past}-{masc} Thursday-{acc.sg}?",
+                     "Who came to our place on Thursday?"
+  %p Adjectives modifying a topicalized noun directly must appear in their definite forms. Across a copula this is optional, although increasingly uncommon.
+  = example_sentence "Яс цервеное вино-то лублун векье неж бѣлое. Болше вокусе ест.",
+                     "Iás cervénoie vinó-to lublún vékje neź bě́loie. Bólśe vókuse iést.",
+                     "I.{nom} red-{acc.sg.neut.def} wine-{acc.sg}-{top} love-{1sg} more than white-{acc.sg.neut.def}. Big.{comp}-{nom.sg.masc} taste-{nom.sg} be.{3sg}",
+                     "I prefer red wine to white. It has a stronger flavor."
+  %p If a compound nominal phrase is meant to be topicalized, the topical marker only attaches to the first word, though nevertheless applies to the whole phrase.
+  = example_sentence "Дрожгьие-ти со томлам неслиғание войнѣ простанакьѣш останут стан грамадѣ несношимом, шилат розгоркости о них.",
+                     "Dróźgjie-ti so tomlám nesliğánije voině́ prostanákjěś ostánut stán gramádě nesnóśimom, śílat rozgórkosti o níh.",
+                     "horror-{nom.pl}-{top} with misery-{datins.pl} unheard_of-{nom.pl.def} war-{gen.sg} continue-{act.impf.ptcp}-{gen.sg.fem}-{mid} leave-{3pl} position-{acc.sg} masses-{gen.sg} unbearable-{datins.sg.masc}, reinforce-{3pl} bitterness-{acc.sg} at {n*}-they.{gen}",
+                     "The unprecedented horrors and miseries of the protracted war are making the people’s position unbearable and increasing their anger."
+
+= section "Referencing the Topic" do
+  %p Generally once a topic has been introduced and no new topic has yet taken its place, it does not need to be mentioned and can simply be dropped, whether it be the subject, object, or an oblique case, although the latter two are much less frequent than the first. The sole required exception is when the topic is supposed to be the object of a preposition, in which case the preposition cannot be left stranded. In such cases, some pronoun must be left behind in place of the dropped object. If third person, a declined form of то is often used.
+  %p If a noun is repeated in full for emphasis after it has been introduced, the topic marker often remains attached in these subsequent occurances. However, if a pronoun representing the topic is repeated, the marker is rarely seen again.
+
+= section "Changing the Topic" do
+  %p The introduction of a new noun with the topic marker serves to replace the previous one with the new one from that point onward. A new noun bearing the topic marker appearing in a sentence also using the previous topic will appear toward the end of the clause, rather than the beginning, to avoid confusion. For example, in a discussion about Еване, a transition sentence may appear as И задѣм покренале новий воз-от “And then he bought that new car”), where the topic remains unchanged until the end of the sentence. Alternatively, the noun “car” could remain unmarked until the following sentence.
+
+= section "Examples" do
+  %p The following two examples consist of longer texts that allow topics to appear, be referenced, and be changed over the course of the prose.  Due to the length of these samples, the glossing will be displayed in an interlinear format. The first line is the original Cyrillic, the second a transliteration, and the third an abbreviated gloss which shows far less information than the glosses used so far. Afterwards is a prose English translation.
+
+  = section "A Conversation" do
+    .glossblock
+      %dl
+        %dt A)
+        %dd
+      %dl
+        %dt Таша-та!
+        %dd
+          Táśa-ta!
+          %br
+          Táśa-#{abbrev 'top'}
+      %dl
+        %dt Страво!
+        %dd
+          Strávo!
+          %br
+          hello
+      %dl
+        %dt Тебе
+        %dd
+          Tebé
+          %br
+          you.#{abbrev 'acc'}
+      %dl
+        %dt не
+        %dd
+          ne
+          %br
+          #{abbrev 'neg'}
+      %dl
+        %dt видѣле
+        %dd
+          viděle
+          %br
+          see-#{abbrev 'Past'}
+      %dl
+        %dt довѣ
+        %dd
+          dově
+          %br
+          two
+      %dl
+        %dt шемицѣ.
+        %dd
+          śémicě.
+          %br
+          weeks
+      %dl
+        %dt Како
+        %dd
+          Káko
+          %br
+          how
+      %dl
+        %dt живеш?
+        %dd
+          źivéś?
+          %br
+          live-#{abbrev '2sg'}
+    .glossblock
+      %dl
+        %dt B)
+        %dd
+      %dl
+        %dt Добрѣ
+        %dd
+          Dóbrě
+          %br
+          well
+      %dl
+        %dt живун,
+        %dd
+          źivún,
+          %br
+          live-#{abbrev '1sg'}
+      %dl
+        %dt Марке.
+        %dd
+          Márke.
+          %br
+          Márke
+      %dl
+        %dt Дави
+        %dd
+          Dávi
+          %br
+          just
+      %dl
+        %dt приледѣла
+        %dd
+          priledě́la
+          %br
+          arrive-#{abbrev 'past'}
+      %dl
+        %dt зев
+        %dd
+          zev
+          %br
+          from
+      %dl
+        %dt Идалин
+        %dd
+          Idálin
+          %br
+          Italy-#{abbrev 'gen'}
+    .glossblock
+      %dl
+        %dt A)
+        %dd
+      %dl
+        %dt Ах,
+        %dd
+          Áh,
+          %br
+          oh
+      %dl
+        %dt да,
+        %dd
+          dá,
+          %br
+          yes
+      %dl
+        %dt праудаже.
+        %dd
+          práudaźe.
+          %br
+          of course
+      %dl
+        %dt Како
+        %dd
+          Káko
+          %br
+          how
+      %dl
+        %dt буиле
+        %dd
+          buíle
+          %br
+          be-#{abbrev 'past'}
+      %dl
+        %dt поезде-те?
+        %dd
+          póiezde-te?
+          %br
+          trip-#{abbrev 'top'}
+    .glossblock
+      %dl
+        %dt B)
+        %dd
+      %dl
+        %dt Ой,
+        %dd
+          Ói,
+          %br
+          oh
+      %dl
+        %dt велем
+        %dd
+          vélem
+          %br
+          very
+      %dl
+        %dt красно
+        %dd
+          krásno
+          %br
+          beautiful
+      %dl
+        %dt буило
+        %dd
+          buílo
+          %br
+          be-#{abbrev 'past'}
+      %dl
+        %dt нав
+        %dd
+          nav
+          %br
+          on
+      %dl
+        %dt Идали-те.
+        %dd
+          Idalí-te.
+          %br
+          Italy-#{abbrev 'loc'}-#{abbrev 'top'}
+      %dl
+        %dt Тако
+        %dd
+          Táko
+          %br
+          so
+      %dl
+        %dt многе
+        %dd
+          mnóge
+          %br
+          much
+      %dl
+        %dt исторёк
+        %dd
+          istoriók
+          %br
+          history-#{abbrev 'part'}
+      %dl
+        %dt ест!
+        %dd
+          iést!
+          %br
+          be.#{abbrev '3sg'}
+      %dl
+        %dt Тамо
+        %dd
+          Támo
+          %br
+          there
+      %dl
+        %dt гради
+        %dd
+          grádi
+          %br
+          cities
+      %dl
+        %dt старовѣгови,
+        %dd
+          starověgóvi,
+          %br
+          ancient
+      %dl
+        %dt прѣкрасна
+        %dd
+          prěkrásna
+          %br
+          most beautiful
+      %dl
+        %dt куљтура
+        %dd
+          kułtúra
+          %br
+          culture
+      %dl
+        %dt и
+        %dd
+          i
+          %br
+          and
+      %dl
+        %dt ѣда
+        %dd
+          iědá
+          %br
+          food
+      %dl
+        %dt вокуснейша.
+        %dd
+          vokusnéiśa.
+          %br
+          tasty-#{abbrev 'comp'}
+      %dl
+        %dt Егье
+        %dd
+          Iegjé
+          %br
+          more
+      %dl
+        %dt тибѣ
+        %dd
+          tibě́
+          %br
+          you.#{abbrev 'datins'}
+      %dl
+        %dt роскағьун
+        %dd
+          roskağjún
+          %br
+          tell-#{abbrev '1sg'}
+      %dl
+        %dt спорой.
+        %dd
+          sporói.
+          %br
+          later
+      %dl
+        %dt А
+        %dd
+          A
+          %br
+          and
+      %dl
+        %dt ти-то,
+        %dd
+          tí-to,
+          %br
+          you-#{abbrev 'top'}
+      %dl
+        %dt цой
+        %dd
+          cói
+          %br
+          what
+      %dl
+        %dt пробуивало
+        %dd
+          probuiválo
+          %br
+          happen-#{abbrev 'past'}
+      %dl
+        %dt со
+        %dd
+          so
+          %br
+          with
+      %dl
+        %dt тѣм?
+        %dd
+          tě́m?
+          %br
+          #{abbrev 'top'}-#{abbrev 'datins'}
+    .glossblock
+      %dl
+        %dt A)
+        %dd
+      %dl
+        %dt Немноге.
+        %dd
+          Nemnóge.
+          %br
+          not much
+      %dl
+        %dt О
+        %dd
+          O
+          %br
+          at
+      %dl
+        %dt мене
+        %dd
+          mené
+          %br
+          I.#{abbrev 'gen'}
+      %dl
+        %dt многе
+        %dd
+          mnóge
+          %br
+          much
+      %dl
+        %dt интересновево
+        %dd
+          interesnóvevo
+          %br
+          interesting-#{abbrev 'part'}
+      %dl
+        %dt не
+        %dd
+          ne
+          %br
+          #{abbrev 'neg'}
+      %dl
+        %dt буило.
+        %dd
+          buílo.
+          %br
+          be-#{abbrev 'past'}
+      %dl
+        %dt Надѣюш
+        %dd
+          Nadě́iuś
+          %br
+          hope-#{abbrev '1sg'}-#{abbrev 'mid'}
+      %dl
+        %dt тѣм
+        %dd
+          tě́m
+          %br
+          #{abbrev 'rel.datins'}
+      %dl
+        %dt -це
+        %dd
+          \-ce
+          %br
+          \-that.#{abbrev 'nom'}
+      %dl
+        %dt скорѣ
+        %dd
+          skórě
+          %br
+          soon
+      %dl
+        %dt поѣсат
+        %dd
+          poiě́sat
+          %br
+          #{abbrev 'pf'}-go-#{abbrev 'sup'}
+      %dl
+        %dt на
+        %dd
+          ná
+          %br
+          on
+      %dl
+        %dt год
+        %dd
+          god
+          %br
+          holiday
+      %dl
+        %dt кудеш-от,
+        %dd
+          kudeś-ót,
+          %br
+          somewhere-#{abbrev 'top'}
+      %dl
+        %dt музеби
+        %dd
+          múzebi
+          %br
+          maybe
+      %dl
+        %dt Кидаем
+        %dd
+          Kidáiem
+          %br
+          China-#{abbrev 'datins'}
+      %dl
+        %dt или
+        %dd
+          íli
+          %br
+          or
+      %dl
+        %dt Японей.
+        %dd
+          Iaponéi.
+          %br
+          Japan-#{abbrev 'datins'}
+    %p.translationsblock
+      A) Táśa! Hello! I haven’t seen you in two weeks! How have you been?
+      %br
+      B) Well, Márke. I just returned from Italy.
+      %br
+      A) Ah, yes, of course. How was the trip?
+      %br
+      B) Oh, Italy is a beautiful country. There’s so much history there! Ancient cities, beautiful culture, and amazing food. I’ll tell you more later. And you, what have you been doing?
+      %br
+      A) Not much. I haven’t had much interesting happen. I hope that soon I’ll be able to go on vacation somewhere, maybe to China or Japan.
+
+  = section "A Newspaper Article" do
+    %p Following is a summarized version of an article from the Novegradian newspaper #{t "Совѣшкьи", "Sově́śkji"}.
+    .glossblock
+      %dl
+        %dt Вецераш,
+        %dd
+          Véceraś,
+          %br
+          yesterday
+      %dl
+        %dt дуадеши
+        %dd
+          duadéśi
+          %br
+          twenty
+      %dl
+        %dt цедиртий
+        %dd
+          cedírtij
+          %br
+          fourth
+      %dl
+        %dt врѣсанѣ,
+        %dd
+          vrě́saně,
+          %br
+          in September
+      %dl
+        %dt послалашин
+        %dd
+          poslálaśin
+          %br
+          was sent
+      %dl
+        %dt ко
+        %dd
+          ko
+          %br
+          to
+      %dl
+        %dt Каирем
+        %dd
+          Kajírem
+          %br
+          Cairo
+      %dl
+        %dt маленая
+        %dd
+          malenáia
+          %br
+          small
+      %dl
+        %dt група-та
+        %dd
+          grúpa-ta
+          %br
+          group-#{abbrev 'top'}
+      %dl
+        %dt сокладиш
+        %dd
+          sokladíś
+          %br
+          consisting
+      %dl
+        %dt со
+        %dd
+          so
+          %br
+          with
+      %dl
+        %dt пентерем
+        %dd
+          pénterem
+          %br
+          five
+      %dl
+        %dt дипломакьам
+        %dd
+          diplomakjám
+          %br
+          diplomats
+      %dl
+        %dt Организасин
+        %dd
+          Organizásin
+          %br
+          of Organization
+      %dl
+        %dt Сиединених
+        %dd
+          Siedinénih
+          %br
+          United
+      %dl
+        %dt Народ
+        %dd
+          Naród
+          %br
+          Nations
+      %dl
+        %dt нав
+        %dd
+          nav
+          %br
+          on
+      %dl
+        %dt едну
+        %dd
+          iédnu
+          %br
+          one
+      %dl
+        %dt шемицу
+        %dd
+          śémicu
+          %br
+          week
+      %dl
+        %dt во
+        %dd
+          vo
+          %br
+          in
+      %dl
+        %dt шем
+        %dd
+          śém
+          %br
+          this
+      %dl
+        %dt градѣ,
+        %dd
+          grádě,
+          %br
+          city
+      %dl
+        %dt напустенѣ
+        %dd
+          napústeně
+          %br
+          wracked
+      %dl
+        %dt войнам.
+        %dd
+          voinám.
+          %br
+          by wars
+      %dl
+        %dt Воклуѕаен
+        %dd
+          Vokludzáien
+          %br
+          including
+      %dl
+        %dt вуисоѕен
+        %dd
+          vuisodzén
+          %br
+          highly-trained
+      %dl
+        %dt спецялишекь
+        %dd
+          specialíśekj
+          %br
+          specialists
+      %dl
+        %dt зе
+        %dd
+          ze
+          %br
+          from
+      %dl
+        %dt Новеградескѣе
+        %dd
+          Novegradeskě́ie
+          %br
+          Novegradian
+      %dl
+        %dt Республикѣ,
+        %dd
+          Respúblikě,
+          %br
+          Republic
+      %dl
+        %dt Англин,
+        %dd
+          Ánglin,
+          %br
+          England
+      %dl
+        %dt Сиединених
+        %dd
+          Siedinénih
+          %br
+          United
+      %dl
+        %dt Штат,
+        %dd
+          Śtát,
+          %br
+          States
+      %dl
+        %dt Германин,
+        %dd
+          Germánin,
+          %br
+          Germany
+      %dl
+        %dt и
+        %dd
+          i
+          %br
+          and
+      %dl
+        %dt Лигѣ
+        %dd
+          Lígě
+          %br
+          League
+      %dl
+        %dt Арабеских
+        %dd
+          Arábeskih
+          %br
+          of Arab
+      %dl
+        %dt Народ,
+        %dd
+          Naród,
+          %br
+          Nations
+      %dl
+        %dt ше
+        %dd
+          śé
+          %br
+          this
+      %dl
+        %dt дипломадицеское
+        %dd
+          diplomadiceskóie
+          %br
+          diplomatic group
+      %dl
+        %dt бадет
+        %dd
+          bádet
+          %br
+          will
+      %dl
+        %dt вастатиш
+        %dd
+          vástatiś
+          %br
+          meet
+      %dl
+        %dt со
+        %dd
+          so
+          %br
+          with
+      %dl
+        %dt командирам
+        %dd
+          komandirám
+          %br
+          commanders
+      %dl
+        %dt протистанец
+        %dd
+          protistánec
+          %br
+          of rebels
+      %dl
+        %dt во
+        %dd
+          vo
+          %br
+          in
+      %dl
+        %dt лѣтнѣ
+        %dd
+          lě́tně
+          %br
+          southern
+      %dl
+        %dt Каирѣ
+        %dd
+          Kajírě
+          %br
+          Cairo
+      %dl
+        %dt со тѣм-це
+        %dd
+          so tě́m-ce
+          %br
+          in order to
+      %dl
+        %dt старатиш
+        %dd
+          starátiś
+          %br
+          attempt
+      %dl
+        %dt организати
+        %dd
+          organizáti
+          %br
+          to organize
+      %dl
+        %dt премирия.
+        %dd
+          premirijá.
+          %br
+          ceasefire
+      %dl
+        %dt Каире-те,
+        %dd
+          Kajíre-te,
+          %br
+          Cairo-#{abbrev 'top'}
+      %dl
+        %dt разом
+        %dd
+          rázom
+          %br
+          together
+      %dl
+        %dt со
+        %dd
+          so
+          %br
+          with
+      %dl
+        %dt болишой
+        %dd
+          bóliśoi
+          %br
+          large
+      %dl
+        %dt цестюм
+        %dd
+          cestiúm
+          %br
+          parts
+      %dl
+        %dt западна
+        %dd
+          západna
+          %br
+          of western
+      %dl
+        %dt Египета,
+        %dd
+          Iegípeta,
+          %br
+          Egypt
+      %dl
+        %dt буиле
+        %dd
+          buíle
+          %br
+          was
+      %dl
+        %dt под
+        %dd
+          pod
+          %br
+          under
+      %dl
+        %dt протистанцеуном
+        %dd
+          protistancéunom
+          %br
+          rebel
+      %dl
+        %dt властюм
+        %dd
+          vlastiúm
+          %br
+          control
+      %dl
+        %dt ож
+        %dd
+          oź
+          %br
+          already
+      %dl
+        %dt со тово-це
+        %dd
+          so tovó-ce
+          %br
+          since
+      %dl
+        %dt нашнала
+        %dd
+          naśnála
+          %br
+          began
+      %dl
+        %dt грагьѣнеска
+        %dd
+          gragjě́neska
+          %br
+          civil
+      %dl
+        %dt война.
+        %dd
+          voiná.
+          %br
+          war
+      %dl
+        %dt Шена-та
+        %dd
+          Śéna-ta
+          %br
+          scene-#{abbrev 'top'}
+      %dl
+        %dt буила
+        %dd
+          буила
+          %br
+          was
+      %dl
+        %dt о
+        %dd
+          o
+          %br
+          about
+      %dl
+        %dt сорѣзаньѣ
+        %dd
+          sorězánjě
+          %br
+          fighting
+      %dl
+        %dt приглубѣ,
+        %dd
+          priglúbě,
+          %br
+          deep
+      %dl
+        %dt ейда
+        %dd
+          iéida
+          %br
+          when
+      %dl
+        %dt роспустин
+        %dd
+          rospustín
+          %br
+          launching
+      %dl
+        %dt спорадицески
+        %dd
+          sporadíceski
+          %br
+          sporadic
+      %dl
+        %dt рейди
+        %dd
+          réidi
+          %br
+          raids
+      %dl
+        %dt республиканески
+        %dd
+          respublikáneski
+          %br
+          republican
+      %dl
+        %dt крѣуностия
+        %dd
+          krěunostijá
+          %br
+          strongholds
+      %dl
+        %dt погољом
+        %dd
+          pogółom
+          %br
+          throughout
+      %dl
+        %dt града
+        %dd
+          gráda
+          %br
+          city
+      %dl
+        %dt на
+        %dd
+          na
+          %br
+          on
+      %dl
+        %dt бежѣди
+        %dd
+          beźě́di
+          %br
+          occupied
+      %dl
+        %dt мѣсти.
+        %dd
+          mě́sti.
+          %br
+          sites
+      %dl
+        %dt На врѣмено,
+        %dd
+          Na vrě́meno,
+          %br
+          meanwhile
+      %dl
+        %dt стоекьое
+        %dd
+          stoiékjoie
+          %br
+          standing
+      %dl
+        %dt республиканеское
+        %dd
+          republikaneskóie
+          %br
+          republican
+      %dl
+        %dt правястуо-то
+        %dd
+          práviastuo-to
+          %br
+          government-#{abbrev 'top'}
+      %dl
+        %dt премѣстилошин
+        %dd
+          preměstílośin
+          %br
+          was relocated
+      %dl
+        %dt на
+        %dd
+          na
+          %br
+          on
+      %dl
+        %dt граден
+        %dd
+          gráden
+          %br
+          city
+      %dl
+        %dt портовун
+        %dd
+          pórtovun
+          %br
+          port
+      %dl
+        %dt Ал-Искиндирея
+        %dd
+          Al-Iskindiréia
+          %br
+          Al-Iskindireya
+      %dl
+        %dt (Алѣксандрия).
+        %dd
+          (Alěksándrija).
+          %br
+          Alexandria
+      %dl
+        %dt Нимо тово-це
+        %dd
+          Nímo tovó-ce
+          %br
+          despite
+      %dl
+        %dt многие
+        %dd
+          mnógije
+          %br
+          many people
+      %dl
+        %dt не
+        %dd
+          ne
+          %br
+          <abbr title="Negative">neg</abbr>
+      %dl
+        %dt надѣюци
+        %dd
+          nadě́iuci
+          %br
+          hope
+      %dl
+        %dt нав
+        %dd
+          nav
+          %br
+          on
+      %dl
+        %dt оспѣх
+        %dd
+          óspěh
+          %br
+          success
+      %dl
+        %dt шей
+        %dd
+          śéi
+          %br
+          of this
+      %dl
+        %dt миссин,
+        %dd
+          míssin,
+          %br
+          mission
+      %dl
+        %dt английске
+        %dd
+          anglíjske
+          %br
+          English
+      %dl
+        %dt дипломате
+        %dd
+          diplomáte
+          %br
+          diplomat
+      %dl
+        %dt Ричарде
+        %dd
+          Ríčarde
+          %br
+          Richard
+      %dl
+        %dt Аллене-те
+        %dd
+          Állene-te
+          %br
+          Allen-#{abbrev 'top'}
+      %dl
+        %dt сорѣѕиле
+        %dd
+          sorědzíle
+          %br
+          said
+      %dl
+        %dt то-це
+        %dd
+          tó-ce
+          %br
+          that
+      %dl
+        %dt „Надѣемши
+        %dd
+          “Nadě́iemśi
+          %br
+          we hope
+      %dl
+        %dt на
+        %dd
+          na
+          %br
+          on
+      %dl
+        %dt то-це
+        %dd
+          tó-ce
+          %br
+          that
+      %dl
+        %dt ше
+        %dd
+          śé
+          %br
+          this
+      %dl
+        %dt ест
+        %dd
+          iést
+          %br
+          is
+      %dl
+        %dt шегом
+        %dd
+          śégоm
+          %br
+          step
+      %dl
+        %dt ко
+        %dd
+          ko
+          %br
+          towards
+      %dl
+        %dt позидивием
+        %dd
+          pozidívijem
+          %br
+          the positive
+      %dl
+        %dt деля
+        %dd
+          délia
+          %br
+          for
+      %dl
+        %dt созданьа
+        %dd
+          sózdanja
+          %br
+          creation
+      %dl
+        %dt премирий‟.
+        %dd
+          premírij”.
+          %br
+          of truce
+    %p.translationsblock “Yesterday, September 24th, a small group consisting of five United Nations diplomats was dispatched to Cairo for a week-long stay in the war-torn city. Including highly-trained specialists from the Republic of Novegrad, England, the United States, Germany, and the League of Arab Nations, the diplomatic dispatch will meet with rebel leaders in southern Cairo to try to organize a cease fire. Cairo, as well as a significant portion of western Egypt, has been in rebel control for the last three months since the civil war started. The city has been the scene of intense fighting as Republican strongholds scattered throughout the city have launched sporadic raids on occupied compounds. In the meantime, the acting Republican government has been relocated to the port of Al-Iskindireya (Alexandria). While many are not optimistic about the success of this mission, English diplomat and mission leader Richard Allen has stated that ‘we are hopeful that this is a step in the positive direction toward finally bringing about a truce.’” 
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The -то clitic that can appear with adverbs is not a topicalization marker, although it has the same form and origin; in this particular case it serves as an emphatic particle.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
