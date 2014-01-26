@@ -64,6 +64,7 @@ module Grammars
       'NEG' => "Negative",
       'NEUT' => "Neuter",
       'NOM' => "Nominative",
+      'NONFUT' => "Non-Future",
       'NOV' => "Novegradian",
       'OCS' => "Old Church Slavonic",
       'ON' => "Old Novegradian",

@@ -1,0 +1,162 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Суезанье предложень"
+
+= render :partial => 'navigation'
+
+= section "Coordinating Conjunctions" do
+  %p Novegradian has four coordinating conjunctions: #{t "и", "i"}, #{t "или", "íli"}, #{t "а", "a"}, and #{t "но", "no"}.
+  %p #{t "И", "i"} corresponds to English “and”, and is used to join together two or more clauses or more than two adjectives or nouns.
+  = example_sentence "Они вецераш пришли и занок ойдут.",
+                     "Oní véceraś priślí i zánok oidút.",
+                     "they.{nom} yesterday arrive.{pf}-{past}-{pl} and tomorrow leave.{pf}-{3pl}",
+                     "They came yesterday and leave tomorrow."
+  = example_sentence "Бракьи мои Миха, Владя и Ваня вие ож совигьаци дѣвушкам.",
+                     "Brákji mojí Míha, Vládia i Vánia vijé oź sovígjaci dě́vuśkam.",
+                     "brother-{nom.pl} my-{nom.pl} Mihajíle.{dimin}-{nom}, Vladímire.{dimin}-{nom} and Ieváne.{dimin}-{nom} all.{nom.pl} already date-{3pl}-{mid} girl-{datins.pl}",
+                     "My brothers Míha, Vládia, and Vánia are all already dating."
+  %p When dealing with just two nouns or adjectives, the preposition #{t "со", "so"} “with” must be used instead. When the subject of a verb, dual agreement is still used despite the fact that only one noun is in the nominative case.
+  = example_sentence "Тата со мамой еужината ресторанѣ „Кауказе‟.",
+                     "Táta so mámoi ieuźináta restoráně “Kaukáze”.",
+                     "father-{nom.sg} with mother-{datins.sg} eat_dinner-{3dl} restaurant-{loc.sg} “Caucasus-{nom}”",
+                     "Father and mother are eating at the Kaukáze restaurant."
+  %p The expression #{t "и со", "i so"} can be used in any situation where conjunctive #{t "со", "so"} can, and indicates a greater dissociation comparable to English “as well as”.
+  = example_sentence "Маша и со бракьам ѣ прихудат.",
+                     "Máśa i só brakjam iě́ prihúdat.",
+                     "Máśa-{nom} and with brother-{datins.pl} her come-{3pl}",
+                     "Máśa, as well as her brothers, is coming."
+  %p Where English uses a singular pronoun in expressions such as “Maria and I”, Novegradian uses the dual—#{t "Надуа со Мариёй", "Naduá so Maríjoi"} (lit. “the two of us with Maríja”). The intent here is that the pronoun надуа is the true subject, with со Мариёй serving as a modifier. Novegradian can make the “inclusive we” versus “exclusive we” distinction this way: #{t "надуа со тибѣ", "naduá so tibě"} “you and I” versus #{t "надуа сон ему", "naduá son iemú"} “he and I”.
+  %p When dealing with two adjectives, и may be used instead of со only when the two adjectives describe the same object instead of describing two different ones. This allows a distinction to be made simply where English requires a longer construction. When со is used, the second adjective must be definite since it is representing a separate noun.
+  = example_sentence "Принези мнѣ тарѣлки шиньи и бѣли.",
+                     "Prinezí mně́ tarě́lki śínji i bě́li.",
+                     "carry_to.{pf}-{2sg.imper} I.{datins} plate-{nom.pl} blue-{nom.pl} and white-{nom.pl}",
+                     "Bring me the blue and white plates.",
+                     :comment => "(the plates that are both blue and white)"
+  = example_sentence "Принези мнѣ тарѣлки шиньи со бѣлиеми.",
+                     "Prinezí mně́ tarě́lki śínji so bělíjemi.",
+                     "carry_to.{pf}-{2sg.imper} I.{datins} plate-{nom.pl} blue-{nom.pl} with white-{datins.pl.def}",
+                     "Bring me the blue plates and the white plates."
+  %p #{t "Но", "no"} is the equivalent of “but”, emphasizing contrast between two clauses.
+  = example_sentence "Яс велем хотѣла ис концертен, но ими несцестия не могла.",
+                     "Iás vélem hótěla ís koncérten, no imí nescestijá ne moglá.",
+                     "I.{nom} very want-{past}-{fem} go.{det}-{sup} concert-{lat.sg}, but with disfortune-{acc.pl} {neg} be_able-{past}-{fem}",
+                     "I really wanted to go to the concert, but unfortunately I couldn’t."
+  %p The conjunction #{t "а", "a"} expresses a mild contrast, a state comparable to but not the same as the first clause. It functions much like “whereas” or “but rather”, although is often translated as “and” or “but”.
+  = example_sentence "Мой самоледе поледит во 7.00, а ѣ во 9.30.",
+                     "Mói samoléde poledít vo 7.00, a iě́ vo 9.30.",
+                     "my-{nom.sg.masc} airplane-{nom.sg} fly.{pf}-{3sg} in 7:00, whereas her in 9:30",
+                     "My airplane leaves at 7:00, and hers at 9:30."
+  = example_sentence "Не пянѣюн, а станун товаришном.",
+                     "Ne pianě́iun, a stánun továriśnom.",
+                     "{neg} become_drunk-{1sg} rather become-{1sg} sociable-{datins.sg.masc}",
+                     "I’m not getting drunk, I’m just becoming sociable."
+  %p #{t "Или", "íli"} is Novegradian’s disjunction, meaning “or”.
+  = example_sentence "Ти хокьеш брѣген шу шемицу или наступнаю?",
+                     "Tí hókjeś brě́gen śú śémicu íli nastúpnaiu?",
+                     "you.{nom} want-{2sg} beach-{lat.sg} this-{acc.sg.fem} week-{acc.sg} or next-{acc.sg.fem.def}",
+                     "Do you want to go to the beach this week or next?"
+  %p The third person nominative pronouns #{t "оне", "óne"}, #{t "она", "oná"}, #{t "ондуа", "onduá"}, and #{t "они", "oní"} lose their first vowel when immediately preceded by the conjunctions и or а. They are written as a single hyphenated word: #{t "и-не", "í-ne"} “and he”, #{t "а-на", "a-ná"} “whereas she”, #{t "и-ндуа", "i-nduá"} “and the two of them”, #{t "а-ни", "a-ní"} “whereas they”.
+  %p In addition, а + яс contract into #{t "ас", "as"} “whereas I”, though и яс “and I” never contracts. Curiously, ас now frequently shows up before all а + pronoun constructions, having lost its original meaning: #{t "ас а ти", "as a tí"} “whereas you”, #{t "ас а-на", "as a-ná"} “whereas she”. However, “whereas I” remains simply #{t "ас", "as"}. This phenomenon will be elaborated in section 22.
+
+= section "Subordinating Conjunctions" do
+  %p Novegradian only has a few distinct forms for subordinating conjunctions, анно and ли being the most common. The majority of conjunctions are either other parts of speech (such as an adverbial participle) or a phrase, often involving the то-це construction.
+  %p #{t "Анно", "ánno"} means “if”, and is only used in indicative-mood conditionals (e.g., “if you came”, “if you’re coming”, “if you came”). The subjunctive forms #{t "елиб", "iélib"} and #{t "бадеб", "bádeb"} are used in nonfuture and future hypothetical subjunctive-mood-conditionals respectively (“if you were to have come”/”if you were coming”, “if you were to come”). In hypothetical conditionals, both halves of the sentence must be in the subjunctive mood.
+  = example_sentence "Занок бадун на зашѣденьѣ-те анно музеш мене осбрати со деневаево.",
+                     "Zánok bádun na zaśědénjě-te ánno múześ mené osbráti so deneváievo.",
+                     "tomorrow I.{fut}-{1sg} on meeting-{loc.sg}-{top} if be_able-{2sg.masc} I.{acc} bring_from-{inf} from today's-{gen.sg.masc.def}",
+                     "I’ll come to the meeting tomorrow if you can get me out of it today."
+  = example_sentence "Елиб вѣгла яс то-це прийдеш, пекла би яс торте.",
+                     "Iélib věglá iás tó-ce prijdéś, peklá bi iás tórte.",
+                     "if.{nonfut.subj} know-{past}-{fem} I.{nom} {rel.acc.sg}-that.{nom} arrive.{pf}-{2sg}, bake-{past}-{fem} {subj.sg} I.{nom} cake-{acc.sg}",
+                     "If I had known you were coming, I would’ve baked a cake."
+  = example_sentence "Бадеб ти пришле, пекла би яс торте.",
+                     "Bádeb tí priślé, peklá bi iás tórte.",
+                     "if.{fut.subj} you.{nom} arrive.{pf}-{past}-{masc}, bake-{past}-{fem} {subj.sg} I.{nom} cake-{acc.sg}",
+                     "If you were to come, I would bake a cake."
+  %p #{t "Ли", "li"} means “whether”, and usually appears after the first stressed word within a clause. Its presence prevents pro-drop in the subordinate clause.
+  = example_sentence "Яс не вѣм, она ли вегетаряницой.",
+                     "Iás ne vě́m, oná li vegetariánicoi.",
+                     "I.{nom} {neg} know-{1sg}, she.{nom} whether Ø vegetarian-{fem}-{datins.sg}",
+                     "I don’t know whether she’s a vegetarian."
+  = example_sentence "Не применьун, пойдет ли оне.",
+                     "Ne primenjún, poidét li óne.",
+                     "{neg} remember-{1sg}, go.{pf}-{3sg} whether he.{nom}",
+                     "I don’t remember whether he’s going to go."
+  %p If both options are shown, или takes the place of ли (since it incorporates both the elements “and” and “whether”). Alternatively, it is sometimes possible to place ли after both options and use #{t "а", "a"} as the conjunction.
+  = example_sentence "Ѣме или гладаме, ше навижит од оругьаю.",
+                     "Iě́me íli gladáme, śé naviźít od orúgjaiu.",
+                     "eat-{1pl} or starve-{1pl}, this-{nom.sg.neut} depend-{3sg} from harvest-{gen.sg}",
+                     "Whether we eat or starve depends on the harvest."
+  = example_sentence "Млади ли а стари ли, вие смиялиш.",
+                     "Mládi li a stári li, vijé smijáliś.",
+                     "young-{nom.pl} whether whereas old-{nom.pl} whether, all.{nom.pl} laugh-{past}-{pl}-{mid}",
+                     "Whether young or old, everyone was laughing."
+  %p The conjunctions “what” and “who” are expressed using the то-це/то-ко construction. “Where” and “to where” can either use the same construction (#{t "то-куде", "to-kudé"}, #{t "то-куди", "to-kudí"}) or use the pronouns themselves (#{t "куде", "kudé"}, #{t "куди", "kudí"}). For “when”, only the form #{t "койда", "kóida"} may be used, although #{t "ейда", "iéida"} is often used in formal language (by analogy with Old Church Slavonic ѥгда via Russian).
+  %p Most other conjunctions are phrasal, and include but are not limited to:
+  %ul
+    %li #{t "абно", "ábno"} “as soon as”
+    %li #{t "ако", "áko"} “as”
+    %li #{t "акоби", "ákobi"} “as if, as though, even if”
+    %li #{t "акоби не", "ákobi ne"} “lest, or else” (or less often, какоби не)
+    %li #{t "акоже", "ákoźe"} “such as”
+    %li #{t "анно не", "ánno ne"} “unless” (with real condition)
+    %li #{t "бадеб не", "bádeb ne"} “unless” (with a hypothetical future condition)
+    %li #{t "во том-це", "vo tóm-ce"} “reponsible for ensuring that”
+    %li #{t "дати", "dáti"} “in order that, so that”
+    %li #{t "до тово-це", "do tovó-ce"} “until”
+    %li #{t "елиб не", "iélib ne"} “unless” (with a hypothetical non-future condition)
+    %li #{t "елин", "iélin"} “while”
+    %li #{t "зандо", "zándo"} “because”
+    %li #{t "за неж(е)", "za néź(e)"} “after”
+    %li #{t "за тово-це", "za tovó-ce"} “because”
+    %li #{t "за то-це", "za tó-ce"} “to, for the purpose of”
+    %li #{t "зе тово-це", "ze tovó-ce"} “on the grounds that”
+    %li #{t "како", "káko"} “as” (in free variation with ако)
+    %li #{t "колиж(е)", "kóliź(e)"} “although, even though”
+    %li #{t "кроми тово-це", "krómi tovó-ce"} “unless”
+    %li #{t "намѣсти тово-це", "namě́sti tovó-ce"} “instead of”
+    %li #{t "на то-це", "ná to-ce"} “since, seeing as” (note the stress)
+    %li #{t "на то-це", "na tó-ce"} “as, at the same time as” (note the stress)
+    %li #{t "на тѣм-це", "na tě́m-ce"} “with regards to”
+    %li #{t "по тѣм-це", "po tě́m-ce"} “as far as”
+    %li #{t "пред неж(е)", "pred néź(e)"} “before”
+    %li #{t "со тово-це", "so tovó-ce"} “since”
+    %li #{t "со тѣм-це", "so tě́m-ce"} “in order that, so that”
+    %li #{t "то-койда", "to-kóida"} “as soon as” (never **то-ейда)
+    %li #{t "то-како", "tó-kako"} “such that” (less commonly т-ако", "t-áko"})
+    %li #{t "требаж(е)", "trébaź(e)"} “even though, despite”
+    %li #{t "штоби", "śtóbi"} “in order that, so that” (dialectical, sometimes considered low style)
+  %p Most of these conjunctions call for the indicative mood in the following clause. When the situation is hypothetical, there is often a choice between the subjunctive mood or the indicative (perhaps an indication of the gradual loss of the subjunctive in Novegradian).
+  %p However, the clause following indirect commands (“want someone to...”, “ask someome to...”, “order someone to...”, etc) must always be subjunctive:
+  = example_sentence "Хокьун то-це ти ходиле би туди.",
+                     "Hókjun tó-ce tí hódile bi tudí.",
+                     "want-{1sg} {rel.acc.sg}-that.{nom} you.{nom} go.{indet}-{past}-{masc} {subj.sg} to_there",
+                     "I want you to go there."
+  %p The variant form #{t "то-ж-це", "tó-ź-ce"} (pronounced as тошче [ˈtoʃ.tʃe]) may be used in place of то-це with commands to imply a sense of warning that there will be consequences if the action is not carried out. This form is almost required after verbs such as “forbid” and “prohibit”.
+  = example_sentence "Сорѣѕи име то-ж-це не приходили бу познѣ!",
+                     "Sorědzí íme tó-ź-ce ne prihódili bu pózně!",
+                     "say.{pf}-{2sg.imper} they.{datins} {rel.acc.sg}-{emph}-that.{nom} {neg} arrive-{past}-{pl} {subj.pl} late-{adv}",
+                     "Tell them to not be late!"
+
+= section "Reduplicated Conjunctions" do
+  %p Several conjunctions may be reduplicated to acquire a new meaning, originally emphatic.
+  %p The reduplication #{t "“и X и Y”", "i X i Y"} means “both X and Y”. It also has the negative form #{t "“ни X ни Y”", "ni X ni Y"}, meaning “neither X nor Y”. The latter (which generally requires the genitive case) is especially common in the expression #{t "ни шево, ни видораево", "ni śevó, ni vidoráievo"} “neither [of two]”, literally “neither this, nor the other”.
+  = example_sentence "И ов Англин и ов Испанин буилѣ по кѣломировой емпирей, но ни шей, ни видорѣе доходилѣ до стоекьа дена.",
+                     "I ov Ánglin i ov Ispánin buílě po kělomiróvoi iempiréi, no ni śéi, ni vidórěie dohódilě do stoiékja déna.",
+                     "and at-{v*} England-{gen} and at-{v*} Spain-{gen} be-{past}-{dl} {dist} worldwide-{datins.sg.fem} empire-{datins.sg}, but neither this-{gen.sg.fem}, neither other-{gen.sg.fem.def} go_up_to-{past}-{dl} up_to stand-{act.impf.ptcp}-{gen.sg.masc} day-{gen.sg}",
+                     "Both England and Spain had worldwide empires, but neither lasted to the present day."
+  %p Conversely, #{t "“или X или Y”", "íli X íli Y"} means “either X or Y”.
+  = example_sentence "Она или ей призуонила или сон ей говорила зад спиной моей.",
+                     "Oná íli iéi prizuoníla íli son iéi govoríla zad spinói moiéi.",
+                     "she.{nom} or she.{datins} call_to.{pf}-{past}-{fem} or with-{n*} she.{datins} talk-{past}-{fem} behind back-{datins.sg} my-{datins.sg.fem}",
+                     "She either called her or talked to her behind my back."
+  %p Perhaps in this same class is #{t "“хой... хой...”", "hói... hói..."}, meaning “some... while others...”
+  = example_sentence "Хой пиво лубит, хой – вино.",
+                     "Hói pívo lúbit, hói – vinó.",
+                     "who.{nom} beer-{acc.sg} love-{3sg}, who.{nom} Ø wine-{acc.sg}",
+                     "Some love beer, some love wine."
+  %p Though not a reduplicated conjunction, the complex expression #{t "не толкѣ... шенаким...", "ne tólkě... śenákim..."} “not only... but also...” uses the same format.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
