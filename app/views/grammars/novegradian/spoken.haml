@@ -1,0 +1,1056 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Розговорней новеградескей лизике"
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p Novegradian in its standard written form is quite clearly a Slavic language with numerous Slavic features. Even innovative formations in the Novegradian standard almost always have direct analogues in other Slavic languages. This was further reinforced over the many centuries of Russian domination and influence in the region; even after Novegradian was universally recognized as a distinct language, Russian was still viewed as prestigious, and the formal standard was developed to be more similar to Russian.
+  %p In the Soviet period this began to change, a process still continuing in the present day. From 1917 the Novegradian standard began to develop more along its own path and came closer into line with the spoken form of the language around the city of Novegráde Velíkei. A great deal of vocabulary of Uralic origin that had long been in use in speech became standardized at this point.
+  %p Although the vocabulary was updated, the grammar in many respects was not. The many years of contact with speakers of Uralic and Baltic languages, in particular Finnish, Karelian, Komi, Estonian, and Latvian, have left a great impact on the language. While the written standard and the higher registers of spoken Novegradian are still clearly Slavic, most registers of the spoken language actually display a strong Uralic quality blended in with the Slavic, resulting in something uniquely Novegradian.
+  %p Most of the features described in this section are not limited to casual speech, but are even seen in semiformal speech as well. Only in the formal spoken language are these colloquial features completely absent. When reading in non-formal environments, many speakers will adopt a middle ground, with many aspects of colloquial pronunciation present, but naturally keeping the grammar and vocabulary of the written text.
+
+= section "Pronunciation" do
+  = section "Vowels" do
+    %p The Novegradian vowel system has remained relatively stable. However, there are a few trends to be noted.
+    %p The loan-vowel /ɨ/ has stabilized. In the standard, it has a tendency to centralize in certain positions (see Phonology section), but in the colloquial language, the vowel has stabilized a little forward of cardinal [ɨ].
+    %p The sequence /ij/ when word-final or before a consonant centralized to [əj], which was then reanalyzed as /aj/ in many speakers’ speech. Therefore words such as #{t "английске", "anglíjske"} “English” are pronounced #{t "англайске", "angláiske"}. There is at least one manifestation of this change in the standard language: #{t "индайка", "indáika"} “turkey (bird)”, derived from #{t "Индия", "Índija"} “India”, rather than the expected **индийка.
+    %p The word-final sequence /ow/ (especially common in the partitive plural ending, though not exclusively) has undergone metathesis, becoming /wo/: #{t "нигуо", "níguo"} “book-#{abbrev 'part.pl'}”.
+
+  = section "Consonants" do
+    %p Consonant changes can be groupted into two main categories—systematic changes and reductions.
+    %p The most significant change affecting the sound of the language is the fricativization of /l/ in palatalizing environments. In the standard, /l/ is palatalized to [lʲ] before stressed [e æ i]. In the spoken language, this palatalization turned into the [l] first into a lateral fricative, and then into a full fricative [ʑ]: #{t "затулите", "zatulíte"} “closed” → #{t "затужжите", "zatužíte"}. This change does not occur when the /l/ is part of a cluster (as in <i>anglíjske</i> above) or when word-initial (standard #{t "листе", "líste"} “leaf, sheet” → coll. #{t "лист", "líst"}). Novegradians have taken to using жж to represent the sound [ʑ] from earlier /l/ in speech-imitating writing, since by standard spelling rules ж would almost always be pronounced [zʲ] in the positions the new [ʑ] appears in.
+    %p Word-initial /e/ [je] appears to be simplifying to [e] after prepositions that end in a consonant: #{t "в еропортѣ", "v ieropórtě"} “in the airport” is pronounced [βje.ro.ˈpor.tɪ] in the standard, but [βe.ro.ˈpor.tɪ] colloquially.
+    %p Although Novegradian has never been very tolerant of large internal clusters, the process of simplification continues. Clusters involving /ts/ are particularly vulnerable, where the /ts/ weakens to [s] or [z]: #{t "традиця", "tradícia"} “tradition” → #{t "традися", "tradísia"}. The more complex the cluster, the greater the simplification: #{t "вункся", "vúnksia"} “function” → #{t "вунся", "vúnsia"}.
+    %p On the other hand, the rules forbidding final clusters seem to be laxing. Due to the loss of the nominative singular ending on many nouns (discussed later), #{t "листе", "líste"} “leaf, sheet” is now pronounced #{t "лист", "líst"}. This same sort of ending deletion now allows word-final voiced consonants: #{t "граде", "gráde"} “city” → #{t "град", "grád"} [ˈgrad]; as well as word-final /β/: #{t "будове", "budóve"} “building” → #{t "будов", "budóv"} [bu.ˈdoβ].
+    %p Other than the above, there are few other changes that can be discussed in this section. Cluster simplifications tend to be irregular and occur on a case-by-case basis, and other changes are more closely connected with a word’s morphology, and so will be discussed in the appropriate section below.
+
+= section "Verbs" do
+  %p The verbal system has been fairly stable outside of the past tense. The four main changes to be discussed here are minor changes to inflectional endings, the rise of evidentiality, negative marking, and inanimate agreement in the past tense.
+
+  = section "Changes in Verbs" do
+    %p Minor phonetic changes to verbal forms include:
+    %ul
+      %li The sequence #{t "-ее-", "-eie-"} in the present tense of any third conjugation verb is simplified to -е-: #{t "муити", "muíti"} “wash” → #{t "миеюн, миеш, миет, миева, миета, миета, мием, миете, миею", "miéiun, miéś, miét, miéva, miéta, miéta, miém, miéte, miéiu"} (standard #{t "миеюн, миееш, миеет, миеева, миеета, миеем, миеете, миеют", "miéiun, miéieś, miéiet, miéieva, miéieta, miéiem, miéiete, miéiut"}).
+      %li The final #{t "-и", "-i"} found in any middle voice forms is lost, generally resulting in a consonant cluster. Note, however, that in the #{abbrev '2sg'} of the present/future tense, which is #{t "-шши", "-śśi"} in the standard (pronounced [sʲ:ɪ]), becomes #{t "-шц", "-śc"} or even #{t "-шт", "-śt"} in colloquial speech, pronounced [ʃts ~ ʃt]: #{t "сожитиш", "soźítiś"} “get accustomed to” → #{t "соживуш, соживешц/соживешт, соживец, соживеваш, соживеташ, соживеташ, соживемш, соживетеш, соживуц", "soźivúś, soźivéśc/soźivéśt, soźivéc, soźivévaś, soźivétaś, soźivétaś, soźivémś, soźivéteś, soźivúc"} (standard #{t "соживуш, соживешши, соживеци, соживеваш, соживеташ, соживемши, соживетеш, соживеци", "soźivúś, soźivéśśi, soźivéci, soźivévaś, soźivétaś, soźivémśi, soźivéteś, soźivúci"}).
+    %p Informal spellings such as #{t "цидас", "cidás"} “he/she reads” (standard #{t "цидаст", "cidást"}), #{t "цида", "cidá"} “they read” (standard #{t "цидати", "cidáti"}) and #{t "ес", "iés"} “there is” (standard #{t "ест", "iést"}) are purely orthographic changes. The simplifications they represent have occurred in the standard language as well; the standard simply mandates the more conservative spellings.
+    %p The subjunctive mood is also beginning to fall out of use. In colloquial speech it is only required in conditional sentences (“would”), in polite requests, and after verbs such as “want” and “ask” indicating indirect commands. In all other places it has more or less been completely lost, generally having been replaced by the present or future tenses.
+    %p A number of irregular verbs have also undergone a degree of regularization. This is most visible with #{t "-давати", "-daváti"}, the imperfective stem for derivatives of дати “give”, which now conjugates as a regular first conjugation verb: #{t "давам, даваш, давас", "davám, daváś, davás"}, etc instead of the standard #{t "даюн, даеш, дает", "daiún, daiéś, daiét"}.
+    %p In addition, the zero-ending imperfective (formed by taking a second conjugation perfective verb and switching it to the first declension and palatalizing the root-final consonant) is falling out of use in favor of the suffixial imperfective -овати. Therefore derived imperfective forms such as #{t "позгодоулати", "pozgodóulati"} “train” and #{t "помагати", "pomagáti"} “help” are being replaced by #{t "позгодововати", "pozgodòvováti"} and #{t "помоговати", "pomògováti"}.
+    %p The verb #{t "исти", "ísti"} “go” has acquired a prefixed i- in all of its past tense forms by analogy with its infinitive and present/future forms: #{t "ишле", "iślé"}, #{t "ишла", "iślá"}, #{t "ишло", "iśló"}, etc. This is also seen in derived forms, albeit with /j/ instead of /i/: #{t "войшле", "voiślé"}, #{t "войшла", "voiślá"}, etc.<sup>1</sup>
+    %p While standard Novegradian has long allowed the adverb #{t "велем", "vélem"} “very” to modify verbs directly to intensify the action described, colloquial Novegradian also allows the adjectival superlative prefix #{t "най-", "nai-"} to be prefixed to verbs for an even stronger intensification: #{t "он ше найлубит", "ón śé nailúbit"} “he loves this more than anything”.
+
+  = section "Evidentiality" do
+    %p Spoken Novegradian has developed a two-way evidential system, distinguishing between the “directive” and “indirective”. This distinction is only made in the past tense; other tenses are unmarked for evidentiality.
+    %p The directive is the default unmarked form. It indicates that either some sort of direct evidence exists regarding the truth of a statement, or makes no statement regarding whether or not there is evidence. This ‘evidence’ can be anything directly experienced by the speaker, most often meaning they actually saw it happen.
+    %p The indirective must be explicitly marked. It indicates that there is no direct evidence behind the statement, generally meaning the speaker heard about it from other sources. The indirective is formed by one of two clitics that attach to the end of the past-tense verb. Demonstrated with #{t "пизати", "pizáti"} “write”:
+    %table
+      %tr
+        %th Form
+        %th Type 1
+        %th Type 2
+      %tr
+        %th Masc Sg
+        %td= t("пизаледѣ", "pizáledě", :linebreak => true)
+        %td= t("пизале-ѕит", "pizále-dzit", :linebreak => true)
+      %tr
+        %th Fem Sg
+        %td= t("пизаладѣ", "pizáladě", :linebreak => true)
+        %td= t("пизала-ѕит", "pizála-dzit", :linebreak => true)
+      %tr
+        %th Inan Sg
+        %td= t("пизалодѣ", "pizálodě", :linebreak => true)
+        %td= t("пизало-ѕит", "pizálo-dzit", :linebreak => true)
+      %tr
+        %th Dl
+        %td= t("пизалѣдѣ", "pizálědě", :linebreak => true)
+        %td= t("пизалѣ-ѕит", "pizálě-dzit", :linebreak => true)
+      %tr
+        %th Pl
+        %td= t("пизалидѣ", "pizálidě", :linebreak => true)
+        %td= t("пизали-ѕит", "pizáli-dzit", :linebreak => true)
+    %p The same clitics are applied regularly to middle voice or passive verbs.
+    %p #{t "-дѣ", "-dě"} is much more commonly seen than #{t "-ѕит", "-dzit"}, and for that reason is generally written without a hyphen.
+    %p Examples:
+    %ul
+      %li
+        = t("Он прайшле.", "Ón praiślé.", :linebreak => true)
+        %br
+        “He came [and I know this]”—the speaker saw him come.
+      %li
+        = t("Он прайшледѣ.", "Ón praiślédě.", :linebreak => true)
+        %br
+        “He came [as far I know]”—someone else told the speaker he came; the speaker himself did not witness this.
+    %p In the standard both of these sentences would be rendered #{t "Оне пришле", "Óne priślé"}.
+    %p The language has not yet reached the point where this sort of evidentiality marking is obligatory. That is, a form such as #{t "прайшле", "praiślé"} is strictly speaking unmarked for evidentiality, while #{t "прайшледѣ", "praiślédě"} is marked for the indirective. However, some dialects (especially the Siberian dialects) have reached the point where this marking is almost obligatory, meaning that прайшле is usually interpreted as directive.
+
+  = section "Negation" do
+    %p The tendency to reduce the negative particle #{t "не", "ne"} to simply #{t "нь-", "nj-"} before verbs beginning with a vowel can be traced to the 17th century; the palatal elements comes from the partial occlusion of the older /e/ before another vowel. However, since the 1940s or so this нь has been reanalyzed as an integral part of the verb when negated, and the regular negative particle не has been reinstated, resulting in a double marking of negation on such verbs. This prefixed нь- is in fact treated as an actual inflection, so pronouns and adverbs can be placed in between the regular negative particle не and this negatively-marked verb:
+    %ul
+      %li #{t "он авиле", "ón ávile"} “he revealed”<sup>2</sup>
+      %li #{t "он не ньавиле", "ón ne njávile"} “he did not reveal”<sup>3</sup>
+      %li #{t "он мей авиле", "ón mei ávile"} “he revealed to me”<sup>4</sup>
+      %li #{t "он не мей ньавиле", "ón ne mei njávile"} “he did not reveal to me”<sup>5</sup>
+    %p Verbs which do not begin with a vowel are negated regularly. They display no distinct negative form.
+
+  = section "Inanimate Agreement in the Past Tense" do
+    %p In colloquial Novegradian, gender agreement for inanimate (non-human non-animal) nouns has been lost in the past tense. The loss of the neuter gender (see below) has freed up the past tense ending #{t "-ло", "-lo"}, now used for all singular inanimate nouns. Singular animate nouns continue to make the masculine (#{t "-ле", "-le"}) versus feminine (#{t "-ла", "-la"}) distinction. In the dual and plural, animate and inanimate nouns continue to share the same endings.
+    %ul
+      %li #{t "буиле маж", "buíle máź"} “there was a man” (#{abbrev 'masc.anim'})
+      %li #{t "буила жена", "builá źená"} “there was a woman” (#{abbrev 'fem.anim'})
+      %li #{t "буило ежеро", "buílo iéźero"} “there was a lake” (#{abbrev 'masc.inan'})
+      %li #{t "буило рѣга", "buílo rěgá"} “there was a river” (#{abbrev 'fem.inan'})<sup>6</sup>
+
+  = section "The Clitic ‘Be’" do
+    %p The clitic forms of буити has been gaining ground in colloquial Novegradian. In the standard, where the third person pronouns frequently took an enclitic form (#{t "оне-и", "óne-i"} “he is...”), colloquially this has actually been extended to most subject pronouns, even those for which this form (in origin third person singular) is etymologically inappropriate. Following is a comparison of the standard and colloquial means of expressing a single copular sentence for all personal pronouns. Note that -и has spread to all forms except the third person plural, though it dissimilates to /je/ after another /i/.
+    %table
+      %tr
+        %th Standard
+        %th Colloquial
+        %th Meaning
+      %tr
+        %td= t("Яс вежне.", "Iás véźne.", :linebreak => true)
+        %td= t("Ясе-и вежне.", "Iasé-i véźne.", :linebreak => true)
+        %td I am happy.
+      %tr
+        %td= t("Ти вежне.", "Tí véźne.", :linebreak => true)
+        %td= t("Ти-е вежне.", "Tí-je véźne.", :linebreak => true)
+        %td You are happy.
+      %tr
+        %td= t("Оне-и вежне.", "Oné-i véźne.", :linebreak => true)
+        %td= t("Оне-и вежне.", "Oné-i véźne.", :linebreak => true)
+        %td He is happy.
+      %tr
+        %td= t("Она-и вежна.", "Oná-i véźna.", :linebreak => true)
+        %td= t("Она-и вежна.", "Oná-i véźna.", :linebreak => true)
+        %td She is happy.
+      %tr
+        %td= t("Надуа вежни.", "Naduá véźni.", :linebreak => true)
+        %td= t("Надуа-и вежни.", "Naduá-i véźni.", :linebreak => true)
+        %td The two of us are happy.
+      %tr
+        %td= t("Вадуа вежни.", "Vaduá véźni.", :linebreak => true)
+        %td= t("Вадуа-и вежни.", "Vaduá-i véźni.", :linebreak => true)
+        %td You two are happy.
+      %tr
+        %td= t("Ондуа вежни.", "Onduá véźni.", :linebreak => true)
+        %td= t("Ондуа-и вежни.", "Onduá-i véźni.", :linebreak => true)
+        %td They two of them are happy.
+      %tr
+        %td= t("Муи вежни.", "Muí véźni.", :linebreak => true)
+        %td= t("Муи-е вежни.", "Muí-je véźni.", :linebreak => true)
+        %td We are happy.
+      %tr
+        %td= t("Вуи вежни.", "Vuí véźni.", :linebreak => true)
+        %td= t("Вуи-е вежни.", "Vuí-je véźni.", :linebreak => true)
+        %td You are all happy.
+      %tr
+        %td= t("Они су вежни.", "Oní su véźni.", :linebreak => true)
+        %td= t("Они су вежни.", "Oní su véźni.", :linebreak => true)
+        %td They are happy.
+    %p These clitic forms are almost always used for <span class="pattern">noun + be + adjective</span> sentences and frequently though by no means always in <span class="pattern">noun + be + noun</span> sentences, and only in the present tense. However, the clitics are never used if the complement is placed before the subject: #{t "Вежне яс", "Véźne iás"} “I am happy”.
+
+= section "Nouns" do
+  %p The nominal system has probably seen the most changes in colloquial speech. These can be grouped into five main areas—changes in case endings, the rise of possessive endings, the restructuring of the partitive, the appearance of a new case form, and the loss of the neuter.
+
+  = section "Changes in Case Endings" do
+    %p A number of phonetic changes have affected the declension system of nouns. There have been no major overall changes to its structure, only changes to the endings.
+    %p The nominative ending -е for fourth declension masculine nouns and -и for all fifth declension nouns has been more or less completely eliminated. Note that any word-final clusters or voiced consonants caused by this drop remain as such, i.e., the clusters do not simplify and the voiced consonants do not devoice. However, if too dificult a cluster would result, the ending remains in an ultrashort reduced form, usually close to [ə̆] (a short schwa). In the chart below this will be marked using ъ, but note that in normative orthography imitating speech no vowel is written at all.
+    %p Examples:
+    %table
+      %tr
+        %th Standard
+        %th Colloquial
+        %th Meaning
+      %tr
+        %td= t("Новеграде", "Novegráde", :linebreak => true)
+        %td= t("Новеград", "Novegrád", :linebreak => true)
+        %td Novegrad
+      %tr
+        %td= t("боғе", "bóğe", :linebreak => true)
+        %td= t("боғ", "bóğ", :linebreak => true)
+        %td god
+      %tr
+        %td= t("ѣзде", "iě́zde", :linebreak => true)
+        %td= t("ѣзд", "iě́zd", :linebreak => true)
+        %td trip, journey
+      %tr
+        %td= t("дуери", "duéri", :linebreak => true)
+        %td= t("дуер", "duér", :linebreak => true)
+        %td door
+      %tr
+        %td= t("огни", "ógni", :linebreak => true)
+        %td= t("огнъ", "ógn(ə)", :linebreak => true)
+        %td fire
+      %tr
+        %td= t("снѣге", "sně́ge", :linebreak => true)
+        %td= t("снѣг", "sně́g", :linebreak => true)
+        %td snow
+      %tr
+        %td= t("куѣте", "kuě́te", :linebreak => true)
+        %td= t("куѣт", "kuě́t", :linebreak => true)
+        %td color, flower
+      %tr
+        %td= t("вагле", "vágle", :linebreak => true)
+        %td= t("ваглъ", "vágl(ə)", :linebreak => true)
+        %td coal
+      %tr
+        %td= t("нокьи", "nókji", :linebreak => true)
+        %td= t("нокь", "nókj", :linebreak => true)
+        %td night
+      %tr
+        %td= t("дожгьи", "doźgjí", :linebreak => true)
+        %td= t("дожгь", "dóźgj", :linebreak => true)
+        %td rain
+    %p The loss of these endings means that it is no longer possible to tell whether a given noun ending in a consonant belongs to the third, fourth or fifth declension. While there have been no recorded instances of nouns shifting declensions for a large group of people as of yet, this opens the possibility of declension changes in the coming years.
+    %p Even some foreign loans have been affected: #{t "такси", "táksi"} “taxi” → #{t "такс", "táks"}. Indeclinable nouns, though, do not change: #{t "ковѐ", "kóve"} “coffee”.
+    %p The situation for neuter nouns ending in /e/ (as opposed to /o/) is more confined. Many speakers still preserve the original -e ending, but an increasing number of people are beginning to drop these as well: #{t "море", "móre"} “sea” → #{t "мор", "mór"}. The old neuter ending -о and the first declension ending -а are unaffected.
+    %p For neuter fourth declension nouns, which have identical nominative and accusative cases, the above changes also apply to the accusative.
+    %p Both the partitive singular and partitive plural endings have undergone some changes as well. The singular ending -ок/-ёк/-ек has lenited to #{t "-ох/-ёх/-ех", "-oh/-ioh/-eh"}. The variant ending #{t "-у", "-u"} seen in the third and fourth declensions has disappeared in favor of -ох/-ех. The plural ending #{t "-оу", "-ou"}, as mentioned earlier, has undergone metathesis to #{t "-уо", "-uo"}. The second declension ending -ёу, however, has not changed.
+    %p The final -и in the nominative singular form of a few sixth declension nouns (such as #{t "мати", "máti"} “mother” and #{t "докьи", "dókji"} “daughter”) is dropped as well: #{t "мат", "mát"}, #{t "докь", "dókj"}. The few sixth declension nouns that end in /e/ in the nominative singular generally change it to /jo/: #{t "шѣме", "śě́me"} “seed” → #{t "шѣмё", "śě́mio"}.
+    %p There has been a tendency to regularize nouns that have a strange “non-Novegradian” ending in their nominative singular form, most commonly /u/. These are generally changed to /o/: #{t "оху", "óhu"} “ear” → #{t "охо", "óho"}.
+    %p Finally, there has also been a desire to regularize indeclinable nouns that have been in the language for a while, especially those that refer to everyday sights. There are three primary means of doing so:
+    %ul
+      %li Many nouns already have the right ‘shape’ to be declined, and the only reason they hadn’t up to this point was because they were still viewed as foreign. An example is #{t "метро", "metró"} “metro, subway”, which in the standard is indeclinable, but in colloquial speech is a regular third declension noun.
+      %li When the noun has been prevented from declining due to an unusual final vowel, that vowel is often changed or deleted entirely in speech: #{t "кангуру", "kangurú"} “kangaroo” (indeclinable) → #{t "кангур", "kangúr"} (regular fourth declension masculine).
+      %li Other nouns may acquire a Novegradian suffix so that the ‘non-native’ ending is no longer an ending: #{t "ковѐ", "kóve"} “coffee” (indeclinable) → #{t "ковейка", "kovéika"} (regular first declension feminine).
+
+  = section "Possessive Endings" do
+    %p A common feature in many Uralic languages is that possession can be indicated by a series of possessive affixes instead of using separate possessive adjectives or pronouns. Likely under the influence of these languages, Novegradian has developed a set of possessive affixes that can be used (and actually are required) on a small set of nouns.
+    %p These affixes developed from the possessive adjectives, and likely have existed in spoken Novegradian for quite a while. Since the early 18th century possessive pronouns were almost exclusively written after kinship terms, whereas they could be freely written before or after other nouns. Fused forms more like those in modern Novegradian have been attested since the 19th century.
+    %p Once possessive adjectives were made to follow kinship terms, the next step they took was to lose the ability to agree with the noun they were modifying, having lost their inflectional endings. They then lost their primary stress, cliticizing to the noun they followed. This cliticization then resulted in the deletion of the final vowel (the nominative singular ending) of the noun if it was unstressed, turning the clitic into a true ending. They continued to undergo phonetic reductions, leaving the modern forms of today.
+    %p In Novegradian these endings may only be used on kinship terms (see the list in the appendix) as well as the noun #{t "друге", "drúge"} “friend”. The basic endings are as follows:
+    %table
+      %tr
+        %th
+        %th Singular
+        %th Dual
+        %th Plural
+      %tr
+        %th 1st
+        %td= t("-мо", "-mo")
+        %td= t("-най", "-nai")
+        %td
+          = t("-на", "-na")
+          %br
+          = t("-наш", "-naś")
+      %tr
+        %th 2nd
+        %td= t("-туо", "-tuo")
+        %td
+          = t("-уай", "-uai")
+          %br
+          = t("-вай", "-vai")
+        %td
+          = t("-уа", "-ua")
+          %br
+          = t("-уаш", "-uaś")
+          %br
+          = t("-ва", "-va")
+          %br
+          = t("-ваш", "-vaś")
+      %tr
+        %th 3rd
+        %td
+          = t("-иево", "-ievo")
+          %br
+          = t("-во", "-vo")
+          %br
+          = t("-иѣ", "-iě")
+        %td= t("-ю", "-iu")
+        %td= t("-ех", "-eh")
+    %p The #{abbrev '1pl'} “our” and #{abbrev '2pl'} “you all’s” forms have two variants that exist in free variation, one preserving the final /sʲ/ and one dropping it. Older speakers tend to preserve the /sʲ/ more than drop it, but many younger speakers preserve it as well.
+    %p The #{abbrev '2dl'} and #{abbrev '2pl'} also have variants with /w/ and /β/. The /w/ form is used when the endings are being added to a base ending in a consonant and the /β/ form when being added to a base ending in a vowel.
+    %p The ending #{t "-иѣ", "-iě"} means “her”. The two variants for “he” follow the same rules as above: #{t "-иево", "-ievo"} is used after consonants and #{t "-во", "-vo"} after vowels.
+    %p The singular possessive forms of a noun are formed by dropping the final vowel of the nominative singular form (unless the final vowel is stressed, as in #{t "жена", "źená"} “wife”, or there is a consonant cluster before that vowel, as in #{t "шестра", "śéstra"}), and then adding the appropriate endings. Using #{t "друге", "drúge"} “friend”, #{t "мама", "máma"} “mother/mom”, and #{t "шестра", "śéstra"} “sister”:
+    %table
+      %tr
+        %th
+        %th друге
+        %th Meaning
+        %th{:rowspan => 11}
+        %th мама
+        %th Meaning
+        %th{:rowspan => 11}
+        %th шестра
+        %th Meaning
+      %tr
+        %th 1Sg
+        %td= t("другмо", "drúgmo", :linebreak => true)
+        %td my friend
+        %td= t("маммо", "mámmo", :linebreak => true)
+        %td my mother
+        %td= t("шестрамо", "śéstramo", :linebreak => true)
+        %td my sister
+      %tr
+        %th 2Sg
+        %td= t("другтуо", "drúgtuo", :linebreak => true)
+        %td your friend
+        %td= t("мамтуо", "mámtuo", :linebreak => true)
+        %td your mother
+        %td= t("шестратуо", "śéstratuo", :linebreak => true)
+        %td your sister
+      %tr
+        %th 3Sg<br>Masc
+        %td= t("другиево", "drúgievo", :linebreak => true)
+        %td his friend
+        %td= t("мамиево", "mámievo", :linebreak => true)
+        %td his mother
+        %td= t("шестраво", "śéstravo", :linebreak => true)
+        %td his sister
+      %tr
+        %th 3Sg<br>Fem
+        %td= t("другиѣ", "drúgiě", :linebreak => true)
+        %td her friend
+        %td= t("мамиѣ", "mámiě", :linebreak => true)
+        %td her mother
+        %td= t("шестраѣ", "śéstraiě", :linebreak => true)
+        %td her sister
+      %tr
+        %th 1Dl
+        %td= t("другнай", "drúgnai", :linebreak => true)
+        %td us two's friend
+        %td= t("мамнай", "mámnai", :linebreak => true)
+        %td us two's mother
+        %td= t("шестранай", "śéstranai", :linebreak => true)
+        %td us two's sister
+      %tr
+        %th 2Dl
+        %td= t("другуай", "drúguai", :linebreak => true)
+        %td you two's friend
+        %td= t("мамуай", "mámuai", :linebreak => true)
+        %td you two's mother
+        %td= t("шестравай", "śéstravai", :linebreak => true)
+        %td you two's sister
+      %tr
+        %th 3Dl
+        %td= t("другю", "drúgiu", :linebreak => true)
+        %td them two's friend
+        %td= t("мамю", "mámiu", :linebreak => true)
+        %td them two's mother
+        %td= t("шестраю", "śéstraiu", :linebreak => true)
+        %td them two's sister
+      %tr
+        %th 1Pl
+        %td= t("другна(ш)", "drúgna(ś)", :linebreak => true)
+        %td our friend
+        %td= t("мамна(ш)", "mámna(ś)", :linebreak => true)
+        %td our mother
+        %td= t("шестрана(ш)", "śéstrana(ś)", :linebreak => true)
+        %td our sister
+      %tr
+        %th 2Pl
+        %td= t("другуа(ш)", "drúgua(ś)", :linebreak => true)
+        %td you all's friend
+        %td= t("мамуа(ш)", "mámua(ś)", :linebreak => true)
+        %td you all's mother
+        %td= t("шестрава(ш)", "śéstrava(ś)", :linebreak => true)
+        %td you all's sister
+      %tr
+        %th 3Pl
+        %td= t("другех", "drúgeh", :linebreak => true)
+        %td their friend
+        %td= t("мамех", "mámeh", :linebreak => true)
+        %td their mother
+        %td= t("шестраех", "śéstraieh", :linebreak => true)
+        %td their sister
+    %p Doubled consonants, such as -мм- in #{t "маммо", "mámmo"} “my mother”, are pronounced geminate: /mam.mo/.
+    %p The plural forms are formed by taking the nominative plural forms of the noun and adding the same endings. The only difference is that the final -ш is always dropped from the #{abbrev '1pl'} and #{abbrev '2pl'} endings when the noun is plural. With #{t "дружи", "drúźi"} “friends” and #{t "шестри", "śéstri"} “sisters”:
+    %table
+      %tr
+        %th
+        %th дружи
+        %th Meaning
+        %th{:rowspan => 11}
+        %th шестри
+        %th Meaning
+      %tr
+        %th 1Sg
+        %td= t("дружимо", "drúźimo", :linebreak => true)
+        %td my friends
+        %td= t("шестримо", "śéstrimo", :linebreak => true)
+        %td my sisters
+      %tr
+        %th 2Sg
+        %td= t("дружитуо", "drúźituo", :linebreak => true)
+        %td your friends
+        %td= t("шестритуо", "śéstrituo", :linebreak => true)
+        %td your sisters
+      %tr
+        %th 3Sg<br>Masc
+        %td= t("друживо", "drúźivo", :linebreak => true)
+        %td his friends
+        %td= t("шестриво", "śéstrivo", :linebreak => true)
+        %td his sisters
+      %tr
+        %th 3Sg<br>Fem
+        %td= t("дружиѣ", "drúźijě", :linebreak => true)
+        %td her friends
+        %td= t("шестриѣ", "śéstrijě", :linebreak => true)
+        %td her sisters
+      %tr
+        %th 1Dl
+        %td= t("дружинай", "drúźinai", :linebreak => true)
+        %td us two's friends
+        %td= t("шестринай", "śéstrinai", :linebreak => true)
+        %td us two's sisters
+      %tr
+        %th 2Dl
+        %td= t("друживай", "drúźivai", :linebreak => true)
+        %td you two's friends
+        %td= t("шестривай", "śéstrivai", :linebreak => true)
+        %td you two's sisters
+      %tr
+        %th 3Dl
+        %td= t("дружию", "drúźiju", :linebreak => true)
+        %td them two's friends
+        %td= t("шестрию", "śéstriju", :linebreak => true)
+        %td them two's sisters
+      %tr
+        %th 1Pl
+        %td= t("дружина", "drúźina", :linebreak => true)
+        %td our friends
+        %td= t("шестрина", "śéstrina", :linebreak => true)
+        %td our sisters
+      %tr
+        %th 2Pl
+        %td= t("дружива", "drúźiva", :linebreak => true)
+        %td you all's friends
+        %td= t("шестрива", "śéstriva", :linebreak => true)
+        %td you all's sisters
+      %tr
+        %th 3Pl
+        %td= t("дружиех", "drúźijeh", :linebreak => true)
+        %td their friends
+        %td= t("шестриех", "śéstrijeh", :linebreak => true)
+        %td their sisters
+    %p The sixth declension nouns #{t "мати", "máti"} “mother” and #{t "докьи", "dókji"} “daughter” are also regular, the singular forms being based on the “short” nominative singular and the plural on the “extended” nominative plural: #{t "докьмо", "dókjmo"} “my daughter”, #{t "докьеримо", "dókjerimo"} “my daughters”.
+    %p Forms such as the above, with possessive suffixes, do not decline for case. These suffixed forms may be used in place of the nominative or animate accusative cases (i.e., as the subject or object of a sentence), or in place of the dative/instrumental when acting as the copula of a verb (e.g., #{t "ше-и маммо", "śé-i mámmo"} “This is my mother”). However, it may not substitute for the accusative case as the object of a preposition or for the dative/instrumental case in any other function. Outside of the subject, direct object, or complement of a sentence, the full expression <span class="pattern">noun + at + pronoun</span> must be used: #{t "Она содагла ше мамой омне", "Oná sodaglá śé mámoi omné"} “She gave this to my mother” (lit. “She gave this to the mother at me”).
+    %p In areas with a high level of bilingualism with a Uralic language, particularly Finnish and Komi, it is not unusual to find speakers mixing endings from Novegradian and the local language in conversation. It is therefore not uncommon to hear expressions such as #{t "талотуо", "talotuo"} for “your house” in Finnish (properly #{t "талоси", "talosi"}) or #{t "ёртъясна", "jortjasna"} “our friends” in Komi (properly #{t "ёртъясным", "jortjasnym"}), or vice versa, hearing expressions in Novegradian such as #{t "другни", "drúgni"} “my friend” in Finland or #{t "татыс", "tátys"} “his father” in Komi. Such language mixtures are discouraged, but hard to control in casual conversation.
+    %p There are, however, a few quirky and idiomatic uses of possessive suffixes on nouns not denoting kinship. A common such example is the phrase #{t "В окмо не багь!", "V ókmo ne bágj!"} “Get out of my sight!” (lit. “Don’t be in my eye[s]!”). This particular expression extends to other forms as well: #{t "В окнай не багь!", "V óknai ne bágj!"} “Get out of our (#{abbrev 'dl'}) sight!”.
+
+  = section "Possessive Constructions" do
+    %p In colloquial Novegradian, the two possessive structures (о + genitive and plain genitive) have each acquired exclusive uses. The former is used only with animate possessors, the latter with inanimate possessors. Both constructions may either precede or follow the possessed noun.
+    %p Animate:
+    %ul
+      %li #{t "о Ростислава нига", "o Rostisláva níga"} “Rostisláu’s book”
+      %li #{t "нига о Ростислава", "níga o Rostisláva"} “Rostisláu’s book”
+    %p Inanimate:
+    %ul
+      %li #{t "будова дуерие", "budóva duérije"} “the building’s doors”
+      %li #{t "дуерие будова", "duérije budóva"} “the building’s doors”
+    %p If the possessed object is also animate and is capable of taking possessive suffixes, the possession is redundantly marked:
+    %ul
+      %li #{t "о Ростислава татиево", "o Rostisláva tátievo"} “Rostisláu’s father” (lit. “at Rostisláu his father”)
+      %li #{t "татиево о Ростислава", "tátievo o Rostisláva"} “Rostisláu’s father”
+    %p This pattern is preserved when the possessor is a pronoun. In the first and second person (which must always be animate), declined forms of the preposition о are used (see section 22.9.2). In the third person, declined forms of о are used if the possessor is animate, while the regular third person possessives as used in the standard language are used if the possessor is inanimate. As with other possessive phrases, the possessor may come either before or after the possessed.
+    %ul
+      %li #{t "омне нига", "omné níga"} “my book”
+      %li #{t "нига омне", "níga omné"} “my book”
+      %li #{t "онво нига", "onvó níga"} “his book”
+      %li #{t "нига онво", "níga onvó"} “his book”
+      %li #{t "ево дуерие", "ievó duérije"} “its doors”
+      %li #{t "дуерие ево", "duérije ievó"} “its doors”
+    %p Spoken Novegradian allows for the object of a plural possessor to be distributive. If there is no distributive particle it is assumed that possession is shared.
+    %ul
+      %li #{t "они воз", "oní vóz"} “their car” (it is shared by all of them)
+      %li #{t "они по воз", "oní po vóz"} “their cars” (each has one car)
+      %li #{t "они вози", "oní vózi"} “their cars” (they are shared by all of them collectively)
+      %li #{t "они по вози", "oní po vózi"} “their cars” (each has multiple cars)
+    %p The possessor may appear either before or after the possessed, as before, so long as the distributive particle remains before the possessed item; <i>oní po vóz</i> and <i>po vóz oní</i> are identical in meaning. The distributive particle also no longer requires its object to be in the dative/instrumental case; it acts more like a true particle than a preposition.
+    %p While the о + genitive form of possession is becoming more and more widespread in Novegradian and is replacing possessive adjectives genitive modifiers, these forms do not allow for standalone genitives, as seen in sentences such as “Ours is better” or “Andréie’s are better”.
+    %p If the standalone possessor is a simple pronoun, the declined preposition is converted directly into a definite adjective using the suffix #{t "-н-", "-n-"}, which can then decline for case and number: #{t "омненей", "omnénei"} “mine (#{abbrev 'sg.masc'})”, #{t "онасня", "onásnia"} “ours (#{abbrev 'sg.fem'})”, #{t "онинеи", "onínji"} “their (#{abbrev 'pl'})”. Speakers are inconsistent with the inherited third person forms; some use #{t "евоней", "ievónei"}, #{t "ѣней", "iě́nei"}, #{t "ехней", "iéhnei"}, etc, while others continue to use #{t "ево", "ievó"}, #{t "ѣ", "iě́"}, #{t "ех", "iéh"}, etc. Since these new adjectives can only be used as standalone genitives and can never directly modify a noun, they have no indefinite forms.
+    %p Curiously, this same rule extends to more complicated possessors as well, creating a few more monstrous adjectives such as #{t "овандрейней", "ovandréinei"} “Andréie’s (#{abbrev 'masc.sg'})”, #{t "онаташня", "onatáśnia"} “Natáśa’s (#{abbrev 'fem.sg'})”, #{t "опетрапетровицнеи", "opétrapetróvicnji"} “Pétre Petróvice’s (#{abbrev 'pl'})”, #{t "оцарамецислававидораевнеи", "ocáramecislávavidoráievnji"} “Tsar Mécislau II’s (#{abbrev 'pl'})”, although this last example is borderline acceptable. Essentially entire genitive phrases are adjectivalized (#{t "о Цара Мецислава Видораево", "o Cára Mecisláva Vidoráievo"}); if the phrase ends in a vowel, it is dropped or, if an illegal cluster would form, replaced by an epenthetic /e/.
+    %p This “adjective” that embeds an entire phrase is limited to the actual possessor noun, appositives hierarchically equal to it (such as titles), and sometimes adjectives. More complex hierarchies, such as additional possessives, are not allowed, so embedding “Kíre’s brother’s” as #{t "**обратаокирней", "obrátaokírnei"} or something of the sort is impossible. Such a construction would require rephrasing.
+    %p Compare the following sentences:
+    = example_sentence "Идѣя ов Ивана Николаевица – интересна.",
+                       "Idě́ia ov Ivána Nikoláievica – interésna.",
+                       "idea-{nom.sg} at-{v*} Ieváne-{gen} Nikoláievice-{gen} Ø interesting-{nom.sg.fem}",
+                       "Ieváne Nikoláievice’s idea is interesting."
+    = example_sentence "Обаин з идѣй ех – интересни, но овивананиколаевицня шияяс суѣшеюн.",
+                       "Obájin z idě́i iéh – interésni, no ovivánonikoláievicnia śijáias suě́śeiun.",
+                       "both-{nom} from idea-{gen.pl} their Ø interesting-{nom.pl}, but at-{v*}-Ieváne-Nikoláievice-{adj}-{nom.sg.fem} seem-{3sg} better-{datins.sg.fem.def}",
+                       "Both of their ideas are interesting, but Ieváne Nikoláievice’s [idea] seems better."
+
+  = section "The Vocative Case" do
+    %p Although the above possessive suffixes are limited to kinship terms for the most part, one form has become generalized to all nouns. The #{abbrev '1sg'} possessive ending #{t "-мо", "-mo"} has created a new vocative case in Novegradian, used when calling out to someone.
+    = example_sentence "Татмо!",
+                       "Tátmo!",
+                       "father-{voc.sg}",
+                       "Father!"
+    = example_sentence "Добре еутро, студенкьимо!",
+                       "Dóbre iéutro, studénkjimo!",
+                       "good-{nom.sg.masc} morning-{nom.sg}, student-{voc.pl}",
+                       "Good morning, class!",
+                       :comment => "(lit. “students”)"
+    %p The vocative is most commonly seen with names.
+    = example_sentence "Еринмо! Ото ти!",
+                       "Ierínmo! Óto tí!",
+                       "Ierína-{voc}! {expl} you.{nom} Ø!",
+                       "Ierína! There you are!"
+
+  = section "The Restructuring of the Partitive" do
+    %p In colloquial spoken Novegradian the partitive has acquired a much more restrictive use, but perhaps a more stable one. It can only be used for the subject or direct object of a sentence.
+    %p In the standard, the partitive could be used after non-declining determiners such as многе “many” in oblique cases, or after declining ones such as нѣкотре “several” as long as the adjective appeared definite. Colloquially, the partitive may not appear in oblique cases.
+    = example_colloquialism "Он ме науѕиле немногами англайсками словесми.",
+                            "Ón me naudzíle nemnógami angláiskami slóvesmi.",
+                            "Оне мене науѕиле немноге английскоу словесоу.",
+                            "Óne mené naudzíle nemnóge anglíjskou slóvesou.",
+                            "He taught me a few English words."
+    %p Instead, the partitive can only be used as the subject of a sentence if preceded by an appropriate determiner, or as the direct object of a sentence with or (more commonly) without a determiner.
+    %p Additionally, the inanimate direct object of positive future imperfective verbs (formed with буити + infinitive) tends to take the partitive case in all circumstances, whether the meaning is partitive or not. With animate direct objects, however, the animate accusative continues to be used.
+    = example_colloquialism "Бадун цидати шей нигох.",
+                            "Bádun cidáti śéi nígoh.",
+                            "Бадун цидати шу нигу.",
+                            "Bádun cidáti śú nígu.",
+                            "I’m going to read this book."
+  
+  = section "Loss of the Neuter" do
+    %p In colloquial Novegradian the neuter gender has ceased to exist, having merged fully with the masculine. Even in the standard language the difference in agreement is minimal; the two are distinguished only in the singular past tense of verbs and nominative/animate accusative singular of adjectives. The spoken language has completed the process, with masculine agreement taking over in adjectives and “inanimate” agreement in verbs. Formerly neuter nouns now only constitute a subparadigm within the third and fourth declensions that have a distinct nominative/accusative form from their masculine counterparts.
+    %p The former neuter agreement endings have acquired new functions with the demise of the gender as an independent category. The verbal neuter has been reassigned to all inanimates as mentioned earlier, while the indefinite adjectival neuter continues to be used for impersonal adjectives (as in #{t "Кладно", "Kládno"} “It is cold”). The definite adjectival neuter has been lost.
+
+  = section "Example Declensions" do
+    %p To demonstrate the declension of nouns in modern spoken Novegradian, in the chart below are nouns from each of the six declensions.
+    %table
+      %tr
+        %th
+        %th{:colspan => 6} Singular
+      %tr
+        %th
+        %td нига “book”
+        %td жемя “land”
+        %td дум “house”
+        %td мор “sea”
+        %td нокь “night”
+        %td мат “mother”
+      %tr
+        %th Nom
+        %td= t("нига", "níga")
+        %td= t("жемя", "źémia")
+        %td= t("дум", "dúm")
+        %td= t("мор", "mór")
+        %td= t("нокь", "nókj")
+        %td= t("мат", "mát")
+      %tr
+        %th Gen
+        %td= t("нигѣ", "nígě")
+        %td= t("жемин", "źémin")
+        %td= t("думу", "dúmu")
+        %td= t("мора", "móra")
+        %td= t("ногьи", "nogjí")
+        %td= t("матера", "mátera")
+      %tr
+        %th Acc
+        %td= t("нигу", "nígu")
+        %td= t("жемлу", "źémlu")
+        %td= t("дум", "dúm")
+        %td= t("мор", "mór")
+        %td= t("нокь", "nókj")
+        %td= t("матера", "mátera")
+      %tr
+        %th D/I
+        %td= t("нигой", "nígoi")
+        %td= t("жемей", "źeméi")
+        %td= t("думом", "dúmom")
+        %td= t("морех", "moréh")
+        %td= t("нокьех", "nókjeh")
+        %td= t("матерех", "materéh")
+      %tr
+        %th Loc
+        %td= t("нигѣ", "nígě")
+        %td= t("жеми", "źemí")
+        %td= t("думѣ", "dúmě")
+        %td= t("морѣ", "mórě")
+        %td= t("ногьи", "nogjí")
+        %td= t("матере", "mátere")
+      %tr
+        %th Lat
+        %td= t("нигун", "nígun")
+        %td= t("жемлун", "źemlún")
+        %td= t("думон", "dumón")
+        %td= t("морен", "morén")
+        %td= t("нокьин", "nókjin")
+        %td= t("материн", "máterin")
+      %tr
+        %th Voc
+        %td= t("нигмо", "nígmo")
+        %td= t("жемямо", "źémiamo")
+        %td= t("думмо", "dúmmo")
+        %td= t("мормо", "mórmo")
+        %td= t("нокьмо", "nókjmo")
+        %td= t("матмо", "mátmo")
+      %tr
+        %th
+        %th{:colspan => 6} Plural
+      %tr
+        %th Nom
+        %td= t("ниги", "nígi")
+        %td= t("жемѣ", "źémě")
+        %td= t("дума", "dumá")
+        %td= t("мори", "móri")
+        %td= t("нокьие", "nókjie")
+        %td= t("матери", "máteri")
+      %tr
+        %th Gen
+        %td= t("ниг", "níg")
+        %td= t("жемели", "źeméli")
+        %td= t("дум", "dúm")
+        %td= t("мор", "mór")
+        %td= t("нокьей", "nókjei")
+        %td= t("мадер", "madér")
+      %tr
+        %th Acc
+        %td= t("ниги", "nígi")
+        %td= t("жемѣ", "źémě")
+        %td= t("дума", "dumá")
+        %td= t("мори", "móri")
+        %td= t("нокьие", "nókjie")
+        %td= t("мадер", "madér")
+      %tr
+        %th D/I
+        %td= t("нигам", "nígam")
+        %td= t("жемлам", "źemlám")
+        %td= t("думам", "dumám")
+        %td= t("морам", "morám")
+        %td= t("ногьям", "nogjiám")
+        %td= t("матерми", "mátermi")
+      %tr
+        %th Part
+        %td= t("нигуо", "níguo")
+        %td= t("жемлоу", "źemlóu")
+        %td= t("думуо", "dúmuo")
+        %td= t("мореу", "móreu")
+        %td= t("нокьеу", "nókjeu")
+        %td= t("матеруо", "máteruo")
+      %tr
+        %th Loc
+        %td= t("нигах", "nígah")
+        %td= t("жемлах", "źemláh")
+        %td= t("думѣх", "dumě́h")
+        %td= t("морѣх", "morě́h")
+        %td= t("нокьих", "nókjih")
+        %td= t("матерѣх", "máterěh")
+      %tr
+        %th Lat
+        %td= t("ниги", "nígi")
+        %td= t("жемѣ", "źémě")
+        %td= t("думи", "dúmi")
+        %td= t("морѣ", "mórě")
+        %td= t("нокьи", "nókji")
+        %td= t("мадери", "madéri")
+      %tr
+        %th Voc
+        %td= t("нигимо", "nígimo")
+        %td= t("жемѣмо", "źéměmo")
+        %td= t("думамо", "dumámo")
+        %td= t("моримо", "mórimo")
+        %td= t("нокьиемо", "nókjiemo")
+        %td= t("материмо", "máterimo")
+
+  = section "Singularia Tantum" do
+    %p Standard Novegradian, like several of the other Slavic languages, has a sizable number of nouns referring to fruits and vegetables that are singularia tantum, that is, they exist only in the singular and are treated as mass nouns. The colloquial language has continued to generalize this pattern, so that most common fruits and vegetables now act as singularia tantum.
+
+= section "Adjectives" do
+  %p The function and declension of adjectives have changed very little. A few endings have changed to reflect changes in the nominal system, but other than these, the adjectival system is largely unchanged from the standard.
+  %ul
+    %li The partitive singular ending is #{t "-ох", "-oh"} for indefinite adjectives and #{t "-охево", "-óhevo"} for definite adjectives.
+    %li The partitive plural ending is #{t "-уо", "-uo"} for indefinite adjectives, but the definite is still #{t "-овево", "-óvevo"}.
+    %li The masculine singular nominative indefinite ending is still -е, that is, it has not been lost.
+  %p Several of the nominative definite endings have reduced slightly, having lost the first vowel in the ending. The nominative endings now look like this:
+  %table
+    %tr
+      %th Masculine
+      %th Feminine
+      %th (Neuter)
+      %th Plural
+    %tr
+      %td= t("-ей", "-ei")
+      %td= t("-я", "-ia")
+      %td= t("-ие", "-ie")
+      %td= t("-еи", "-ji")
+  %p The neuter form only exists in one specific context—reading from a text that is written in the standard and contains productive neuters in #{t "-ое", "-oie"}. Otherwise, it has no use in spontaneous speech. The reduced ending has no spelling in Novegradian because it never appears in informal speech-imitating writing.
+  %p The nominative definite forms for an adjective like #{t "цервене", "cérvene"} “red” are therefore: #{t "цервеней", "cérvenei"}, #{t "цервеня", "cervénia"}, #{t "цервенеи", "cervénji"}, and in informal contexts the neuter #{t "цервеное", "cervénoie"} would be pronounced <i>cervénie</i> when being read from a text.
+  %p More significant, however, is that several formally-indeclinable determiners have been converted into normal adjectives, in particular #{t "многе", "mnóge"} and #{t "нѣколке", "několke"} “several”. These follow the same rules that older adjective-determiners such as нѣкотре follow in colloquial speech, in that they may be partitive only when indicating the subject or direct object of a verb.
+  = example_sentence "Я вигьун многуо лудеу.",
+                     "Iá vígjun mnóguo lúdeu.",
+                     "I.{nom} see-{1sg} many-{part.pl} people-{part.pl}",
+                     "I see many people.",
+                     :comment => "(with partitive)"
+  = example_sentence "Яс говорун о многѣх лудѣх.",
+                     "Iás govorún o mnógěh lúděh.",
+                     "I.{nom} talk-{1sg} about many-{loc.pl} people-{loc.pl}",
+                     "I talk about many people.",
+                     :comment => "(without partitive)"
+
+= section "Numerals" do
+  = section "Cardinal Numbers" do
+    %p The two most interesting changes to the numeral system are the loss of gender agreement in the inanimate numerals “two” (which has become #{t "дова", "dóva"} or #{t "дов", "dóv"} for all genders) and “three” (which has become #{t "три", "trí"}) and the formation of an animate numeral “one”, #{t "еден", "iedén"}, which does not decline.
+    %p Most numerals undergo some reduction in speech:
+    %table
+      %tr
+        %th
+        %th Inanimate
+        %th Animate
+      %tr
+        %th 1
+        %td= t("едне", "iédne")
+        %td= t("еден", "iedén")
+      %tr
+        %th 2
+        %td= t("дов", "dóv")
+        %td= t("дуаин", "duájin")
+      %tr
+        %th 3
+        %td= t("три", "trí")
+        %td= t("троин", "trójin")
+      %tr
+        %th 4
+        %td= t("цетри", "cétri")
+        %td= t("цетро", "cétro")
+      %tr
+        %th 5
+        %td= t("пет", "pét")
+        %td= t("пентро", "péntro")
+      %tr
+        %th 6
+        %td= t("шес", "śés")
+        %td= t("шестро", "śéstro")
+      %tr
+        %th 7
+        %td= t("шень", "śénj")
+        %td= t("шентро", "śéntro")
+      %tr
+        %th 8
+        %td= t("осн", "ósn")
+        %td= t("(о)зентро", "(o)zéntro")
+      %tr
+        %th 9
+        %td= t("девит", "dévit")
+        %td= t("дуестро", "duéstro")
+      %tr
+        %th 10
+        %td= t("дешит", "déśit")
+        %td= t("ѕестро", "dzéstro")
+    %p The /ɲ/ seen in the nominative form of the inanimate numeral seven has spread to all inanimate forms: #{t "шень", "śénj"}, #{t "шеньех", "śénjeh"}, #{t "шеньем", "śénjem"}.
+    %p The standard numeral #{t "пиздешити", "pizdéśiti"} “fifty” has been almost completely replaced by #{t "пољста", "półsta"} (lit. “half of a hundred”). However, 51, 52, 53, etc, continue to be based on пиздешити, never пољста. The animate form of 50 remains #{t "пиздешит(е)ро", "pizdéśit(e)ro"}.
+    %p In addition, colloquially the concept of “at least X” can be expressed by placing a stressed #{t "со", "só"} immediately after the numerical expression: #{t "дешит лудин со", "déśit ludín só"} “at least ten people”. This is related to the preposition со “with”, which in this context has acquired a wholly adverbial function.
+
+  = section "Ordinal Numbers" do
+    %p The system of ordinal numbers remains largely unchanged except in one aspect. The numbers “one” and “two” have developed regularized ordinals #{t "еденне", "iedénne"} and #{t "дуойне", "duóine"} that appear in the ordinal forms of complex numerals only. That is, “first” is still #{t "пирве", "pírve"} and “second” is still #{t "друге", "drúge"}, but “twenty-first” is #{t "дуадеши еденне", "duadéśi iedénne"} and “twenty-second” is #{t "дуадеши дуойне", "duadéśi duóine"}.
+
+= section "Pronouns" do
+  = section "Personal Pronouns" do
+    %p The newest addition to the pronominal system is a series of unstressed clitic pronouns for the accusative and dative/instrumental cases. They have largely supplanted the full forms, which are now used mainly for emphasis. However, these clitic pronouns can never be used after a preposition.
+    %p The accusative clitic pronouns:
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Dl
+        %th Pl
+      %tr
+        %th 1st
+        %td= t("ме", "me")
+        %td= t("най", "nai")
+        %td= t("нас", "nas")
+      %tr
+        %th 2nd
+        %td= t("те", "te")
+        %td= t("вай", "vai")
+        %td= t("вас", "vas")
+      %tr
+        %th 3rd
+        %td
+          = t("во", "vo")
+          %br
+          = t("вѣ", "vě")
+        %td= t("ю", "iu")
+        %td= t("их", "ih")
+      %tr
+        %th Reflexive
+        %td{:colspan => 3}= t("ше", "śe")
+    %p The dative-instrumental clitic pronouns:
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Dl
+        %th Pl
+      %tr
+        %th 1st
+        %td= t("мей", "mei")
+        %td= t("на", "na")
+        %td= t("нам", "nam")
+      %tr
+        %th 2nd
+        %td= t("тей", "tei")
+        %td= t("ва", "va")
+        %td= t("вам", "vam")
+      %tr
+        %th 3rd
+        %td
+          = t("му", "mu")
+          %br
+          = t("ей", "iei")
+        %td= t("ма", "ma")
+        %td= t("им", "im")
+      %tr
+        %th Reflexive
+        %td{:colspan => 3}= t("шей", "śei")
+    %p The two forms listed under as third person singular are masculine and feminine respectively.
+    %p The pronoun оба/обѣ “both” has collapsed into a single genderless form as with дова, although it has also acquired a suffix by analogy with the numeral доваин “two” and the former possessive adjectives наин/ваин “us two’s, you two’s”: #{t "обаин", "obájin"}.
+
+  = section "Personal Pronouns and Conjunctions" do
+    %p In colloquial Novegradian, the generalization of #{t "ас", "ás"} “whereas I” to all persons as some sort of pre-conjunction has become mandatory, whereas in the standard it is optional. The whole array of coordinating conjunction + pronoun combinations in colloquial Novegradian is complex enough to warrant a table. Note in particular the stress shifts in some of the third person forms.
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Dl
+        %th Pl
+      %tr
+        %th 1st
+        %td= t("ме", "me")
+        %td= t("най", "nai")
+        %td= t("нас", "nas")
+      %tr
+        %th 2nd
+        %td= t("те", "te")
+        %td= t("вай", "vai")
+        %td= t("вас", "vas")
+      %tr
+        %th 3rd
+        %td
+          = t("во", "vo")
+          %br
+          = t("вѣ", "vě")
+        %td= t("ю", "iu")
+        %td= t("их", "ih")
+      %tr
+        %th Reflexive
+        %td{:colspan => 3}= t("ше", "śe")
+    %p Despite the spread of #{t "ас", "as"} amongst all the personal pronouns, the conjunction remains simply #{t "а", "a"} before any other part of speech as well as before other types of pronouns. For this reason the highly unique forms in the table above are sometimes termed “conjunctive pronouns”.
+
+  = section "Interrogative Pronouns" do
+    %p Spoken Novegradian has seen some reshuffling in its interrogative pronoun system.
+    %p #{t "Зацем", "zácem"} “why?” has largely been replaced by just #{t "цем", "cém"}, the locative form of #{t "цой", "cói"} “what?”. Зацем remains in use, however, when referring to “why?” in the sense of “for what goal?”: Зацем ти ишле марнатен? / За млегом “Why do you go to the store? / For milk”. Similarly, #{t "кем", "kém"}, the locative form of #{t "хой", "hói"} “who?”, has taken on a meaning of “for whose sake? because of whom?”, as in Кем ти зайшле саймен? “Because of whom did you drop by the party? Who did you drop by the party to see?”.
+    %p Two additional interrogatives that have developed in the colloquial language are #{t "одцем", "odсém"} [ot.ˈtsɛm] “from what, how?” and #{t "одкем", "odkém"} [o.ˈkʲɛm] “from whom, how?”. The formal language uses the pronoun #{t "оскуд", "oskúd"} “whence?” for all questions of origin, whether the origin is a place, person, or thing. Colloquial Novegradian, however, distinguishes all three sources:
+    %ul
+      %li
+        = t("Оскуд ти брала шу нигу-то?", "Oskúd tí bralá śú nígu-to?")
+        %br
+        “Where did you get that book from?” (same in standard)
+      %li
+        = t("Одкем ти вѣжи?", "Odkém tí věźi?")
+        %br
+        “Who told you?”(lit. ‘From whom do you know?’)” (standard Оскуд ти вѣжи? “From where do you know?”)
+      %li
+        = t("Одцем ти муислиш ше-то?", "Odcém tí muislíś śé-to?")
+        %br
+        “What are you basing this on? (lit. ‘From what are you thinking this?’)” (standard Оскуд ти ше придумоваш? “From where are you thinking this up?”)
+    %p Одцем, as seen above, typically refers to more abstract sources than either оскуд or одкем.
+    %p The interrogative #{t "колкѣ", "kólkě"} “how many?” has acquired a variant form used only with animate nouns and pluralia tantum, #{t "колкеро", "kólkero"}, by analogy with animate numerals. Thus where standard Novegradian required the wordier #{t "колкѣ пароу штон?", "kólkě paróu śtón?"} “how many pairs of pants?”, colloquial Novegradian allows simply #{t "колкеро штонеу?", "kólkero śtóneu?"}.
+
+= section "Topicalization" do
+  %p The exact role topicalization plays seems to vary from generation to generation. Nowadays people tend to use it very laxly, often enough that it may appear at a cursory glance to be a definite article. And truly, it has acquired a number of aspects typical of articles. Speakers have become somewhat hesitant to attach the topicalization marker to any indefinite noun, prefering to use it in the following sentence once it is semantically definite.
+  %p However, the topical nature of the marker -то is still quite strong. Two main properties make this clear:
+  %ul
+    %li It is not applied to all definite nouns, nor to all definite nouns excluding proper nouns; there is no rule that accurately explains its use using only the rules of a definite article.
+    %li It cannot be used multiple times within a single clause. Even if it contains two definite elements, the marker will always fall on the more strongly topicalized of the two.
+
+= section "Prepositions" do
+  %p Three main trends have been observed in the colloquial use of prepositions—phonetic simplification of prepositions, the merger of certain prepositions with following pronouns, and the generalization of the three-form preposition system.
+
+  = section "Phonetic Simplification of Prepositions" do
+    %p Colloquial Novegradian has eliminated all polysyllabic unanalyzable pronouns by simplifying their pronunciation. Originally slurred, these symplified forms can now be seen in more careful speech as well. Such changes include:
+    %table
+      %tr
+        %th Standard
+        %th Colloquial
+        %th Meaning
+      %tr
+        %td= t("деля", "délia")
+        %td= t("дя", "diá")
+        %td for
+      %tr
+        %td= t("нимо", "nímo")
+        %td= t("ним", "ním")
+        %td past
+      %tr
+        %td= t("огољо", "ogóło")
+        %td= t("гољ", "gół")
+        %td around
+    %p These types of dramatic reductions have not yet affected prepositions whose etymology is transparent; analogy prevents it from occurring.
+    %p The vowel in the prepositions #{t "во", "vo"} “in”, #{t "со", "so"} “with”, and #{t "ко", "ko"} “toward” is often unrounded and lowered, becoming [ʌ].
+    %p Before a word beginning in /k/ or /g/, #{t "ко", "ko"} “to, toward” lenites to #{t "хо", "ho"}: #{t "хо керкевем", "ho kérkevem"} “towards the church”.
+
+  = section "Preposition ‘Declension’" do
+    %p Another Uralic feature that has entered Novegradian is the beginning of system of prepositional declension, where when certain prepositions are followed by a personal pronoun, the two merge to form a single unit: Standard Novegradian #{t "во мнѣ", "vo mně́"} “in me”, colloquial #{t "вами", "vamí"}. A similar phenominon is seen in Slovenian.
+    %p Historically these developed from the reduced ‘clitic’ pronouns (see section 22.7 above), which once were allowed to follow certain prepositions. Clitic pronouns are not allowed anymore because all previously-allowed forms have merged to form these declining prepositions.
+    %p For prepositions that can be used with multiple cases, only the most common case is seen in merged forms. For example, во can be used with the accusative, locative, and lative cases, but the locative meaning is by far the most common. For that reason all merged forms of во carry the locative sense “in”.
+    %p There are two basic sets of endings declining prepositions use. One set is derived from the dative/instrumental clitic pronouns, which were used with prepositions that either took the dative/instrumental case or a case very similar to it in terms of pronouns, such as the locative. The other set comes from the accusative clitic pronouns, which similarly were used with prepositions requiring the accusative case or a similar one, particularly the genitive.
+    %p These merged forms only developed for a small set of prepositions that were phonetically weak, all of which ended in a vowel. Sometimes vowel changes occur when a preposition takes pronoun endings (such as #{t "во", "vo"} → #{t "вами", "vamí"} above), but the reason for such changes are clear; in this case, it was a reanalysis of the [βʌ] pronunciation often seen in the independent preposition.
+    %p The following prepositions are allowed to decline: #{t "во", "vo"} “in”, #{t "ко", "ko"} “to(ward)”, #{t "о", "o"} “at”, #{t "со", "so"} “with”, and #{t "дя", "dia"} “for”.
+    %table
+      %tr
+        %th
+        %th
+          = t("во", "vo")
+          %br
+          ‘in’
+        %th
+          = t("ко", "ko")
+          %br
+          ‘toward’
+        %th
+          = t("со", "so")
+          %br
+          ‘with’
+        %th
+          = t("о", "o")
+          %br
+          ‘at’
+        %th
+          = t("дя", "dia")
+          %br
+          ‘for’
+      %tr
+        %th 1Sg
+        %td= t("вами", "vamí", :linebreak => true)
+        %td= t("ками", "kamí", :linebreak => true)
+        %td= t("сами", "samí", :linebreak => true)
+        %td= t("омне", "omné", :linebreak => true)
+        %td= t("дяме", "diamé", :linebreak => true)
+      %tr
+        %th 2Sg
+        %td= t("вати", "vatí", :linebreak => true)
+        %td= t("кати", "katí", :linebreak => true)
+        %td= t("сати", "satí", :linebreak => true)
+        %td= t("оте", "oté", :linebreak => true)
+        %td= t("дяте", "diaté", :linebreak => true)
+      %tr
+        %th 3SgM
+        %td= t("ванму", "vanmú", :linebreak => true)
+        %td= t("канму", "kanmú", :linebreak => true)
+        %td= t("санму", "sanmú", :linebreak => true)
+        %td= t("онво", "onvó", :linebreak => true)
+        %td= t("дянво", "dianvó", :linebreak => true)
+      %tr
+        %th 3SgF
+        %td= t("ваней", "vanéi", :linebreak => true)
+        %td= t("каней", "kanéi", :linebreak => true)
+        %td= t("саней", "sanéi", :linebreak => true)
+        %td= t("онвѣ", "onvě́", :linebreak => true)
+        %td= t("дянвѣ", "dianvě́", :linebreak => true)
+      %tr
+        %th 1Dl
+        %td= t("вана", "vaná", :linebreak => true)
+        %td= t("кана", "kaná", :linebreak => true)
+        %td= t("сана", "saná", :linebreak => true)
+        %td= t("онай", "onái", :linebreak => true)
+        %td= t("дянай", "dianái", :linebreak => true)
+      %tr
+        %th 2Dl
+        %td= t("вава", "vavá", :linebreak => true)
+        %td= t("кава", "kavá", :linebreak => true)
+        %td= t("сава", "savá", :linebreak => true)
+        %td= t("овай", "ovái", :linebreak => true)
+        %td= t("дявай", "diavái", :linebreak => true)
+      %tr
+        %th 3Dl
+        %td= t("вама", "vamá", :linebreak => true)
+        %td= t("кама", "kamá", :linebreak => true)
+        %td= t("сама", "samá", :linebreak => true)
+        %td= t("оню", "oniú", :linebreak => true)
+        %td= t("дяню", "dianiú", :linebreak => true)
+      %tr
+        %th 1Pl
+        %td= t("ванам", "vanám", :linebreak => true)
+        %td= t("канам", "kanám", :linebreak => true)
+        %td= t("санам", "sanám", :linebreak => true)
+        %td= t("онас", "onás", :linebreak => true)
+        %td= t("дянас", "dianás", :linebreak => true)
+      %tr
+        %th 2Pl
+        %td= t("вавам", "vavám", :linebreak => true)
+        %td= t("кавам", "kavám", :linebreak => true)
+        %td= t("савам", "savám", :linebreak => true)
+        %td= t("овас", "ovás", :linebreak => true)
+        %td= t("дявас", "diavás", :linebreak => true)
+      %tr
+        %th 3Pl
+        %td= t("ваним", "vaním", :linebreak => true)
+        %td= t("каним", "kaním", :linebreak => true)
+        %td= t("саним", "saním", :linebreak => true)
+        %td= t("они", "oní", :linebreak => true)
+        %td= t("дяни", "dianí", :linebreak => true)
+      %tr
+        %th Reflx
+        %td= t("ваши", "vaśí", :linebreak => true)
+        %td= t("каши", "kaśí", :linebreak => true)
+        %td= t("саши", "saśí", :linebreak => true)
+        %td= t("оше", "ośé", :linebreak => true)
+        %td= t("дяше", "diaśé", :linebreak => true)
+    %p Other meanings of the above prepositions must be written out in full: омне “at me”, but о мнѣ “about me”.
+    %p The declined forms of #{t "о", "o"} have replaced possessive adjectives in modern spoken Novegradian: #{t "нига омне", "níga omné"} “my book”. They may also be used with a noun with a possessive ending for further emphasis: #{t "татмо омне", "tátmo omné"} “my father”.
+
+  = section "The Three-Form Preposition" do
+    %p Standard Novegradian has three prepositions that each have three forms: во, со, and ко. Before a word beginning with a vowel or /j/, the vowel would drop: в, с, к. Before a third person pronoun, they would acquire a final /n/: вон, сон, кон.
+    %p This pattern has spread analogically to a number of other prepositions. Once these prepositions acquired a vowelless form before words beginning with a vowel, analogy soon provided them with the <i>-n</i> suffix as well.
+    %p The following prepositions have three forms in colloquial speech:
+    %table
+      %tr
+        %th Preposition
+        %th Vowelless
+        %th Extended
+        %th Meaning
+      %tr
+        %td= t("во", "vo")
+        %td= t("в", "v")
+        %td= t("вон", "von")
+        %td in
+      %tr
+        %td= t("до", "do")
+        %td= t("д", "d")
+        %td= t("дон", "don")
+        %td up to, until
+      %tr
+        %td= t("зе", "ze")
+        %td= t("з", "z")
+        %td= t("зен", "zen")
+        %td from
+      %tr
+        %td= t("ко/хо", "ko/ho")
+        %td= t("к", "k")
+        %td= t("кон", "kon")
+        %td to, toward
+      %tr
+        %td= t("про", "pro")
+        %td= t("пр", "pr")
+        %td= t("прон", "pron")
+        %td because of
+      %tr
+        %td= t("со", "so")
+        %td= t("с", "s")
+        %td= t("сон", "son")
+        %td with
+    %p The three new three-form prepositions above have lost their older two-form variant with #{t "-в", "-v"}. Other prepositions that are two-form in the standard but that do not appear on the above list continue to act as two-form prepositions.
+    %p In spoken Novegradian, initial /e/ [je] (in the standard) is always pronounced [e] after a prepositon: в езерѣ [ˈβɛ.ze.rɪ] “in the lake”.
+
+  = section "Distributive По" do
+    %p The distributive particle #{t "по", "po"} in the colloquial language has completely broken with its origin as a preposition. It no longer forces its “object” to take any case, and is now invariable (i.e., it lacks the form #{t "пов", "pov"} before words beginning with vowels). It simply acts as a modifying particle that always appears before the noun it modifies. If the distributive noun is the subject of a sentence, then the verb can show proper gender and number agreement as well.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Compare the standard infinitive or present/future forms #{t "войсти", "vóisti"} “to enter”, #{t "войдун", "voidún"} “I will enter”, and so on. This /j/ has always been present in these tenses in the standard; now it is spreading to the past as well.
+%p 2) Standard #{t "оне авиле", "óne ávile"}.
+%p 3) Standard #{t "оне не авиле", "óne ne ávile"}.
+%p 4) Standard #{t "оне мнѣ авиле", "óne mně́ ávile"}.
+%p 5) Standard #{t "оне не мнѣ авиле", "óne ne mně́ ávile"}.
+%p 6) Standard #{t "буила рѣга", "builá rěgá"}.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
