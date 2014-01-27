@@ -1,0 +1,35 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Косе рѣѕенье"
+
+= render :partial => 'navigation'
+
+= section "Statements" do
+  %p The main clause and the reported statement must be connected by то-це. The tense of the reported statement should be the same as it would have been when it was said.
+  = example_sentence "Оне сорѣѕиле то-це работаст в акостуѣ юриста.",
+                     "Óne sorědzíle tó-ce rabótast v ákostuě iurísta.",
+                     "he.{nom} say.{pf}-{past}-{masc} {rel.acc.sg}-that.{nom} work-{3sg} in quality-{loc.sg} lawyer-{gen.sg}",
+                     "He said that he works as a lawyer."
+
+= section "Commands, Requests, Desires" do
+  %p Commands and requests are connected using the conjunction то-це, with the second clause appearing in the subjunctive.
+  = example_sentence "Она попрожила мене (сорѣѕила мнѣ) то-це ошле би.",
+                     "Oná poproźíla mené (sorědzíla mně́) tó-ce oślé bi.",
+                     "she.{nom} ask.{pf}-{past}-{fem} I.{acc} (say.{pf}-{past}-{fem} I.{datins}) {rel.acc.sg}-that.{nom} leave.{pf}-{past}-{masc} {subj.sg}",
+                     "She asked (told) me to leave."
+  %p With verbs of desire, the subject must be stated in the subjunctive clause because it is not mentioned in the primary—#{t "Она хотѣла то-це яс би ошле", "Oná hótěla tó-ce iás bi oślé"} “She wanted me to leave.”
+
+= section "Questions" do
+  %p Questions may be repeated unaltered, although with adjustments made for person. A comma must always be inserted between the two clauses if то-це is not used.
+  = example_sentence "Она сопуидала мене, куде работам.",
+                     "Oná sopuidála mené, kudé rabótam.",
+                     "she.{nom} ask.{pf}-{past}-{fem} I.{acc}, where work-{1sg}",
+                     "She asked me where I work."
+  = example_sentence "Она сопуидала мене, хокьун ли ис сон ей на городен.",
+                     "Oná sopuidála mené, hókjun li ís son iéi na góroden.",
+                     "she.{nom} ask.{pf}-{past}-{fem} I.{acc}, want-{1sg} whether go.{det}-{sup} with-{n*} she.{datins} on downtown-{lat.sg}",
+                     "She asked me if I wanted to go with her downtown."
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
