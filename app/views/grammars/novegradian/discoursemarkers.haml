@@ -1,0 +1,326 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Дискурсни цестици"
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p Discourse markers include a wide variety of particles that operate at or above the sentence level, and are responsible for expressing numerous qualities regarding the course of the discussion and the speaker’s attitude and assumptions about what is being said. Their meaning is therefore highly dependent on context, so all of the definitions given below are approximate.
+  %p The following list is hardly exhaustive, and only contains a few of the most common forms.
+
+= section "Basic Conversation" do
+  %p
+    = t("да", "dá", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: More or less the same as English “yes”
+      %br
+      Etymology: From Common Slavic *da “may [it be]”
+      %br
+      Example: Да, ти праве. “Yes, you are correct.”
+  %p
+    = t("иа", "iá", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Same as да, though more colloquial
+      %br
+      Etymology: Probably Baltic origin, ultimately from German ja
+      %br
+      Example: Иа, ше музем дѣлати. “Yes, we can do this.”
+  %p
+    = t("нет", "nét", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: More or less the same as English “no”
+      %br
+      Etymology: From нет “it is not”, a contraction of не ест
+      %br
+      Example: Нет, шево некойда не розрѣжам! “No, I will never allow this!”
+  %p
+    = t("прусим", "prúsim", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: More or less the same as English “please”
+      %br
+      Etymology: #{abbrev '1pl'} form of прожити “ask, beg (of)”, now a frozen form used even by singular referents
+      %br
+      Example: Прусим, ти пригодовиле би мнѣ чаек? “Please, could you make me a bit of tea?”
+  %p
+    = t("аття", "attiá", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: More or less the same as English “thank you”
+      %br
+      Etymology: From Komi аттьö “thank you”
+      %br
+      Example: Аття за помокьи. “Thanks for the help.”
+
+= section "Questions" do
+  %p
+    = t("ли", "li", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: An interrogative particle seen in yes/no questions. Almost always appears in the second position within the clause, most often after the verb (although it can occasionally appear elsewhere for various reasons related to stress conflict and sentence intonation)
+      %br
+      Etymology: From ли “whether”
+      %br
+      Example: Заснали ли дѣкьи? “Have the children fallen asleep?”
+  %p
+    = t("нели", "néli", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: A tag question, inserted at the end of a statement to prompt the listener for agreement. Comparable to English “no?” or “isn’t that right?”
+      %br
+      Etymology: From (тако) нет ли? “is it not so?”
+      %br
+      Example: Ти рѣѕила то-це ти зе США, нели? “You said you were from the US, didn’t you?”
+
+= section "Possibility or Doubt" do
+  %p
+    = t("музеби", "múzebi", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Indicates possibility, like English “maybe”. While it does not require the subjunctive, the subjunctive particle within it (the <i>-bi</i>) must agree in number with its subject, if it has one.
+      %br
+      Etymology: From музет буити “it may be”
+      %br
+      Example: Музеби оне занок прийдет. “Maybe he’ll come tomorrow.”
+  %p
+    = t("молин", "mólin", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Indicates the speaker’s desire for something to be true or to happen. Similar in meaning to “hopefully”, except in Novegradian it does not pattern as an adverb.
+      %br
+      Etymology: Imperfective adverbial participle of молити “beseech, pray”
+      %br
+      Example: Оғо бадет молин добро. “Hopefully everything will turn out okay.”
+  %p
+    #{t "ати", "áti", :callout => true} or #{t "ат", "at", :callout => true} 
+    %br
+    %span.blockinlist
+      Usage: Expresses wishes. It is always clause-initial. Similar to English “may”
+      %br
+      Etymology: From Common Slavic *a “whereas” + clitic -ti (see below)
+      %br
+      Example: Ати вѣцнѣ живет Великей Новеграде! “Long live Great Novegrad!”
+  %p
+    = t("но", "nó", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Expresses hesitation or concern on the part of the speaker.
+      %br
+      Etymology: From но “but”
+      %br
+      Example: Но, несм тако же ците, како ти. “Well, I’m not as sure as you are.”
+
+= section "Time" do
+  %p
+    = t("ож", "óź", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: An emphatic particle that serves to contrast a state to a previous time (present to past, future to present, or future to past).
+      %br
+      Etymology: From ож “already”
+      %br
+      Example: Мнѣ ож дуадешити азот. “I’m twenty years old.”
+      %br
+      Example: Яс ож занок нашнун. “I’ll begin tomorrow.” (especially in response to a question like “Why haven’t you started yet?”)
+
+= section "Emphasis and Focus" do
+  %p
+    = t("же", "źe", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: A generic emphatic that stresses the preceding word, which can be of any part of speech. Depending on intonation, it may be interpreted anywhere from a simple stress that wouldn’t be translated in English to a rude accusation or sarcasm. It often cliticized to interrogative pronouns as -ж.
+      %br
+      Etymology: From Common Slavic *že
+      %br
+      Example: Шеден же – юбилеем наим дуадеши петем. “Today is the day of our twenty-fifth anniversary.”
+      %br
+      Example: Цоиж мнѣ дѣлати? “What am I to do?”
+  %p
+    = t("праудаже", "práudaźe", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Similar to English “certainly”, “for certain”, or “in truth”
+      %br
+      Etymology: From прауда “truth” + же emphatic particle
+      %br
+      Example: Праудаже оне-и омне, но ше не знацит тово-це вѣст цой дѣлати. “Sure he’s smart, but that doesn’t mean that he knows what to do.”
+  %p
+    #{t "ото", "óto", :callout => true} or #{t "вото", "vóto", :callout => true}
+    %br
+    %span.blockinlist
+      Usage: An emphatic particle, generally stressing a more physical nature than же, or stressing existance. It is placed sentence-initially and must always be followed by a noun or pronoun.
+      %br
+      Etymology: From Common Slavic *o (a reduced form of *je, the neuter nominative anaphoric pronoun) + *to neuter demonstrative. Variant with в- from Russian influence.
+      %br
+      Example: Вото оне идет. “Here he comes.”
+      %br
+      Example: Ото ше-то ест треба видѣти! “Now this you have to see!”
+  %p
+    = t("вѣ", "vě", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Serves to emphasize a piece of information that the listener should already know, or to remind them of it. It is comparable to English “after all” or at times to the colloquial “y’know”.
+      %br
+      Etymology: From Common Slavic *vědě, a vestigial form of the verb *věsti “to know” in the IE middle voice, which was lost before Proto-Slavic
+      %br
+      Example: Зацем нет? Наме вѣ лигѣ. “Why not? After all, we’re allowed to.”
+      %br
+      Example: Она вѣ другем моей. “She’s my friend, after all.”
+      %br
+      Example: Но оне-и вѣ праве. “But he’s right, y’know.”
+      %br
+      Example: Ше-и вѣ яс! “But that was me!”
+  %p
+    = t("и", "i", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Appears at the end of a list to indicate it is incomplete. Also always follows “universal” correlatives (like “everyone”, “everywhere”, “always”, etc) when they appear within a list.
+      %br
+      Etymology: From и “and”.
+      %br
+      Example: Во саймѣ видѣле яс Маркуса, Совин, и Анѣ и. “At the party I saw Márkuse, Sóvia, and Ána [and others]”
+      %br
+      Example: Снѣге буиле над моим думом, нав оликѣ, и веходе и. “There was snow all over my house, the street, and everywhere”
+  %p
+    = t("а... -то", "a... -to", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Beginning a sentence with the conjunction а followed by a topicalized noun serves as a strong form of topicalization.
+      %br
+      Etymology: А, already being a contrastive conjunction, emphasizes the topicalization of the following noun.
+      %br
+      Example: А ша проблема-та, како вуи муислите, цо-и приѕиной? “As for this problem, what do you think the cause is?”
+
+= section "Corrections and Clarifications" do
+  %p
+    = t("кахто", "káhto", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Used to correct or clarify the preceding statement. Similar to English “I mean” or “I should say”.
+      %br
+      Etymology: From како то “how is it”
+      %br
+      Example: Оне работаст вуисланишѣ на Югослави, кахто, Церногориях. “He works at the embassy in Yugoslavia, I mean, Montenegro.”
+  %p
+    = t("рѣѕици", "rědzíci", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Used to clarify a phrase. Similar to English “which means” or “that is to say”.
+      %br
+      Etymology: middle voice #{abbrev '3sg'} form of рѣѕити “say”
+      %br
+      Example: Оне ошле ими достоинестуо, рѣѕици, вуибѣгале плаци воуненен. “He walked out with dignity; that is to say, he ran outside crying.”
+  %p
+    = t("да кағьет", "da káğjet", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Used to clarify a phrase. Exists in free variation with рѣѕици in speech, though is the only one found in more formal writing.
+      %br
+      Etymology: “may it say” in a more archaic form of Novegradian.
+      %br
+      Example: Да кағьет, ойди. “In other words, leave.”
+  %p
+    = t("вихево", "vihevó", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Introduces an explanation of an underlying assumption relating to an earlier explicit or implied statement. Similar to English “after all”.
+      %br
+      Etymology: Genitive singular neuter form of вехе “all”
+      %br
+      Example: О на нет требѣ тривожитиш. Вихево цой музут дѣлати? “We don’t need to worry. After all, what can they do?”
+
+= section "Evidentiality" do
+  %p
+    = t("дѣи", "dě́i", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: An evidential particle indicating hearsay. It generally goes in the second position within a clause, often drawing either a topicalized noun or verb into the first position. It indicates that speaker has not actually seen the event occur, but heard about it from other sources.
+      %br
+      Etymology: From Common Slavic *dějětь “he says”, in a reduced form
+      %br
+      Example: Оне дѣи не вѣгле то-це пробуивало. “He didn’t know what happened, it seems.”
+  %p
+    = t("ѕит", "dzít", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: An evidential particle indicating hearsay. Like дѣи, it tends to go into the second position within a clause and draws topicalized nouns or verbs forward. It indicates that speaker has not actually seen the event occur, but heard about it from other sources.
+      %br
+      Etymology: From рѣѕит “he says”, in a reduced form; more colloquial than дѣи
+      %br
+      Example: Оне ѕит некойда тамо не буиле. “He has never been there before, it seems.”
+
+= section "Continuation" do
+  %p
+    = t("добро", "dóbro", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: An all-purpose continuation marker, much like English “well” or “okay”. It is also a common space filler.
+      %br
+      Etymology: From добро “good (nominative singular neuter)”
+      %br
+      Example: Добро, цой тобирво ест треба дѣлати? “Okay, what has to be done now?”
+  %p
+    = t("вудицин", "vúdicin", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Used to redirect the course of a discussion. Similar meaningwise to “Let’s move on”, though much more commonly used than its English counterpart. It can also be used to redirect a topic that has gone off course, such as “anyways” or “back on topic”.
+      %br
+      Etymology: From вудицин “it is led”
+      %br
+      Example: Вудицин, есат други дѣла, котри ест треба прешунити. “Anyways, there are other matters we need to discuss.”
+  %p
+    = t("егье", "iegjé", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Moves the discussion from one point to another, not unlike “next” in English.
+      %br
+      Etymology: From еше “more, still”
+      %br
+      Example: Егье наме рѣжити куди идем. “Next we have to decide where we’re going to go.”
+
+= section "Miscellaneous" do
+  %p
+    = t("ну", "nú", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Urges a response from the listener, either in words or in action. Often indicates a degree of agitation or impatience on the part of the speaker.
+      %br
+      Etymology: Unclear, though common to all Slavic languages.
+      %br
+      Example: Ну? Простаниш. “Well? Go on.”
+  %p
+    = t("ставв", "stávv", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Indicates the speaker is satisfied with what someone else is saying and is a polite way of cutting them off.
+      %br
+      Etymology: From ставв “enough”, from Komi став “all”, perhaps crossed with Novegradian “stop”. The double вв indicates that the final /β/ should be pronounced as such, and not reduced to [w].
+      %br
+      Example: Ставв, довѣм. “That’s enough, I understand.”
+  %p
+    = t("вехе", "véhe", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Indicates that the speaker is agitated by what someone else is saying, or that they have gone on too long. It is a ruder way of cutting them off.
+      %br
+      Etymology: From вехе “all”
+      %br
+      Example: Вехе, ше ож вошунемо! “Enough, you’ve talked enough about this already!”
+  %p
+    = t("-ти", "-ti", :callout => true)
+    %br
+    %span.blockinlist
+      Usage: Attaches to an imperative verb or occasionally other discourse particles (especially ну above) to indicate a gentle urging. It is best comparable to English “c’mon”, “just”, or “will you?”.
+      %br
+      Etymology: From Common Slavic *ti, the clitic dative form of *ty “you (#{abbrev 'sg'})”
+      %br
+      Example: Ну-ти иди! “C’mon, get moving already!”
+      %br
+      Example: Затули-ти дуери! Кладно! “Close the door, will you? It’s cold!”
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

@@ -2,6 +2,8 @@ module ApplicationHelper
   def transliterate(word, transliteration, options = {})
     if options[:linebreak]
       "#{word}<br><i class='transliteration'>#{transliteration}</i>".html_safe
+    elsif options[:callout]
+      "<b>#{word}</b> <i class='transliteration'>#{transliteration}</i>".html_safe
     else
       "#{word} <i class='transliteration'>#{transliteration}</i>".html_safe
     end
