@@ -1,0 +1,76 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Пуити"
+
+= render :partial => 'navigation'
+
+= section "Interrogative Pronouns" do
+  %p Interrogative pronouns are specifically discussed in section 15.6.
+
+= section "Yes/No Questions" do
+  %p Yes/No questions do not require any special syntax to distinguish them from non-interrogative sentences. A sentence may be made into a yes/no question simply by changing the intonation, with a falling pitch toward the end of the clause.
+  %p Although not a requirement, the interrogative particle #{t "ли", "li"} frequently appears in yes/no sentences. It is generally found after the first stressed word, although certain adverbs such as #{t "ож", "oź"} “already” and #{t "егье", "iegjé"} “still” may instead occupy this second position and force the interrogative particle to the third position in the sentence. It may be argued that these have become merged interrogative adverbs, ожли and егьели.
+  = example_sentence "Наталя-та ож ли дума?",
+                     "Natália-ta oź li dúma?",
+                     "Natália-{nom}-{top} already {q} at_home Ø?",
+                     "Is Natália home yet?"
+  %p It is not uncommon for both the affirmative and negative options to be present in a single sentence with no conjunction, especially when what is being questioned is a personal state or mood. In such sentences the interrogative particle ли is never present.
+  = example_sentence "Хокьеш не хокьеш ѣсти?",
+                     "Hókjeś ne hókjeś iě́sti?",
+                     "want-{2sg} {neg} want-{2sg} eat-{inf}",
+                     "Do you want to eat or not?"
+  %p Surrounding a noun or pronoun by the negative #{t "не", "ne"} in front and interrogative #{t "ли", "li"} in back has the same effect as cleft questions in English, focusing whatever element is surrounded. Note that no actual cleft appears in Novegradian.
+  = example_sentence "Не мене-то ли ти овидѣла?",
+                     "Ne mené-to li tí ovíděla?",
+                     "{neg} I.{acc}-{top} {q} you.{nom} see.{pf}-{past}-{fem}",
+                     "Wasn’t it me whom you saw?"
+  %p The existencial questions “Is there?” and “Are there?” are expressed using the reduced forms #{t "е-ли", "ié-li"} and #{t "су-ли", "sú-li"} for singular and plural, respectively. The dual does not reduce: #{t "еста ли", "iésta li"}.
+  = example_sentence "Е-ли треба их зацегати?",
+                     "Ié-li tréba íh zacegáti?",
+                     "be.{3sg.clitic}-{q} need-{nom.sg} they.{acc} wait-{inf}",
+                     "Do we need to wait for them?"
+
+= section "Echo Questions" do
+  %p Echo questions are questions about questions, asking for clarification of something someone else has just asked.
+
+  = section "Echo Questions in Response to a Statement" do
+    %p Consider the statement Яс идун во школун “I am going to school”. This may be echoed using either an interrogative pronoun or a yes/no question.
+    %p Interrogative pronouns are used when a specific part of the statement is being questioned. Certain information may simply be dropped.
+    = example_dialog [ { :speaker => "A", :sentence => "Яс идун во школун.", :transliteration => "Iás idún vo śkólun." },
+                       { :speaker => "B", :sentence => "Ти куди идеш? / Ти куди? / Куди?", :transliteration => "Tí kudí idéś? / Tí kudí? / Kudí?" },
+                       { :speaker => "A", :sentence => "Во школун.", :transliteration => "Vo śkólun." } ]
+    = example_dialog [ { :speaker => "A", :sentence => "Яс идун во школун.", :transliteration => "Iás idún vo śkólun." },
+                       { :speaker => "B", :sentence => "Хой идет во школун? / Хой идет? / Хой?", :transliteration => "Hói idét vo śkólun? / Hói idét? / Hói?" },
+                       { :speaker => "A", :sentence => "Язёт.", :transliteration => "Iaziót." } ]
+    %p Yes/No echo questions are used to confirm that a statement is correctly understood. They may similarly drop non-vital elements that are understood; the more elements that are dropped, the more specific the request for clarification is. Frequently the interrogative particle ли is included, though note that in echo questions, it is always attracted to the end of the sentence.
+    = example_dialog [ { :speaker => "A", :sentence => "Яс идун во школун.", :transliteration => "Iás idún vo śkólun." },
+                       { :speaker => "B", :sentence => "Идеш во школун ли? / Ти во школун ли? / Во школун ли? / Ти ли?", :transliteration => "Idéś vo śkólun li? / Tí vo śkólun li? / Vo śkólun li? / Tí li?" },
+                       { :speaker => "A", :sentence => "Да.", :transliteration => "Da." } ]
+
+  = section "Echo Questions in Response to a Question" do
+    %p In response to a question, echo questions may serve a variety of functions. In addition to clarification, they may also indicate emphasis, doubt that the asker doesn’t already know the answer to the question, or simply to give the speaker a moment to formulate a response.
+    %p Whether an interrogative pronoun or a yes/no question is used depends on the original question, as the two forms must logically match. Understood elements may freely be dropped. In these sorts yes/no of echo questions, ли is once again attracted to its usual second place in the clause.
+    = example_dialog [ { :speaker => "A", :sentence => "Куди ти идеш?", :transliteration => "Kudí tí idéś?" },
+                       { :speaker => "B", :sentence => "Куди яс? Во школун.", :transliteration => "Kudí iás? Vo śkólun." } ]
+    = example_dialog [ { :speaker => "A", :sentence => "Идеш ли во школун?", :transliteration => "Idéś li vo śkólun?" },
+                       { :speaker => "B", :sentence => "Идун ли яс во школун? Да.", :transliteration => "Idún li iás vo śkolun? Da." } ]
+
+= section "Extraction" do
+  %p The rules regarding the use of interrogative pronouns are more complicated when the pronoun refers to a noun in a subordinate clause. Since Novegradian tends to place interrogative pronouns at the beginning of a sentence, they must be extracted from the subordinate clause. However, not all nouns may be extracted. Whereas English allows both the subordinate subject (“Who does Vladímire want to buy lunch?”) and the subordinate object (“What does Vladímire want Nikoláie to buy?”), Novegradian only permits object extraction. If the subject is being questioned, it must remain in its originl position within the subordinate clause. Notice in example 11 below that the pronoun хой is not even permitted to move to a fronted position within its own clause, much less the entire sentence.
+  = example_sentence "Цой Владимире хокьет то-це Николае би кренале?",
+                     "Cói Vladímire hókjet tó-ce Nikoláie bi krenále?",
+                     "what.{nom} Vladímire-{nom} want-{3sg} {rel.acc.sg}-that.{acc} Nikoláie-{nom} {subj.sg} buy-{past}-{masc}",
+                     "What does Vladímire want Nikoláie to buy?"
+  = example_sentence "Владимире хокьет то-це кренале би хой обѣд?",
+                     "Vladímire hókjet tó-ce krenále bi hói obě́d?",
+                     "Vladímire-{nom} want-{3sg} {rel.acc.sg}-that.{nom} {subj.sg} who.{nom} lunch-{acc.sg}",
+                     "Who does Vladímire want to buy lunch?"
+  %p However, both subjects and objects may freely be extracted from a subordinate clause if forced out by an interrogative quantifier, such as колкѣ “how many?”. In such cases it is the amount being questioned, not the noun. However, a redundant resumptive pronoun must be left in the noun’s original place in the subordinate clause.
+  = example_sentence "Колкѣ лудеу Еване думаст то-це они прийдут?",
+                     "Kólkě lúdeu Ieváne dúmast tó-ce oní prijdút?",
+                     "how_many people-{part.pl} Ieváne-{nom} think {rel.acc.sg}-that.{nom} they.{nom} come.{pf}-{3pl}",
+                     "How many people does Ieváne think will come?"
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

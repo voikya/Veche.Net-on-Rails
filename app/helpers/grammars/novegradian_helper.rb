@@ -104,5 +104,25 @@ module Grammars
       end
       "<abbr title='#{meaning.join(' ')}'>#{string.gsub('*', '')}</abbr>".html_safe
     end
+
+    def example_dialog(dialog)
+      @example_index += 1
+      capture_haml do
+        haml_tag 'table.textgloss' do
+          haml_tag :tr do
+            haml_tag :td, "(#{@example_index})"
+            haml_tag :td do
+              dialog.each_with_index do |d, idx|
+                haml_tag 'span.native', "#{d[:speaker]}: #{d[:sentence].html_safe}"
+                haml_tag 'span.translit', d[:transliteration].html_safe
+                unless idx == dialog.size - 1
+                  haml_tag :br
+                end
+              end
+            end
+          end
+        end
+      end
+    end
   end
 end
