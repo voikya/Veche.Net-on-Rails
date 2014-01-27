@@ -1,0 +1,54 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Емваза со поредиям словес"
+
+= render :partial => 'navigation'
+
+= section "The Particle же" do
+  %p The particle #{t "же", "źe"} has two functions: simple emphasis and contrastive emphasis.
+  %p When preceded by an interrogative, as has previously been mentioned, же strengthens the force of the question. It is usually written cliticized to the interrogative. If the interrogative ends in a vowel, it reduces to simply #{t "-ж", "-ź"}; if it ends in /j/, it becomes #{t "-иж", "-iź"}.
+  = example_sentence "Какож оне тако буистрѣ суди приходиле?",
+                     "Kákoź óne táko buístrě sudí prihódile?",
+                     "how-{emph} he.{nom} so fast-{adv} to_here arrive-{past}-{masc}",
+                     "How the heck did he get here so quickly?"
+  %p After any other part of speech, же serves a contrastive function. In such a role it is always written as a separate word, even though it is phonetically unstressed and tends to cliticize to the preceding word. This form does not reduce to ж.
+  %p It most commonly appears after nouns and adjectives. It indicates that only the preceding group specified by the previous word is involved, and not any other. Both are demonstrated below:
+  = example_sentence "Яс повастале обух друж туоих, но Рая же мнѣ кағьеци симпатнейшей.",
+                     "Iás povástale óbuh drúź tuojíh, no Ráia źe mně́ káğjeci simpatnéiśei.",
+                     "I.{nom} meet.{pf}-{past}-{masc} both-{gen} friend-{gen.pl} your-{gen.pl}, but Ráia-{nom} {emph} I.{datins} seem-{3sg}-{mid} nice-{comp}-{datins.sg.fem}",
+                     "I’ve met both of your friends, but Ráia seems nicer to me."
+  = example_sentence "Принези плави же тарѣлки со шкавѣ, прусим.",
+                     "Prinezí plávi źe tarě́lki so śkávě, prúsim.",
+                     "bring_over.{pf}-{2sg.imper} light_blue-{nom.pl} {emph} plate-{nom.pl} from_off cabinet-{gen.sg}, please",
+                     "Grab the blue plates from the cabinet, please. (and not any of the others)"
+  %p If же and the topical marker то fall on the same word, they merge into a single invariable form #{t "-че", "če"}, attached to the word by a dash. In older texts this may also be written #{t "-тже", "-tźe"} or #{t "-тше", "-tśe"}. If the word would normally take the inverted topical marker -от, the combined emphatic/topical marker is spelt #{t "-оче", "-óče"}.
+  = example_sentence "Оғо ѣм, но паста-че моей прѣлубимой ѣдой.",
+                     "Oğó iě́m, no pásta-če moiéi prělubímoi iědói.",
+                     "all.{acc.sg.neut} eat-{1sg}, but pasta-{nom.sg}-{emph.top} Ø my-{datins.sg.fem} {intens}-beloved-{datins.sg.fem} food-{datins.sg}",
+                     "I’ll eat anything, but pasta I love the most."
+
+= section "The Particle и" do
+  %p The particle #{t "и", "i"} is a verbal emphatic (as in example 5 below), which is placed before the verb to be emphasized, though phonetically it cliticizes to the previous word. It can also be used to emphasize adverbs modifying the verb. However, this is a long-distance effect; the emphatic is still placed before the verb, as in example 6.
+  = example_sentence "Тако и бадет.",
+                     "Táko i bádet.",
+                     "thus {emph} be.{fut}-{3sg}",
+                     "It will be so."
+  %p If the noun preceding it is a masculine singular fourth-declension noun ending in -е or a nominative fifth declension noun, in either the nominative or inanimate accusative case, the case ending elides.
+  = example_sentence "Суде кеняз и жиле.",
+                     "Sudé keniáz i źíle.",
+                     "here price-{nom.sg} {emph} live-{past}-{masc}",
+                     "The prince lived here."
+
+= section "Word Order" do
+  %p Novegradian has free word order, meaning the main elements of a sentence can be rearranged with few restrictions. However, each possible ordering carries its own subtle meanings. To fully explain the subtleties of each may be impossible, but the following should provide a rough idea. The simple sentence Яс лублун тебе “I love you”, with only a subject, object, and verb, will serve as an example.
+  %p SVO: Neutral word order, with primary emphasis placed on the object: Яс лублун тебе “I love <em>you</em>”
+  %p SOV: Neutral word order, with primary emphasis placed on the verb: Яс тебе лублун “I <em>love</em> you”
+  %p VSO: Strong emphasis on the verb and the subject’s connection to that verb: Лублун яс тебе “I <em>do</em> love you”
+  %p OSV: Strong emphasis on the uniqueness of the object and its relation to the subject: Тебе яс лублун “<em>You</em> I love (and no one else)”
+  %p VOS: Strong emphasis on the quality of the verb and the object’s relation to the subject: Лублун тебе яс “I <em>definitely</em> love you”
+  %p OVS: Strong emphasis on the identity of the object and its relation to the subject: Тебе лублун яс “<em>You</em> I truly love”
+  %p Note, however, that the presence of any additional elements complicates the meanings. When a topical marker is present, there is a tendency for it to go on the most strongly emphasized word, but by no means an absolute one. This is highly context-dependent.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
