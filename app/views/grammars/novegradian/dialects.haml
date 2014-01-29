@@ -1,0 +1,843 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Мовли"
+
+= render :partial => 'navigation'
+
+= section "Major Novegradian Dialects" do
+  %p Novegradian has five major dialect zones, as shown in the map on the following page. These groups are typically identified as “Central” (including standard Novegradian), “Southern”, “Zavolotian”, “Northern”, and “Siberian”. Each of these can then in turn be divided into a number of subdialects.
+  %p It should be noted that the following discussion is purely about <em>spoken</em> dialects (as very little written variation exists). When comparing them to standard Novegradian, therefore, it is best to compare them to the spoken form of the language as described in the previous section rather than the written standard. Unless otherwise noted, most of the changes described in section 22 are also present in the various dialects, such as nominative ending loss, possessive endings, and the vocative case.
+  = image_tag "novegradian/dialectmap.png", :alt => "A map of major Novegradian dialect zones"
+  %p.imgcaption The map above shows the geographic distribution of the five major dialect groups, represented by the large dashed lines. This, however, is largely based on traditional usage, and does not indicate the widespread use of central dialects closer to Standard Novegradian in major cities throughout the country.
+  %p Shaded regions represent areas where the first language of most of the population is not Novegradian, so that the majority of speakers learn Novegradian at a later age.
+
+= section "The Central Dialects" do
+  %p The Central Dialects are the Novegradian dialects spoken in the oldest part of the country, centered around the cities of Novegráde Velíkei, Pleskóve, and Néugrade. It is also spoken in the Baltics and much of Finland and southern Karelia, where it was introduced after these territories were annexed between the late 17th and mid 18th centuries. The standard language is based on the Velikonovegrádeskei subdialect.
+
+  = section "Geographic Distribution" do
+    %p The standard dialects are centered in the Novegradian heartland around Novegráde Velíkei itself. As the standard variety, this dialect was also spread into the Republic’s newest territories, those annexed after the language was largely standardized. There are also smaller groups of central dialect speakers scattered throughout the nation, particularly in recently-founded far-northern cities such as Murmáne and Suětlogóreske, which were settled in the 20th century and whose populations were largely transplanted to these locations during the Soviet period. Many people in major cities throughout the country speak a central dialect due to increasing mobility in recent years, although in many smaller cities and the countryside the local dialects may still be dominant.
+
+  = section "History" do
+    %p The city of Novegráde Velíkei has always been the capital and cultural center of the Novegradian state, and as such its dialect has always been the most prestigious form of Novegradian.
+
+  = section "Status" do
+    %p The standard dialects are viewed as the most neutral form of the language. It is the most commonly heard speech variety on television and radio, and is generally preferred in business and political contexts. The written form of Novegradian is based on these dialects as well.
+    %p However, locally there is some variation in what is viewed as standard speech. Although the written standard is common across the entire nation, the Lětnosúmeskei (Southern Finland) subdialect, which features some differences in pronunciation from the standard Velikonovegrádeskei subdialect, is viewed as the more or less official spoken dialect within the Republic of Finland. Most people, including Finnish politicians and newscasters, will follow this pronunciation standard even in more formal contexts. Primary schools will often teach the official Novegradian pronunciation, but put little emphasis on it and then continue on in using Lĕtnosúmeskei pronunciation. Similar situations may be seen in Latvia and, to a lesser extent, Estonia and Komi.
+
+  = section "Phonology" do
+    %p The pronunciation of standard Novegradian as well as more its colloquial counterpart has been discussed earlier in this grammar. However, the subdialects spoken in Finland and Latvia deserve mention since they will be heard throughout these regions.
+    %p Some Finnish features include:
+    %ul
+      %li Unstressed /æ/ generally is not merged with /i/.
+      %li /sʲ/ becomes /s/ when part of a cluster: #{t "поста", "pósta"} “mail” (standard #{t "пошта", "póśta"}); similarly, /zʲ/ becomes /z/.
+      %li /ɫ/ is pronounced as /l/, often with a /u/~/w/ inserted before or after: #{t "соулдат", "souldát"} “solder” (standard #{t "сољдате", "sołdáte"}), #{t "луовити", "luóviti"} “catch” (standard #{t "љовити", "łóviti"}).
+      %li The palatals /c ɟ ç ʝ/ are pronounced [kʲ gʲ xʲ γʲ], except in coda position, where they merge with the velar series as [k g x γ], albeit with a [ɪ̯] on-glide. Standard #{t "нокьи", "nókji"} “night”, for example, will be pronounced [ˈno.kʲɪ] in formal contexts or [ˈnoɪ̯k] informally.
+      %li A glottal stop is inserted between a prefix and a root beginning with a vowel, instead of /j/ in the standard: #{t "оавити", "o’áviti"} “declare” (standard #{t "оявити", "oiáviti"}).
+      %li More sporadically, the stressed front vowels /æ e i/ sometimes diphthongize to /æi ei ie/ in open syllables.
+      %li Final /in/ lowers to /en/.
+      %li Final /e/ in the lative or accusative clitic pronouns becomes /jæ/: миѣ, тиѣ, etc.
+    %p Some Latvian features include:
+    %ul
+      %li Final vowels in definite ending endings tend to drop: #{t "цервенай", "cervénai"} “red (#{abbrev 'nom.sg.fem'})” (standard #{t "цервеная", "cervénaia"}).
+      %li Unstressed vowels in nominal endings followed by a consonant tend to drop or weaken greatly: #{t "морм", "mórm"} “sea (#{abbrev 'datins.sg'})” (standard #{t "морем", "mórem"}).
+      %li /ɨ/ pronounced as /ə/: гымати [ˈgə.mə.tɪ] (standard [ˈgɨ.mə.tɪ]).
+      %li /n/ before a stressed front vowel is realized as a fully palatal [ɲ] instead of palatalized [nʲ]: #{t "ньет", "njét"} “no” (standard #{t "нет", "nét"}).
+      %li /b/ in oblique forms of #{abbrev '2sg'} and reflexive pronouns pronounced /β/: #{t "шеве", "śevé"} “oneself (#{abbrev 'acc'})” (standard #{t "шебе", "śebé"})
+  
+  = section "Grammar" do
+    %p Once again, the grammar of standard Novegradian has been previously discussed.
+    %p The most defining feature of the grammar of the semi-standard Finnish dialect is its use of the partitive case. It uses the partitive after numerals instead of the genitive: #{t "довѣ нигох", "dóvě nígoh"} “two books” (standard #{t "довѣ нигѣ", "dóvě nígě"}). It also uses the partitive case instead of the accusative to mark the direct object of positive stative verbs: #{t "Яс лублун Маркех", "Iás lublún Markéh"} “I love Mark” (standard #{t "Яс лублун Марка", "Iás lublún Márka"}). It is not uncommon to hear the partitive singular ending #{t "-ох", "-oh"} (already reduced from standard #{t "-ок", "-ok"}) simplify to just #{t "-о", "-o"} in casual speech.
+    %p The grammar of the Latvian dialects does not vary significantly from standard Novegradian. The most noticeable difference is the tendency to place adverbs clause-finally, instead of in front of the verb, which often sounds quite strange to other Novegradian speakers. The reduction of a number of nominative and genitive case definite adjective endings is also a distinctive feature, and is different from the reductions seen in colloquial speech of other dialects:
+    %table
+      %tr
+        %th
+        %th
+          Latvian
+          %br
+          Formal/Spoken
+        %th
+          Standard
+          %br
+          Formal
+        %th
+          Standard
+          %br
+          Spoken
+      %tr
+        %th Nom Sg M
+        %td= t("цервеней", "cérvenei", :linebreak => true)
+        %td= t("цервеней", "cérvenei", :linebreak => true)
+        %td= t("цервеней", "cérvenei", :linebreak => true)
+      %tr
+        %th Nom Sg N
+        %td= t("цервеной", "cervénoi", :linebreak => true)
+        %td= t("цервеное", "cervénoie", :linebreak => true)
+        %td= t("(цервение", "cervénie)", :linebreak => true)
+      %tr
+        %th Nom Sg F
+        %td= t("цервенай", "cervénai", :linebreak => true)
+        %td= t("цервеная", "cervénaia", :linebreak => true)
+        %td= t("цервеня", "cervénia", :linebreak => true)
+      %tr
+        %th Nom Pl
+        %td= t("цервений", "cervénij", :linebreak => true)
+        %td= t("цервение", "cervénije", :linebreak => true)
+        %td= t("цервенеи", "cervénji", :linebreak => true)
+      %tr
+        %th Gen Sg M/N
+        %td= t("цервенайв", "cervenáiv", :linebreak => true)
+        %td= t("цервенаево", "cervenáievo", :linebreak => true)
+        %td= t("цервенайво", "cervenáivo", :linebreak => true)
+      %tr
+        %th Gen Sg F
+        %td= t("цервенѣй", "cervéněi", :linebreak => true)
+        %td= t("цервенѣе", "cervéněie", :linebreak => true)
+        %td= t("цервенѣе", "cervéněie", :linebreak => true)
+
+= section "The Southern Dialects" do
+  = section "Geographic Distribution" do
+    %p The Southern dialects cover the smallest area geographically out of all the major Novegradian dialect groups, but include several large population centers. They form a narrow belt hugging the southwestern Novegradian border along Russia and Belarus. It is spoken in the southern halves of Lovotiskáia, Reźeveskáia, and Moloźeskáia oblosts, the western half of Mostegradeskáia oblost, and most of Videbeskáia and Poloteskáia oblosts.
+
+  = section "History" do
+    %p These dialects have had a large amount of influence from East Slavic languages, particularly Russian and Belarussian. Lying on the edge of Novegradian-speaking territory, these people have historically lived with and had frequent contact with Russians and Belarussians. In fact, many speakers of southern dialects, particularly in the westernmost parts of the region, are of Russian descent, most of whom have since been assimilated. When Russia and Novegrad were unified from the 19th century until 1917, this more Russified dialect spread further northward as it gained more prestige, but after 1917 and the reassertion of Novegradian nationalism began once again to retreat to the border region.
+
+  = section "Status" do
+    %p Once a somewhat prestigious dialect, it is now somewhat stigmatized. Due to rising Novegradian nationalism in the early 20th century and particularly since the 1970s, there has been a greater desire to remove many perceived Russianisms from the language.
+    %p The southern dialects have no official support, and exist principally on a colloquial level. In formal situations speakers are expected to use Standard Novegradian (or if they live within the borders of the Latvian Republic, the standardized Latvian dialect of Novegradian).
+
+  = section "Phonology" do
+    %p The following describes the Vidébeskei subdialect.
+
+    = section "The Vowel System" do
+      %p Three features stand out in the vocalic system. The first is the presence of akanye (#{t "аканье", "ákanje"}), common in East Slavic languages but nonexistant in most varieties of Novegradian. In these dialects, unstressed /o/ merges completely with /a/: #{t "гавариты", "gavaríty"} “talk” (standard #{t "говорити", "govoríti"}). This can sometimes lead to gender confusion, as an unstressed final /o/ will merge with unstressed final /a/: #{t "яблака", "iáblaka"} “apple” (standard #{t "яблоко", "iábloko"}). Note that this means colloquially many neuter third declension nouns are merging with the feminine in the South, whereas in other dialects all neuter nouns are merging with the masculine.
+      %p Second is the loss of the yat /æ/. When stressed it becomes /ja/, and when unstressed /e/: #{t "вяра", "viára"} “faith” (standard #{t "вѣра", "vě́ra"}), #{t "наляве", "naliáve"} “on the left” (standard #{t "налѣвѣ", "nalě́vě"}).
+      %p Third is the phoneme /ɨ/, which appears natively. It is pronounced slightly further forward than standard Novegradian /ɨ/. It has three main sources: from foreign loans, as in the standard: #{t "гыматы", "gymáty"} “shout” (standard #{t "гымати", "gymáti"}); from Common Slavic *y, which is usually /i/ or /wi/ in the standard: #{t "быты", "býty"} “be” (standard #{t "буити", "buíti"}); and from unstressed /i/ when word-finally or before a nasal consonant (i.e., where the standard has [ɪ]): #{t "пяты", "piáty"} “sing” (standard #{t "пѣти", "pě́ti"}).
+      %p Additionally, many places where /e/ [je] appears at the beginning of a word in standard Novegradian that derives directly from Common Slavic, southern dialects will instead have /o/ (which can be realized as /a/, as per above, or /βo/, as per another rule described below): #{t "водене", "vódene"} “one” (standard #{t "едене", "iéden"}), #{t "вожера", "vóźera"} “lake” (standard #{t "ежеро", "iéźero"}). The presence of /o/ for standard initial /e/ is highly inconsistent across subdialects, suggesting dialect borrowing may be a contributing factor.
+
+    = section "Vowel Alterations" do
+      %p /o/ is not allowed to appear word-initially in native words, as /β/ must be added before. This often leads to a stressed /βo/ versus unstressed /a/ alteration: #{abbrev 'nom.sg'} #{t "акно", "aknó"} “window”, #{abbrev 'gen.sg'} #{t "вокну", "vóknu"} (standard #{t "окно", "oknó"}, #{t "окну", "óknu"}). Standard Novegradian has a similar feature, where /w/ is added before an initial stressed /o/, though this does not appear in writing.
+      %p Many nouns with an unstressed /e/ in the singular that undergo a stress shift to that vowel in the plural will see an /e/ → /o/ shift when stressed. This is another feature very common in East Slavic languages: #{t "вожера", "vóźera"} “sea”, #{t "ажоры", "aźóry"} “seas” (standard #{t "ежеро", "iéźero"}, #{t "ежера", "ieźerá"}).
+
+    = section "Consonants" do
+      %p The consonant system of southern dialects is actually quite similar to the standard.
+      %p The most noticeable difference is the sporadic application of the Second Slavic Palatalization, which most forms of Novegradian skipped. This results in */k g x kv gv xv/ becoming /ts z s tsw zw sw/ before front vowels in these dialects: #{t "зўязда", "zwiazdá"} “star” (standard #{t "гуѣзда", "guě́zda"}). #{t "Веше", "véśe"} “all” (standard #{t "вехе", "véhe"}), an instance of the progressive palatalization not seen in standard Novegradian, is also commonly heard.
+      %p Another feature is cókanje (#{t "цоканье", "cókanje"}), the confusion of /tʃ/ and /ts/. Standard Novegradian went through this stage, but ultimately converted all original instances of both /ts/ and /tʃ/ to /ts/. In southern dialects, the two forms now exist in allophonic variation, with [tʃ] before front vowels and /j/ and [ts] elsewhere: #{t "чидаты", "čidáty"} “read” (standard #{t "цидати", "cidáti"}), #{t "цай", "cái"} “tea” (standard #{t "цае", "cáie"}).
+      %p Standard Novegradian /ɫ/ has merged with /w/, and /ɲ/ is generally pronounced as a geminate /nn/: #{t "жоуте", "źóute"} “yellow” (standard #{t "жољте", "źółte"}), #{t "вяденне", "viadénne"} “knowledge” (standard #{t "вѣденье", "vědénje"}).
+
+  = section "Grammar" do
+    %p Southern dialects have all the same nominal and adjectival declensional forms as the standard, although their pronunciation is often different. The total number of declensions has dropped, however, due to the loss of the third declension O-stems.
+    %p The two biggest changes that cannot simply be explained by sound changes are the loss of the nominative plural ending <i>-a</i> for neuter nouns (now <i>-y</i> for all nouns), and the singular forms of sixth-declension nouns. Such nouns display their suffixed forms only in the plural. In the singular, #{t "мат", "mát"} “mother” and #{t "докь", "dókj"} “daughter” behave as fifth declension nouns, while all others take the suffix #{t "-ие", "-ie"} and conjugate as fourth declension nouns. Additionally, the dative/instrumental ending for sixth declension nouns is often <i>-u</i> instead of <i>-em</i>, derived from the historical dative form instead of the instrumental as in the standard.
+    %table
+      %tr
+        %th
+        %th{:colspan => 6} Singular
+      %tr
+        %th
+        %td нига “book”
+        %td жемла “land”
+        %td вожера “lake”
+        %td мор “sea”
+        %td нокь “night”
+        %td имие “name”
+      %tr
+        %th Nom
+        %td= t("нига", "níga", :linebreak => true)
+        %td= t("жемла", "źémla", :linebreak => true)
+        %td= t("вожера", "vóźera", :linebreak => true)
+        %td= t("мор", "mór", :linebreak => true)
+        %td= t("нокь", "nókj", :linebreak => true)
+        %td= t("имие", "ímie", :linebreak => true)
+      %tr
+        %th Gen
+        %td= t("ниге", "níge", :linebreak => true)
+        %td= t("жемле", "źémle", :linebreak => true)
+        %td= t("вожере", "vóźere", :linebreak => true)
+        %td= t("мора", "móra", :linebreak => true)
+        %td= t("нагьи", "nagjí", :linebreak => true)
+        %td= t("имя", "ímia", :linebreak => true)
+      %tr
+        %th Acc
+        %td= t("нигу", "nígu", :linebreak => true)
+        %td= t("жемлу", "źémlu", :linebreak => true)
+        %td= t("вожеру", "vóźeru", :linebreak => true)
+        %td= t("мор", "mór", :linebreak => true)
+        %td= t("нокь", "nókj", :linebreak => true)
+        %td= t("имие", "ímie", :linebreak => true)
+      %tr
+        %th D/I
+        %td= t("нигой", "nígoi", :linebreak => true)
+        %td= t("жемлей", "źemléi", :linebreak => true)
+        %td= t("вожерой", "vóźeroi", :linebreak => true)
+        %td= t("морем", "mórem", :linebreak => true)
+        %td= t("нагьюм", "nagjiúm", :linebreak => true)
+        %td= t("имю", "ímiu", :linebreak => true)
+      %tr
+        %th Part
+        %td= t("нигох", "nígoh", :linebreak => true)
+        %td= t("жемлох", "źemlóh", :linebreak => true)
+        %td= t("вожерох", "vóźeroh", :linebreak => true)
+        %td= t("морех", "moréh", :linebreak => true)
+        %td= t("нокьех", "nókjeh", :linebreak => true)
+        %td= t("имиех", "ímieh", :linebreak => true)
+      %tr
+        %th Loc
+        %td= t("ниге", "níge", :linebreak => true)
+        %td= t("жемле", "źemlé", :linebreak => true)
+        %td= t("вожере", "vóźere", :linebreak => true)
+        %td= t("море", "móre", :linebreak => true)
+        %td= t("нагьи", "nagjí", :linebreak => true)
+        %td= t("имие", "ímie", :linebreak => true)
+      %tr
+        %th Lat
+        %td= t("нигун", "nígun", :linebreak => true)
+        %td= t("жемлун", "źemlún", :linebreak => true)
+        %td= t("вожерун", "vóźerun", :linebreak => true)
+        %td= t("морен", "morén", :linebreak => true)
+        %td= t("нокьын", "nókjyn", :linebreak => true)
+        %td= t("имиен", "ímien", :linebreak => true)
+      %tr
+        %th Voc
+        %td= t("нигма", "nígma", :linebreak => true)
+        %td= t("жемлама", "źémlama", :linebreak => true)
+        %td= t("вожерма", "vóźerma", :linebreak => true)
+        %td= t("морма", "mórma", :linebreak => true)
+        %td= t("нокьма", "nókjma", :linebreak => true)
+        %td= t("имиема", "ímiema", :linebreak => true)
+      %tr
+        %th
+        %th{:colspan => 6} Plural
+      %tr
+        %th Nom
+        %td= t("нигы", "nígy", :linebreak => true)
+        %td= t("жемле", "źémle", :linebreak => true)
+        %td= t("ажоры", "aźóry", :linebreak => true)
+        %td= t("моры", "móry", :linebreak => true)
+        %td= t("нокьие", "nókjie", :linebreak => true)
+        %td= t("ымоны", "ymóny", :linebreak => true)
+      %tr
+        %th Gen
+        %td= t("ниг", "níg", :linebreak => true)
+        %td= t("жемел", "źemél", :linebreak => true)
+        %td= t("ажор", "aźór", :linebreak => true)
+        %td= t("мор", "mór", :linebreak => true)
+        %td= t("нокьей", "nókjei", :linebreak => true)
+        %td= t("ымон", "ymón", :linebreak => true)
+      %tr
+        %th Acc
+        %td= t("нигы", "nígy", :linebreak => true)
+        %td= t("жемле", "źémle", :linebreak => true)
+        %td= t("ажоры", "aźóry", :linebreak => true)
+        %td= t("моры", "móry", :linebreak => true)
+        %td= t("нокьие", "nókjie", :linebreak => true)
+        %td= t("ымоны", "ymóny", :linebreak => true)
+      %tr
+        %th D/I
+        %td= t("нигам", "nígam", :linebreak => true)
+        %td= t("жемлам", "źemlám", :linebreak => true)
+        %td= t("ажорам", "aźóram", :linebreak => true)
+        %td= t("морам", "morám", :linebreak => true)
+        %td= t("нагьям", "nagjiám", :linebreak => true)
+        %td= t("ымонам", "ymónam", :linebreak => true)
+      %tr
+        %th Part
+        %td= t("нигуо", "níguo", :linebreak => true)
+        %td= t("жемлоу", "źemlóu", :linebreak => true)
+        %td= t("ажеруо", "aźeruó", :linebreak => true)
+        %td= t("мореу", "móreu", :linebreak => true)
+        %td= t("нокьеу", "nókjeu", :linebreak => true)
+        %td= t("ыменуо", "ymenuó", :linebreak => true)
+      %tr
+        %th Loc
+        %td= t("нигах", "nígah", :linebreak => true)
+        %td= t("жемлах", "źemláh", :linebreak => true)
+        %td= t("ажорах", "aźórah", :linebreak => true)
+        %td= t("морях", "moriáh", :linebreak => true)
+        %td= t("нокьих", "nókjih", :linebreak => true)
+        %td= t("ымонех", "ymóneh", :linebreak => true)
+      %tr
+        %th Lat
+        %td= t("нигы", "nígy", :linebreak => true)
+        %td= t("жемле", "źémle", :linebreak => true)
+        %td= t("ажоры", "aźóry", :linebreak => true)
+        %td= t("море", "móre", :linebreak => true)
+        %td= t("нокьы", "nókjy", :linebreak => true)
+        %td= t("ымоны", "ymóny", :linebreak => true)
+      %tr
+        %th Voc
+        %td= t("нигыма", "nígyma", :linebreak => true)
+        %td= t("жемлема", "źémlema", :linebreak => true)
+        %td= t("ажорыма", "aźóryma", :linebreak => true)
+        %td= t("морыма", "móryma", :linebreak => true)
+        %td= t("нокьиема", "nókjiema", :linebreak => true)
+        %td= t("ымоныма", "ymónyma", :linebreak => true)
+    %p Indefinite adjectives decline much like nouns. However, some of the definite forms are more reduced than in the standard. The neuter forms are shown in the following adjective table, but are increasingly rare in speech. Shown are #{t "червенай", "čérvenai"} “red” (an antepenultimate-stress adjective in the standard) and #{t "другой", "drugói"} “second” (an ending-stress adjective in the standard, which here has ending stress even in its #{abbrev 'nom.sg.masc'} form).
+    %table
+      %tr
+        %th
+        %th Masculine
+        %th Neuter
+        %th Feminine
+        %th Plural
+        %th{:rowspan => 8}
+        %th Masculine
+        %th Neuter
+        %th Feminine
+        %th Plural
+      %tr
+        %th Nominative
+        %td= t("червенай", "čérvenai", :linebreak => true)
+        %td= t("червенае", "červénaie", :linebreak => true)
+        %td= t("червеная", "červénaia", :linebreak => true)
+        %td= t("червеные", "červényie", :linebreak => true)
+        %td= t("другой", "drugói", :linebreak => true)
+        %td= t("другое", "drugóie", :linebreak => true)
+        %td= t("другая", "drugáia", :linebreak => true)
+        %td= t("другие", "drugíje", :linebreak => true)
+      %tr
+        %th Genitive
+        %td{:colspan => 2}= t("червенага", "červénaga", :linebreak => true)
+        %td= t("червеняй", "červéniai", :linebreak => true)
+        %td= t("червеных", "červényh", :linebreak => true)
+        %td{:colspan => 2}= t("другога", "drugóga", :linebreak => true)
+        %td= t("другяй", "drugiái", :linebreak => true)
+        %td= t("других", "drugíh", :linebreak => true)
+      %tr
+        %th Accusative
+        %td= t("червенай", "čérvenai", :linebreak => true)
+        %td= t("червенае", "červénaie", :linebreak => true)
+        %td= t("червенаю", "červénaiu", :linebreak => true)
+        %td= t("червеные", "červényie", :linebreak => true)
+        %td= t("другой", "drugói", :linebreak => true)
+        %td= t("другое", "drugóie", :linebreak => true)
+        %td= t("другаю", "drugáiu", :linebreak => true)
+        %td= t("другие", "drugíje", :linebreak => true)
+      %tr
+        %th Dat/Instr
+        %td{:colspan => 2}= t("червенаму", "červénamu", :linebreak => true)
+        %td= t("червенаюн", "červénaiun", :linebreak => true)
+        %td= t("червенымы", "červénymy", :linebreak => true)
+        %td{:colspan => 2}= t("другому", "drugómu", :linebreak => true)
+        %td= t("другоюн", "drugóiun", :linebreak => true)
+        %td= t("другымы", "drugýmy", :linebreak => true)
+      %tr
+        %th Partitive
+        %td{:colspan => 3}= t("червенага", "červénaga", :linebreak => true)
+        %td= t("червеновага", "červenóvaga", :linebreak => true)
+        %td{:colspan => 3}= t("другога", "drugóga", :linebreak => true)
+        %td= t("друговага", "drugóvaga", :linebreak => true)
+      %tr
+        %th Locative
+        %td{:colspan => 3}= t("червеняйм", "červéniaim", :linebreak => true)
+        %td= t("червеняйх", "červéniaih", :linebreak => true)
+        %td{:colspan => 3}= t("другяйм", "drugiáim", :linebreak => true)
+        %td= t("другяйх", "drugiáih", :linebreak => true)
+      %tr
+        %th Lative
+        %td{:colspan => 3}= t("червенуюн", "červénuiun", :linebreak => true)
+        %td= t("червенее", "červéneie", :linebreak => true)
+        %td{:colspan => 3}= t("другуюн", "drugúiun", :linebreak => true)
+        %td= t("другее", "drugéie", :linebreak => true)
+    %p Most southern dialects preserve the original /g/ in the genitive ending, which became /β/ in standard Russian and Novegradian. This is seen in pronouns as well, such as the third person masculine accusative pronoun #{t "его", "iegó"} (occasionally #{t "вого", "vogó"}), versus standard #{t "ево", "ievó"}.
+    %p These definite adjectives may function as nouns by themselves, as in standard Novegradian, but in order to do so the demonstrative #{t "то", "tó"} “that” must be declined to the appropriate gender, case, and number and cliticize to the end of the adjective. In southern dialects, то still has a full declension paradigm: #{t "червеные-ты", "červényie-ty"} “the red ones (#{abbrev 'nom.pl'})”, #{t "другога-таго", "drugóga-tagó"} “of the other one (#{abbrev 'gen.sg.m'}/#{abbrev 'gen.sg.n'})”.
+    %p The personal pronouns and possessive adjectives are largely the same as in the standard, although they include the features mentioned above. However, possessive adjectives are used more frequently in southern dialects than in the standard, where they are being replaced by the preposition о “at”. The second person singular and the reflexive possessive adjectives have a unique form in the nominative singular masculine: #{t "тавой", "tavói"} and #{t "савой", "savói"} (standard #{t "туой", "tuói"} and #{t "суой", "suói"}), which both have gained an epenthetic vowel.
+
+= section "The Zavolotian Dialects" do
+  = section "Geographic Distribution" do
+    %p The Zavolotian dialects are dominant throughout much of the eastern portion of European Novegrad (Zavolotia), on the west side of the Ural Mountains, and in some communities on the eastern slopes of the Urals. It is spoken throughout most of the non-Arctic-littoral oblosts, although it is seen in the southern half of Brězéuskaia and Pečarouskáia oblosts.
+
+  = section "History" do
+    %p These regions are historically the first areas penetrated by Novegradian traders, explorers, and settlers beyond the core of the original Novegradian state. It has had somewhat less Russian influence than the standard, but a great deal more from indigenous languages, particularly Komi. And while the more western parts of the country have historically looked westward, the settlers of this territory turned eastward for growth, focusing on trade with the East and expansion into the vast, sparsely-populated yet rich territories toward and beyond the Urals. Due to the region’s important historical trading centers, the Zavolotian dialects have borrowed vocabulary from a number of Turkic and Central Asian languages as well, some of which then entered the speech of western Novegradians.
+
+  = section "Status" do
+    %p While it has no official support (except perhaps in the Komi Republic), the Zavolotian dialects are nevertheless considered a respectable manner of speech, although a particularly thick accent may be seen as somewhat rustic in major cities of western Novegrad. People are expected to use standard Novegradian in formal situations.
+
+  = section "Phonology" do
+    %p The following is based on the Volóğdeskei subdialect.
+
+    = section "Vowels" do
+      %p The Zavolotian dialects have undergone a number of vowel changes and small shifts, one of the most distinctive features of this group of dialects. There appears to be general trend toward closing vowels. Vowel changes can be divided into the following categories:
+      %p Denasalization: Zavolotian dialects handled the Proto-Slavic nasal vowels slightly differently than the standard. Proto-Slavic *ǫ become /u/ word-finally: #{t "говору", "govorú"} “I talk” (standard #{t "говорун", "govorún"}); and /o/ elsewhere: #{t "крог", "króg"} “circle” (standard #{t "краге", "kráge"}, but note #{t "рока", "róka"} “hand”). Proto-Slavic *ę, on the other hand, becomes /e/ in all positions: #{t "агне", "agné"} “lamb” (standard #{t "агнин", "agnín"}), #{t "пете", "péte"} “five” (standard #{t "пети", "péti"}).
+      %p Yat’ Loss: When stressed, yat’ /æ/ became /je/: #{t "виек", "viék"} “century” (standard #{t "вѣке", "vě́ke"}). When unstressed, it becomes just /e/: #{t "видете", "vídete"} “see” (standard #{t "видѣти", "víděti"}).
+      %p Diphthongal Shifts: The diphthongs /au/ and /eu/ (including those involving a former /β/) both simplify into /o/ in all positions: #{t "отобус", "otóbus"} “bus” (standard #{t "аутобусе", "áutobuse"}), #{t "Ёропа", "Iorópa"} “Europe” (standard #{t "Еуропа", "Ieurópa"}). /oj/ is raised to /uj/ in all positions: #{t "вуйна", "vuiná"} “war” (standard #{t "война", "voiná"}). Both /aj/ and /ij/ merge into /ej/: #{t "чей", "čéi"} “tea” (standard #{t "цае", "cáie"}), #{t "Рошзея", "Rośzéia"} “Russia” (standard #{t "Рошзия", "Rośzíja"}).
+      %p Initial Epenthesis: Word-initial /o/ and /u/ both acquired an epenthetic /β/ early on: #{t "воко", "vóko"} “eye” (standard #{t "око", "óko"}), #{t "вудчите", "vudčíte"} “teach” (standard #{t "оѕити", "odzíti"}). This change does not affect later loan words or words that latter gained an initial /o/ or /u/ by other changes, but rather only words with these vowels inherited directly from Common Slavic. Note, however, that Zavolotian dialects lost the [j] before word-initial /e/ seen in the standard. And like the Southern dialects, a number of words beginning with /e/ in the standard begin with /βo/ in these dialects: #{t "вожеро", "vóźero"} “lake” (standard #{t "ежеро", "iéźero"}).
+      %p /w/-Induced Shifts: C+/w/ clusters (again, many of which once were C+/β/) caused shifts in the following vowel, drawing them back. C+/wæ/ sequences all became C+/wa/: #{t "суат", "suát"} “light” (standard #{t "суѣте", "suě́te"}). C+/we/ sequences all became C+/wo/, though the /w/ later dropped: #{t "доре", "dóre"} “door” (standard #{t "дуери", "duéri"}). The loss of /w/ before /o/ affected original */o/ as well: #{t "туй", "túi"} “your” (earlier form #{t "той", "tói"}; standard #{t "туой", "tuói"}).
+      %p Stressed Closed Syllable Shifts: In closed syllables, stressed /a/ is raised to /e/ and /o/ is raised to /u/: #{t "гред", "gréd"} “city” (standard #{t "граде", "gráde"} “city”), #{t "вуз", "vúz"} “car” (standard #{t "возе", "vóze"}).
+      %p Other Closed Syllable Shifts: The vowel /o/ before /n/ in a closed syllable always becomes /i/, overriding the rule above: #{t "вин", "vín"} “he” (standard #{t "оне", "óne"}).
+      %p Final Vowel Changes: Final /e/ has been universally lost in the nominative singular masculine (though not neuter) endings, creating many of the closed syllables seen above. A later change, however, then shifted all final /i/ to /e/: #{t "поте", "póte"} “way” (standard #{t "панти", "pánti"}). Final /ja/ (when after a consonant) metathesizes to /aj/, probably via */jaj/: #{t "жемай", "źemái"} “land” (standard #{t "жемя", "źémia"}).
+      %p VjV Simplification: There is a tendency to drop intervocal /j/ when the first V is unstressed, resulting in the second vowel dominating: #{t "добре", "dobré"} “good (#{abbrev 'nom.sg.neut.def'})” (standard #{t "доброе", "dóbroie"}). /eja/ appears to be resistant in endings, however: #{t "Англея", "Ángleia"} “England” (standard #{t "Англия", "Ánglija"}). If the vowels on both sides of the /j/ were the same, they will collapse into one, no matter the stress: #{t "раѕет", "radzét"} “(he) enjoys” (standard #{t "радеет", "radéiet"}). If the first vowel is stressed, the second vowel tends to drop: #{t "другой", "drugói"} “second (#{abbrev 'nom.sg.neut.def'})” (standard #{t "другое", "drugóie"}).
+      %p /xo/-Shift: The sequence /xo/ shifted to /xe/ in all circumstances: #{t "хедите", "hédite"} “go” (standard #{t "ходити", "hóditi"}).
+
+    = section "Consonants" do
+      %p The Zavolotian dialects developed their early consonant system in much the same way as the standard did. Most consonant divergences are relatively recent, having occurred only within the last 200 years or so. Again, these can be grouped into a number of categories:
+      %p Palatalization: Before stressed front vowels or /j/, the consonants /t d l/ undergo a full palatalization, merging with other phonemes. /t/ and /d/ both become hard (non-palatalized) affricates: #{t "че", "čé"} “you” (standard #{t "ти", "tí"}), #{t "ѕевете", "dzévete"} “nine” (standard #{t "девити", "déviti"}). /l/ in the same environment virtually disappears, becoming /j/: #{t "иете", "iéte"} “pour” (standard #{t "лѣти", "lě́ti"}). Note that these changes happened before the /a/ → /e/ shift above, so words such as #{t "дем", "dém"} “I give” (standard #{t "дам", "dám"}) remain unaffected.
+      %p Depalatalization: In the standard dialects, the consonants /s z n k g x/ become palatalized before a stressed front vowel. In central dialects no such palatalization occurs: #{t "нига", "níga"} [ˈni.gə] “book” (standard [ˈnʲi.gə]). The actual phonemes /sʲ zʲ/, however, still remain and no longer overlap with /s z/ + front vowel.
+      %p Further Depalatalization: /s/ and /sʲ/ sporadically convert to /x/ before another consonant. Some of these can be attributed to analogy (such as #{t "страхне", "stráhne"} “frightening” from страхе “fright”; standard #{t "страшне", "stráśne"}), but others are much less obvious: #{t "вуихла", "vuíhla"} “(she) exited” (standard #{t "вуишла", "vuiślá"}).
+      %p Assimilation: The clusters /dn/ and /tn/ both become /nn/: #{t "кланно", "klánno"} “cold” (standard #{t "кладно", "kládno"}).
+      %p Chokanye: Zavolotian dialects, like southern dialects, completely merged /tʃ/ and /ts/, yet have both [tʃ] and [ts] appear as surface realizations of this new merged phoneme—as [tʃ] immediately before a stressed vowel and as [ts] in all other positions. Many words will show an alternation as stress shifts: #{t "червен", "čérven"} “red (#{abbrev 'nom.sg.masc'})” (standard #{t "цервене", "cérvene"}), #{t "цервен", "cervén"} “red (#{abbrev 'gen.pl'})” (standard #{t "цервен", "cervén"}).
+      %p Loss of /ɲ/: The phoneme /ɲ/ uncouples, becoming /jn/. This occurred before the diphthongal changes mentioned earlier occurred, so this frequently causes vowel mutations: #{t "виѕан", "vidzán"} “vision, sight” (via earlier виѕѣйне; standard #{t "видѣнье", "vidě́nje"}), #{t "ейней", "éinei"} “angel” (via earlier айнее; standard #{t "аньее", "ánjeie"}).
+      %p Loss of /ɫ/: The phoneme /ɫ/ disappears word-initially and pre-consonantally: #{t "содат", "sodát"} “soldier” (standard #{t "сољдате", "sołdáte"}). If the /ɫ/ is word-initial before /o/ or /u/, the standard epenthetic /β/ will take its place: #{t "вовите", "vóvite"} “catch” (standard #{t "љовити", "łóviti"}).
+      %p Loss of /ɣ/: The phoneme /ɣ/ becomes a glottal stop [ʔ] in all positions. However, this change occurred after /ɣ/ palatalized to /j/ before front vowels: #{t "бо’", "bó’"} “God” (standard #{t "боғе", "bóğe"}).
+      %p Complete /dl/ → /gl/: The Zavolotian dialects converted old Novegradian /dl/ to /gl/ in all positions, even word initially, whereas the standard preserved it word initially. As a result, the Zavolotian dialects have forms such as #{t "глане", "gláne"} “palm” and #{t "глитиш", "glítiś"} “span” (standard #{t "длани", "dláni"} and #{t "длитиш", "dlítiś"}).
+
+  = section "Grammar" do
+    %p In the Volóğdeskei subdialect, the dual ending #{t "-а", "-a"} seen in the present/future tense was changed to #{t "-ай", "-ai"} (by analogy with the /aj/ diphthong seen in a number of other dual words in the dialect, including the dual possessive adjectives, the numeral “two”, and the pronoun “both”), though this later changed to /ej/ by regular changes. The closed syllable vowel changes also clearly took place before the loss of final /t/ in the third person plural endings.
+    %p Note the generalization of the #{abbrev '2sg'} ending #{t "-ш", "-ś"} to the athematic verbs, replacing standard stressed #{t "-жи", "-źí"}. The third (E) conjugation has also merged the #{abbrev '1sg'} and #{abbrev '3pl'} forms.
+    %table
+      %tr
+        %th
+        %th
+          цидате
+          %br
+          “read”
+        %th
+          говорите
+          %br
+          “talk”
+        %th
+          жите
+          %br
+          “live”
+        %th
+          дате
+          %br
+          “give”
+      %tr
+        %th 1Sg
+        %td= t("цидем", "cidém", :linebreak => true)
+        %td= t("говору", "govorú", :linebreak => true)
+        %td= t("живу", "źivú", :linebreak => true)
+        %td= t("дем", "dém", :linebreak => true)
+      %tr
+        %th 2Sg
+        %td= t("цидеш", "cidéś", :linebreak => true)
+        %td= t("говориш", "govoríś", :linebreak => true)
+        %td= t("живеш", "źivéś", :linebreak => true)
+        %td= t("деш", "déś", :linebreak => true)
+      %tr
+        %th 3Sg
+        %td= t("цидес", "cidés", :linebreak => true)
+        %td= t("говорит", "govorít", :linebreak => true)
+        %td= t("живет", "źivét", :linebreak => true)
+        %td= t("дес", "dés", :linebreak => true)
+      %tr
+        %th 1Dl
+        %td= t("цидавей", "cidávei", :linebreak => true)
+        %td= t("говоривей", "govorívei", :linebreak => true)
+        %td= t("живевей", "źivévei", :linebreak => true)
+        %td= t("давей", "dávei", :linebreak => true)
+      %tr
+        %th 2Dl
+        %td= t("цидастей", "cidástei", :linebreak => true)
+        %td= t("говоритей", "govorítei", :linebreak => true)
+        %td= t("живетей", "źivétei", :linebreak => true)
+        %td= t("дастей", "dástei", :linebreak => true)
+      %tr
+        %th 3Dl
+        %td= t("цидастей", "cidástei", :linebreak => true)
+        %td= t("говоритей", "govorítei", :linebreak => true)
+        %td= t("живетей", "źivétei", :linebreak => true)
+        %td= t("дастей", "dástei", :linebreak => true)
+      %tr
+        %th 1Pl
+        %td= t("цидаме", "cidáme", :linebreak => true)
+        %td= t("говорим", "govorím", :linebreak => true)
+        %td= t("живем", "źivém", :linebreak => true)
+        %td= t("даме", "dáme", :linebreak => true)
+      %tr
+        %th 2Pl
+        %td= t("цидате", "cidáte", :linebreak => true)
+        %td= t("говорите", "govoríte", :linebreak => true)
+        %td= t("живете", "źivéte", :linebreak => true)
+        %td= t("дасте", "dáste", :linebreak => true)
+      %tr
+        %th 3Pl
+        %td= t("циде", "cidé", :linebreak => true)
+        %td= t("говоре", "govoré", :linebreak => true)
+        %td= t("живу", "źivú", :linebreak => true)
+        %td= t("дада", "dáda", :linebreak => true)
+    %p The Volóğdeskei dialect has distinct passive and middle voice clitics, #{t "-шен", "-śen"} and #{t "-ше", "-śe"} respectively. The passive form is borrowed from the standard, as it never developed locally. In some of the easternmost Zavolotian dialects, however, neither -шен nor any other equivalent passive form came into being. -ше is used exclusively for the middle voice, while the passive voice is expressed using participles.
+    %p Negation is generally expressed with #{t "на", "na"} (phonetically [nə]; standard #{t "не", "ne"}). However, when stressed, this negative particle reverts back to #{t "не", "né"}.
+    %p The nominal system has been relatively stable, and most changes to it can be explained by regular sound changes. Very distinctive is the use of #{t "-е", "-e"} to indicate the nominative plural for all nouns, instead of the usual #{t "-и", "-i"}. Second declension nouns like #{t "жемай", "źemái"} “land” have a strange form in the nominative singular, but in all other cases the stem is <i>*źemj-</i>, lacking /l/ in all forms: #{t "жемю", "źémiu"} “land (#{abbrev 'acc.sg'})” (standard #{t "жемлу", "źémlu"}). The neuter gender remains strong, unlike all other Novegradian dialect groups.
+    %p Due to the VjV simplification sound changes, the definite adjective declension is very different compared to the standard, particularly for antepentultimate-stress adjectives like #{t "червен", "čérven"} “red”. Ending-stress adjectives such as #{t "друг", "drúg"} “second” only differ in the nominative case: #{t "другей", "drugéi"} (#{abbrev 'm'}), #{t "другуй", "drugúi"} (#{abbrev 'n'}), #{t "другей", "drugéi"} (#{abbrev 'f'}), #{t "другие", "drugíje"} (#{abbrev 'pl'}).
+    %table
+      %tr
+        %th
+        %th Masculine
+        %th Neuter
+        %th Feminine
+        %th Plural
+      %tr
+        %th Nom
+        %td= t("червеней", "čérvenei", :linebreak => true)
+        %td= t("цервене", "cervené", :linebreak => true)
+        %td= t("цервена", "cervená", :linebreak => true)
+        %td= t("цервене", "cervené", :linebreak => true)
+      %tr
+        %th Gen
+        %td{:colspan => 2}= t("цервенейво", "cervenéivo", :linebreak => true)
+        %td= t("цервене", "cervené", :linebreak => true)
+        %td= t("цервених", "cerveníh", :linebreak => true)
+      %tr
+        %th Acc
+        %td= t("червеней", "čérvenei", :linebreak => true)
+        %td= t("цервене", "cervené", :linebreak => true)
+        %td= t("цервену", "cervenú", :linebreak => true)
+        %td= t("цервене", "cervené", :linebreak => true)
+      %tr
+        %th Dat/Instr
+        %td{:colspan => 2}= t("цервенем", "cerveném", :linebreak => true)
+        %td= t("цервенуй", "cervenúi", :linebreak => true)
+        %td= t("цервениме", "cerveníme", :linebreak => true)
+      %tr
+        %th Part
+        %td{:colspan => 3}= t("цервенейво", "cervenéivo", :linebreak => true)
+        %td= t("цервеновуо", "cervenóvuo", :linebreak => true)
+      %tr
+        %th Loc
+        %td{:colspan => 3}= t("цервением", "cerveniém", :linebreak => true)
+        %td= t("цервених", "cerveníh", :linebreak => true)
+      %tr
+        %th Lat
+        %td{:colspan => 3}= t("цервенун", "cervenún", :linebreak => true)
+        %td= t("цервение", "cervenié", :linebreak => true)
+    %p The definite adjective suffixes have all undergone a significant amount of merger and analogy. Ending stress is universal throughout (except in the nom/acc sg); the two historical stress patterns still seen in the standard have evolved into two adjectival declensions instead, with some nouns (for example) taking the #{abbrev 'nom.sg.neut'} ending #{t "-е", "-e"} and others #{t "-уй", "-ui"}.
+    %p Personal pronouns function in much the same way as spoken standard dialects (including the use of clitics). However, their forms are significantly different. Below are their nominative case forms.
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Dl
+        %th Pl
+      %tr
+        %th 1st
+        %td= t("я", "iá")
+        %td= t("надуа", "nádua")
+        %td= t("ме", "mé")
+      %tr
+        %th 2nd
+        %td= t("че", "čé")
+        %td= t("вадуа", "vádua")
+        %td= t("ве", "vé")
+      %tr
+        %th 3rd
+        %td
+          = t("вин", "vín")
+          %br
+          = t("на", "ná")
+        %td= t("вида", "vidá")
+        %td= t("не", "né")
+    %p The changes to several of the prepositions made them homophonous with other common words. To eliminate this confusion, the preposition #{t "на", "ná"} “on” became #{t "ней", "néi"} (derived from a variant Proto-Slavic form *naj, seen for instance in the superlative prefix). The reduction of the negative particle was discussed above, though it can also be reinforced using the phrase #{t "ни виегье", "ni viegjé"} “not a thing”: #{t "Я на соѕиелал шево ни виегье", "Iá na sodziélal śevó ni viegjé"} “I didn’t do this.” In connected speech this can reduce to #{t "нивгье", "nivgjé"} or #{t "нигье", "nigjé"}.
+    %p Sounds changes also created vowel alterations in the possessive adjectives. Shown below are the nominative case forms.
+    %table
+      %tr
+        %th
+        %th Masculine
+        %th Neuter
+        %th Feminine
+        %th Plural
+      %tr
+        %th 1Sg
+        %td= t("муй", "múi")
+        %td= t("мие", "mié")
+        %td= t("мя", "miá")
+        %td= t("мие", "mié")
+      %tr
+        %th 2Sg
+        %td= t("туй", "túi")
+        %td= t("тие", "tié")
+        %td= t("тя", "tiá")
+        %td= t("тие", "tié")
+      %tr
+        %th 1Dl
+        %td= t("нейн", "néin")
+        %td= t("ней", "néi")
+        %td= t("ня", "niá")
+        %td= t("ние", "nié")
+      %tr
+        %th 2Dl
+        %td= t("вейн", "véin")
+        %td= t("вей", "véi")
+        %td= t("вя", "viá")
+        %td= t("вие", "vié")
+      %tr
+        %th 1Pl
+        %td= t("неш", "néś")
+        %td= t("наше", "náśe")
+        %td= t("наша", "náśa")
+        %td= t("наше", "náśe")
+      %tr
+        %th 2Pl
+        %td= t("веш", "véś")
+        %td= t("ваше", "váśe")
+        %td= t("ваша", "váśa")
+        %td= t("ваше", "váśe")
+      %tr
+        %th Reflex.
+        %td= t("суй", "súi")
+        %td= t("сие", "sié")
+        %td= t("ся", "siá")
+        %td= t("сие", "sié")
+    %p The third person forms are #{t "ево", "ievó"} “his”, #{t "ие", "ié"} “her”, #{t "ё", "ió"} “them two’s”, and #{t "ех", "iéh"} “their” in all forms.
+    %p As in the standard, however, a prepositional form is becoming more common in speech:
+    %table
+      %tr
+        %th
+        %th Sg
+        %th Dl
+        %th Pl
+      %tr
+        %th 1st
+        %td= t("вумне", "vúmne")
+        %td= t("воней", "vonéi")
+        %td= t("вонес", "vonés")
+      %tr
+        %th 2nd
+        %td= t("воче", "vočé")
+        %td= t("вовей", "vovéi")
+        %td= t("вовес", "vovés")
+      %tr
+        %th 3rd
+        %td
+          = t("вунуо", "vúnuo")
+          %br
+          = t("вуние", "vúnie")
+        %td= t("вуню", "vuniú")
+        %td= t("вуне", "vúne")
+      %tr
+        %th Reflex.
+        %td{:colspan => 3}= t("воше", "vośé")
+    %p The standard method of indicating approximations of numbers by inverting the numeral and the quantified noun (e.g., #{t "дешити минут", "déśiti minút"} “ten minutes” vs. #{t "минут дешити", "minút déśiti"} “about ten minutes”) is not used in most Zavolotian dialects. Both orderings may be used, but the only difference is which element is emphasized. Instead, approximations are formed by prefixing #{t "не-", "ne-"} onto the numeral: #{t "неѕешете минут", "nedzéśete minút"} “about ten minutes”. This is also seen in the Northern and Siberian dialects.
+
+= section "The Northern Dialects" do
+  = section "Geographic Distribution" do
+    %p The Northern dialects are the dominant spoken form of Novegradian along the Arctic littoral, from the Kola Peninsula to the Ob Gulf.
+
+  = section "History" do
+    %p The Northern dialects originate with the dialect of the Pomors (or <i>kodzári</i>), the first Novegradian settlers along the coast of the White Sea. As they explored the Arctic coastline, they spread their dialect along with them. With the founding of major port cities such as Arhánjeiske, the northern dialects became the standard among Novegradian shipping and trading circles. The <i>kodzári</i> being the first colonial settlers of the Ob valley and from there into Siberia, a dialect continuum exists in northern Siberia, with more typical Northern dialectical features towards the north and Siberian dialectical features towards the south.
+    %p Due to its use as an historical trading language, it has borrowed vocabulary from many different languages, not only local languages such as Komi, Nenets, and Saami, but also regional shipping languages such as Norwegian, Dutch, and English.
+
+  = section "Status" do
+    %p Though the dialect has no official support, its usage remains strong. Its use is a matter of pride to many northerners, so it will often be seen on shop signs and other locations in cities. However, people are expected to use the standard grammar and pronunciation in formal situations.
+
+  = section "Phonology" do
+    %p The following is based on the Arhánjeiskei dialect.
+    %p Northern dialects have not diverged significantly from the standard form, phonologically speaking. Changes can be grouped into the following categories.
+    %p Loss of Nominative /e/: As in most dialects, the final /e/ seen in the nominative/accusative singular of masculine nouns and adjectives is lost, though the consonant before does not lose its voicing. As in the central dialects, the fourth declension nominative ending <i>-i</i> then shifted to <i>-e</i>.
+    %p Cluster Simplification in the Nominative: Most final clusters were simplified, usually by deleting an element or by inserting an epenthetic vowel, generally /i/ or /e/: #{t "мус", "mús"} “bridge” (standard #{t "мосте", "móste"}), #{t "верех", "véreh"} “top” (standard #{t "врех", "vréh"}, from Common Slavic *vьrxъ). Note that these clusters often return when the noun is declined and an ending is added, as is seen in their plural forms: #{t "моста", "mostá"}, #{t "верха", "verhá"}. Other changes are harder to predict, such as the form #{t "дожже", "dóžže"} “rain” (pronounced [doʒ.ʒe]; standard #{t "дожгьи", "doźgjí"}), which has the stem #{t "*дожгь-", "*doźgj-"} in all other cases.
+    %p Other Cluster Simplification: Other cluster simplifications occur in all forms of a word, such as the simplification of /tn dn/ → /nn/ and /pm bm/ → /mm/.
+    %p Lenition of /v/: The northern dialects have shifted the pronunciation of standard /β/ to the labiodental [v]. It also behaves as a normal fricative, meaning it is not weakened to /w/ preconsonantally or word-finally. Word-finally or before unvoiced consonants it becomes /f/, indicated orthographically with the Russian letter ф.
+    %p Realization of *y: Proto-Slavic *y becomes /u/ in all positions except finally. In the standard it varies between /i/ and /wi/: #{t "пудати", "pudáti"} “ask” (standard #{t "пуидати", "puidáti"}).
+    %p Realization of Yat’: The yat’ /æ/ becomes /i/ in all positions: #{t "ида", "idá"} “food” (standard #{t "ѣда", "iědá"}).
+    %p Realization of *jь: Where Proto-Slavic *jь became /j/ or /ji/ in the standard, it becomes /i/ in the northern dialects: #{t "име", "íme"} “name” (standard #{t "ймѣно", "jmě́no"}; compare archaic variant #{t "ймѣ", "jmě́"}).
+    %p Yer-Raising: The front yer *ь may sporadically be raised to /i/ when stressed: #{t "дин", "dín"} “day” (standard #{t "дене", "déne"}), #{t "вих", "víh"} “all” (standard #{t "вехе", "véhe"}).
+    %p Lenition of /g/: The phoneme /g/ (including what is /ɣ/ in the standard) lenites to /x/ word-finally: #{t "бох", "bóh"} “God” (standard #{t "боғе", "bóğe"}).
+    %p Loss of Intervocalic /j/: Intervocalic /j/ is lost in the nominative definite adjective endings and in verb endings.
+    %p Vowel Changes: There are several other miscellaneous vowel shifts seen in northern dialects. First is the unconditional change /ja/ → /je/: #{t "еблоко", "iébloko"} “apple” (standard #{t "яблоко", "iábloko"}). Second is the change /o/ → /u/ in stressed closed syllables, as seen in мус “bridge” above. Last is the change /e/ → /a/ after the consonants /sʲ zʲ ts dz tʃ/ (and after /s z/ only if the /e/ is unstressed): #{t "шастра", "śastrá"} “sister” (standard #{t "шестра", "śéstra"}). In addition, the sequence /xo/ consistently fronted to /xe/: #{t "хедите", "hédite"} “go” (standard #{t "ходити", "hóditi"}).
+    %p Handling of Yer Dropping: The Proto-Slavic ultrashort vowels /ъ/ and /ь/ were generally lost when unstressed and kept when stressed. However, in standard Novegradian, they were also kept whenever dropping them would create an awkward cluster. The northern dialects went ahead and dropped all unstressed yers in the initial syllable of a word, inserting an epenthetic /i/ at the beginning of the word. This means many words gain a prefix as well as a suffix when they are conjugated or declined: #{t "рот", "rót"} “mouth”, plural #{t "ирта", "irtá"} (standard #{t "роте", "róte"}, #{t "роти", "róti"}, though compare Russian plural #{t "рты", "rty"}). The same occurs even when the cluster would be no trouble to pronounce, as long as it was created by yer dropping: #{t "сон", "són"} “dream”, plural #{t "исна", "isná"} (standard #{t "соне", "sóne"}, #{t "сони", "sóni"}). If too awkward of a cluster would occur anyway if the yer were dropped, conflicting forms appear. Some dialects regularize the noun, as in #{t "верех", "véreh"} “top” → #{t "верха", "verhá"} as shown above (instead of #{t "**иврха", "ivrha"}). Others regularize the noun but still add the prefix, giving the plural #{t "иверха", "iverhá"}.
+
+  = section "Grammar" do
+    %p The Northern dialects are perhaps more notable for their grammatical divergences from standard Novegradian than for their phonological ones.
+
+    = section "Verbs" do
+      %p Verbs are much the same as the standard, with the following significant divergences:
+      %p Double Vowel Simplification: Due to /j/-dropping, any sequence of a vowel twice in a row is reduced to one: #{t "радет", "radét"} “(he) enjoys” (standard #{t "радеет", "radéiet"}).
+      %p Stress in the Dual and Second Person Plural: In verbs that are ending stressed, the stress in the present/future tense is always placed on the last syllable, not on the first syllable of the ending. This gives forms such as #{t "цидава", "cidavá"} “the two of us read” (standard <i>cidáva</i>), #{t "цидаста", "cidastá"} “you two/them two read” (standard <i>cidásta</i>), and #{t "цидате", "cidaté"} “you all read” (standard <i>cidáte</i>). The #{abbrev '3pl'} form of the first conjugation does not do this, as the final /ti/ has been dropped: #{t "цида", "cidá"} “they read” (standard #{t "цидати", "cidáti"}).
+      %p #{abbrev '3pl'} Forms: The #{abbrev '3pl'} suffix in the present/future forms of all conjungations has been lost: #{t "цида", "cidá"} “they read”, #{t "луба", "lúba"} “they love”, #{t "пихьа", "píhja"} “they write”. The #{abbrev '3pl'} ending for athematic verbs is <i>-а</i>: #{t "еса", "iésa"} “they are”, #{t "дада", "dáda"} “they give”, etc. Note how the ending <i>-а</i> has been generalized to all conjugations.
+      %p Synharmony: The process of syllabic synharmony, which affected all of the Slavic languages from the Proto-Slavic period up through the Middle Ages (see the Historical Phonology), has continued in the Northern dialects where it had stopped in the standard. This is particularly visible in the #{abbrev '1sg'} present tense form of many verbs. Like in medieval Czech, the vowel /i/ appears instead of /u/ whenever the preceding consonant has undergone morphological palatalization (i.e., is different from the consonant in the infinitive): #{t "я пихьин", "iá píhjin"} “I am writing” (standard #{t "яс пихьун", "iás píhjun"}), but #{t "я будун", "iá búdun"} “I will be” (standard #{t "яс бадун", "iás bádun"}). This is also always seen for all second conjugation verbs: #{t "я говорин", "iá govorín"} (standard #{t "яс говорун", "iás govorún"}), since this ending comes from an older *-jǫ.
+      %p Future Tense: The future tense of imperfective verbs is not marked using be+infinitive, but rather with the present-future form and the non-declining particle #{t "хекь", "hékj"} or #{t "хе", "hé"} (derived from the verb #{t "хотѣти", "hótěti"} “want”), which can appear either immediately before or after the verb. The form #{t "буте", "búte"} “be” + infinitive is generally used as a variant of the future hypothetical form буте + past. The future tense of “be” may be marked either by the future tense forms of буте alone (e.g., #{t "будун", "búdun"} “I will be”), or the future tense forms combined with one of these particles (e.g., #{t "хе будун", "hé búdun"}).
+      %p Infinitives of Roots Ending in Velar Consonants: Standard Novegradian forms marks the infinitive of verb roots ending in /k g/ with #{t "-йкьи", "-ikji"}. Northern dialects generally reinsert the dropped consonant and use the regular <i>-t-</i> ending: #{t "могте", "mógte"} “to be able to” (standard #{t "мойкьи", "móikji"}), #{t "плакте", "plákte"} “cry” (standard #{t "плайкьи", "pláikji"}).
+      %p One unique verb form seen in some Northern dialects is the phrasal past perfective, which exists in free variation with the analytic perfective past form, though only when the subject is a pronoun. The subject is expressed as a declined form of the preposition #{t "о", "o"} “at” followed by a non-declining verb form identical to the neuter indefinite perfective passive participle. The word “identical” is used because here and here only a “passive participle” exists even for intransitive verbs: #{t "омни ойдено", "omní óideno"} “I have left” (standard #{t "яс ошле", "iás oślé"}).
+      %p Past tense verbs formed using the l-participle conjugate slightly differently than in the standard. While singular verbs continue to agree with their subject in gender (masculine, feminine, or inanimate-formerly-neuter), if the subject is third person, an additional #{t "-й", "-i"} gets suffixed: #{t "я цидале", "iá cidále"} “I (#{abbrev 'masc'}) read”, #{t "он цидалей", "on cidálei"} “he read”; #{t "я цидала", "iá cidála"} “I (#{abbrev 'fem'}) read”, #{t "она цидалай", "oná cidálai"} “she read”. This does not occur in the dual or plural. This is derived from the #{abbrev '3sg'} clitic form of “be”. In Old Novegradian the present tense of “be” always had to be used in conjunction with the past tense. In the standard, this “be” fell out of use, but left this one trace in the North. This process does not extend to the future hypothetical (which also uses l-participles) in the Arhánjeiskei dialect, but has spread analogically in some others.
+      %p Another distinctive feature of Northern dialect verbs is the reshuffling of several directional prefixes used with verbs of motion to better align with the prepositional system. For instance, the standard prefix #{t "до-", "do-"}, indicating motion up to a destination, has been replaced by #{t "ко-", "ko-"}<sup>1</sup>, which does not exist as a prefix in other dialects: #{t "койсте", "kóiste"} “go/walk up to”. The prefix до-, in turn, has replaced standard #{t "под-", "pod-"} in the sense of “up to [a person]”: #{t "дойсте до ковуш", "dóiste do kovúś"} “walk up to someone”.
+    
+    = section "Nouns" do
+      %p The nominal system features a number of unusual endings, forms that have fallen out of use in standard Novegradian. It has also regularized some forms where multiple endings exist in the standard.
+      %p The neuter nominative singular ending has been generalized to -o in all cases. Neuter nouns that used to have #{t "-e", "-e"} now have #{t "-ё", "-io"}: #{t "морё", "mório"} “sea” (standard #{t "море", "móre"}), which now declines as a third declension noun. The nominative plural ending has also been generalized to an accented <i>-á</i> for all fourth declension nouns.
+      %p The locative case has been lost completely except in frozen adverbs, having been replaced by the accusative: #{t "по драгу", "po drágu"} “along the road” (standard #{t "по драгѣ", "po drágě"}).
+      %p The only fourth declension genitive singular ending is #{t "-у", "-u"} as in the third declension.
+      %p The dative/instrumental plural is #{t "-ама", "-ama"} for all nouns. This form is identical to the Common Slavic dual, though why this form has been kept and the plural -ам lost is unknown.
+      %p Sixth declension nouns with the suffix <i>-en-</i> appear with the suffix #{t "-ми", "-mi"} in the nominative singular: #{t "ими", "ími"} “name” (standard #{t "ймѣно", "jmě́no"}). This is equivalent to the Old Novegradian ending #{t "-мѣ", "-mě"}, which is no longer used.
+      %p The most unique feature is the prefixed /i/ many nouns gain due to a fallen yer in the first syllable. This prefix appears in all forms other than the nominative singular, accusative singular, and genitive plural. Without knowledge of the history of the language, however, it is not possible to predict where the prefix is needed. This prefix also appears in other parts of speech in some dialects, but in such cases it will appear in all forms (e.g., verbs such as #{t "изуати", "izuáti"} “call”, cf. standard #{t "зуати", "zuáti"}). Note that if the yer has fallen and there is no stress alteration at all (i.e., it never resurfaces as /o/ or /e/), no prefix is used: #{t "пеин", "pjín"} “I drink” (not #{t "**ипеин", "ipjín"}).
+      %p The second (ja) declension also has a very different appearance due to synharmony, which resulted in the fronting of most endings with back vowels.
+      %table
+        %tr
+          %th
+          %th{:colspan => 6} Singular
+        %tr
+          %th
+          %td нига “book”
+          %td жемие “land”
+          %td ежеро “lake”
+          %td рот “mouth”
+          %td нокье “night”
+          %td ими “name”
+        %tr
+          %th Nom
+          %td= t("нига", "níga", :linebreak => true)
+          %td= t("жемие", "źémie", :linebreak => true)
+          %td= t("ежеро", "iéźero", :linebreak => true)
+          %td= t("рот", "rót", :linebreak => true)
+          %td= t("нокье", "nókje", :linebreak => true)
+          %td= t("ими", "ími", :linebreak => true)
+        %tr
+          %th Gen
+          %td= t("ниги", "nígi", :linebreak => true)
+          %td= t("жемеи", "źemjí", :linebreak => true)
+          %td= t("ежеру", "iéźeru", :linebreak => true)
+          %td= t("ирту", "irtú", :linebreak => true)
+          %td= t("ногьи", "nogjí", :linebreak => true)
+          %td= t("имену", "ímenu", :linebreak => true)
+        %tr
+          %th A/L
+          %td= t("нигу", "nígu", :linebreak => true)
+          %td= t("жемеи", "źémji", :linebreak => true)
+          %td= t("ежеро", "iéźero", :linebreak => true)
+          %td= t("рот", "rót", :linebreak => true)
+          %td= t("нокье", "nókje", :linebreak => true)
+          %td= t("ими", "ími", :linebreak => true)
+        %tr
+          %th D/I
+          %td= t("нигой", "nígoi", :linebreak => true)
+          %td= t("жемией", "źémiéi", :linebreak => true)
+          %td= t("ежером", "iéźerom", :linebreak => true)
+          %td= t("иртех", "irtéh", :linebreak => true)
+          %td= t("нокьех", "nókjeh", :linebreak => true)
+          %td= t("именех", "ímeneh", :linebreak => true)
+        %tr
+          %th Part
+          %td= t("нигох", "nígoh", :linebreak => true)
+          %td= t("жемиех", "źémieh", :linebreak => true)
+          %td= t("ежерох", "iéźeroh", :linebreak => true)
+          %td= t("иртех", "irtéh", :linebreak => true)
+          %td= t("нокьех", "nókjeh", :linebreak => true)
+          %td= t("именех", "ímeneh", :linebreak => true)
+        %tr
+          %th Lat
+          %td= t("нигун", "nígun", :linebreak => true)
+          %td= t("жемеин", "źémjin", :linebreak => true)
+          %td= t("ежерон", "iéźeron", :linebreak => true)
+          %td= t("иртен", "irtén", :linebreak => true)
+          %td= t("нокьин", "nókjin", :linebreak => true)
+          %td= t("именин", "ímenin", :linebreak => true)
+        %tr
+          %th Voc
+          %td= t("нигамо", "nígamo", :linebreak => true)
+          %td= t("жемямо", "źémiamo", :linebreak => true)
+          %td= t("ежеромо", "iéźeromo", :linebreak => true)
+          %td= t("ротмо", "rótmo", :linebreak => true)
+          %td= t("нокьмо", "nókjmo", :linebreak => true)
+          %td= t("имимо", "ímimo", :linebreak => true)
+        %tr
+          %th
+          %th{:colspan => 6} Plural
+        %tr
+          %th Nom
+          %td= t("ниги", "nígi", :linebreak => true)
+          %td= t("жемеи", "źémji", :linebreak => true)
+          %td= t("ежера", "iźerá", :linebreak => true)
+          %td= t("ирта", "irtá", :linebreak => true)
+          %td= t("нокьие", "nókjie", :linebreak => true)
+          %td= t("имена", "imená", :linebreak => true)
+        %tr
+          %th Gen
+          %td= t("ниг", "níg", :linebreak => true)
+          %td= t("жем", "źem", :linebreak => true)
+          %td= t("ежер", "iéźer", :linebreak => true)
+          %td= t("рот", "rót", :linebreak => true)
+          %td= t("нокьей", "nókjei", :linebreak => true)
+          %td= t("имен", "ímen", :linebreak => true)
+        %tr
+          %th A/L
+          %td= t("ниги", "nígi", :linebreak => true)
+          %td= t("жемеи", "źémji", :linebreak => true)
+          %td= t("ежера", "iźerá", :linebreak => true)
+          %td= t("ирта", "irtá", :linebreak => true)
+          %td= t("нокьие", "nókjie", :linebreak => true)
+          %td= t("имена", "imená", :linebreak => true)
+        %tr
+          %th D/I
+          %td= t("нигама", "nígama", :linebreak => true)
+          %td= t("жемиема", "źémiema", :linebreak => true)
+          %td= t("ежерама", "iéźerama", :linebreak => true)
+          %td= t("иртама", "irtáma", :linebreak => true)
+          %td= t("ногьама", "nogjáma", :linebreak => true)
+          %td= t("именама", "ímenama", :linebreak => true)
+        %tr
+          %th Part
+          %td= t("нигоф", "nígof", :linebreak => true)
+          %td= t("жемиеф", "źémief", :linebreak => true)
+          %td= t("ежероф", "iéźerof", :linebreak => true)
+          %td= t("иртеф", "irtéf", :linebreak => true)
+          %td= t("нокьеф", "nókjef", :linebreak => true)
+          %td= t("именеф", "ímenef", :linebreak => true)
+        %tr
+          %th Lat
+          %td= t("ниги", "nígi", :linebreak => true)
+          %td= t("жемеи", "źémji", :linebreak => true)
+          %td= t("ежери", "iéźeri", :linebreak => true)
+          %td= t("ирти", "irtí", :linebreak => true)
+          %td= t("нокьи", "nókji", :linebreak => true)
+          %td= t("имени", "ímeni", :linebreak => true)
+        %tr
+          %th Voc
+          %td= t("нигимо", "nígimo", :linebreak => true)
+          %td= t("жемеимо", "źémjimo", :linebreak => true)
+          %td= t("ежерамо", "ieźerámo", :linebreak => true)
+          %td= t("иртамо", "irtámo", :linebreak => true)
+          %td= t("нокьиемо", "nókjiemo", :linebreak => true)
+          %td= t("именамо", "imenámo", :linebreak => true)
+      %p In most spoken dialects, the possessive forms of kinship terms can appear as the complement of the verb “to be”, which normally requires the dative/instrumental case. In the Northern dialects, a trace of that instrumental is preserved by the insertion of #{t "на", "na"} “on” before the kinship term, since it cannot properly take the instrumental: #{t "Ше-и на другмо", "Śé-i na drúgmo"} “This is my friend”. Other sentences function as normal: #{t "Ше-и другем о Михи", "Śé-i drúgem o Míhi"} “This is Míha’s friend”. Compare this to the use of на before a noun in the instrumental in passive constructions in the standard.
+
+    = section "Adjectives" do
+      %p Indefinite adjectives are more or less the same as in the standard, except that they may simplify in the nominative singular masculine and genitive plural when no ending is attached (#{abbrev 'nom.sg.masc'} #{t "новеградес", "novegrádes"} “Novegradian”, #{abbrev 'nom.sg.fem'} #{t "новеградеска", "novegrádeska"}). The dative/instrumental also has the plural ending #{t "-име", "-ime"}, contrasted with the #{t "-ама", "-ama"} of nouns.
+      %p Definite adjectives simplify in the nominative case, and the #{abbrev 'nom.sg.masc'} form has the ending #{t "-ой", "-oi"} instead of the usual #{t "-ей", "-ei"}: #{t "царвеной", "cárvenoi"} “red (#{abbrev 'masc.sg'})”, #{t "царвена", "carvená"}, (#{t "царвене", "carvené"}), #{t "царвени", "carvení"}.
+      %p Northern dialects also make frequent use of adjectival possession, rarely seen in modern standard Novegradian. Adjectival possession is means of indicating possessive relationships, if the possessor is a person, by turning the possessor into an adjective. This is accomplished using the ending #{t "-оф", "-of"} (which becomes #{t "-ов-", "-ov-"} when another ending is added) for masculine nouns or names and #{t "-ин", "-in"} for feminine ones. This possessive adjective then takes indefinite endings agreeing with the noun being modified: #{t "татоф вуз", "tátof vúz"} “(my) father’s car”, #{t "Еванова жана", "Ievánova źaná"} “Ieváne’s wife”.
+      %p The ending -и is seen in the nominative case for all animate numerals: #{t "доваи", "dováji"} “two”, #{t "цетери", "céteri"} “four”, etc (standard #{t "доваин", "dóvajin"}, #{t "цетеро", "cétero"}). Modifiers such as numerals, determiners such as “all” or “both”, and all other ‘pronominal adjectives’ (adjectives following a more noun-like declension pattern) all use the dative/instrumental plural ending -ама.
+
+    = section "Other Parts of Speech" do
+      %p The third person pronouns do not take the prefixed /n/ when following prepositions. Similarly, all prepositions like #{t "во", "vo"} “in” have lost their form containing /n/: #{t "на ево", "na ievó"} “on him/it” (standard #{t "на нем", "na ném"}). However, the /n/ is still seen in the third person forms of declining prepositions: #{t "ванму", "vanmú"} “in him/it”. The final /v/ added to some prepositions to break up hiatus has also been lost.
+      %p The conjunction #{t "да", "da"} is used instead of #{t "со", "so"} to connect multiple nouns in a single phrase. The nouns on both sides are in the same case: #{t "я да ти", "iá da tí"} “you and me”. Between clauses, on the other hand, it replaces the disjunction #{t "но", "no"} “but”: #{t "ойшал, да не дойшал", "oiśál, da ne doiśál"} “(He) left, but did not reach his destination” (standard #{t "ошле, но не дошле", "oślé, no ne doślé"}).
+      %p Northern dialects distinguish between unanalyzable and analyzable (phrasal) prepositions in that the latter may freely be postposed as well, and come after the noun they modify: #{t "вмести ме да те", "vmésti mé da té"} or #{t "ме да те вмести", "mé da té vmésti"} “between you and me”. However, this cannot be done with simple prepositions such as на “on”, пред “in front of”, or even compounded ones such as зенад “from above”, as these have no nominal componant.
+
+= section "The Siberian Dialects" do
+  = section "Geographic Distribution" do
+    %p The Siberian dialects are the dominant spoken language in the trans-Ural portion of Novegrad, except in the far northwest around the lower portion of Ob River (Northern) and in various pockets along the Ural Mountains (Zavolotian). In many newer cities, as well as some of the largest Siberian cities, a dialect closer to the standard will be frequently heard.
+
+  = section "History" do
+    %p The Siberian dialects are descended from an earlier form of the northern ones, spread by the Pomors who first penetrated the territory and explored the region’s great river systems. These first settlers were largely self-sufficient and isolated, giving them plenty of space and isolation for their dialect to develop.
+    %p After about one to two centuries, depending on the region, a new wave of settlers began moving into the territory from the west, especially once the major cities were connected by rail. These new settlers brought with them the more standardized language, though the first generations after them turned to a more mixed style of speech, which became the modern Siberian dialects.
+
+  = section "Status" do
+    %p The Siberian dialects receive no official support, but are very important to the local Siberian Novegradian population, who tend to have a strong connection with their territory rather than the ‘European’ western half of Novegrad. It is often seen on shop signs and similar informal contexts, but in formal situations, everyone is expected to use the standard manner of speech.
+
+  = section "Phonology" do
+    %p Phonologically, the Siberian dialects are very similar to the northern ones, except in the following respects:
+    %p Preservation of the Yat’: The yat’ /æ/ is preserved in stressed positions, just as in the standard.
+    %p Absence of /f/: The phoneme /f/ is not present in the Siberian dialects, as the standard influence has reinstituted /β/. However, unlike in the standard, /β/ is frequently seen word-finally and does not lenite to [w]. This has led to numerous incidents of hypercorrection, where /w/ derived from a former /u/ or /l/ have been hypercorrected to /β/. This is most noticeable in the past tense endings.
+    %p Stressed /o/ after /g/: The sequence /ˈgo/ in the standard dialect becomes /kuo/ in Siberia: #{t "куора", "kuóra"} “mountain” (standard #{t "гора", "góra"}), #{t "куород", "kuórod"} “city center” (standard #{t "городе", "górode"}).
+    %p Initial stress: Though far from universal, Siberian dialects show a much stronger tendency to stress the first syllable of a word, giving them a very distinctive rhythm. This also has the effect of making /wo/ and /o/ contrastive at the beginning of a word. Originally, [w] was inserted before initial stressed /o/. However, when the stress shift began in Siberian dialects, words that formerly began with unstressed /o/ that now had become stressed did not gain this on-glide.
+
+  = section "Grammar" do
+    = section "Verbs" do
+      %p Verbs are largely the same as in northern dialects, except that the future tense is marked by the particle #{t "буд", "búd"} (from бути “be”) instead of #{t "хекь", "hékj"}, or the standard буити + infinitive method is used. The northern past perfective construction has become limited to rural speech, though the 3rd person agreement in the past tense remains widespread.
+      %p In the past tense the suffixes used all contain /β/ instead of /l/. This originates from the original Siberian lenition of the old /l/ to /w/, which then became /β/ by hypercorrection. The dual past tense form has also been lost: #{t "цидав", "cidáv"}, #{t "цидава", "cidáva"}, #{t "цидаво", "cidávo"}, #{t "цидави", "cidávi"}. The loss of the dual ending (even when it was stressed) may be due to the reanalysis of the past tense forms as participles, which they had been in Proto-Slavic (see below).
+
+    = section "Nouns and Adjectives" do
+      %p The unusual genitive ending <i>-u</i> for fourth declension nouns has been replaced by the standard form <i>-a</i>, with sporadic application of <i>-u</i> following the same rules as in the standard. The one major exception is nouns which take the prefix и-, which seem to have become a new declension paradigm that always take their genitive in <i>-u</i>: #{t "ежера", "iéźera"} “of the lake”, but #{t "идну", "idnú"} “of the day”. The dative/instrumental plural #{t "-ама", "-ama"} remains, however, as does the merger of the accusative and locative cases. The nominative plural ending #{t "-и", "-i"} has been reintroduced for masculine and neuter nouns in most dialects, though not all (although a few go the other route and make -и the only allowable plural ending, never -а).
+      %p The sixth declension nominative ending, #{t "-ми", "-mi"} in the northern dialects, has become #{t "-ме", "-me"} in Siberia: #{t "име", "íme"} “name”.
+      %p Nouns that underwent a vowel shift regularize, generally with whatever vowel was in the nominative singular being generalized to all forms: #{t "мус", "mús"} “bridge”, #{t "мусти", "músti"} “bridges”.
+      %p The circumfix ending и-stem-а has actually gained more use in the Siberian dialects, having spread to a number of other one-syllable nouns, even if they never lose a vowel: #{t "вуз", "vúz"} “car”, plural #{t "ивуза", "ivuzá"}. This prefixed <i>i-</i> is seen in all forms but the nominative and accusative singular, and genitive plural. Exactly which nouns have acquired this prefix in their declension varies from region to region.
+      %p Adjectives have regained something closer to the standard, unreduced Novegradian endings: #{t "царвеней", "cárvenei"}, #{t "царвеная", "carvénaia"}, (#{t "царвеное", "carvénoie"}), #{t "царвении", "carvéniji"}. However, interestingly, the Siberian dialects have filled the gap in the Novegradian participle system by creating an active perfective participle, through reananlysis of the past tense forms: #{t "Ше-и дужой-то, овидивой ме вецераш", "Śé-i duźói-to, ovídivoi mé véceraś"} “That’s the person who saw me yesterday.” (standard #{t "Ше-и дужей-то, котрей мене овидѣле вецераш", "Śé-i duźéi-to, kótrei mené ovíděle véceraś"}).
+
+    = section "Other Parts of Speech" do
+      %p These aspects remain largely the same as in Northern speech. However, the standard #{t "но", "no"} “but” has retaken its role from #{t "да", "da"}, though да is still used to link multiple nouns.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Derived from the preposition ко “to, towards”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
