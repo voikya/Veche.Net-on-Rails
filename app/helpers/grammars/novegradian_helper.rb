@@ -50,6 +50,7 @@ module Grammars
       'INDEF' => "Indefinite",
       'INDET' => "Indeterminate",
       'INF' => "Infinitive",
+      'INS' => "Instrumental",
       'INTENS' => "Intensive Degree",
       'INTR' => "Intransitive",
       'ITER' => "Iterative",

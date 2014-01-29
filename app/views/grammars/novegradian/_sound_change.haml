@@ -1,0 +1,10 @@
+- examples ||= []
+
+%table.soundchange
+  - examples.each do |example|
+    %tr
+      %td= example[:slavic].html_safe
+      %td.arrow →
+      %td= example[:nov].html_safe
+      %td= example[:phonetic].html_safe
+      %td= example[:gloss].html_safe
