@@ -1,0 +1,2930 @@
+- content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Додание"
+
+= render :partial => 'navigation'
+
+= section "Colors" do
+  %p Novegradian has nine basic color terms, compared to the eleven of English. A basic color term is the highest level of color terminology in a language, a term that cannot be encompassed by another larger term. For example, in English “crimson” is not a basic color term because the term “red” includes “crimson” as well as many other shades.
+  %p What constitutes each color varies significantly from the Latinate pattern used throughout much of Europe, the result of the many years of relative isolation the language experienced until around the 17th century, although there has been influence as well from the Uralic languages.
+  %table.invisible
+    %tr
+      %td= image_tag "novegradian/red.png", :alt => "Red"
+      %td #{t "Цервене", "cérvene"}, often translated as “red”, encompasses the range from dark reds to medium-strength oranges. Some colors that might be considered very dark purple in English are also included.
+    %tr
+      %td= image_tag "novegradian/yellow.png", :alt => "Yellow"
+      %td #{t "Жољте", "źółte"}, or “yellow”, includes the yellows, golds, and lighter oranges. Oranges (the fruit) would be considered to be жољте.
+    %tr
+      %td= image_tag "novegradian/green.png", :alt => "Green"
+      %td #{t "Желене", "źeléne"}, or “green”, includes the yellow-greens, greens, and some turqoise.
+    %tr
+      %td= image_tag "novegradian/lblue.png", :alt => "Light Blue"
+      %td #{t "Плаве", "pláve"}, or “light blue”, covers some blue-greens and goes to the medium blues.
+    %tr
+      %td= image_tag "novegradian/dblue.png", :alt => "Dark Blue"
+      %td #{t "Шинье", "śínje"}, or “dark blue”, includes the darker shades of blue as well as most purples.
+    %tr
+      %td= image_tag "novegradian/brown.png", :alt => "Brown"
+      %td #{t "Руде", "rúde"}, or “brown”, covers the range of browns as well as dull reds.
+    %tr
+      %td= image_tag "novegradian/black.png", :alt => "Black"
+      %td #{t "Церне", "cérne"} means “black”.
+    %tr
+      %td= image_tag "novegradian/white.png", :alt => "White"
+      %td #{t "Бѣле", "bě́le"} means “white”.
+    %tr
+      %td= image_tag "novegradian/grey.png", :alt => "Grey"
+      %td All intermediate shades between black and white are referred to as #{t "хѣре", "hě́re"} “grey”.
+  %p Two other colors, #{t "розове", "rózove"} “pink” and #{t "оранжеве", "oránźeve"} “orange”, are gaining increasing usage due to Western European influence. However, they are generally not viewed as “basic” terms at present.
+
+= section "Time and Date" do
+  = section "Months and Weekdays" do
+    %p The days of the week for the most part have transparent meanings related to their position within the week. As in the rest of Europe, the week begins on Monday.
+    %ul
+      %li Monday — #{t "понедѣлнике", "ponedě́lnike"} “the one after the day of rest”
+      %li Tuesday — #{t "торнике", "tórnike"} “the second one, the other one”
+      %li Wednesday — #{t "срѣда", "srě́da"} “the middle”
+      %li Thursday — #{t "цетуерге", "cetuérge"} “the fourth one”
+      %li Friday — #{t "петеке", "péteke"} “the fifth one”
+      %li Saturday — #{t "собота", "sobóta"} “the Sabbath”
+      %li Sunday — #{t "недѣла", "nedě́la"} “day of no working, rest”
+    %p In colloquial speech amongst all generations, the pronunciation [ˈspa.tə] is almost universal for собота in the sense of “Saturday”, while “Sabbath” universally retains the older pronunciation [so.ˈbo.tə]. The “спата” pronunciation originated as a hypercorrection, an attempt to remove a supposedly Russified pronunciation from the language (as the native Novegradian cognates of many Russian words with the C<sub>1</sub>oC<sub>2</sub>oC<sub>3</sub> structure have a C<sub>1</sub>C<sub>2</sub>aC<sub>3</sub> form, although properly they also require C2 to be either /l/ or /r/). It has been further strengthened by the perceived connection with спати “sleep, rest”, which is actually completely unrelated. The [so.ˈbo.tə] pronunciation remains in use for all meanings in formal registers.
+    %p The month names are less transparent, deriving from older Slavic names and describing nature.
+    %ul
+      %li January — #{t "ледана", "lédana"}, from #{t "леде", "léde"} “ice”
+      %li February — #{t "лутана", "lútana"}, from #{t "луте", "lúte"} “severe, fierce [frost]”
+      %li March — #{t "сокана", "sókana"}, from #{t "соке", "sóke"} “tree sap”
+      %li April — #{t "травана", "trávana"}, from #{t "трава", "travá"} “grass”
+      %li May — #{t "куѣтана", "kuě́tana"}, from #{t "куѣте", "kuě́te"} “flower, color”
+      %li June — #{t "цервена", "cérvena"}, from #{t "цервене", "cérvene"} “red”
+      %li July — #{t "липена", "lípena"}, from #{t "липа", "lípa"} “lime (linden) tree”
+      %li August — #{t "шерпана", "śérpana"}, from #{t "шерпе", "śérpe"} “sickle”
+      %li September — #{t "врѣсана", "vrě́sana"}, from #{t "врѣсе", "vrě́se"} “heather”
+      %li October — #{t "румѣна", "rumě́na"}, from #{t "румѣне", "rumě́ne"} “dark red”
+      %li November — #{t "листопаде", "lístopade"}, from #{t "листе", "líste"} “leaf” and #{t "падати", "pádati"} “fall”
+      %li December — #{t "снѣжена", "sně́źena"}, from #{t "снѣге", "sně́ge"} “snow”
+
+  = section "Adverbs and Other Time Terminology" do
+    %p Novegradian has three words that can be translated as “now” in English:
+    %ul
+      %li #{t "соѕаса", "sodzása"} or #{t "шеѕас", "śedzás"} — These two terms both mean “now, at this very moment”. They are identical in meaning; the first is native, the second is a Russian calque.
+      %li #{t "тобирво", "tobírvo"} — This means “now” when something at present is being contrasted to something in the past. It is similar, though not identical to, the expression “and now” in English, in that it contrasts present and past.
+      %li #{t "нинѣ", "níně"} — This is a much less focused equivalent of соѕаса or тобирво, meaning “nowadays” or “at present”. While соѕаса points to a specific moment in time, нинѣ points to a span of time encompassing the present moment.
+    %p Соѕаса is a distortion of Common Slavic *sъ-čаsomь “with the hour”, or possibly sь-čаsъ “this hour”. Similar in origin are #{t "шеден", "śedén"} “today” and #{t "шеғод", "śeğód"} “this year”.
+    %p Similar adverbs, except derived from the distal demonstrative *onъ, are #{t "ономедни", "onomédni"} “on that day” and #{t "ономеғоди", "onoméğodi"} “in that year”, derived from Common Slavic *onomь-dьne and *onomь-godě, respectively. These may be used to refer to specific dates in the past or the future.
+    %p The adjective #{t "прошле", "próśle"} is used to mean “last” or previous”: #{t "прошлое асто", "próśloie ásto"} “last year”. The adjective #{t "наступне", "nastúpne"} (pronounced [nə.ˈstu.ne]) is used to mean “next” or “following”: #{t "наступное асто", "nastúpnoie ásto"} “next year”. There is one adverb, #{t "љони", "łoní"}, meaning “last year”, but its usage is somewhat marked.
+    %p “Tomorrow” is #{t "занок", "zánok"}, literally “behind the night”. “The day after tomorrow” is #{t "нимзанок", "nimzánok"}, literally “past tomorrow”.
+    %p “Yesterday” is #{t "вецераш", "véceraś"}, literally “[of/before] this [last] evening”. “The day before yesterday” is #{t "нимецераш", "niméceraś"}, literally “past yesterday”.
+    %p Although not frequently used, #{t "денеш", "denéś"} also means “today”, generally in more poetic or archaic contexts. Similar is the adverb #{t "ногьеш", "nogjéś"}, meaning “tonight”.
+    %p The adjectives “today’s”, “tomorrow’s”, and “yesterday’s” are #{t "денеуне", "denéune"}, #{t "еутрене", "iéutrene"}, and #{t "вецерне", "vécerne"} respectively. These words are also the adjectival forms of “day”, “morning”, and “evening” respectively; that is, денеуне means both “today’s” as well as “diurnal”.
+    %p Novegradian has two words for “day”. #{t "Дене", "déne"} refers to the period of daylight, or to a day on the calendar. #{t "Сутоки", "sútoki"} (which is always plural) refers to an astronomical day, including both day and night, or to a 24-hour period in general (e.g., 18.00-18.00 is considered one period of сутоки).
+    %p There are also distinct words for “the day before/eve of” and “the day after”: #{t "вигла", "vígla"} and #{t "заутра", "záutra"} respectively. The phrases “on the day before/eve of” and “on the day after” are written as a single word: #{t "вовиглу", "vovíglu"}, #{t "возаутру", "vozáutru"}. Unlike English “eve”, these are fully productive and are not limited to certain holidays: #{t "яс пришле думове возаутру сурвѣ", "iás priślé domóve vozáutru survě́"} “I arrived home the day after the blizzard”. These prepositions may also be used alone as adverbs, where they can serve the useful function of distinguishing the narrative and absolute senses of “yesterday” and tomorrow”. As adverbs, both are stressed on the first syllable: <i>vóviglu</i> and <i>vózautru</i>.
+    %ul
+      %li
+        = t("Оне рѣѕиле то-це оне приѣздиле вецераш.", "Óne rědzíle tó-ce óne prijě́zdile véceraś.", :linebreak => true)
+        %br
+        “He said that he arrived yesterday.” (that is, he arrived the day before the present moment)
+      %li
+        = t("Оне рѣѕиле то-це оне приѣздиле вовиглу.", "Óne rědzíle tó-ce óne prijě́zdile vóviglu.", :linebreak => true)
+        %br
+        “He said that he arrived yesterday.” (that is, he literally said “I arrived yesterday”, meaning he arrived the day before he originally made this statement; this could perhaps more accurately be translated as “He said that he arrived the day before” as well)
+
+  = section "Telling Time and Giving the Date" do
+    %p Whole hours are expressed using feminine ordinals in their definite form (due to the dropped word #{t "пора", "porá"} “hour”). One o’clock, however, is expressed as just пора rather than an ordinal. They will generally appear in the accusative case when describing when something happens, although the nominative case is used when just reading off time.
+    = example_sentence "Соѕаса пора / другая / дежетая.",
+                       "Sodzása porá / drugáia / deźétaia.",
+                       "now Ø hour-{nom.sg} / second-{nom.sg.fem.def} / tenth-{nom.sg.fem.def}",
+                       "It’s 1.00 / 2.00 / 10.00."
+    %p Minutes are shown after the preposition со so “with” in the dative/instrumental case: 6.20 #{t "шестая со дўудешитех", "śéstaia so dwudéśiteh"}, literally “the sixth with twenty”. The minutes show feminine agreement, if needed, because of #{t "минута", "minúta"}.
+    %p Two special words for fractions of hours also exist—#{t "пољ", "pół"} “half” and #{t "цетуерте", "cetuérte"} “quarter”. The latter may be placed after an hour much like the other minutes (#{t "тритей со цетуертем", "trítei so cetuértem"} “3.15”). When either form is placed before the hour, the hour is put in the genitive case and the time is subtractive: #{t "пољ тритѣе", "pół trítěie"} “2.30”, lit. “half of the third [hour]”). Пољ is always used subtractively like this. When a specific amount of minutes are used subtractively, the preposition со (this time meaning “from”) is required, the hour again being in the genitive: #{t "дуадешити со шенмѣе", "duadéśiti so śénměie"} “6.40”, lit. “twenty [minutes] from the seventh [hour]”. In general, the additive method is used for minutes between 01 and 29, and the subtractive method for minutes between 30 and 59.
+    %p This system is the most commonly used nowadays. It replaces an older system (still seen amongst the older generations or in rural areas) where times were based entirely on the following hour: #{t "тритѣе дешити", "trítěie déśiti"} “2.10” (lit. “of the third [hour] ten [minutes]”, that is, ten minutes into the third hour of the day). This has become increasingly uncommon since the advent of digital clocks since the modern system allows for an almost literal and linear reading of the numbers off the display, rather than requiring mentally adding one to the hour number displayed. However, a few remnants remain in the common lexicon, particularly the expression of “half” as just discussed.
+    %p There are no real equivalents for “am” and “pm” as used in English. Instead, an adverb of time may be employed. #{t "Еутром", "iéutrom"} “in the morning” is used roughly from 5am to noon, #{t "денем", "dénem"} “in the daytime” from noon to 5pm, #{t "вецерем", "vécerem"} “in the evening” from 5pm until 11pm, and #{t "ногьюм", "nogjiúm"} “at night” from 11pm until 5am. Equivalent adverbs (e.g., using the locative case instead) are also allowed. Alternatively, and perhaps more commonly, speakers may also give time according to a 24-hour clock.
+    %p The terms for “noon” and “midnight” are #{t "пољудна", "połudná"} “noon” and #{t "пољункьи", "półunkji"}, respectively. Both of these, however, are somewhat quirky in their declension. “Noon” is first declension in the singular and fourth declension in the plural. “Midnight” is always plural.
+    %p Dates are given using the genitive singular masculine definite form of an ordinal number (for #{t "ден", "dén"} “days”) followed by the genitive singular of the month: #{t "дуадеши пирваево румѣнѣ", "duadéśi pirváievo rumě́ně"} “October 21st” (lit. “of the twenty-first [day] of October”).
+
+= section "Dual Nouns" do
+  %p A small set of nouns in Novegradian retain a distinct and functional dual form. As described in sections 12.8 and 13.8, outside of frozen expressions the dual forms are only used after the numeral “two” or the modifier “both”. Such nouns mostly describe paired body parts and clothing related to them. These twenty duals are shown in the table below, alongside with their nominative plural and genitive singular form for comparison. The three forms listed under “Dual Forms” are the #{abbrev 'nom'}/#{abbrev 'acc'}/#{abbrev 'lat'}, #{abbrev 'gen'}/#{abbrev 'loc'}, and #{abbrev 'datins'}, respectively.
+  %table
+    %tr
+      %th Nominative Singular
+      %th Meaning
+      %th Dual Forms
+      %th Nominative Plural
+      %th Genitive Singular
+    %tr
+      %td= t("брев", "brév")
+      %td eyebrow
+      %td
+        = t("бреве", "bréve")
+        %br
+        = t("бреву", "brévu")
+        %br
+        = t("бреума", "bréuma")
+      %td= t("бреви", "brévi")
+      %td= t("брева", "bréva")
+    %tr
+      %td= t("гранди", "grándi")
+      %td breast
+      %td
+        = t("гранди", "grándi")
+        %br
+        = t("грандю", "grándiu")
+        %br
+        = t("грандима", "grándima")
+      %td= t("грандие", "grándie")
+      %td= t("гранди", "grandí")
+    %tr
+      %td= t("колѣно", "kolě́no")
+      %td knee
+      %td
+        = t("колѣни", "kolě́ni")
+        %br
+        = t("колѣну", "kolě́nu")
+        %br
+        = t("колѣнома", "kolěnóma")
+      %td= t("колѣна", "kolěná")
+      %td= t("колѣну", "kolě́nu")
+    %tr
+      %td= t("кригло", "krigló")
+      %td wing
+      %td
+        = t("кригли", "krígli")
+        %br
+        = t("криглу", "kríglu")
+        %br
+        = t("криглома", "kriglóma")
+      %td= t("кригла", "kriglá")
+      %td= t("криглу", "kríglu")
+    %tr
+      %td= t("ланкьо", "lankjó")
+      %td hip
+      %td
+        = t("ланкьи", "lánkji")
+        %br
+        = t("ланкьу", "lánkju")
+        %br
+        = t("ланкьома", "lankjóma")
+      %td= t("ланкьа", "lankjá")
+      %td= t("ланкьу", "lánkju")
+    %tr
+      %td= t("лохти", "lóhti")
+      %td elbow
+      %td
+        = t("лохти", "lóhti")
+        %br
+        = t("лохтю", "lóhtiu")
+        %br
+        = t("лохтима", "lóhtima")
+      %td= t("лохтие", "lóhtie")
+      %td= t("лохти", "lohtí")
+    %tr
+      %td= t("нерка", "nérka")
+      %td kidney
+      %td
+        = t("неркѣ", "nérkě")
+        %br
+        = t("нерку", "nérku")
+        %br
+        = t("неркома", "nerkóma")
+      %td= t("нерки", "nérki")
+      %td= t("неркѣ", "nérkě")
+    %tr
+      %td= t("нога", "nogá")
+      %td foot, leg
+      %td
+        = t("ногѣ", "nogě́")
+        %br
+        = t("ногу", "nogú")
+        %br
+        = t("ногома", "nógoma")
+      %td= t("ноги", "nógi")
+      %td= t("ногѣ", "nogě́")
+    %tr
+      %td= t("око", "óko")
+      %td eye
+      %td
+        = t("оки", "óki")
+        %br
+        = t("оку", "óku")
+        %br
+        = t("огома", "ogóma")
+      %td= t("ога", "ogá")
+      %td= t("оку", "óku")
+    %tr
+      %td= t("оху", "óhu")
+      %td ear
+      %td
+        = t("охесе", "óhese")
+        %br
+        = t("охесу", "óhesu")
+        %br
+        = t("оесма", "oiésma")
+      %td= t("охеси", "óhesi")
+      %td= t("охеса", "óhesa")
+    %tr
+      %td= t("осту", "óstu")
+      %td lip
+      %td
+        = t("ости", "ósti")
+        %br
+        = t("осту", "óstu")
+        %br
+        = t("остома", "ostóma")
+      %td= t("оста", "ostá")
+      %td= t("осту", "óstu")
+    %tr
+      %td= t("плегьо", "plegjó")
+      %td shoulder
+      %td
+        = t("плекьи", "plékji")
+        %br
+        = t("плекьу", "plékju")
+        %br
+        = t("плегьома", "plegjóma")
+      %td= t("плегьа", "plegjá")
+      %td= t("плекьу", "plékju")
+    %tr
+      %td= t("плукье", "plúkje")
+      %td lung
+      %td
+        = t("плукьѣ", "plúkjě")
+        %br
+        = t("плукьу", "plúkju")
+        %br
+        = t("плугьема", "plugjéma")
+      %td= t("плукьи", "plúkji")
+      %td= t("плукьа", "plúkja")
+    %tr
+      %td= t("понога", "pónoga")
+      %td sock
+      %td
+        = t("поногѣ", "pónogě")
+        %br
+        = t("поногу", "pónogu")
+        %br
+        = t("поногома", "ponógoma")
+      %td= t("поноги", "pónogi")
+      %td= t("поногѣ", "pónogě")
+    %tr
+      %td= t("порцаска", "porcáska")
+      %td winter glove
+      %td
+        = t("порцаскѣ", "porcáskě")
+        %br
+        = t("порцаску", "porcásku")
+        %br
+        = t("порцаскома", "porcaskóma")
+      %td= t("порцаски", "porcáski")
+      %td= t("порцаскѣ", "porcáskě")
+    %tr
+      %td= t("роге", "róge")
+      %td horn
+      %td
+        = t("рогѣ", "rógě")
+        %br
+        = t("рогу", "rógu")
+        %br
+        = t("рогема", "rogéma")
+      %td= t("роги", "rógi")
+      %td= t("рога", "róga")
+    %tr
+      %td= t("рока", "róka")
+      %td hand, arm
+      %td
+        = t("рокѣ", "rókě")
+        %br
+        = t("року", "róku")
+        %br
+        = t("рогома", "rogóma")
+      %td= t("роки", "róki")
+      %td= t("рокѣ", "rókě")
+    %tr
+      %td= t("ругавица", "rugávica")
+      %td work glove
+      %td
+        = t("ругавицѣ", "rugávicě")
+        %br
+        = t("ругавицу", "rugávicu")
+        %br
+        = t("ругавиѕома", "rugavidzóma")
+      %td= t("ругавици", "rugávici")
+      %td= t("ругавицѣ", "rugávicě")
+    %tr
+      %td= t("сабоге", "sabóge")
+      %td boot
+      %td
+        = t("сабогѣ", "sabógě")
+        %br
+        = t("сабогу", "sabógu")
+        %br
+        = t("сабогома", "sabogéma")
+      %td= t("сабоги", "sabógi")
+      %td= t("сабога", "sabóga")
+    %tr
+      %td= t("ягодица", "iágodica")
+      %td cheek
+      %td
+        = t("ягодицѣ", "iágodicě")
+        %br
+        = t("ягодицу", "iágodicu")
+        %br
+        = t("ягодиѕома", "iagodidzóma")
+      %td= t("ягодици", "iágodici")
+      %td= t("ягодицѣ", "iágodicě")
+
+= section "Kinship" do
+  %p Following are the standard Novegradian kinship terms. It maintains a very complicated system of kinship by European standards, although certain terms are much more common than others. In the formal language possessive pronouns are required to follow these nouns, and in the spoken language they all take possessive suffixes.
+
+  = section "Nuclear Family" do
+    %table
+      %tr
+        %th Noun
+        %th Plural
+        %th 1Sg Poss.
+        %th Meaning
+      %tr
+        %td= t("родителе", "rodítele")
+        %td= t("родители", "rodíteli")
+        %td= t("родителмо", "rodítelmo")
+        %td parent
+      %tr
+        %td= t("тата", "táta")
+        %td= t("тати", "táti")
+        %td= t("татмо", "tátmo")
+        %td father
+      %tr
+        %td= t("мати", "máti")
+        %td= t("матери", "máteri")
+        %td= t("матмо", "mátmo")
+        %td mother
+      %tr
+        %td= t("мама", "máma")
+        %td= t("мами", "mámi")
+        %td= t("маммо", "mámmo")
+        %td mother<sup>1</sup>
+      %tr
+        %td= t("маже", "máźe")
+        %td= t("мажя", "maźiá")
+        %td= t("мажмо", "máźmo")
+        %td husband
+      %tr
+        %td= t("жена", "źená")
+        %td= t("жени", "źéni")
+        %td= t("женамо", "źenámo")
+        %td wife
+      %tr
+        %td= t("дѣтинко", "dě́tinko")
+        %td= t("дѣдете", "dě́dete")
+        %td= t("дѣдинмо", "dědínmo")
+        %td child<sup>2</sup>
+      %tr
+        %td= t("дѣдин", "dědín")
+        %td= t("дѣдете", "dě́dete")
+        %td= t("дѣдинмо", "dědínmo")
+        %td child<sup>3</sup>
+      %tr
+        %td= t("син", "sín")
+        %td= t("синьа", "sinjá")
+        %td= t("синмо", "sínmo")
+        %td son
+      %tr
+        %td= t("докьи", "dókji")
+        %td= t("докьери", "dókjeri")
+        %td= t("докьмо", "dókjmo")
+        %td daughter
+      %tr
+        %td= t("брате", "bráte")
+        %td= t("бракьи", "brákji")
+        %td= t("братмо", "brátmo")
+        %td brother
+      %tr
+        %td= t("шестра", "śéstra")
+        %td= t("шестри", "śéstri")
+        %td= t("шестрамо", "śéstramo")
+        %td sister
+
+  = section "Older Extended Family" do
+    %table
+      %tr
+        %th Noun
+        %th Plural
+        %th 1Sg Poss.
+        %th Meaning
+      %tr
+        %td= t("дѣда", "dě́da")
+        %td= t("дѣгьи", "dě́gji")
+        %td= t("дѣдмо", "dě́dmo")
+        %td grandfather
+      %tr
+        %td= t("прадѣда", "pradě́da")
+        %td= t("прадѣгьи", "pradě́gji")
+        %td= t("прадѣдмо", "pradě́dmo")
+        %td great grandfather
+      %tr
+        %td= t("баба", "bába")
+        %td= t("баби", "bábi")
+        %td= t("бабмо", "bábmo")
+        %td grandmother
+      %tr
+        %td= t("прабаба", "prabába")
+        %td= t("прабаби", "prabábi")
+        %td= t("прабабмо", "prabábmo")
+        %td great grandmother
+      %tr
+        %td= t("стриеце", "strijéce")
+        %td= t("стриеци", "strijéci")
+        %td= t("страецмо", "strajécmo")
+        %td paternal uncle
+      %tr
+        %td= t("оеце", "óiece")
+        %td= t("оеци", "óieci")
+        %td= t("оецмо", "óiecmo")
+        %td maternal uncle
+      %tr
+        %td= t("дядя", "diádia")
+        %td= t("дядѣ", "diádě")
+        %td= t("дядмо", "diádmo")
+        %td uncle<sup>4</sup>
+      %tr
+        %td= t("стрийка", "stríjka")
+        %td= t("стрийки", "stríjki")
+        %td= t("страйкамо", "stráikamo")
+        %td paternal aunt
+      %tr
+        %td= t("тета", "téta")
+        %td= t("тети", "téti")
+        %td= t("тетмо", "tétmo")
+        %td paternal aunt<sup>5</sup>
+      %tr
+        %td= t("ойка", "óika")
+        %td= t("ойки", "óiki")
+        %td= t("ойкамо", "óikamo")
+        %td maternal aunt
+      %tr
+        %td= t("наня", "nánia")
+        %td= t("нанѣ", "náně")
+        %td= t("нанмо", "nánmo")
+        %td maternal aunt<sup>6</sup>
+      %tr
+        %td= t("брадане", "bradáne")
+        %td= t("браданьи", "bradánji")
+        %td= t("браданмо", "bradánmo")
+        %td male first cousin
+      %tr
+        %td= t("шестрѣна", "śestrě́na")
+        %td= t("шестрѣньи", "śestrě́nji")
+        %td= t("шестрѣнмо", "sestrě́nmo")
+        %td female first cousin
+
+  = section "Younger Extended Family" do
+    %table
+      %tr
+        %th Noun
+        %th Plural
+        %th 1Sg Poss.
+        %th Meaning
+      %tr
+        %td= t("братеве син", "bráteve sín")
+        %td= t("братеви синьа", "brátevi sinjá")
+        %td= t("синмо братевей", "sínmo brátevei")
+        %td nephew<sup>7</sup>
+      %tr
+        %td= t("шестрина докьи", "śéstrina dókji")
+        %td= t("шестрини докьери", "śéstrini dókjeri")
+        %td= t("докьмо шестриная", "dókjmo śestrínaia")
+        %td niece<sup>7</sup>
+      %tr
+        %td= t("внуке", "vnúke")
+        %td= t("внуци", "vnúci")
+        %td= t("внукмо", "vnúkmo")
+        %td grandson
+      %tr
+        %td= t("праунуке", "práunuke")
+        %td= t("праунуци", "práunuci")
+        %td= t("праунукмо", "práunukmo")
+        %td great-grandson
+      %tr
+        %td= t("внуцка", "vnúcka")
+        %td= t("внуцки", "vnúcki")
+        %td= t("внуцкамо", "vnúckamo")
+        %td granddaughter
+      %tr
+        %td= t("праунуцка", "práunucka")
+        %td= t("праунуцки", "práunucki")
+        %td= t("праунуцкамо", "práunuckamo")
+        %td great-granddaughter
+
+  = section "Step-Family" do
+    %table
+      %tr
+        %th Noun
+        %th Plural
+        %th 1Sg Poss.
+        %th Meaning
+      %tr
+        %td= t("отѕиме", "otdzíme")
+        %td= t("отѕими", "otdzími")
+        %td= t("отѕиммо", "otdzímmo")
+        %td stepfather
+      %tr
+        %td= t("матерша", "máterśa")
+        %td= t("матерши", "máterśi")
+        %td= t("матершамо", "máterśamo")
+        %td stepmother
+      %tr
+        %td= t("акосин", "akosín")
+        %td= t("акосиньа", "akosinjá")
+        %td= t("акосинмо", "akosínmo")
+        %td stepson
+      %tr
+        %td= t("акодокьерша", "akodókjerśa")
+        %td= t("акодокьерши", "akodókjerśi")
+        %td= t("акодокьершамо", "akodókjerśamo")
+        %td stepdaughter
+
+  = section "Family-in-Law" do
+    %table
+      %tr
+        %th Noun
+        %th Plural
+        %th 1Sg Poss.
+        %th Meaning
+      %tr
+        %td= t("суекре", "suékre")
+        %td= t("суекри", "suékri")
+        %td= t("суекремо", "suékremo")
+        %td husband's father, father-in-law
+      %tr
+        %td= t("тести", "tésti")
+        %td= t("тестие", "téstie")
+        %td= t("тестимо", "téstimo")
+        %td wife's father, father-in-law
+      %tr
+        %td= t("суекруа", "suékrua")
+        %td= t("суекреви", "suékrevi")
+        %td= t("суекрамо", "suékramo")
+        %td husband's mother, mother-in-law
+      %tr
+        %td= t("тешкьа", "téśkja")
+        %td= t("тешкьѣ", "téśkjě")
+        %td= t("тешкьамо", "téśkjamo")
+        %td wife's mother, mother-in-law
+      %tr
+        %td= t("жети", "źéti")
+        %td= t("жетие", "źétie")
+        %td= t("жетмо", "źétmo")
+        %td husband's sister's husband, brother-in-law
+      %tr
+        %td= t("шурине", "śúrine")
+        %td= t("шуря", "śuriá")
+        %td= t("шуринмо", "śúrinmo")
+        %td wife's brother, brother-in-law
+      %tr
+        %td= t("суате", "suáte")
+        %td= t("суакьи", "suákji")
+        %td= t("суатмо", "suátmo")
+        %td wife's sister's husband, brother-in-law
+      %tr
+        %td= t("дѣвери", "dě́veri")
+        %td= t("дѣверие", "dě́verie")
+        %td= t("дѣвермо", "dě́vermo")
+        %td husband's brother, brother-in-law
+      %tr
+        %td= t("етруа", "iétrua")
+        %td= t("етреви", "iétrevi")
+        %td= t("етрамо", "iétramo")
+        %td husband's brother's wife, sister-in-law
+      %tr
+        %td= t("невѣста", "nevě́sta")
+        %td= t("невѣсти", "nevě́sti")
+        %td= t("невѣстамо", "nevě́stamo")
+        %td wife's brother's wife, sister-in-law
+      %tr
+        %td= t("золуа", "zólua")
+        %td= t("золеви", "zólevi")
+        %td= t("золуамо", "zóluamo")
+        %td husband's sister, sister-in-law
+      %tr
+        %td= t("суѣсти", "suě́sti")
+        %td= t("суѣстие", "suě́stie")
+        %td= t("суѣстимо", "suě́stimo")
+        %td wife's sister, sister-in-law
+    %p All of these terms are in use, though some are relatively infrequent in unrestricted speech. The terms for parents-in-law show no signs of loss, and the terms for siblings-in-law are still quite frequent, although they may be replaced with phrases. However, the terms for the siblings-in-law of spouses are often replaced by phrases colloquially, though this is frowned upon in formal usage: #{t "суатмо", "suátmo"} → #{t "маже суѣстя омне", "máźe suě́stia omné"}.
+
+  = section "Other Terms" do
+    %p In addition, the following terms, though not representing familial relations, also take possessive suffixes:
+    %table
+      %tr
+        %th Noun
+        %th Plural
+        %th 1Sg Poss.
+        %th Meaning
+      %tr
+        %td= t("юнце", "iúnce")
+        %td= t("юнци", "iúnci")
+        %td= t("юнцемо", "iúncemo")
+        %td fiancé
+      %tr
+        %td= t("юница", "iúnica")
+        %td= t("юници", "iúnici")
+        %td= t("юницмо", "iúnicmo")
+        %td fiancée
+      %tr
+        %td= t("друге", "drúge")
+        %td= t("дружи", "drúźi")
+        %td= t("другмо", "drúgmo")
+        %td friend
+
+= section "Punctuation" do
+  %p Novegradian uses mostly the same punctuation as English, although the rules governing their use differ slightly.
+  %ol
+    %li
+      Full stop (.) — The full stop is used:
+      %ol
+        %li To mark the end of a sentence making a statement.
+        %li To mark the end of a sentence containing an indirect question.
+        %li To mark abbreviations that are not serving as units of measurement (e.g., г. for граде “city”, or ст. for страница “page”).
+        %li To separate units when giving time: 12.30.
+        %li To group non-decimal numbers: 2.000.000 “two million”.
+    %li
+      Comma (,) — The comma is used:
+      %ol
+        %li To represent a short pause in speech.
+        %li To separate items in a list including more than two (and must be before the и ‘and’), or to separate clauses in a sentence consisting of more than two coordinated together.
+        %li In parenthetical expressions, although very short ones often do not need the comma.
+        %li To separate phrases in apposition, unless they are very short.
+        %li To separate subordinate clauses from the primary clause (unless joined using то-це).
+        %li To separate non-restrictive relative clauses.
+        %li Before contrasting conjunctions such as но and а.
+        %li To separate decimal numbers from non-decimal numbers: 1,5 “one and a half”.
+    %li
+      Exclamation Mark (!) — The exclamation mark is used:
+      %ol
+        %li At the end of a command, interjection, or emphatic statement.
+        %li At the end of questions with extreme emotion. “?!”, which is used in English, may not be used in Novegradian, so “What?!” would be rendered “Цой!”.
+    %li
+      Question Mark (?) — The question mark is used:
+      %ol
+        %li At the end of a sentence expressing a question (other than indirect questions).
+        %li At the end of a sentence containing a tag question (e.g., ..., нет прауда ли?” “isn’t that true?”).
+    %li
+      Colon (:) — The colon is used:
+      %ol
+        %li Before a list introduced by an independent clause.
+        %li Before a quotation introduced by an independent clause.
+        %li Between two closely-related but non-coordinated independent clauses (much like the semicolon in English).
+    %li
+      Semicolon (;) — Although uncommon, the semicolon may be used:
+      %ol
+        %li To separate items in a large list, or a long series of coordinated phrases or clauses.
+    %li
+      Hyphen (-) — The hyphen is used:
+      %ol
+        %li To separate two elements of a compound that is not entirely viewed as a single word (e.g., новеградеско-английске слоунике “Novegradian-English dictionary”).
+        %li To join two adjectives together into a single word (e.g., соцяљно-економицеске “socio-economic”).
+        %li To separate a prefix or inflection from a numeral or a word it may not be recognized on, especially foreign names (e.g., 123-ом “123rd [dative/instrumental case]”).
+        %li To separate the topicalization marker то from the word it modifies.
+    %li
+      En-Dash (–) — The en-dash is used:
+      %ol
+        %li To substitute for a zero-form copula, although it may be dropped if there is no ambiguity.
+        %li To substitute for another verb lost by ellipsis, although this too is optional (e.g., Едене покренале подар деля друж, а еноке – нецево “One bought gifts for his friends, the other – nothing”).
+    %li
+      Em-Dash (—) — The em-dash is used:
+      %ol
+        %li To separate long appositives from the rest of the sentence, in which case it must be used on both sides of the clause.
+        %li To introduce quotations and separate quotations from prose in dialogue. Unlike in English, in Novegradian quotation marks cannot be used to start a new paragraph.
+    %li
+      Parentheses () — The parentheses are used:
+      %ol
+        %li In parenthetical expressions.
+      %span Any punctuation appearing within the parentheses must be part of the parenthetical expression, not part of the main sentence, and vice versa.
+    %li
+      Quotation Marks („‟) — The quotation marks are used:
+      %ol
+        %li To mark quotations.
+        %li To single out certain words or expressions.
+        %li To name a noun (e.g., гажета „Совѣшкьи‟ “The newspaper ‘Sově́śkji’”). This is not used for people or places, however.
+      %span Novegradian uses „ (left-facing, on bottom) to begin a quote and ‟ (right-facing, on top) to end it. If there are not available, the guillements « » may be used. Using “ ”, as in English, is considered improper. Punctuation rules within quotations are the same as with parentheses—any punctuation within the quote must be part of the quote. Single quotation marks are never used.
+    %li
+      Number Sign (№) — The number sign is used:
+      %ol
+        %li Before a number qualifying something, but not counting it (e.g., дом № 846 “House number 846”). This corresponds to the use of animate numerals when not counting animate nouns.
+
+= section "Common Slavic Morphology" do
+  %p The following tables outline Common Slavic inflectional morphology as it is currently understood. These charts reflect the Common Slavic dialect from which Novegradian evolved.
+
+  = section "Nominal Morphology" do
+    %p The example nouns used in the chart to the right are *noga “foot, leg” (Ā-Stem), *zemja “land” (JĀ-Stem), *gorde “city, fortress” (Masculine Ŏ-Stem), *město “place” (Neuter Ŏ-Stem), *more “sea” (JŎ-Stem), *synъ “son” (Ŭ-Stem), *kьrky “church” (Ū-Stem), *pǫtь “path” (Ĭ-Stem), *slovo “word” (S-Stem), *mati “mother” (R-Stem), *kamy “stone” (N-Stem), and *agnę “lamb” (NT-Stem).
+    %table
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 12} Singular
+      %tr
+        %th Ā-Stem
+        %th JĀ-Stem
+        %th O-Stem (M)
+        %th O-Stem (N)
+        %th JO-Stem
+        %th U-Stem
+        %th Ū-Stem
+        %th I-Stem
+        %th S-Stem
+        %th R-Stem
+        %th N-Stem
+        %th NT-Stem
+      %tr
+        %th Nominative
+        %td noga
+        %td zemja
+        %td gordъ
+        %td město
+        %td more
+        %td synъ
+        %td kьrky
+        %td pǫtь
+        %td slovo
+        %td mati
+        %td kamy
+        %td agnę
+      %tr
+        %th Genitive
+        %td nogě
+        %td zemję
+        %td gorda
+        %td města
+        %td morja
+        %td synu
+        %td kьrkъve
+        %td pǫti
+        %td slovese
+        %td matere
+        %td kamene
+        %td agnęte
+      %tr
+        %th Accusative
+        %td nogǫ
+        %td zemjǫ
+        %td gordъ
+        %td město
+        %td more
+        %td synъ
+        %td kьrky
+        %td pǫtь
+        %td slovo
+        %td mati
+        %td kamy
+        %td agnę
+      %tr
+        %th Dative
+        %td nogě
+        %td zemji
+        %td gordu
+        %td městu
+        %td morju
+        %td synovi
+        %td kьrkъvi
+        %td pǫti
+        %td slovesi
+        %td materi
+        %td kameni
+        %td agnęti
+      %tr
+        %th Instrumental
+        %td nogojǫ
+        %td zemjejǫ
+        %td gordomь
+        %td městomь
+        %td moremь
+        %td synъmь
+        %td kьrkъvьjǫ
+        %td pǫtьmь
+        %td slovesьmь
+        %td materьmь
+        %td kamenьmь
+        %td agnętьmь
+      %tr
+        %th Locative
+        %td nogě
+        %td zemji
+        %td gordě
+        %td městě
+        %td morji
+        %td synu
+        %td kьrkъve
+        %td pǫti
+        %td slovese
+        %td materi
+        %td kamene
+        %td agnęte
+      %tr
+        %th Vocative
+        %td nogo
+        %td zemje
+        %td gorde
+        %td měste
+        %td morju
+        %td synu
+        %td kьrky
+        %td pǫti
+        %td slovo
+        %td mati
+        %td kamy
+        %td agnę
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 12} Dual
+      %tr
+        %th Ā-Stem
+        %th JĀ-Stem
+        %th O-Stem (M)
+        %th O-Stem (N)
+        %th JO-Stem
+        %th U-Stem
+        %th Ū-Stem
+        %th I-Stem
+        %th S-Stem
+        %th R-Stem
+        %th N-Stem
+        %th NT-Stem
+      %tr
+        %th Nom/Acc/Voc
+        %td nogě
+        %td zemji
+        %td gorda
+        %td městě
+        %td morji
+        %td syny
+        %td kьrkъvi
+        %td pǫti
+        %td slovesě
+        %td materi
+        %td kameni
+        %td agnętě
+      %tr
+        %th Gen/Loc
+        %td nogu
+        %td zemju
+        %td gordu
+        %td městu
+        %td morju
+        %td synovu
+        %td kьrkъvu
+        %td pǫtьju
+        %td slovesu
+        %td materu
+        %td kamenu
+        %td agnętu
+      %tr
+        %th Dat/Instr
+        %td nogama
+        %td zemjama
+        %td gordoma
+        %td městoma
+        %td morema
+        %td synъma
+        %td kьrkъvama
+        %td pǫtьma
+        %td slovesьma
+        %td materьma
+        %td kamenьma
+        %td agnętьma
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 12} Plural
+      %tr
+        %th Ā-Stem
+        %th JĀ-Stem
+        %th O-Stem (M)
+        %th O-Stem (N)
+        %th JO-Stem
+        %th U-Stem
+        %th Ū-Stem
+        %th I-Stem
+        %th S-Stem
+        %th R-Stem
+        %th N-Stem
+        %th NT-Stem
+      %tr
+        %th Nominative
+        %td nogy
+        %td zemję
+        %td gordi
+        %td města
+        %td morja
+        %td synove
+        %td kьrkъvi
+        %td pǫtьje
+        %td slovesa
+        %td materi
+        %td kamene
+        %td agnęta
+      %tr
+        %th Genitive
+        %td nogъ
+        %td zemjь
+        %td gordъ
+        %td městъ
+        %td morjь
+        %td synovъ
+        %td kьrkъvъ
+        %td pǫtьjь
+        %td slovesъ
+        %td materъ
+        %td kamene
+        %td agnętъ
+      %tr
+        %th Accusative
+        %td nogy
+        %td zemję
+        %td gordy
+        %td města
+        %td morja
+        %td syny
+        %td kьrkъvi
+        %td pǫti
+        %td slovesa
+        %td materi
+        %td kameni
+        %td agnęta
+      %tr
+        %th Dative
+        %td nogamъ
+        %td zemjamъ
+        %td gordomъ
+        %td městomъ
+        %td moremъ
+        %td synъmъ
+        %td kьrkъvamъ
+        %td pǫtьmъ
+        %td slovesьmъ
+        %td materьmъ
+        %td kamenьmъ
+        %td agnętьmъ
+      %tr
+        %th Instrumental
+        %td nogami
+        %td zemjami
+        %td gordy
+        %td městy
+        %td morji
+        %td synъmi
+        %td kьrkъvami
+        %td pǫtьmi
+        %td slovesy
+        %td materьmi
+        %td kamenьmi
+        %td agnęty
+      %tr
+        %th Locative
+        %td nogaxъ
+        %td zemjaxъ
+        %td gorděxъ
+        %td městěxъ
+        %td morjixъ
+        %td synъxъ
+        %td kьrkъvaxъ
+        %td pǫtьxъ
+        %td slovesьxъ
+        %td materьxъ
+        %td kamenьxъ
+        %td agnętьxъ
+      %tr
+        %th Vocative
+        %td nogy
+        %td zemję
+        %td gordi
+        %td města
+        %td morja
+        %td synove
+        %td kьrkъvi
+        %td pǫtьje
+        %td slovesa
+        %td materi
+        %td kamene
+        %td agnęta
+
+  = section "Adjectival Morphology" do
+    %p The following tables demonstate the adjectival morphology of Common Slavic. Below are the indefinite forms (left) and definite (right). On the following page are the short form comparative (left) and long form comparative (right). The example used here is *dobrъ “good, kind”, except for the short comparative, where *vysъ “high” is used.
+    %table.invisible{:style => "margin-left: 0"}
+      %tr
+        %td
+          %table
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Singular
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td dobrъ
+              %td dobro
+              %td dobra
+            %tr
+              %th Genitive
+              %td dobra
+              %td dobra
+              %td dobrě
+            %tr
+              %th Accusative
+              %td dobrъ
+              %td dobro
+              %td dobrǫ
+            %tr
+              %th Dative
+              %td dobru
+              %td dobru
+              %td dobrě
+            %tr
+              %th Instrumental
+              %td dobromь
+              %td dobromь
+              %td dobrojǫ
+            %tr
+              %th Locative
+              %td dobrě
+              %td dobrě
+              %td dobrě
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Dual
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nom/Acc
+              %td dobra
+              %td dobrě
+              %td dobrě
+            %tr
+              %th Gen/Loc
+              %td dobru
+              %td dobru
+              %td dobru
+            %tr
+              %th Dat/Instr
+              %td dobroma
+              %td dobroma
+              %td dobrama
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Plural
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td dobri
+              %td dobra
+              %td dobry
+            %tr
+              %th Genitive
+              %td dobrъ
+              %td dobrъ
+              %td dobrъ
+            %tr
+              %th Accusative
+              %td dobry
+              %td dobra
+              %td dobry
+            %tr
+              %th Dative
+              %td dobromъ
+              %td dobromъ
+              %td dobramъ
+            %tr
+              %th Instrumental
+              %td dobromi
+              %td dobromi
+              %td dobrami
+            %tr
+              %th Locative
+              %td dobrěxъ
+              %td dobrěxъ
+              %td dobrěxъ
+        %td
+          %table
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Singular
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td dobrъjь
+              %td dobroje
+              %td dobraja
+            %tr
+              %th Genitive
+              %td dobrajego
+              %td dobrajego
+              %td dobrěję
+            %tr
+              %th Accusative
+              %td dobrъjь
+              %td dobroje
+              %td dobrǫjǫ
+            %tr
+              %th Dative
+              %td dobrujemu
+              %td dobrujemu
+              %td dobrěji
+            %tr
+              %th Instrumental
+              %td dobryjemь
+              %td dobryjemь
+              %td dobrǫjǫ
+            %tr
+              %th Locative
+              %td dobrějemь
+              %td dobrějemь
+              %td dobrěji
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Dual
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nom/Acc
+              %td dobraja
+              %td dobrěji
+              %td dobrěji
+            %tr
+              %th Gen/Loc
+              %td dobruju
+              %td dobruju
+              %td dobruju
+            %tr
+              %th Dat/Instr
+              %td dobryjima
+              %td dobryjima
+              %td dobryjima
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Plural
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td dobriji
+              %td dobraja
+              %td dobryję
+            %tr
+              %th Genitive
+              %td dobrъjixъ
+              %td dobrъjixъ
+              %td dobrъjixъ
+            %tr
+              %th Accusative
+              %td dobryję
+              %td dobraja
+              %td dobryję
+            %tr
+              %th Dative
+              %td dobryjimь
+              %td dobryjimь
+              %td dobryjimь
+            %tr
+              %th Instrumental
+              %td dobryjimi
+              %td dobryjimi
+              %td dobryjimi
+            %tr
+              %th Locative
+              %td dobryjimi
+              %td dobryjimi
+              %td dobryjixъ
+      %tr
+        %td
+          %br
+          %table
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Singular
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td vysjьjь
+              %td vysjьše
+              %td vysjьša
+            %tr
+              %th Genitive
+              %td vysjьša
+              %td vysjьša
+              %td vysjьšě
+            %tr
+              %th Accusative
+              %td vysjьjь
+              %td vysjьše
+              %td vysjьšǫ
+            %tr
+              %th Dative
+              %td vysjьšu
+              %td vysjьšu
+              %td vysjьšě
+            %tr
+              %th Instrumental
+              %td vysjьšemь
+              %td vysjьšemь
+              %td vysjьšejǫ
+            %tr
+              %th Locative
+              %td vysjьšě
+              %td vysjьšě
+              %td vysjьšě
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Dual
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nom/Acc
+              %td vysjьša
+              %td vysjьšě
+              %td vysjьšě
+            %tr
+              %th Gen/Loc
+              %td vysjьšu
+              %td vysjьšu
+              %td vysjьšu
+            %tr
+              %th Dat/Instr
+              %td vysjьšema
+              %td vysjьšema
+              %td vysjьšama
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Plural
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td vysjьši
+              %td vysjьša
+              %td vysjьšę
+            %tr
+              %th Genitive
+              %td vysjьšь
+              %td vysjьšь
+              %td vysjьšь
+            %tr
+              %th Accusative
+              %td vysjьšę
+              %td vysjьša
+              %td vysjьšę
+            %tr
+              %th Dative
+              %td vysjьšemъ
+              %td vysjьšemъ
+              %td vysjьšamъ
+            %tr
+              %th Instrumental
+              %td vysjьšemi
+              %td vysjьšemi
+              %td vysjьšami
+            %tr
+              %th Locative
+              %td vysjьšěxъ
+              %td vysjьšěxъ
+              %td vysjьšaxъ
+        %td
+          %br
+          %table
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Singular
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td dobrějь
+              %td dobrějьše
+              %td dobrějьša
+            %tr
+              %th Genitive
+              %td dobrějьša
+              %td dobrějьša
+              %td dobrějьšě
+            %tr
+              %th Accusative
+              %td dobrějь
+              %td dobrějьše
+              %td dobrějьšǫ
+            %tr
+              %th Dative
+              %td dobrějьšu
+              %td dobrějьšu
+              %td dobrějьšě
+            %tr
+              %th Instrumental
+              %td dobrějьšemь
+              %td dobrějьšemь
+              %td dobrějьšejǫ
+            %tr
+              %th Locative
+              %td dobrějьšě
+              %td dobrějьšě
+              %td dobrějьšě
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Dual
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nom/Acc
+              %td dobrějьša
+              %td dobrějьšě
+              %td dobrějьšě
+            %tr
+              %th Gen/Loc
+              %td dobrějьšu
+              %td dobrějьšu
+              %td dobrějьšu
+            %tr
+              %th Dat/Instr
+              %td dobrějьšema
+              %td dobrějьšema
+              %td dobrějьšema
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 3} Plural
+            %tr
+              %th Masculine
+              %th Neuter
+              %th Feminine
+            %tr
+              %th Nominative
+              %td dobrějьši
+              %td dobrějьša
+              %td dobrějьšě
+            %tr
+              %th Genitive
+              %td dobrějьšь
+              %td dobrějьšь
+              %td dobrějьšь
+            %tr
+              %th Accusative
+              %td dobrějьši
+              %td dobrějьša
+              %td dobrějьšě
+            %tr
+              %th Dative
+              %td dobrějьšemъ
+              %td dobrějьšemъ
+              %td dobrějьšamъ
+            %tr
+              %th Instrumental
+              %td dobrějьšemi
+              %td dobrějьšemi
+              %td dobrějьšami
+            %tr
+              %th Locative
+              %td dobrějьšěxъ
+              %td dobrějьšěxъ
+              %td dobrějьšěxъ
+    %p The superlative was formed with a prefixed *naj- added to the comparative forms.
+
+  = section "Verbal Morphology" do
+    %p Common Slavic verbs may be grouped in five primary classes. The first conjugation includes verbs that take -e- in the present tense, and is demonstrated with *nesti “carry” below. The second conjugation consists of verbs that gain the suffix -n-, demonstrated with *dvignǫti “move”. The third conjugation includes verbs that gain the suffix -je- in the present tense, demonstrated with *znati “know” (with a vocalic stem) and *pьsati “write” (with a consonantal stem). The fourth conjugation features -i-, demonstrated with *ljubiti “love”. The fifth conjugation includes the five athematic verbs, demonstrated with *dati “give” below.
+    %table
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 6} Non-Finite Forms
+      %tr
+        %th I
+        %th II
+        %th III
+        %th III
+        %th IV
+        %th V
+      %tr
+        %th Infinitive
+        %td nesti
+        %td dvignǫti
+        %td znati
+        %td pьsati
+        %td ljubiti
+        %td dati
+      %tr
+        %th Supine
+        %td nestъ
+        %td dvignǫtъ
+        %td znatъ
+        %td pьsatъ
+        %td ljubitъ
+        %td datъ
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 6} Present Tense
+      %tr
+        %th I
+        %th II
+        %th III
+        %th III
+        %th IV
+        %th V
+      %tr
+        %th 1Sg
+        %td nesǫ
+        %td dvignǫ
+        %td znajǫ
+        %td pьsjǫ
+        %td ljubjǫ
+        %td damь
+      %tr
+        %th 2Sg
+        %td nesešь
+        %td dvignešь
+        %td znaješь
+        %td pьsješь
+        %td ljubišь
+        %td dasi
+      %tr
+        %th 3Sg
+        %td nesetь
+        %td dvignetь
+        %td znajetь
+        %td pьsjetь
+        %td ljubitь
+        %td dastь
+      %tr
+        %th 1Dl
+        %td neseva
+        %td dvigneva
+        %td znajeva
+        %td pьsjeva
+        %td ljubiva
+        %td dava
+      %tr
+        %th 2Dl
+        %td neseta
+        %td dvigneta
+        %td znajeta
+        %td pьsjeta
+        %td ljubita
+        %td dasta
+      %tr
+        %th 3Dl
+        %td neseta
+        %td dvigneta
+        %td znajeta
+        %td pьsjeta
+        %td ljubita
+        %td dasta
+      %tr
+        %th 1Pl
+        %td nesemъ
+        %td dvignemъ
+        %td znajemъ
+        %td pьsjemъ
+        %td ljubimъ
+        %td damo
+      %tr
+        %th 2Pl
+        %td nesete
+        %td dvignete
+        %td znajete
+        %td pьsjete
+        %td ljubite
+        %td daste
+      %tr
+        %th 3Pl
+        %td nesǫtь
+        %td dvignǫtь
+        %td znajǫtь
+        %td pьsjǫtь
+        %td ljubętь
+        %td dadǫtь
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 6} Imperfect Tense
+      %tr
+        %th I
+        %th II
+        %th III
+        %th III
+        %th IV
+        %th V
+      %tr
+        %th 1Sg
+        %td nesěaxъ
+        %td dvigněaxъ
+        %td znaaxъ
+        %td pьsaaxъ
+        %td ljubjaaxъ
+        %td daděaxъ
+      %tr
+        %th 2Sg
+        %td nesěaše
+        %td dvigněaše
+        %td znaaše
+        %td pьsaaše
+        %td ljubjaaše
+        %td daděaše
+      %tr
+        %th 3Sg
+        %td nesěaše
+        %td dvigněaše
+        %td znaaše
+        %td pьsaaše
+        %td ljubjaaše
+        %td daděaše
+      %tr
+        %th 1Dl
+        %td nesěaxova
+        %td dvigněaxova
+        %td znaaxova
+        %td pьsaaxova
+        %td ljubjaaxova
+        %td daděaxova
+      %tr
+        %th 2Dl
+        %td nesěašeta
+        %td dvigněašeta
+        %td znaašeta
+        %td pьsaašeta
+        %td ljubjaašeta
+        %td daděašeta
+      %tr
+        %th 3Dl
+        %td nesěašeta
+        %td dvigněašeta
+        %td znaašeta
+        %td pьsaašeta
+        %td ljubjaašeta
+        %td daděašeta
+      %tr
+        %th 1Pl
+        %td nesěaxomъ
+        %td dvigněaxomъ
+        %td znaaxomъ
+        %td pьsaaxomъ
+        %td ljubjaaxomъ
+        %td daděaxomъ
+      %tr
+        %th 2Pl
+        %td nesěašete
+        %td dvigněašete
+        %td znaašete
+        %td pьsaašete
+        %td ljubjaašete
+        %td daděašete
+      %tr
+        %th 3Pl
+        %td nesěaxǫ
+        %td dvigněaxǫ
+        %td znaaxǫ
+        %td pьsaaxǫ
+        %td ljubjaaxǫ
+        %td daděaxǫ
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 6} Aorist Tense
+      %tr
+        %th I
+        %th II
+        %th III
+        %th III
+        %th IV
+        %th V
+      %tr
+        %th 1Sg
+        %td nesoxъ
+        %td dvigoxъ
+        %td znaxъ
+        %td pьsaxъ
+        %td ljubixъ
+        %td daxъ
+      %tr
+        %th 2Sg
+        %td nese
+        %td dvige
+        %td zna
+        %td pьsa
+        %td ljubi
+        %td da
+      %tr
+        %th 3Sg
+        %td nese
+        %td dvige
+        %td zna
+        %td pьsa
+        %td ljubi
+        %td da
+      %tr
+        %th 1Dl
+        %td nesoxova
+        %td dvigoxova
+        %td znaxova
+        %td pьsaxova
+        %td ljubixova
+        %td daxova
+      %tr
+        %th 2Dl
+        %td nesosta
+        %td dvigosta
+        %td znasta
+        %td pьsasta
+        %td ljubista
+        %td dasta
+      %tr
+        %th 3Dl
+        %td nesosta
+        %td dvigosta
+        %td znasta
+        %td pьsasta
+        %td ljubista
+        %td dasta
+      %tr
+        %th 1Pl
+        %td nesoxomъ
+        %td dvigoxomъ
+        %td znaxomъ
+        %td pьsaxomъ
+        %td ljubixomъ
+        %td daxomъ
+      %tr
+        %th 2Pl
+        %td nesoste
+        %td dvigoste
+        %td znaste
+        %td pьsaste
+        %td ljubiste
+        %td daste
+      %tr
+        %th 3Pl
+        %td nesošę
+        %td dvigošę
+        %td znašę
+        %td pьsaxǫ
+        %td ljubixǫ
+        %td dašǫ
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 6} Imperative Mood
+      %tr
+        %th I
+        %th II
+        %th III
+        %th III
+        %th IV
+        %th V
+      %tr
+        %th 2Sg
+        %td nesi
+        %td dvigni
+        %td znaji
+        %td pьsji
+        %td ljubi
+        %td dadjь
+      %tr
+        %th 3Sg
+        %td nesi
+        %td dvigni
+        %td znaji
+        %td pьsji
+        %td ljubi
+        %td dadjь
+      %tr
+        %th 1Dl
+        %td nesěva
+        %td dvigněva
+        %td znajiva
+        %td pьsjiva
+        %td ljubiva
+        %td dadiva
+      %tr
+        %th 2Dl
+        %td nesěta
+        %td dvigněta
+        %td znajita
+        %td pьsjita
+        %td ljubita
+        %td dadita
+      %tr
+        %th 1Pl
+        %td nesěmъ
+        %td dvigněmъ
+        %td znajimъ
+        %td pьsjimъ
+        %td ljubimъ
+        %td dadimъ
+      %tr
+        %th 2Pl
+        %td nesěte
+        %td dvigněte
+        %td znajite
+        %td pьsjite
+        %td ljubite
+        %td dadite
+    %p The above represents the forms used among the North and East Slavs, that is, the forms that Novegradian originated from. There existed considerable dialectical variation, however. In the present tense #{abbrev '2sg'}, the ending could also be *-ši in addition to *-šь. The final yer in the #{abbrev '3sg'} and #{abbrev '3pl'} of the present could be front or back. The #{abbrev '1dl'} ending in all tenses could be *-vě in addition to *-va. The #{abbrev '3dl'} could be identical to the #{abbrev '2pl'} instead of the #{abbrev '2dl'}. The vowels seen in the imperfect and aorist tenses also tended to be somewhat variable.
+    %p It should also be noted that a number of forms have been greatly simplified for this particular table. In particular, only the Slavic neo-aorist is shown; older forms of Common Slavic clearly showed three distinct aorist paradigms.
+    %p The verb *byti “be” has two tenses no other verb has, a future and a conditional. The conditional, however, was frequently contaminated by aorist forms (shown in the third column for comparison).
+    %table
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 3}*byti Anomolous Tenses
+      %tr
+        %th Future
+        %th Conditional
+        %th Aorist
+      %tr
+        %th 1Sg
+        %td bǫdǫ
+        %td bimь
+        %td byxъ
+      %tr
+        %th 2Sg
+        %td bǫdešь
+        %td bi
+        %td by
+      %tr
+        %th 3Sg
+        %td bǫdetь
+        %td bi
+        %td by
+      %tr
+        %th 1Dl
+        %td bǫdeva
+        %td biva
+        %td byxova
+      %tr
+        %th 2Dl
+        %td bǫdeta
+        %td bista
+        %td bysta
+      %tr
+        %th 3Dl
+        %td bǫdeta
+        %td bista
+        %td bysta
+      %tr
+        %th 1Pl
+        %td bǫdemъ
+        %td bimъ
+        %td byxomъ
+      %tr
+        %th 2Pl
+        %td bǫdete
+        %td bite
+        %td byste
+      %tr
+        %th 3Pl
+        %td bǫdǫtь
+        %td bǫ
+        %td byšę
+
+= section "Vocabulary Comparison" do
+  %p The following list compares 100 Novegradian words (the #{link_to "Swadesh List", "http://en.wikipedia.org/wiki/Swadesh_list"}) against seven other Slavic languages: Russian, Ukrainian, Polish, Upper Sorbian, Czech, Serbo-Croatian, and Bulgarian. Forms that are not cognate with the Novegradian word are in gray. A grayed-out word does not necessarily mean that language does not have any cognate for the Novegradian word in question or vice versa; it simply means that the language does not use a cognate word with the same meaning. The final column gives the etymology of the Novegradian form.
+  %p Of these, Russian and Ukrainian have the most similar vocabulary. Many centuries of close contact between Novegradian and the East Slavic languages have resulted in significant lexical influence; however, this is ultimately far more apparent in higher registers than in the very core vocabulary of the Swadesh List. Ukrainian tends to have more conservative vocabulary than Russian, which has loaned heavily from Church Slavonic.
+  %p Polish, Upper Sorbian, and Czech are all West Slavic languages, the next closest group. Old Novegradian and Old Polish in particular seem to have had a particular strong lexical affinity, enough that some very early historical linguistic analyses of the Slavic languages classified Old Novegradian as a relexified divergent dialect of Old East Slavic. These languages have a much stronger German influence and less of a Church Slavonic influence.
+  %p Serbo-Croatian and Bulgarian are both South Slavic languages, the furthest removed from Novegradian. They have a significant layer of Turkish vocabulary. The Serbo-Croatian forms shown below are ekavian (standard Serbian). The Bulgarian verbs are given in the first person singular, since Bulgarian has lost the infinitive.
+  %table
+    %tr
+      %th English
+      %th Novegradian
+      %th Russian
+      %th Ukrainian
+      %th Polish
+      %th Sorbian
+      %th Czech
+      %th Serbo-Croatian
+      %th Bulgarian
+      %th Etymology
+    %tr
+      %th 1. I
+      %td= t("яс", "iás", :linebreak => true)
+      %td= t("я", "já", :linebreak => true)
+      %td= t("я", "já", :linebreak => true)
+      %td ja
+      %td ja
+      %td já
+      %td= t("ја", "jȃ", :linebreak => true)
+      %td= t("аз", "az", :linebreak => true)
+      %td Common Slavic *azъ "I"
+    %tr
+      %th 2. you (sg)
+      %td= t("ти", "tí", :linebreak => true)
+      %td= t("ты", "tý", :linebreak => true)
+      %td= t("ти", "tý", :linebreak => true)
+      %td ty
+      %td ty
+      %td ty
+      %td= t("ти", "tȋ", :linebreak => true)
+      %td= t("ти", "ti", :linebreak => true)
+      %td Common Slavic *ty "you"
+    %tr
+      %th 3. we
+      %td= t("муи", "muí", :linebreak => true)
+      %td= t("мы", "mý", :linebreak => true)
+      %td= t("ми", "mý", :linebreak => true)
+      %td my
+      %td my
+      %td my
+      %td= t("ми", "mȋ", :linebreak => true)
+      %td.notcognate= t("ние", "nie", :linebreak => true)
+      %td Common Slavic *my "we"
+    %tr
+      %th 4. this
+      %td= t("ше", "śé", :linebreak => true)
+      %td.notcognate= t("это", "éto", :linebreak => true)
+      %td= t("це", "cé", :linebreak => true)
+      %td.notcognate to
+      %td.notcognate to
+      %td.notcognate toto
+      %td.notcognate= t("ово", "òvō", :linebreak => true)
+      %td.notcognate= t("това", "tova", :linebreak => true)
+      %td Common Slavic *sь "this"
+    %tr
+      %th 5. that
+      %td= t("ше", "śé", :linebreak => true)
+      %td.notcognate= t("то", "tó", :linebreak => true)
+      %td.notcognate= t("те", "té", :linebreak => true)
+      %td.notcognate tamto
+      %td.notcognate to
+      %td.notcognate tamto
+      %td.notcognate= t("оно", "ònō", :linebreak => true)
+      %td.notcognate= t("онова", "onova", :linebreak => true)
+      %td Common Slavic *sь "this"
+    %tr
+      %th 6. who?
+      %td= t("хой", "hói", :linebreak => true)
+      %td= t("кто", "któ", :linebreak => true)
+      %td= t("хто", "xtó", :linebreak => true)
+      %td kto
+      %td.notcognate štó
+      %td kdo
+      %td= t("ко", "kȍ", :linebreak => true)
+      %td= t("кой", "koj", :linebreak => true)
+      %td Common Slavic *kъ-to "who?"
+    %tr
+      %th 7. what?
+      %td= t("цой", "cói", :linebreak => true)
+      %td= t("что", "čtó", :linebreak => true)
+      %td= t("що", "ščó", :linebreak => true)
+      %td co
+      %td što
+      %td co
+      %td= t("шта", "štȁ", :linebreak => true)
+      %td.notcognate= t("какво", "kakvo", :linebreak => true)
+      %td Common Slavic *čь-to "what?"
+    %tr
+      %th 8. not
+      %td= t("не", "ne", :linebreak => true)
+      %td= t("не", "ne", :linebreak => true)
+      %td= t("не", "ne", :linebreak => true)
+      %td nie
+      %td ne
+      %td ne
+      %td= t("не", "ne", :linebreak => true)
+      %td= t("не", "ne", :linebreak => true)
+      %td Common Slavic *ne "not"
+    %tr
+      %th 9. all
+      %td= t("вехе", "véhe", :linebreak => true)
+      %td= t("весь", "vés'", :linebreak => true)
+      %td= t("весь", "vés'", :linebreak => true)
+      %td wszyscy
+      %td wšitcy
+      %td vše
+      %td= t("све", "svȅ", :linebreak => true)
+      %td= t("всички", "vsički", :linebreak => true)
+      %td Common Slavic *vьxъ "all"
+    %tr
+      %th 10. many
+      %td= t("многе", "mnóge", :linebreak => true)
+      %td= t("много", "mnógo", :linebreak => true)
+      %td.notcognate= t("багато", "baháto", :linebreak => true)
+      %td.notcognate dużo
+      %td.notcognate wjele
+      %td mnoho
+      %td= t("много", "mnȍgo", :linebreak => true)
+      %td= t("много", "mnogo", :linebreak => true)
+      %td Common Slavic *mъnogъ "many"
+    %tr
+      %th 11. one
+      %td= t("едене", "iédene", :linebreak => true)
+      %td= t("один", "odín", :linebreak => true)
+      %td= t("один", "odýn", :linebreak => true)
+      %td jeden
+      %td jedyn
+      %td jeden
+      %td= t("један", "jèdan", :linebreak => true)
+      %td= t("един", "edin", :linebreak => true)
+      %td Common Slavic *edьnъ "one"
+    %tr
+      %th 12. two
+      %td= t("дова", "dóva", :linebreak => true)
+      %td= t("два", "dvá", :linebreak => true)
+      %td= t("два", "dvá", :linebreak => true)
+      %td dwa
+      %td dwa
+      %td dva
+      %td= t("два", "dvȃ", :linebreak => true)
+      %td= t("две", "dve", :linebreak => true)
+      %td Common Slavic *dъva "two"
+    %tr
+      %th 13. big
+      %td= t("болише", "bóliśe", :linebreak => true)
+      %td= t("большой", "bol'šój", :linebreak => true)
+      %td.notcognate= t("великий", "velýkyj", :linebreak => true)
+      %td.notcognate wielki
+      %td.notcognate wulki
+      %td.notcognate velký
+      %td.notcognate= t("велик", "vèlik", :linebreak => true)
+      %td.notcognate= t("голям", "goljam", :linebreak => true)
+      %td Common Slavic *boljьšь "larger"
+    %tr
+      %th 14. long
+      %td= t("диляне", "diliáne", :linebreak => true)
+      %td= t("длинный", "dlínnyj", :linebreak => true)
+      %td.notcognate= t("довгий", "dóvhyj", :linebreak => true)
+      %td.notcognate długi
+      %td.notcognate dołhi
+      %td.notcognate dlouhý
+      %td.notcognate= t("дуг", "dȕg", :linebreak => true)
+      %td.notcognate= t("дълъг", "dălăg", :linebreak => true)
+      %td Common Slavic *dьlьja "distance"
+    %tr
+      %th 15. small
+      %td= t("малене", "málene", :linebreak => true)
+      %td= t("маленький", "málen'kij", :linebreak => true)
+      %td= t("малий", "malýj", :linebreak => true)
+      %td mały
+      %td mały
+      %td malý
+      %td= t("мали", "mȃlī", :linebreak => true)
+      %td= t("малък", "malăk", :linebreak => true)
+      %td Common Slavic *malъ "small"
+    %tr
+      %th 16. woman
+      %td= t("жена", "źená", :linebreak => true)
+      %td= t("женщина", "žénščina", :linebreak => true)
+      %td= t("жінка", "žínka", :linebreak => true)
+      %td.notcognate kobieta
+      %td žona
+      %td žena
+      %td= t("жена", "žèna", :linebreak => true)
+      %td= t("жена", "žena", :linebreak => true)
+      %td Common Slavic *žena "woman"
+    %tr
+      %th 17. man
+      %td= t("маже", "máźe", :linebreak => true)
+      %td= t("мужчина", "mužčína", :linebreak => true)
+      %td.notcognate= t("чоловік", "čolovík", :linebreak => true)
+      %td mężczyzna
+      %td muž
+      %td muž
+      %td= t("мушкарац", "muškárac", :linebreak => true)
+      %td= t("мъж", "măž", :linebreak => true)
+      %td Common Slavic *mǫžь "man"
+    %tr
+      %th 18. person
+      %td= t("дужа", "duźá", :linebreak => true)
+      %td.notcognate= t("человек", "čelovék", :linebreak => true)
+      %td.notcognate= t("людина", "ljudýna", :linebreak => true)
+      %td.notcognate człowiek
+      %td.notcognate čłowjek
+      %td.notcognate člověk
+      %td.notcognate= t("човек", "čȍvek", :linebreak => true)
+      %td.notcognate= t("човек", "čovek", :linebreak => true)
+      %td Common Slavic *duxja "soul"
+    %tr
+      %th 19. fish
+      %td= t("каля", "kália", :linebreak => true)
+      %td.notcognate= t("рыба", "rýba", :linebreak => true)
+      %td.notcognate= t("риба", "rýba", :linebreak => true)
+      %td.notcognate ryba
+      %td.notcognate ryba
+      %td.notcognate ryba
+      %td.notcognate= t("риба", "rȉba", :linebreak => true)
+      %td.notcognate= t("риба", "riba", :linebreak => true)
+      %td Karelian kala "fish"
+    %tr
+      %th 20. bird
+      %td= t("поска", "póska", :linebreak => true)
+      %td= t("птица", "ptíca", :linebreak => true)
+      %td= t("птах", "ptáx", :linebreak => true)
+      %td ptak
+      %td ptačk
+      %td pták
+      %td= t("птица", "ptȉca", :linebreak => true)
+      %td= t("птица", "ptica", :linebreak => true)
+      %td Common Slavic *pъtьkа "bird"
+    %tr
+      %th 21. dog
+      %td= t("песе", "pése", :linebreak => true)
+      %td.notcognate= t("собака", "sobáka", :linebreak => true)
+      %td.notcognate= t("собака", "sobáka", :linebreak => true)
+      %td pies
+      %td pos
+      %td pes
+      %td= t("пас", "pȁs", :linebreak => true)
+      %td.notcognate= t("куче", "kuče", :linebreak => true)
+      %td Common Slavic *pьsъ "dog"
+    %tr
+      %th 22. louse
+      %td= t("воши", "vóśi", :linebreak => true)
+      %td= t("вошь", "vóš'", :linebreak => true)
+      %td= t("воша", "vóša", :linebreak => true)
+      %td wesz
+      %td weš
+      %td veš
+      %td= t("уш", "ȗš", :linebreak => true)
+      %td= t("въшка", "văška", :linebreak => true)
+      %td Common Slavic *lъšь "louse"
+    %tr
+      %th 23. tree
+      %td= t("дрѣво", "drě́vo", :linebreak => true)
+      %td= t("дерево", "dérevo", :linebreak => true)
+      %td= t("дерево", "dérevo", :linebreak => true)
+      %td drzewo
+      %td.notcognate štom
+      %td.notcognate strom
+      %td= t("дрво", "dȑvo", :linebreak => true)
+      %td= t("дърво", "dărvo", :linebreak => true)
+      %td Common Slavic *dervo "tree"
+    %tr
+      %th 24. seed
+      %td= t("шѣме", "śě́me", :linebreak => true)
+      %td= t("семя", "sémja", :linebreak => true)
+      %td= t("сім'я", "sím'ja", :linebreak => true)
+      %td.notcognate ziarno
+      %td semje
+      %td semeno
+      %td= t("семе", "sȅme", :linebreak => true)
+      %td= t("семе", "seme", :linebreak => true)
+      %td Common Slavic *sěmę "seed"
+    %tr
+      %th 25. leaf
+      %td= t("листе", "líste", :linebreak => true)
+      %td= t("лист", "líst", :linebreak => true)
+      %td= t("листок", "listók", :linebreak => true)
+      %td liść
+      %td.notcognate łopjeno
+      %td list
+      %td= t("лист", "lȋst", :linebreak => true)
+      %td= t("лист", "list", :linebreak => true)
+      %td Common Slavic *listъ "leaf"
+    %tr
+      %th 26. root
+      %td= t("корене", "kórene", :linebreak => true)
+      %td= t("корень", "kóren'", :linebreak => true)
+      %td= t("корінь", "kórin'", :linebreak => true)
+      %td korzeń
+      %td korjeń
+      %td kořen
+      %td= t("корен", "kȍrēn", :linebreak => true)
+      %td= t("корен", "koren", :linebreak => true)
+      %td Common Slavic *kory "root"
+    %tr
+      %th 27. bark
+      %td= t("кора", "kóra", :linebreak => true)
+      %td= t("кора", "korá", :linebreak => true)
+      %td= t("кора", "korá", :linebreak => true)
+      %td kora
+      %td.notcognate škóra
+      %td kůra
+      %td= t("кора", "kȍra", :linebreak => true)
+      %td= t("кора", "kora", :linebreak => true)
+      %td Common Slavic *kora "bark"
+    %tr
+      %th 28. skin
+      %td= t("плоти", "plóti", :linebreak => true)
+      %td.notcognate= t("кожа", "kóža", :linebreak => true)
+      %td.notcognate= t("шкіра", "škíra", :linebreak => true)
+      %td.notcognate skóra
+      %td.notcognate koža
+      %td.notcognate kůže
+      %td.notcognate= t("кожа", "kȍža", :linebreak => true)
+      %td.notcognate= t("кожа", "koža", :linebreak => true)
+      %td Common Slavic *pъltь "skin"
+    %tr
+      %th 29. meat
+      %td= t("месо", "méso", :linebreak => true)
+      %td= t("мясо", "mjáso", :linebreak => true)
+      %td= t("м'ясо", "m'jáso", :linebreak => true)
+      %td mięso
+      %td mjaso
+      %td maso
+      %td= t("месо", "mȇso", :linebreak => true)
+      %td= t("месо", "meso", :linebreak => true)
+      %td Common Slavic *męso "meat"
+    %tr
+      %th 30. blood
+      %td= t("крев", "krév", :linebreak => true)
+      %td= t("кровь", "krov'", :linebreak => true)
+      %td= t("кров", "krov", :linebreak => true)
+      %td krew
+      %td krej
+      %td krev
+      %td= t("крв", "kȓv", :linebreak => true)
+      %td= t("кръв", "krăv", :linebreak => true)
+      %td Common Slavic *kry "blood"
+    %tr
+      %th 31. bone
+      %td= t("кости", "kósti", :linebreak => true)
+      %td= t("кость", "kóst'", :linebreak => true)
+      %td= t("кістка", "kístka", :linebreak => true)
+      %td kość
+      %td kosć
+      %td kost
+      %td= t("кост", "kȏst", :linebreak => true)
+      %td= t("кост", "kost", :linebreak => true)
+      %td Common Slavic *kostь "bone"
+    %tr
+      %th 32. grease
+      %td= t("туке", "túke", :linebreak => true)
+      %td.notcognate= t("жир", "žír", :linebreak => true)
+      %td.notcognate= t("смалець", "smálec'", :linebreak => true)
+      %td.notcognate tłuszcz
+      %td tuk
+      %td tuk
+      %td.notcognate= t("маст", "mȃst", :linebreak => true)
+      %td.notcognate= t("мазнина", "maznina", :linebreak => true)
+      %td Common Slavic *tukъ "fat"
+    %tr
+      %th 33. egg
+      %td= t("яеце", "iáiece", :linebreak => true)
+      %td= t("яйцо", "jajcó", :linebreak => true)
+      %td= t("яйце", "jajcé", :linebreak => true)
+      %td jajko
+      %td jejo
+      %td vejce
+      %td= t("јаје", "jáje", :linebreak => true)
+      %td= t("яйце", "jajce", :linebreak => true)
+      %td Common Slavic *aje "egg"
+    %tr
+      %th 34. horn
+      %td= t("роге", "róge", :linebreak => true)
+      %td= t("рог", "róg", :linebreak => true)
+      %td= t("ріг", "ríh", :linebreak => true)
+      %td róg
+      %td róh
+      %td roh
+      %td= t("рог", "rȏg", :linebreak => true)
+      %td= t("рог", "rog", :linebreak => true)
+      %td Common Slavic *rogъ "horn"
+    %tr
+      %th 35. tail
+      %td= t("пухе", "púhe", :linebreak => true)
+      %td.notcognate= t("хвост", "xvóst", :linebreak => true)
+      %td.notcognate= t("хвіст", "xvíst", :linebreak => true)
+      %td.notcognate ogon
+      %td.notcognate wogon
+      %td.notcognate ocas
+      %td.notcognate= t("реп", "rȇp", :linebreak => true)
+      %td.notcognate= t("опашка", "opaška", :linebreak => true)
+      %td Common Slavic *puxъ "down"
+    %tr
+      %th 36. feather
+      %td= t("перко", "pérko", :linebreak => true)
+      %td= t("перо", "peró", :linebreak => true)
+      %td= t("перо", "peró", :linebreak => true)
+      %td pióro
+      %td pjero
+      %td pero
+      %td= t("перо", "pèro", :linebreak => true)
+      %td= t("перо", "pero", :linebreak => true)
+      %td Common Slavic *pero "feather"
+    %tr
+      %th 37. hair
+      %td= t("власе", "vláse", :linebreak => true)
+      %td= t("волос", "vólos", :linebreak => true)
+      %td= t("волос", "vólos", :linebreak => true)
+      %td włosy
+      %td włosa
+      %td vlasy
+      %td.notcognate= t("коса", "kòsa", :linebreak => true)
+      %td.notcognate= t("коса", "kosa", :linebreak => true)
+      %td Common Slavic *volsъ "hair"
+    %tr
+      %th 38. head
+      %td= t("глава", "gláva", :linebreak => true)
+      %td= t("голова", "golová", :linebreak => true)
+      %td= t("голова", "holová", :linebreak => true)
+      %td głowa
+      %td hłowa
+      %td hlava
+      %td= t("глава", "gláva", :linebreak => true)
+      %td= t("глава", "glava", :linebreak => true)
+      %td Common Slavic *golva "head"
+    %tr
+      %th 39. ear
+      %td= t("оху", "óhu", :linebreak => true)
+      %td= t("ухо", "úxo", :linebreak => true)
+      %td= t("вухо", "vúxo", :linebreak => true)
+      %td ucho
+      %td wucho
+      %td ucho
+      %td= t("уво", "ȕvo", :linebreak => true)
+      %td= t("ухо", "uxo", :linebreak => true)
+      %td Common Slavic *uxo "ear"
+    %tr
+      %th 40. eye
+      %td= t("око", "óko", :linebreak => true)
+      %td.notcognate= t("глаз", "gláz", :linebreak => true)
+      %td= t("око", "óko", :linebreak => true)
+      %td oko
+      %td woko
+      %td oko
+      %td= t("око", "ȍko", :linebreak => true)
+      %td= t("око", "oko", :linebreak => true)
+      %td Common Slavic *oko "eye"
+    %tr
+      %th 41. nose
+      %td= t("носе", "nóse", :linebreak => true)
+      %td= t("нос", "nós", :linebreak => true)
+      %td= t("ніс", "nís", :linebreak => true)
+      %td nos
+      %td nós
+      %td nos
+      %td= t("нос", "nȏs", :linebreak => true)
+      %td= t("нос", "nos", :linebreak => true)
+      %td Common Slavic *nosъ "nose"
+    %tr
+      %th 42. mouth
+      %td= t("роте", "róte", :linebreak => true)
+      %td= t("рот", "rót", :linebreak => true)
+      %td= t("рот", "rót", :linebreak => true)
+      %td.notcognate usta
+      %td.notcognate huba
+      %td.notcognate ústa
+      %td.notcognate= t("уста", "ústa", :linebreak => true)
+      %td.notcognate уста
+      %td Common Slavic *rъtъ "mouth"
+    %tr
+      %th 43. tooth
+      %td= t("забе", "zábe", :linebreak => true)
+      %td= t("зуб", "zúb", :linebreak => true)
+      %td= t("зуб", "zúb", :linebreak => true)
+      %td ząb
+      %td zub
+      %td zub
+      %td= t("зуб", "zȗb", :linebreak => true)
+      %td= t("зъб", "zăb", :linebreak => true)
+      %td Common Slavic *zǫbъ "tooth"
+    %tr
+      %th 44. tongue
+      %td= t("лизике", "lizíke", :linebreak => true)
+      %td= t("язык", "jazýk", :linebreak => true)
+      %td= t("язик", "jazýk", :linebreak => true)
+      %td język
+      %td jazyk
+      %td jazyk
+      %td= t("језик", "jèzik", :linebreak => true)
+      %td= t("език", "ezik", :linebreak => true)
+      %td Common Slavic *językъ "tongue"
+    %tr
+      %th 45. fingernail
+      %td= t("ноготи", "nógoti", :linebreak => true)
+      %td= t("ноготь", "nógot'", :linebreak => true)
+      %td= t("ніготь", "níhot'", :linebreak => true)
+      %td paznokieć
+      %td nohć
+      %td nehet
+      %td= t("нокат", "nȍkat", :linebreak => true)
+      %td= t("нокът", "nokăt", :linebreak => true)
+      %td Common Slavic *nogъtъ "nail"
+    %tr
+      %th 46. foot
+      %td= t("нога", "nogá", :linebreak => true)
+      %td= t("нога", "nogá", :linebreak => true)
+      %td= t("нога", "nohá", :linebreak => true)
+      %td.notcognate stopa
+      %td.notcognate stopa
+      %td noha
+      %td.notcognate= t("стопало", "stòpalo", :linebreak => true)
+      %td.notcognate= t("стъпало", "stăpalo", :linebreak => true)
+      %td Common Slavic *noga "leg, foot"
+    %tr
+      %th 47. knee
+      %td= t("колѣно", "kolě́no", :linebreak => true)
+      %td= t("колено", "koléno", :linebreak => true)
+      %td= t("коліно", "kolíno", :linebreak => true)
+      %td kolano
+      %td koleno
+      %td koleno
+      %td= t("колено", "kòleno", :linebreak => true)
+      %td= t("коляно", "koljano", :linebreak => true)
+      %td Common Slavic *kolěno "knee"
+    %tr
+      %th 48. hand
+      %td= t("рока", "róka", :linebreak => true)
+      %td= t("рука", "ruká", :linebreak => true)
+      %td= t("рука", "ruká", :linebreak => true)
+      %td ręka
+      %td ruka
+      %td ruka
+      %td= t("рука", "rúka", :linebreak => true)
+      %td= t("ръка", "răka", :linebreak => true)
+      %td Common Slavic *rǫka "hand"
+    %tr
+      %th 49. belly
+      %td= t("желудоке", "źeludóke", :linebreak => true)
+      %td.notcognate= t("живот", "živót", :linebreak => true)
+      %td.notcognate= t("живіт", "žyvít", :linebreak => true)
+      %td żołądek
+      %td.notcognate brjuch
+      %td.notcognate břicho
+      %td.notcognate= t("стомак", "stȍmāk", :linebreak => true)
+      %td.notcognate= t("корем", "korem", :linebreak => true)
+      %td Common Slavic *želǫdъkъ "stomach"
+    %tr
+      %th 50. neck
+      %td= t("шия", "śíja", :linebreak => true)
+      %td= t("шея", "šéja", :linebreak => true)
+      %td= t("шия", "šýja", :linebreak => true)
+      %td szyja
+      %td šija
+      %td.notcognate krk
+      %td.notcognate= t("врат", "vrȃt", :linebreak => true)
+      %td.notcognate= t("врат", "vrat", :linebreak => true)
+      %td Common Slavic *šija "neck"
+    %tr
+      %th 51. breast
+      %td= t("гранди", "grándi", :linebreak => true)
+      %td= t("грудь", "grúd'", :linebreak => true)
+      %td= t("груди", "hrúdi", :linebreak => true)
+      %td.notcognate pierś
+      %td hrudź
+      %td.notcognate prs
+      %td= t("груди", "grȗdi", :linebreak => true)
+      %td= t("гръд", "grăd", :linebreak => true)
+      %td Common Slavic *grǫdь "breast"
+    %tr
+      %th 52. heart
+      %td= t("шерце", "śérce", :linebreak => true)
+      %td= t("сердце", "sérdce", :linebreak => true)
+      %td= t("серце", "sérce", :linebreak => true)
+      %td serce
+      %td.notcognate wutroba
+      %td srdce
+      %td= t("срце", "sȑce", :linebreak => true)
+      %td= t("сърце", "sărce", :linebreak => true)
+      %td Common Slavic *sьrdьko "heart"
+    %tr
+      %th 53. liver
+      %td= t("етро", "iétro", :linebreak => true)
+      %td.notcognate= t("печень", "péčen'", :linebreak => true)
+      %td.notcognate= t("печінка", "pečínka", :linebreak => true)
+      %td wątroba
+      %td jatra
+      %td játra
+      %td= t("јетра", "jȅtra", :linebreak => true)
+      %td.notcognate= t("черен дроб", "čeren drob", :linebreak => true)
+      %td Common Slavic *jętro "liver, organ"
+    %tr
+      %th 54. drink (v)
+      %td= t("пити", "píti", :linebreak => true)
+      %td= t("пить", "pít'", :linebreak => true)
+      %td= t("пити", "pýty", :linebreak => true)
+      %td pić
+      %td pić
+      %td pít
+      %td= t("пити", "pȉti", :linebreak => true)
+      %td= t("пия", "pija", :linebreak => true)
+      %td Common Slavic *piti "drink"
+    %tr
+      %th 55. eat
+      %td= t("ѣсти", "iě́sti", :linebreak => true)
+      %td= t("есть", "jést'", :linebreak => true)
+      %td= t("їсти", "jísty", :linebreak => true)
+      %td jeść
+      %td jěsć
+      %td jíst
+      %td= t("јести", "jȅsti", :linebreak => true)
+      %td= t("ям", "jam", :linebreak => true)
+      %td Common Slavic *ěsti "eat"
+    %tr
+      %th 56. bite
+      %td= t("кузати", "kuzáti", :linebreak => true)
+      %td= t("кусать", "kusát'", :linebreak => true)
+      %td= t("кусати", "kusáty", :linebreak => true)
+      %td.notcognate gryść
+      %td kusać
+      %td kousat
+      %td.notcognate= t("ујести", "ùjesti", :linebreak => true)
+      %td.notcognate= t("хапя", "xapja", :linebreak => true)
+      %td Common Slavic *kǫsъ "bite, morsel"
+    %tr
+      %th 57. see
+      %td= t("видѣти", "viděti", :linebreak => true)
+      %td= t("видеть", "vídet'", :linebreak => true)
+      %td.notcognate= t("бачити", "báčyty", :linebreak => true)
+      %td widzieć
+      %td widźeć
+      %td vidět
+      %td= t("видети", "vȉdeti", :linebreak => true)
+      %td= t("виждам", "viždam", :linebreak => true)
+      %td Common Slavic *viděti "see"
+    %tr
+      %th 58. hear
+      %td= t("слихати", "slíhati", :linebreak => true)
+      %td= t("слышать", "slýšat'", :linebreak => true)
+      %td.notcognate= t("чути", "čuty", :linebreak => true)
+      %td słyszeć
+      %td słyšeć
+      %td slyšet
+      %td.notcognate= t("чути", "čȕti", :linebreak => true)
+      %td.notcognate= t("чувам", "čuvam", :linebreak => true)
+      %td Common Slavic *slyšati "hear"
+    %tr
+      %th 59. know
+      %td= t("вѣсти", "vě́sti", :linebreak => true)
+      %td.notcognate= t("знать", "znát'", :linebreak => true)
+      %td.notcognate= t("знати", "znáty", :linebreak => true)
+      %td wiedzieć
+      %td.notcognate znać
+      %td vědět
+      %td.notcognate= t("знати", "znȁti", :linebreak => true)
+      %td.notcognate= t("зная", "znaja", :linebreak => true)
+      %td Common Slavic *věsti "know"
+    %tr
+      %th 60. sleep
+      %td= t("спати", "spáti", :linebreak => true)
+      %td= t("спать", "spát'", :linebreak => true)
+      %td= t("спати", "spáty", :linebreak => true)
+      %td spać
+      %td spać
+      %td spát
+      %td= t("спавати", "spávati", :linebreak => true)
+      %td= t("спя", "spja", :linebreak => true)
+      %td Common Slavic *sъраti "sleep"
+    %tr
+      %th 61. die
+      %td= t("омирати", "omiráti", :linebreak => true)
+      %td= t("умирать", "umirát'", :linebreak => true)
+      %td= t("умирати", "umyráty", :linebreak => true)
+      %td umierać
+      %td wuměrać
+      %td umírat
+      %td= t("умрети", "ùmrēti", :linebreak => true)
+      %td= t("умирам", "umiram", :linebreak => true)
+      %td Common Slavic *merti "die"
+    %tr
+      %th 62. kill
+      %td= t("забитати", "zabitáti", :linebreak => true)
+      %td= t("убивать", "ubivát'", :linebreak => true)
+      %td= t("убивати", "ubyváty", :linebreak => true)
+      %td zabijać
+      %td.notcognate morić
+      %td zabít
+      %td= t("убити", "ùbiti", :linebreak => true)
+      %td= t("убивам", "ubivam", :linebreak => true)
+      %td Common Slavic *biti "beat, maul"
+    %tr
+      %th 63. swim
+      %td= t("плути", "plúti", :linebreak => true)
+      %td= t("плыть", "plýt'", :linebreak => true)
+      %td= t("пливти", "plyvtý", :linebreak => true)
+      %td pływać
+      %td płuwać
+      %td plavat
+      %td= t("пливати", "plȉvati", :linebreak => true)
+      %td= t("плувам", "pluvam", :linebreak => true)
+      %td Common Slavic *pluti "swim"
+    %tr
+      %th 64. fly (v)
+      %td= t("ледѣти", "ledě́ti", :linebreak => true)
+      %td= t("лететь", "letét'", :linebreak => true)
+      %td= t("літати", "litáty", :linebreak => true)
+      %td latać
+      %td lećeć
+      %td letět
+      %td= t("летети", "lèteti", :linebreak => true)
+      %td= t("летя", "letja", :linebreak => true)
+      %td Common Slavic *letěti "fly"
+    %tr
+      %th 65. walk
+      %td= t("ходити", "hóditi", :linebreak => true)
+      %td= t("ходить", "xodít'", :linebreak => true)
+      %td= t("ходити", "xodýty", :linebreak => true)
+      %td chodzić
+      %td chodźić
+      %td.notcognate jít
+      %td= t("ходати", "hódati", :linebreak => true)
+      %td= t("ходя", "xodja", :linebreak => true)
+      %td Common Slavic *xoditi "walk"
+    %tr
+      %th 66. come
+      %td= t("исти", "ísti", :linebreak => true)
+      %td= t("идти", "idtí", :linebreak => true)
+      %td= t("іти", "itý", :linebreak => true)
+      %td przyjść
+      %td přinć
+      %td přijít
+      %td= t("доћи", "dȏći", :linebreak => true)
+      %td= t("идвам", "idvam", :linebreak => true)
+      %td Common Slavic *jьti "go"
+    %tr
+      %th 67. lie, recline
+      %td= t("лежити", "leźíti", :linebreak => true)
+      %td= t("лежать", "ležát'", :linebreak => true)
+      %td= t("лежати", "ležáty", :linebreak => true)
+      %td leżeć
+      %td ležeć
+      %td ležet
+      %td= t("лежати", "lèžati", :linebreak => true)
+      %td= t("лежа", "leža", :linebreak => true)
+      %td Common Slavic *ležati "lie"
+    %tr
+      %th 68. sit
+      %td= t("шѣдѣти", "śědě́ti", :linebreak => true)
+      %td= t("сидеть", "sidét'", :linebreak => true)
+      %td= t("сидіти", "sydíty", :linebreak => true)
+      %td siadać
+      %td sedźeć
+      %td sedět
+      %td= t("седети", "sèdeti", :linebreak => true)
+      %td= t("седя", "sedja", :linebreak => true)
+      %td Common Slavic *sěděti "sit"
+    %tr
+      %th 69. stand
+      %td= t("стояти", "stoiáti", :linebreak => true)
+      %td= t("стоять", "stoját'", :linebreak => true)
+      %td= t("стојати", "stojáty", :linebreak => true)
+      %td stać
+      %td stać
+      %td stát
+      %td= t("стајати", "stȁjati", :linebreak => true)
+      %td= t("стоя", "stoja", :linebreak => true)
+      %td Common Slavic *stojati "stand"
+    %tr
+      %th 70. give
+      %td= t("дати", "dáti", :linebreak => true)
+      %td= t("давать", "davát'", :linebreak => true)
+      %td= t("давати", "daváty", :linebreak => true)
+      %td dawać
+      %td dać
+      %td dát
+      %td= t("дати", "dȁti", :linebreak => true)
+      %td= t("давам", "davam", :linebreak => true)
+      %td Common Slavic *dati "give"
+    %tr
+      %th 71. say
+      %td= t("рѣѕити", "rědzíti", :linebreak => true)
+      %td.notcognate= t("говорить", "govorít'", :linebreak => true)
+      %td.notcognate= t("говорити", "hovorýty", :linebreak => true)
+      %td.notcognate mówić
+      %td rjec
+      %td říkat
+      %td= t("рећи", "rȅći", :linebreak => true)
+      %td.notcognate= t("казвам", "kazvam", :linebreak => true)
+      %td Common Slavic *rekti "tell"
+    %tr
+      %th 72. sun
+      %td= t("соунце", "sóunce", :linebreak => true)
+      %td= t("солнце", "sólnce", :linebreak => true)
+      %td= t("сонце", "sónce", :linebreak => true)
+      %td słońce
+      %td słónco
+      %td slunce
+      %td= t("сунце", "sȗnce", :linebreak => true)
+      %td= t("слънце", "slănce", :linebreak => true)
+      %td Common Slavic *sъlnьko "sun"
+    %tr
+      %th 73. moon
+      %td= t("љуна", "łuná", :linebreak => true)
+      %td= t("луна", "luná", :linebreak => true)
+      %td.notcognate= t("місяць", "mísjac'", :linebreak => true)
+      %td.notcognate księżyc
+      %td.notcognate měsačk
+      %td luna
+      %td.notcognate= t("месец", "mȅsēc", :linebreak => true)
+      %td= t("луна", "luna", :linebreak => true)
+      %td Common Slavic *luna "moon"
+    %tr
+      %th 74. star
+      %td= t("гуѣзда", "guě́zda", :linebreak => true)
+      %td= t("звезда", "zvezdá", :linebreak => true)
+      %td.notcognate= t("зоря", "zorjá", :linebreak => true)
+      %td gwiazda
+      %td hwězda
+      %td hvězda
+      %td= t("звезда", "zvézda", :linebreak => true)
+      %td= t("звезда", "zvezda", :linebreak => true)
+      %td Common Slavic *gvězdа "star"
+    %tr
+      %th 75. water
+      %td= t("вода", "vóda", :linebreak => true)
+      %td= t("вода", "vodá", :linebreak => true)
+      %td= t("вода", "vodá", :linebreak => true)
+      %td woda
+      %td woda
+      %td voda
+      %td= t("вода", "vòda", :linebreak => true)
+      %td= t("вода", "voda", :linebreak => true)
+      %td Common Slavic *voda "water"
+    %tr
+      %th 76. rain (n)
+      %td= t("дожгьи", "doźgjí", :linebreak => true)
+      %td= t("дождь", "dóžd'", :linebreak => true)
+      %td= t("дощ", "dóšč", :linebreak => true)
+      %td deszcz
+      %td dešć
+      %td déšť
+      %td.notcognate= t("киша", "kȉša", :linebreak => true)
+      %td= t("дъжд", "dăžd", :linebreak => true)
+      %td Common Slavic *dъdjь "rain"
+    %tr
+      %th 77. stone
+      %td= t("каме", "káme", :linebreak => true)
+      %td= t("камень", "kámen'", :linebreak => true)
+      %td= t("камінь", "kámin'", :linebreak => true)
+      %td kamień
+      %td kamjeń
+      %td kámen
+      %td= t("камен", "kȁmēn", :linebreak => true)
+      %td= t("камък", "kamăk", :linebreak => true)
+      %td Common Slavic *kamy "stone"
+    %tr
+      %th 78. sand
+      %td= t("хета", "héta", :linebreak => true)
+      %td.notcognate= t("песок", "pesók", :linebreak => true)
+      %td.notcognate= t("пісок", "pisók", :linebreak => true)
+      %td.notcognate piasek
+      %td.notcognate pěsk
+      %td.notcognate písek
+      %td.notcognate= t("песак", "pésak", :linebreak => true)
+      %td.notcognate= t("пясък", "pjasăk", :linebreak => true)
+      %td Old Finnish heeta "sand"
+    %tr
+      %th 79. soil, earth
+      %td= t("жемя", "źémia", :linebreak => true)
+      %td= t("земля", "zemljá", :linebreak => true)
+      %td= t("земля", "zemljá", :linebreak => true)
+      %td ziemia
+      %td zemja
+      %td země
+      %td= t("земља", "zèmlja", :linebreak => true)
+      %td= t("земя", "zemja", :linebreak => true)
+      %td Common Slavic *zemja "land, earth"
+    %tr
+      %th 80. cloud
+      %td= t("облоко", "óbloko", :linebreak => true)
+      %td= t("облако", "óblako", :linebreak => true)
+      %td.notcognate= t("хмара", "xmára", :linebreak => true)
+      %td.notcognate chmura
+      %td.notcognate mróčel
+      %td oblak
+      %td= t("облак", "ȍblāk", :linebreak => true)
+      %td= t("облак", "oblak", :linebreak => true)
+      %td Common Slavic *ob-volkъ "cloud"
+    %tr
+      %th 81. smoke
+      %td= t("диме", "díme", :linebreak => true)
+      %td= t("дым", "dým", :linebreak => true)
+      %td= t("дим", "dým", :linebreak => true)
+      %td dym
+      %td.notcognate kur
+      %td dým
+      %td= t("дим", "dȉm", :linebreak => true)
+      %td= t("дим", "dim", :linebreak => true)
+      %td Common Slavic *dymъ "smoke"
+    %tr
+      %th 82. fire
+      %td= t("огни", "ógni", :linebreak => true)
+      %td= t("огонь", "ogón'", :linebreak => true)
+      %td= t("вогонь", "vohón'", :linebreak => true)
+      %td ogień
+      %td woheń
+      %td oheň
+      %td.notcognate= t("ватра", "vȁtra", :linebreak => true)
+      %td= t("огън", "ogăn", :linebreak => true)
+      %td Common Slavic *ognь "fire"
+    %tr
+      %th 83. ash
+      %td= t("певле", "pévle", :linebreak => true)
+      %td= t("пепел", "pépel", :linebreak => true)
+      %td= t("попіл", "pópil", :linebreak => true)
+      %td popiół
+      %td popjeł
+      %td popel
+      %td= t("пепео", "pȅpeo", :linebreak => true)
+      %td= t("пепел", "pepel", :linebreak => true)
+      %td Common Slavic *pepьlъ "ash"
+    %tr
+      %th 84. burn (intr)
+      %td= t("гейкьиш", "géikjiś", :linebreak => true)
+      %td.notcognate= t("гореть", "gorét'", :linebreak => true)
+      %td.notcognate= t("горіти", "horíty", :linebreak => true)
+      %td.notcognate palić się
+      %td.notcognate so palić
+      %td.notcognate hořet
+      %td.notcognate= t("горети", "gòreti", :linebreak => true)
+      %td.notcognate= t("горя", "gorja", :linebreak => true)
+      %td Common Slavic gegti sę "burn"
+    %tr
+      %th 85. path
+      %td= t("панти", "pánti", :linebreak => true)
+      %td= t("путь", "pút'", :linebreak => true)
+      %td.notcognate= t("доріжка", "dorížka", :linebreak => true)
+      %td.notcognate droga
+      %td puć
+      %td.notcognate silnice
+      %td= t("пут", "pȗt", :linebreak => true)
+      %td= t("път", "păt", :linebreak => true)
+      %td Common Slavic *pǫtь "path"
+    %tr
+      %th 86. mountain
+      %td= t("гора", "góra", :linebreak => true)
+      %td= t("гора", "gorá", :linebreak => true)
+      %td= t("гора", "horá", :linebreak => true)
+      %td góra
+      %td hora
+      %td hora
+      %td.notcognate= t("планина", "planìna", :linebreak => true)
+      %td.notcognate= t("планина", "planina", :linebreak => true)
+      %td Common Slavic *gora "mountain"
+    %tr
+      %th 87. red
+      %td= t("цервене", "cérvene", :linebreak => true)
+      %td.notcognate= t("красный", "krásnyj", :linebreak => true)
+      %td= t("червоний", "červónyj", :linebreak => true)
+      %td czerwony
+      %td čerwjeny
+      %td červený
+      %td= t("црвен", "cr̀ven", :linebreak => true)
+      %td= t("червен", "červen", :linebreak => true)
+      %td Common Slavic *čьrvjenъ "red"
+    %tr
+      %th 88. green
+      %td= t("желене", "źeléne", :linebreak => true)
+      %td= t("зелёный", "zeljónyj", :linebreak => true)
+      %td= t("зелений", "zelényj", :linebreak => true)
+      %td zielony
+      %td zeleny
+      %td zelený
+      %td= t("зелен", "zèlen", :linebreak => true)
+      %td= t("зелен", "zelen", :linebreak => true)
+      %td Common Slavic *zelenъ "green"
+    %tr
+      %th 89. yellow
+      %td= t("жољте", "źółte", :linebreak => true)
+      %td= t("жёлтый", "žóltyj", :linebreak => true)
+      %td= t("жовтий", "žóvtyj", :linebreak => true)
+      %td żółty
+      %td žołty
+      %td žlutý
+      %td= t("жут", "žȗt", :linebreak => true)
+      %td= t("жълт", "žălt", :linebreak => true)
+      %td Common Slavic *žьltъ "yellow"
+    %tr
+      %th 90. white
+      %td= t("бѣле", "bě́le", :linebreak => true)
+      %td= t("белый", "bélyj", :linebreak => true)
+      %td= t("білий", "bílyj", :linebreak => true)
+      %td biały
+      %td běły
+      %td bílý
+      %td= t("бео", "bȅo", :linebreak => true)
+      %td= t("бял", "bjal", :linebreak => true)
+      %td Common Slavic *bělъ "white"
+    %tr
+      %th 91. black
+      %td= t("церне", "cérne", :linebreak => true)
+      %td= t("чёрный", "čórnyj", :linebreak => true)
+      %td= t("чорний", "čórnyj", :linebreak => true)
+      %td czarny
+      %td čorny
+      %td černý
+      %td= t("црн", "cȓn", :linebreak => true)
+      %td= t("черен", "čeren", :linebreak => true)
+      %td Common Slavic *čьrхnъ "black"
+    %tr
+      %th 92. night
+      %td= t("нокьи", "nókji", :linebreak => true)
+      %td= t("ночь", "nóč'", :linebreak => true)
+      %td= t("ніч", "níč", :linebreak => true)
+      %td noc
+      %td nóc
+      %td noc
+      %td= t("ноћ", "nȏć", :linebreak => true)
+      %td= t("нощ", "nošt", :linebreak => true)
+      %td Common Slavic *noktь "night"
+    %tr
+      %th 93. hot
+      %td= t("горекье", "gorékje", :linebreak => true)
+      %td= t("горячий", "gorjáčij", :linebreak => true)
+      %td= t("гарячий", "harjáčyj", :linebreak => true)
+      %td gorący
+      %td horcy
+      %td horký
+      %td.notcognate= t("врућ", "vrȗć", :linebreak => true)
+      %td= t("горещ", "gorešt", :linebreak => true)
+      %td Common Slavic *gorętjь "burning"
+    %tr
+      %th 94. cold
+      %td= t("кладне", "kládne", :linebreak => true)
+      %td= t("холодный", "xolódnyj", :linebreak => true)
+      %td= t("холодний", "xolódnyj", :linebreak => true)
+      %td.notcognate zimny
+      %td.notcognate zymny
+      %td chladný
+      %td= t("хладан", "hládan", :linebreak => true)
+      %td= t("хладен", "xladen", :linebreak => true)
+      %td Common Slavic *xoldьnъ "cold"
+    %tr
+      %th 95. full
+      %td= t("плоне", "plóne", :linebreak => true)
+      %td= t("полный", "pólnyj", :linebreak => true)
+      %td= t("повний", "póvnyj", :linebreak => true)
+      %td pełny
+      %td połny
+      %td plný
+      %td= t("пун", "pȕn", :linebreak => true)
+      %td= t("пълен", "pălen", :linebreak => true)
+      %td Common Slavic *plъnъ "full"
+    %tr
+      %th 96. new
+      %td= t("нове", "nóve", :linebreak => true)
+      %td= t("новый", "nóvyj", :linebreak => true)
+      %td= t("новий", "novýj", :linebreak => true)
+      %td nowy
+      %td nowy
+      %td nový
+      %td= t("нов", "nȍv", :linebreak => true)
+      %td= t("нов", "nov", :linebreak => true)
+      %td Common Slavic *novъ "new"
+    %tr
+      %th 97. good
+      %td= t("добре", "dóbre", :linebreak => true)
+      %td.notcognate= t("хороший", "xoróšij", :linebreak => true)
+      %td= t("добрий", "dóbryj", :linebreak => true)
+      %td dobry
+      %td dobry
+      %td dobrý
+      %td= t("добар", "dȍbar", :linebreak => true)
+      %td= t("добър", "dobăr", :linebreak => true)
+      %td Common Slavic *dobrъ "good"
+    %tr
+      %th 98. round
+      %td= t("обле", "óble", :linebreak => true)
+      %td.notcognate= t("круглый", "krúglyj", :linebreak => true)
+      %td.notcognate= t("круглий", "krúhlyj", :linebreak => true)
+      %td.notcognate okrągły
+      %td.notcognate kulojty
+      %td.notcognate kulatý
+      %td= t("обао", "ȍbao", :linebreak => true)
+      %td.notcognate= t("кръгъл", "krăgăl", :linebreak => true)
+      %td Common Slavic *obьlъ "round"
+    %tr
+      %th 99. dry
+      %td= t("сухе", "súhe", :linebreak => true)
+      %td= t("сухой", "suxój", :linebreak => true)
+      %td= t("сухий", "suxýj", :linebreak => true)
+      %td suchy
+      %td suchi
+      %td suchý
+      %td= t("сух", "sȗh", :linebreak => true)
+      %td= t("сух", "sux", :linebreak => true)
+      %td Common Slavic *suxъ "dry"
+    %tr
+      %th 100. name
+      %td= t("ймѣно", "jmě́no", :linebreak => true)
+      %td= t("имя", "ímja", :linebreak => true)
+      %td= t("ім'я", "im'já", :linebreak => true)
+      %td imię
+      %td mjeno
+      %td jméno
+      %td= t("име", "ȉme", :linebreak => true)
+      %td= t("име", "ime", :linebreak => true)
+      %td Common Slavic *jьmę "name"
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) A less formal variant of мати
+%p 2) Borrows the singular possessive forms (as well as plurals) from дѣдин
+%p 3) Same meaning as дѣтинко
+%p 4) Informal; substitutes for both стриеце and оеце
+%p 5) Informal
+%p 6) Informal
+%p 7) The adjective mirrors the gender of the sibling. Therefore, братеве син means the son of a brother, and шестрин син is the son of a sister, while братева докьи means the daughter of a brother and шестрина докьи is the daughter of a sister.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
