@@ -1,0 +1,55 @@
+- content_for :title, "Grammar of the Alashian Language"
+- content_for :section_title do
+  Grammar of the Alashian Language
+  %br
+  Γραμμάτικετ Αλλασούν Ναλασκιώ
+
+= image_tag 'alashian/cover.png', :id => 'coverart', :alt => "A Reference Grammar of the Alashian Language"
+
+%h2 E-Book
+%p The most current version of the Alashian grammar is available as a pdf e-book here:
+%p
+  = link_to "Reference Grammar of the Alashian Language", "http://cl.ly/3I0b2Y0e2B0I/alashian_web.pdf"
+  (3.5 MB)
+%p &nbsp;
+%p Otherwise, the entire text of the grammar may be browsed online.
+%p &nbsp;
+
+%h2 Online Index of Topics
+%p a. #{link_to "Foreword", alashian_grammar_page_path(:foreword)}
+%p b. #{link_to "Abbreviations", alashian_grammar_page_path(:abbreviations)}
+%p 1. #{link_to "Background", alashian_grammar_page_path(:background)}
+%p 2. #{link_to "Phonology", alashian_grammar_page_path(:phonology)}
+%p 3. #{link_to "Writing", alashian_grammar_page_path(:writing)}
+%p 4. #{link_to "Introduction to the Verbal System", alashian_grammar_page_path(:verbintro)}
+%p 5. #{link_to "Verb Scale I: <i>katab</i> and <i>nuktāb</i>".html_safe, alashian_grammar_page_path(:scale1)}
+%p 6. #{link_to "Verb Scale II: <i>kəthēb</i> and <i>kəthāb</i>".html_safe, alashian_grammar_page_path(:scale2)}
+%p 7. #{link_to "Verb Scale III: <i>'aktēb</i> and <i>'ennuktāb</i>".html_safe, alashian_grammar_page_path(:scale3)}
+%p 8. #{link_to "Verb Scale IV: <i>taktēb</i>".html_safe, alashian_grammar_page_path(:scale4)}
+%p 9. #{link_to "Verb Scale V: <i>nitkatab</i>".html_safe, alashian_grammar_page_path(:scale5)}
+%p 10. #{link_to "Verb Scale VI: <i>staktab</i> and <i>nistuktāb</i>".html_safe, alashian_grammar_page_path(:scale6)}
+%p 11. #{link_to "Other Verbal Forms", alashian_grammar_page_path(:otherverbal)}
+%p 12. #{link_to "Comparative Verb Tables and Common Irregular Roots", alashian_grammar_page_path(:irregular)}
+%p 13. #{link_to "European Loan Verbs", alashian_grammar_page_path(:european)}
+%p 14. #{link_to "The Nominal System", alashian_grammar_page_path(:nouns)}
+%p 15. #{link_to "Adjectives", alashian_grammar_page_path(:adjectives)}
+%p 16. #{link_to "Pronouns", alashian_grammar_page_path(:pronouns)}
+%p 17. #{link_to "Prepositions", alashian_grammar_page_path(:prepositions)}
+%p 18. #{link_to "Derivation", alashian_grammar_page_path(:derivation)}
+%p 19. #{link_to "Verb Phrases", alashian_grammar_page_path(:verbphrases)}
+%p 20. #{link_to "Noun Phrases", alashian_grammar_page_path(:nounphrases)}
+%p 21. #{link_to "Clauses", alashian_grammar_page_path(:clauses)}
+%p 22. #{link_to "Spoken Alashian", alashian_grammar_page_path(:spoken)}
+%p 23. #{link_to "Historical Phonology and Morphology", alashian_grammar_page_path(:history)}
+%p 24. #{link_to "Appendices", alashian_grammar_page_path(:appendix)}
+
+%p &nbsp;
+
+%h2 Lexicon
+%p
+  = link_to "Alashian Lexicon and Dictionary", lexicon_path(:language => :alashian)
+  (online)
+
+%p &nbsp;
+%p &nbsp;
+%p= link_to "Return to Main Veche.Net Page", root_path

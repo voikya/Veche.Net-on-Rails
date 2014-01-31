@@ -18,6 +18,7 @@ VecheNet::Application.routes.draw do
 
   scope 'alashian', :module => :grammars do
     get '/' => 'alashian#index', :as => 'alashian_index'
+    get '/:page' => 'alashian#show', :as => 'alashian_grammar_page'
   end
 
   scope 'lexicon', :module => :lexicons do
