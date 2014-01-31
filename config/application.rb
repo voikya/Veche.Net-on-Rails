@@ -58,5 +58,8 @@ module VecheNet
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Confine helpers to specific context
+    config.action_controller.include_all_helpers = false
   end
 end

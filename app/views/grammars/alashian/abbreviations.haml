@@ -1,0 +1,130 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σινδυμυγ̄ραφκιούς̄"
+
+= render :partial => 'navigation'
+
+%table
+  %thead
+    %tr
+      %th Abbreviation
+      %th Meaning
+  %body
+    %tr
+      %td= abbrev '1'
+      %td First Person
+    %tr
+      %td= abbrev '2'
+      %td Second Person
+    %tr
+      %td= abbrev '3'
+      %td Third Person
+    %tr
+      %td= abbrev 'abs'
+      %td Absolute State
+    %tr
+      %td= abbrev 'acc'
+      %td Accusative
+    %tr
+      %td= abbrev 'act'
+      %td Active Voice
+    %tr
+      %td= abbrev 'adv'
+      %td Adverb
+    %tr
+      %td= abbrev 'clitic'
+      %td Clitic Pronoun
+    %tr
+      %td= abbrev 'const'
+      %td Construct State
+    %tr
+      %td= abbrev 'counterf'
+      %td Counterfactual Conditional
+    %tr
+      %td= abbrev 'det'
+      %td Determinate State
+    %tr
+      %td= abbrev 'disjunct'
+      %td Disjunctive Pronoun
+    %tr
+      %td= abbrev 'dl'
+      %td Dual
+    %tr
+      %td= abbrev 'emph'
+      %td Emphatic
+    %tr
+      %td= abbrev 'expl'
+      %td Syntactic Expletive
+    %tr
+      %td= abbrev 'fem'
+      %td Feminine
+    %tr
+      %td= abbrev 'fut'
+      %td Future Auxiliary
+    %tr
+      %td= abbrev 'gen'
+      %td Genitive–Dative
+    %tr
+      %td= abbrev 'imper'
+      %td Imperative Mood
+    %tr
+      %td= abbrev 'impf'
+      %td Imperfect Tense
+    %tr
+      %td= abbrev 'inf'
+      %td Infinitive
+    %tr
+      %td= abbrev 'interr'
+      %td Interrogative Particle
+    %tr
+      %td= abbrev 'masc'
+      %td Masculine
+    %tr
+      %td= abbrev 'neg'
+      %td Negative Particle
+    %tr
+      %td= abbrev 'nom'
+      %td Nominative
+    %tr
+      %td= abbrev 'part'
+      %td Partitive State
+    %tr
+      %td= abbrev 'pass'
+      %td Passive Voice
+    %tr
+      %td= abbrev 'pf'
+      %td Perfective
+    %tr
+      %td= abbrev 'pl'
+      %td Plural
+    %tr
+      %td= abbrev 'prec'
+      %td Precative Mood
+    %tr
+      %td= abbrev 'pres'
+      %td Present Tense
+    %tr
+      %td= abbrev 'pret'
+      %td Preterite Tense
+    %tr
+      %td= abbrev 'pron'
+      %td Pronoun
+    %tr
+      %td= abbrev 'ptcpl'
+      %td Participle
+    %tr
+      %td= abbrev 'sg'
+      %td Singular
+    %tr
+      %td= abbrev 'sub'
+      %td Subordinating Conjunction
+    %tr
+      %td= abbrev 'subj'
+      %td Subjunctive
+    %tr
+      %td= abbrev 'vol'
+      %td Volitive Mood
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
