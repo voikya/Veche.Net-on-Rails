@@ -1,0 +1,230 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Φυνυλυιώ"
+
+= render :partial => 'navigation'
+
+= section "Vowels" do
+  = section "Phonemes" do
+    %p The Alashian vowel system consists of five distinct vowel sounds, four of which contrast two degees of length.
+    %table
+      %tr
+        %th
+        %th Front
+        %th Central
+        %th Back
+      %tr
+        %th High
+        %td i iː
+        %td
+        %td u uː
+      %tr
+        %th Mid
+        %td e eː
+        %td ə
+        %td
+      %tr
+        %th Low
+        %td
+        %td
+        %td a aː
+    %p The long vowels are approximately one and a half times longer than the short vowels, although this can vary slightly as the result of stress. In transliteration, long vowels will always be marked with a macron: ā ē ī ū. The unpaired central vowel /ə/ is always considered short.
+    %p Alashian also has two common diphthongs that appear in native words: /ie/ and /uo/. Aside from these, there are no diphthongs that pattern as individual segments; in fact, the only other diphthongs that can occur in native words—/aj ej uj aw ew iw/—occur only as the result of the loss of a vowel after a root consonant *Y, which then forces it to be pronounced as a diphthong with the preceding vowel. These same diphthongs may also be seen as integral segments of more recent loanwords, though older loans have all monophthongized, as in dialectical Alashian #{t "Ηρυπώ", "'Ērupā"} “Europe”.
+
+  = section "Allophony" do
+    %p The most significant factors that influence the pronunciation of the vowels are length and surrounding environment.
+    %p Short vowels have a tendency to centralize somewhat relative to their long counterparts. The long vowels tend to preserve more or less their cardinal values: /aː eː iː uː/ [ɑː ɛː iː uː]. The centralization of the short vowels is most pronounced on the high vowels: /a e i u/ [ʌ ɛ ɪ ʊ]. The long vowels are approximately one and a half times longer than the short vowels, although this can vary slightly as the result of stress. The unpaired short vowel /ə/ is pronounced mid-high (i.e., between [ɨ] and [ə]) when stressed and as a schwa [ə] when unstressed.
+    %p The gutteral consonants (those with velar, uvular, or glottal articulation) draw all vowels closer to /a/, an effect most pronounced on the vowels preceding such consonants. /e(ː)/ ends up halfway toward schwa, /i(ː)/ around [ɨ], and /u(ː)/ toward [o]. Word-initially after /ʔ/ these changes are generally not heard at all, though in the vicinity of /ʔ/ word-internally it is noticeable.
+    %p Aspirated plosives and affricates have a centralizing effect, again most noticeable on vowels preceding such consonants. With long vowels, the shift is not as pronounced as it is with gutterals: /aː/ moves toward [ɐ], /eː/ toward a position a little higher and more central than [æ], /iː/ halfway toward [ɨ], and /uː/ halfway toward [ʉ]. Short vowels, on the other hand, are all neutralized as [ə]. The vowel following such geminates may be partially devoiced, but this varies from speaker to speaker. Other geminate consonants have no effect on neighboring vowels.
+    %p Stress has relatively little impact on vowel quality, with the exception of /ə/ as described above. However, it does affect quantity. The length distinction between short and long vowels is always maintained in stressed syllables, but in unstressed syllables, for many speakers long vowels become nearly as short as short vowels, though the quality of the long vowel always remains intact. In fact, in southern Alashian dialects, length is only contrastive in stressed syllables.
+    %p Like many other Semitic languages, formal Alashian has pausal pronunciation variants. That is, if the last word in a sentence ends in a short vowel, that vowel is dropped. Similarly, if it ends in the feminine suffix /t/ plus a short vowel, that /t/ is dropped as well. These changes are the result of the intonation structure of declarative sentences—in exclamatory or interrogative sentences, such reductions never occur. They are generally ignored in colloquial speech as well.
+
+  = section "Five Vowels or Seven Vowels?" do
+    %p The vowel inventory as described above and as reflected in Alashian orthography is essentially square, featuring the vowels /a e i u/ with both short and long counterparts, as well as the neutral vowel /ə/ and two diphthongs /ie uo/. However, alternative analyses exist, which attempt to deal with some of the historical problems of the five vowel system and Alashian patterns of borrowing.
+    %p According to the seven-vowel analysis, Alashian has a total of seven distinct vowel qualities, of which six can appear as short vowels /a ɛ i (o) u ə/ and six can appear as long vowels /aː ɛː eː iː oː uː/, with short /o/ only found in loanwords and not in all speakers’ speech. The long vowels /eː/ and /oː/ correspond to the diphthongs /ie/ and /uo/ in the traditional analysis, while /ɛ(ː)/ corresponds to traditional /e(ː)/.
+    %p The advantages of this system are most clear when it comes to dealing with loanwords. The earliest stages of Alashian clearly had no /o(ː)/, with Greek loans with /o/ borrowed exclusively as /u(ː)/. As time went on, however, we begin to see a divergence between usage in the north of Cyprus and in the south. In the south, which was much more populous and relied heavily on commerce, bilingualism became very common, with most Alashians learning to speak Greek fluently (although relatively few Greeks appear to have learned Alashian). In these regions, awareness of Greek /o/ was widespread enough that all southern Alashians learned where and how to pronounce the sound in loanwords, leading to the creation of /o(ː)/; the assignment of length generally depended on whether the Greek /o/ was stressed or not, since later Alashian tends to assign stress to syllables with long vowels.
+    %p In the north of Cyprus, which historically was much more agricultural, bilingualism was far less common. Most speakers had some awareness of Greek /o/, but could not necessarily produce the sound themselves. Since stressed vowels are more prominent than unstressed vowels, a new phoneme /oː/ did eventually emerge in the north, but it was pronounced [uo], and was thus an imperfect approximation of Greek /o/. Unstressed Greek /o/, which was far less distinct, was generally perceived as /u/. This is still the case with many older speakers in parts of the north, who learned Greek as adults or not at all, and who may still pronounce Greek /o/ as [uo] or [u]. However, due to modern widespread education, younger speakers everywhere are learning Greek fluently, and so even in the north it is becoming more common to hear unstressed Greek /o/ borrowed as [o] rather than [u]. The borrowing of stressed Greek /o/ as [uo] persists amongst even most younger speakers in the north, however.
+    %p Thus, the seven-vowel analysis has certain advantages when dealing with borrowings, and may be particularly appropriate for the southern dialects that clearly lack [uo] but clearly have both [o] and [oː]. In the north the analysis is more debatable, but seems to be more appropriate in the speech of younger Alashians who speak both Greek and Alashian fluently. Standard Alashian, however, is based on the northern dialects and reflects the five-vowel analysis, and so the five-vowel system will continue to be used throughout the remainder of this grammar.
+
+= section "Consonants" do
+  = section "Phonemes" do
+    %p The Alashian consonant inventory is summarized in the following table:
+    %table
+      %tr
+        %th
+        %th Labial
+        %th Interdental
+        %th Dental
+        %th Palatal
+        %th Velar
+        %th Uvular
+        %th Glottal
+      %tr
+        %th Plosive
+        %td (p) (pʰ) b
+        %td
+        %td t tʰ d
+        %td
+        %td k kʰ g
+        %td
+        %td ʔ
+      %tr
+        %th Nasal
+        %td m
+        %td
+        %td n
+        %td
+        %td
+        %td
+        %td
+      %tr
+        %th Affricate
+        %td 
+        %td
+        %td tsʰ
+        %td tʃ tʃʰ
+        %td
+        %td
+        %td
+      %tr
+        %th Fricative
+        %td f v
+        %td θ ð
+        %td s z
+        %td ʃ
+        %td x γ
+        %td
+        %td
+      %tr
+        %th Liquid
+        %td
+        %td
+        %td r l
+        %td
+        %td
+        %td ʁ
+        %td
+      %tr
+        %th Semivowel
+        %td w
+        %td
+        %td
+        %td j
+        %td
+        %td
+        %td h
+    %p /p/ and /pʰ/ are non-native phonemes, found almost exclusively in loan words.
+    %p The aspirated consonants /pʰ tʰ kʰ tsʰ tʃʰ/ have marginal status as phonemes, and some analyses prefer to treat them as /pp tt kk ss tʃtʃ/ (and this is indeed how they are treated in the native orthography); in native words they can be predicted with complete accuracy, but not based only on purely phonological factors. Loanwords, on the other hand, may freely have [pp tt kk ss tʃtʃ] even morpheme-internally.
+    %p All consonants except for the aspirates and the uvular and glottal consonants—/ʔ h ʁ/—may appear geminated when intervocal.
+    %p When romanized, all phonemes are spelt identically to the IPA value above, except for the following: ' /ʔ/, č /tʃ/, ṯ /θ/, ḏ /ð/, š /ʃ/, ğ /γ/, ř /ʁ/, y /j/. Aspirates are marked with h: ph /pʰ/, th /tʰ/, kh /kʰ/, tsh /tsʰ/, čh /tʃʰ/.
+
+  = section "Allophony" do
+    = section "Plosives" do
+      %p The plosive series may be grouped into four subgroups based on behavior: the voiced oral plosives, the voiceless oral plosives, the aspirates, and the glottal stop.
+      %p The voiced oral plosives are /b d g/. For the most part they are pronounced quite consistently; however, immediately before another plosive, they lenite to [v ð γ] (before voiced plosives) or [f θ x] (before voiceless plosives). All may be geminated: [bb dd gg].
+      %p The voiceless oral plosives /p t k/, on the other hand, never lenite. When Alashian morphology calls for them to be geminated, however, there are two possible outcomes: [pp tt kk] or [pʰ tʰ kʰ]; the former occur only across morpheme boundaries, while the latter occur within morphemes. For a variety of reasons elaborated on in the sections of this grammar dealing with morphology, the former group will be described phonemically as /pp tt kk/, and the latter as /pʰ tʰ kʰ/.
+      %p As suggested above, the phonemes /pʰ tʰ kʰ/ occur most often in cases where traditional Semitic morphology requires geminate consonants, though not in all such cases. The actual phones [pʰ tʰ kʰ] may only occur in intervocalic position; in all other positions, /pʰ tʰ kʰ/ are pronounced unaspirated and are not distinguishable from /p t k/.
+      %p The glottal stop is a fairly weak phoneme overall. In all but the most careful speech, it will elide completely in all positions except utterance-initially or immediately before a stressed vowel.
+
+    = section "Nasals" do
+      %p Alashian has two nasal phonemes, the bilabial /m/ and the dental /n/. Their pronunciation is quite consistent in most positions; however, immediately before a plosive or affricate, the opposition is neutralized, with both becoming [m] before /p b/, [n] before /t d tʃ/, and [ŋ] before /k g/.
+      %p When followed by /r/, the two nasals become oral plosives: /mr/ [br], /nr/ [dr].
+
+    = section "Affricates" do
+      %p Alashian has one unaspirated affricate, /tʃ/, and two aspirated affricates, /tsʰ tʃʰ/. The relation between /tʃ/ and /tʃʰ/ is similar to the unaspirated and aspirated plosives, so that /tʃ/ has two geminated forms: /tʃtʃ/ across morpheme boundaries and in loanwords, and /tʃʰ/ within native morphemes.
+      %p The dental aspirate /tsʰ/ is less predictable. It is the aspirated geminate counterpart to some (but not all) /s/; that is, when Semitic morphology dictates the gemination of /s/ within a morpheme, sometimes it will become /ss/ and sometimes /tsʰ/; this is entirely lexically-determined, the result of the merger of two different Proto-Semitic phonemes.
+
+    = section "Fricatives" do
+      %p Alashian has a fairly extensive inventory of fricatives. There is a voicing contrast at four of five points of articulation: bilabial /f v/, interdental /θ ð/, dental /s z/, and velar /x γ/. Alashian has regressive voicing assimilation, so that the unvoiced fricatives will voice before a voiced obstruent and voiced fricatives will devoice before a voiceless obstruent. The post-alveolar fricative /ʃ/ has no phonemic voiced counterpart, but similarly will voice to [ʒ] before voiced obstruents.
+
+    = section "Liquids" do
+      %p Alashian has three liquids: the lateral /l/ and, unusually for a Semitic language, two rhotics: /r ʁ/.
+      %p The lateral /l/ is always pronounced clearly, without velarization, though the geminate /ll/ will often be velarized when followed by a back vowel.
+      %p The rhotic /r/ is pronounced as a dental trill in all environments. /ʁ/ is typically pronounced as a voiced uvular approximant; however, when following another consonant, it is released by most speakers as a voiced uvular fricative.
+
+    = section "Semivowels" do
+      %p The class of semivowels in Alashian consists of three approximants that alternate with vowels in various morphological and phonological conditions: /w j h/.
+      %p /w/ is a labiovelar approximant, and may alternate with the vowel /u(ː)/.
+      %p /j/ is a palatal approximant, and typically alternates with /i(ː)/, though in the vicinity of gutteral consonants it may also become /e(ː)/. Between a voiceless consonant and a stressed vowel, it undergoes very strong fortition, becoming a palatal stop; thus, the native name of the language, <i>Nalaskyā</i> (phonemically /nalasjaː/), is pronounced [nʌ.lʌ.ˈscaː]. This fortition only takes place when the /j/ is preceded by a single consonant; if preceded by two consonants (i.e., -CCj-), no [c] is inserted.
+      %p /h/ is a voiceless glottal fricative/approximant (articulatorily it may be described as either), which alternates with the vowel /a(ː)/. Like the glottal stop /ʔ/, it is a particularly weak phoneme. It is frequently dropped in all but the most careful speech; it is most consistently preserved immediately before a stressed vowel and at the start of most, though not all, stress-bearing words.
+
+= section "Syllables" do
+  %p Syllables are generally divided right after the vowel whenever possible. If doing so would result in an illegal syllable-initial cluster in the following syllable, the syllable division will be placed between the two consonants.
+
+= section "Stress" do
+  %p The stress pattern of most words can be predicted using the following rule:
+  %p Stress generally falls on the third syllable from the end of the word (the antepenult), or on the word's first syllable if it only has one or two syllables total. However, if there are long vowels or diphthongs in either or both of the syllables after the antepenult, the stress will instead fall on the last long vowel or diphthong.
+  %p However, in many cases this rule fails to explain the stress. Verbs in particular quite frequently break this rule. This is generally believed to be the result of analogy, resulting in more forms that appear similar in structure having the same stressed syllable.
+  %p Words of recent foreign origin may either preserve their original stress or may follow a nativized stress pattern; often both options are possible for a single word. The former is becoming increasingly commonplace.
+
+= section "Phonotactics" do
+  = section "Distribution Restrictions" do
+    %p Syllable-initially, any single consonant may be present. Vowels may not appear syllable-initially on a phonemic level, but may on a phonetic level due to the elision of consonants such as /ʔ/ and /h/. Word-initial restrictions are the same as the syllable-initial ones, except that the aspirates /pʰ tʰ kʰ tsʰ tʃʰ/ cannot be present on a phonetic level (i.e., underlying aspirates surface as unaspirated).
+    %p Syllable-finally, any consonant other than /h/, /ʔ/, and the aspirates may be present, as well as any vowel or diphthong except for /ə/. Word-finally, /j/, /w/, and diphthongs are forbidden as well.
+    %p Geminate consonants may only occur between two vowels. In certain cases, they may appear across word boundaries as well when the two words are phonologically bound to one another (e.g., in the construct state coordinating two nouns). The geminate /rr/ has some quirky behavior, surfacing as [dr] (and spelled as such) in some places and as [rr] in others according to rules that are largely morphologically-driven; this distribution is perhaps the result of an incomplete sound change or historical dialect-borrowing.
+    %p The consonants /ʔ/ and /h/ are absolutely forbidden from appearing in clusters with any other consonant.
+
+  = section "Clusters" do
+    %p Word- or syllable-initially, clusters are limited to the following:
+    %ul
+      %li A non-aspirated non-glottal plosive (p b t d k g) + a liquid (l r ʁ): /pl bl tl dl kl gl pr br tr dr kr gr pʁ bʁ tʁ dʁ kʁ gʁ/
+      %li A non-aspirated non-glottal plosive (p b t d k g) + a non-glottal semivowel /j w/: /pj bj tj dj kj gj pw bw tw dw kw gw/
+      %li A non-aspirated labial or velar plosive (p b k g) + a non-homorganic non-aspirated non-glottal plosive with the same voicing: /pt pk bd bg kp kt gb gd/
+      %li A non-aspirated non-glottal plosive (p b t d k g) + a non-homorganic nasal: /pn bn tm dm km kn gm gn/
+      %li A non-glottal non-velar fricative /f v θ ð s z ʃ/ + a non-glottal semivowel /j w/: /fj vj θj ðj sj zj ʃj fw vw θw ðw sw zw ʃw/
+      %li /s z/ + a non-aspirated non-glottal plosive with the same voicing: /sp st sk zb zd zg/
+      %li /s z/ + a nasal: /sm sn zm zn/
+    %p Word- and syllable-finally, no clusters are allowed.
+    %p Word-internally, only two-consonant clusters are freely formed, although there is a very limited set of three-consonant clusters. For the most part, any combination of a valid syllable-final consonant + a valid syllable-initial consonant creates a valid two-consonant word-internal cluster, with the following exceptions:
+    %ul
+      %li If both consonants have a voicing contrast, both must have the same voicing. Thus clusters such as /sp tr rm ts gz/ are fine, but /pd kz sg fd/ are not.
+      %li The consonants /h/ and /ʔ/ may never appear in any cluster.
+    %p Word-internal three-consonant clusters are limited to acceptable two-consonant clusters + /j/ or /w/.
+    %p Since Alashian has a typical Semitic triconsonantal root morphological system, where consonants appear to be inserted into vocalic templates, it is quite possible for a given pattern and root combination would lead to an impermissible consonant cluster (e.g., a #{template 'C1C2VC3'} pattern with a root beginning with *H would create an illegal /h/+C cluster). To prevent this, there are a number of morphological processes in place to resolve these clusters into something permissible. These will be described in the relevant morphology sections of this grammar, but include such techniques as epenthetic vowels, elision, and assimilation.
+
+  = section "Lexical Boundaries and Inter-word Sandhi" do
+    %p Consecutive words can often affect each other’s pronunciation. This is especially common amongst groups of words that form a single prosodic unit. In connected speech, for instance, one of the most common types of sandhi across word boundaries is voicing assimilation, where the last consonant of the first word acquires the same voicing as the first consonant of the second.
+
+  = section "Foreign Loans" do
+    %p Foreign loans have a noticeably different word structure in comparison to inherited Semitic vocabulary. Loanwords lie outside the typical root-and-pattern structure, having vowel patterns with no explicit meaning and no consonantal root. As a result, they are also not subject to any of the aforementioned morphological processes that shape underlying forms to meet surface phonological restrictions; that is, their underlying and surface forms are always the same.
+    %p Words of foreign origin are also the primary source of the geminates /pp tt kk tʃtʃ/ when they occur morpheme-internally, if they entered the language after the formation of native /pʰ tʰ kʰ tsʰ tʃʰ/.
+    %p More recent loanwords may defy normal Alashian clustering rules and appear in a non-fully-nativized form.
+
+= section "Morphophonemic Alternations" do
+  %p Historical sound laws have resulted in the creation of a number of morphophonemic alterations, where a single consonant may mutate into a different phoneme in certain morphologically- and/or phonologically-triggered conditions. The rules for these will be discussed more extensively in the relevant morphology sections. The most common such alternations are:
+  %ul
+    %li
+      Voiced plosive lenition before other plosives
+      %ul
+        %li b ~ v
+        %li d ~ ð
+        %li g ~ γ
+    %li
+      Aspiration in place of expected gemination
+      %ul
+        %li p ~ pʰ
+        %li t ~ tʰ
+        %li k ~ kʰ
+        %li s ~ tsʰ
+        %li tʃ ~ tʃʰ
+    %li
+      Vocalization of semivowels
+      %ul
+        %li j ~ i(ː)/e(ː)
+        %li w ~ u(ː)
+        %li h ~ a(ː)
+    %li
+      Assimilation resulting in gemination
+      %ul
+        %li n ~ gemination of neighboring consonant
+        %li ʔ ~ gemination of neighboring consonant
+        %li h ~ gemination of neighboring consonant
+    %li
+      Short vowel neutralization in the vicinity of aspirates
+      %ul
+        %li a, e, i, o, u ~ ə
+  %p Morphophonemic alternations have a somewhat limited range of effect due to the huge analogical pressure of the triconsonantal root system. There is a natural tendency to either suppress phonological irregularities, or else generalize the irregularity to all forms (i.e., redefine the root). For instance, Alashian had an historical change that converted all final *m to /n/; this resulted in verb and noun paradigms that had /m/ in some forms (when not word-final) and /n/ in others (when final), after which either *M or *N was generalized to all parts of the paradigm.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

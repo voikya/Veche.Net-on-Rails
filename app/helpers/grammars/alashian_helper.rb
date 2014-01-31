@@ -55,5 +55,9 @@ module Grammars
       end
       "<abbr title='#{meaning.join(' ')}'>#{string.gsub('*', '')}</abbr>".html_safe
     end
+
+    def template(string)
+      string.gsub(/(\d)/, '<sub>\1</sub>').html_safe
+    end
   end
 end
