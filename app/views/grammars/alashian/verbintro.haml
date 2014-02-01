@@ -1,0 +1,108 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Μασαδδυρρώ Είρυ Σίστιμ Αδρείμ"
+
+= render :partial => 'navigation'
+
+= section "The Semitic Root" do
+  %p Semitic verbs are traditionally described in terms of a <i>triconsonantal root system</i>; that is, a discontinuous system of conjugation where a verb root consists of an abstract pattern of three consonants (e.g., *K-T-B “write”), with actual verb forms created by inserting various vowel patterns between these consonants and by adding various prefixes and suffixes. For instance, given roots like *K-T-B “write”, *D-K-R “remember”, or *'-H-B “love” and a pattern such as the third person singular masculine preterite pattern #{template "*C1aC2aC3"}, it is easy to derive the forms <i>katab</i> “he wrote”, <i>dakar</i> “he remembered”, and <i>'ahab</i> “he loved”.
+  %p However, this is an oversimplification. The Proto-Semitic language appears to have had a number of different types of verb roots, some of which even contained inherent vowels. These various types of roots were preserved in the modern Semitic languages to varying degrees, with some gaining ground and others gradually disappearing or becoming exceptional paradigms, but the existence of these subclasses are reflected in all of them in some form or another. Oftentimes traditional analyses have attempted to come up with artificial means of forcing these exceptional patterns into a triconsonantal system, such as calling some types of biconsonantal roots triconsonantal, but with a weak consonant that always drops or vocalizes.
+  %p In Alashian, four different types of Proto-Semitic roots are clearly present. Therefore instead of presenting roots as abstract groups of three consonants, in this grammar verb roots will be presented in a form representing their unique structures, so in place of *K-T-B the root “write” will be given as <i>*ktāb</i>, reflecting the fact that the root does actually have an internal structure beyond the consonants themselves. This is not, however, to deny that Alashian verbal morphology is discontinuous; vowel patterns such as #{template "*C1aC2aC3"} are useful in Alashian as well as in other Semitic languages, but the inner workings of the verbal system should not be simplified to a pure consonantal root + vowel template system.
+  %p The first and most common type of verb root will be termed the <i>[true] triconsonantal root</i>, which consists of three consonants and an inherent vowel between C<sub>2</sub> and C<sub>3</sub>. In Alashian this vowel may only be either /aː/ or /iː/. Examples include <i>*ktāb</i> “write”, <i>*'kāl</i> “eat”, <i>*wsīn</i> “sleep”, and <i>*khrīb</i> “approach, be near”. Although it is not an absolute, there is a strong tendency for the vowel to be -ī- in roots that have a stative meaning and so could be glossed in English as “be + adjective” (“be asleep”, “be near”, etc.), and -ā- in all other verbs.
+  %p The second most frequent type is the <i>biconsonantal root</i>, which consists of two consonants and an inherent vowel in between them, which may be any long vowel /aː eː iː uː/. This class was somewhat unstable historically, with a tendency to augment the stem with another consonant either before or in between the two consonants, and indeed such additions have become fully grammaticized in certain paradigms.
+  %p The third type is the <i>quadriconsonantal root</i>, which consists of four consonants with no inherent vowel (although for various reasons they are typically presented in the form #{template "*C1aC2C3ēC4"})<sup>1</sup>. Many of these consist of two reduplicated consonants (i.e., they have the form #{template "*C1C2C1C2"}), and are often onomatopoeic in nature: <i>*kalkēl</i> “ring”, <i>*balbēl</i> “confuse”, <i>*zalzēl</i> “annoy”. Quadriconsonantal roots may have four different consonants, but such roots are almost all of foreign origin: <i>*targēn</i> “translate” (from Aramaic).
+  %p Finally, there is the <i>geminate root</i>, which consists of two consonants, the second of which is geminated, and no inherent vowel (though -a- is usually given in presentation forms): <i>*gamm</i> “be abundant”, <i>*hall</i> “praise”. This is the rarest root type in Alashian, and conjugate triconsonantally in some forms and biconsonantally in others.
+
+= section "The European Root" do
+  %p European roots are verbal roots derived from non-Semitic languages that preserve a foreign structure and do not allow the vowels within the root to change. Most recent loanwords have this structure. If the foreign root ends in a vowel, the suffix -' (a glottal stop) is added to the end of the root. If it ends in a consonant, the suffix -ā' is added. For example, the root “(to) telephone” is <i>*telefūnā'</i>.
+  %p Such roots are conjugated exclusively through prefixes and suffixes.
+
+= section "The Verbal Scales" do
+  %p Alashian has six verbal <i>scales</i> (#{t "μιθκαλλιήν", "miṯkalien"}, singular <i>miṯkal</i>). These scales are sets of verbal conjugation patterns with an associated grammatical function. Each scale contains a more or less full set of patterns designating various tenses, aspects, and moods. A root may be conjugated in any of these scales, whereby its meaning is crossed with the scale's grammatical function. For example, the root <i>*ktāb</i> “write” in the active Scale I means “write”, in the causative Scale III means “dictate” (“cause someone to write”), and in the reflexive Scale V means “correspond, send letters” (“write each other”). Scale I is the most basic form, with no designated function. Scales II through VI are known as derived forms. Four out of the six scales also have a passive form, known as the passive <i>half-scale</i> (#{t "φάλγ αμμίθκαλ", "falg hammiṯkal"}).
+  %p The six scales are as follows. Each is named for the citation form (the preterite third person singular) of the root <i>*ktāb</i>.
+  %table
+    %tr
+      %th Scale
+      %th Active
+      %th Passive
+      %th Description
+    %tr
+      %th I
+      %td= t("κάταβ", "katab")
+      %td= t("νυκτώβ", "nuktāb")
+      %td Base
+    %tr
+      %th II
+      %td= t("καττήβ", "kəthēb")
+      %td= t("καττώβ", "kəthāb")
+      %td Intensive
+    %tr
+      %th III
+      %td= t("ακτήβ", "'aktēb")
+      %td= t("εννυκτώβ", "'ennuktāb")
+      %td Causative
+    %tr
+      %th IV
+      %td{:colspan => 2}= t("τακτήβ", "taktēb")
+      %td Intransitive
+    %tr
+      %th V
+      %td{:colspan => 2}= t("νίτκαταβ", "nitkatab")
+      %td Reflexive
+    %tr
+      %th VI
+      %td= t("στάκταβ", "staktab")
+      %td= t("νιστυκτώβ", "nistuktāb")
+      %td Causative of Reflexive
+  %p The exact functions of each scale will be discussed in the corresponding sections.
+  %p Within each half scale there is a conjugational paradigm, allowing the verb to conjugate for tense, aspect, mood, person, and number. Each scale includes the following forms, which can be conjugated for person and number using personal affixes.
+  %p The <b>basic tenses</b> are distinct verbal forms formed using a root and a vowel template.
+  %ul
+    %li Present Tense
+    %li Preterite Tense
+    %li Imperfect Tense
+    %li Perfective Subjunctive
+    %li Imperative (active half-scales only, as well as passive Scale I)
+  %p The <b>derived tenses</b> are formed by adding affixes to a basic tense form.
+  %ul
+    %li Imperfective Subjunctive
+    %li Precative
+    %li Volitive
+  %p The <b>complex tenses</b> are formed phrasally.
+  %ul
+    %li Future Tense
+    %li Present Perfect Tense
+    %li Pluperfect Tense
+  %p There are also a number of <b>non-finite forms</b> or <b>deverbatives</b>, namely:
+  %ul
+    %li Infinitive/Gerund
+    %li Active Participle (active half-scales only)
+    %li Passive Participle (passive half-scales only, as well as active Scale I)
+  %p This verbal system differs quite radically in some respects from the other Semitic languages, the cumulative result of many centuries of separation of most of the Alashian people from speakers of other Semitic languages in conjunction with the pervasive influence of Cypriot Greek in the same time period.
+
+= section "Weak Verbs" do
+  %p Within the set of true triconsonantal roots there are a number of subtypes caused by the presence of certain consonants. These are completely predictable from the root, but can significantly affect the actual vowel templates the root uses to conjugate. Such roots are called <i>weak</i> or <i>defective</i>, and include the following types:
+  %ul
+    %li The gutterals *Ř, *', and *H can lower surrounding vowels, create an epenthetic vowel to prevent gutteral+consonantal clusters, and create long vowels in compensation for their inability to geminate.
+    %li The gutterals *H and *' may disappear entirely, often assimilating into another nearby consonant and causing gemination.
+    %li The aspirates *PH, *TH, *KH, *TSH, and *ČH trigger alternate vowel patterns and may cause various other sorts of assimilation.
+    %li The semivowels *W and *Y (and occasionally *H) may vocalize in certain environments or completely merge into the preceding vowel, especially before another consonant.
+    %li *N frequently assimilates into the following consonant.
+  %p Some weak verbs may actually conjugate biconsonantally in certain forms due to the loss of a root consonant.
+
+= section "Structure of the Following Sections" do
+  %p The following sections will proceed through each scale in order, one by one. If a scale contains two half-scales, then the active one will be discussed first, followed by the passive one.
+  %p Each section begins with an introduction to the scale or half-scale itself, giving a broad overview of its semantics and providing a few examples. It will then go over the formation of the basic tenses for all four root types (Triconsonantal, Biconsonantal, Quadriconsonantal, and Geminate), followed by a discussion of the conjugation of weak roots.
+  %p In section 11, after the discussion of the individual scales is finished, the formation of the derived and complex tenses will be explained. Their formation is straightforward and applies to all scales, requiring only a knowledge of how to form the basic tenses for any particular verb.
+  %p Section 12 provides some comparative tables for reference purposes, as well as the conjugation of a number of irregular verbs.
+  %p For an historical account of the Alashian verbal system and its development from that of Proto-Semitic, refer to section 23.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) This is done for a number of reasons. For one, quadriconsonantal roots, unlike the other three types, always by default conjugate using Scale II patterns (see section 4.3), and the citation form for Scale II includes the vowels -a- and -ē-. This vowel pattern also helps to emphasize that #{template "C2"} and #{template "C3"} have a special affinity in quadriconsonantal roots, and are never separated by a vowel in any form.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
