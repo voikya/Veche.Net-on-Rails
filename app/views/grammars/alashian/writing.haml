@@ -1,0 +1,256 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Κατούβ"
+
+= render :partial => 'navigation'
+
+= section "History of Written Alashian" do
+  %p Throughout its attested history, Alashian has been written in quite a few different scripts.
+  %p The earliest extant texts that with little doubt represent archaic Alashian were written using the Phoenician alphabet, brought to the island of Cyprus by Phoenician tradesmen from the Levant. Most of these texts are quite short or fragmented, consisting primarily of names, votives, inventories, and claims of ownership. Since the grammar of such sort texts is limited, we rely first and foremost on various phonological pecularities to identify these texts as Alashian, such as the confusion of the Phoenician glyphs for /h/ and /ʕ/, which merged as /h/ early on in Alashian history.
+  = image_tag "alashian/alashian_pot.jpg", :alt => "A section from the cover of a Cypriot pot bearing an inscription in archaic Alashian using the Phoenician script"
+  %p.imgcaption A section from the cover of a Cypriot pot bearing an inscription in archaic Alashian using the Phoenician script; a clearer tracing of the text plus a letter-by-letter transcription are superimposed. The text reads, in the purely consonantal script, ʔNKY LBRKBHL, or “I [this pot] belong to Barakbahal”, possibly vocalized as <i>*ʔankī li-barakbahali</i> (modern Alashian <i>'ečī li-Brağbāl</i>).
+  %p This script was later supplanted by an Aramaic-derived script. This came to be known as the “Old Alashian” alphabet, which remained in widespread use until the first few centuries AD, although it continued to be used for liturgical purposes much later. Like other Semitic scripts, it consisted of a consonantal alphabet with long vowels marked by certain <i>matres lectionis</i> (consonant letters that could also serve as vowels), while short vowels were unmarked.
+  %p The Aramaic alphabet was expanded with additional letters which are typically attributed to the Cypriot syllabary previously used on the island by the Greeks and Etiocypriots. However, even with these additions, the Alashian script did not accurately reflect the Alashian sound system, as many letters had multiple values and often a single sound could be written with multiple letters. Proper usage simply required memorization.
+  %p Problems with spelling and pronunciation were partially rectified around the 7th century AD (once the script had been reduced mostly to a liturgical function) with the introduction of a number of diacritics. The <i>nəkhəthā</i>, or 'dot', was added to certain consonants to distinguish their multiple phonetic values, and a system of vowel diacritics was introduced to ensure accurate pronunciation. There was, however, no reduction in the redundant letters.
+  = image_tag "alashian/alashian_tablet.jpg", :alt => "An example of the Old Alashian script—a part of an old legal codex"
+  %p.imgcaption A section of a 3rd century BC legal codex written in the Old Alashian script.
+  = image_tag "alashian/consonants.png", :alt => "The Old Alashian alphabet"
+  %p.imgcaption The mature Old Alashian alphabet, as seen in liturgical texts.
+  = image_tag "alashian/vowels.png", :alt => "Old Alashian vocalization marks"
+  %p.imgcaption Alashian vocalization marks.
+  %p By the 4th century AD the Alashian alphabet had been more or less supplanted by the Greek script for most daily functions. Spellings were not standardized, so many different schemes emerged for representing Alashian sounds that the Greek script could not easily encode. No single standard spelling would emerge until the 19th century.
+  %p Although never widely used, Alashian written in Arabic-based script is attested in a few texts from the 8th through 17th centuries and appears to have been used by members of the Muslim community on Cyprus.
+
+= section "Modern Alashian Alphabet" do
+  %p Alashian nowadays is almost always written using a modified version of the Greek alphabet, a spelling system that was only actually standardized in the 1890s, in the wake of a number of nationalist revivals in the Balkans and Near East. It makes use of diacritics (the overline) and digraphs to represent sounds not present in Greek, and for the most part is a far better fit for the language than any other script that had previously been used, although it is far from perfect.
+  %p The alphabet consists of the following 29 letters:
+  %table
+    %tr
+      %th Letter
+      %th IPA
+      %th Translit.
+      %th
+        Name
+        %br
+        (IPA)
+      %th
+        Name
+        %br
+        (Translit.)
+    %tr
+      %td Α α
+      %td a, ə
+      %td a, ə
+      %td ˈʔaːlaf
+      %td 'ālaf
+    %tr
+      %td Β β
+      %td b
+      %td b
+      %td ˈbeːt
+      %td bēt
+    %tr
+      %td Β̄ в̄
+      %td v
+      %td v
+      %td ˈveːt
+      %td vēt
+    %tr
+      %td Γ γ
+      %td g
+      %td g
+      %td ˈgaːm
+      %td gām
+    %tr
+      %td Γ̄ γ̄
+      %td γ
+      %td ǧ
+      %td ˈγaːm
+      %td ğām
+    %tr
+      %td Δ δ
+      %td d
+      %td d
+      %td ˈdaːl
+      %td dāl
+    %tr
+      %td Δ̄ δ̄
+      %td ð
+      %td ḏ
+      %td ˈðaːl
+      %td ḏāl
+    %tr
+      %td Ε ε
+      %td e
+      %td e
+      %td ˈʔeːt
+      %td 'ēt
+    %tr
+      %td ΕΙ ει
+      %td iː
+      %td ī
+      %td ˈjuːd maθˈnuː
+      %td yūd maṯnū
+    %tr
+      %td Ζ ζ
+      %td z
+      %td z
+      %td ˈzeːd
+      %td zēd
+    %tr
+      %td Η η
+      %td h, eː
+      %td h, ē
+      %td ˈʔeːt maθˈnuː
+      %td 'ēt maṯnuː
+    %tr
+      %td Θ θ
+      %td θ
+      %td ṯ
+      %td ˈθeːt
+      %td ṯēt
+    %tr
+      %td Ι ι
+      %td j, i
+      %td y, i
+      %td ˈjuːd
+      %td yūd
+    %tr
+      %td Κ κ
+      %td k, kʰ
+      %td k, kh
+      %td ˈkaːf
+      %td kāf
+    %tr
+      %td Λ λ
+      %td l
+      %td l
+      %td ˈlaːn
+      %td lān
+    %tr
+      %td Μ μ
+      %td m
+      %td m
+      %td ˈmiːn
+      %td mīn
+    %tr
+      %td Ν ν
+      %td n
+      %td n
+      %td ˈnuːn
+      %td nūn
+    %tr
+      %td ΟΥ ου
+      %td uː
+      %td ū
+      %td ˈvuː maθˈnuː
+      %td vū maṯnū
+    %tr
+      %td Π π
+      %td p, pʰ
+      %td p, ph
+      %td ˈpiːt
+      %td pīt
+    %tr
+      %td Ρ ρ
+      %td r
+      %td r
+      %td ˈreːʃ
+      %td rēš
+    %tr
+      %td Ρ̄ ρ̄
+      %td ʁ
+      %td ř
+      %td ˈʁeː
+      %td řē
+    %tr
+      %td Σ σ ς
+      %td s
+      %td s
+      %td ˈsiːt
+      %td sīt
+    %tr
+      %td Σ̄ σ̄ ς̄
+      %td ʃ
+      %td š
+      %td ˈʃiːt
+      %td šīt
+    %tr
+      %td Τ τ
+      %td t, tʰ
+      %td t, th
+      %td ˈtuː
+      %td tū
+    %tr
+      %td ΤΖ τζ
+      %td tʃ, tʃʰ
+      %td č, čh
+      %td ˈtʃaːt
+      %td čāt
+    %tr
+      %td Υ υ
+      %td w, u
+      %td w, u
+      %td ˈvuː
+      %td vū
+    %tr
+      %td Φ φ
+      %td f
+      %td f
+      %td ˈfeː
+      %td fē
+    %tr
+      %td Χ χ
+      %td x
+      %td x
+      %td ˈxeː
+      %td xē
+    %tr
+      %td Ω ω
+      %td aː
+      %td ā
+      %td ˈaːlaf maθˈnuː
+      %td 'ālaf maṯnū
+  %p The names of the letters reflect a mixed Semitic/Greek origin. Most letter names reflect the names of their original equivalents in the Old Alashian script, though reduced to a single syllable (except <i>'ālaf</i>) and with a long vowel generalized to all letter names. Syllable codas are for the most part historical, but a number appear to be almost random; some, such as -t and -n, have been widely generalized far beyond their etymological distribution. The word <i>maṯnū</i> means “doubled”, and is used to indicate the long vowels.
+
+= section "Spelling and Orthographic Conventions" do
+  %p Although this script comes the closest to having a one-to-one phoneme correspondence, it nevertheless has a number of quirks and shortcomings.
+
+  = section "Digraphs" do
+    %p Alashian makes use of three digraphs which are considered letters in their own right: ει ου τζ. The first two represent the long vowels /iː/ and /uː/, the latter the affricate /tʃ/. The first element of ου is the Greek letter omikron, which is not used anywhere in Alashian except in this particular digraph (a consequence of how the Greek script as used for the Greek language marks /u/).
+    %p Alashian's two diphthongs are also written as digraphs, although they are not considered separate letters: #{t "ιη", "ie"}, #{t "υω", "uo"}, spelled as though they were <i>iē</i> and <i>uā</i>.
+    %p Since these letters consist of two components, they have three cases, unlike all other letters: majuscule ΕΙ ΟΥ ΤΖ, minuscule ει ου τζ, and title Ει Ου Τζ. Majuscule is used only in all-caps text, with title case being the appropriate form to use at the start of a sentence or otherwise whenever the first letter of a word is intended to be capitalized but the rest are not.
+
+  = section "Schwa" do
+    %p The vowel /ə/ is not distinguished from short /a/ orthographically; both are written as α. In this grammar, however, the a/ə contrast will always be indicated in romanization.
+
+  = section "Stress Marking" do
+    %p Alashian consistently marks stress using an acute accent over the stressed vowel: ά έ ί ύ ώ. On digraphs, the second letter takes the accent: εί ού.
+    %p Accented majuscule letters exist as well, formed by shifting the accent mark to the left of the letter: Ά Έ Ί Ύ Ώ. However, stress is usually not marked on majuscule letters unless the letter is the first character in a word. In all-caps text, for instance, there will generally be very few stress marks written.
+
+  = section "Semivowels" do
+    %p The semivowels /w j h/ all share letters with a vowel: η marks both /eː/ and /h/, ι marks both /i/ and /j/, and υ marks both /w/ and /u/. For the most part, however, this is not a problem, as the vocalic pronunciation can be assumed when the letter appears between two consonants and the consonantal pronunciation elsewhere.
+    %p Potential confusion only arises in two cases:
+    %ul
+      %li If a glottal stop is present. The glottal stop is not indicated orthographically (see next section), so based on spelling alone it is impossible to predict whether a sequence like ηα represents <i>ha</i> or <i>ē'a</i>. In this grammar, this will always be disambiguated by the transliteration.
+      %li If multiple semivowel letters appear in a sequence. This is especially obvious in certain forms of the verb 'to be'.
+
+  = section "The Glottal Stop" do
+    %p The glottal stop /ʔ/ is never indicated orthographically. In many cases, however, it can be implied, such as when a vowel letter appears word-initially (since word-initial vowels must be preceded by /ʔ/), or if two vowels appear in a row (e.g., αε must be /aʔe/, since /ae/ cannot occur).
+
+  = section "Gemination and Aspiration" do
+    %p Gemination is indicated by simply doubling a glyph: #{t "ττ", "tt"}, #{t "σσ", "ss"}, #{t "μμ", "mm"}. The geminate /tʃtʃ/, however, is spelled #{t "τζζ", "čč"} rather than as τζτζ.
+    %p The aspirated consonants /pʰ tʰ kʰ tʃʰ/, however, are <em>also</em> indicated by doubling the glyph: #{t "ππ", "ph"}, #{t "ττ", "th"}, #{t "κκ", "kh"}, #{t "τζζ", "čh"}, at least when intervocal; elsewhere the single consonants π τ κ τζ σ are used, since the aspiration is not present. It is thus impossible to tell whether these particular consonants are geminated or aspirated based purely on spelling, or whether a given π τ κ τζ σ in non-intervocalic position represents an underlying aspirated or unaspirated consonant.
+    %p The aspirate /tsʰ/ has a similar problem. It is spelled #{t "τσ", "tsh"}, which is indistinguishable from the cluster #{t "τσ", "ts"}.
+
+  = section "Marking of Subphonemic Features" do
+    %p Alashian orthography consistently marks the sound [c] (an allophone of /j/ after a voiceless consonant and before a stressed vowel) as κι, even though this contrast is subphonemic and completely predictable. Thus the feminine singular form of the adjective #{t "αλασεί", "'alasī"} “Alashian” is #{t "αλασκιώ", "'alaskyā"}, even though the word is phonemically /ʔalasjaː/.
+    %p Nasal assimilation with /r/ (where /mr/ and /nr/ become [br] and [dr]) is also consistently shown in Alashian orthography, despite being an automatic process.
+
+  = section "Miscellaneous Irregularities" do
+    %p The Alashian definite article is marked with a prefix which can take various forms. One of the most common ones is <i>ha-</i>. However, here and here only, the /h/ is never indicated, and the prefix is spelled α-. Initial /h/ elsewhere in Alashian is always explicitly marked with η.
+    %p Another common clitic prefix is the conjunction “and”, <i>ve-</i> (as well as several other variants). It is always spelled with as υε-, with the letter for /w/, never as в̄ε-.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
