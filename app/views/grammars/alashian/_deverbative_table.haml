@@ -1,0 +1,20 @@
+- title ||= ""
+- verb ||= {}
+- forms ||= []
+- comment ||= ""
+
+%table
+  %tr
+    %th{:colspan => (forms.size + 1)} #{title}: <i>#{verb[:ala]}</i> “#{verb[:eng]}”#{comment.html_safe}
+  %tr
+    %th
+    - forms.each do |form|
+      %th= form[:name]
+  %tr
+    %th Form
+    - forms.each do |form|
+      %td= t(form[:ala], form[:lat], :linebreak => true)
+  %tr
+    %th Meaning
+    - forms.each do |form|
+      %td= form[:meaning]

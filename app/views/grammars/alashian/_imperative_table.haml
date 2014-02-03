@@ -1,0 +1,20 @@
+- title ||= ""
+- verb ||= {}
+- alashian ||= []
+- latin ||= []
+
+%table
+  %tr
+    %th{:colspan => 3} #{title}: <i>#{verb[:ala]}</i> “#{verb[:eng]}”
+  %tr
+    %th Person
+    %th Singular
+    %th Plural
+  %tr
+    %th Masculine
+    %td= t(alashian[0], latin[0], :linebreak => true)
+    %td= t(alashian[2], latin[2], :linebreak => true)
+  %tr
+    %th Feminine
+    %td= t(alashian[1], latin[1], :linebreak => true)
+    %td= t(alashian[3], latin[3], :linebreak => true)

@@ -22,6 +22,7 @@ module Grammars
       'DL' => "Dual",
       'EMPH' => "Emphatic",
       'EXPL' => "Syntactic Expletive",
+      'F' => "Feminine",
       'FEM' => "Feminine",
       'FUT' => "Future Auxiliary",
       'GEN' => "Genitive–Dative",
@@ -29,6 +30,8 @@ module Grammars
       'IMPF' => "Imperfect",
       'INF' => "Infinitive",
       'INTERR' => "Interrogative Particle",
+      'INTR' => "Intransitive",
+      'M' => "Masculine",
       'MASC' => "Masculine",
       'NEG' => "Negative",
       'NOM' => "Nominative",
@@ -44,6 +47,7 @@ module Grammars
       'SG' => "Singular",
       'SUB' => "Subordinating Conjunction",
       'SUBJ' => "Subjunctive",
+      'TR' => "Transitive",
       'VOL' => "Volitive"
     }
 
@@ -57,7 +61,7 @@ module Grammars
     end
 
     def template(string)
-      string.gsub(/(\d)/, '<sub>\1</sub>').html_safe
+      string.gsub(/(\d|x)/, '<sub>\1</sub>').html_safe
     end
   end
 end
