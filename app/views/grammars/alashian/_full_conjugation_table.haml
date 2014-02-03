@@ -1,0 +1,45 @@
+- title ||= ""
+- verb ||= {}
+- alashian ||= {}
+- latin ||= {}
+
+%table
+  %tr
+    %th{:colspan => 5} #{title}: <i>#{verb[:ala]}</i> “#{verb[:eng]}”
+  %tr
+    %th
+    %th Present
+    %th Preterite
+    %th Imperfect
+    %th Pf. Subj.
+  - ["1st Sg", "2nd Sg Masc", "2nd Sg Fem", "3rd Sg Masc", "3rd Sg Fem", "1st Pl", "2nd Pl Masc", "2nd Pl Fem", "3rd Pl"].each_with_index do |form, idx|
+    %tr
+      %th= form
+      %td= t(alashian[:present][idx], latin[:present][idx], :linebreak => true)
+      %td= t(alashian[:preterite][idx], latin[:preterite][idx], :linebreak => true)
+      %td= t(alashian[:imperfect][idx], latin[:imperfect][idx], :linebreak => true)
+      %td= t(alashian[:subjunctive][idx], latin[:subjunctive][idx], :linebreak => true)
+  %tr
+    %th
+    %th Imperative
+    %th
+    %th
+    %th Deverbatives
+  %tr
+    %th Masc Sg
+    %td= t(alashian[:imperative][0], latin[:imperative][0], :linebreak => true) rescue '—'
+    %td
+    %th Infinitive
+    %td= t(alashian[:infinitive], latin[:infinitive], :linebreak => true)
+  %tr
+    %th Fem Sg
+    %td= t(alashian[:imperative][1], latin[:imperative][1], :linebreak => true) rescue '—'
+    %td
+    %th Participle
+    %td= t(alashian[:participle], latin[:participle], :linebreak => true)
+  %tr
+    %th Pl
+    %td= t(alashian[:imperative][2], latin[:imperative][2], :linebreak => true) rescue '—'
+    %td
+    %th
+    %td

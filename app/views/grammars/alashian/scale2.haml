@@ -1,0 +1,485 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Αθθαννεί: <i>καττήβ</i> υε<i>καττώβ</i>".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction to kəthēb Verbs" do
+  %p <i>Kəthēb</i> (Active Scale II) is commonly known as the “intensive” or “transitive” stem. In other Semitic languages it is responsible for a large variety of meanings, ranging from a strengthening of the action (the intensive proper) to an iterative, declarative, or causative. In Alashian, however, it has a much more restricted usage: it creates the base form of quadriconsonantal roots (which cannot conjugate in <i>katab</i>), and it forms transitive verbs from stative (adjectival) roots, typically with a causative or inceptive meaning. Examples of the former include #{t "καλκήλ", "kalkēl"} “ring”, #{t "βαλβήλ", "balbēl"} “confuse”, and #{t "ταργήν", "targēn"} “translate”, while the latter group includes #{t "λαττήφ", "ləthēf"} “shrink, reduce, make small” (*lthīf “be small”), #{t "в̄ασσήν", "vəssēn"} “put [a child] to sleep, say good night” (*wsīn “sleep”), and #{t "в̄ακκήδ", "vəkhēd"} “set alight” (*wkhād “burn”).
+  %p Very occasionally a root with a transitive meaning in <i>katab</i> may also have a <i>kəthēb</i> counterpart. These are by and large relic forms and this is not a productive process. The meaning tends to be broadly causative, but generally with a more specific nuance of urging action rather than simply causing it. For instance, the root *dkīr “remember”, which has the Scale I form #{t "δάκαρ", "dakar"} “remember”, becomes #{t "δακκήρ", "dəkhēr"} “exhort, remind of the consequences of doing/not doing” (in contrast to the true Scale III causative #{t "αδ̄κήρ", "'aḏkēr"} “remind [of a fact]”).
+  %p The most distinctive feature is the gemination or aspiration of the #{template "C2"} consonant or, in the case of quadriconsonantal roots, the reinterpretation of this #{template "C1VC2C2VC3-"} pattern as #{template "-C1VC2C3VC4-"}, with the gemination replaced by two root consonants. It is this structure that gives this conjugation the name “D-Stem” (for “doubled”) in comparative Semitic literature.
+
+= section "Triconsonantal Roots and kəthēb" do
+  = section "The Present Tense" do
+    %p The present tense is formed by adding the standard set of prefixes and suffixes to the <i>kəthēb</i> present tense stem. For most roots, the stem takes the form #{template "*-C1əC2C2aC3-"} with a geminate medial consonant when there is no suffix, and as a contracted #{template "*-C1əC2C3-"} where there is a suffix. If #{template "C2"} is one of *P/T/K/Č, it will become a non-geminated aspirate in the former case.
+    %p Unlike in <i>katab</i>, there is no trace of the inherent root vowel in the <i>kəthēb</i> present tense. As a result, Barth's Law does not apply, and the prefix vowel is always /i/ (except in the first person singular, where it is /a/).
+    %p The roots *sdīr “be ready” and *dkīr “remember” may be used to demonstrate the regular conjugation of <i>kəthēb</i>, where they take the forms #{t "σαδδήρ", "səddēr"} “prepare, make ready” and #{t "δακκήρ", "dəkhēr"} “exhort, remind”:
+    %table.invisible
+      %tr
+        - alashian = %w(άσαδδαρ τίσαδδαρ τισαδρεί ίσαδδαρ ισαδρεί νισαδρού τισαδρού τισαδρού ισαδρού ισαδρού)
+        - latin = %w('asəddar tisəddar tisədrī yisəddar yisədrī nisədrū tisədrū tisədrū yisədrū yisədrū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "səddēr", :eng => "prepare" }, :alashian => alashian, :latin => latin
+        - alashian = %w(άδακκαρ τίδακκαρ τιδακρεί ίδακκαρ ιδακρεί νιδακρού τιδακρού τιδακρού ιδακρού ιδακρού)
+        - latin = %w('adəkhar tidəkhar tidəkrī yidəkhar yidəkrī nidəkrū tidəkrū tidəkrū yidəkrū yidəkrū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "dəkhēr", :eng => "exhort" }, :alashian => alashian, :latin => latin
+
+  = section "The Preterite Tense" do
+    %p The preterite tense is formed by adding regular preterite endings to the stem #{template "*C1əC2C2ēC3-"}, replacing the gemination with aspiration if appropriate. In the third person singular feminine and third person plural, the schwa will become /i/ so long as #{template "C2"} does not surface as an aspirate.
+    %table.invisible
+      %tr
+        - alashian = %w(σαδδήρετ σαδδήρτα σαδδήρσ̄ε σαδδήρ σιδδηρώ σαδδηρνώ σαδδήρτυν σαδδήρσ̄ιν σιδδηρού σιδδηρού)
+        - latin = %w(səddēret səddērta səddērše səddēr siddērā səddērnā səddērtun səddēršin siddērū siddērū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "səddēr", :eng => "prepare" }, :alashian => alashian, :latin => latin
+        - alashian = %w(δακκήρετ δακκήρτα δακκήρσ̄ε δακκήρ δακκηρώ δακκηρνώ δακκήρτυν δακκήρσ̄ιν δακκηρού δακκηρού)
+        - latin = %w(dəkhēret dəkhērta dəkhērše dəkhēr dəkhērā dəkhērnā dəkhērtun dəkhēršin dəkhērū dəkhērū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "dəkhēr", :eng => "exhort" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperfect Tense" do
+    %p The imperfect tense is formed by adding regular endings to the stem #{template "*C1eC2C2eC3-"}, or #{template "*C1əC2eC3-"} if #{template "C2"} surfaces as an aspirate (note the difference in vowel quality). If #{template "C3"} can undergo lenition, it does so in all of the first and second person forms. Unlike in <i>katab</i>, there is never any stem contraction.
+    %table.invisible
+      %tr
+        - alashian = %w(σέδδερ σέδδερετ σέδδερες̄ σέδδερ σεδδερώ σέδδερεν σέδδερτυν σέδδερσ̄ιν σεδδερού σεδδερού)
+        - latin = %w(sedder sedderet seddereš sedder sedderā sedderen seddertun sedderšin sedderū sedderū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "səddēr", :eng => "prepare" }, :alashian => alashian, :latin => latin
+        - alashian = %w(δάκκερ δάκκερετ δάκκερες̄ δάκκερ δακκερώ δάκκερεν δάκκερτυν δάκκερσ̄ιν δακκερού δακκερού)
+        - latin = %w(dəkher dəkheret dəkhereš dəkher dəkherā dəkheren dəkhertun dəkheršin dəkherū dəkherū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "dəkhēr", :eng => "exhort" }, :alashian => alashian, :latin => latin
+
+  = section "The Perfective Subjunctive Tense" do
+    %p The <i>kəthēb</i> perfective subjunctive is formed by adding a special set of prefixes to the stem #{template "*-C1əC2C2eC3"}, or #{template "*-C1əC2eC3"} if #{template "C2"} is an aspirate. While the prefixes share a strong resemblence to those of <i>katab</i>, the vowels and stress patterns are different.
+    %table.invisible
+      %tr
+        - alashian = %w(в̄άσαδδερ в̄ετείσαδδερ в̄ήσαδδερ в̄ενείσαδδερ в̄ετείσαδδερ в̄ήσαδδερ)
+        - latin = %w(vasədder vetīsədder vēsədder venīsədder vetīsədder vēsədder)
+        %td= render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "səddēr", :eng => "prepare" }, :alashian => alashian, :latin => latin
+        - alashian = %w(в̄άδακκερ в̄ετείδακκερ в̄ήδακκερ в̄ενείδακκερ в̄ετείδακκερ в̄ήδακκερ)
+        - latin = %w(vadəkher vetīdəkher vēdəkher venīdəkher vetīdəkher vēdəkher)
+        %td= render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "dəkhēr", :eng => "exhort" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperative" do
+    %p The masculine singular takes the form #{template "*C1əC2C2ēC3"}/#{template "*C1əC2ēC3"}, while the feminine singular and plural forms add the normal imperative endings to the contracted stem #{template "*C1əC2C2eC3-"}/#{template "*C1əC2eC3-"}.
+    %table.invisible
+      %tr
+        - alashian = %w(σαδδήρ σαδδερεί σαδδερού σαδδερού)
+        - latin = %w(səddēr sədderī sədderū sədderū)
+        %td= render 'imperative_table', :title => "Scale II Imperative", :verb => { :ala => "səddēr", :eng => "prepare" }, :alashian => alashian, :latin => latin
+        - alashian = %w(δακκήρ δακκερεί δακκερού δακκερού)
+        - latin = %w(dəkhēr dəkherī dəkherū dəkherū)
+        %td= render 'imperative_table', :title => "Scale II Imperative", :verb => { :ala => "dəkhēr", :eng => "exhort" }, :alashian => alashian, :latin => latin
+
+  = section "Deverbatives" do
+    %p <i>Kəthēb</i> has only two deverbatives: an infinitive and an active participle. The infinitive uses the pattern #{template "*maC1əC2C2ūC3"}, while the participle uses #{template "*muC1əC2C2iC3"}, replacing gemination with aspiration when appropriate.
+    %table.invisible
+      %tr
+        - alashian = [ { :name => "Infinitive", :ala => "μασαδδούρ", :lat => "masəddūr", :meaning => "prepare" },
+                       { :name => "Active Part.", :ala => "μύσαδδιρ", :lat => "musəddir", :meaning => "preparing" } ]
+        %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "səddēr", :eng => "prepare" }, :forms => alashian
+        - alashian = [ { :name => "Infinitive", :ala => "μαδακκούρ", :lat => "madəkhūr", :meaning => "exhort" },
+                       { :name => "Active Part.", :ala => "μύδακκιρ", :lat => "mudəkhir", :meaning => "exhorting" } ]
+        %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "dəkhēr", :eng => "exhort" }, :forms => alashian
+
+= section "Biconsonantal Roots and kəthēb" do
+  %p Biconsonantal roots may be conjugated in <i>kəthēb</i>, but only by first converting them to standard triconsonantal roots via internal extension (the addition of #{template "C2"} *W for roots with *ū, *Y for roots with *ī or *ē, and *' for roots with *ā). These then conjugate as though they were triconsonantal verbs in all forms.
+  %p Two examples are the roots *čīl “cold” and *řūn “hot”, which in <i>kəthēb</i> yield the verbs #{t "τζαιιήλ", "čəyyēl"} “cool, make cold” and #{t "ρ̄αυυήν", "řəwwēn"} “heat, make hot”. Their conjugation is essentially as though they were always triconsonantal, with the addition of an epenthetic vowel /a/ in some present tense forms to prevent an illegal cluster: #{t "τιτζαιαλεί", "tičəyalī"} “you (f) are cooling” (not **tičəylī), #{t "νερ̄αυανού", "neřəwanū"} “we are heating” (not **neřəwnū)<sup>1</sup>.
+  - alashian = { :present     => %w(άτζαιιαλ τίτζαιιαλ τιτζαιαλεί ίτζαιιαλ ιτζαιαλεί νιτζαιαλού τιτζαιαλού τιτζαιαλού ιτζαιαλού),
+                 :preterite   => %w(τζαιιήλετ τζαιιήλτα τζαιιήλσ̄ε τζαιιήλ τζιιηλώ τζαιιηλνώ τζαιιήλτυν τζαιιήλσ̄ιν τζιιηλού),
+                 :imperfect   => %w(τζέιιελ τζέιιελετ τζέιιελες̄ τζέιιελ τζειιελώ τζέιιελεν τζέιιελτυν τζέιιελσ̄ιν τζειιελού),
+                 :subjunctive => %w(в̄άτζαιιελ в̄ετείτζαιιελ в̄ετείτζαιιελ в̄ήτζαιιελ в̄ήτζαιιελ в̄ενείτζαιιελ в̄ετείτζαιιελ в̄ετείτζαιιελ в̄ήτζαιιελ),
+                 :imperative  => %w(τζαιιήλ τζαιιελεί τζαιιελού),
+                 :infinitive  => "ματζαιιούλ",
+                 :participle  => "μύτζαιιλ" }
+  - latin = { :present     => %w('ačəyyal tičəyyal tičəyalī yičəyyal yičəyalī ničəyalū tičəyalū tičəyalū yičəyalū),
+              :preterite   => %w(čəyyēlet čəyyēlta čəyyēlše čəyyēl čiyyēlā čəyyēlnā čəyyēltun čəyyēlšin čiyyēlū),
+              :imperfect   => %w(čeyyel čeyyelet čeyyeleš čeyyel čeyyelā čeyyelen čeyyeltun čeyyelšin čeyyelū),
+              :subjunctive => %w(vačəyyel vetīčəyyel vetīčəyyel vēčəyyel vēčəyyel venīčəyyel vetīčəyyel vetīčəyyel vēčəyyel),
+              :imperative  => %w(čəyyēl čəyyelī čəyyelū),
+              :infinitive  => "mačəyyūl",
+              :participle  => "mučəyyil" }
+  = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "čəyyēl", :eng => "cool" }, :alashian => alashian, :latin => latin
+
+= section "Quadriconsonantal Roots and kəthēb" do
+  %p Quadriconsonantal roots are the most common verbs that use the <i>kəthēb</i> pattern. Their conjugation requires only a few slight modifications to the triconsonantal paradigm:
+  %ul
+    %li The #{template "C2C2"} gemination of triconsonantal roots is replaced everywhere with two single consonants, #{template "C2C3"}.
+    %li The schwa is replaced everywhere with /a/.
+    %li An epenthetic /a/ is present in suffixed present tense forms to prevent the formation of illegal clusters.
+  %p With #{t "ταργήν", "targēn"} “translate”:
+  - alashian = { :present     => %w(άταργαν τίταργαν τιταργανεί ίταργαν ιταργανεί νιταργανού τιταργανού τιταργανού ιταργανού),
+                 :preterite   => %w(ταργήνετ ταργήντα ταργήνσ̄ε ταργήν τιργηνώ ταργηννώ ταργήντυν ταργήνσ̄ιν τιργηνού),
+                 :imperfect   => %w(τέργεν τέργενετ τέργενες̄ τεργήν τεργενώ τέργενεν τέργεντυν τέργενσ̄ιν τεργενού),
+                 :subjunctive => %w(в̄άταργεν в̄ετείταργεν в̄ετείταργεν в̄ήταργεν в̄ήταργεν в̄ενείταργεν в̄ετείταργεν в̄ετείταργεν в̄ήταργεν),
+                 :imperative  => %w(ταργήν ταργενεί ταργενού),
+                 :infinitive  => "ματαργούν",
+                 :participle  => "μύταργιν" }
+  - latin = { :present     => %w('atargan titargan titarganī yitargan yitarganī nitarganū titarganū titarganū yitarganū),
+              :preterite   => %w(targēnet targēnta targēnše targēn tirgēnā targēnnā targēntun targēnšin tirgēnū),
+              :imperfect   => %w(tergen tergenet tergeneš tergēn tergenā tergenen tergentun tergenšin tergenū),
+              :subjunctive => %w(vatargen vetītargen vetītargen vētargen vētargen venītargen vetītargen vetītargen vētargen),
+              :imperative  => %w(targēn targenī targenū),
+              :infinitive  => "matargūn",
+              :participle  => "mutargin" }
+  = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "targēn", :eng => "translate" }, :alashian => alashian, :latin => latin
+
+= section "Geminate Roots and kəthēb" do
+  %p Geminate roots conjugate as though they were triconsonantal, with the geminate root consonant split into two single consonants. The root *dall “be humble”, for instance, becomes #{t "δαλλήλ", "dəllēl"} “tame, subdue, subjugate”:
+  - alashian = { :present     => %w(άδαλλαλ τίδαλλαλ τιδαλλεί ίδαλλαλ ιδαλλεί νιδαλλού τιδαλλού τιδαλλού ιδαλλού),
+                 :preterite   => %w(δαλλήλετ δαλλήλτα δαλλήλσ̄ε δαλλήλ διλληλώ δαλληλνώ δαλλήλτυν δαλλήλσ̄ιν διλληλού),
+                 :imperfect   => %w(δέλλελ δέλλελετ δέλλελες̄ δέλλελ δελλελώ δέλλελεν δέλλελτυν δέλλελσ̄ιν δελλελού),
+                 :subjunctive => %w(в̄άδαλλελ в̄ετείδαλλελ в̄ετείδαλλελ в̄ήδαλλελ в̄ήδαλλελ в̄ενείδαλλελ в̄ετείδαλλελ в̄ετείδαλλελ в̄ήδαλλελ),
+                 :imperative  => %w(δαλλήλ δαλλελεί δαλλελού),
+                 :infinitive  => "μαδαλλούλ",
+                 :participle  => "μύδαλλιλ" }
+  - latin = { :present     => %w('adəllal tidəllal tidəllī yidəllal yidəllī nidəllū tidəllū tidəllū yidəllū),
+              :preterite   => %w(dəllēlet dəllēlta dəllēlše dəllēl dillēlā dəllēlnā dəllēltun dəllēlšin dillēlū),
+              :imperfect   => %w(dellel dellelet delleleš dellel dellelā dellelen delleltun dellelšin dellelū),
+              :subjunctive => %w(vadəllel vetīdəllel vetīdəllel vēdəllel vēdəllel venīdəllel vetīdəllel vetīdəllel vēdəllel),
+              :imperative  => %w(dəllēl dəllelī dəllelū),
+              :infinitive  => "madəllūl",
+              :participle  => "mudəllil" }
+  = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "dəllēl", :eng => "tame, subdue" }, :alashian => alashian, :latin => latin
+
+= section "Introduction to kəthāb Verbs" do
+  %p <i>Kəthāb</i>, or Passive Scale II, is the passive counterpart to <i>kəthēb</i>. It is derived from <i>kəthēb</i> via the internal passive vowel pattern -u-ā-, while maintaining the distinctive gemination of <i>kəthēb</i>. However, some modifications have been made to certain forms due to the merger of short vowels before aspirates in order to maintain the saliency of passive marking.
+  %p Any transitive <i>kəthēb</i> verb may be made passive by shifting it to <i>kəthāb</i>: #{t "τυργών", "turgān"} “be translated”, #{t "λαττώφ", "ləthāf"} “be shrunk”, #{t "в̄ακκώδ", "vəkhād"} “be set alight”, #{t "σαδδώρ", "səddār"} “be prepared”.
+
+= section "Triconsonantal Roots and kəthāb" do
+  = section "The Present Tense" do
+    %p The present tense is formed by adding the present tense prefixes and suffixes to the stems #{template "*-C1əC2C2āC3-"} (when there is no suffix) or #{template "*-C1əC2C2aC3-"} (when there is a suffix), replacing the geminates with aspirates if appropriate. The schwa is these forms was once /u/ (from the -u-ā- passive vowel pattern), but was centralized to /ə/ before aspirated consonants and subsequently generalized.
+    %p As a result, <i>kəthāb</i> forms came to look very similar to their active voice <i>kəthēb</i> counterparts. This was resolved by reintroducing -u- as the <em>prefix vowel</em>: first person plural *nu-, second person *tu-, third person *yu-. Even the first person singular marker became *'u-, making <i>kəthāb</i> the only conjugation to mark the first person singular present with a vowel other than /a/ or /aː/.
+    %p The verbs used below are #{t "σαδδώρ", "səddār"} “be prepared”, the passive of #{t "σαδδήρ", "səddēr"} “prepare”, and #{t "δακκώρ", "dəkhār"} “be brought to [someone's] mind”, the passive of #{t "δακκήρ", "dəkhēr"} “remind [someone of the consequences of an action]”.
+    %table.invisible
+      %tr
+        - alashian = %w(υσαδδώρ τυσαδδώρ τυσαδδαρεί ιυσαδδώρ ιυσαδδαρεί νυσαδδαρού τυσαδδαρού τυσαδδαρού ιυσαδδαρού ιυσαδδαρού)
+        - latin = %w('usəddār tusəddār tusəddarī yusəddār yusəddarī nusəddarū tusəddarū tusəddarū yusəddarū yusəddarū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "səddār", :eng => "be prepared" }, :alashian => alashian, :latin => latin
+        - alashian = %w(υδακκώρ τυδακκώρ τυδακκαρεί ιυδακκώρ ιυδακκαρεί νυδακκαρού τυδακκαρού τυδακκαρού ιυδακκαρού ιυδακκαρού)
+        - latin = %w('udəkhār tudəkhār tudəkharī yudəkhār yudəkharī nudəkharū tudəkharū tudəkharū yudəkharū yudəkharū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "dəkhār", :eng => "be brought to mind" }, :alashian => alashian, :latin => latin
+
+  = section "The Preterite Tense" do
+    %p The preterite is formed by adding the usual preterite endings to the stem #{template "*C1əC2C2āC3-"}. The conjugation is thus essentially the same as <i>kəthēb</i>, except for the vowel /aː/ in place of the <i>kəthēb</i> /eː/. There is no /ə/~/i/ alternation in the third person as seen in <i>kəthēb</i>.
+    %table.invisible
+      %tr
+        - alashian = %w(σαδδώρετ σαδδώρτα σαδδώρσ̄ε σαδδώρ σαδδωρώ σαδδωρνώ σαδδώρτυν σαδδώρσ̄ιν σαδδωρού σαδδωρού)
+        - latin = %w(səddāret səddārta səddārše səddār səddārā səddārnā səddārtun səddāršin səddārū səddārū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "səddār", :eng => "be prepared" }, :alashian => alashian, :latin => latin
+        - alashian = %w(δακκώρετ δακκώρτα δακκώρσ̄ε δακκώρ δακκωρώ δακκωρνώ δακκώρτυν δακκώρσ̄ιν δακκωρού δακκωρού)
+        - latin = %w(dəkhāret dəkhārta dəkhārše dəkhār dəkhārā dəkhārnā dəkhārtun dəkhāršin dəkhārū dəkhārū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "dəkhār", :eng => "be brought to mind" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperfect Tense" do
+    %p The imperfect tense is formed by adding the regular passive endings (with -a- rather than -e- in the  first and second person) to the stem #{template "*C1uC2C2aC3-"}, or #{template "*C1əC2aC3-"} if #{template "C2"} surfaces as an aspirate. If #{template "C3"} can undergo lenition, it does so in all of the first and second person forms.
+    %table.invisible
+      %tr
+        - alashian = %w(σύδδαρ σύδδαρατ σύδδαρας̄ σύδδαρ συδδαρώ σύδδαραν σύδδαρτυν σύδδαρσ̄ιν συδδαρού συδδαρού)
+        - latin = %w(suddar suddarat suddaraš suddar suddarā suddaran suddartun suddaršin suddarū suddarū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "səddār", :eng => "be prepared" }, :alashian => alashian, :latin => latin
+        - alashian = %w(δάκκαρ δάκκαρατ δάκκαρας̄ δάκκαρ δακκαρώ δάκκαραν δάκκαρτυν δάκκαρσ̄ιν δακκαρού δακκαρού)
+        - latin = %w(dəkhar dəkharat dəkharaš dəkhar dəkharā dəkharan dəkhartun dəkharšin dəkharū dəkharū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "dəkhār", :eng => "be brought to mind" }, :alashian => alashian, :latin => latin
+
+  = section "The Perfective Subjunctive Tense" do
+    %p The perfective subjunctive is formed by adding a special set of prefixes to the stem #{template "*-C1əC2C2aC3"}, replacing gemination with aspiration if appropriate. As with the present tense, the prefixes have been modified to reinstate the passive /u/ that was lost before aspirate consonants, with *vu- in the first person singular, *vanū- in the first person plural, *vatū- in the second person, and the unchanged *vē in the third person.
+    %table.invisible
+      %tr
+        - alashian = %w(в̄ύσαδδαρ в̄ατούσαδδαρ в̄ήσαδδαρ в̄ανούσαδδαρ в̄ατούσαδδαρ в̄ήσαδδαρ)
+        - latin = %w(vusəddar vatūsəddar vēsəddar vanūsəddar vatūsəddar vēsəddar)
+        %td= render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "səddār", :eng => "be prepared" }, :alashian => alashian, :latin => latin
+        - alashian = %w(в̄ύδακκαρ в̄ατούδακκαρ в̄ήδακκαρ в̄ανούδακκαρ в̄ατούδακκαρ в̄ήδακκαρ)
+        - latin = %w(vudəkhar vatūdəkhar vēdəkhar vanūdəkhar vatūdəkhar vēdəkhar)
+        %td= render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "dəkhār", :eng => "be brought to mind" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperative" do
+    %p No imperative exists for <i>kəthāb</i>.
+
+  = section "Deverbatives" do
+    %p The infinitive uses the pattern #{template "*maC1əC2C2āC3"} and the passive participle uses #{template "*muC1əC2C2aC3"}.
+    %table.invisible
+      %tr
+        - alashian = [ { :name => "Infinitive", :ala => "μασαδδώρ", :lat => "masəddār", :meaning => "be prepared" },
+                       { :name => "Passive Part.", :ala => "μύσαδδαρ", :lat => "musəddar", :meaning => "prepared" } ]
+        %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "səddār", :eng => "be prepared" }, :forms => alashian
+        - alashian = [ { :name => "Infinitive", :ala => "μαδακκώρ", :lat => "madəkhār", :meaning => "be brought to mind" },
+                       { :name => "Passive Part.", :ala => "μύδακκαρ", :lat => "mudəkhar", :meaning => "being brought to mind" } ]
+        %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "dəkhār", :eng => "be brought to mind" }, :forms => alashian
+
+= section "Biconsonantal Roots and kəthāb" do
+  %p Biconsonantal roots in <i>kəthāb</i> undergo internal extension (insertion of medial *Y, *W, or *'), and conjugate as regular triconsonantal verbs. The root *čil “cold”, for instance, becomes #{t "τζαιιώλ", "čəyyāl"} “be cooled”.
+  - alashian = { :present     => %w(υτζαιιώλ τυτζαιιώλ τυτζαιιαλεί ιυτζαιιώλ ιυτζαιιαλεί νυτζαιιαλού τυτζαιιαλού τυτζαιιαλού ιυτζαιιαλού),
+                 :preterite   => %w(τζαιιώλετ τζαιιώλτα τζαιιώλσ̄ε τζιιώλ τζαιιωλώ τζαιιωλνώ τζαιιώλτυν τζαιιώλσ̄ιν τζαιιωλού),
+                 :imperfect   => %w(τζύιιαλ τζύιιαλατ τζύιιαλας̄ τζύιιαλ τζυιιαλώ τζύιιαλαν τζύιιαλτυν τζύιιαλσ̄ιν τζυιιαλού),
+                 :subjunctive => %w(в̄ύτζαιιαλ в̄ατούτζαιιαλ в̄ατούτζαιιαλ в̄ήτζαιιαλ в̄ήτζαιιαλ в̄ανούτζαιιαλ в̄ατούτζαιιαλ в̄ατούτζαιιαλ в̄ήτζαιιαλ),
+                 :imperative  => nil,
+                 :infinitive  => "ματζαιιώλ",
+                 :participle  => "μύτζαιιαλ" }
+  - latin = { :present     => %w('učəyyāl tučəyyāl tučəyyalī yučəyyāl yučəyyalī nučəyyalū tučəyyalū tučəyyalū yučəyyalū),
+              :preterite   => %w(čəyyālet čəyyālta čəyyālše čəyyāl čəyyālā čəyyālnā čəyyāltun čəyyālšin čəyyālū),
+              :imperfect   => %w(čuyyal čuyyalat čuyyalaš čuyyal čuyyalā čuyyalan čuyyaltun čuyyalšin čuyyalū),
+              :subjunctive => %w(vučəyyal vatūčəyyal vatūčəyyal vēčəyyal vēčəyyal vanūčəyyal vatūčəyyal vatūčəyyal vēčəyyal),
+              :imperative  => nil,
+              :infinitive  => "mačəyyāl",
+              :participle  => "mučəyyal" }
+  = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "čəyyāl", :eng => "be cooled" }, :alashian => alashian, :latin => latin
+
+= section "Quadriconsonantal Roots and kəthāb" do
+  %p Quadriconsonantal roots use a slightly different vowel pattern than other classes of roots in <i>kəthāb</i>. The /ə/ of the triconsonantal paradigm is replaced by /u/ in all forms except the passive participle, where it is replaced by /a/ instead. The prefixial /u/ of triconsonantal roots is nevertheless kept, having spread analogously throughout the <i>kəthāb</i> paradigm.
+  - alashian = { :present     => %w(υτυργών τυτυργών τυτυργανεί ιυτυργών ιυτυργανεί νυτυργανού τυτυργανού τυτυργανού ιυτυργανού),
+                 :preterite   => %w(τυργώνετ τυργώντα τυργώνσ̄ε τυργών τυργωνώ τυργωνώ τυργώντυν τυργώνσ̄ιν τυργωνού),
+                 :imperfect   => %w(τυργαν τύργανατ τυργανας̄ τυργαν τυργανώ τύργαναν τύργαντυν τυργανσ̄ιν τυργανού),
+                 :subjunctive => %w(в̄ύτυργαν в̄ατούτυργαν в̄ατούτυργαν в̄ήτυργαν в̄ήτυργαν в̄ανούτυργαν в̄ατούτυργαν в̄ατούτυργαν в̄ήτυργαν),
+                 :imperative  => nil,
+                 :infinitive  => "ματυργών",
+                 :participle  => "μύταργαν" }
+  - latin = { :present     => %w('uturgān tuturgān tuturganī yuturgān yuturganī nuturganū tuturganū tuturganū yuturganū),
+              :preterite   => %w(turgānet turgānta turgānše turgān turgānā turgānnā turgāntun turgānšin turgānū),
+              :imperfect   => %w(turgan turganat turganaš turgan turganā turganan turgantun turganšin turganū),
+              :subjunctive => %w(vuturgan vatūturgan vatūturgan vēturgan vēturgan vanūturgan vatūturgan vatūturgan vēturgan),
+              :imperative  => nil,
+              :infinitive  => "maturgān",
+              :participle  => "mutargan" }
+  = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "turgān", :eng => "be translated" }, :alashian => alashian, :latin => latin
+
+= section "Geminate Roots and kəthāb" do
+  %p Geminate roots conjugate as though they were triconsonantal, with the geminate root consonant split into two single consonants. The root *dall “be humble”, for instance, becomes #{t "δαλλώλ", "dəllāl"} “be tamed, subdued, subjugated”:
+  - alashian = { :present     => %w(υδαλλώλ τυδαλλώλ τυδαλλαλεί ιυδαλλώλ ιυδαλλαλεί νυδαλλαλού τυδαλλαλού τυδαλλαλού ιυδαλλαλού),
+                 :preterite   => %w(δαλλώλετ δαλλώλτα δαλλώλσ̄ε δαλλώλ δαλλωλώ δαλλωλνώ δαλλώλτυν δαλλώλσ̄ιν δαλλωλού),
+                 :imperfect   => %w(δύλλαλ δύλλαλατ δύλλαλας̄ δύλλαλ δυλλαλώ δύλλαλαν δύλλαλτυν δύλλαλσ̄ιν δύλλαλού),
+                 :subjunctive => %w(в̄ύδαλλαλ в̄ατούδαλλαλ в̄ατούδαλλαλ в̄ήδαλλαλ в̄ήδαλλαλ в̄ανούδαλλαλ в̄ατούδαλλαλ в̄ατούδαλλαλ в̄ήδαλλαλ),
+                 :imperative  => nil,
+                 :infinitive  => "μαδαλλώλ",
+                 :participle  => "μύδαλλαλ" }
+  - latin = { :present     => %w('udallāl tudəllāl tudəllalī yudəllāl yudəllalī nudəllalū tudəllalū tudəllalū yudəllalū),
+              :preterite   => %w(dəllālet dəllālta dəllālše dəllāl dəllālā dəllālnā dəllāltun dəllālšin dəllālū),
+              :imperfect   => %w(dullal dullalat dullalaš dullal dullalā dullalan dullaltun dullalšin dullalū),
+              :subjunctive => %w(vudəllal vatūdɑllal vatūdɑllal vēdəllal vēdəllal vanūdɑllal vatūdɑllal vatūdɑllal vēdəllal),
+              :imperative  => nil,
+              :infinitive  => "madəllāl",
+              :participle  => "mudəllal" }
+  = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "dəllāl", :eng => "be tamed, subdued" }, :alashian => alashian, :latin => latin
+
+= section "Weak Roots in Scale II" do
+  %p <i>Kəthēb</i> and <i>kəthāb</i> are for the most part much more regular than <i>katab</i> and <i>nuktāb</i>, though there are still a number of irregular subclasses.
+
+  = section "C1 = Ř" do
+    %p Roots with initial root consonant *Ř are completely regular except in the present tense of active <i>kəthēb</i>. Here, the prefix vowel /i/ is lowered to /e/ throughout. For example, the root *řdāṯ “new, recent” produces the verb <i>řəddēṯ</i> “renew, restore” with the third person singular masculine present #{t "ιέρ̄αδδαθ", "yeřəddaṯ"} “he is renewing/restoring” (not **yiřəddaṯ).
+
+  = section "C2 = Ř" do
+    %p Roots with medial *Ř cause some problems in Scale II because the geminated **řř is not permitted in Alashian. Two different methods have arisen to resolve this.
+    %p Historically, this was fixed by having the vowel immediately before the *Ř lengthen in compensation for the lack of gemination. Alashian, however, has no long schwa, so the vowel that would be inserted was the long version of whatever the original vowel had once been. For instance, the root *lřāb “wide, spacious” produced the verbs #{t "λωρ̄ήβ", "lāřēb"} “widen, expand” (not **ləřřēb) and #{t "λουρ̄ώβ", "lūřāb"} “be widened, expanded” (not **ləřřāb). This technique is the only one seen in texts from the 19th century and earlier.
+    %p However, this method required the reintroduction of vowels whose quality had been lost in other triconsonantal verbs for centuries. As a result, over time many speakers generalized the schwa seen in the rest of triconsonantal Scale II while preserving the non-gemination of *Ř, giving the forms #{t "λαρ̄ήβ", "ləřēb"} “widen, expand” and #{t "λαρ̄ώβ", "ləřāb"} “be widened, expanded”. Nowadays this is by far the dominant pattern used in written Alashian and the only one used in speech.
+    %p The one exception to this pattern is the imperfect, which has never fully lost the quality of the first vowel. As a result, the first vowel is always lengthened: #{t "λήρ̄εв̄ετ", "lēřevet"} “you (m) were widening” (not **leřřebet), #{t "λούρ̄αβ", "lūřab"} “it (m) was being widened” (not **luřřab).
+
+  = section "C3 = Ř" do
+    %p The effects of root-final *Ř are the same as in Scale I. One such root is *mlāř “salty”, which derives the verbs #{t "μαλλήρ̄", "məllēř"} “salt” and #{t "μαλλώρ̄", "məllāř"} “be salted”.
+    %p In the present tense of both <i>kəthēb</i> and <i>kəthāb</i> and the imperative of <i>kəthēb</i>, the feminine singular marker *-ī is replaced by *-ēyi, spelled -ηι: #{t "μαλλερ̄ήι", "məlleřēyi"} “salt! (f)” (not **məlleřī), #{t "ιυμαλλαρ̄ήι", "yuməllařēyi"} “it (f) is being salted” (not **yuməllařī).
+    %p In addition, the /i/ that immediately precedes #{template "C3"} in the active participle is lowered to /e/: #{t "μύμαλλερ̄", "muməlleř"} “salting” (not **muməlliř).
+
+  = section "C1 = '/H" do
+    %p Root-initial *' and *H are prone to dropping, but are not especially problematic. Such roots include *'xīr “be late, last” and *hlāk “behave”<sup>2</sup>, yielding the Scale II verbs #{t "αχχήρ", "'əxxēr"} “delay”, #{t "αχχώρ", "'əxxār"} “be delayed”, and #{t "ηαλλήκ", "həllēk"} “behave”.
+    %p These verbs are only irregular when a prefix is present, namely in the present, perfective subjunctive, and deverbatives. In these forms, the *'/H is replaced by /j/: #{t "άιαχχαρ", "'ayəxxar"} “I am delaying” (not **'a'axxar), #{t "в̄ήιαλλεκ", "vēyəllek"} “[that] he/she/they behaved” (not **vēhəllek), #{t "μύιαχχαρ", "muyəxxar"} “being delayed, delayed”.
+    %p All other forms are regular.
+
+  = section "C2 = '/H" do
+    %p Medial *' and *H suffer from the same problems as medial *Ř: Alashian phonotactics do not allow them to undergo gemination. Thus, just as with medial *Ř, two possible resolutions exist: the older technique, calling for the compensatory lengthening of the previous vowel, and the newer technique, simply ignoring the need for gemination. Using the older technique, the root *k'āb “hurt, be painful” produces the verbs #{t "κωήβ", "kā'ēb"} “hurt, cause pain” and #{t "κουώβ", "kū'āb"} “be hurt”, while using the newer technique, these forms become #{t "καήβ", "kə'ēb"} and #{t "καώβ", "kə'āb"}.
+    %p In the imperfect tense, however, compensatory lengthening is required: #{t "κήεв̄ετ", "kē'evet"} “you were hurting” (not **ke''evet), #{t "κηεβού", "kē'ebū"} “they were being hurt” (not **ke''ebū).
+
+  = section "C3 = '" do
+    %p Root-final *' behaves quite erratically, but has all of the same irregularities as Scale I verbs. The root *brī' “pure, clear, free” will be used to demonstrate; its Scale II realizations are #{t "βαρρή", "bərrē"} “purify, liberate, pronounce free (of a debt, claim, etc)” and #{t "βαρρώ", "bərrā"} “be purified, pronounced free”.
+    %p In the present tense of both <i>kəthēb</i> and <i>kəthāb</i> verbs, the glottal stop drops entirely when word-final and assimilates into the preceding consonant when there is a suffix, causing gemination.
+    - alashian = %w(άβαρρα τίβαρρα τιβαρρεί ίβαρρα ιβαρρεί νιβαρρού τιβαρρού τιβαρρού ιβαρρού ιβαρρού)
+    - latin = %w('abərra tibərra tibərrī yibərra yibərrī nibərrū tibərrū tibərrū yibərrū yibərrū)
+    = render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
+    %p The preterite features the same special set of suffixes as seen in Scale I. In the first person singular, the glottal stop drops and the two vowels on either side contract to an unstressed long vowel /aː/. In the first person plural, it assimilates into the following /n/, causing gemination. In the second person masculine forms, the /t/ of the ending becomes an aspirated /tʰ/, while in the feminine forms the /ʃ/ becomes /tʃʰ/. In the third person masculine singular the glottal stop simply drops, while the other third person forms are regular.
+    - alashian = %w(βαρρήτ βαρρήττα βαρρήτζζε βαρρή βαρρηώ βαρρηνώ βαρρήττυν βαρρήτζζιν βαρρηού βαρρηού)
+    - latin = %w(bərrēt bərētha bərrēčhe bərrē birrē'ā bərrēnnā bərēthun bərēčhin birrē'ū birrē'ū)
+    = render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
+    %p The imperfect is similarly messy. When word-final (1Sg/3SgM), the glottal stop simply drops. When surrounded on both sides by /e/ (1Pl/2SgM/2SgF), it drops and the two vowels contract to an unstressed /eː/. In the second person plural forms, the suffix becomes aspirated as in the preterite.
+    - alashian = %w(βέρρε βέρρητ βέρρης̄ βέρρε βερρεώ βέρρην βέρραττυν βέρρατζζιν βερρεού βερρεού)
+    - latin = %w(berre berrēt berrēš berre berre'ā berrēn berrəthun berrəčhin berre'ū berre'ū)
+    = render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
+    %p The glottal stop drops in all forms of the perfective subjunctive:
+    - alashian = %w(в̄άβαρρε в̄ετείβαρρε в̄ήβαρρε в̄ενείβαρρε в̄ετείβαρρε в̄ήβαρρε)
+    - latin = %w(vabərre vetībərre vēbərre venībərre vetībərre vēbərre)
+    = render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
+    %p In the imperative (<i>kəthēb</i> only), the glottal stop is lost in the masculine singular due to being word-final:
+    - alashian = %w(βαρρή βαρρεεί βαρρεού βαρρεού)
+    - latin = %w(bərrē bərre'ī bərre'ū bərre'ū)
+    = render 'imperative_table', :title => "Scale II Imperative", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
+    %p The deverbatives simply lose the glottal stop, but are otherwise regular:
+    - alashian = [ { :name => "Infinitive", :ala => "μαβαρρού", :lat => "mabərrū", :meaning => "purify" },
+                   { :name => "Active Part.", :ala => "μύβαρρι", :lat => "mubərri", :meaning => "purifying" } ]
+
+  = section "C3 = H" do
+    %p Final *H behaves in a rather unusual manner. In Scale II, #{template "C2"} and #{template "C3"} appear to switch places, so that a root such as *zgāh “crazy, mad” forms the verbs #{t "ζαηήγ", "zəhēg"} “drive mad” and #{t "ζαηώγ", "zəhāg"} “be driven mad” (cf. the <i>katab</i> form #{t "ζαγώ", "zagā"} “be crazy, mad”). More precisely, roots with final *H adopt a biconsonantal-like paradigm outside of Scale I, which in turn undergo internal extension with -h- in Scale II.
+    %p The conjugation of #{t "ζαηήγ", "zəhēg"}, therefore, follows the #{template "C2"} = *H pattern, as though the root were actually *zhāg. Just as with true #{template "C2"} = *H verbs, two possible paradigms exist; shown below is the newer, more common system:
+    - alashian = { :present     => %w(άζαηαγ τίζαηαγ τιζαηαγεί ίζαηαγ ιζαηαγεί νιζαηαγού τιζαηαγού τιζαηαγού ιζαηαγού),
+                   :preterite   => %w(ζαηήγετ ζαηήγ̄τα ζαηήγ̄σ̄ε ζαηήγ ζιηηγώ ζαηηγνώ ζαηήγ̄τυν ζαηήγ̄σ̄ιν ζιηηγού),
+                   :imperfect   => %w(ζήηεγ̄ ζήηεγ̄ετ ζήηεγ̄ες̄ ζήηεγ ζηηεγώ ζήηεγ̄εν ζήηεγ̄τυν ζήηεγ̄σ̄ιν ζηηεγού),
+                   :subjunctive => %w(в̄άζαηεγ в̄ετείζαηεγ в̄ετείζαηεγ в̄ήζαηεγ в̄ήζαηεγ в̄ενείζαηεγ в̄ετείζαηεγ в̄ετείζαηεγ в̄ήζαηεγ),
+                   :imperative  => %w(ζαηήγ ζαηεγεί ζαηεγού),
+                   :infinitive  => "μαζαηούγ",
+                   :participle  => "μύζαηιγ" }
+    - latin = { :present     => %w('azəhag tizəhag tizəhagī yizəhag yizəhagī nizəhagū tizəhagū tizəhagū yizəhagū),
+                :preterite   => %w(zəhēget zəhēǧta zəhēǧše zəhēg zihēgā zəhēgnā zəhēǧtun zəhēǧšin zihēgū),
+                :imperfect   => %w(zēheǧ zēheǧet zēheǧeš zēheg zēhegā zēheǧen zēheǧtun zēheǧšin zēhegū),
+                :subjunctive => %w(vazəheg vetīzəheg vetīzəheg vēzəheg vēzəheg venīzəheg vetīzəheg vetīzəheg vēzəheg),
+                :imperative  => %w(zəhēg zəhegī zəhegū),
+                :infinitive  => "mazəhūg",
+                :participle  => "muzəhig" }
+    = render 'full_conjugation_table', :title => "Scale II Conjugation", :verb => { :ala => "zəhēg", :eng => "drive mad" }, :alashian => alashian, :latin => latin
+
+  = section "C1 = Y/W" do
+    %p Root-initial *Y and *W are actually completely regular in Scale II. Example roots instead *ybīs “dry”, yielding #{t "ιαββής", "yəbbēs"} “dry” and #{t "ιαββώς", "yəbbās"} “be dried”, and *wsīn “sleep”, yielding #{t "в̄ασσήν", "vəssēn"} “put [a child] to bed, say 'good night'” and #{t "в̄ασσών", "vəssān"} “be put to bed, be told 'good night'”. Roots with initial *W will automatically alternate between /v/ word-initially and /w/ word-internally.
+
+  = section "C3 = Y/W" do
+    %p The consonants *Y and *W in #{template "C3"} position will monophthongize or drop entirely when word-final or checked by another consonant. At times they will disappear intervocalically as well. Two such roots are *zmāy “thirsty”, yielding #{t "ζαμμή", "zəmmē"} “make thirsty” and #{t "ζαμμώ", "zəmmā"} “be made thirsty”, and *bdāw “empty, desolate”, yielding #{t "βαδδή", "bəddē"} “empty” and #{t "βαδδώ", "bəddā"} “be emptied”.
+    %p In the <i>kəthēb</i> present tense, the word-final sequences *-ay and *-aw collapse into an unstressed *-ē and -ū respectively: #{t "άζαμμη", "'azəmmē"} “I make thirst” (not **'azəmmay), #{t "τίβαδδου", "tibəddū"} “you (m) empty” (not **tibəddaw). Suffixed forms are regular: #{t "νιζαμιού", "nizəmyū"} “we make thirst”, #{t "ιβαδυεί", "yibədwī"} “she empties”.
+    %p The <i>kəthēb</i> preterite forms lose the final *Y/W in all cases other than the third person singular feminine and third person plural: #{t "ζαμμήτα", "zəmmēta"} “you (m) made thirst” (not **zəmmēyta), #{t "βιδδηυώ", "biddēwā"} “she emptied”. In the first person singular, contraction takes place: #{t "ζαμμήτ", "zəmmēt"} “I made thirst” (not **zəmmēyet), #{t "βαδδήτ", "bəddēt"} “I emptied” (not **bəddēwet).
+    %p In the <i>kəthēb</i> imperfect, the sequences *-ey and *-eye- both collapse into *-ē-, with a stress shift if appropriate: #{t "ζεμμής̄", "zemmēš"} “you (f) were making thirst” (not **zemmeyeš), #{t "ζεμμή", "zemmē"} “he was making thirst” (not **zemmey). The third person singular feminine and third person plural are regular. When #{template "C3"} = *W, the result of *-ew and *-ewe- contraction may be either *-ū- or *-ē- (as in <i>katab</i>), with the latter being more common nowadays: #{t "βεδδούν", "beddūn"} / #{t "βεδδήν", "beddēn"} “we were emptying” (not **beddewen).
+    %p In the <i>kəthēb</i> perfective subjunctive, #{template "C3"} simply drops and the vowel immediately beforehand lengthens in compensation, with stress shifting to the last syllable: #{t "в̄αζαμμή", "vazəmmē"} “[that] I made thirst” (not **vazəmmey), #{t "в̄ετειβαδδή", "vetībəddē"} “[that] you (m) counted” (not **vetībəddew).
+    %p In the <i>kəthēb</i> imperative, #{template "C3"} drops in the masculine singular and is kept in other forms: #{t "βαδδή", "bəddē"} “empty! (m)” (not **bəddēw), #{t "βαδδευεί", "bəddewī"} “empty! (f)”.
+    %p The <i>kəthēb</i> infinitive is formed regularly, except that C<sub>3</sub> is absent. The active participle is similar, except that the short /i/ is lengthened to /iː/ and it declines as though it had the nisba suffix (see adjectives section) in all forms other than the masculine singular.
+    %table.invisible
+      %tr
+        %td
+          %table
+            %tr
+              %th{:colspan => 3} Scale II Deverbatives: <i>zəmmē</i> “make thirst”
+            %tr
+              %th
+              %th Infinitive
+              %th Active Part.
+            %tr
+              %th Masc Sg
+              %td{:rowspan => 2}= t("μαζαμμού", "mazəmmū", :linebreak => true)
+              %td= t("μυζαμμεί", "muzəmmī", :linebreak => true)
+            %tr
+              %th Fem Sg
+              %td= t("μυζαμμιιώ", "muzəmmiyyā", :linebreak => true)
+            %tr
+              %th Meaning
+              %th make thirst
+              %th making thirst
+        %td
+          %table
+            %tr
+              %th{:colspan => 3} Scale II Deverbatives: <i>bəddē</i> “empty”
+            %tr
+              %th
+              %th Infinitive
+              %th Active Part.
+            %tr
+              %th Masc Sg
+              %td{:rowspan => 2}= t("μαβαδδού", "mabəddū", :linebreak => true)
+              %td= t("μυβαδδεί", "mubəddī", :linebreak => true)
+            %tr
+              %th Fem Sg
+              %td= t("μυβαδδιιώ", "mubəddiyyā", :linebreak => true)
+            %tr
+              %th Meaning
+              %th empty
+              %th emptying
+    %p <i>Kəthāb</i> forms closely mirror <i>kəthēb</i>, with some variation in how monophthongization occurs.
+    %p In the <i>kəthāb</i> present tense, #{template "C3"} drops when word-final; otherwise the forms are regular: #{t "υζαμμώ", "'uzəmmā"} “I am made thirsty” (not **'uzəmmāy), #{t "ιυβαδδαυού", "yubəddawū"} “they are emptied”.
+    %p In the <i>kəthāb</i> preterite, #{template "C3"} is lost when word-final or checked: #{t "ζαμμώτα", "zəmmāta"} “you (m) were made thirsty” (not **zəmmāyta). In the first person singular, #{template "C3"} is also lost and contraction takes place: #{t "βαδδώτ", "bəddāt"} “I was emptied” (not **bəddāwet).
+    %p The sequences *-ay/*-aya- and *-aw/*-awa- in the <i>kəthāb</i> imperfect collapse into *-ā- and *-ā-/*-ū- respectively: #{t "ζυμμώ", "zummā"} “I was being made thirsty” (not **zummay), #{t "βυδδώτυν", "buddātun"} / #{t "βυδδούτυν", "buddūtun"} “you all (m) were being emptied” (not **buddawtun). For #{template "C3"} = *W roots, the *-ā- realization is more common nowadays.
+    %p In the <i>kəthāb</i> perfective subjunctive, #{template "C3"} drops and the preceding vowel is lengthened in compensation.
+    %p #{template "C3"} drops in the <i>kəthāb</i> infinitive: #{t "μαζαμμώ", "mazəmmā"} “be made thirsty” (not **mazəmmāy), #{t "μαβαδδώ", "mabəddā"} “be emptied” (not **mabəddāw). The participle undergoes monothongization depending on #{template "C3"}: #{t "μυζαμμή", "muzəmmē"} “being made thirsty” (not **muzəmmay), #{t "μυβαδδού", "mubəddū"} “being emptied” (not **mubəddaw).
+
+  = section "C1/C2/C3 = N" do
+    %p Roots with *N—including *nmīs “envy” (#{t "ναμμής", "nəmmēs"} “make envious” and #{t "ναμμώς", "nəmmās"} “be made envious”), *snād “arm” (#{t "σαννήδ", "sənnēd"} “lean” and #{t "σαννώδ", "sənnād"} “be leaned”), and *lbīn “white” (#{t "λαββήν", "ləbbēn"} “whiten” and #{t "λαββών", "ləbbān"} “be whitened”—tend to undergo assimilation in Alashian, but in Scale II at least they are quite regular. In fact, only #{template "C3"} = N roots are irregular.
+    %p Root-final *N is only irregular in the two past tenses, as the *N assimilates into the following consonant in many forms. The following tables show the <i>kəthēb</i> and <i>kəthāb</i> forms of *lbīn:
+    %table.invisible
+      %tr
+        - alashian = %w(λαββήνετ λαββήττα λαββήτζζε λαββήν λιββηνώ λαββηννώ λαββήττυν λαββήτζζιν λιββηνού λιββηνού)
+        - latin = %w(ləbbēnet ləbbētha ləbbēčhe ləbbēn libbēnā ləbbēnnā ləbbēthun ləbbēčhin libbēnū libbēnū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "ləbbēn", :eng => "whiten" }, :alashian => alashian, :latin => latin
+        - alashian = %w(λαββώνετ λαββώττα λαββώτζζε λαββών λαββωνώ λαβωννώ λαββώττυν λαββώτζζιν λαββωνού λαββωνού)
+        - latin = %w(ləbbānet ləbbātha ləbbāčhe ləbbān ləbbānā ləbbānnā ləbbāthun ləbbāčhin ləbbānū ləbbānū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "ləbbān", :eng => "be whitened" }, :alashian => alashian, :latin => latin
+    %table.invisible
+      %tr
+        - alashian = %w(λέββε λέββετ λέββετζ λέββεν λεββενώ λέββεν λέββαττυν λέββατζζιν λεββενού λεββενού)
+        - latin = %w(lebbe lebbet lebbeč lebben lebbenā lebben lebbəthun lebbəčhin lebbenū lebbenū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "ləbbēn", :eng => "whiten" }, :alashian => alashian, :latin => latin
+        - alashian = %w(λύββα λύββατ λύββατζ λύββαν λυββανώ λύββαν λύββαττυν λύββατζζιν λυββανού λυββανού)
+        - latin = %w(lubba lubbat lubbač lubban lubbanā lubban lubbəthun lubbəčhin lubbanū lubbanū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "ləbbān", :eng => "be whitened" }, :alashian => alashian, :latin => latin
+
+  = section "C1 = PH/TH/KH/TSH/ČH" do
+    %p Root-initial aspirate consonants only appear as surface aspirates when a prefix is present; otherwise, when word-initial, they appear as normal unaspirated consonants. The root *khbāl “agree” is one such example, generating the verbs #{t "καββήλ", "kəbbēl"} “convince” and #{t "καββώλ", "kəbbāl"} “be convinced”.
+    %p Aspiration appears in the present, perfective subjunctive, and the deverbatives. Any immediately preceding short vowel is reduced to /ə/. In particular, this results in the <i>kəthēb</i> and <i>kəthāb</i> present tenses looking very similar:
+    %table.invisible
+      %tr
+        - alashian = %w(άκκαββαλ τάκκαββαλ τακκαβλεί ιάκκαββαλ ιακκαβλεί νακκαβλού τακκαβλού τακκαβλού ιακκαβλού ιακκαβλού)
+        - latin = %w('əkhəbbal təkhəbbal təkhəblī yəkhəbbal yəkhəblī nəkhəblū təkhəblū təkhəblū yəkhəblū yəkhəblū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "kəbbēl", :eng => "convince" }, :alashian => alashian, :latin => latin
+        - alashian = %w(ακκαββώλ τακκαββώλ τακκαββαλεί ιακκαββώλ ιακκαββαλεί νακκαββαλού τακκαββαλού τακκαββαλού ιακκαββαλού ιακκαββαλού)
+        - latin = %w('əkhəbbāl təkhəbbāl təkhəbbalī yəkhəbbāl yəkhəbbalī nəkhəbbalū təkhəbbalū təkhəbbalū yəkhəbbalū yəkhəbbalū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "kəbbāl", :eng => "be convinced" }, :alashian => alashian, :latin => latin
+
+  = section "C2 = PH/TH/KH/TSH/ČH" do
+    %p Root-internal aspirates are actually completely regular, except that wherever a geminate appears in the standard paradigm, a single non-geminated aspirate appears instead. The root *rthīb “wet” serves as an example, deriving the verbs #{t "ραττήβ", "rəthēb"} “moisten” and #{t "ραττώβ", "rəthāb"} “be moistened”.
+
+  = section "C3 = PH/TH/KH/TSH/ČH" do
+    %p #{template "C3"} aspirates affect the forms of verbal suffixes and the quality of neighboring vowels. One example is the root *rmīčh “shine, glow”, producing the verbs #{t "ραμμήτζ", "rəmmēč"} “reflect” and #{t "ραμμώτζ", "rəmmāč"} “be reflected”.
+    %p The <i>kəthēb</i> present tense is regular, with no aspirated consonants appearing on the surface, though preceding short vowels still reduce to schwa. In <i>kəthāb</i>, however, aspirated consonants do appear whenever a suffix is present:
+    %table.invisible
+      %tr
+        - alashian = %w(άραμματζ τίραμματζ τιραμτζεί ίραμματζ ιραμτζεί νιραμτζού τιραμτζού τιραμτζού ιραμτζού ιραμτζού)
+        - latin = %w('arəmməč tirəmməč tirəmčī yirəmməč yirəmčī nirəmčū tirəmčū tirəmčū yirəmčū yirəmčū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "rəmmēč", :eng => "reflect" }, :alashian => alashian, :latin => latin
+        - alashian = %w(υραμμώτζ τυραμμώτζ τυραμματζζεί ιυραμμώτζ ιυραμματζζεί νυραμματζζού τυραμματζζού τυραμματζζού ιυραμματζού ιυραμματζζού)
+        - latin = %w('urəmmāč turəmmāč turəmməčhī yurəmmāč yurəmməčhī nurəmməčhū turəmməčhū turəmməčhū yurəmməčhū yurəmməčhū)
+        %td= render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :alashian => alashian, :latin => latin
+    %p The <i>kəthēb</i> and <i>kəthāb</i> preterite tenses both feature aspirated second person endings as well as an epenthetic vowel between the stem and ending in several forms:
+    %table.invisible
+      %tr
+        - alashian = %w(ραμμήτζζετ ραμμήτζζαττα ραμμήτζζατζζε ραμμήτζ ριμμητζζώ ραμμητζνώ ραμμήτζζαττυν ραμμήτζζατζζιν ριμμητζζού ριμμητζζού)
+        - latin = %w(rəmmēčhet rəmmēčhətha rəmmēčhəčhe rəmmēč rimmēčhā rəmmēčnā rəmmēčhəthun rəmmēčhəčhin rimmēčhū rimmēčhū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "rəmmēč", :eng => "reflect" }, :alashian => alashian, :latin => latin
+        - alashian = %w(ραμμώτζζετ ραμμώτζζαττα ραμμώτζζατζζε ραμμώτζ ραμμωτζζώ ραμμωτζνώ ραμμώτζζαττυν ραμμώτζζατζζιν ραμμωτζζού ραμμωτζζού)
+        - latin = %w(rəmmāčhet rəmmāčhətha rəmmāčhəčhe rəmmāč rəmmāčhā rəmmāčnā rəmmāčhəthun rəmmāčhəčhin rəmmāčhū rəmmāčhū)
+        %td= render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :alashian => alashian, :latin => latin
+    %p The imperfect appears more or less as expected in <i>kəthēb</i> and <i>kəthāb</i>, except in the second person plural forms, where #{template "C3"} metathesizes with the previous vowel and the endings are aspirated; this results in the loss of #{template "C2"} gemination as well:
+    %table.invisible
+      %tr
+        - alashian = %w(ρέμματζ ρέμματζζετ ρέμμετζζες̄ ρέμματζ ρεμματζζώ ρέμματζζεν ρέμτζαττυν ρέμτζατζζιν ρεμματζζού ρεμματζζού)
+        - latin = %w(remməč remməčhet remməčheš remməč remməčhā remməčhen remčəthun remčəčhin remməčhū remməčhū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "rəmmēč", :eng => "reflect" }, :alashian => alashian, :latin => latin
+        - alashian = %w(ρύμματζ ρύμματζζατ ρύμματζζας̄ ρύμματζ ρυμματζζώ ρύμματζζαν ρύμτζαττυν ρύμτζατζζιν ρυμματζζού ρυμματζζού)
+        - latin = %w(rumməč rumməčhat rumməčhaš rumməč rumməčhā rumməčhan rumčəthun rumčəčhin rumməčhū rumməčhū)
+        %td= render 'verb_table', :title => "Scale II Imperfect Tense", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :alashian => alashian, :latin => latin
+    %p The perfective subjunctive and imperative (<i>kəthēb</i> only) are regular, albeit with heavy vowel reduction. The third person perfective subjunctive is identical in the active and passive voices, depending on context to disambiguate.
+    %table.invisible
+      %tr
+        - alashian = %w(в̄άραμματζ в̄ετείραμματζ в̄ήραμματζ в̄ενείραμματζ в̄ετείραμματζ в̄ήραμματζ)
+        - latin = %w(varəmməč vetīrəmməč vērəmməč venīrəmməč vetīrəmməč vērəmməč)
+        %td= render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "rəmmēč", :eng => "reflect" }, :alashian => alashian, :latin => latin
+        - alashian = %w(в̄ύραμματζ в̄ατούραμματζ в̄ήραμματζ в̄ανούραμματζ в̄ατούραμματζ в̄ήραμματζ)
+        - latin = %w(vurəmməč vatūrəmməč vērəmməč vanūrəmməč vatūrəmməč vērəmməč)
+        %td= render 'subjunctive_table', :title => "Scale II Perfective Subjunctive", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :alashian => alashian, :latin => latin
+      %tr
+        - alashian = %w(ραμμήτζ ραμματζζεί ραμματζζού ραμματζζού)
+        - latin = %w(rəmmēč rəmməčhī rəmməčhū rəmməčhū)
+        %td{:colspan => 2}= render 'imperative_table', :title => "Scale II Imperative", :verb => { :ala => "rəmmēč", :eng => "reflect" }, :alashian => alashian, :latin => latin
+    %p The deverbatives are also regular, aside from the predictable vowel reduction.
+    %table.invisible
+      %tr
+        - alashian = [ { :name => "Infinitive", :ala => "μαραμμούτζ", :lat => "marəmmūč", :meaning => "reflect" },
+                       { :name => "Active Part.", :ala => "μύραμματζ", :lat => "murəmməč", :meaning => "reflecting" } ]
+        %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "rəmmēč", :eng => "reflect" }, :forms => alashian
+        - alashian = [ { :name => "Infinitive", :ala => "μαραμμώτζ", :lat => "marəmmāč", :meaning => "be reflected" },
+                       { :name => "Passive Part.", :ala => "μύραμματζ", :lat => "murəmməč", :meaning => "reflected" } ]
+        %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :forms => alashian
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The prefix vowel /e/ in <i>neřəwenū</i> is due to the initial *Ř, and is present to all #{template "C1"} = Ř roots.
+%p 2) Unusually for triconsonantal roots, *hlāk has a Scale II form but no Scale I form. The original Scale I sense, as evidenced by its cognates in other Semitic languages, was “walk”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
