@@ -1,0 +1,280 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Ασσωδ̄ιτεί: <i>στάκταβ</i> υε<i>νιστυκτώβ</i>".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction to staktab Verbs" do
+  %p <i>Staktab</i> (Active Scale VI), also known as the “reflexive of causative”, is one of the trickiest Alashian verb classes as far as semantics are concerned. Its most fundamental function is to serve as the reflexive counterpart to <i>'aktēb</i>, the causative verbal scale, such that a verb like #{t "στάκταβ", "staktab"} (from *ktāb “write”) literally means “make oneself write”. However, this basic meaning is often subject to large amounts of unpredictable metaphorical and semantic drift; in this case, the verb #{t "στάκταβ", "staktab"} is more commonly used to mean “not procrastinate, not put off” (whether or not actual writing is involved). In particular Active Scale VI often has an inchoative sense.
+  %p It is marked by the prefixed -st- in all forms, and is also known as the St- or Št-stem, the latter for historical reasons.
+
+= section "Triconsonantal Roots and staktab" do
+  = section "The Present Tense" do
+    %p The present tense is formed from the stem #{template "*-staC1C2aC3-"} with prefixes and suffixes. The prefix vowel is /i/ in all forms except the first person singular, where it is /a/. The verb demonstrated below is #{t "στάλв̄ας", "stalvas"} “deserve” (*lvīs “wear”, literally “make oneself wear [something]”).
+    - alashian = %w(άσταλв̄ας τίσταλв̄ας τισταλв̄ασεί ίσταλв̄ας ισταλв̄ασεί νισταλв̄ασού τισταλв̄ασού τισταλв̄ασού ισταλв̄ασού ισταλв̄ασού)
+    - latin = %w('astalvas tistalvas tistalvasī yistalvas yistalvasī nistalvasū tistalvasū tistalvasū yistalvasū yistalvasū)
+    = render 'verb_table', :title => "Scale VI Present Tense", :verb => { :ala => "stalvas", :eng => "deserve" }, :alashian => alashian, :latin => latin
+
+  = section "The Preterite Tense" do
+    %p The preterite tense is formed from the stem #{template "*staC1C2aC3-"} with regular preterite endings.
+    - alashian = %w(στάλв̄ασετ στάλв̄αστα στάλв̄ασσ̄ε στάλв̄ας σταλв̄ασώ σταλв̄ασνώ στάλв̄αστυν στάλв̄ασσ̄ιν σταλв̄ασού σταλв̄ασού)
+    - latin = %w(stalvaset stalvasta stalvasše stalvas stalvasā stalvasnā stalvastun stalvasšin stalvasū stalvasū)
+    = render 'verb_table', :title => "Scale VI Preterite Tense", :verb => { :ala => "stalvas", :eng => "deserve" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperfect Tense" do
+    %p The imperfect tense is formed by adding endings to the stem #{template "*staC1C2ieC3-"}.
+    - alashian = %w(σταλв̄ιής σταλв̄ιήσετ σταλв̄ιήσες̄ σταλв̄ιής σταλв̄ιησώ σταλв̄ιήσεν σταλв̄ιήστυν σταλв̄ιήσσ̄ιν σταλв̄ιησού σταλв̄ιησού)
+    - latin = %w(stalvies stalvieset stalvieseš stalvies stalviesā stalviesen stalviestun stalviesšin stalviesū stalviesū)
+    = render 'verb_table', :title => "Scale VI Imperfect Tense", :verb => { :ala => "stalvas", :eng => "deserve" }, :alashian => alashian, :latin => latin
+
+  = section "The Perfective Subjunctive Tense" do
+    %p The perfective subjunctive is formed by adding a special set of prefixes to the stem #{template "*-staC1C2aC3"}, namely *vā- in the first person singular, *veni- in the first person plural, *veti- in the second person, and *vē- in the third person.
+    - alashian = %w(в̄ώσταλв̄ας в̄ετίσταλв̄ας в̄ήσταλв̄ας в̄ενίσταλв̄ας в̄ετίσταλв̄σς в̄ήσταλв̄ας)
+    - latin = %w(vāstalvas vetistalvas vēstalvas venistalvas vetistalvas vēstalvas)
+    = render 'subjunctive_table', :title => "Scale VI Perfective Subjunctive", :verb => { :ala => "stalvas", :eng => "deserve" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperative" do
+    %p The imperative is formed by adding endings to the stem #{template" *'estaC1C2aC3-"}.
+    - alashian = %w(έσταλв̄ας εσταλв̄ασεί εσταλв̄ασού εσταλв̄ασού)
+    - latin = %w('estalvas 'estalvasī 'estalvasū 'estalvasū)
+    = render 'imperative_table', :title => "Scale VI Imperative", :verb => { :ala => "stalvas", :eng => "deserve" }, :alashian => alashian, :latin => latin
+
+  = section "Deverbatives" do
+    %p The infinitive is formed using the pattern #{template "*mastaC1C2aC3"} and the active participle using the pattern #{template "*mustaC1C2iC3"}.
+    - alashian = [ { :name => "Infinitive", :ala => "μάσταλв̄ας", :lat => "mastalvas", :meaning => "deserve" },
+                   { :name => "Active Part.", :ala => "μύσταλв̄ις", :lat => "mustalvis", :meaning => "deserving" } ]
+    = render 'deverbative_table', :title => "Scale VI Deverbatives", :verb => { :ala => "stalvas", :eng => "deserve" }, :forms => alashian
+
+= section "Biconsonantal Roots and staktab" do
+  %p Biconsonantal roots in <i>staktab</i> are by and large regular, adding the usual sets of <i>staktab</i> affixes to the intact biconsonantal stem. The inherent root vowel is preserved in all forms except the imperfect (where it is replaced by *ie) and the participle (where it is replaced by *ū). Shown below is the complete conjugation of #{t "στατζείν", "stačīn"} “ascertain, make sure, confirm for oneself” (*čīn “be certain”).
+  - alashian = { :present     => %w(αστατζείν τιστατζείν τιστατζεινεί ιστατζείν ιστατζεινεί νιστατζεινού τιστατζεινού τιστατζεινού ιστατζεινού),
+                 :preterite   => %w(στατζείνετ στατζείντα στατζείνσ̄ε στατζείν στατζεινώ στατζειννώ στατζείντυν στατζείνσ̄ιν στατζεινού),
+                 :imperfect   => %w(στατζιήν στατζιήνετ στατζιήνες̄ στατζιήν στατζιηνώ στατζιήνεν στατζιήντυν στατζιήνσ̄ιν στατζιηνού),
+                 :subjunctive => %w(в̄ωστατζείν в̄ετιστατζείν в̄ετιστατζείν в̄ηστατζείν в̄ηστατζείν в̄ενιστατζείν в̄ετιστατζείν в̄ετιστατζείν в̄ηστατζείν),
+                 :imperative  => %w(εστατζείν εστατζεινεί εστατζεινού),
+                 :infinitive  => "μαστατζείν",
+                 :participle  => "μυστατζούν" }
+  - latin = { :present     => %w('astačīn tistačīn tistačīnī yistačīn yistačīnī nistačīnū tistačīnū tistačīnū yistačīnū),
+              :preterite   => %w(stačīnet stačīnta stačīnše stačīn stačīnā stačīnnā stačīntun stačīnšin stačīnū),
+              :imperfect   => %w(stačien stačienet stačieneš stačien stačienā stačienen stačientun stačienšin stačienū),
+              :subjunctive => %w(vāstačīn vetistačīn vetistačīn vēstačīn vēstačīn venistačīn vetistačīn vetistačīn vēstačīn),
+              :imperative  => %w('estačīn 'estačīnī 'estačīnū),
+              :infinitive  => "mastačīn",
+              :participle  => "mustačūn" }
+  = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "stačīn", :eng => "ascertain" }, :alashian => alashian, :latin => latin
+
+= section "Quadriconsonantal Roots and staktab" do
+  %p Quadriconsonantal roots may not appear in Scale VI at all. Other periphrastic expressions must be used instead.
+
+= section "Geminate Roots and staktab" do
+  %p Geminate roots behave biconsonantally in all forms, though the gemination only surfaces intervocalically. Shown below is the complete conjugation of #{t "στάσαβ", "stasab"} “come into being, appear, turn up, show up” (*sabb “turn”).
+  - alashian = { :present     => %w(άστασαβ τίστασαβ τιστασαββεί ίστασαβ ιστασαββεί νιστασαββού τιστασαββού τιστασαββού ιστασαββού),
+                 :preterite   => %w(στάσαββετ στάσαв̄τα στάσαв̄σ̄ε στάσαβ στασαββώ στασαβνώ στάσαв̄τυν στάσαв̄σ̄ιν στασαββού),
+                 :imperfect   => %w(στασιήв̄ στασιήв̄в̄ετ στασιήв̄в̄ες̄ στασιήβ στασιηβώ στασιήв̄в̄εν στασιήв̄τυν στασιήв̄σ̄ιν στασιηββού),
+                 :subjunctive => %w(в̄ώστασαβ в̄ετίστασαβ в̄ετίστασαβ в̄ήστασαβ в̄ήστασαβ в̄ενίστασαβ в̄ετίστασαβ в̄ετίστασαβ в̄ήστασαβ),
+                 :imperative  => %w(έστασαβ εστασαββεί εστασαββού),
+                 :infinitive  => "μάστασαβ",
+                 :participle  => "μυστασούβ" }
+  - latin = { :present     => %w('astasab tistasab tistasabbī yistasab yistasabbī nistasabbū tistasabbū tistasabbū yistasabbū),
+              :preterite   => %w(stasabbet stasavta stasavše stasab stasabbā stasabnā stasavtun stasavšin stasabbū),
+              :imperfect   => %w(stasiev stasievvet stasievveš stasieb stasiebbā stasievven stasievtun stasievšin stasiebbū),
+              :subjunctive => %w(vāstasab vetistasab vetistasab vēstasab vēstasab venistasab vetistasab vetistasab vēstasab),
+              :imperative  => %w('estasab 'estasabbī 'estasabbū),
+              :infinitive  => "mastasab",
+              :participle  => "mustasūb" }
+  = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "stasab", :eng => "come into being" }, :alashian => alashian, :latin => latin
+
+= section "Introduction to nistuktāb Verbs" do
+  %p <i>Nistuktāb</i> (Passive Scale VI) is the passive counterpart to <i>staktab</i>, though not its passive equivalent; <i>staktab</i>, being reflexive, cannot truly have a passive. Nevertheless, it is often known as the “passive reflexive of causative” given its formation. Much like <i>staktab</i>, the meaning of any given <i>nistuktāb</i> verb is generally hard to predict, but this class often includes the following:
+  %ul
+    %li Passive Causatives (i.e., of <i>'aktēb</i>), but with the verbal arguments switched around relative to <i>'ennuktāb</i>. For instance, the active Scale III verb #{t "αηακήλ", "'ahakēl"} means “feed” (or “cause to eat”), taking an animate direct object (what is eating) and an oblique object (what is being eaten). The passive Scale III verb #{t "εννυηακώλ", "'ennuhakāl"} means “be fed”, and takes an animate subject, as in “he was fed lunch”. The passive Scale VI verb #{t "νιστυηακώλ", "nistuhakāl"}, on the other hand, means “be fed” with an inanimate subject, as in “lunch was fed to him”.
+    %li Agentless Resultatives: #{t "νιστυκτώβ", "nistuktāb"} “come to be written down” (*ktāb “write”), #{t "νίστυσαβ", "nistusab"} “come to pass” (*sabb “turn”), #{t "νιστυρ̄σώβ", "nistuřsāb"} “come to be thought” (*řsāb “think”), #{t "νιστυρ̄ούν", "nistuřūn"} “get increasingly hotter over time” (*řūn).
+    %li Statives derived from non-stative roots, that is, when a root that describe an actual action (e.g., *bār “cross over”, as in Scale I #{t "ηάβαρ", "habar"} “cross over [something]”) is used to describe a state where no actual action is being performed (e.g., #{t "νιστυβώρ", "nistubār"} “cross, intersect”, as in “the roads cross”).
+    %li Many verbs of interpersonal interaction with connotations of reluctance or unwillingness to act: #{t "νιστυσκώβ", "nistuskāb"} “surrender” (*skīb “lie down”), #{t "νιστουτζώ", "nistūčā"} “quit, resign, abdicate” (*wčā' “leave”), #{t "νιστυσ̄φών", "nistušfān"} “admit” (*šfān “cover”).
+  %p <i>Nistuktāb</i> verbs feature three prefixed elements (*n-, *s-, and *t-) plus the u-ā internal passive vowel sequence. In comparative Semitic literature they are also known as NŠt-Stems.
+
+= section "Triconsonantal Roots and nistuktāb" do
+  = section "The Present Tense" do
+    %p The present tense is formed by adding prefixes and suffixes to the stem #{template "*-stuC1C2āC3"} (suffixless) or #{template "*-stuC1C2aC3-"} (suffixed). The prefix vowel is always *ā.
+    - alashian = %w(ωστυκτώβ τωστυκτώβ τωστυκταβεί ιωστυκτώβ ιωστυκταβεί νωστυκταβού τωστυκταβού τωστυκταβού ιωστυκταβού ιωστυκταβού)
+    - latin = %w('āstuktāb tāstuktāb tāstuktabī yāstuktāb yāstuktabī nāstuktabū tāstuktabū tāstuktabū yāstuktabū yāstuktabū)
+    = render 'verb_table', :title => "Scale V Present Tense", :verb => { :ala => "nistuktāb", :eng => "come to be written" }, :alashian => alashian, :latin => latin
+
+  = section "The Preterite Tense" do
+    %p The preterite tense is formed by adding suffixes to the stem #{template "*nistuC1C2āC3-"}.
+    - alashian = %w(νιστυκτώβετ νιστυκτώв̄τα νιστυκτώв̄σ̄ε νιστυκτώβ νιστυκτωβώ νιστυκτωβνώ νιστυκτώв̄τυν νιστυκτώв̄σ̄ιν νιστυκτωβού νιστυκτωβού)
+    - latin = %w(nistuktābet nistuktāvta nistuktāvše nistuktāb nistuktābā nistuktābnā nistuktāvtun nistuktāvšin nistuktābū nistuktābū)
+    = render 'verb_table', :title => "Scale VI Preterite Tense", :verb => { :ala => "nistuktāb", :eng => "come to be written" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperfect Tense" do
+    %p The imperfect tense is formed by adding suffixes to the stem #{template "*nistuC1C2uoC3-"}.
+    - alashian = %w(νιστυκτυώв̄ νιστυκτυώв̄ατ νιστυκτυώв̄ας̄ νιστυκτυώβ νιστυκτυωβώ νιστυκτυώв̄αν νιστυκτυώв̄τυν νιστυκτυώв̄σ̄ιν νιστυκτυωβού νιστυκτυωβού)
+    - latin = %w(nistuktuov nistuktuovat nistuktuovaš nistuktuob nistuktuobā nistuktuovan nistuktuovtun nistuktuovšin nistuktuobū nistuktuobū)
+    = render 'verb_table', :title => "Scale VI Imperfect Tense", :verb => { :ala => "nistuktāb", :eng => "come to be written" }, :alashian => alashian, :latin => latin
+
+  = section "The Perfective Subjunctive Tense" do
+    %p The perfective subjunctive is formed by adding a special set of prefixes to the stem #{template "*-stuC1C2aC3"}, namely *vā- in the first person singular, *vanā- in the first person plural, *vatā- in the second person, and *vyā- in the third person.
+    - alashian = %w(в̄ώστυκταβ в̄ατώστυκταβ в̄ιώστυκταβ в̄ανώστυκταβ в̄ατώστυκταβ в̄ιώστυκταβ)
+    - latin = %w(vāstuktab vatāstuktab vyāstuktab vanāstuktab vatāstuktab vyāstuktab)
+    = render 'subjunctive_table', :title => "Scale VI Perfective Subjunctive", :verb => { :ala => "nistuktāb", :eng => "come to be written" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperative" do
+    %p No imperative exists for <i>nistuktāb</i>.
+
+  = section "Deverbatives" do
+    %p The infinitive is formed from the pattern #{template "*māstuC1C2āC3"}, and the participle with #{template "*mūstaC1C2aC3"}.
+    - alashian = [ { :name => "Infinitive", :ala => "μωστυκτώβ", :lat => "māstuktāb", :meaning => "come to be written" },
+                   { :name => "Passive Part.", :ala => "μούστακταβ", :lat => "mūstaktab", :meaning => "coming to be written" } ]
+    = render 'deverbative_table', :title => "Scale VI Deverbatives", :verb => { :ala => "nistuktāb", :eng => "come to be written" }, :forms => alashian
+
+= section "Biconsonantal Roots and nistuktāb" do
+  %p Biconsonantal verbs lose their internal vowel, replacing it with /ɑː/ in the present, preterite, perfective subjunctive, and infinitive, /uo/ in the imperfect, and /uː/ in the passive participle. Demonstrated with #{t "νιστυβώρ", "nistubār"} “cross, intersect (intr)” (*bār “cross over”):
+  - alashian = { :present     => %w(ωστυβώρ τωστυβώρ τωστυβωρεί ιωστυβώρ ιωστυβωρεί νωστυβωρού τωστυβωρού τωστυβωρού ιωστυβωρού),
+                 :preterite   => %w(νιστυβώρετ νιστυβώρτα νιστυβώρσ̄ε νιστυβώρ νιστυβωρώ νιστυβωρνώ νιστυβώρτυν νιστυβώρσ̄ιν νιστυβωρού),
+                 :imperfect   => %w(νιστυβυώρ νιστυβυώρατ νιστυβυώρας̄ νιστυβυώρ νιστυβυωρώ νιστυβυώραν νιστυβυώρτυν νιστυβυώρσ̄ιν νιστυβυωρού),
+                 :subjunctive => %w(в̄ωστυβώρ в̄ατωστυβώρ в̄ατωστυβώρ в̄ιωστυβώρ в̄ιωστυβώρ в̄ανωστυβώρ в̄ατωστυβώρ в̄ατωστυβώρ в̄ιωστυβώρ),
+                 :imperative  => nil,
+                 :infinitive  => "μωστυβώρ",
+                 :participle  => "μουσταβούρ" }
+  - latin = { :present     => %w('āstubār tāstubār tāstubārī yāstubār yāstubārī nāstubārū tāstubārū tāstubārū yāstubārū),
+              :preterite   => %w(nistubāret nistubārta nistubārše nistubār nistubārā nistubārnā nistubārtun nistubāršin nistubārū),
+              :imperfect   => %w(nistubuor nistubuorat nistubuoraš nistubuor nistubuorā nistubuoran nistubuortun nistubuoršin nistubuorū),
+              :subjunctive => %w(vāstubār vatāstubār vatāstubār vyāstubār vyāstubār vanāstubār vatāstubār vatāstubār vyāstubār),
+              :imperative  => nil,
+              :infinitive  => "māstubār",
+              :participle  => "mūstabūr" }
+  = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "nistubār", :eng => "cross, intersect" }, :alashian => alashian, :latin => latin
+
+= section "Quadriconsonantal Roots and nistuktāb" do
+  %p Quadriconsonantal roots may not appear in Scale VI at all. Other periphrastic expressions must be used instead.
+
+= section "Geminate Roots and nistuktāb" do
+  %p Geminate roots behave biconsonantally in all forms, though the gemination only surfaces intervocalically. Shown below is the complete conjugation of #{t "νίστυσαβ", "nistusab"} “come to pass” (*sabb “turn”).
+  - alashian = { :present     => %w(ώστυσαβ τώστυσαβ τωστυσαββεί ιώστυσαβ ιωστυσαββεί νωστυσαββού τωστυσαββού τωστυσαββού ιωστυσαββού),
+                 :preterite   => %w(νιστύσαββετ νιστύσαв̄τα νιστύσαв̄σ̄ε νίστυσαβ νιστυσαββώ νιστυσαβνώ νιστύσαв̄τυν νιστύσαв̄σ̄ιν νιστυσαββού),
+                 :imperfect   => %w(νιστυσυώв̄ νιστυσυώв̄в̄ατ νιστυσυώв̄в̄ας̄ νιστυσυώβ νιστυσυωββώ νιστυσυώв̄в̄αν νιστυσυώв̄τυν νιστυσυώв̄σ̄ιν νιστυσυωββού),
+                 :subjunctive => %w(в̄ώστυσαβ в̄ατώστυσαβ в̄ατώστυσαβ в̄ιώστυσαβ в̄ιώστυσαβ в̄ανώστυσαβ в̄ατώστυσαβ в̄ατώστυσαβ в̄ιώστυσαβ),
+                 :imperative  => nil,
+                 :infinitive  => "μώστυσαβ",
+                 :participle  => "μούστασαβ" }
+  - latin = { :present     => %w('āstusab tāstusab tāstusabbī yāstusab yāstusabbī nāstusabbū tāstusabbū tāstusabbū yāstusabbū),
+              :preterite   => %w(nistusabbet nistusavta nistusavše nistusab nistusabbā nistusabnā nistusavtun nistusavšin nistusabbū),
+              :imperfect   => %w(nistusuov nistusuovvat nistusuovvaš nistusuob nistusuobbā nistusuovvan nistusuovtun nistusuovšin nistusuobbū),
+              :subjunctive => %w(vāstusab vatāstusab vatāstusab vyāstusab vyāstusab vanāstusab vatāstusab vatāstusab vyāstusab),
+              :imperative  => nil,
+              :infinitive  => "māstusab",
+              :participle  => "mūstasab" }
+  = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "nistusab", :eng => "come to pass" }, :alashian => alashian, :latin => latin
+
+= section "Weak Roots in Scale VI" do
+  = section "C1 = Ř" do
+    %p Root-initial *Ř, as in #{t "νιστυρ̄σώβ", "nistuřsāb"} “come to be thought, be widely thought” (*řsāb “think”), is regular.
+
+  = section "C2 = Ř" do
+    %p Root-medial *Ř, as in #{t "νίστυβρ̄ώθ", "nistubřāṯ"} “be diversified, have varying results, come to be mixed” (*břāṯ “mix”), is regular.
+
+  = section "C3 = Ř" do
+    %p Root-final *Ř affects the feminine suffix *-ī in the present tense and imperative, which becomes *-ēyi. The passive verb #{t "νιστυφτώρ̄", "nistuftāř"} “open up, become attainable (opportunities, goals, etc)” (*ftāř “open”), for instance, has the form #{t "ιωστυφταρ̄ήι", "yāstuftařēyi"} “it (f) is opening up/becoming attainable” instead of regular **yāstuftařī. In addition, the last vowel of the active participle is lowered to /e/.
+
+  = section "C1 = '/H" do
+    %p Root-initial *' and *H behave identically, surfacing as /h/ in all forms for both <i>staktab</i> and <i>nistuktāb</i>, followed by an epenthetic /a/ to prevent an illegal consonant cluster. The root *'kāl “eat”, for instance, gives the verbs #{t "στάηακαλ", "stahakal"} “feed oneself, nourish oneself” (not **sta'kal) and #{t "νιστυηακώλ", "nistuhakāl"} “be fed [to]” (not **nistu'kāl).
+
+  = section "C2 = '/H" do
+    %p Root-internal *' and *H always assimilate into #{template "C1"}, resulting in gemination or aspiration. If aspiration appears, any preceding short vowel will in turn reduce to schwa, as in the Scale VI derivatives of *k'āb “hurt, be painful”, #{t "στάκκαβ", "stəkhab"} “hurt oneself” (not **stak'ab) and #{t "νιστακκώβ", "nistəkhāb"} “start to hurt, become increasingly painful” (not **nistuk'āb).
+
+  = section "C3 = '" do
+    %p Root-final *' has the same erratic behavior as in other scales. In most forms it drops when word-final and is preserved elsewhere, except in the two past tenses, where a special set of endings are used. Examples include the active verb #{t "στάλδα", "stalda"} “pull oneself up” (*ldā' “rise, go up”) and the passive verb #{t "νιστυβρώ", "nistubrā"} “come to be clear, become increasingly clear” (*brī' “clear”), the first of which is demonstrated below.
+    - alashian = { :present     => %w(άσταλδα τίσταλδα τισταλδαεί ίσταλδα ισταλδαεί νισταλδαού τισταλδαού τισταλδαού ισταλδαού),
+                   :preterite   => %w(στάλδωτ στάλδαττα στάλδατζζε στάλδα σταλδαώ σταλδαννώ στάλδαττυν στάλδατζζιν σταλδαού),
+                   :imperfect   => %w(σταλδιή σταλδιήτ σταλδιής̄ σταλδιή σταλδιηώ σταλδιήν σταλδιήττυν σταλδιήτζζιν σταλδιηού),
+                   :subjunctive => %w(в̄ώσταλδα в̄ετίσταλδα в̄ετίσταλδα в̄ήσταλδα в̄ήσταλδα в̄ενίσταλδα в̄ετίσταλδα в̄ετίσταλδα в̄ήσταλδα),
+                   :imperative  => %w(έσταλδα εσταλδαεί εσταλδαού),
+                   :infinitive  => "μάσταλδα",
+                   :participle  => "μύσταλδι" }
+    - latin = { :present     => %w('astalda tistalda tistalda'ī yistalda yistalda'ī nistalda'ū tistalda'ū tistalda'ū yistalda'ū),
+                :preterite   => %w(staldāt staldətha staldəčhe stalda stalda'ā staldnannā staldəthun staldəčhin stalda'ū),
+                :imperfect   => %w(staldie staldiet staldieš staldie staldie'ā staldien staldiethun staldiečhin staldie'ū),
+                :subjunctive => %w(vāstalda vetistalda vetistalda vēstalda vēstalda vetistalda vetistalda vetistalda vēstalda),
+                :imperative  => %w('estalda 'estalda'ī 'estalda'ū),
+                :infinitive  => "mastalda",
+                :participle  => "mustaldi" }
+    = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "stalda", :eng => "pull oneself up" }, :alashian => alashian, :latin => latin
+
+  = section "C3 = H" do
+    %p Roots with final *H lose this radical and conjugate as though they were biconsonantal, with inherent vowel *ā. The root *zgāh “mad, crazy”, for instance, behaves as though it were *zāg, giving the verb #{t "σταζώγ", "stazāg"} “drive oneself mad”. These then follow a regular biconsonantal paradigm.
+
+  = section "C1 = Y/W" do
+    %p Root-initial *Y and *W undergo monophthongization in all forms, according to the patterns *ay → *ē, *aw → *ū, uy → *ū, *uw → *ū. This new long vowel does not affect stress. Shown below is the present and preterite conjugation of #{t "στούκκαδ", "stūkhad"} “burn oneself” (*wkhād “burn”)<sup>1</sup>.
+    %table.invisible
+      %tr
+        - alashian = %w(άστουκκαδ τίστουκκαδ τιστουκκαδεί ίστουκκαδ ιστουκκαδεί νιστουκκαδού τιστουκκαδού τιστουκκαδού ίστουκκαδού ιστουκκαδού)
+        - latin = %w('astūkhad tistūkhad tistūkhadī yistūkhad yistūkhadī nistūkhadū tistūkhadū tistūkhadū yistūkhadū yistūkhadū)
+        %td= render 'verb_table', :title => "Scale VI Present Tense", :verb => { :ala => "stūkhad", :eng => "burn oneself" }, :alashian => alashian, :latin => latin
+        - alashian = %w(στούκκαδετ στούκκαδ̄τα στούκκαδ̄σ̄ε στούκκαδ στουκκαδώ στουκκαδνώ στούκκαδ̄τυν στούκκαδ̄σ̄ιν στουκκαδού στουκκαδού)
+        - latin = %w(stūkhadet stūkhaḏta stūkhaḏše stūkhad stūkhadā stūkhadnā stūkhaḏtun stūkhaḏšin stūkhadū stūkhadū)
+        %td= render 'verb_table', :title => "Scale VI Preterite Tense", :verb => { :ala => "stūkhad", :eng => "burn oneself" }, :alashian => alashian, :latin => latin
+
+  = section "C3 = Y/W" do
+    %p The behavior of root-final *Y and *W in Scale VI varies depending on their environment. Intervocalically, they are completely regular. In coda position, they monophthongize if after a short vowel (*ay → *ē, *aw → *ū, *iy → *ī, *iw → *ī) or simply drop if after a long vowel or diphthong. They also drop in most forms of the imperfect. Monophthongization does not impact stress. Two examples are the active verbs #{t "στάμνου", "stamnū"} “account, take records” (*mnāw “count”) and #{t "στάρτζη", "starčē"} “covet” (*rčhīy “like, enjoy, be pleased by”, originally “want”), the latter shown in full below.
+    - alashian = { :present     => %w(άσταρτζη τίσταρτζη τισταρτζαιεί ίσταρτζη ισταρτζαιεί νισταρτζαιού τισταρτζαιού τισταρτζαιού ισταρτζαιού),
+                   :preterite   => %w(στάρτζαιετ στάρτζητα στάρτζησ̄ε στάρτζη σταλδαώ σταρτζηνώ στάρτζητυν στάρτζησ̄ιν σταρτζαιού),
+                   :imperfect   => %w(σταρτζιή σταρτζιήτ σταρτζιής̄ σταρτζιή σταρτζιηιώ σταρτζιήν σταρτζιήτυν σταρτζιήσ̄ιν σταρτζιηιού),
+                   :subjunctive => %w(в̄ώσταρτζη в̄ετίσταρτζη в̄ετίσταρτζη в̄ήσταρτζη в̄ήσταρτζη в̄ενίσταρτζη в̄ετίσταρτζη в̄ετίσταρτζη в̄ήσταρτζη),
+                   :imperative  => %w(έσταρτζη εσταρτζαιεί εσταρτζαιού),
+                   :infinitive  => "μάσταρτζη",
+                   :participle  => "μύσταρτζει" }
+    - latin = { :present     => %w('astarčē tistarčē tistarčayī yistarčē yistarčayī nistarčayū tistarčayū tistarčayū yistarčayū),
+                :preterite   => %w(starčayet starčēta starčēše starčē starčayā starčēnā starčētun starčēšin starčayū),
+                :imperfect   => %w(starčie starčiet starčieš starčie starčieyā starčien starčietun starčiešin starčieyū),
+                :subjunctive => %w(vāstarčē vetistarčē vetistarčē vēstarčē vēstarčē vetistarčē vetistarčē vetistarčē vēstarčē),
+                :imperative  => %w('estarčē 'estarčayī 'estarčayū),
+                :infinitive  => "mastarčē",
+                :participle  => "mustarčī" }
+    = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "starčē", :eng => "covet" }, :alashian => alashian, :latin => latin
+
+  = section "C1/C2/C3 = N" do
+    %p Root-initial *N, as in #{t "στάφφας", "staffas"} “breathe heavily, hyperventilate” (*nfās “breathe”), always undergoes assimilation into the following #{template "C2"}, resulting in gemination or aspiration. If aspiration appears, any immediately preceding short vowel will reduce to schwa.
+    %p Root-internal *N, as in #{t "νιστυγνώβ", "nistugnāb"} “be impressive, amazing (coll.)” (*gnāb “steal”), is regular.
+    %p Root-final *N is irregular only in the two past tenses, where assimilation takes place in a number of forms. With the root *šfān “cover” we get the verb #{t "νιστυσ̄φών", "nistušfān"} “admit”:
+    %table.invisible
+      %tr
+        - alashian = %w(νιστυσ̄φώνετ νιστυσ̄φώττα νιστυσ̄φώτζζε νιστυσ̄φών νιστυσ̄φωνώ νιστυσ̄φωννώ νιστυσ̄φώττυν νιστυσ̄αώτζζιν νιστυσ̄φωνού νιστυσ̄φωνού)
+        - latin = %w(nistušfānet nistušfātha nistušfāčhe nistušfān nistušfānā nistušfānnā nistušfāthun nistušfāčhin nistušfānū nistušfānū)
+        %td= render 'verb_table', :title => "Scale VI Preterite Tense", :verb => { :ala => "nistušfān", :eng => "admit" }, :alashian => alashian, :latin => latin
+        - alashian = %w(νιστυσ̄φυώ νιστυσ̄φυώτ νιστυσ̄φυώς̄ νιστυσ̄φυών νιστυσ̄φυωνώ νιστυσ̄φυών νιστυσ̄φυώττυν νιστυσ̄φυώτζζιν νιστυσ̄φυωνού νιστυσ̄φυωνού)
+        - latin = %w(nistušfuo nistušfuot nistušfuoš nistušfuon nistušfuonā nistušfuon nistušfuothun nistušfuočhin nistušfuonū nistušfuonū)
+        %td= render 'verb_table', :title => "Scale VI Imperfect Tense", :verb => { :ala => "nistušfān", :eng => "admit" }, :alashian => alashian, :latin => latin
+
+  = section "C1 = PH/TH/KH/TSH/ČH" do
+    %p Roots with initial aspirates are largely unproblematic. Since #{template "C1"} is always in a cluster, it will always surface in an unaspirated state. The only difference between this and the regular paradigms is that any short vowel immediately preceding #{template "C1"} will reduce to /ə/. One such root is *khbāl “agree”, giving the verb #{t "στάκβαλ", "stəkbal"} “convince oneself”.
+
+  = section "C2 = PH/TH/KH/TSH/ČH" do
+    %p Root-internal aspirates will always surface in their unaspirated form and do not have any additional effects. These roots are for all intents and purposes regular.
+
+  = section "C3 = PH/TH/KH/TSH/ČH" do
+    %p #{template "C3"} aspirates have the same sorts of effects as in other scales. They cause preceding short vowels to reduce to schwa and trigger a special set of endings in the past tenses, which include an epenthetic vowel in some forms. Aspiration only surfaces when the consonant is intervocal. Shown below is the full conjugation of the verb #{t "νιστυσλώτ", "nistuslāt"} “be defeated, vanquished (poet.)” (*slāth “prevail over”):
+    - alashian = { :present     => %w(ωστυσλώτ τωστυσλώτ τωστυσλαττεί ιωστυσλώτ ιωστυσλαττεί νωστυσλαττού τωστυσλαττού τωστυσλαττού ιωστυσλαττού),
+                   :preterite   => %w(νιστυσλώττετ νιστυσλώτταττα νιστυσλώττατζζε νιστυσλώτ νιστυσλωττώ νιστυσλωτνώ νιστυσλώτταττυν νιστυσλώττατζζιν νιστυσλωττού),
+                   :imperfect   => %w(νιστυσλυώτ νιστυσλυώττατ νιστυσλυώττας̄ νιστυσλυώτ νιστυσλυωττώ νιστυσλυώτταν νιστυσλυώτταττυν νιστυσλυώττατζζιν νιστυσλυωττού),
+                   :subjunctive => %w(в̄ώστυσλατ в̄ατώστυσλατ в̄ατώστυσλατ в̄ιώστυσλατ в̄ιώστυσλατ в̄ανώστυσλατ в̄ατώστυσλατ в̄ατώστυσλατ в̄ιώστυσλατ),
+                   :imperative  => nil,
+                   :infinitive  => "μωστυσλώτ",
+                   :participle  => "μούστασλατ" }
+    - latin = { :present     => %w('āstuslāt tāstuslāt tāstusləthī yāstuslāt yāstusləthī nāstusləthū tāstusləthū tāstusləthū yāstusləthū),
+                :preterite   => %w(nistuslāthet nistuslāthətha nistuslāthəčhe nistuslāt nistuslāthā nistuslātnā nistuslāthəthun nistuslāthəčhin nistuslāthū),
+                :imperfect   => %w(nistusluot nistusluothat nistusluothaš nistusluot nistusluothā nistusluothan nistusluothəthun nistusluothəčhin nistusluothū),
+                :subjunctive => %w(vāstuslət vatāstuslət vatāstuslət vyāstuslət vyāstuslət vanāstuslət vatāstuslət vatāstuslət vyāstuslət),
+                :imperative  => nil,
+                :infinitive  => "māstuslāt",
+                :participle  => "mūstaslət" }
+    = render 'full_conjugation_table', :title => "Scale VI Conjugation", :verb => { :ala => "nistuslāt", :eng => "be vanquished" }, :alashian => alashian, :latin => latin
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Despite *wkhād being both a #{template "C1"} glide root and a #{template "C2"} aspirate root, only the former affects its conjugation. Since the monophthongization generated by the initial glide always results in a long vowel preceding #{template "C2"}, the aspirate is deprived of any opportunities to trigger vowel reduction.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
