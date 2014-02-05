@@ -1,0 +1,221 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Αχχωφισεί: <i>νίτκαταβ</i>".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction to nitkatab Verbs" do
+  %p <i>Nitkatab</i> (Scale V) is somewhat of a mixed grab-bag scale, combing a number of different intransitive meanings. It is sometimes called the reflexive stem for historical reasons, though true reflexives only account for a portion of the verbs in this scale. The main functions of <i>nitkatab</i> are:
+  %ul
+    %li Forming reflexives from transitive roots: *glāř “shave” → #{t "νίδ̄γαλαρ̄", "niḏgalař"} “shave oneself”
+    %li Forming causative reflexives from stative roots: *lvīs “wear” → #{t "νίτλαв̄ας", "nitlavas"} “dress oneself (cause oneself to wear)”
+    %li Forming verbs denoting accompaniment: *drīk “go” → #{t "νίδδαρακ", "niddarak"} “go together, go with”
+    %li Forming so-called <i>autoreflexive</i> verbs, indicating an objectless action performed on one's body, such as #{t "νίσταηαλ", "nistahal"} “cough” (*shāl), #{t "νάττατας", "nəthatas"} “sneeze” (*htās), #{t "νίττζαλας", "nitčalas"} “laugh” (*čhlās); these verbs have no 'base' form in Scales I or II
+    %li Forming expressive verbs with generally unpredictable semantics: *tshřē' “shout” → #{t "νίτσαρ̄ή", "nitsařē"} “shout out [in pain, joy, etc.]”
+    %li Forming verbs indicating misperformance: *mnāw “count” → #{t "νιτμανού", "nitmanū"} “miscount”
+  %p The only functions out of those listed above that are still fully productive are the reflexives from transitive roots. The verbs of accompaniment, verbs of misperformance, and expressive verbs are quasi-productive, including many verbs with fixed and unpredictable semantics, but nevertheless generally admitting of new forms. The group of autoreflexives is a closed class, and the reflexive causatives are purely a relic (since most reflexive causatives are handled by Scale VI in modern Alashian).
+  %p In comparative Semitic studies this class is known as the Nt-Stem, due to the presence of both the N-type suffix (as in <i>nuktāb</i>) and the t-type suffix (as in <i>taktēb</i>). However, in some forms the /n/ has assimilated into the /t/, resulting in an aspirated prefix -th-.
+
+= section "Triconsonantal Roots and nitkatab" do
+  = section "The Present Tense" do
+    %p The <i>nitkatab</i> present tense is formed by adding the usual present affixes to the stem #{template "*-thaC1C2aC3-"}. Due to the aspirate at the front of the stem, the prefix vowel is always /ə/.
+    %p The forms shown below demonstrate the verb #{t "νίτλαв̄ας", "nitlavas"} “dress oneself, get dressed”.
+    - alashian = %w(άτταλв̄ας τάτταλв̄ας τατταλв̄ασεί ιάτταλв̄ας ιατταλв̄ασεί νατταλв̄ασού τατταλв̄ασού τατταλв̄ασού ιατταλв̄ασού ιατταλв̄ασού)
+    - latin = %w('əthalvas təthalvas təthalvasī yəthalvas yəthalvasī nəthalvasū təthalvasū təthalvasū yəthalvasū yəthalvasū)
+    = render 'verb_table', :title => "Scale V Present Tense", :verb => { :ala => "nitlavas", :eng => "get dressed" }, :alashian => alashian, :latin => latin
+
+  = section "The Preterite Tense" do
+    %p The preterite simply consists of the stem #{template "*nitC1aC2aC3"} plus the regular preterite endings:
+    - alashian = %w(νιτλάв̄ασετ νιτλάв̄αστα νιτλάв̄ασσ̄ε νίτλαв̄ας νιτλαв̄ασώ νιτλαв̄ασνώ νιτλάв̄αστυν νιτλάв̄ασσ̄ιν νιτλαв̄ασού νιτλαв̄ασού)
+    - latin = %w(nitlavaset nitlavasta nitlavasše nitlavas nitlavasā nitlavasnā nitlavastun nitlavasšin nitlavasū nitlavasū)
+    = render 'verb_table', :title => "Scale V Preterite Tense", :verb => { :ala => "nitlavas", :eng => "get dressed" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperfect Tense" do
+    %p The imperfect is formed by adding the standard imperfect endings to the stem #{template "*nitC1ieC2eC3-"}:
+    - alashian = %w(νιτλιήв̄ες νιτλιήв̄εσετ νιτλιήв̄εσες̄ νιτλιήв̄ες νιτλιηв̄εσώ νιτλιήв̄εσεν νιτλιήв̄εστυν νιτλιήв̄εσσ̄ιν νιτλιηв̄εσού νιτλιηв̄εσού)
+    - latin = %w(nitlieves nitlieveset nitlieveseš nitlieves nitlievesā nitlievesen nitlievestun nitlievesšin nitlievesū nitlievesū)
+    = render 'verb_table', :title => "Scale V Imperfect Tense", :verb => { :ala => "nitlavas", :eng => "get dressed" }, :alashian => alashian, :latin => latin
+
+  = section "The Perfective Subjunctive Tense" do
+    %p The perfective subjunctive is formed by adding a special set of prefixes to the stem #{template "*-thaC1C2aC3"}, namely *vā- in the first person singular, *venə- in the first person plural, *vetə- in the second person, and *vē- in the third person:
+    - alashian = %w(в̄ώτταλв̄ας в̄ετάτταλв̄ας в̄ήτταλв̄ας в̄ενάτταλв̄ας в̄ετάτταλв̄σς в̄ήτταλв̄ας)
+    - latin = %w(vāthalvas vetəthalvas vēthalvas venəthalvas vetəthalvas vēthalvas)
+    = render 'subjunctive_table', :title => "Scale V Perfective Subjunctive", :verb => { :ala => "nitlavas", :eng => "get dressed" }, :alashian => alashian, :latin => latin
+
+  = section "The Imperative" do
+    %p The imperative is formed by adding the usual suffixes to the stem #{template "*'əthaC1C2aC3-"}:
+    - alashian = %w(άτταλв̄ας ατταλв̄ασεί ατταλв̄ασού ατταλв̄ασού)
+    - latin = %w('əthalvas 'əthalvasī 'əthalvasū 'əthalvasū)
+    = render 'imperative_table', :title => "Scale V Imperative", :verb => { :ala => "nitlavas", :eng => "get dressed" }, :alashian => alashian, :latin => latin
+
+  = section "Deverbatives" do
+    %p The infinitive is formed from the pattern #{template "*māthaC1C2aC3"}, and the participle from #{template "*məthaC1C2iC3"}.
+    - alashian = [ { :name => "Imperative", :ala => "μώτταλв̄ας", :lat => "māthalvas", :meaning => "get dressed" },
+                   { :name => "Active Part.", :ala => "μάτταλв̄ις", :lat => "məthalvis", :meaning => "getting dressed" } ]
+    = render 'deverbative_table', :title => "Scale V Deverbatives", :verb => { :ala => "nitlavas", :eng => "get dressed" }, :forms => alashian
+
+= section "Biconsonantal Roots and nitkatab" do
+  %p Biconsonantal roots are largely regular. The root remains intact in all forms other than the imperfect, where *-ie- replaces the root vowel. The prefixes *nit- and *-tta- are added directly to the root. However, these roots are subject to metathesis if #{template "C1"} is a fricative and it comes in direct contact with the prefixed *t, as in some forms of #{t "νιφτούκ", "niftūk"} “hiccup/hiccough” (root *fūk), shown below:
+  - alashian = { :present     => %w(ατταφούκ τατταφούκ τατταφουκεί ιατταφούκ ιατταφουκεί νατταφουκού τατταφουκού τατταφουκού ιατταφουκού),
+                 :preterite   => %w(νιφτούκετ νιφτούκτα νιφτούκσ̄ε νιφτούκ νιφτουκώ νιφτουκνώ νιφτούκτυν νιφτούκσ̄ιν νιφτουκού),
+                 :imperfect   => %w(νιφτιήκ νιφτιήκετ νιφτιήκες̄ νιφτιήκ νιφτιηκώ νιφτιήκεν νιφτιήκτυν νιφτιήκσ̄ιν νιφτιηκού),
+                 :subjunctive => %w(в̄ωτταφούκ в̄ετατταφούκ в̄ετατταφούκ в̄ητταφούκ в̄ητταφούκ в̄ενατταφούκ в̄ετατταφούκ в̄ετατταφούκ в̄ητταφούκ),
+                 :imperative  => %w(ατταφούκ ατταφουκεί ατταφουκού),
+                 :infinitive  => "μωτταφούκ",
+                 :participle  => "ματταφούκ" }
+  - latin = { :present     => %w('əthafūk təthafūk təthafūkī yəthafūk yəthafūkī nəthafūkū təthafūkū təthafūkū yəthafūkū),
+              :preterite   => %w(niftūket niftūkta niftūkše niftūk niftūkā niftūknā niftūktun niftūkšin niftūkū),
+              :imperfect   => %w(niftiek niftieket niftiekeš niftiek niftiekā niftieken niftiektun niftiekšin niftiekū),
+              :subjunctive => %w(vāthafūk vetəthafūk vetəthafūk vēthafūk vēthafūk venəthafūk vetəthafūk vetəthafūk vēthafūk),
+              :imperative  => %w('əthafūk 'əthafūkī 'əthafūkū),
+              :infinitive  => "māthafūk",
+              :participle  => "məthafūk" }
+  = render 'full_conjugation_table', :title => "Scale V Conjugation", :verb => { :ala => "niftūk", :eng => "hiccup" }, :alashian => alashian, :latin => latin
+
+= section "Quadriconsonantal Roots and nitkatab" do
+  %p Quadriconsonantal roots cannot appear in Scale V at all. If a reflexive meaning is needed, this can only be achieved with a reflexive pronoun.
+
+= section "Geminate Roots and nitkatab" do
+  %p Geminate roots in <i>nitkatab</i> behave as triconsonantal roots. Thus, a root such as *gann “hide” produces the Scale V verb #{t "νίδ̄γαναν", "niḏganan"} “hide oneself, be hiding”, which conjugates as though it were *gnVn.
+
+= section "Weak Roots in Scale V" do
+  = section "C1 = Ř" do
+    %p Root-initial *Ř is regular in <i>nitkatab</i>, as in the root *řagg “celebrate”, which gives the verb #{t "νίτρ̄αγαγ", "nitřagag"} “celebrate, have a celebration”.
+
+  = section "C2 = Ř" do
+    %p Medial *Ř does not trigger any irregularities. Verbs such as #{t "νίσταρ̄ατ", "nistařat"} “deceive oneself” (*sřāt “trick, deceive”) are regular.
+
+  = section "C3 = Ř" do
+    %p Root-final *Ř affects the feminine suffix *-ī in the present tense and imperative, which becomes *-ēyi. The verb #{t "νίδ̄γαλαρ̄", "niḏgalař"} “shave oneself” (*glāř “shave”), for instance, has the form #{t "ιδ̄γαλαρ̄ήι", "yiḏgalařēyi"} “she is shaving herself” instead of regular **yitgalařī. In addition, the last vowel of the participle is lowered to /e/: #{t "μάτταγλερ̄", "məthagleř"} “shaving” (not **məthagliř).
+
+  = section "C1 = '/H" do
+    %p Roots with initial *' and *H behave identically. When the prefixed *nit- comes in direct contact with #{template "C1"}, the radical drops and the prefix undergoes aspiration and reduction, becoming *nəth-. Elsewhere, when #{template "C1"} comes in direct contact with C<sub>2</sub>, the former surfaces as /h/ and acquires an epenthetic /a/ that does not affect stress assignment. Shown below for reference are the present and preterite tenses of #{t "νάττατας", "nəthatas"} “sneeze” (*htās “sneeze”):
+    %table.invisible
+      %tr
+        - alashian = %w(άτταηατας τάτταηατας τατταηατασεί ιάτταηατας ιατταηατασεί νατταηατασού τατταηατασού τατταηατασού ιατταηατασού ιατταηατασού)
+        - latin = %w('əthahatas təthahatas təthahatasī yəthahatas yəthahatasī nəthahatasū təthahatasū təthahatasū yəthahatasū yəthahatasū)
+        %td= render 'verb_table', :title => "Scale V Present Tense", :verb => { :ala => "nəthatas", :eng => "sneeze" }, :alashian => alashian, :latin => latin
+        - alashian = %w(ναττάτασετ ναττάταστα ναττάτασσ̄ε νάττατας ναττατασώ ναττατασνώ ναττάταστυν ναττάτασσ̄ιν ναττατασού ναττατασού)
+        - latin = %w(nəthataset nəthatasta nəthatasše nəthatas nəthatasā nəthatasnā nəthatastun nəthatasšin nəthatasū nəthatasū)
+        %td= render 'verb_table', :title => "Scale V Preterite Tense", :verb => { :ala => "nəthatas", :eng => "sneeze" }, :alashian => alashian, :latin => latin
+
+  = section "C2 = '/H" do
+    %p Roots with medial *' or *H (such as *shāl “cough”, giving #{t "νίσταηαλ", "nistahal"} “cough”) are regular in some forms, and show assimilation in some others.
+    %p When #{template "C2"} is intervocal (in the preterite and imperfect), the verb conjugates regularly: #{t "νιστάηαλετ", "nistahalet"} “I coughed”, #{t "νιστιηηελώ", "nistiehelā"} “she was coughing”.
+    %p When #{template "C2"} is not intervocal and therefore in contact with #{template "C1"}, it assimilates into #{template "C1"}, resulting in gemination or aspiration. If aspiration appears, this in turn will cause preceding short vowels to reduce to schwa: #{t "ιαττασσαλού", "yəthəssalū"} “they are coughing” (not **yəthashalū), #{t "μώττασσαλ", "māthəssal"} “cough (inf)” (not **māthashal).
+
+  = section "C3 = '" do
+    %p Root-final *' has the same erratic behavior as in other scales. In most forms it drops when word-final and is preserved elsewhere, except in the two past tenses, where a special set of endings are used. Shown below is the full conjugation of #{t "νίτκαρα", "nitkara"} “call oneself” (*khrā' “call, read”), which is also a #{template "C1"} aspirate root:
+    - alashian = { :present     => %w(άττακρα τάττακρα ταττακραεί ιάττακρα ιαττακραεί ναττακραού ταττακραού ταττακραού ιαττακραού),
+                   :preterite   => %w(νιτκάρωτ νιτκάραττα νιτκάρατζζε νίτκαρα νιτκαραώ νιτκαραννώ νιτκάραττυν νιτκάρατζζιν νιτκαραού),
+                   :imperfect   => %w(νιτκιήρε νιτκιήρετ νιτκιήρες̄ νιτκιήρε νιτκιηρεώ νιτκιήρεν νιτκιήραττυν νιτκιήρατζζιν νιτκιηρεού),
+                   :subjunctive => %w(в̄ώττακρα в̄ετάττακρα в̄ετάττακρα в̄ήττακρα в̄ήττακρα в̄ενάττακρα в̄ετάττακρα в̄ετάττακρα в̄ήττακρα),
+                   :imperative  => %w(άττακρα αττακραεί αττακραού),
+                   :infinitive  => "μώττακρα",
+                   :participle  => "μάττακρι" }
+    - latin = { :present     => %w('əthəkra təthəkra təthəkra'ī yəthəkra yəthəkra'ī nəthəkra'ū təthəkra'ū təthəkra'ū yəthəkra'ū),
+                :preterite   => %w(nitkarāt nitkarətha nitkarəčhe nitkara nitkara'ā nitkarannā nitkarəthun nitkarəčhin nitkara'ū),
+                :imperfect   => %w(nitkiere nitkieret nitkiereš nitkiere nitkiere'ā nitkieren nitkierəthun nitkierəčhin nitkiere'ū),
+                :subjunctive => %w(vāthəkra vetəthəkra vetəthəkra vēthəkra vēthəkra venəthəkra vetəthəkra vetəthəkra vēthəkra),
+                :imperative  => %w('əthəkra 'əthəkra'ī 'əthəkra'ū),
+                :infinitive  => "māthəkra",
+                :participle  => "məthəkri" }
+    = render 'full_conjugation_table', :title => "Scale V Conjugation", :verb => { :ala => "nitkara", :eng => "call oneself" }, :alashian => alashian, :latin => latin
+
+  = section "C3 = H" do
+    %p Roots with final *H lose this radical and conjugate as though they were biconsonantal, with inherent vowel *ā. The root *smāh “hear”, for instance, behaves as though it were *sām, giving the verb #{t "νιστώμ", "nistām"} “hear oneself”. These then follow a regular biconsonantal paradigm.
+
+  = section "C1 = Y/W" do
+    %p Initial *Y and *W are regular when serving as the syllable onset, but undergo monophthongization when in coda position (with *ay becoming *ē and *aw becoming *ū), with the new long vowels having no effect on stress. The following tables demonstrate the present tense (irregular) and preterite (regular) of two verbs, #{t "νίτιαραχ", "nityarax"} “go out, go on a date” (*yrīx “schedule, set a date”) and #{t "νίτυασαν", "nitwasan"} “be exhausted, be on the verge of falling asleep” (*wsīn “sleep”, also a #{template "C3"}=N root).
+    %table.invisible
+      %tr
+        - alashian = %w(άττηραχ τάττηραχ ταττηραχεί ιάττηραχ ιαττηραχεί ναττηραχού ταττηραχού ταττηραχού ιαττηραχού ιαττηραχού)
+        - latin = %w('əthērax təthērax təthēraxī yəthērax yəthēraxī nəthēraxū təthēraxū təthēraxū yəthēraxū yəthēraxū)
+        %td= render 'verb_table', :title => "Scale V Present Tense", :verb => { :ala => "nityarax", :eng => "go out" }, :alashian => alashian, :latin => latin
+        - alashian = %w(άττουσαν τάττουσαν ταττουσανεί ιάττουσαν ιαττουσανεί ναττουσανού ταττουσανού ταττουσανού ιαττουσανού ιαττουσανού)
+        - latin = %w('əthūsan təthūsan təthūsanī yəthūsan yəthūsanī nəthūsanū təthūsanū təthūsanū yəthūsanū yəthūsanū)
+        %td= render 'verb_table', :title => "Scale V Present Tense", :verb => { :ala => "nitwasan", :eng => "be exhausted" }, :alashian => alashian, :latin => latin
+    %table.invisible
+      %tr
+        - alashian = %w(νιτιάραχετ νιτιάραχτα νιτιάραχσ̄ε νίτιαραχ νιτιαραχώ νιτιαραχνώ νιτιάραχτυν νιτιάραχσ̄ιν νιτιαραχού νιτιαραχού)
+        - latin = %w(nityaraxet nityaraxta nityaraxše nityarax nityaraxā nityaraxnā nityaraxtun nityaraxšin nityaraxū nityaraxū)
+        %td= render 'verb_table', :title => "Scale V Preterite Tense", :verb => { :ala => "nityarax", :eng => "go out" }, :alashian => alashian, :latin => latin
+        - alashian = %w(νιτυάσανετ νιτυάσαττα νιτυάσατζζε νίτυασαν νιτυασανώ νιτυασαννώ νιτυάσαττυν νιτυάσατζζιν νιτυασανού νιτυασανού)
+        - latin = %w(nitwasanet nitwasətha nitwasəčhe nitwasan nitwasanā nitwasannā nitwasəthun nitwasəčhin nitwasanū nitwasanū)
+        %td= render 'verb_table', :title => "Scale V Preterite Tense", :verb => { :ala => "nitwasan", :eng => "be exhausted" }, :alashian => alashian, :latin => latin
+
+  = section "C3 = Y/W" do
+    %p Root-final *Y and *W are kept when intervocalic, but their behavior in coda position is more complex. In the imperfect, coda glides are simply lost; in other forms, they undergo monophthongization, with *ay become *ē, *aw becoming *ū, and *iy/*iw becoming *ī, with no change in stress patterns (except in the participle). Such verbs include #{t "νίζδαμη", "nizdamē"} “work up a thirst, become dehydrated” (*zmāy “thirsty”, with metathesis) and #{t "νίτμανου", "nitmanū"} “miscount” (*mnāw “count”); for the sake of space only the conjugation of #{t "νίτμανου", "nitmanū"} is shown below:
+    - alashian = { :present     => %w(άτταμνου τάτταμνου τατταμναυεί ιάτταμνου ιατταμναυεί νατταμναυού τατταμναυού τατταμναυού ιατταμναυού),
+                   :preterite   => %w(νιτμάναυετ νιτμάνουτα νιτμάνουσ̄ε νίτμανου νιτμαναυώ νιτμανουνώ νιτμάνουτυν νιτμάνουσ̄ιν νιτμαναυού),
+                   :imperfect   => %w(νιτμιήνε νιτμιήνετ νιτμιήνες̄ νιτμιήνε νιτμιηνευώ νιτμιήνεν νιτμιήνετυν νιτμιήνεσ̄ιν νιτμιηνευού),
+                   :subjunctive => %w(в̄ώτταμνου в̄ετάτταμνου в̄ετάτταμνου в̄ήτταμνου в̄ήτταμνου в̄ενάτταμνου в̄ετάτταμνου в̄ετάτταμνου в̄ήτταμνου),
+                   :imperative  => %w(άτταμνου ατταμναυεί ατταμναυού),
+                   :infinitive  => "μώτταμνου",
+                   :participle  => "ματταμνεί" }
+    - latin = { :present     => %w('əthamnū təthamnū təthamnawī yəthamnū yəthamnawī nəthamnawū təthamnawū təthamnawū yəthamnawū),
+                :preterite   => %w(nitmanawet nitmanūta nitmanūše nitmanū nitmanawā nitmanūnā nitmanūtun nitmanūšin nitmanawū),
+                :imperfect   => %w(nitmiene nitmienet nitmieneš nitmiene nitmienewā nitmienen nitmienetun nitmienešin nitmienewū),
+                :subjunctive => %w(vāthamnū vetəthamnū vetəthamnū vēthəmnū vēthəmnū venəthamnū vetəthamnū vetəthamnū vēthəmnū),
+                :imperative  => %w('əthamnū 'əthamnawī 'əthamnawū),
+                :infinitive  => "māthamnū",
+                :participle  => "məthamnī" }
+    = render 'full_conjugation_table', :title => "Scale V Conjugation", :verb => { :ala => "nitmanū", :eng => "miscount" }, :alashian => alashian, :latin => latin 
+
+  = section "C1/C2/C3 = N" do
+    %p Roots with initial *N (as in *nkīr “recognize”, giving #{t "νίτνακαρ", "nitnakar"} “recognize oneself”) undergo assimilation when followed immediately by #{template "C2"}, with #{template "C2"} becoming geminated or aspirated. They are otherwise regular, although if aspiration appears, it will be accompanied by vowel reduction: #{t "ναττακκαρού", "nəthəkharū"} “we recognize ourselves” (not **nəthankarū), #{t "νιτνάκαρετ", "nitnakaret"} “I recognized myself”.
+    %p Roots with medial *N (such as #{t "νίτκανας", "nitkanas"} “gather (intr.)”, from *knās “gather (tr.)”) are regular.
+    %p Root-final *N is irregular only in the two past tenses, where assimilation takes place in a number of forms. With the root *šfān “cover” we get the metathesized verb #{t "νίσ̄ταφαν", "ništafan"} “cover oneself”:
+    %table.invisible
+      %tr
+        - alashian = %w(νισ̄τάφανετ νισ̄τάφαττα νισ̄τάφατζζε νίσ̄ταφαν νισ̄ταφανώ νισ̄ταφαννώ νισ̄τάφαττυν νισ̄τάφατζζιν νισ̄ταφανού νισ̄ταφανού)
+        - latin = %w(ništafanet ništafətha ništafəčhe ništafan ništafanā ništafannā ništafəthun ništafəčhin ništafanū ništafanū)
+        %td= render 'verb_table', :title => "Scale V Preterite Tense", :verb => { :ala => "ništafan", :eng => "cover oneself" }, :alashian => alashian, :latin => latin
+        - alashian = %w(νισ̄τιήφε νισ̄τιήφετ νισ̄τιήφες̄ νισ̄τιήφεν νισ̄τιηφενώ νισ̄τιήφεν νισ̄τιήφεττυν νισ̄τιήφετζζιν νισ̄τιηφενού νισ̄τιηφενού)
+        - latin = %w(ništiefe ništiefet ništiefeš ništiefen ništiefenā ništiefen ništiefəthun ništiefəčhin ništiefenū ništiefenū)
+        %td= render 'verb_table', :title => "Scale V Imperfect Tense", :verb => { :ala => "ništafan", :eng => "cover oneself" }, :alashian => alashian, :latin => latin
+
+  = section "C1 = PH/TH/KH/TSH/ČH" do
+    %p Roots with initial aspirates are largely unproblematic. Since #{template "C1"} is always in a cluster, it will always surface in an unaspirated state. The only difference between this and the regular paradigms is that any short vowel immediately preceding #{template "C1"} will reduce to /ə/. One such root is *čhlās “laugh”, giving the verb #{t "νίττζαλας", "nitčalas"} “laugh”.
+
+  = section "C2 = PH/TH/KH/TSH/ČH" do
+    %p Root-internal aspirates will sometimes surface aspirated and sometimes unaspirated. When intervocalic, the surface realization is always aspirated, resulting in the reduction of the preceding vowel. In other positions, the surface realization is unaspirated, and the conjugation is completely regular. Shown below for reference are the present and preterite tenses of #{t "νίθτακκαλ", "niṯtəkhal"} “weigh oneself” (*ṯkhāl “weigh” with metathesis).
+    %table.invisible
+      %tr
+        - alashian = %w(άτταθκαλ τάτταθκαλ τατταθκαλεί ιάτταθκαλ ιατταθκαλεί νατταθκαλού τατταθκαλού τατταθκαλού ιατταθκαλού ιατταθκαλού)
+        - latin = %w('əthaṯkal təthaṯkal təthaṯkalī yəthaṯkal yəthaṯkalī nəthaṯkalū təthaṯkalū təthaṯkalū yəthaṯkalū yəthaṯkalū)
+        %td= render 'verb_table', :title => "Scale V Present Tense", :verb => { :ala => "niṯtəkhal", :eng => "weigh oneself" }, :alashian => alashian, :latin => latin
+        - alashian = %w(νιθτάκκαλετ νιθτάκκαλτα νιθτάκκαλσ̄ε νίθτακκαλ νιθτακκαλώ νιθτακκαλνώ νιθτάκκαλτυν νιθτάκκαλσ̄ιν νιθτακκαλού νιθτακκαλού)
+        - latin = %w(niṯtəkhalet niṯtəkhalta niṯtəkhalše niṯtəkhal niṯtəkhalā niṯtəkhalnā niṯtəkhaltun niṯtəkhalšin niṯtəkhalū niṯtəkhalū)
+        %td= render 'verb_table', :title => "Scale V Preterite Tense", :verb => { :ala => "niṯtəkhal", :eng => "weigh oneself" }, :alashian => alashian, :latin => latin
+
+  = section "C3 = PH/TH/KH/TSH/ČH" do
+    %p The most irregular aspirate subclass in Scale V is, naturally, the #{template "C3"} aspirates, although this irregularity mostly mirrors that of other scales. The aspiration will only surface when intervocal, short vowels immediately preceding #{template "C3"} will reduce to schwa, and the preterite and imperfect use the special set of aspirated endings. Note, however, the special #{template "C3"} metathesis that takes place in some forms of the past tenses, whereby the usual stems #{template "*nitC1aC2aC3-"} (preterite) and #{template "*nitC1ieC2eC3-"} (imperfect) become #{template "*nitC1aC2C3ə-"} and #{template "*nitC1ieC2C3e-"} The chart below demonstrates the conjugation of the verb #{t "νίτραχατζ", "nitraxəč"} “bathe, wash oneself”, from the root *rxāčh “wash”.
+    - alashian = { :present     => %w(άτταρχατζ τάτταρχατζ τατταρχατζζεί ιάτταρχατζ ιατταρχατζζεί νατταρχατζζού τατταρχατζζού τατταρχατζζού ιατταρχατζζού),
+                   :preterite   => %w(νιτράχατζζετ νιτράχτζαττα νιτράχτζατζζε νίτραχατζ νιτραχατζζώ νιτραχατζνώ νιτράχτζαττυν νιτράχτζατζζιν νιτραχατζζού),
+                   :imperfect   => %w(νιτριήχατζ νιτριήχτζετ νιτριήχτζες̄ νιτριήχατζ νιτριηχατζζώ νιτριήχτζεν νιτριήχτζαττυν νιτριήχτζατζζιν νιτριηχατζζού),
+                   :subjunctive => %w(в̄άτταρχατζ в̄ετάτταρχατζ в̄ετάτταρχατζ в̄ήτταρχατζ в̄ήτταρχατζ в̄ενάτταρχατζ в̄ετάτταρχατζ в̄ετάτταρχατζ в̄ήτταρχατζ),
+                   :imperative  => %w(άτταρχατζ ατταρχατζζεί ατταρχατζζού),
+                   :infinitive  => "μώτταρχατζ",
+                   :participle  => "μάτταρχατζ" }
+    - latin = { :present     => %w('ətharxəč tətharxəč tətharxəčhī yətharxəč yətharxəčhī nətharxəčhū tətharxəčhū tətharxəčhū yətharxəčhū),
+                :preterite   => %w(nitraxəčhet nitraxčətha nitraxčəčhe nitraxəč nitraxəčhā nitraxəčnā nitraxčəthun nitraxčəčhin nitraxəčhū),
+                :imperfect   => %w(nitriexəč nitriexčet nitriexčeš nitriexəč nitriexəčhā nitriexčen nitriexčəthun nitriexčəčhin nitriexəčhū),
+                :subjunctive => %w(vātharxəč vetətharxəč vetətharxəč vētharxəč vētharxəč venətharxəč vetətharxəč vetətharxəč vētharxəč),
+                :imperative  => %w('ətharxəč 'ətharxəčhī 'ətharxəčhū),
+                :infinitive  => "mātharxəč",
+                :participle  => "mətharxəč" }
+    = render 'full_conjugation_table', :title => "Scale V Conjugation", :verb => { :ala => "nitraxəč", :eng => "wash oneself" }, :alashian => alashian, :latin => latin
+
+  = section "C1 = F/V/Ṯ/Ḏ/S/Z/Š/X/Ǧ" do
+    %p As in Scale IV, roots with an initial fricative consonant (excluding /h/) undergo metathesis in forms where #{template "C1"} comes in direct contact with the prefixed *t of <i>nitkatab</i>. This has already been seen on a number of verbs: #{t "νιφτούκ", "niftūk"} “hiccup” (*fūk), #{t "νίσταρ̄ατ", "nistařat"} “deceive oneself” (*sřāt), #{t "νίσταηαλ", "nistahal"} “cough” (*shāl), #{t "νιστώμ", "nistām"} “hear oneself” (*smāh), #{t "νίθτακκαλ", "niṯtəkhal"} “weigh oneself” (*ṯkhāl), and so on.
+
+  = section "T-Assimilation" do
+    %p The prefixed *t of <i>nitkatab</i> is prone to the same sorts of assimilatory phenomena as seen in Scale IV when it comes in direct contact with #{template "C1"}.
+    %p When #{template "C1"} is *T or *D, the prefix will assimilate completely in these forms, resulting in a geminated (never aspirated!) consonant: *drīk “go” → #{t "νίδδαρακ", "niddarak"} “accompany, go with, go together” (not *nitdarak).
+    %p When #{template "C1"} is *B or *G, the prefix will voice to *d and then lenite to *ḏ: *gann “hide” → #{t "νίδ̄γαναν", "niḏganan"} “hide oneself” (not **nitganan).
+    %p When #{template "C1"} is a voiced fricative *V/*Ḏ/*Z/*Ǧ, the prefixed *t will first voice to *d and then undergo the usual fricative metathesis: *zmāy “thirsty” → #{t "νίζδαμη", "nizdamē"} “work up a thirst, become dehydrated” (not **nitzamay).
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
