@@ -1,0 +1,242 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σουρή Αδρείμ Χαριήν".html_safe
+
+= render :partial => 'navigation'
+
+= section "Derived Tenses" do
+  %p Standard Alashian also has three <i>derived</i> tenses. These can be formed from any verb in any case, whether regular or irregular, by adding regular affixes to one of the basic forms.
+  %p However, the addition of these suffixes can create some irregularities in some verbs, since a consonant that was once word-final may suddenly find itself in intervocalic position. More often that not, however, these adjustments that have to be made to the base form when a derived form is created actually serve to make them more regular, such as (for example) by eliminating the need for monophthongization in #{template "C3"} = Y/W roots.
+
+  = section "The Imperfective Subjunctive" do
+    = section "Regular Formation" do
+      %p The imperfective subjunctive, though logically the counterpart of the perfective subjunctive, is instead a derived form of the present tense. There are two variants in common usage, one used in the northern dialects and one in the southern.
+      %p In the northern dialects (and standard Alashian), the imperfective subjunctive is formed by taking the present tense, lengthening the vowel between #{template "C2"} and #{template "C3"} if it is not already long, and adding the suffix *-a. This is unproblematic in the for the forms that are unsuffixed in the present tense, but if the base form is suffixed, the two endings merge, with the feminine marker *-ī + *-a becoming *-iya and the plural marker *-ū + *-a becoming *-uwa.
+      %p In the southern dialect zone, the imperfect subjunctive is formed similarly, except that the feminine and plural markers drop entirely before adding the imperfective subjunctive marker *-a. This means that the second and third persons do not distinguish gender or number at all, much like in the perfective subjunctive.
+      %p Shown below are the imperfect subjunctive forms of #{t "κάταβ", "katab"} “write” as seen in the northern dialects and southern dialects, along with the present tense for reference:
+      %table
+        %tr
+          %th
+          %th Northern<br>Impf. Subj.
+          %th Southern<br>Impf. Subj.
+          %th Present
+        %tr
+          %th 1st Sg
+          %td= t("ακτώβα", "'aktāba", :linebreak => true)
+          %td= t("ακτώβα", "'aktāba", :linebreak => true)
+          %td= t("ακτώβ", "'aktāb", :linebreak => true)
+        %tr
+          %th 2nd Sg Masc
+          %td= t("τικτώβα", "tiktāba", :linebreak => true)
+          %td= t("τικτώβα", "tiktāba", :linebreak => true)
+          %td= t("τικτώβ", "tiktāb", :linebreak => true)
+        %tr
+          %th 2nd Sg Fem
+          %td= t("τικτώβια", "tiktābiya", :linebreak => true)
+          %td= t("τικτώβα", "tiktāba", :linebreak => true)
+          %td= t("τικταβεί", "tiktabī", :linebreak => true)
+        %tr
+          %th 3rd Sg Masc
+          %td= t("ικτώβα", "yiktāba", :linebreak => true)
+          %td= t("ικτώβα", "yiktāba", :linebreak => true)
+          %td= t("ικτώβ", "yiktāb", :linebreak => true)
+        %tr
+          %th 3rd Sg Fem
+          %td= t("ικτώβια", "yiktābiya", :linebreak => true)
+          %td= t("ικτώβα", "yiktāba", :linebreak => true)
+          %td= t("ικταβεί", "yiktabī", :linebreak => true)
+        %tr
+          %th 1st Pl
+          %td= t("νικτώβυα", "niktābuwa", :linebreak => true)
+          %td= t("νικτώβα", "niktāba", :linebreak => true)
+          %td= t("νικταβού", "niktabū", :linebreak => true)
+        %tr
+          %th 2nd Pl
+          %td= t("τικτώβυα", "tiktābuwa", :linebreak => true)
+          %td= t("τικτώβα", "tiktāba", :linebreak => true)
+          %td= t("τικταβού", "tiktabū", :linebreak => true)
+        %tr
+          %th 3rd Pl
+          %td= t("ικτώβυα", "yiktābuwa", :linebreak => true)
+          %td= t("ικτώβα", "yiktāba", :linebreak => true)
+          %td= t("ικταβού", "yiktabū", :linebreak => true)
+
+    = section "Geminate Roots" do
+      %p One apparent exception to these rules applies to geminate roots when behaving in a biconsonantal manner. These verbs do <em>not</em> show lengthening of the stem vowel since this vowel is integral (as in true biconsonantal roots), and gemination will surface in all forms, not just the forms with gemination in the present tense.
+      %p The table below demonstrates the Scale VI geminate verb #{t "στάσαβ", "stasab"} “come into being, appear, turn up”.
+      %table
+        %tr
+          %th
+          %th Northern<br>Impf. Subj.
+          %th Southern<br>Impf. Subj.
+          %th Present
+        %tr
+          %th 1st Sg
+          %td= t("αστάσαββα", "'astasabba", :linebreak => true)
+          %td= t("αστάσαββα", "'astasabba", :linebreak => true)
+          %td= t("άστασαβ", "'astasab", :linebreak => true)
+        %tr
+          %th 2nd Sg Masc
+          %td= t("τιστάσαββα", "tistasabba", :linebreak => true)
+          %td= t("τιστάσαββα", "tistasabba", :linebreak => true)
+          %td= t("τίστασαβ", "tistasab", :linebreak => true)
+        %tr
+          %th 2nd Sg Fem
+          %td= t("τιστασάββια", "tistasabbiya", :linebreak => true)
+          %td= t("τιστάσαββα", "tistasabba", :linebreak => true)
+          %td= t("τιστασαββεί", "tistasabbī", :linebreak => true)
+        %tr
+          %th 3rd Sg Masc
+          %td= t("ιστάσαββα", "yistasabba", :linebreak => true)
+          %td= t("ιστάσαββα", "yistasabba", :linebreak => true)
+          %td= t("ίστασαβ", "yistasab", :linebreak => true)
+        %tr
+          %th 3rd Sg Fem
+          %td= t("ιστασάββια", "yistasabbiya", :linebreak => true)
+          %td= t("ιστάσαββα", "yistasabba", :linebreak => true)
+          %td= t("ιστασαββεί", "yistasabbī", :linebreak => true)
+        %tr
+          %th 1st Pl
+          %td= t("νιστασάββυα", "nistasabbuwa", :linebreak => true)
+          %td= t("νιστάσαββα", "nistasabba", :linebreak => true)
+          %td= t("νιστασαββού", "nistasabbū", :linebreak => true)
+        %tr
+          %th 2nd Pl
+          %td= t("τιστασάββυα", "tistasabbuwa", :linebreak => true)
+          %td= t("τιστάσαββα", "tistasabba", :linebreak => true)
+          %td= t("τιστασαββού", "tistasabbū", :linebreak => true)
+        %tr
+          %th 3rd Pl
+          %td= t("ιστασάββυα", "yistasabbuwa", :linebreak => true)
+          %td= t("ιστάσαββα", "yistasabba", :linebreak => true)
+          %td= t("ιστασαββού", "yistasabbū", :linebreak => true)
+      %p If the present tense form conjugates as a triconsonantal verb, however, vowel lengthening will once again take place, since stem integrity is less of an issue with triconsonantal roots.
+
+    = section "C3 = Ř" do
+      %p Root-final *Ř is only irregular in the northern/standard imperfective subjunctive, where the merged feminine/imperfect subjunctive ending is *-eya rather than *-iya: #{t "τιφτώρ̄εια", "tiftāřeya"} “[that] you (f) open” (cf. present #{t "τιφταρ̄ήι", "tiftařēyi"}).
+
+    = section "C3 = '" do
+      %p In the present tense final glottal stops are lost. In the imperfective subjunctive these reemerge: #{t "αβρώα", "'abrā'a"} “[that] I make” (cf. present #{t "αβρώ", "'abrā"}).
+
+    = section "C3 = H" do
+      %p In the imperfective subjunctive of <i>katab</i> verbs, root-final *h is reinserted where it is lost in the present tense: #{t "τισμώηα", "tismāha"} “[that] you (m) hear” (cf. present #{t "τισμώ", "tismā"}).
+      %p The imperfect subjunctive of other scales are regular, since #{template "C3"} = H verbs in these scales conjugate biconsonantally.
+
+    = section "C3 = Y/W" do
+      %p Root-final glides are a little trickier. In scales where the glide simply drops in the present tense, it will be restored: #{t "αβνώια", "'abnāya"} “[that] I build” (cf. present <i>'abnā</i>). In scales where monophthongization takes place, the glide will be restored and the vowel will return to is previous unmonophthongized quality: #{t "τιβάδδαυα", "tibəddawa"} “[that] you (m) empty” (cf. present #{t "τιβαδδού", "tibəddū"}).
+
+    = section "C3 = PH/TH/KH/TSH/ČH" do
+      %p Root-final aspirates that surface in an unaspirated form in the present become aspirated: #{t "ιαρμείτζζα", "yarmīčha"} “[that] it (m) shines” (cf. present #{t "ιαρμείτζ", "yarmīč"}).
+
+  = section "The Volitive" do
+    = section "Regular Formation" do
+      %p The volitive mood is also derived from the present tense by suffixation, and corresponds to a number of English modals such as 'may', 'let', and 'should'. It is typically formed by adding the suffix *-anna to the present tense if it ends in a consonant and *-na if it ends in a vowel.
+      %table
+        %tr
+          %th
+          %th Volitive
+          %th Present
+        %tr
+          %th 1st Sg
+          %td= t("ακτώβαννα", "'aktābanna", :linebreak => true)
+          %td= t("ακτώβ", "'aktāb", :linebreak => true)
+        %tr
+          %th 2nd Sg Masc
+          %td= t("τικτώβαννα", "tiktābanna", :linebreak => true)
+          %td= t("τικτώβ", "tiktāb", :linebreak => true)
+        %tr
+          %th 2nd Sg Fem
+          %td= t("τικταβείνα", "tiktabīna", :linebreak => true)
+          %td= t("τικταβεί", "tiktabī", :linebreak => true)
+        %tr
+          %th 3rd Sg Masc
+          %td= t("ικτώβαννα", "yiktābanna", :linebreak => true)
+          %td= t("ικτώβ", "yiktāb", :linebreak => true)
+        %tr
+          %th 3rd Sg Fem
+          %td= t("ικταβείνα", "yiktabīna", :linebreak => true)
+          %td= t("ικταβεί", "yiktabī", :linebreak => true)
+        %tr
+          %th 1st Pl
+          %td= t("νικταβούνα", "niktabūna", :linebreak => true)
+          %td= t("νικταβού", "niktabū", :linebreak => true)
+        %tr
+          %th 2nd Pl
+          %td= t("τικταβούνα", "tiktabūna", :linebreak => true)
+          %td= t("τικταβού", "tiktabū", :linebreak => true)
+        %tr
+          %th 3rd Pl
+          %td= t("ικταβούνα", "yiktabūna", :linebreak => true)
+          %td= t("ικταβού", "yiktabū", :linebreak => true)
+
+    = section "Geminate Roots" do
+      %p Gemination is restored in forms with the suffix -anna: #{t "αστασάββαννα", "'astasabbanna"} “may I turn” (cf. present #{t "άστασαβ", "'astasab"}).
+
+    = section "C3 = Ř" do
+      %p The feminine suffix *-ēyi of the present tense contracts to just *-ē: #{t "τιφταρ̄ήνα", "tiftařēna"} “may you (f) open” (cf. present #{t "τιφταρ̄ήι", "tiftařēyi"}).
+
+    = section "C3 = '" do
+      %p The final glottal stop is <em>not</em> restored to verb forms that lose it in the present tense; these conjugate as though they were vowel-final: #{t "αβρώνα", "'abrāna"} “may I make” (cf. present #{t "αβρώ", "'abrā"}).
+
+    = section "C3 = H" do
+      %p The final *H is <em>not</em> restored to verb forms that lose it in the present tense; these conjugate as though they were vowel-final: #{t "τισμώνα", "tismāna"} “may you (m) hear” (cf. present #{t "τισμώ", "tismā"}).
+      %p Verb forms where #{template "C3"} = H roots are treated biconsonantally are regular.
+
+    = section "C3 = Y/W" do
+      %p Root final *Y and *W are not restored, whether they are simply dropped in the present tense or undergo monophthongization. Any vowel changes remain: #{t "αβνώνα", "'abnāna"} “may I build” (cf. present #{t "αβνώ", "'abnā"}), #{t "τιβάδδουνα", "tibəddūna"} “may you (m) empty” (cf. present #{t "τίβαδδου", "tibəddū"}).
+
+    = section "C3 = PH/TH/KH/TSH/ČH" do
+      %p Root-final aspirates always appear in their aspirated form: #{t "ιαρμείτζζαννα", "yarmīčhanna"} “may it (m) shine” (cf. present #{t "ιαρμείτζ", "yarmīč"}).
+
+  = section "The Precative" do
+    = section "Regular Formation" do
+      %p The precative mood is a derivative of the imperative, and as such only exists for active half-scales plus <i>nuktāb</i>. It marks requests and supplications and is formed quite regularly by suffixing *-na to the imperative.
+      %table
+        %tr
+          %th
+          %th Precative
+          %th Imperative
+        %tr
+          %th Masc. Sg.
+          %td= t("κτώβνα", "ktābna", :linebreak => true)
+          %td= t("κτώβ", "ktāb", :linebreak => true)
+        %tr
+          %th Fem. Sg.
+          %td= t("κατβείνα", "katbīna", :linebreak => true)
+          %td= t("κατβεί", "katbī", :linebreak => true)
+        %tr
+          %th Pl.
+          %td= t("κατβούνα", "katbūna", :linebreak => true)
+          %td= t("κατβού", "katbū", :linebreak => true)
+      %p The precative for the most part is formed very regularly, so only a couple notes need to be made regarding irregular forms.
+
+    = section "C3 = Ř" do
+      %p As in the volitive, the feminine ending *-ēyi contracts to just *-ē: #{t "φατρ̄ήνα", "fatřēna"} “please open! (f)” (cf. imperative #{t "φρατρ̄ήι", "fatřēyi"}).
+
+    = section "S-Type Imperatives in Scale III" do
+      %p The s-type imperative seen in a handful of old Scale III verbs cannot be used to form precatives. For verbs that use them, the precative will be formed based off the regular imperative pattern #{template "*'aC1C2ēC3-"}/#{template "*aC1C2eC3-"} rather than the s-imperative #{template "*'isC1eC2ēC3-"}/#{template "*'isC1eC2C3-"}, even though the regular imperative form does not actually exist: #{t "ασκήβνα", "'askēbna"} “please lay down (m)” (cf. imperative #{t "ισσεκήβ", "'issekēb"}).
+
+= section "Complex Tenses" do
+  %p The complex tenses are those that must be formed periphrastically. Alashian has three complex tenses, all of which consist of either a defective verb or conjugating particle plus the perfective subjunctive. Both components must agree with their subject.
+
+  = section "The Future Tense" do
+    %p The future tense consists of a form of the unstressed defective verb *lək plus the perfective subjunctive. This auxiliary verb only has present tense forms and is related to the extant Scale II verb #{t "ηαλλήκ", "hallēk"} “behave” (which originally meant “go, walk”). The following table shows the future tense forms of #{t "κάταβ", "katab"} “write”:
+    - alashian = ["αλακ в̄άκταβ", "τιλακ в̄άτακταβ", "τιλκι в̄άτακταβ", "ιλακ в̄ήκταβ", "ιλκι в̄ήκταβ", "νιλκυ в̄άνακταβ", "τιλκυ в̄άτακταβ", "τιλκυ в̄άτακταβ", "ιλκυ в̄ήκταβ", "ιλκυ в̄ήκταβ"]
+    - latin = ["'alək vaktab", "tilək vataktab", "tilki vataktab", "yilək vēktab", "yilki vēktab", "nilku vanaktab", "tilku vataktab", "tilku vataktab", "yilku vēktab", "yilku vēktab"]
+    = render 'verb_table', :title => "Scale I Future Tense", :verb => { :ala => "katab", :eng => "write" }, :alashian => alashian, :latin => latin
+
+  = section "The Present Perfect Tense" do
+    %p The present perfect tense is formed with the conjugating preposition of possession #{t "λι-", "li-"} plus the perfective subjunctive. The use of this preposition elsewhere and the notion of conjugating prepositions will be discussed at a later point; for now these forms may be taken as-is.
+    - alashian = ["λιη в̄άκταβ", "λακ в̄άτακταβ", "λατζ в̄άτακταβ", "λου в̄ήκταβ", "λων в̄ήκταβ", "λαν в̄άνακταβ", "λακαν в̄άτακταβ", "λατζεν в̄άτακταβ", "λω в̄ήκταβ", "λων в̄ήκταβ"]
+    - latin = ["lie vaktab", "lak vataktab", "lač vataktab", "lū vēktab", "lān vēktab", "lan vanaktab", "lakan vataktab", "lačen vataktab", "lā vēktab", "lān vēktab"]
+    = render 'verb_table', :title => "Scale I Present Perfect Tense", :verb => { :ala => "katab", :eng => "write" }, :alashian => alashian, :latin => latin
+
+  = section "The Pluperfect Tense" do
+    %p The pluperfect tense is formed using the invariant word #{t "υή", "wē"} (the third person singular masculine imperfect form of “to be”) plus the conjugated form of #{t "λι-", "li-"} plus the perfective subjunctive:
+    - alashian = ["υή λιη в̄άκταβ", "υή λακ в̄άτακταβ", "υή λατζ в̄άτακταβ", "υή λου в̄ήκταβ", "υή λων в̄ήκταβ", "υή λαν в̄άνακταβ", "υή λακαν в̄άτακταβ", "υή λατζεν в̄άτακταβ", "υή λων в̄ήκταβ", "υή λων в̄ήκταβ"]
+    - latin = ["wē lie vaktab", "wē lak vataktab", "wē lač vataktab", "wē lū vēktab", "wē lān vēktab", "wē lan vanaktab", "wē lakan vataktab", "wē lačen vataktab", "wē lān vēktab", "wē lān vēktab"]
+    = render 'verb_table', :title => "Scale I Pluperfect Tense", :verb => { :ala => "katab", :eng => "write" }, :alashian => alashian, :latin => latin
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
