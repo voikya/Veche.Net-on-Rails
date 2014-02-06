@@ -1,0 +1,803 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πινακσή Σουρή Αδρειμιήν υεΣιχνιώ Μαθβυρρώ Σ̄υλώς̄".html_safe
+
+= render :partial => 'navigation'
+
+= section "Comparative Verb Tables" do
+  %p The following tables show the regular forms of each scale side-by-side using the root *ktāb “write” (although in reality not all of these forms exist for this particular root). This is provided for easy reference.
+
+  = section "The Present Tense" do
+    %table
+      %tr
+        %th{:colspan => 11} The Alashian Present Tense
+      %tr
+        %th
+        %th
+          %i katab
+        %th
+          %i nuktāb
+        %th
+          %i kəthēb
+        %th
+          %i kəthāb
+        %th
+          %i 'aktēb
+        %th
+          %i 'ennuktāb
+        %th
+          %i taktēb
+        %th
+          %i nitkatab
+        %th
+          %i staktab
+        %th
+          %i nistuktāb
+      %tr
+        %th 1st Sg
+        %td= t("ακτώβ", "'aktāb", :linebreak => true)
+        %td= t("ακκυτώβ", "'akkutāb", :linebreak => true)
+        %td= t("άκατταβ", "'akəthab", :linebreak => true)
+        %td= t("υκαττώβ", "'ukəthāb", :linebreak => true)
+        %td= t("ωκτήβ", "'āktēb", :linebreak => true)
+        %td= t("αννυκτώβ", "'annuktāb", :linebreak => true)
+        %td= t("ατκατώβ", "'atkatāb", :linebreak => true)
+        %td= t("άττακταβ", "'əthaktab", :linebreak => true)
+        %td= t("άστακταβ", "'astaktab", :linebreak => true)
+        %td= t("ωστυκτώβ", "'āstuktāb", :linebreak => true)
+      %tr
+        %th 2nd Sg M
+        %td= t("τικτώβ", "tiktāb", :linebreak => true)
+        %td= t("τικκυτώβ", "tikkutāb", :linebreak => true)
+        %td= t("τίκατταβ", "tikəthab", :linebreak => true)
+        %td= t("τυκαττώβ", "tukəthāb", :linebreak => true)
+        %td= t("τωκτήβ", "tāktēb", :linebreak => true)
+        %td= t("τιννυκτώβ", "tinnuktāb", :linebreak => true)
+        %td= t("τιτκατώβ", "titkatāb", :linebreak => true)
+        %td= t("τάττακταβ", "təthaktab", :linebreak => true)
+        %td= t("τίστακταβ", "tistaktab", :linebreak => true)
+        %td= t("τωστυκτώβ", "tāstuktāb", :linebreak => true)
+      %tr
+        %th 2nd Sg F
+        %td= t("τικταβεί", "tiktabī", :linebreak => true)
+        %td= t("τικκυτωβεί", "tikkutābī", :linebreak => true)
+        %td= t("τικατβεί", "tikətbī", :linebreak => true)
+        %td= t("τυκατταβεί", "tukəthabī", :linebreak => true)
+        %td= t("τωκτεβεί", "tāktebī", :linebreak => true)
+        %td= t("τιννυκταβεί", "tinnuktabī", :linebreak => true)
+        %td= t("τιτκαταβεί", "titkatabī", :linebreak => true)
+        %td= t("ταττακταβεί", "təthaktabī", :linebreak => true)
+        %td= t("τιστακταβεί", "tistaktabī", :linebreak => true)
+        %td= t("τωστυκταβεί", "tāstuktabī", :linebreak => true)
+      %tr
+        %th 3rd Sg M
+        %td= t("ικτώβ", "yiktāb", :linebreak => true)
+        %td= t("ικκυτώβ", "yikkutāb", :linebreak => true)
+        %td= t("ίκατταβ", "yikəthab", :linebreak => true)
+        %td= t("ιυκαττώβ", "yukəthāb", :linebreak => true)
+        %td= t("ιωκτήβ", "yāktēb", :linebreak => true)
+        %td= t("ιννυκτώβ", "yinnuktāb", :linebreak => true)
+        %td= t("ιτκατώβ", "yitkatāb", :linebreak => true)
+        %td= t("ιάττακταβ", "yəthaktab", :linebreak => true)
+        %td= t("ίστακταβ", "yistaktab", :linebreak => true)
+        %td= t("ιωστυκτώβ", "yāstuktāb", :linebreak => true)
+      %tr
+        %th 3rd Sg F
+        %td= t("ικταβεί", "yiktabī", :linebreak => true)
+        %td= t("ικκυτωβεί", "yikkutābī", :linebreak => true)
+        %td= t("ικατβεί", "yikətbī", :linebreak => true)
+        %td= t("ιυκατταβεί", "yukəthabī", :linebreak => true)
+        %td= t("ιωκτεβεί", "yāktebī", :linebreak => true)
+        %td= t("ιννυκταβεί", "yinnuktabī", :linebreak => true)
+        %td= t("ιτκαταβεί", "yitkatabī", :linebreak => true)
+        %td= t("ιαττακταβεί", "yəthaktabī", :linebreak => true)
+        %td= t("ιστακταβεί", "yistaktabī", :linebreak => true)
+        %td= t("ιωστυκταβεί", "yāstuktabī", :linebreak => true)
+      %tr
+        %th 1st Pl
+        %td= t("νικταβού", "niktabū", :linebreak => true)
+        %td= t("νικκυτωβού", "nikkutābū", :linebreak => true)
+        %td= t("νικατβού", "nikətbū", :linebreak => true)
+        %td= t("νυκατταβού", "nukəthabū", :linebreak => true)
+        %td= t("νωκτεβού", "nāktebū", :linebreak => true)
+        %td= t("νιννυκταβού", "ninnuktabū", :linebreak => true)
+        %td= t("νιτκαταβού", "nitkatabū", :linebreak => true)
+        %td= t("vαττακταβού", "nəthaktabū", :linebreak => true)
+        %td= t("vιστακταβού", "nistaktabū", :linebreak => true)
+        %td= t("vωστυκταβού", "nāstuktabū", :linebreak => true)
+      %tr
+        %th 2nd Pl
+        %td= t("τικταβού", "tiktabū", :linebreak => true)
+        %td= t("τικκυτωβού", "tikkutābū", :linebreak => true)
+        %td= t("τικατβού", "tikətbū", :linebreak => true)
+        %td= t("τυκατταβού", "tukəthabū", :linebreak => true)
+        %td= t("τωκτεβού", "tāktebū", :linebreak => true)
+        %td= t("τιννυκταβού", "tinnuktabū", :linebreak => true)
+        %td= t("τιτκαταβού", "titkatabū", :linebreak => true)
+        %td= t("ταττακταβού", "təthaktabū", :linebreak => true)
+        %td= t("τιστακταβού", "tistaktabū", :linebreak => true)
+        %td= t("τωστυκταβού", "tāstuktabū", :linebreak => true)
+      %tr
+        %th 3rd Pl
+        %td= t("ικταβού", "yiktabū", :linebreak => true)
+        %td= t("ικκυτωβού", "yikkutābū", :linebreak => true)
+        %td= t("ικατβού", "yikətbū", :linebreak => true)
+        %td= t("ιυκατταβού", "yukəthabū", :linebreak => true)
+        %td= t("ιωκτεβού", "yāktebū", :linebreak => true)
+        %td= t("ιννυκταβού", "yinnuktabū", :linebreak => true)
+        %td= t("ιτκαταβού", "yitkatabū", :linebreak => true)
+        %td= t("ιαττακταβού", "yəthaktabū", :linebreak => true)
+        %td= t("ιστακταβού", "yistaktabū", :linebreak => true)
+        %td= t("ιωστυκταβού", "yāstuktabū", :linebreak => true)
+
+  = section "The Preterite Tense" do
+    %table
+      %tr
+        %th{:colspan => 11} The Alashian Preterite Tense
+      %tr
+        %th
+        %th
+          %i katab
+        %th
+          %i nuktāb
+        %th
+          %i kəthēb
+        %th
+          %i kəthāb
+        %th
+          %i 'aktēb
+        %th
+          %i 'ennuktāb
+        %th
+          %i taktēb
+        %th
+          %i nitkatab
+        %th
+          %i staktab
+        %th
+          %i nistuktāb
+      %tr
+        %th 1st Sg
+        %td= t("κάταβετ", "katabet", :linebreak => true)
+        %td= t("νυκτώβετ", "nuktābet", :linebreak => true)
+        %td= t("καττήβετ", "kəthēbet", :linebreak => true)
+        %td= t("καττώβετ", "kəthābet", :linebreak => true)
+        %td= t("ακτήβετ", "'aktēbet", :linebreak => true)
+        %td= t("εννυκτώβετ", "'ennuktābet", :linebreak => true)
+        %td= t("τακτήβετ", "taktēbet", :linebreak => true)
+        %td= t("νιτκάταβετ", "nitkatabet", :linebreak => true)
+        %td= t("στάκταβετ", "staktabet", :linebreak => true)
+        %td= t("νιστυκτώβετ", "nistuktābet", :linebreak => true)
+      %tr
+        %th 2nd Sg M
+        %td= t("κάταв̄τα", "katavta", :linebreak => true)
+        %td= t("νυκτώв̄τα", "nuktāvta", :linebreak => true)
+        %td= t("καττήв̄τα", "kəthēvta", :linebreak => true)
+        %td= t("καττώв̄τα", "kəthāvta", :linebreak => true)
+        %td= t("ακτήв̄τα", "'aktēvta", :linebreak => true)
+        %td= t("εννυκτώв̄τα", "'ennuktāvta", :linebreak => true)
+        %td= t("τακτήв̄τα", "taktēvta", :linebreak => true)
+        %td= t("νιτκάταв̄τα", "nitkatavta", :linebreak => true)
+        %td= t("στάκταв̄τα", "staktavta", :linebreak => true)
+        %td= t("νιστυκτώв̄τα", "nistuktāvta", :linebreak => true)
+      %tr
+        %th 2nd Sg F
+        %td= t("κάταв̄σ̄ε", "katavše", :linebreak => true)
+        %td= t("νυκτώв̄σ̄ε", "nuktāvše", :linebreak => true)
+        %td= t("καττήв̄σ̄ε", "kəthēvše", :linebreak => true)
+        %td= t("καττώв̄σ̄ε", "kəthāvše", :linebreak => true)
+        %td= t("ακτήв̄σ̄ε", "'aktēvše", :linebreak => true)
+        %td= t("εννυκτώв̄σ̄ε", "'ennuktāvše", :linebreak => true)
+        %td= t("τακτήв̄σ̄ε", "taktēvše", :linebreak => true)
+        %td= t("νιτκάταв̄σ̄ε", "nitkatavše", :linebreak => true)
+        %td= t("στάκταв̄σ̄ε", "staktavše", :linebreak => true)
+        %td= t("νιστυκτώв̄σ̄ε", "nistuktāvše", :linebreak => true)
+      %tr
+        %th 3rd Sg M
+        %td= t("κάταβ", "katab", :linebreak => true)
+        %td= t("νυκτώβ", "nuktāb", :linebreak => true)
+        %td= t("καττήβ", "kəthēb", :linebreak => true)
+        %td= t("καττώβ", "kəthāb", :linebreak => true)
+        %td= t("ακτήβ", "'aktēb", :linebreak => true)
+        %td= t("εννυκτώβ", "'ennuktāb", :linebreak => true)
+        %td= t("τακτήβ", "taktēb", :linebreak => true)
+        %td= t("νίτκαταβ", "nitkatab", :linebreak => true)
+        %td= t("στάκταβ", "staktab", :linebreak => true)
+        %td= t("νιστυκτώβ", "nistuktāb", :linebreak => true)
+      %tr
+        %th 3rd Sg F
+        %td= t("κταβώ", "ktabā", :linebreak => true)
+        %td= t("νυκτωβώ", "nuktābā", :linebreak => true)
+        %td= t("καττηβώ", "kəthēbā", :linebreak => true)
+        %td= t("καττωβώ", "kəthābā", :linebreak => true)
+        %td= t("ακτηβώ", "'aktēbā", :linebreak => true)
+        %td= t("εννυκτωβώ", "'ennuktābā", :linebreak => true)
+        %td= t("τακτηβώ", "taktēbā", :linebreak => true)
+        %td= t("νιτκαταβώ", "nitkatabā", :linebreak => true)
+        %td= t("στακταβώ", "staktabā", :linebreak => true)
+        %td= t("νιστυκτωβώ", "nistuktābā", :linebreak => true)
+      %tr
+        %th 1st Pl
+        %td= t("κταβνώ", "ktabnā", :linebreak => true)
+        %td= t("νυκτωβνώ", "nuktābnā", :linebreak => true)
+        %td= t("καττηβνώ", "kəthēbnā", :linebreak => true)
+        %td= t("καττωβνώ", "kəthābnā", :linebreak => true)
+        %td= t("ακτηβνώ", "'aktēbnā", :linebreak => true)
+        %td= t("εννυκτωβνώ", "'ennuktābnā", :linebreak => true)
+        %td= t("τακτηβνώ", "taktēbnā", :linebreak => true)
+        %td= t("νιτκαταβνώ", "nitkatabnā", :linebreak => true)
+        %td= t("στακταβνώ", "staktabnā", :linebreak => true)
+        %td= t("νιστυκτωβνώ", "nistuktābnā", :linebreak => true)
+      %tr
+        %th 2nd Pl M
+        %td= t("κάταв̄τυν", "katavtun", :linebreak => true)
+        %td= t("νυκτώв̄τυν", "nuktāvtun", :linebreak => true)
+        %td= t("καττήв̄τυν", "kəthēvtun", :linebreak => true)
+        %td= t("καττώв̄τυν", "kəthāvtun", :linebreak => true)
+        %td= t("ακτήв̄τυν", "'aktēvtun", :linebreak => true)
+        %td= t("εννυκτώв̄τυν", "'ennuktāvtun", :linebreak => true)
+        %td= t("τακτήв̄τυν", "taktēvtun", :linebreak => true)
+        %td= t("νιτκάταв̄τυν", "nitkatavtun", :linebreak => true)
+        %td= t("στάκταв̄τυν", "staktavtun", :linebreak => true)
+        %td= t("νιστυκτώв̄τυν", "nistuktāvtun", :linebreak => true)
+      %tr
+        %th 2nd Pl F
+        %td= t("κάταв̄σ̄ιν", "katavšin", :linebreak => true)
+        %td= t("νυκτώв̄σ̄ιν", "nuktavšin", :linebreak => true)
+        %td= t("καττήв̄σ̄ιν", "kəthēvšin", :linebreak => true)
+        %td= t("καττώв̄σ̄ιν", "kəthāvšin", :linebreak => true)
+        %td= t("ακτήв̄σ̄ιν", "'aktēvšin", :linebreak => true)
+        %td= t("εννυκτώв̄σ̄ιν", "'ennuktāvšin", :linebreak => true)
+        %td= t("τακτήв̄σ̄ιν", "taktēvšin", :linebreak => true)
+        %td= t("νιτκάταв̄σ̄ιν", "nitkatavšin", :linebreak => true)
+        %td= t("στάκταв̄σ̄ιν", "staktavšin", :linebreak => true)
+        %td= t("νιστυκτώв̄σ̄ιν", "nistuktāvšin", :linebreak => true)
+      %tr
+        %th 3rd Pl
+        %td= t("κταβού", "ktabū", :linebreak => true)
+        %td= t("νυκτωβού", "nuktābū", :linebreak => true)
+        %td= t("καττηβού", "kəthēbū", :linebreak => true)
+        %td= t("καττωβού", "kəthābū", :linebreak => true)
+        %td= t("ακτηβού", "'aktēbū", :linebreak => true)
+        %td= t("εννυκτωβού", "'ennuktābū", :linebreak => true)
+        %td= t("τακτηβού", "taktēbū", :linebreak => true)
+        %td= t("νιτκαταβού", "nitkatabū", :linebreak => true)
+        %td= t("στακταβού", "staktabū", :linebreak => true)
+        %td= t("νιστυκτωβού", "nistuktābū", :linebreak => true)
+
+  = section "The Imperfect Tense" do
+    %table
+      %tr
+        %th{:colspan => 11} The Alashian Imperfect Tense
+      %tr
+        %th
+        %th
+          %i katab
+        %th
+          %i nuktāb
+        %th
+          %i kəthēb
+        %th
+          %i kəthāb
+        %th
+          %i 'aktēb
+        %th
+          %i 'ennuktāb
+        %th
+          %i taktēb
+        %th
+          %i nitkatab
+        %th
+          %i staktab
+        %th
+          %i nistuktāb
+      %tr
+        %th 1st Sg
+        %td= t("κιήτεв̄", "kietev", :linebreak => true)
+        %td= t("νυκυώταв̄", "nukuotav", :linebreak => true)
+        %td= t("κάττεв̄", "kəthev", :linebreak => true)
+        %td= t("κάτταв̄", "kəthav", :linebreak => true)
+        %td= t("ακτιήв̄", "'aktiev", :linebreak => true)
+        %td= t("εννυκτυώв̄", "'ennuktuov", :linebreak => true)
+        %td= t("τακτιήв̄", "taktiev", :linebreak => true)
+        %td= t("νιτκιήτεв̄", "nitkietev", :linebreak => true)
+        %td= t("στακτιήв̄", "staktiev", :linebreak => true)
+        %td= t("νιστυκτυώв̄", "nistuktuov", :linebreak => true)
+      %tr
+        %th 2nd Sg M
+        %td= t("κιήτεв̄ετ", "kietevet", :linebreak => true)
+        %td= t("νυκυώταв̄ατ", "nukuotavat", :linebreak => true)
+        %td= t("κάττεв̄ετ", "kəthevet", :linebreak => true)
+        %td= t("κάτταв̄ατ", "kəthavat", :linebreak => true)
+        %td= t("ακτιήв̄ετ", "'aktievet", :linebreak => true)
+        %td= t("εννυκτυώв̄ατ", "'ennuktuovat", :linebreak => true)
+        %td= t("τακτιήв̄ετ", "taktievet", :linebreak => true)
+        %td= t("νιτκιήτεв̄ετ", "nitkietevet", :linebreak => true)
+        %td= t("στακτιήв̄ετ", "staktievet", :linebreak => true)
+        %td= t("νιστυκτυώв̄ατ", "nistuktuovat", :linebreak => true)
+      %tr
+        %th 2nd Sg F
+        %td= t("κιήτεв̄ες̄", "kieteveš", :linebreak => true)
+        %td= t("νυκυώταв̄ας̄", "nukuotavaš", :linebreak => true)
+        %td= t("κάττεв̄ες̄", "kətheveš", :linebreak => true)
+        %td= t("κάτταв̄ας̄", "kəthavaš", :linebreak => true)
+        %td= t("ακτιήв̄ες̄", "'aktieveš", :linebreak => true)
+        %td= t("εννυκτυώв̄ας̄", "'ennuktuovaš", :linebreak => true)
+        %td= t("τακτιήв̄ες̄", "taktieveš", :linebreak => true)
+        %td= t("νιτκιήτεв̄ες̄", "nitkieteveš", :linebreak => true)
+        %td= t("στακτιήв̄ες̄", "staktieveš", :linebreak => true)
+        %td= t("νιστυκτυώв̄ας̄", "nistuktuovaš", :linebreak => true)
+      %tr
+        %th 3rd Sg M
+        %td= t("κήτεβ", "kēteb", :linebreak => true)
+        %td= t("νυκούταβ", "nukūtab", :linebreak => true)
+        %td= t("κάττεβ", "kətheb", :linebreak => true)
+        %td= t("κάτταβ", "kəthab", :linebreak => true)
+        %td= t("ακτιήβ", "'aktieb", :linebreak => true)
+        %td= t("εννυκτυώβ", "'ennuktuob", :linebreak => true)
+        %td= t("τακτιήβ", "taktieb", :linebreak => true)
+        %td= t("νιτκιήτεβ", "nitkieteb", :linebreak => true)
+        %td= t("στακτιήβ", "staktieb", :linebreak => true)
+        %td= t("νιστυκτυώβ", "nistuktuob", :linebreak => true)
+      %tr
+        %th 3rd Sg F
+        %td= t("κητβώ", "kētbā", :linebreak => true)
+        %td= t("νυκουτβώ", "nukūtbā", :linebreak => true)
+        %td= t("καττεβώ", "kəthebā", :linebreak => true)
+        %td= t("κατταβώ", "kəthabā", :linebreak => true)
+        %td= t("ακτιηβώ", "'aktiebā", :linebreak => true)
+        %td= t("εννυκτυωβώ", "'ennuktuobā", :linebreak => true)
+        %td= t("τακτιηβώ", "taktiebā", :linebreak => true)
+        %td= t("νιτκιητεβώ", "nitkietebā", :linebreak => true)
+        %td= t("στακτιηβώ", "staktiebā", :linebreak => true)
+        %td= t("νιστυκτυωβώ", "nistuktuobā", :linebreak => true)
+      %tr
+        %th 1st Pl
+        %td= t("κιήτεв̄εν", "kieteven", :linebreak => true)
+        %td= t("νυκυώταв̄αν", "nukuotavan", :linebreak => true)
+        %td= t("κάττεв̄εν", "kətheven", :linebreak => true)
+        %td= t("κάτταв̄αν", "kəthavan", :linebreak => true)
+        %td= t("ακτιήв̄εν", "'aktieven", :linebreak => true)
+        %td= t("εννυκτυώв̄αν", "'ennuktuovan", :linebreak => true)
+        %td= t("τακτιήв̄εν", "taktieven", :linebreak => true)
+        %td= t("νιτκιήτεв̄εν", "nitkieteven", :linebreak => true)
+        %td= t("στακτιήв̄εν", "staktieven", :linebreak => true)
+        %td= t("νιστυκτυώв̄αν", "nistuktuovan", :linebreak => true)
+      %tr
+        %th 2nd Pl M
+        %td= t("κιήτεв̄τυν", "kietevtun", :linebreak => true)
+        %td= t("νυκυώταв̄τυν", "nukuotavtun", :linebreak => true)
+        %td= t("κάττεв̄τυν", "kəthevtun", :linebreak => true)
+        %td= t("κάτταв̄τυν", "kəthavtun", :linebreak => true)
+        %td= t("ακτιήв̄τυν", "'aktievtun", :linebreak => true)
+        %td= t("εννυκτυώв̄τυν", "'ennuktuovtun", :linebreak => true)
+        %td= t("τακτιήв̄τυν", "taktievtun", :linebreak => true)
+        %td= t("νιτκιήτεв̄τυν", "nitkietevtun", :linebreak => true)
+        %td= t("στακτιήв̄τυν", "staktievtun", :linebreak => true)
+        %td= t("νιστυκτυώв̄τυν", "nistuktuovtun", :linebreak => true)
+      %tr
+        %th 2nd Pl F
+        %td= t("κιήτεв̄σ̄ιν", "kietevšin", :linebreak => true)
+        %td= t("νυκυώταв̄σ̄ιν", "nukuotavšin", :linebreak => true)
+        %td= t("κάττεв̄σ̄ιν", "kəthevšin", :linebreak => true)
+        %td= t("κάτταв̄σ̄ιν", "kəthavšin", :linebreak => true)
+        %td= t("ακτιήв̄σ̄ιν", "'aktievšin", :linebreak => true)
+        %td= t("εννυκτυώв̄σ̄ιν", "'ennuktuovšin", :linebreak => true)
+        %td= t("τακτιήв̄σ̄ιν", "taktievšin", :linebreak => true)
+        %td= t("νιτκιήτεв̄σ̄ιν", "nitkietevšin", :linebreak => true)
+        %td= t("στακτιήв̄σ̄ιν", "staktievšin", :linebreak => true)
+        %td= t("νιστυκτυώв̄σ̄ιν", "nistuktuovšin", :linebreak => true)
+      %tr
+        %th 3rd Pl
+        %td= t("κητβού", "kētbū", :linebreak => true)
+        %td= t("νυκουτβού", "nukūtbū", :linebreak => true)
+        %td= t("καττεβού", "kəthebū", :linebreak => true)
+        %td= t("κατταβού", "kəthabū", :linebreak => true)
+        %td= t("ακτιηβού", "'aktiebū", :linebreak => true)
+        %td= t("εννυκτυωβού", "'ennuktuobū", :linebreak => true)
+        %td= t("τακτιηβού", "taktiebū", :linebreak => true)
+        %td= t("νιτκιητεβού", "nitkietebū", :linebreak => true)
+        %td= t("στακτιηβού", "staktiebū", :linebreak => true)
+        %td= t("νιστυκτυωβού", "nistuktuobū", :linebreak => true)
+
+  = section "The Perfective Subjunctive Tense" do
+    %table
+      %tr
+        %th{:colspan => 11} The Alashian Perfective Subjunctive Tense
+      %tr
+        %th
+        %th
+          %i katab
+        %th
+          %i nuktāb
+        %th
+          %i kəthēb
+        %th
+          %i kəthāb
+        %th
+          %i 'aktēb
+        %th
+          %i 'ennuktāb
+        %th
+          %i taktēb
+        %th
+          %i nitkatab
+        %th
+          %i staktab
+        %th
+          %i nistuktāb
+      %tr
+        %th 1st Sg
+        %td= t("в̄άκταβ", "vaktab", :linebreak => true)
+        %td= t("в̄ακκυτώβ", "vakkutāb", :linebreak => true)
+        %td= t("в̄άκαττεβ", "vakətheb", :linebreak => true)
+        %td= t("в̄ύκατταβ", "vukəthab", :linebreak => true)
+        %td= t("в̄ώκτεβ", "vākteb", :linebreak => true)
+        %td= t("в̄άννυκταβ", "vannuktab", :linebreak => true)
+        %td= t("в̄ώτκαταβ", "vātkatab", :linebreak => true)
+        %td= t("в̄ώττακταβ", "vāthaktab", :linebreak => true)
+        %td= t("в̄ώστακταβ", "vāstaktab", :linebreak => true)
+        %td= t("в̄ώστυκταβ", "vāstuktab", :linebreak => true)
+      %tr
+        %th 1st Pl
+        %td= t("в̄άνακταβ", "vanaktab", :linebreak => true)
+        %td= t("в̄ανακκυτώβ", "vanakkutāb", :linebreak => true)
+        %td= t("в̄ενείκαττεβ", "venīkətheb", :linebreak => true)
+        %td= t("в̄ανούκατταβ", "vanūkəthab", :linebreak => true)
+        %td= t("в̄ανώκτεβ", "vanākteb", :linebreak => true)
+        %td= t("в̄ανίννυκταβ", "vaninnuktab", :linebreak => true)
+        %td= t("в̄ανάτκαταβ", "vənatkatab", :linebreak => true)
+        %td= t("в̄ενάττακταβ", "venəthaktab", :linebreak => true)
+        %td= t("в̄ενίστακταβ", "venistaktab", :linebreak => true)
+        %td= t("в̄ανώστυκταβ", "vanāstuktab", :linebreak => true)
+      %tr
+        %th 2nd
+        %td= t("в̄άτακταβ", "vataktab", :linebreak => true)
+        %td= t("в̄ατακκυτώβ", "vatakkutāb", :linebreak => true)
+        %td= t("в̄ετείκαττεβ", "vetīkətheb", :linebreak => true)
+        %td= t("в̄ατούκατταβ", "vatūkəthab", :linebreak => true)
+        %td= t("в̄ατώκτεβ", "vatākteb", :linebreak => true)
+        %td= t("в̄ατίννυκταβ", "vatinnuktab", :linebreak => true)
+        %td= t("в̄ατάτκαταβ", "vətatkatab", :linebreak => true)
+        %td= t("в̄ετάττακταβ", "vetəthaktab", :linebreak => true)
+        %td= t("в̄ετίστακταβ", "vetistaktab", :linebreak => true)
+        %td= t("в̄ατώστυκταβ", "vatāstuktab", :linebreak => true)
+      %tr
+        %th 3rd
+        %td= t("в̄ήκταβ", "vēktab", :linebreak => true)
+        %td= t("в̄ηκκυτώβ", "vēkkutāb", :linebreak => true)
+        %td= t("в̄ήκαττεβ", "vēkətheb", :linebreak => true)
+        %td= t("в̄ήκατταβ", "vēkəthab", :linebreak => true)
+        %td= t("в̄ιώκτεβ", "vyākteb", :linebreak => true)
+        %td= t("в̄ήννυκταβ", "vēnnuktab", :linebreak => true)
+        %td= t("в̄είτκαταβ", "vītkatab", :linebreak => true)
+        %td= t("в̄ήττακταβ", "vēthaktab", :linebreak => true)
+        %td= t("в̄ήστακταβ", "vēstaktab", :linebreak => true)
+        %td= t("в̄ιώστυκταβ", "vyāstuktab", :linebreak => true)
+
+  = section "The Imperative" do
+    %table
+      %tr
+        %th{:colspan => 11} The Alashian Imperative
+      %tr
+        %th
+        %th
+          %i katab
+        %th
+          %i nuktāb
+        %th
+          %i kəthēb
+        %th
+          %i kəthāb
+        %th
+          %i 'aktēb
+        %th
+          %i 'ennuktāb
+        %th
+          %i taktēb
+        %th
+          %i nitkatab
+        %th
+          %i staktab
+        %th
+          %i nistuktāb
+      %tr
+        %th Masc Sg
+        %td= t("κτώβ", "ktāb", :linebreak => true)
+        %td= t("νικυτώβ", "nikutāb", :linebreak => true)
+        %td= t("καττήβ", "kəthēb", :linebreak => true)
+        %td —
+        %td= t("ακτήβ", "'aktēb", :linebreak => true)
+        %td —
+        %td= t("τικτώβ", "tiktāb", :linebreak => true)
+        %td= t("άττακταβ", "'əthaktab", :linebreak => true)
+        %td= t("έστακταβ", "'estaktab", :linebreak => true)
+        %td —
+      %tr
+        %th Fem Sg
+        %td= t("κατβεί", "katbī", :linebreak => true)
+        %td= t("νικτωβεί", "niktābī", :linebreak => true)
+        %td= t("καττεβεί", "kəthebī", :linebreak => true)
+        %td —
+        %td= t("ακτεβεί", "'aktebī", :linebreak => true)
+        %td —
+        %td= t("τικταβεί", "tiktabī", :linebreak => true)
+        %td= t("αττακταβεί", "'əthaktabī", :linebreak => true)
+        %td= t("εστακταβεί", "'estaktabī", :linebreak => true)
+        %td —
+      %tr
+        %th Pl
+        %td= t("κατβού", "katbū", :linebreak => true)
+        %td= t("νικτωβού", "niktābū", :linebreak => true)
+        %td= t("καττεβού", "kəthebū", :linebreak => true)
+        %td —
+        %td= t("ακτεβού", "'aktebū", :linebreak => true)
+        %td —
+        %td= t("τικταβού", "tiktabū", :linebreak => true)
+        %td= t("αττακταβού", "'əthaktabū", :linebreak => true)
+        %td= t("εστακταβού", "'estaktabū", :linebreak => true)
+        %td —
+
+  = section "Deverbatives" do
+    %table
+      %tr
+        %th{:colspan => 11} The Alashian Deverbatives
+      %tr
+        %th
+        %th
+          %i katab
+        %th
+          %i nuktāb
+        %th
+          %i kəthēb
+        %th
+          %i kəthāb
+        %th
+          %i 'aktēb
+        %th
+          %i 'ennuktāb
+        %th
+          %i taktēb
+        %th
+          %i nitkatab
+        %th
+          %i staktab
+        %th
+          %i nistuktāb
+      %tr
+        %th Infinitive
+        %td= t("κατούβ", "katūb", :linebreak => true)
+        %td= t("μακκυτώβ", "makkutāb", :linebreak => true)
+        %td= t("μακαττούβ", "makəthūb", :linebreak => true)
+        %td= t("μακαττώβ", "makəthāb", :linebreak => true)
+        %td= t("μωκτήβ", "māktēb", :linebreak => true)
+        %td= t("μαννυκτώβ", "mannuktāb", :linebreak => true)
+        %td= t("ματκατήβ", "matkatēb", :linebreak => true)
+        %td= t("μώττακταβ", "māthaktab", :linebreak => true)
+        %td= t("μάστακταβ", "mastaktab", :linebreak => true)
+        %td= t("μωστυκτώβ", "māstuktāb", :linebreak => true)
+      %tr
+        %th Act. Part.
+        %td= t("κούτιβ", "kūtib", :linebreak => true)
+        %td —
+        %td= t("μύκαττιβ", "mukəthib", :linebreak => true)
+        %td —
+        %td= t("μώκτιβ", "māktib", :linebreak => true)
+        %td —
+        %td= t("μίτκατιβ", "mitkatib", :linebreak => true)
+        %td= t("μάττακτιβ", "məthaktib", :linebreak => true)
+        %td= t("μύστακτιβ", "mustaktib", :linebreak => true)
+        %td —
+      %tr
+        %th Pass. Part.
+        %td= t("μακτούβ", "maktūb", :linebreak => true)
+        %td= t("νάκτιβ", "naktib", :linebreak => true)
+        %td —
+        %td= t("μύκατταβ", "mukəthab", :linebreak => true)
+        %td —
+        %td= t("μύννακταβ", "munnaktab", :linebreak => true)
+        %td —
+        %td —
+        %td —
+        %td= t("μούστακταβ", "mūstaktab", :linebreak => true)
+
+= section "Common Irregular Roots" do
+  %p While the vast majority of Alashian verbs are either regular or have predictable irregularities, a small set of roots may truly be considered irregular. These roots' conjugation cannot be predicted solely on the structure of the root itself, but must be in whole or in part learned separately. The charts below describe the conjugation of some of the most frequent irregular verbs.
+
+  = section "*hwāy “be”" do
+    %p The root *hwāy “be” is the most irregular in the Alashian language; this should come as no surprise, given that all three of its radicals are weak consonants. The present tense forms have an emphatic function; under normal circumstances they are not typically used.
+    %p This root may only appear in active Scale I.
+    - alashian = { :present     => %w(αυή τιυή ταυεί ιυή ιαυεί νιυού τιυού τιυού ιυού),
+                   :preterite   => ["в̄είτ", "в̄είτα", "в̄είσ̄ε", "в̄εί (ηαυή)", "в̄ιώ (ηυιώ)", "в̄ινώ", "в̄είτυν", "в̄είσ̄ιν", "в̄ιού (ηυιού)"],
+                   :imperfect   => ["υή", "υήτ", "υής̄", "υή (ηείυε)", "υειώ (ηεία)", "υήν", "υήτυν", "υήσ̄ιν", "υειού (ηείυ)"],
+                   :subjunctive => %w(в̄ώυε в̄ατείυε в̄ατείυε в̄είυε в̄είυε в̄ανείυε в̄ατείυε в̄ατείυε в̄είυε),
+                   :imperative  => %w(в̄ή в̄αιεί в̄αιού),
+                   :infinitive  => "ηαυού",
+                   :participle  => "ηουεί" }
+    - latin = { :present     => %w('awē tiwē tawī yiwē yawī niwū tiwū tiwū yiwū),
+                :preterite   => ["vīt", "vīta", "vīše", "vī (hawē)", "vyā (huyā)", "vinā", "vītun", "vīšin", "vyū (huyū)"],
+                :imperfect   => ["wē", "wēt", "wēš", "wē (hīwe)", "weyā (hīya)", "wēn", "wētun", "wēšin", "weyū (hīyu)"],
+                :subjunctive => %w(vāwe vatīwe vatīwe vīwe vīwe vanīwe vatīwe vatīwe vīwe),
+                :imperative  => %w(vē vayī vayū),
+                :infinitive  => "hawū",
+                :participle  => "hūwī" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "vī", :eng => "be" }, :alashian => alashian, :latin => latin
+    %p The preterite and imperfect have two forms listed in each of their third person forms. The first is the common form of the verb, while the form in parentheses is limited to existencial constructions (i.e., 'there was/were').
+
+  = section "*řyāw “live”" do
+    %p The root *řyāw “live” similarly suffers from having three problematic consonants and has undergone considerable analogical restructuring. Although this root may appear in a number of different scales, as listed below, only the <i>katab</i> forms are shown here.
+    %ul
+      %li <i>katab</i>: #{t "ρ̄άια", "řaya"} “live”
+      %li <i>kəthēb</i>: #{t "ρ̄άιιή", "řəyyē"} “preserve, keep alive”
+      %li <i>kəthāb</i>: #{t "ρ̄άιιώ", "řəyyā"} “be preserved, be kept alive”
+      %li <i>'aktēb</i>: #{t "αρ̄αιή", "'ařayē"} “give life, revive”
+      %li <i>'ennuktāb</i>: #{t "εννυρ̄αιώ", "'ennuřayā"} “be given life, be revived”
+      %li <i>taktēb</i>: #{t "ταρ̄αιή", "tařayē"} “come to life”
+      %li <i>nistuktāb</i>: #{t "νιστυρ̄αιώ", "nistuřayā"} “spare, let live, leave alone”
+    - alashian = { :present     => %w(αρ̄ώ τερ̄ώ τερ̄αεί ιερ̄ώ ιερ̄αεί νερ̄αού τερ̄αού τερ̄αού ιερ̄αού),
+                   :preterite   => %w(ρ̄ήυετ ρ̄ήυετα ρ̄ήυεσ̄ε ρ̄άια ρ̄ηυώ ρ̄ηυενώ ρ̄ήυετυν ρ̄ήυεσ̄ιν ρ̄ηιού),
+                   :imperfect   => %w(ρ̄ήιε ρ̄ήιετ ρ̄ήιες̄ ρ̄ήιε ρ̄ηιώ ρ̄ήιεν ρ̄ήιετυν ρ̄ήιεσ̄ιν ρ̄ηιού),
+                   :subjunctive => %w(в̄ώρ̄υ в̄άτερ̄υ в̄άτερ̄υ в̄ήρ̄υ в̄ήρ̄υ в̄άνερ̄υ в̄άτερ̄υ в̄άτερ̄υ в̄ήρ̄υ),
+                   :imperative  => %w(ρ̄ή ρ̄ηιεί ρ̄ηιού),
+                   :infinitive  => "ρ̄αιού",
+                   :participle  => "ρ̄ουιεί" }
+    - latin = { :present     => %w('ařā teřā teřa'ī yeřā yeřa'ī neřa'ū teřa'ū teřa'ū yeřa'ū),
+                :preterite   => %w(řēwet řēweta řēweše řaya řēwā řēwenā řēwetun řēwešin řēyū),
+                :imperfect   => %w(řēye řēyet řēyeš řēye řēyā řēyen řēyetun řēyešin řēyū),
+                :subjunctive => %w(vāřu vateřu vateřu vēřu vēřu vaneřu vateřu vateřu vēřu),
+                :imperative  => %w(řē řēyī řēyū),
+                :infinitive  => "řayū",
+                :participle  => "řūyī" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "řaya", :eng => "live" }, :alashian => alashian, :latin => latin
+
+  = section "*hšāy “make, do”" do
+    %p The root *hšāy “make, do” consists of two weak consonants around a stable base -š-. This root is not exceptionally irregular except for the behavior of the initial *H, which disappears in places not typical for root-initial *H. It appears in a number of different scales, but only <i>katab</i> is shown below.
+    %ul
+      %li <i>katab</i>: #{t "ηασ̄ή", "hašē"} “make, do”
+      %li <i>nuktāb</i>: #{t "νυασ̄ή", "nu'ašē"} “be made, be done”
+      %li <i>'aktēb</i>: #{t "αηασ̄ή", "'ahašē"} “force, compel”
+      %li <i>'ennuktāb</i>: #{t "εννυηασ̄ή", "'ennuhašē"} “be forced, be compelled”
+      %li <i>nistuktāb</i>: #{t "νιστυηασ̄ώ", "nistuhašā"} “be forced on, be mandatory”
+    - alashian = { :present     => %w(ασ̄ή τισ̄ή τισ̄αιεί ισ̄ή ισ̄αιεί νισ̄αιού τισ̄αιού τισ̄αιού ισ̄αιού),
+                   :preterite   => %w(ηασ̄ήτ ηασ̄ήτα ηασ̄ήσ̄ε ηασ̄ή ηασ̄αιώ ηασ̄ηνώ ηασ̄ήτυν ηασ̄ήσ̄ιν ηασ̄αιού),
+                   :imperfect   => %w(ιεσ̄ή ιεσ̄ήτ ιεσ̄ής̄ ιεσ̄ή ιεσ̄ειώ ιεσ̄ήν ιεσ̄ήτυν ιεσ̄ήσ̄ιν ιεσ̄ειού),
+                   :subjunctive => %w(в̄ωσ̄ώ в̄ατασ̄ώ в̄ατασ̄ώ в̄ησ̄ώ в̄ησ̄ώ в̄ανασ̄ώ в̄ατασ̄ώ в̄ατασ̄ώ в̄ησ̄ώ),
+                   :imperative  => %w(σ̄ή σ̄εί σ̄ού),
+                   :infinitive  => "ηασ̄ού",
+                   :participle  => "ηούσ̄ει" }
+    - latin = { :present     => %w('ašē tišē tišayī yišē yišayī nišayū tišayū tišayū yišayū),
+                :preterite   => %w(hašēt hašēta hašēše hašē hašayā hašēnā hašētun hašēšin hašayū),
+                :imperfect   => %w(yešē yešēt yešēš yešē yešeyā yešēn yešētun yešēšin yešeyū),
+                :subjunctive => %w(vāšā vatašā vatašā vēšā vēšā vanašā vatašā vatašā vēšā),
+                :imperative  => %w(šē šī šū),
+                :infinitive  => "hašū",
+                :participle  => "hūšī" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "hašē", :eng => "make, do" }, :alashian => alashian, :latin => latin 
+
+  = section "*ydāh “know”" do
+    %p The root *ydāh “know” similarly has two weak consonants around a stable base of *-d-. It appears in many different scales, though the most common is the base <i>katab</i> form #{t "ιαδώ", "yadā"}; most of these forms aren't especially irregular in a way that can't be predicted from the #{template "C1"} = *Y and #{template "C3"} = *H paradigms other than the imperative.
+    %ul
+      %li <i>katab</i>: #{t "ιαδώ", "yadā"} “know”
+      %li <i>nuktāb</i>: #{t "νυιώδ", "nuyād"} “be known”
+      %li <i>'aktēb</i>: #{t "αιήδ", "'ayēd"} “inform, make aware”
+      %li <i>'ennuktāb</i>: #{t "εννυιώδ", "'ennuyād"} “be informed, be aware”
+      %li <i>taktēb</i>: #{t "ταιώδ", "tayād"} “have intercourse (formal/archaic)”
+      %li <i>staktab</i>: #{t "σταιώδ", "stayād"} “determine, confirm”
+      %li <i>nistuktāb</i>: #{t "νιστυιώδ", "nistuyād"} “become manifest, spread (of knowledge, ideas, news, etc.)”
+    - alashian = { :present     => %w(ηδώ τειδώ τειδαηεί ιειδώ ιειδαηεί νειδαηού τειδαηού τειδαηού ιειδαηού),
+                   :preterite   => %w(ιαδώτ ιαδώτα ιαδώσ̄ε ιαδώ ιαδαηώ ιαδωνώ ιαδώτυν ιαδώσ̄ιν ιαδαηού),
+                   :imperfect   => %w(ιηδή ιηδήτ ιηδής̄ ιηδή ιηδεηώ ιηδήν ιηδήτυν ιηδήσ̄ιν ιηδεηού),
+                   :subjunctive => %w(в̄ηδώ в̄ετειδώ в̄ετειδώ в̄ειδώ в̄ειδώ в̄ενειδώ в̄ετειδώ в̄ετειδώ в̄ειδώ),
+                   :imperative  => %w(δώ δαιεί δαιού),
+                   :infinitive  => "ιαδού",
+                   :participle  => "ιούδη" }
+    - latin = { :present     => %w('ēdā tīdā tīdahī yīdā yīdahī nīdahū tīdahū tīdahū yīdahū),
+                :preterite   => %w(yadāt yadāta yadāše yadā yadahā yadānā yadātun yadāšin yadahū),
+                :imperfect   => %w(yēdē yēdēt yēdēš yēdē yēdehā yēdēn yēdētun yēdēšin yēdehū),
+                :subjunctive => %w(vēdā vetīdā vetīdā vīdā vīdā venīdā vetīdā vetīdā vīdā),
+                :imperative  => %w(dā dayī dayū),
+                :infinitive  => "yadū",
+                :participle  => "yūdē" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "yadā", :eng => "know" }, :alashian => alashian, :latin => latin
+
+  = section "*bū' “come”" do
+    %p The root *bū' “come” both is biconsonantal and has a root-final glottal stop, resulting in a rather exceptional biconsonantal paradigm that includes some unusual vowel alterations.
+    %ul
+      %li <i>katab</i>: #{t "βού", "bū"} “come”
+      %li <i>staktab</i>: #{t "σταβού", "stabū"} “come back, return (after a short trip or outing, no more than a few hours)”
+      %li <i>nistuktāb</i>: #{t "νιστυβού", "nistubū"} “originate, come (stative)”
+    - alashian = { :present     => %w(αβού τιβού τιβεί ιβού ιβεί νιβού τιβού τιβού ιβού),
+                   :preterite   => %w(βυώτ βούττα βούτζζε βού βυώ βουνώ βούττυν βούτζζιν βυού),
+                   :imperfect   => %w(βιήυε βιήτ βιής̄ βήυε βηώ βιήν βιήττυν βιήτζζιν βηού),
+                   :subjunctive => %w(в̄ωβού в̄ατιβού в̄ατιβού в̄ηβού в̄ηβού в̄ανιβού в̄ατιβού в̄ατιβού в̄ηβού),
+                   :imperative  => %w(βού βυεί βυού),
+                   :infinitive  => "βού",
+                   :participle  => "βούε" }
+    - latin = { :present     => %w('abū tibū tibī yibū yibī nibū tibū tibū yibū),
+                :preterite   => %w(buot būtha būčhe bū bu'ā būnā būthun būčhin bu'ū),
+                :imperfect   => %w(biewe biet bieš bēwe bē'ā bien biethun biečhin bē'ū),
+                :subjunctive => %w(vābū vatibū vatibū vēbū vēbū vanibū vatibū vatibū vēbū),
+                :imperative  => %w(bū bwī bwū),
+                :infinitive  => "bū",
+                :participle  => "būwe" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "bū", :eng => "come" }, :alashian => alashian, :latin => latin
+
+  = section "*wčā' “go out, leave”" do
+    %p The root *wčā' “go out, leave” has two weak consonants as well, but what is most surprising about its conjugation in <i>katab</i> is the loss of the *w in the preterite (non-third person) as well as the imperative. Note also the contraction of *č + *' into *čh in the third person singular feminine and third person plural of the imperfect.
+    %ul
+      %li <i>katab</i>: #{t "в̄άτζα", "vača"} “go out, leave”
+      %li <i>'aktēb</i>: #{t "ουτζήτζ", "'ūčēč"} “remove, take out”<sup>1</sup>
+      %li <i>'ennuktāb</i>: #{t "εννυτζώτζ", "'ennučāč"} “be removed, be taken out”<sup>1</sup>
+      %li <i>nistuktāb</i>: #{t "νιστουτζώ", "nistūčā"} “quit, resign; head away from, leave (stative)”
+    - alashian = { :present     => %w(ουτζώ τειτζώ τειτζαεί ιειτζώ ιειτζαεί νειτζαού τειτζαού τειτζαού ιειτζαού),
+                   :preterite   => %w(τζώτ τζώττα τζώτζζε в̄άτζα в̄ατζαώ τζωννώ τζώττυν τζώτζζιν в̄ατζαού),
+                   :imperfect   => %w(ιήτζε ιήτζετ ιήτζες̄ ιήτζε ιητζζώ ιήτζεν ιήτζαττυν ιήτζατζζιν ιητζζού),
+                   :subjunctive => %w(в̄ουτζώ в̄ατουτζώ в̄ατουτζώ в̄ητζώ в̄ητζώ в̄ανουτζώ в̄ατουτζώ в̄ατουτζώ в̄ητζώ),
+                   :imperative  => %w(τζώ τζαεί τζαού),
+                   :infinitive  => "в̄ατζού",
+                   :participle  => "в̄ούτζι" }
+    - latin = { :present     => %w('ūčā tīčā tīča'ī yīčā yīča'ī nīča'ū tīča'ū tīča'ū yīča'ū),
+                :preterite   => %w(čāt čātha čāčhe vača vača'ā čānnā čāthun čāčhin vača'ū),
+                :imperfect   => %w(yēče yēčet yēčeš yēče yēčhā yēčen yēčəthun yēčəčhin yēčhū),
+                :subjunctive => %w(vūčā vatūčā vatūčā vēčā vēčā vanūčā vatūčā vatūčā vēčā),
+                :imperative  => %w(čā ča'ī ča'ū),
+                :infinitive  => "vačū",
+                :participle  => "vūči" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "vača", :eng => "go out, leave" }, :alashian => alashian, :latin => latin
+
+  = section "*whāb “give”" do
+    %p The root *whāb “give” is only truly irregular in <i>katab</i>, where most forms lose either the #{template "C1"} *w or the #{template "C2"} *h. In other scales its irregularities are predictable using the normal rules of weak roots.
+    %ul
+      %li <i>katab</i>: #{t "ηάβ", "hab"} “give”
+      %li <i>nuktāb</i>: #{t "νουηώβ", "nūhāb"} “be given [something]”
+      %li <i>taktēb</i>: #{t "τουηήβ", "tūhēb"} “give one another”
+      %li <i>staktab</i>: #{t "στούηαβ", "stūhab"} “accept a gift”
+      %li <i>nistuktāb</i>: #{t "νιστουηώβ", "nistūhāb"} “be given [to]”
+    - alashian = { :present     => %w(αυώβ τιυώβ τιυαβεί ιυώβ ιυαβεί νιυαβού τιυαβού τιυαβού ιυαβού),
+                   :preterite   => %w(ηάβετ ηάв̄τα ηάв̄σ̄ε ηάβ ηαβώ ηαβνώ ηάв̄τυν ηάв̄σ̄ιν ηαβού),
+                   :imperfect   => %w(ιήв̄ ιήв̄ετ ιήв̄ες̄ ιήβ ιηβώ ιήв̄εν ιήв̄τυν ιήв̄σ̄ιν ιηβού),
+                   :subjunctive => %w(в̄ούηαβ в̄άτυηαβ в̄άτυηαβ в̄ήηαβ в̄ήηαβ в̄άνυηαβ в̄άτυηαβ в̄άτυηαβ в̄ήηαβ),
+                   :imperative  => %w(ηώβ ηαβεί ηαβού),
+                   :infinitive  => "в̄αηούβ",
+                   :participle  => "в̄ούηιβ" }
+    - latin = { :present     => %w('awāb tiwāb tiwabī yiwāb yiwabī niwabū tiwabū tiwabū yiwabū),
+                :preterite   => %w(habet havta havše hab habā habnā havtun havšin habū),
+                :imperfect   => %w(yēv yēvet yēveš yēb yēbā yēven yēvtun yēvšin yēbū),
+                :subjunctive => %w(vūhab vatuhab vatuhab vēhab vēhab vanuhab vatuhab vatuhab vēhab),
+                :imperative  => %w(hāb habī habū),
+                :infinitive  => "vahūb",
+                :participle  => "vūhib" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "hab", :eng => "give" }, :alashian => alashian, :latin => latin
+
+  = section "*'mār “say”" do
+    %p With the root *'mār “say”, the initial radical *' is optional in the preterite and imperfect tenses, mandatory in the deverbatives, and absent (quasi-biconsonantal) elsewhere. This means that there are two past tense paradigms, #{t "άμαρ", "'amar"} and #{t "μώρ", "mār"}, both of which are in free variation; the choice of one over the other in a given context seems to be dependent more on prosody than anything else. In other scales, *'mār behaves as a regular triconsonantal root.
+    %ul
+      %li <i>katab</i>: #{t "άμαρ", "'amar"} / #{t "μώρ", "mār"} “say”
+      %li <i>nuktāb</i>: #{t "νυαμώρ", "nu'amār"} “be said”
+      %li <i>taktēb</i>: #{t "ταηαμήρ", "tahamēr"} “say together, say in unison”
+      %li <i>nitkatab</i>: #{t "νάτταμαρ", "nəthamar"} “misspeak, have a slip of the tongue”
+    - alashian = { :present     => %w(αμώρ τιμώρ τιμαρεί ιμώρ ιμαρεί νιμαρού τιμαρού τιμαρού ιμαρού),
+                   :preterite   => %w(άμαρετ/μώρετ άμαρτα/μώρτα άμαρσ̄ε/μώρσ̄ε άμαρ/μώρ αμβρώ/μωρώ αμαρνώ/μωρνώ άμαρτυν/μώρτυν άμαρσ̄ιν/μώρσ̄ιν αμβρού/μωρού),
+                   :imperfect   => %w(ιέμερ/μιήρ ιέμερετ/μιήρετ ιέμερες̄/μιήρες̄ ήμερ/μήρ ημβρώ/μηρώ ιέμερεν/μιήρεν ιέμερτυν/μιήρτυν ιέμερσ̄ιν/μιήρσ̄ιν ημβρού/μιηρού),
+                   :subjunctive => %w(в̄ώμαρ в̄άτιμαρ в̄άτιμαρ в̄ήμαρ в̄ήμαρ в̄άνιμαρ в̄άτιμαρ в̄άτιμαρ в̄ήμαρ),
+                   :imperative  => %w(μώρ μαρεί μαρού),
+                   :infinitive  => "αμούρ",
+                   :participle  => "ούμιρ" }
+    - latin = { :present     => %w('amār timār timarī yimār yimarī nimarū timarū timarū yimarū),
+                :preterite   => %w('amaret/māret 'amarta/mārta 'amarše/mārše 'amar/mār 'ambrā/mārā 'amarnā/mārnā 'amartun/mārtun 'amaršin/māršin 'ambrū/mārū),
+                :imperfect   => %w(yemer/mier yemeret/mieret yemereš/miereš 'ēmer/mēr 'ēmbrā/mērā yemeren/mieren yemertun/miertun yemeršin/mieršin 'ēmbrū/mierū),
+                :subjunctive => %w(vāmar vatimar vatimar vēmar vēmar vanimar vatimar vatimar vēmar),
+                :imperative  => %w(mār marī marū),
+                :infinitive  => "'amūr",
+                :participle  => "'ūmir" }
+    = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "'amar/mār", :eng => "say" }, :alashian => alashian, :latin => latin
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) These two Scale III forms are historically derived from the root *wčā' by replacing the final radical *' with a reduplicated *č. This sort of reduplication-cum-augmentation was once a common means for dealing with weak root consonants that had a tendency to drop, but is now not productive at all, surviving only in a number of frozen forms such as these. Most references at present list these as belonging to a separate root *wčāč, which from a synchronic perspective makes the most sense.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
