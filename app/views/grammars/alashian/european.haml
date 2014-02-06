@@ -1,0 +1,278 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Ρειμιήν βνε Αλλασυννούς̄ Νεв̄ρυπκιούς̄".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p Alashian's position on Cyprus has meant that the language has been in close and intense contact with non-Semitic languages for several thousand years, in particular Greek, Turkish, French, and most recently, English. This contact has had a profound impact on the structure of Alashian due to the very different morphological structure of Alashian's Semitic core (consisting of abstract roots and non-contiguous inflection) and the Indo-European/Turkic system of fixed roots and inflection.
+  %p The traditional Semitic model allows for the incorporation of loan verbs by abstracting a triliteral or quadriliteral root from a word, disregarding its original vocalic components, and applying a Semitic vowel template. This can be seen, for instance, in how Modern Hebrew verbalized #{t "טלפון", "telefon"} “telephone” as #{t "טילפן", "tilpen"} “he phoned” by extracting the root *t-l-p/f-n and applying the native template #{template "*C1iC2C3eC4"}, as also seen in #{t "בילבל", "bilbel"} “he confused”.
+  %p Alashian once behaved in much the same way, taking foreign words (primary Ancient and early Medieval Greek) and devising new roots usable in its root-and-template model, with words such as Greek #{t "φάρμακον", "phármakon"} “medicine, herb, drug” giving Alashian #{t "πάραν", "paran"} “heal” (root *phrān). However, as time went on and bilingualism became increasingly common, this system began to break down; conversion to a Semitic model was simply not well suited to an actively bilingual community due to the complexity involved (making it hard to use spontaneous borrowings, as is common in bilingual environments), the distortion of foreign words (rendering many foreign lexemes unrecognizable), and the presence of many foreign words for which it is simply not clear what the three or four 'most essential' consonants may be. Alashian, much like its Semitic cousin Maltese, needed a means of borrowing foreign verbs intact regardless of length or vowel structure.
+  %p The so-called 'European Loan Verb Conjugation' of Alashian consists of a heavily pared-down version of the Semitic model that is mostly affixing, with little reliance on vowel patterns for semantic force. Roots in this conjugation are always contiguous and cannot undergo vowel modification (except, for some verbs, in the imperfect), thereby acting much more like verbs in many Indo-European and Turkic languages. Nowadays the vast majority of new verbs being introduced into Alashian use this system rather than the Semitic model: #{t "τελεφούν", "telefūn"} “telephone” gives #{t "ατελεφουνώ", "'atelefūnā"} “I am phoning”, #{t "τελεφουνώτ", "telefūnāt"} “I phoned”, and so on. Interestingly, the conjugation of native Semitic quadriconsonantal roots follows the European root model in some scales.
+  %p Some examples of loan words:
+  %table.invisible
+    %tr
+      %td
+        %table
+          %tr
+            %th{:colspan => 2} Greek Loans
+          %tr
+            %th Alashian
+            %th Greek
+          %tr
+            %td= t("εв̄λυωιώ", "'evluoyā", :linebreak => true)
+            %td ευλογία<br>“blessing”
+          %tr
+            %td= t("μετωνιώ", "metānyā", :linebreak => true)
+            %td μετάνοια<br>“repentance”
+          %tr
+            %td= t("παρατμώ", "paratmā", :linebreak => true)
+            %td παράπτωμα<br>“transgression”
+          %tr
+            %td= t("απιλώ", "'apilā", :linebreak => true)
+            %td απειλώ<br>“threaten”
+          %tr
+            %td= t("τραγυδ̄ώ", "traguḏā", :linebreak => true)
+            %td τραγουδώ<br>“sing”
+          %tr
+            %td= t("ιπυγραφώ", "'ipugrafā", :linebreak => true)
+            %td υπογράφω<br>“sign”
+          %tr
+            %td= t("πυωλενώ", "puolenā", :linebreak => true)
+            %td πόλεμος<br>“war”
+          %tr
+            %td= t("σιμφανώ", "simfanā", :linebreak => true)
+            %td συμφωνώ<br>“agree”
+      %td
+        %table
+          %tr
+            %th{:colspan => 2} Turkish Loans
+          %tr
+            %th Alashian
+            %th Turkish
+          %tr
+            %td= t("γ̄αβρακώ", "ǧabrakā", :linebreak => true)
+            %td gümrük<br>“tariff”
+          %tr
+            %td= t("τζεσουρώ", "česūrā", :linebreak => true)
+            %td cesur<br>“courageous”
+          %tr
+            %td= t("σουπρινώ", "sūprinā", :linebreak => true)
+            %td süpür[mek]<br>“sweep”
+          %tr
+            %td= t("ασατώ", "'asatā", :linebreak => true)
+            %td hasat<br>“harvest”
+          %tr
+            %td= t("βαιλινώ", "baylinā", :linebreak => true)
+            %td bayıl[mak]<br>“faint”
+          %tr
+            %td= t("σαυλινώ", "sawlinā", :linebreak => true)
+            %td savul[mak]<br>“stand aside”
+          %tr
+            %td= t("ταβρινώ", "tabrinā", :linebreak => true)
+            %td tabir<br>“expression”
+          %tr
+            %td= t("κυλαιλώ", "kulaylā", :linebreak => true)
+            %td kolayla[mak]<br>“finish most of”
+      %td
+        %table
+          %tr
+            %th{:colspan => 2} French Loans
+          %tr
+            %th Alashian
+            %th French
+          %tr
+            %td= t("εντερεσώ", "'enteresā", :linebreak => true)
+            %td intéressant<br>“interesting”
+          %tr
+            %td= t("υργανιζώ", "'urganizā", :linebreak => true)
+            %td organizer<br>“organize”
+          %tr
+            %td= t("γαρδώ", "gardā", :linebreak => true)
+            %td garder<br>“guard”
+          %tr
+            %td= t("μετρουνώ", "metrūnā", :linebreak => true)
+            %td métro<br>“subway”
+          %tr
+            %td= t("σερκαλώ", "serkəlā", :linebreak => true)
+            %td circle<br>“circle”
+          %tr
+            %td= t("νερв̄ώ", "nervā", :linebreak => true)
+            %td nerveux<br>“nervous”
+          %tr
+            %td= t("τελεв̄ιζώ", "televizā", :linebreak => true)
+            %td télévision<br>“television”
+          %tr
+            %td= t("φιλμώ", "filmā", :linebreak => true)
+            %td filme<br>“film”
+      %td
+        %table
+          %tr
+            %th{:colspan => 2} English Loans
+          %tr
+            %th Alashian
+            %th English
+          %tr
+            %td= t("δραιв̄ώ", "drayvā", :linebreak => true)
+            %td drive
+          %tr
+            %td= t("φινισ̄ώ", "finišā", :linebreak => true)
+            %td finish
+          %tr
+            %td= t("φυωλσώ", "fuolsā", :linebreak => true)
+            %td false
+          %tr
+            %td= t("παρκώ", "parkā", :linebreak => true)
+            %td park
+          %tr
+            %td= t("κυμπιουτρινώ", "kumpiyūtrinā", :linebreak => true)
+            %td computer
+          %tr
+            %td= t("φλερτώ", "flertā", :linebreak => true)
+            %td flirt
+          %tr
+            %td= t("ιουζζώ", "yūzzā", :linebreak => true)
+            %td use
+          %tr
+            %td= t("τακτικώ", "taktikā", :linebreak => true)
+            %td tactics
+
+= section "The Present Tense" do
+  %p The present tense, much as with native Semitic roots, consists of both prefixes (usually marking person) and suffixes (marking gender and number). For most verbs, these prefixes are *'a- (first person singular), *ni- (first person plural), *ti- (second person), and *yi- (third person), while the suffixes are *-Ø (masculine singular), *-ī (feminine singular), and *-ū (plural). Note that the non-zero suffixes will actually displace the stem augment *-ā-, which remains intact in the masculine singular forms.
+  - alashian = %w(ατελεφουνώ τιτελεφουνώ τιτελεφουνεί ιτελεφουνώ ιτελεφουνεί νιτελεφουνού τιτελεφουνού τιτελεφουνού ιτελεφουνού ιτελεφουνού)
+  - latin = %w('atelefūnā titelefūnā titelefūnī yitelefūnā yitelefūnī nitelefūnū titelefūnū titelefūnū yitelefūnū yitelefūnū)
+  = render 'verb_table', :title => "European Present Tense", :verb => { :ala => "telefūnā", :eng => "telephone" }, :alashian => alashian, :latin => latin
+  %p If the stem is vowel-initial (or, strictly speaking, glottal-stop-initial), the vowel of the prefix is lost and just a single consonant is attached. Orthographically, an apostrophe is always inserted in place of the lost vowel. This does not apply in the first person singular; the regular prefix is employed in this case.
+  - alashian = %w(αυργανιζώ τ'υργανιζώ τ'υργανιζεί ι'υργανιζώ ι'υργανιζεί ν'υργανιζού τ'υργανιζού τ'υργανιζού ι'υργανιζού ι'υργανιζού)
+  - latin = %w('a'urganizā turganizā turganizī yurganizā yurganizī nurganizū turganizū turganizū yurganizū yurganizū)
+  = render 'verb_table', :title => "European Present Tense", :verb => { :ala => "'urganizā", :eng => "organize" }, :alashian => alashian, :latin => latin
+  %p In spoken usage, most speakers replace the intervocalic -’- in the first person singular with /v/, so that #{t "αυργανιζώ", "'a'urganizā"} is typically pronounced as thought it were written #{t "αв̄υργανιζώ", "'avurganizā"}.
+
+= section "The Preterite Tense" do
+  %p The preterite tense is always regular, consisting of a series of suffixes marking person, number, and gender added to the augmented stem. These suffixes are for the most part the same as those used by regular Semitic roots, although the second person forms are always aspirated. The stem augment *-ā- becomes *-ay- in the third person feminine singular and third person plural.
+  - alashian = %w(τελεφουνώτ τελεφουνώττα τελεφουνώτζζε τελεφουνώ τελεφουναιώ τελεφουνωνώ τελεφουνώττυν τελεφουνώτζζιν τελεφουναιού τελεφουναιού)
+  - latin = %w(telefūnāt telefūnātha telefūnāčhe telefūnā telefūnayā telefūnānā telefūnāthun telefūnāčhin telefūnayū telefūnayū)
+  = render 'verb_table', :title => "European Preterite Tense", :verb => { :ala => "telefūnā", :eng => "telephone" }, :alashian => alashian, :latin => latin
+
+= section "The Imperfect Tense" do
+  %p The imperfect tense is by far the most complex paradigm used by European roots, and the only one that allows vowel changes to the stem itself, at least in some cases. Three subparadigms can be identified.
+  %p The first applies to roots that are only two syllables long, counting the augment, such as #{t "δραιв̄ώ", "drayvā"} “drive” and #{t "ιουζζώ", "yūzzā"} “use, utilize”. These roots do not undergo any vowel changes, although they lose the augment and replace it with *-ie- or *-ey-. Regular imperfect endings are then added, though the second person plural forms are aspirated.
+  - alashian = %w(δραιв̄ιή δραιв̄ιήτ δραιв̄ιής̄ δραιв̄ιή δραιв̄ειώ δραιв̄ιήν δραιв̄ιήττυν δραιв̄ιήτζζιν δραιв̄ειού δραιв̄ειού)
+  - latin = %w(drayvie drayviet drayvieš drayvie drayveyā drayvien drayviethun drayviečhin drayveyū drayveyū)
+  = render 'verb_table', :title => "European Imperfect Tense", :verb => { :ala => "drayva", :eng => "drive" }, :alashian => alashian, :latin => latin
+  %p Most other verbs, however, replace the augment with *-e- rather than *-ie-, and instead replace the final non-augment vowel of the root with *-ie-. This applies regardless of what that vowel may have originally been.
+  - alashian = %w(τελεφιήνε τελεφιήνετ τελεφιήνες̄ τελεφιήνε τελεφιηνειώ τελεφιήνεν τελεφιήναττυν τελεφιήνατζζιν τελεφιηνειού τελεφιηνειού)
+  - latin = %w(telefiene telefienet telefieneš telefiene telefieneyā telefienen telefienəthun telefienəčhin telefieneyū telefieneyū)
+  = render 'verb_table', :title => "European Imperfect Tense", :verb => { :ala => "telefūnā", :eng => "telephone" }, :alashian => alashian, :latin => latin
+  %p However, if the vowel that would be replaced according to the above rule is already a diphthong, as in #{t "εв̄λυωιώ", "'evluoyā"} “bless” or #{t "κυλαιλώ", "kulaylā"} “patch up”, then the root remains unchanged, and the verb conjugates like <i>drayvā</i> or <i>yūzzā</i> above.
+  - alashian = %w(εв̄λυωιιή εв̄λυωιιήτ εв̄λυωιιής̄ εв̄λυωιιή εв̄λυωιειώ εв̄λυωιιήν εв̄λυωιιήττυν εв̄λυωιιήτζζιν εв̄λυωιειού εв̄λυωιειού)
+  - latin = %w('evluoyie 'evluoyiet 'evluoyieš 'evluoyie 'evluoyeyā 'evluoyien 'evluoyiethun 'evluoyiečhin 'evluoyeyū 'evluoyeyū)
+  = render 'verb_table', :title => "European Imperfect Tense", :verb => { :ala => "'evluoyā", :eng => "bless" }, :alashian => alashian, :latin => latin
+
+= section "The Perfective Subjunctive Tense" do
+  %p The perfective subjunctive includes two subclasses, much like the present tense. If the root begins with a consonant, the prefixes *vā- (first person singular), *vani- (first person plural), *vati- (second person), and *vē- (third person) are simply added. The augment is present in a shortened form *-a- in all forms.
+  - alashian = %w(в̄ωτελεφούνα в̄ατιτελεφούνα в̄ητελεφούνα в̄ανιτελεφούνα в̄ατιτελεφούνα в̄ητελεφούνα)
+  - latin = %w(vātelefūna vatitelefūna vētelefūna vanitelefūna vatitelefūna vētelefūna)
+  = render 'subjunctive_table', :title => "European Perfective Subjunctive Tense", :verb => { :ala => "telefūnā", :eng => "telephone" }, :alashian => alashian, :latin => latin
+  %p If the root begins with a vowel/glottal stop, the prefixes instead become *vā- (first person singular), *van- (first person plural), *vat- (second person), and *vay- (third person). Unlike the present tense, no apostrophes are written.
+  - alashian = %w(в̄ωυργάνιζα в̄ατυργάνιζα в̄αιυργάνιζα в̄ανυργάνιζα в̄ατυργάνιζα в̄αιυργάνιζα)
+  - latin = %w(vā'urganiza vaturganiza vayurganiza vanurganiza vaturganiza vayurganiza)
+  = render 'subjunctive_table', :title => "European Perfective Subjunctive Tense", :verb => { :ala => "'urganizā", :eng => "organize" }, :alashian => alashian, :latin => latin
+
+= section "The Imperative" do
+  %p The imperative is formed regularly for all verbs with just the root and augment (masculine singular), root + *-ī (feminine singular), or root + *-ū (plural).
+  - alashian = %w(τελεφουνώ τελεφουνεί τελεφουνού τελεφουνού)
+  - latin = %w(telefūnā telefūnī telefūnū telefūnū)
+  = render 'imperative_table', :title => "European Imperative", :verb => { :ala => "telefūnā", :eng => "telephone" }, :alashian => alashian, :latin => latin
+
+= section "Deverbatives" do
+  %p European-root conjugation includes an infinitive and a single participle which is active in meaning (unless modified as described in the following section). The infinitive consists of the root, the shortened augment *-a-, and the special infinitive suffix *-t<sup>1</sup>. The participle consists of the prefix *mi-, the root, and the shortened augment *-a-.
+  - alashian = [ { :name => "Infinitive", :ala => "τελεφούνατ", :lat => "telefūnat", :meaning => "telephone" },
+                 { :name => "Participle", :ala => "μιτελεφούνα", :lat => "mitelefūna", :meaning => "telephoning" } ]
+  = render 'deverbative_table', :title => "European Deverbatives", :verb => { :ala => "telefūnā", :eng => "telephone" }, :forms => alashian
+
+= section "Scales" do
+  %p Verbs with European-type roots cannot conjugate in multiple scales, at least not in the Semitic-root sense of having an alternative set of conjugations that convey a different meaning when applied to the same root. However, they do have two formants, *-n- and *-t-, which can be used to make transitive roots passive and reciprocal, respectively. These are added directly before the root in all forms, after any other conjugational prefixes. If the formant ends up in word-initial position followed by another consonant, an epenthetic *i- is added, so that the formants become *'in- and *'it-. The addition of a formant only causes one slight alteration to the paradigms described above: the participle prefix *mi- becomes *ma-, thus #{t "μιτελεφούνα", "mitelefūna"} “telephoning”, but #{t "μαντελεφούνα", "mantelefūna"} “[being] telephoned”.
+  %p Since the *t formant always forms reciprocals, it can only be used with plural subjects.
+  - alashian = { :present     => %w(αντελεφουνώ τιντελεφουνώ τιντελεφουνεί ιντελεφουνώ ιντελεφουνεί νιντελεφουνού τιντελεφουνού τιντελεφουνού ιντελεφουνού),
+                 :preterite   => %w(ιντελεφουνώτ ιντελεφουνώττα ιντελεφουνώτζζε ιντελεφουνώ ιντελεφουναιώ ιντελεφουνωνώ ιντελεφουνώτυν ιντελεφουνώτζζιν ιντελεφουναιού),
+                 :imperfect   => %w(ιντελεφιήνε ιντελεφιήνετ ιντελεφιήνες̄ ιντελεφιήνε ιντελεφιηνειώ ιντελεφιήνεν ιντελεφιήναττυν ιντελεφιήνατζζιν ιντελεφιηνειού),
+                 :subjunctive => %w(в̄ωντελεφούνα в̄ατιντελεφούνα в̄ατιντελεφούνα в̄ηντελεφούνα в̄ηντελεφούνα в̄ανιντελεφούνα в̄ατιντελεφούνα в̄ατιντελεφούνα в̄ηντελεφούνα),
+                 :imperative  => %w(ιντελεφουνώ ιντελεφουνεί ιντελεφουνού),
+                 :infinitive  => "ιντελεφούνατ",
+                 :participle  => "μαντελεφούνα" }
+  - latin = { :present     => %w('antelefūnā tintelefūnā tintelefūnī yintelefūnā yintelefūnī nintelefūnū tintelefūnū tintelefūnū yintelefūnū),
+              :preterite   => %w('intelefūnāt 'intelefūnātha 'intelefūnāčhe 'intelefūnā 'intelefūnayā 'intelefūnānā 'intelefūnāthun 'intelefūnāčhin 'intelefūnayū),
+              :imperfect   => %w('intelefiene 'intelefienet 'intelefieneš 'intelefiene 'intelefieneyā 'intelefienen 'intelefienəthun 'intelefienəčhin 'intelefieneyū),
+              :subjunctive => %w(vāntelefūna vatintelefūna vatintelefūna vēntelefūna vēntelefūna vanintelefūna vatintelefūna vatintelefūna vēntelefūna),
+              :imperative  => %w('intelefūnā 'intelefūnī 'intelefūnū),
+              :infinitive  => "'intelefūnat",
+              :participle  => "mantelefūna" }
+  = render 'full_conjugation_table', :title => "European Conjugation", :verb => { :ala => "'intelefūnā", :eng => "be telephoned" }, :alashian => alashian, :latin => latin
+  %table
+    %tr
+      %th{:colspan => 5} European Conjugation: <i>'ittelefūnā</i> “telephone one another”
+    %tr
+      %th
+      %th Present
+      %th Preterite
+      %th Imperfect
+      %th Pf. Subj.
+    %tr
+      %th 1st Pl
+      %td= t("νιττελεφουνού", "nittelefūnū", :linebreak => true)
+      %td= t("ιττελεφουνωνώ", "'ittelefūnānā", :linebreak => true)
+      %td= t("ιττελεφιήνεν", "'ittelefienen", :linebreak => true)
+      %td= t("в̄ανιττελεφούνα", "vanittelefūna", :linebreak => true)
+    %tr
+      %th 2nd Pl Masc
+      %td= t("τιττελεφουνού", "tittelefūnū", :linebreak => true)
+      %td= t("ιττελεφουνώτυν", "'ittelefūnāthun", :linebreak => true)
+      %td= t("ιττελεφιήναττυν", "'ittelefienəthun", :linebreak => true)
+      %td= t("в̄ατιττελεφούνα", "vatittelefūna", :linebreak => true)
+    %tr
+      %th 2nd Pl Fem
+      %td= t("τιττελεφουνού", "tittelefūnū", :linebreak => true)
+      %td= t("ιττελεφουνώτζζιν", "'ittelefūnāčhin", :linebreak => true)
+      %td= t("ιττελεφιήνατζζιν", "'ittelefienəčhin", :linebreak => true)
+      %td= t("в̄ατιττελεφούνα", "vatittelefūna", :linebreak => true)
+    %tr
+      %th 3rd Pl
+      %td= t("ιττελεφουνού", "yittelefūnū", :linebreak => true)
+      %td= t("ιττελεφουναιού", "'ittelefūnayū", :linebreak => true)
+      %td= t("ιττελεφιηνειού", "'ittelefieneyū", :linebreak => true)
+      %td= t("в̄ηττελεφούνα", "vēttelefūna", :linebreak => true)
+    %tr
+      %th
+      %th Imperative
+      %th
+      %th
+      %th Deverbatives
+    %tr
+      %th Pl
+      %td= t("ιττελεφουνού", "'ittelefūnū", :linebreak => true)
+      %td
+      %th Infinitive
+      %td= t("ιττελεφούνατ", "'ittelefūnat", :linebreak => true)
+    %tr
+      %th
+      %td
+      %td
+      %th Participle
+      %td= t("ματτελεφούνα", "mattelefūna", :linebreak => true)
+  %p When these formants are added to a root beginning with a vowel/glottal stop, they behave as though they were part of the root and displace the glottal stop, so that in the present tense and perfective subjunctive, the prefixes used are those intended for roots beginning with consonants: #{t "ι'υργανιζώ", "y'urganizā"} “he/it is organizing”, but #{t "ινυργανιζώ", "yinurganizā"} “he/it is being organized”.
+  %p As can be seen above, these two formants never undergo any sort of assimilation, aspiration, or metathesis, as their cousins used in <i>nuktāb</i> and <i>taktēb</i> do.
+  %p Other notions expressed by the various Alashian scales have no morphological equivalent for European-type roots. Causatives and reflexives must be expressed periphrastically.
+
+= section "Quadriconsonantal Roots" do
+  %p Quadriconsonantal roots do not exist in the reciprocal scale <i>taktēb</i>. However, they are able to productively form reciprocals by switching to a European root paradigm with the t-formant. Any quadriconsonantal root can acquire the fixed pattern #{template "*C1aC2C3ēC3-ā-"} and then conjugate as though it were a loan verb, as with *balbēl “confuse” to #{t "ιτβαλβηλώ", "'itbalbēlā"} “confuse one another”. Quadriconsonantal roots may only appear with the *t-formant; zero-formant and *n-formant forms are prohibited.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) This *-t suffix is usually used to form abstract nouns with Semitic bases. It has been reinterpreted as an infinitive marker for European bases.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
