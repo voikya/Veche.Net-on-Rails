@@ -1,0 +1,591 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πειθετιήν".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p Alashian adjectives (including deverbal participles) morphologically form a subset of the nominal system. Like nouns, they inflect for gender, number, and (in a reduced sense) state. Unlike nouns, however, adjectives are also capable of marking degree, of which Alashian has three levels: absolute, comparative, and superlative.
+  %p Adjectives occur in three primary syntactic conditions, each of which dictates slightly different rules for how declension and agreement work: attributive, predicative, and independent.
+  %p Attributive adjectives directly modify another noun, as in #{t "αδούν αυτού", "'adūn 'awtū"} “a red car”, #{t "ματταγ̄λιζιήν ουλείδ", "məthaǧlizien 'ūlīd"} “happy children”, #{t "ρώβ βήτ", "rāb bēt"} “a large house”, #{t "μύκαννιφ σάφαρ", "mukənnif safar"} “flying birds”. Such adjectives must agree with the noun they modify in gender, number, and three out of four states (there is no construct form of an attributive adjective). They cannot have any qualities independent from the noun other than degree. However, gender and number agreement in this case can be unusual; in particular inanimate broken plurals will often show singular agreement, with stative verbs being preferred.
+  %p Predicative adjectives indirectly modify other nouns through the mediation of a copula (whether explicit or implicit): #{t "Νάτζ ηουλεί", "nəč hūlī"} “the tree is tall”, #{t "αδδυβώρ ρωβιήν", "haddubār rābien"} “the valleys are large”, #{t "αв̄в̄αλδώ ανγλιτζκιώ", "havvaldā 'angličkyā"} “the girl is English”. They can mark gender, number, and degree only; they show no kind of state marking. Like attributive adjectives, they agree with their head noun in gender, but unlike them predicative adjectives derive number independently from the number marking of the noun. Curiously, participles are generally not allowed in this position.
+  %p Independent adjectives do <em>not</em> modify another noun; more precisely, they are adjectives that behave as nouns: #{t "αλασεί", "'alasī"} “Alashian [man]”, #{t "ιαυανιώ", "yawanyā"} “Greek [woman]”, #{t "κουτιβιήν", "kūtibien"} “writers” (lit. “writing ones”), #{t "διναμιήν", "dinamyēn"} “strong ones”. They show all properties of nouns—gender, number, and state—and all of these are independently-derived and not dependent on agreement with another noun. They can mark different degrees as well, but this is uncommon and in most instances will be regarded by speakers as questionable or awkward.
+  %p The marking of state in various syntactic situations may be summarized as follows:
+  %table
+    %tr
+      %th
+      %th Absolute
+      %th Construct
+      %th Determinate
+      %th Partitive
+    %tr
+      %th Attributive
+      %td.adj-form ABS
+      %td.adj-form{:colspan => 2} DET
+      %td.adj-form PAR
+    %tr
+      %th Predicative
+      %td.adj-form{:colspan => 4} ABS
+    %tr
+      %th Independent
+      %td.adj-form ABS
+      %td.adj-form CON
+      %td.adj-form DET
+      %td.adj-form PAR
+
+= section "Adjectival Declension" do
+  = section "Absolute Degree" do
+    %p Alashian has two morphological subtypes of adjectives: unmarked and nisba/gentilic (terms borrowed from the Arabic and Hebrew grammatical traditions, respectively). The former are morphologically indistinguishable from nouns, and decline using the same affixes. The latter feature the suffix *-ī (the 'nisba') in their citation forms, and have a slightly different set of endings. For demonstration purposes #{t "ρώβ", "rāb"} “big”, #{t "αδούν", "'adūn"} “red”, #{t "τζιπρεί", "čiprī"} “Cypriot”, and #{t "αλασεί", "'alasī"} “Alashian” will be used.
+    %p For unmarked adjectives, declension essentially mirrors nouns, with the general feminine marker *-ā being used to form the feminine singular. No adjectives have broken plurals in modern Alashian (although some did in Old Alashian); however, some of the more predictable stem alternations that can occur with nouns also take place here, such as the conversion of a long vowel in the final syllable of a polysyllabic stem into gemination of the final consonant when an ending is added (such as #{t "αδούν", "'adūn"} → #{t "αδυννιήν", "'adunnien"} below).
+    %p Note that the partitive state has two different possible forms, depending on whether the adjective is attributive or independent. Independent adjectives form the partitive in the same way nouns do, with the prefix *mi-; attributive adjectives, however, mirror the absolute state when singular and the determinate state when plural.
+    %table.invisible
+      %tr
+        %td
+          %table
+            %tr
+              %th{:colspan => 5} Attributive Adjective Declension: <i>rāb</i> “big”
+            %tr
+              %th{:rowspan => 2}
+              %th{:colspan => 2} Masculine
+              %th{:colspan => 2} Feminine
+            %tr
+              %th Singular
+              %th Plural
+              %th Singular
+              %th Plural
+            %tr
+              %th Absolute
+              %td= t("ρώβ", "rāb", :linebreak => true)
+              %td= t("ρωβιήν", "rābien", :linebreak => true)
+              %td= t("ρωβώ", "rābā", :linebreak => true)
+              %td= t("ρωβυώς̄", "rābuoš", :linebreak => true)
+            %tr
+              %th Determinate
+              %td= t("αδρώβ", "hadrāb", :linebreak => true)
+              %td= t("αδρωβιήν", "hadrābien", :linebreak => true)
+              %td= t("αδρωβώ", "hadrābā", :linebreak => true)
+              %td= t("αδρωβυώς̄", "hadrābuoš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Attributive)
+              %td= t("ρώβ", "rāb", :linebreak => true)
+              %td= t("αδρωβιήν", "hadrābien", :linebreak => true)
+              %td= t("ρωβώ", "rābā", :linebreak => true)
+              %td= t("αδρωβυώς̄", "hadrābuoš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Independent)
+              %td= t("μιρρώβ", "mirrāb", :linebreak => true)
+              %td= t("μιρρωβιήν", "mirrābien", :linebreak => true)
+              %td= t("μιρρωβώ", "mirrābā", :linebreak => true)
+              %td= t("μιρρωβυώς̄", "mirrābuoš", :linebreak => true)
+            %tr
+              %th Construct
+              %td= t("ρώβ", "rāb", :linebreak => true)
+              %td= t("ρωβή", "rābē", :linebreak => true)
+              %td= t("ρώβετ", "rābet", :linebreak => true)
+              %td= t("ρωβούτ", "rābūt", :linebreak => true)
+        %td
+          %table
+            %tr
+              %th{:colspan => 5} Attributive Adjective Declension: <i>'adūn</i> “red”
+            %tr
+              %th{:rowspan => 2} 
+              %th{:colspan => 2} Masculine
+              %th{:colspan => 2} Feminine
+            %tr
+              %th Singular
+              %th Plural
+              %th Singular
+              %th Plural
+            %tr
+              %th Absolute
+              %td= t("αδούν", "'adūn", :linebreak => true)
+              %td= t("αδυννιήν", "'adunnien", :linebreak => true)
+              %td= t("αδυννώ", "'adunnā", :linebreak => true)
+              %td= t("αδυννούς̄", "'adunnūš", :linebreak => true)
+            %tr
+              %th Determinate
+              %td= t("ναδούν", "nadūn", :linebreak => true)
+              %td= t("ναδυννιήν", "nadunnien", :linebreak => true)
+              %td= t("ναδυννώ", "nadunnā", :linebreak => true)
+              %td= t("ναδυννούς̄", "nadunnūš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Attributive)
+              %td= t("αδούν", "'adūn", :linebreak => true)
+              %td= t("ναδυννιήν", "nadunnien", :linebreak => true)
+              %td= t("αδυννώ", "'adunnā", :linebreak => true)
+              %td= t("ναδυννούς̄", "nadunnūš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Independent)
+              %td= t("μιναδούν", "minadūn", :linebreak => true)
+              %td= t("μιναδυννιήν", "minadunnien", :linebreak => true)
+              %td= t("μιναδυννώ", "minadunnā", :linebreak => true)
+              %td= t("μιναδυννούς̄", "minadunnūš", :linebreak => true)
+            %tr
+              %th Construct
+              %td= t("αδούν", "'adūn", :linebreak => true)
+              %td= t("αδυννή", "'adunnē", :linebreak => true)
+              %td= t("άδυννετ", "'adunnet", :linebreak => true)
+              %td= t("αδυννούτ", "'adunnūt", :linebreak => true)
+    %p Adjectives with the nisba follow the same rules for prefixed forms, but have a slightly different set of suffxes. The nisba takes the form *-ī when word-final and *-(i)y- when followed by an inflectional suffix (the -i- only being present when it is needed to avoid an illegal cluster). If the nisba surfaces as -y-, immediately follows a voiceless consonant, and is followed by a stressed vowel, an intermediate [c] (spelled -κ-) will emerge, according to the phonological rule previously described in section 2.2.2.6.
+    %table.invisible
+      %tr
+        %td
+          %table
+            %tr
+              %th{:colspan => 5} Attributive Adjective Declension: <i>čiprī</i> “Cypriot”
+            %tr
+              %th{:rowspan => 2} 
+              %th{:colspan => 2} Masculine
+              %th{:colspan => 2} Feminine
+            %tr
+              %th Singular
+              %th Plural
+              %th Singular
+              %th Plural
+            %tr
+              %th Absolute
+              %td= t("τζιπρεί", "čiprī", :linebreak => true)
+              %td= t("τζιπριήν", "čipriyēn", :linebreak => true)
+              %td= t("τζιπριώ", "čipriyā", :linebreak => true)
+              %td= t("τζιπριούς̄", "čipriyūš", :linebreak => true)
+            %tr
+              %th Determinate
+              %td= t("ατζζιπρεί", "haččiprī", :linebreak => true)
+              %td= t("ατζζιπριήν", "haččipriyēn", :linebreak => true)
+              %td= t("ατζζιπριώ", "haččipriyā", :linebreak => true)
+              %td= t("ατζζιπριούς̄", "haččipriyūš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Attributive)
+              %td= t("τζιπρεί", "čiprī", :linebreak => true)
+              %td= t("ατζζιπριήν", "haččipriyēn", :linebreak => true)
+              %td= t("τζιπριώ", "čipriyā", :linebreak => true)
+              %td= t("ατζζιπριούς̄", "haččipriyūš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Independent)
+              %td= t("μιτζζιπρεί", "miččiprī", :linebreak => true)
+              %td= t("μιτζζιπριήν", "miččipriyēn", :linebreak => true)
+              %td= t("μιτζζιπριώ", "miččipriyā", :linebreak => true)
+              %td= t("μιτζζιπριούς̄", "miččipriyūš", :linebreak => true)
+            %tr
+              %th Construct
+              %td= t("τζιπρεί", "čiprī", :linebreak => true)
+              %td= t("τζιπριή", "čipriyē", :linebreak => true)
+              %td= t("τζιπρείτ", "čiprīt", :linebreak => true)
+              %td= t("τζιπριούτ", "čipriyūt", :linebreak => true)
+        %td
+          %table
+            %tr
+              %th{:colspan => 5} Attributive Adjective Declension: <i>'alasī</i> “Alashian”
+            %tr
+              %th{:rowspan => 2} 
+              %th{:colspan => 2} Masculine
+              %th{:colspan => 2} Feminine
+            %tr
+              %th Singular
+              %th Plural
+              %th Singular
+              %th Plural
+            %tr
+              %th Absolute
+              %td= t("αλασεί", "'alasī", :linebreak => true)
+              %td= t("αλασκιήν", "'alaskyēn", :linebreak => true)
+              %td= t("αλασκιώ", "'alaskyā", :linebreak => true)
+              %td= t("αλασκιούς̄", "'alaskyūš", :linebreak => true)
+            %tr
+              %th Determinate
+              %td= t("ναλασεί", "nalasī", :linebreak => true)
+              %td= t("ναλασκιήν", "nalaskyēn", :linebreak => true)
+              %td= t("ναλασκιώ", "nalaskyā", :linebreak => true)
+              %td= t("ναλασκιούς̄", "nalaskyūš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Attributive)
+              %td= t("αλασεί", "'alasī", :linebreak => true)
+              %td= t("ναλασκιήν", "nalaskyēn", :linebreak => true)
+              %td= t("αλασκιώ", "'alaskyā", :linebreak => true)
+              %td= t("αλασκιούς̄", "'alaskyūš", :linebreak => true)
+            %tr
+              %th Partitive<br>(Independent)
+              %td= t("μιναλασεί", "minalasī", :linebreak => true)
+              %td= t("μιναλασκιήν", "minalaskyēn", :linebreak => true)
+              %td= t("μιναλασκιώ", "minalaskyā", :linebreak => true)
+              %td= t("μιναλασκιούς̄", "minalaskyūš", :linebreak => true)
+            %tr
+              %th Construct
+              %td= t("αλασεί", "'alasī", :linebreak => true)
+              %td= t("αλασκιή", "'alaskyē", :linebreak => true)
+              %td= t("άλασκιείτ", "'alaskyīt", :linebreak => true)
+              %td= t("αλασκιούτ", "'alaskyūt", :linebreak => true)
+
+  = section "Comparative and Superlative Degrees" do
+    %p The comparative and superlative in Alashian are generally formed analytically.
+    %p The comparative is formed by placing the particle #{t "κιυ", "kyu"} immediately before the absolute grade of an adjective: #{t "κιυ αδούν", "kyu 'adūn"} “redder”, #{t "κιυ ρώβ", "kyu rāb"} “bigger”.
+    %p The superlative generally just consists of converting a noun phrase from the absolute state to the determinate state, such that #{t "αδρώβ", "hadrāb"} (literally “the big [something]”) can also be interpreted as “the biggest [something]”. This is generally clear in context, though various emphatic adverbs may be added when necessary.
+    %p Only two adjectives have synthetic comparatives: #{t "τήβ", "tēb"} “good” becomes #{t "καλείττερ", "kalīther"} “better” and #{t "ρώχ", "rāx"} “bad” becomes #{t "σ̄ιρούττερ", "širūther"} “worse”. The forms **<i>kyu tēb</i> and **<i>kyu rāx</i> are ungrammatical. These synthetic forms are also used in forming superlatives, never the absolute forms.
+    %p The original Semitic comparative (the so-called 'elative') survives only in a few words, and has been entirely lexicalized: #{t "αττώβ", "'əthāb"} “excellent” (from #{t "τήβ", "tēb"} “good”), #{t "ουρώβ", "'ūrāb"} “great” (from #{t "ρώβ", "rāb"} “big”), #{t "άγδαν", "'əgdan"} “first” (from #{t "κούδιν", "kūdin"} “previous”).
+
+= section "Numerals" do
+  %p The Alashian numeral system has undergone a fairly significant restructuring within the last several hundred years, making it necessary to elaborate on both the original and modern systems.
+
+  = section "Cardinal Numbers: The Old System" do
+    %p The 'old system' represents the original inherited Semitic model, though it is no longer in use outside of archaic language (including the Bible) and poetry. One of the most distinguishing features is the apparent reversed polarity, where seemingly feminine forms are used to modify masculine nouns and masculine forms to modify feminine nouns. There is also a series of counting forms for use when the numeral appears in isolation, such as when reading off digits.
+    %p The following table shows the numerals one through ten:
+    %table
+      %tr
+        %th
+        %th Counting
+        %th Masculine
+        %th Feminine
+      %tr
+        %th 1
+        %td= t("άρ̄αδ", "'ařad", :linebreak => true)
+        %td= t("ρ̄άδ", "řad", :linebreak => true)
+        %td= t("ρ̄αδώ", "řadā", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("θινείν", "ṯinīn", :linebreak => true)
+        %td= t("θινεί", "ṯinī", :linebreak => true)
+        %td= t("θαττεί", "ṯəthī", :linebreak => true)
+      %tr
+        %th 3
+        %td= t("θαλούτ", "ṯalūt", :linebreak => true)
+        %td= t("θαλυττώ", "ṯaluttā", :linebreak => true)
+        %td= t("θαλούτ", "ṯalūt", :linebreak => true)
+      %tr
+        %th 4
+        %td= t("ιβρώ", "'ibrā", :linebreak => true)
+        %td= t("ιβρεηώ", "'ibrehā", :linebreak => true)
+        %td= t("ιβρώ", "'ibrā", :linebreak => true)
+      %tr
+        %th 5
+        %td= t("χαφσή", "xafsē", :linebreak => true)
+        %td= t("χαφσώ", "xafsā", :linebreak => true)
+        %td= t("χαφσή", "xafsē", :linebreak => true)
+      %tr
+        %th 6
+        %td= t("σείδ̄", "sīḏ", :linebreak => true)
+        %td= t("σιδ̄δ̄ώ", "siḏḏā", :linebreak => true)
+        %td= t("σείδ̄", "sīḏ", :linebreak => true)
+      %tr
+        %th 7
+        %td= t("σείππα", "sīpha", :linebreak => true)
+        %td= t("σαππώ", "səphā", :linebreak => true)
+        %td= t("σείππα", "sīpha", :linebreak => true)
+      %tr
+        %th 8
+        %td= t("θιμούν", "ṯimūn", :linebreak => true)
+        %td= t("θιμυννώ", "ṯimunnā", :linebreak => true)
+        %td= t("θιμούν", "ṯimūn", :linebreak => true)
+      %tr
+        %th 9
+        %td= t("τείσσα", "tīssa", :linebreak => true)
+        %td= t("τισσώ", "tissā", :linebreak => true)
+        %td= t("τείσσα", "tīssa", :linebreak => true)
+      %tr
+        %th 10
+        %td= t("ηάσ̄ρε", "hašre", :linebreak => true)
+        %td= t("ηασ̄ρώ", "hašrā", :linebreak => true)
+        %td= t("ηάσ̄ρε", "hašre", :linebreak => true)
+    %p The numerals 1 and 2 are true adjectives, declining as adjectives in attributive position and typically placed after the noun they modify. The suffix *-ī that appears with all forms of '2' is not a nisba, but a frozen dual ending. As true adjectives, '1' and '2' show 'proper' gender agreement, with the feminine markers *-ā and *-t appearing together with feminine nouns.
+    %p The numerals 3 through 10 form a special class of determiners that form a nominal construct with the noun that follows. They always are placed immediately before the noun being quantified, and do not decline for anything except gender. However, the forms are highly unusual in two ways: first, even though the numerals are syntactically in the construct state, morphologically they look like no other construct nouns (for example, the suffix *-ā remains *-ā rather than becoming *-et); and secondly, the gender agreement appears reversed, with the *-ā suffix being present with masculine nouns and absent for feminine nouns. This 'reverse polarity' is seen throughout the Semitic language family.
+    %p Teen numbers are formed phrasally, taking the counting form #{t "ηάσ̄ρε", "hašre"} “ten”, the conjunction #{t "υε-", "ve-"} “and”, and the appropriately declined form of a digit: #{t "ηάσ̄ρε υεχαφσή", "hašre vexafsē"} “fifteen (f)”, #{t "ηάσ̄ρε υεχαφσώ", "hašre vexafsā"} “fifteen (m)”. Note that the numerals '1' and '2' behave more like other numerals than like adjectives here, being limited to just the forms #{t "ρ̄άδ", "řad"}, #{t "ρ̄αδώ", "řadā"}, #{t "θινεί", "ṯinī"}, and #{t "θαττεί", "ṯəthī"}, rather than having a complete adjectival declension. The two elements may appear in either order, so that #{t "ηάσ̄ρε υεχαφσή", "hašre vexafsē"} (lit. “ten and five”) and #{t "χαφσή υεηάσ̄ρε", "xafsē vehašre"} (lit. “five and ten”) are equivalent; however, only the last element ever declines for gender.
+    %p The decades 20 through 90 do not mark gender, although they still have separate counting forms. 30 through 90 are formed by adding a masculine plural ending to the digit equivalent, while 20 is the dual of 10.
+    %table
+      %tr
+        %th
+        %th Counting
+        %th Numeral
+        %th Alternate
+      %tr
+        %th 20
+        %td= t("ηασ̄ρείν", "hašrīn", :linebreak => true)
+        %td= t("ηασ̄ρεί", "hašrī", :linebreak => true)
+        %td{:rowspan => 3}
+      %tr
+        %th 30
+        %td= t("θαλυττιήν", "ṯaluttien", :linebreak => true)
+        %td= t("θαλυττή", "ṯaluttē", :linebreak => true)
+      %tr
+        %th 40
+        %td= t("ιβρεηιήν", "'ibrehien", :linebreak => true)
+        %td= t("ιβρεηή", "'ibrehē", :linebreak => true)
+      %tr
+        %th 50
+        %td= t("χαφσιήν", "xafsien", :linebreak => true)
+        %td= t("χαφσεηή", "xafsehē", :linebreak => true)
+        %td= t("φάλγε-μιέτ", "falge-miet", :linebreak => true)
+      %tr
+        %th 60
+        %td= t("σίδ̄δ̄ιήν", "siḏḏien", :linebreak => true)
+        %td= t("σίδ̄δ̄ή", "siḏḏē", :linebreak => true)
+        %td{:rowspan => 4}
+      %tr
+        %th 70
+        %td= t("σαππιήν", "səphien", :linebreak => true)
+        %td= t("σαππή", "səphē", :linebreak => true)
+      %tr
+        %th 80
+        %td= t("θιμυννιήν", "ṯimunnien", :linebreak => true)
+        %td= t("θιμυννή", "ṯimunnē", :linebreak => true)
+      %tr
+        %th 90
+        %td= t("τισσιήν", "tissien", :linebreak => true)
+        %td= t("τισσή", "tissē", :linebreak => true)
+    %p The numeral form of 50 is also attested as #{t "φάλγε-μιέτ", "falge-miet"} (literally “half hundred”), a form perhaps encouraged by the near merger of “five” and “fifty” in some Alashian dialects.
+    %p All other numbers below 100 are formed like the teens, using the conjunction #{t "υε-", "ve-"} to link the two components: #{t "ηασ̄ρείν υεθαττεί", "hašrīn veṯəthī"} or #{t "θινείν υεηασ̄ρεί", "ṯinīn vehašrī"} “twenty one (f)”.
+
+  = section "Cardinal Numbers: The New System" do
+    %p The above system gradually broke down under the pressure of its own apparent inconsistencies with the rest of Alashian morphology and mounting Greek influence. The gender distinction has completely collapsed (aside from the numerals 1 and 2), and the suffix *-t has been added to most forms to bring them in line with more typical construct state morphology. The numeral 1 continues to be a true adjective, while the numeral 2 has been reanalyzed as a dual form in construct, and so now always precedes the noun it modifies (though it retains gender agreement).
+    %table
+      %tr
+        %th
+        %th Counting
+        %th Numeral
+      %tr
+        %th 1
+        %td= t("άρ̄αδ", "'ařad", :linebreak => true)
+        %td= t("ρ̄άδ/ρ̄αδώ", "řad/řadā", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("θινείν", "ṯinīn", :linebreak => true)
+        %td= t("θινεί/θαττεί", "ṯinī/ṯəthī", :linebreak => true)
+      %tr
+        %th 3
+        %td= t("θαλούτ", "ṯalūt", :linebreak => true)
+        %td= t("θάλυττετ", "ṯaluttet", :linebreak => true)
+      %tr
+        %th 4
+        %td= t("ιβρώ", "'ibrā", :linebreak => true)
+        %td= t("ίβρετ", "'ibret", :linebreak => true)
+      %tr
+        %th 5
+        %td= t("χαφσή", "xafsē", :linebreak => true)
+        %td= t("χάφσετ", "xafset", :linebreak => true)
+      %tr
+        %th 6
+        %td= t("σείδ̄", "sīḏ", :linebreak => true)
+        %td= t("σίδ̄δ̄ετ", "siḏḏet", :linebreak => true)
+      %tr
+        %th 7
+        %td= t("σείππα", "sīpha", :linebreak => true)
+        %td= t("σάππετ", "səphet", :linebreak => true)
+      %tr
+        %th 8
+        %td= t("θιμούν", "ṯimūn", :linebreak => true)
+        %td= t("θίμυννετ", "ṯimunnet", :linebreak => true)
+      %tr
+        %th 9
+        %td= t("τείσσα", "tīssa", :linebreak => true)
+        %td= t("τίσσετ", "tisset", :linebreak => true)
+      %tr
+        %th 10
+        %td= t("ηάσ̄ρε", "hašre", :linebreak => true)
+        %td= t("ηάσ̄ρετ", "hašret", :linebreak => true)
+    %p The decades have been replaced by Greek loanwords. Various reflexes of the original Semitic forms can still be heard in more remote areas.
+    %table
+      %tr
+        %th
+        %th Counting
+        %th Numeral
+      %tr
+        %th 20
+        %td= t("κούσιν", "kūsin", :linebreak => true)
+        %td= t("κούσιτ", "kūsit", :linebreak => true)
+      %tr
+        %th 30
+        %td= t("τραδώ", "tradā", :linebreak => true)
+        %td= t("τράδετ", "tradet", :linebreak => true)
+      %tr
+        %th 40
+        %td= t("σαραδώ", "saradā", :linebreak => true)
+        %td= t("σάραδετ", "saradet", :linebreak => true)
+      %tr
+        %th 50
+        %td= t("πειδώ", "peydā", :linebreak => true)
+        %td= t("πέιδετ", "peydet", :linebreak => true)
+      %tr
+        %th 60
+        %td= t("εκσιδώ", "'eksidā", :linebreak => true)
+        %td= t("έκσιδετ", "'eksidet", :linebreak => true)
+      %tr
+        %th 70
+        %td= t("εв̄δυμιδώ", "'evdumidā", :linebreak => true)
+        %td= t("εв̄δύμιδετ", "'evdumidet", :linebreak => true)
+      %tr
+        %th 80
+        %td= t("υγ̄δυδώ", "'uǧdudā", :linebreak => true)
+        %td= t("ύγ̄δυδετ", "'uǧdudet", :linebreak => true)
+      %tr
+        %th 90
+        %td= t("ενενιδώ", "'enenidā", :linebreak => true)
+        %td= t("ενένιδετ", "'enenidet", :linebreak => true)
+    %p Complex numbers have settled on a single order, with the decade preceding the unit: #{t "σαραδώ υεθινεί", "saradā veṯinī"} “forty two (m)”. The teens, however, may appear either with or without the connecting <i>ve-</i>: #{t "ηάσ̄ρε υεσάππετ", "hašre vesəphet"} or #{t "ηάσ̄ρε-σάππετ", "hašre-səphet"} “seventeen”.
+
+  = section "Higher-Order Cardinal Numbers" do
+    %p Numbers in the hundreds are based on the noun #{t "μιώ", "myā"} “hundred”. It appears in the absolute state in isolation, and in the construct when <em>directly</em> quantifying a noun; that is, if another numeral appears between the word <i>myā</i> and the noun being quantified (e.g., '463'), then <i>myā</i> will be in the absolute state, not the construct: #{t "ίβρετ μιούς̄, έκσιδετ θάλυττετ Χ", "'ibret myūš, 'eksidet ṯaluttet X"} (not **'ibret myūt...).
+    %p '200' can be expressed in two different ways, the difference being mostly dialectal. The more conservative form is a frozen dual of #{t "μιώ", "myā"}, namely #{t "ματτείν", "məthīn"} (absolute) or #{t "ματτεί", "məthī"} (construct); the newer form, #{t "θαττεί μιούς̄", "ṯəthī myūš"} (absolute) or #{t "θαττεί μιούτ", "ṯəthī myūt"} (construct), is based on analogy with the other hundreds.
+    %table
+      %tr
+        %th
+        %th Absolute
+        %th Construct
+        %th Alternate
+      %tr
+        %th 100
+        %td= t("μιώ", "myā", :linebreak => true)
+        %td= t("μιέτ", "myet", :linebreak => true)
+        %td
+      %tr
+        %th 200
+        %td= t("ματτείν", "məthīn", :linebreak => true)
+        %td= t("ματτεί", "məthī", :linebreak => true)
+        %td= t("θαττεί μιώ", "ṯəthī myā", :linebreak => true)
+      %tr
+        %th 300
+        %td= t("θάλυττετ μιούς̄", "ṯaluttet myūš", :linebreak => true)
+        %td= t("θάλυττετ μιούτ", "ṯaluttet myūt", :linebreak => true)
+        %td{:rowspan => 7}
+      %tr
+        %th 400
+        %td= t("ίβρετ μιούς̄", "'ibret myūš", :linebreak => true)
+        %td= t("ίβρετ μιούτ", "'ibret myūt", :linebreak => true)
+      %tr
+        %th 500
+        %td= t("χάφσετ μιούς̄", "xafset myūš", :linebreak => true)
+        %td= t("χάφσετ μιούτ", "xafset myūt", :linebreak => true)
+      %tr
+        %th 600
+        %td= t("σίδ̄δ̄ετ μιούς̄", "siḏḏet myūš", :linebreak => true)
+        %td= t("σίδ̄δ̄ετ μιούτ", "siḏḏet myūt", :linebreak => true)
+      %tr
+        %th 700
+        %td= t("σάππετ μιούς̄", "səphet myūš", :linebreak => true)
+        %td= t("σάππετ μιούτ", "səphet myūt", :linebreak => true)
+      %tr
+        %th 800
+        %td= t("θίμυννετ μιούς̄", "ṯimunnet myūš", :linebreak => true)
+        %td= t("θίμυννετ μιούτ", "ṯimunnet myūt", :linebreak => true)
+      %tr
+        %th 900
+        %td= t("τίσσετ μιούς̄", "tisset myūš", :linebreak => true)
+        %td= t("τίσσετ μιούτ", "tisset myūt", :linebreak => true)
+    %p The word for “thousand” is #{t "άλφε", "'alfe"}, which words in a similar manner as #{t "μιώ", "myā"} (although the dual form is no longer used). Higher-order numbers are English loans: #{t "μιλιούν", "milyūn"} “million”, #{t "βιλιούν", "bilyūn"} “billion”, etc.
+
+  = section "Ordinal Numbers" do
+    %p The basic pattern for forming ordinals is #{template "*C1āC2iC3ī"}, consisting of both a special vowel pattern and the nisba. This pattern is used by the numerals 2-10 ('first' is suppletive), although it has sometimes been obscured by phonological change.
+    %table
+      %tr
+        %th
+        %th Ordinal
+      %tr
+        %th 1st
+        %td= t("άγδαν", "'əgdan", :linebreak => true)
+      %tr
+        %th 2nd
+        %td= t("θαννεί", "ṯannī", :linebreak => true)
+      %tr
+        %th 3rd
+        %td= t("θωλιτεί", "ṯālitī", :linebreak => true)
+      %tr
+        %th 4th
+        %td= t("ρωβιτεί", "rābitī", :linebreak => true)
+      %tr
+        %th 5th
+        %td= t("χωφισεί", "xāfisī", :linebreak => true)
+      %tr
+        %th 6th
+        %td= t("σωδ̄ιτεί", "saḏitī", :linebreak => true)
+      %tr
+        %th 7th
+        %td= t("σωππιτεί", "sāphitī", :linebreak => true)
+      %tr
+        %th 8th
+        %td= t("θωμινεί", "ṯāminī", :linebreak => true)
+      %tr
+        %th 9th
+        %td= t("τωσιτεί", "tāsitī", :linebreak => true)
+      %tr
+        %th 10th
+        %td= t("ηωσ̄ιρεί", "hāširī", :linebreak => true)
+    %p This same pattern also applies to the two native roots used for higher-order numbers: #{t "μιωεί", "myā'ī"} “hundredth”, #{t "ωλιφεί", "'ālifī"} “thousandth”.
+    %p The ordinals for loaned morphemes (the decades and numbers above 1000) simply add the nisba directly to the unmodified stem, sometimes with an intermediate -t-: #{t "κουσιτεί", "kūsitī"} “twentieth”, #{t "τραδατεί", "tradatī"} “thirtieth”, #{t "σαραδατεί", "saradatī"} “fortieth”, #{t "πειδατεί", "peydatī"} “fiftieth”, #{t "μιλιουνεί", "milyūnī"} “millionth”, etc.
+    %p All other ordinals are identical to the counting form of the cardinal equivalent. These cardinals-turned-ordinals are placed after the noun they modify like true adjectives and unlike numerals, but do not decline in any manner: #{t "νείς κούσιν άρ̄αδ", "nīs kūsin 'ařad"} “the twenty-first man”.
+
+  = section "Other Numeral Forms" do
+    %p The pattern #{template "*C1uC2C3e"} is used to form nouns representing fractions, barring suppletive forms.
+    %table
+      %tr
+        %th
+        %th Fraction
+      %tr
+        %th 1/2
+        %td= t("φάλγε", "falge", :linebreak => true)
+      %tr
+        %th 1/3
+        %td= t("θύλτε", "ṯulte", :linebreak => true)
+      %tr
+        %th 1/4
+        %td= t("ρύββε", "rubbe", :linebreak => true)
+      %tr
+        %th 1/5
+        %td= t("χύφσε", "xufse", :linebreak => true)
+      %tr
+        %th 1/6
+        %td= t("σύδ̄", "suḏ", :linebreak => true)
+      %tr
+        %th 1/7
+        %td= t("σαππε", "səphe", :linebreak => true)
+      %tr
+        %th 1/8
+        %td= t("θύμνε", "ṯumne", :linebreak => true)
+      %tr
+        %th 1/9
+        %td= t("τύσσε", "tusse", :linebreak => true)
+      %tr
+        %th 1/10
+        %td= t("ηύσ̄ρε", "hušre", :linebreak => true)
+      %tr
+        %th 1/100
+        %td= t("μιύε", "myu'e", :linebreak => true)
+      %tr
+        %th 1/1000
+        %td= t("ύλφε", "'ulfe", :linebreak => true)
+    %p Multiplicatives ('single', 'double', 'triple', etc.) are generally handled using Greek forms:
+    %table
+      %tr
+        %th
+        %th Multiplicative
+      %tr
+        %th single
+        %td= t("αρ̄αδεί", "'ařadī", :linebreak => true)
+      %tr
+        %th double
+        %td= t("διπλεί", "diplī", :linebreak => true)
+      %tr
+        %th triple
+        %td= t("τριπλεί", "triplī", :linebreak => true)
+      %tr
+        %th quadruple
+        %td= t("τετραπλεί", "tetraplī", :linebreak => true)
+      %tr
+        %th quintuple
+        %td= t("πεδαπλεί", "pedaplī", :linebreak => true)
+      %tr
+        %th sextuple
+        %td= t("εκσαπλεί", "'eksaplī", :linebreak => true)
+      %tr
+        %th septuple
+        %td= t("εφταπλεί", "'eftaplī", :linebreak => true)
+      %tr
+        %th octuple
+        %td= t("υχταπλεί", "'uxtaplī", :linebreak => true)
+      %tr
+        %th nonuple
+        %td= t("ενιαπλεί", "'enyaplī", :linebreak => true)
+      %tr
+        %th decuple
+        %td= t("δεκαπλεί", "dekaplī", :linebreak => true)
+    %p Distributives are formed by simply reduplicating the counting form of a number: #{t "άρ̄αδ-άρ̄αδ", "'ařad-'ařad"} “one by one”, #{t "θινείν-θινείν", "ṯinīn-ṯinīn"} “two by two”, etc.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
