@@ -1,0 +1,279 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σίστιμ Υνούνυμ".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p The Alashian noun, unlike the verb, forms a much more unified subsystem within the language, treating both native Semitic nouns and more recent non-Semitic loanwords in a more or less identical fashion. Nouns inflect for three qualities: number, state, and occasionally gender (though this is not always explicit).
+
+= section "Gender" do
+  %p Alashian, like most other Semitic languages, has two genders: masculine and feminine. They are inherent in individual words (though they may be modified under certain circumstances) and are reflected in adjective agreement, verb agreement, and pronoun usage.
+  %p For the most part, Alashian grammatical gender corresponds to biological sex only for nouns referring to humans and <em>explicitly</em> gender-marked animals. In other words:
+  %ul
+    %li If the noun refers to a human, its gender will match the sex of the individual.
+    %li If the noun refers to an animal, its gender does not necessary match its sex <em>unless</em> a gender-marking suffix is added, such as the explicitly feminine *-ā. For instance, the unmarked noun #{t "κούβ", "kūb"} “dog” is grammatically masculine, but may refer to either male or female dogs, while the explicitly-marked #{t "καλβώ", "kalbā"} “female dog, bitch” is both feminine and may only refer to females.
+    %li If the noun refers to anything else, its gender is arbitrary.
+  %p If the noun does not refer to a human, its gender can sometimes be determined by its form alone, but not always. If the noun (in its absolute singular form) ends in *-ā or *-t, then it is most likely feminine. If it ends in anything else, then it is impossible to determine gender on form alone. However, a number of generalizations can be made:
+  %ul
+    %li Names of body parts are mostly feminine: #{t "ρώς", "rās"} “head”, #{t "ηήν", "hēn"} “eye”, #{t "ιάδ", "yad"} “hand”, #{t "νάφσε", "nafse"} “breath”, #{t "λιήβ", "lieb"} “heart”, #{t "ρέγλε", "regle"} “foot”.
+    %li Names of cities, countries, and other placenames are mostly feminine: #{t "Τζιπριώ", "Čipriyā"} “Cyprus”, #{t "Μασρήν", "Məsrēn"} “Egypt”, #{t "Αθεινώ", "'Aṯīnā"} “Athens”, #{t "Παρείζ", "Parīz"} “Paris”, #{t "Νιου-Ιούρκε", "Nyū-Yūrke"} “New York”.
+    %li Most non-derived (i.e., not beginning with the prefix *mV-) words for tools are feminine: #{t "ρ̄ώβε", "řābe"} “sword”, #{t "κώς", "kās"} “cup”, #{t "δάλ", "dal"} “door”. This generally does not hold for loanwords.
+    %li Many non-derived words for substances and materials are feminine: #{t "μώρ̄α", "māřa"} “salt”, #{t "άννε", "'anne"} “stone”, #{t "δέπσε", "depse"} “honey”, #{t "νέρ̄ας", "neřas"} “copper”. This generally does not hold for more recent loanwords.
+    %li Most units of time: #{t "ιούν", "yūn"} “day”, #{t "λήλ", "lēl"} “night”.
+    %li Diminutives are almost always feminine.
+    %li Most other nouns are masculine.
+  %p Dialectically or poetically, it is not unusual for many of the above nouns to be 'regularized' by the addition of an explicit feminine marker, yielding forms such as #{t "δάλατ", "dalat"} “door”, #{t "μαρ̄ώ", "mařā"} “salt”, #{t "δεπσώ", "depsā"} “honey”, #{t "ληλώ", "lēlā"} “night”. Such forms are not generally accepted in standard prose, however.
+  %p However, grammatical gender can be flexible at times. Mixed-sex groups and compound noun phrases consisting of nouns of differing genders will usually take masculine [plural] agreement. Also, Alashian has a 'familiar feminine', whereby nouns that are usually masculine can spontaneously take feminine agreement as a sign of affection; this may even extend to using feminine pronouns to refer to close male friends.
+
+= section "Number" do
+  %p Alashian has two numbers: singular and plural. The singular is the default unmarked form, while the plural is derived using one of four techniques: external derivation (suffixation), internal derivation (stem modifications), a combination of the two, or suppletion.
+
+  = section "External Derivation" do
+    %p External derivation refers to the creation of plural forms by adding a suffix to the singular. This is by far the most common means of forming plurals, and the default for most recent loanwords. There are three suffixes in common use.
+    %p The suffix *-ien is used by the vast majority of masculine nouns and a small minority of feminine nouns. It is added directly to the noun stem, unless the stem ends in a vowel, in which case the vowel is dropped first.
+    %table
+      %tr
+        %th Singular
+        %th Plural
+        %th Meaning
+      %tr
+        %td= t("κάρφε", "karfe", :linebreak => true)
+        %td= t("καρφιήν", "karfien", :linebreak => true)
+        %td “fruit[s]”
+      %tr
+        %td= t("βήτ", "bēt", :linebreak => true)
+        %td= t("βητιήν", "bētien", :linebreak => true)
+        %td “house[s]”
+      %tr
+        %td= t("γαζήτ", "gazēt", :linebreak => true)
+        %td= t("γαζητιήν", "gazētien", :linebreak => true)
+        %td “newspaper[s]”
+      %tr
+        %td= t("τάλμιδ", "talmid", :linebreak => true)
+        %td= t("ταλμιδιήν", "talmidien", :linebreak => true)
+        %td “student[s]”
+      %tr
+        %td= t("μίφταρ̄", "miftař", :linebreak => true)
+        %td= t("μιφταρ̄ιήν", "miftařien", :linebreak => true)
+        %td “key[s]”
+      %tr
+        %td= t("ηάτζ", "həč", :linebreak => true)
+        %td= t("ηατζζιήν", "həčhien", :linebreak => true)
+        %td “tree[s]”
+      %tr
+        %td= t("σαννώ", "sannā", :linebreak => true)
+        %td= t("σαννιήν", "sannien", :linebreak => true)
+        %td “year[s]”
+    %p The suffixes *-ūš/*-uoš are used with most other feminine nouns, dropping any final vowel if need be. The form *-uoš is used when preceded by a single consonant, and *-ūš is used when preceded by a consonant cluster or geminate.
+    %table
+      %tr
+        %th Singular
+        %th Plural
+        %th Meaning
+      %tr
+        %td= t("в̄αλδώ", "valdā", :linebreak => true)
+        %td= t("в̄αλδούς̄", "valdūš", :linebreak => true)
+        %td “girl[s]”
+      %tr
+        %td= t("ρώς", "rās", :linebreak => true)
+        %td= t("ρωσυώς̄", "rāsuoš", :linebreak => true)
+        %td “head[s]”
+      %tr
+        %td= t("μεδινώ", "medinā", :linebreak => true)
+        %td= t("μεδινυώς̄", "medinuoš", :linebreak => true)
+        %td “city[ies]”
+      %tr
+        %td= t("άρτζε", "'arče", :linebreak => true)
+        %td= t("αρτζούς̄", "'arčūš", :linebreak => true)
+        %td “country[ies]”
+      %tr
+        %td= t("βητζζώ", "bēčhā", :linebreak => true)
+        %td= t("βητζζυώς̄", "bēčhuoš", :linebreak => true)
+        %td “egg[s]”
+      %tr
+        %td= t("ιούν", "yūn", :linebreak => true)
+        %td= t("ιουνυώς̄", "yūnuoš", :linebreak => true)
+        %td “day[s]”
+      %tr
+        %td= t("μηνώ", "mēnā", :linebreak => true)
+        %td= t("μηνυώς̄", "mēnuoš", :linebreak => true)
+        %td “month[s]”
+    %p Feminine nouns ending in *-tā, however, will always use *-ien: #{t "καττώ", "kattā"} “cat”, #{t "καττιήν", "kattien"} “cats”. This is because the usual feminine plural suffix was once pronounced *-āt, and so the masculine ending came to be used in its place to prevent the repetition of /t/.
+    %p In addition, all nouns ending in a long vowel other than *ā will use the plural suffix *-ūš. The offending vowel is retained, and a glide is inserted between the stem and ending: /j/ if the vowel is front, /w/ if it is back. This is especially common with foreign loans: #{t "τακσεί", "taksī"} “taxi” → #{t "τακσειούς̄", "taksīyūš"} “taxis”, #{t "καφφή", "kaffē"} “coffee” → #{t "καφφήιούς̄", "kaffēyūš"} “coffees”, #{t "μετρού", "metrū"} “subway” → #{t "μετρουούς̄", "metrūwūš"} “subways”.
+    %p A small handful of nouns of both genders form their plurals with the suffix *-ī. This was historically a dual marker, but has become generalized as a plural marker for many nouns that frequently come in pairs.
+    %table
+      %tr
+        %th Singular
+        %th Plural
+        %th Meaning
+      %tr
+        %td= t("ρέγλε", "regle", :linebreak => true)
+        %td= t("ρεγλεί", "reglī", :linebreak => true)
+        %td “foot/feet”
+      %tr
+        %td= t("ιάδ", "yad", :linebreak => true)
+        %td= t("ιαδεί", "yadī", :linebreak => true)
+        %td “hand[s]”
+      %tr
+        %td= t("ηήν", "hēn", :linebreak => true)
+        %td= t("ηηνεί", "hēnī", :linebreak => true)
+        %td “eye[s]”
+      %tr
+        %td= t("φάλγε", "falge", :linebreak => true)
+        %td= t("φαλγεί", "falgī", :linebreak => true)
+        %td “half[ves]”
+      %tr
+        %td= t("σαββώ", "sabbā", :linebreak => true)
+        %td= t("σαββεί", "sabbī", :linebreak => true)
+        %td “finger[s]”
+
+  = section "Internal Derivation" do
+    %p Internal derivation, more commonly known as 'broken plurals', refers to the formation of plurals not by suffixation, but by modifying the internal structure of the stem. True broken plurals are in recession in Alashian, being limited to nouns that are a) primitive (non-derived) and b) Semitic in origin. Not surprisingly, such nouns almost always consist of three consonants, or at least once did.
+    %p There are only a handful of broken plural patterns still in common use in Alashian. It is not generally possible to predict what patterns a particular noun will take on a purely phonological basis, although the noun's gender does limit the number of options.<sup>1</sup>
+    %table
+      %tr
+        %th{:colspan => 3} Masculine Broken Plurals
+      %tr
+        %th Pattern
+        %th Example
+        %th Frequency
+      %tr
+        %td= template "C1aC2īC3"
+        %td #{t("ηάв̄δε", "havde")} “servant” → #{t("ηαβείδ", "habīd")}
+        %td Common
+      %tr
+        %td= template "C1uC2āC3"
+        %td #{t("δάβρε", "dabre")} “valley” → #{t("δυβώρ", "dubār")}
+        %td Common
+      %tr
+        %td= template "C1eC2āC3"
+        %td #{t("γ̄ήναν", "ǧēnan")} “cloud” → #{t("γ̄ενών", "ǧenān")}
+        %td Uncommon
+      %tr
+        %td= template "'aC1C2īC3"
+        %td #{t("νάσρε", "nasre")} “eagle” → #{t("ανσείρ", "'ansīr")}
+        %td Common
+      %tr
+        %td= template "'aC1C2ūC3"
+        %td #{t("ρ̄εμούρ", "řemūr")} “donkey” → #{t("αρ̄μούρ", "'ařmūr")}
+        %td Uncommon
+      %tr
+        %td= template "'eC1C2āC3"
+        %td #{t("καρείβ", "karīb")} “relative” → #{t("εκρώβ", "'ekrāb")}
+        %td Rare
+    %table
+      %tr
+        %th{:colspan => 3} Feminine Broken Plurals
+      %tr
+        %th Pattern
+        %th Example
+        %th Frequency
+      %tr
+        %td= template "C1aC2aC3"
+        %td #{t("βακρώ", "bəkrā")} “cow” → #{t("βάκκαρ", "bəkhar")}
+        %td Common
+      %tr
+        %td= template "C1eC2āC3"
+        %td #{t("νάφσε", "nafse")} “breath” → #{t("νεφώς", "nefās")}
+        %td Common
+    %p Of course, some patterns are simply irregular, having been obscured by sound change: #{t "σ̄αρρώ", "šarrā"} “[strand of] hair” → #{t "σ̄ώρ", "šār"} “hair” (Proto-Semitic root *ś-ʕ-r), #{t "ρ̄ειττώ", "řīthā"} “[grain of] wheat” → #{t "ρ̄είτ", "řīt"} “wheat” (Proto-Semitic root *ḥ-n-ṭ). Many nouns that once had broken plurals have acquired regular external plurals once their original triconsonantal roots were no longer apparent, as with #{t "κούβ", "kūb"} “dog” → #{t "κουβιήν", "kūbien"} “dogs” (cf. Old Alashian *kalb[e] → *kalīb).
+
+  = section "External and Internal Derivation" do
+    %p Many Alashian nouns display both external and internal derivation at once; that is, they undergo stem modifications in addition to receiving an overt plural ending. There are two subtypes: true plurals and pluratives.
+    %p The true plurals are not historical collectives or singulatives, but are generally just regular external plurals that underwent stem modification due to Alashian sound changes. Such patterns tend to be fairly predictable, and can affect loanwords as well as native Semitic words. Some of the most frequent patterns include:
+    %ul
+      %li
+        Polysyllabic stems ending in a long vowel + consonant will shorten the vowel and geminate the consonant when a plural suffix is added:
+        %br
+        #{t "λασούν", "lasūn"} “tongue, language” → #{t "λασυννούς̄", "lasunnūš"}
+        %br
+        #{t "ηυκώβ", "hukāb"} “star” → #{t "ηυκαββιήν", "hukabbien"}
+      %li
+        Primitive stems of the form #{template "*C1eC2"} become #{template "*C1iC2C2-"}, with a vowel change and gemination:
+        %br
+        #{t "βέν", "ben"} “son” → #{t "βιννιήν", "binnien"}
+        %br
+        #{t "σέν", "sen"} “name” → #{t "σιννιήν", "sinnien"}
+      %li
+        Several masculine kinship terms have an extended stem with a suffix -h-, whose original purpose is now lost. They also always take feminine suffixes.
+        %br
+        #{t "αβώ", "'abā"} “father” → #{t "αβαηυώς̄", "'abahuoš"}
+        %br
+        #{t "αχώ", "'axā"} “brother” → #{t "αχαηυώς̄", "'axahuoš"}
+    %p The other class of mixed plurals are the so-called pluratives. These are not true plurals, but are in fact a special variant of the broken plurals used after numerals and certain other determiners. Simply put, Alashian requires that any noun being modified by a numeral must have an explicit plural marking, which normal broken plurals lack. For broken plurals to be counted, therefore, they must be augmented by a plural suffix: #{t "βακρώ", "bəkrā"} “[a] cow” → #{t "βάκκαρ", "bəkhar"} “cattle, cows” → #{t "θαττεί βακκαρυώς̄", "ṯəthī bəkharuoš"} “two cows”, #{t "δάβρε", "dabre"} “[a] valley” → #{t "δυβώρ", "dubār"} “valleys” → #{t "θινεί δυβαρριήν", "ṯinī dubarrien"} “two valleys”.
+
+  = section "Suppletion" do
+    %p Suppletion refers to the use of different stems to form the singular and plural of a noun. Alashian has only three suppletive plurals:<sup>2</sup>
+    %ul
+      %li #{t "είς", "'īs"} “man, person” → #{t "ινείς", "'inīs"} “men, people” (plurative <i>'inissien</i>)
+      %li #{t "ιθθώ", "'iṯṯā"} “woman” → #{t "νισσούς̄", "nissūš"} “women”
+      %li #{t "βείτ", "bīt"} “daughter” → #{t "βινυώς̄", "binuoš"} “daughters”
+
+= section "State" do
+  %p The Alashian noun has four possible 'states'. Nominal states in Semitic linguistics refer to different conditions of determinateness that a noun may find itself in, which are differentiated morphologically through different prefixes and suffixes. Traditionally states are considered separately from case marking by the fact that states encode determination while cases encode syntactic roles; that said, since Alashian lost the Semitic case system prior to the start of the written record, the need for such a distinction is lessened.
+  %p The <i>absolute state</i> is the default citation form of all nouns and does not mark any sort of determination (i.e., it generally means the noun is indefinite). It has no special markings: #{t "βήτ", "bēt"} “[a] house”, #{t "βητιήν", "bētien"} “houses”, #{t "μαλκώ", "malkā"} “[a] queen”, #{t "μαλκούς̄", "malkūš"} “queens”.
+  %p The <i>determinate state</i> marks the noun in question for definiteness, and is thus broadly similar to English 'the'. It is formed by prefixing *ha- (spelled α-) to the noun (whether singular or plural) and geminating the initial consonant: #{t "αββήτ", "habbēt"} “the house”, #{t "αββητιήν", "habbētien"} “the houses”, #{t "αμμαλκώ", "hammalkā"} “the queen”, #{t "αμμαλκούς̄", "hammalkūš"} “the queens”. However, if the noun begins with /ʔ/ or /h/, the consonant is lost, and the prefix becomes *n-: #{t "άννε", "'anne"} “stone (abs)” → #{t "νάννε", "nanne"} “the stone (det)”, #{t "ηηνεί", "hēnī"} “eyes (abs)” → #{t "νηνεί", "nēnī"} “the eyes (det)”. If the noun begins with /r/, the sequence /dr/ emerges instead of gemination: #{t "ρώς", "rās"} “head (abs)” → #{t "αδρώς", "hadrās"} “the head (det)”.
+  %p The <i>partitive state</i> creates partitive nouns, and is generally similar to the English determiner 'some'. It is formed by prefixing *mi- to the noun and geminating the initial consonant: #{t "μιββητιήν", "mibbētien"} “some houses”, #{t "μιμμαλκούς̄", "mimmalkūš"} “some queens”, #{t "μή", "mē"} “water (abs)” → #{t "μιμμή", "mimmē"} “some water (par)”. As with the determinate state, if the noun begins with /ʔ/ or /h/, it drops and the prefix becomes *min-: #{t "άννε", "'anne"} “stone (abs)” → #{t "μινάννε", "minanne"} “some stone (par)”.
+  %p The <i>construct state</i> marks the head noun in a genitival noun phrase, and must be always followed by another noun. Construct nouns are always implicitly definite. Its formation is slightly more complicated, since it involves replacing the usual noun endings seen in all other states with their construct equivalents:
+  %ul
+    %li If the noun is singular and does not end in the feminine *-ā, or is a broken plural, the construct is the same as the absolute.
+    %li If the noun is singular and ends in the feminine *-ā, the construct ending is *-et: #{t "μαλκώ", "malkā"} “queen (abs)” → #{t "μάλκετ", "malket"} “the queen [of] (const)”.
+    %li If the noun is plural and ends in *-ien, the construct ending is *-ē: #{t "βητιήν", "bētien"} “houses (abs)” → #{t "βητή", "bētē"} “the houses [of] (const)”.
+    %li If the noun is plural and ends in *-uoš or *-ūš, the construct ending is *-ūt: #{t "μαλκούς̄", "malkūš"} “queens (abs)” → #{t "μαλκούτ", "malkūt"} “the queens [of] (const)”.
+    %li If the noun is plural and ends in the dual marker *-ī, the construct ending remains *-ī.
+  %p In addition, the construct is prone to some sandhi-like contractions when followed by a word in the determinate state. This will be discussed later.
+  %p The following tables show all forms of the nouns #{t "в̄ούδ", "vūd"} “boy, child” and #{t "в̄αλδώ", "valdā"} “girl”:
+  %table
+    %tr
+      %th{:colspan => 5} Declension: <i>vūd</i> “boy, child”
+    %tr
+      %th
+      %th Absolute
+      %th Determinate
+      %th Partitive
+      %th Construct
+    %tr
+      %th Singular
+      %td= t("в̄ούδ", "vūd", :linebreak => true)
+      %td= t("αв̄в̄ούδ", "havvūd", :linebreak => true)
+      %td= t("μιв̄в̄ούδ", "mivvūd", :linebreak => true)
+      %td= t("в̄ούδ", "vūd", :linebreak => true)
+    %tr
+      %th Plural
+      %td= t("в̄ουδιήν", "vūdien", :linebreak => true)
+      %td= t("αв̄в̄ουδιήν", "havvūdien", :linebreak => true)
+      %td= t("μιв̄в̄ουδιήν", "mivvūdien", :linebreak => true)
+      %td= t("в̄ουδή", "vūdē", :linebreak => true)
+  %table
+    %tr
+      %th{:colspan => 5} Declension: <i>valdā</i> “girl”
+    %tr
+      %th
+      %th Absolute
+      %th Determinate
+      %th Partitive
+      %th Construct
+    %tr
+      %th Singular
+      %td= t("в̄αλδώ", "valdā", :linebreak => true)
+      %td= t("αв̄в̄αλδώ", "havvaldā", :linebreak => true)
+      %td= t("μιв̄в̄αλδώ", "mivvaldā", :linebreak => true)
+      %td= t("в̄άλδετ", "valdet", :linebreak => true)
+    %tr
+      %th Plural
+      %td= t("в̄αλδούς̄", "valdūš", :linebreak => true)
+      %td= t("αв̄в̄αλδούς̄", "havvaldūš", :linebreak => true)
+      %td= t("μιв̄в̄αλδούς̄", "mivvaldūš", :linebreak => true)
+      %td= t("в̄αλδούτ", "valdūt", :linebreak => true)
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) This description is synchronic. Historically, these 'masculine' and 'feminine' patterns are two completely different phenomena. The 'masculine' patterns are historically collectives derived from the singular forms, while most of the 'feminine' patterns are originally mass nouns that then developed singulatives in *-ā.
+%p 2) Historically only #{t "ιθθώ", "'iṯṯā"} has a true suppletive plural, with its singular going back to Proto-Semitic *'inṯ- and its plural to *niš(w)-. The plurals of #{t "είς", "'īs"} and #{t "βείτ", "bīt"} come from the same root in Proto-Semitic as their respective singulars (*'inš- and *bin-t-), but time has obscured the connection.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
