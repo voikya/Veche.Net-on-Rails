@@ -1,0 +1,394 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πρυωθεσιήν".html_safe
+
+= render :partial => 'navigation'
+
+= section "Preposition Classes" do
+  %p Alashian has three classes of prepositions, based on their declensional and syntactic peculiarities.
+  %p The <i>clitic prepositions</i> form the smallest (but oldest) class, containing just three forms: #{t "λι-", "li-"} marking possession (“of”) as well as a few other miscellaneous functions, #{t "βι-", "bi-"} marking instrument or manner (“with, by”), and #{t "χι-", "xi-"} marking recipient (“to, for”). All three are attached directly to word that immediately follows: #{t "λικαττώ", "likattā"} “of a cat”, #{t "βεαυτού", "be'awtū"} “by car”, #{t "χεεμώ", "xe'emā"} “to/for mother”. The prefix vowel changes to /e/ (i.e., <i>be-</i>, <i>le-</i>, <i>xe-</i>) when followed immediately by a glottal stop.
+  %p The <i>primitive prepositions</i> are all prepositions that cannot (in the modern language) be subdivided into smaller morphemes; they are thus true prepositions and not noun phrases serving a prepositional function. This includes many common forms such as #{t "βνε", "bne"} “from”, #{t "ιв̄", "'iv"} “in”, #{t "ηυν", "hun"} “with”, #{t "τωτ", "tāt"} “below”, and #{t "βην", "bēn"} “between”. These are all independent words, although they are typically unstressed.
+  %p Finally, there are the <i>phrasal</i> or <i>nominal</i> prepositions. These are forms that clearly consist of multiple morphemes and incorporate nouns appearing in their construct state; the noun within the phrasal preposition thereby forms a construct with its object, such that the prepositional relationship is fundamentally a genitival one. This class includes such forms as #{t "ηαλ μακκούν", "hal məkhūn"} “instead of” (lit. “in [the] place of”) and #{t "βιλέτζε", "bileče"} “because of” (lit. “by [the] word of”). Many primitives in the modern language were once phrasal, such as #{t "ηαλαδεί", "haladī"} “by [in passive sentences]” from Classical Alashian #{t "ηαλ ιαδεί", "hal yadī"}, literally “on/by the hands of”.
+
+= section "Preposition Declension" do
+  = section "Object Agreement" do
+    %p Most primitive and phrasal prepositions agree with their direct object in number. Since most prepositions were originally of nominal origin (if not still clearly nominal), the prepositions themselves once had independent number marking. However, for logical reasons, this number would often match the number of the direct object. Consider, for instance, the prepositional phrases #{t "τωτ υνάτζ", "tāt 'unəč"} “under the tree”<sup>1</sup> (#{t "ηάτζ", "həč"} “tree”) and #{t "τώτε νατζζιήν", "tāte nəčhien"} “under the trees”; the Alashian preposition #{t "τωτ", "tāt"} “under” comes from the Proto-Semitic noun *<i>taḥt-um</i> “underside”, so in a pre-literate direct ancestor of Alashian these two phrases were likely expressed as *<i>tařti han-hetṣi</i> (lit. “[on the] underside of the tree”) and *<i>tařtī han-hetṣīn</i> (lit. “on the undersides of the trees”). The plural agreement marker for prepositions is thus cognate to the masculine plural construct marker of nouns, and at some point became generalized to prepositions with plural objects regardless of the semantics.
+    %p For most primitive prepositions, the plural is formed by adding *-e to the singular form: #{t "ιв̄", "'iv"} “in” → #{t "ίв̄ε", "'ive"}, #{t "ηυν", "hun"} “with” → #{t "ηύνε", "hune"}, #{t "βην", "bēn"} “between” → #{t "βήνε", "bēne"}. This is generally quite regular, although a few irregular forms exist, such as #{t "ένεδ̄", "'eneḏ"} “in the opinion of, according to” → #{t "ένδε", "'ende"}. If the singular form ends in a vowel, however, there is no distinction between singular and plural: #{t "είρυ", "'īru"} “around, about” → #{t "είρυ", "'īru"}, #{t "βνε", "bne"} “from” → #{t "βνε", "bne"}.
+    %p Phrasal prepositions tend to use actual construct plural endings, since they incorporate an actual productive noun. Once again, this agreement typically ignores the semantics of the literal expression: #{t "ηαλ μακκούν", "hal məkhūn"} “instead of” → #{t "ηάλε μακκυννή", "hale məkhunnē"}, #{t "βιλέτζε", "bileče"} “because of” → #{t "βιλετζή", "bilečē"}.
+    %p Clitic prepositions do not show any object agreement.
+
+  = section "Pronominal Declension" do
+    %p Much as in most of the other Semitic languages, when the object of an Alashian preposition is a personal pronoun, the preposition and pronoun collapse together into a single word, generally referred to as a <i>declined preposition</i>. The three preposition classes each have slightly different means of declension.
+    %p The clitic prepositions use endings that are historically related to the accusative pronouns. This has generally been ascribed to Greek influence. They also have an 'emphatic' form where the full accusative pronoun can be seen. Shown below is the complete declension of #{t "χι-", "xi-"} “to, for”:
+    %table
+      %tr
+        %th{:colspan => 8} Clitic Preposition Declension
+      %tr
+        %th
+        %th Standard
+        %th Emphatic
+        %th Meaning
+        %th
+        %th Standard
+        %th Emphatic
+        %th Meaning
+      %tr
+        %th 1 Sg
+        %td= t("χιή", "xie", :linebreak => true)
+        %td= t("χιώ", "xiyā", :linebreak => true)
+        %td to me
+        %th 1 Pl
+        %td= t("χάν", "xan", :linebreak => true)
+        %td= t("χινυώ", "xinuwā", :linebreak => true)
+        %td to us
+      %tr
+        %th 2 Sg Masc
+        %td= t("χάκ", "xak", :linebreak => true)
+        %td= t("χικυώ", "xikwā", :linebreak => true)
+        %td to you (m)
+        %th 2 Pl Masc
+        %td= t("χάκαν", "xakan", :linebreak => true)
+        %td= t("χικυνώ", "xikunā", :linebreak => true)
+        %td to you all (m)
+      %tr
+        %th 2 Sg Fem
+        %td= t("χάτζ", "xač", :linebreak => true)
+        %td= t("χιτζιώ", "xičyā", :linebreak => true)
+        %td to you (f)
+        %th 2 Pl Fem
+        %td= t("χάτζεν", "xačen", :linebreak => true)
+        %td= t("χιτζινώ", "xičinā", :linebreak => true)
+        %td to you all (f)
+      %tr
+        %th 3 Sg Masc
+        %td= t("χού", "xū", :linebreak => true)
+        %td= t("χιυώτ", "xiwāt", :linebreak => true)
+        %td to him/it
+        %th 3 Pl Masc
+        %td= t("χών", "xān", :linebreak => true)
+        %td= t("χιυμώ", "xiyumā", :linebreak => true)
+        %td to them
+      %tr
+        %th 3 Sg Fem
+        %td= t("χών", "xān", :linebreak => true)
+        %td= t("χιώτ", "xiyāt", :linebreak => true)
+        %td to her/it
+        %th 3 Pl Fem
+        %td= t("χών", "xān", :linebreak => true)
+        %td= t("χιυμώ", "xiyumā", :linebreak => true)
+        %td to them
+    %p In practice, the emphatic forms of #{t "χι-", "xi-"} and #{t "βι-", "bi-"} are increasingly displacing their standard equivalents, while #{t "λι-", "li-"}  has undergone somewhat of a bifurcation, with the standard forms nearly universal in attributive position (cf. the genitive pronouns in the previous chapter) and the emphatic forms generally dominant in predicate/complement position.
+    %p The suffixes used by primitive prepositions are the same as the possessive suffixes used by nouns. There is no special emphatic distinction, and actual pronouns cannot be used in place of possessive endings. Note, however, that the plural agreement marker continues to surface between the stem and possessive suffix if the pronominal object is plural. Shown below is the declension of #{t "ηαλ", "hal"} “on”:
+    %table
+      %tr
+        %th{:colspan => 6} Primitive Preposition Declension
+      %tr
+        %th 1 Sg
+        %td= t("ηαλεί", "halī", :linebreak => true)
+        %td on me
+        %th 1 Pl
+        %td= t("ηάλεν", "halen", :linebreak => true)
+        %td on us
+      %tr
+        %th 2 Sg Masc
+        %td= t("ηάλικ", "halik", :linebreak => true)
+        %td on you (m)
+        %th 2 Pl Masc
+        %td= t("ηάλεκαν", "halekan", :linebreak => true)
+        %td on you all (m)
+      %tr
+        %th 2 Sg Fem
+        %td= t("ηάλιτζ", "halič", :linebreak => true)
+        %td on you (f)
+        %th 2 Pl Fem
+        %td= t("ηάλετζεν", "halečen", :linebreak => true)
+        %td on you all (f)
+      %tr
+        %th 3 Sg Masc
+        %td= t("ηαλού", "halū", :linebreak => true)
+        %td on him/it
+        %th 3 Pl Masc
+        %td= t("ηάλειαν", "haleyan", :linebreak => true)
+        %td on them
+      %tr
+        %th 3 Sg Fem
+        %td= t("ηαλώ", "halā", :linebreak => true)
+        %td on her/it
+        %th 3 Pl Masc
+        %td= t("ηάλειαν", "haleyan", :linebreak => true)
+        %td on them
+    %p Phrasal prepositions have two different options for declension which exist in more or less free variation: either possessive suffixes can be added to the nominal component, or the genitive pronoun (declined #{t "λι-", "li-"}) can be used; in the latter case, the genitive pronoun typically comes immediately before the noun, unless the noun is preceded by a clitic preposition, in which case it comes after. Number agreement continues to be operational. To demonstrate this, both #{t "ηαλ μακκούν", "hal məkhūn"} “instead of” and #{t "βιλέτζε", "bileče"} “because of” are shown below:
+    %table
+      %tr
+        %th{:colspan => 8} Phrasal Preposition Declension
+      %tr
+        %th
+        %th Possessive Suffix
+        %th Genitive Pronoun
+        %th Meaning
+        %th
+        %th Possessive Suffix
+        %th Genitive Pronoun
+        %th Meaning
+      %tr
+        %th 1 Sg
+        %td= t("ηαλ μακκυννεί", "hal məkhunnī", :linebreak => true)
+        %td= t("ηαλ λιή μακκούν", "hal lie məkhūn", :linebreak => true)
+        %td instead of me
+        %th 1 Pl
+        %td= t("ηάλε μακκυννήν", "hale məkhunnēn", :linebreak => true)
+        %td= t("ηάλε λάν μακκυννιήν", "hale lan məkhunnien", :linebreak => true)
+        %td instead of us
+      %tr
+        %th 2 Sg Masc
+        %td= t("ηαλ μάκκυννικ", "hal məkhunnik", :linebreak => true)
+        %td= t("ηαλ λάκ μακκούν", "hal lak məkhūn", :linebreak => true)
+        %td instead of you (m)
+        %th 2 Pl Masc
+        %td= t("ηάλε μακκυννήκαν", "hale məkhunnēkan", :linebreak => true)
+        %td= t("ηάλε λάκαν μακκυννιήν", "hale lakan məkhunnien", :linebreak => true)
+        %td instead of you all (m)
+      %tr
+        %th 2 Sg Fem
+        %td= t("ηαλ μάκκυννιτζ", "hal məkhunnič", :linebreak => true)
+        %td= t("ηαλ λάτζ μακκούν", "hal lač məkhūn", :linebreak => true)
+        %td instead of you (f)
+        %th 2 Pl Fem
+        %td= t("ηάλε μακκυννήτζεν", "hale məkhunnēčen", :linebreak => true)
+        %td= t("ηάλε λάτζεν μακκυννιήν", "hale lačen məkhunnien", :linebreak => true)
+        %td instead of you all (f)
+      %tr
+        %th 3 Sg Masc
+        %td= t("ηαλ μακκυννού", "hal məkhunnū", :linebreak => true)
+        %td= t("ηαλ λού μακκούν", "hal lū məkhūn", :linebreak => true)
+        %td instead of him/it
+        %th 3 Pl Masc
+        %td= t("ηάλε μακκυννήιαν", "hale məkhunnēyan", :linebreak => true)
+        %td= t("ηάλε λών μακκυννιήν", "hale lān məkhunnien", :linebreak => true)
+        %td instead of them
+      %tr
+        %th 3 Sg Fem
+        %td= t("ηαλ μακκυννώ", "hal məkhunnā", :linebreak => true)
+        %td= t("ηαλ λών μακκούν", "hal lān məkhūn", :linebreak => true)
+        %td instead of her/it
+        %th 3 Pl Fem
+        %td= t("ηάλε μακκυννήιαν", "hale məkhunnēyan", :linebreak => true)
+        %td= t("ηάλε λών μακκυννιήν", "hale lān məkhunnien", :linebreak => true)
+        %td instead of them
+    %table
+      %tr
+        %th{:colspan => 8} Phrasal Preposition Declension
+      %tr
+        %th
+        %th Possessive Suffix
+        %th Genitive Pronoun
+        %th Meaning
+        %th
+        %th Possessive Suffix
+        %th Genitive Pronoun
+        %th Meaning
+      %tr
+        %th 1 Sg
+        %td= t("βιλετζεί", "bilečī", :linebreak => true)
+        %td= t("βιλέτζε λιή", "bileče lie", :linebreak => true)
+        %td because of me
+        %th 1 Pl
+        %td= t("βιλετζήν", "bilečēn", :linebreak => true)
+        %td= t("βιλετζιήν λάν", "bilečien lan", :linebreak => true)
+        %td because of us
+      %tr
+        %th 2 Sg Masc
+        %td= t("βιλέτζεκ", "bileček", :linebreak => true)
+        %td= t("βιλέτζε λάκ", "bileče lak", :linebreak => true)
+        %td because of you (m)
+        %th 2 Pl Masc
+        %td= t("βιλετζήκαν", "bilečēkan", :linebreak => true)
+        %td= t("βιλετζιήν λάκαν", "bilečien lakan", :linebreak => true)
+        %td because of you all (m)
+      %tr
+        %th 2 Sg Fem
+        %td= t("βιλέτζετζ", "bilečeč", :linebreak => true)
+        %td= t("βιλέτζε λάτζ", "bileče lač", :linebreak => true)
+        %td because of you (f)
+        %th 2 Pl Fem
+        %td= t("βιλετζήτζεν", "bilečēčen", :linebreak => true)
+        %td= t("βιλετζιήν λάτζεν", "bilečien lačen", :linebreak => true)
+        %td because of you all (f)
+      %tr
+        %th 3 Sg Masc
+        %td= t("βιλετζειού", "bilečeyū", :linebreak => true)
+        %td= t("βιλέτζε λού", "bileče lū", :linebreak => true)
+        %td because of him/it
+        %th 3 Pl Masc
+        %td= t("βιλετζήιαν", "bilečēyan", :linebreak => true)
+        %td= t("βιλετζιήν λών", "bilečien lān", :linebreak => true)
+        %td because of them
+      %tr
+        %th 3 Sg Fem
+        %td= t("βιλετζειώ", "bilečeyā", :linebreak => true)
+        %td= t("βιλέτζε λών", "bileče lān", :linebreak => true)
+        %td because of her/it
+        %th 3 Pl Fem
+        %td= t("βιλετζήιαν", "bilečēyan", :linebreak => true)
+        %td= t("βιλετζιήν λών", "bilečien lān", :linebreak => true)
+        %td because of them
+
+= section "List of Prepositions" do
+  = section "Clitic Prepositions" do
+    %table
+      %tr
+        %th Preposition
+        %th Meaning
+        %th Notes
+      %tr
+        %td= t("βι-", "bi-", :linebreak => true)
+        %td with, by
+        %td instrumental
+      %tr
+        %td= t("λι-", "li-", :linebreak => true)
+        %td of
+        %td possessive
+      %tr
+        %td= t("χι-", "xi-", :linebreak => true)
+        %td to, for
+        %td indirect object marker
+
+  = section "Primitive Prepositions" do
+    %table
+      %tr
+        %th Preposition
+        %th Meaning
+        %th Notes
+      %tr
+        %td= t("αδ", "'ad", :linebreak => true)
+        %td until, up to, before
+        %td 
+      %tr
+        %td= t("βήν", "bēn", :linebreak => true)
+        %td between
+        %td 
+      %tr
+        %td= t("βνε", "bne", :linebreak => true)
+        %td from, from inside
+        %td 
+      %tr
+        %td= t("δυίλ", "dwil", :linebreak => true)
+        %td without, except for
+        %td 
+      %tr
+        %td= t("είρυ", "'īru", :linebreak => true)
+        %td around, about
+        %td 'around' in the physical sense of 'surrounding'; 'about' as in topic
+      %tr
+        %td= t("εν", "'en", :linebreak => true)
+        %td like, as, in the capacity of
+        %td 
+      %tr
+        %td= t("ένεδ̄", "'eneḏ", :linebreak => true)
+        %td according to, in the opinion of
+        %td 
+      %tr
+        %td= t("ηαλ", "hal", :linebreak => true)
+        %td on
+        %td 
+      %tr
+        %td= t("ηαλαδεί", "haladī", :linebreak => true)
+        %td by
+        %td marks agent of passive verbs
+      %tr
+        %td= t("ηυν", "hun", :linebreak => true)
+        %td with, along
+        %td accompaniment
+      %tr
+        %td= t("ιв̄", "'iv", :linebreak => true)
+        %td in, inside, into
+        %td 
+      %tr
+        %td= t("ιλ", "'il", :linebreak => true)
+        %td to, towards
+        %td 
+      %tr
+        %td= t("ιτ", "'it", :linebreak => true)
+        %td away from, since
+        %td 
+      %tr
+        %td= t("λιβ", "lib", :linebreak => true)
+        %td against, into (a state)
+        %td 'into' as in 'transform into' or 'fall into despair'
+      %tr
+        %td= t("λίφαν", "lifan", :linebreak => true)
+        %td next to, facing
+        %td 
+      %tr
+        %td= t("κάφ", "kaf", :linebreak => true)
+        %td over, above
+        %td 
+      %tr
+        %td= t("μετώ", "metā", :linebreak => true)
+        %td after
+        %td 
+      %tr
+        %td= t("πρά", "pra", :linebreak => true)
+        %td contrary to, despite
+        %td 
+      %tr
+        %td= t("τώτ", "tāt", :linebreak => true)
+        %td under, below
+        %td 
+  
+  = section "Phrasal Prepositions" do
+    %table
+      %tr
+        %th Preposition
+        %th Meaning
+        %th Notes
+      %tr
+        %td= t("βιδάλ", "bidal", :linebreak => true)
+        %td in front of
+        %td lit. 'at the door of'
+      %tr
+        %td= t("βιλέτζε", "bileče", :linebreak => true)
+        %td because of
+        %td lit. 'in the word of'
+      %tr
+        %td= t("μιμμωρούκ", "mimmārūk", :linebreak => true)
+        %td behind
+        %td lit. 'from the far part of'
+      %tr
+        %td= t("μιφφάλγε", "miffalge", :linebreak => true)
+        %td through
+        %td lit. 'from the middle of'
+      %tr
+        %td= t("μιφτών", "miftān", :linebreak => true)
+        %td outside, to outside
+        %td lit. 'from the inside of'
+      %tr
+        %td= t("ηαλ αρτζείς", "hal 'arčīs", :linebreak => true)
+        %td beyond
+        %td lit. 'on the distance of'
+      %tr
+        %td= t("ηαλ μακκούν", "hal məkhūn", :linebreak => true)
+        %td instead of
+        %td lit. 'on the place of'
+      %tr
+        %td= t("λιτώτ", "litāt", :linebreak => true)
+        %td under, via
+        %td directional; lit. 'to the underside of'
+      %tr
+        %td= t("βώηερ", "bāher", :linebreak => true)
+        %td over, across
+        %td directional; lit. 'crossing'
+      %tr
+        %td= t("φουνεί ιλ", "fūnī 'il", :linebreak => true)
+        %td opposite, across from
+        %td lit. 'faced towards'
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The form <i>'unəč</i> rather than <i>nəč</i> for the definite singular state of <i>həč</i> contains a prosthetic vowel common in nominal constructs. Its appearance will be explained in the discussion of nominal syntax.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
