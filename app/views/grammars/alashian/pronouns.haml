@@ -1,0 +1,596 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αντει-Υωμενιήν".html_safe
+
+= render :partial => 'navigation'
+
+= section "Personal Pronouns" do
+  %p The Alashian pronominal system stands in stark contrast to the pronominal systems of its closely-related Semitic cousins. Centuries of close contact has resulted in Alashian undergoing a significant degree of metatypy with respect to Cypriot Greek, meaning Alashian's pronominal system has been restructured so that it has a nearly one-to-one structural and syntactic correspondence to the Cypriot Greek model.
+  %p Three cases are represented in the personal pronouns, the only vestige of morphological case marking in Alashian: the nominative, accusative, and a merged genitive/dative (which will be called the 'genitive' for short). The nominative and accusative pronouns come in both full/emphatic and clitic forms, while the genitive pronouns lack clitic forms.
+  %table
+    %tr
+      %th
+      %th
+        Nominative
+        %br
+        (Full)
+      %th
+        Nominative
+        %br
+        (Clitic)
+      %th
+        Accusative
+        %br
+        (Full)
+      %th
+        Accusative
+        %br
+        (Clitic)
+      %th Genitive
+    %tr
+      %th 1 Sg
+      %td= t("ετζεί", "'ečī", :linebreak => true)
+      %td= t("τζε", "če", :linebreak => true)
+      %td= t("ιώ", "yā", :linebreak => true)
+      %td= t("νι", "ni", :linebreak => true)
+      %td= t("λιή", "lie", :linebreak => true)
+    %tr
+      %th 2 Sg Masc
+      %td= t("άττα", "'ətha", :linebreak => true)
+      %td= t("τα", "ta", :linebreak => true)
+      %td= t("κυώ", "kwā", :linebreak => true)
+      %td= t("κα", "ka", :linebreak => true)
+      %td= t("λάκ", "lak", :linebreak => true)
+    %tr
+      %th 2 Sg Fem
+      %td= t("ίσ̄σ̄ε", "'išše", :linebreak => true)
+      %td= t("σ̄ι", "ši", :linebreak => true)
+      %td= t("τζιώ", "čyā", :linebreak => true)
+      %td= t("τζι", "či", :linebreak => true)
+      %td= t("λάτζ", "lač", :linebreak => true)
+    %tr
+      %th 3 Sg Masc
+      %td= t("ηού", "hū", :linebreak => true)
+      %td= t("ου", "'ū", :linebreak => true)
+      %td= t("υώτ", "wāt", :linebreak => true)
+      %td= t("ου", "'ū", :linebreak => true)
+      %td= t("λού", "lū", :linebreak => true)
+    %tr
+      %th 3 Sg Fem
+      %td= t("ηεί", "hī", :linebreak => true)
+      %td= t("ει", "'ī", :linebreak => true)
+      %td= t("ιώτ", "yāt", :linebreak => true)
+      %td= t("ει", "'ī", :linebreak => true)
+      %td= t("λών", "lān", :linebreak => true)
+    %tr
+      %th 1 Pl
+      %td= t("νώνυ", "nānu", :linebreak => true)
+      %td= t("νω", "nā", :linebreak => true)
+      %td= t("νυώ", "nuwā", :linebreak => true)
+      %td= t("νω", "nā", :linebreak => true)
+      %td= t("λάν", "lan", :linebreak => true)
+    %tr
+      %th 2 Pl Masc
+      %td= t("άττυν", "'əthun", :linebreak => true)
+      %td= t("αττυν", "'əthun", :linebreak => true)
+      %td= t("κυνώ", "kunā", :linebreak => true)
+      %td= t("κυν", "kun", :linebreak => true)
+      %td= t("λάκαν", "lakan", :linebreak => true)
+    %tr
+      %th 2 Pl Fem
+      %td= t("ίσ̄σ̄ιν", "'iššin", :linebreak => true)
+      %td= t("ισ̄σ̄ιν", "'iššin", :linebreak => true)
+      %td= t("τζινώ", "činā", :linebreak => true)
+      %td= t("τζιν", "čin", :linebreak => true)
+      %td= t("λάτζεν", "lačen", :linebreak => true)
+    %tr
+      %th 3 Pl
+      %td= t("ηυών", "huon", :linebreak => true)
+      %td= t("ουν", "'ūn", :linebreak => true)
+      %td= t("ηυμώ", "humā", :linebreak => true)
+      %td= t("ουν", "'ūn", :linebreak => true)
+      %td= t("λών", "lān", :linebreak => true)
+  %p The clitic forms are always unstressed, and so never show any accent marks.
+
+= section "Possessive Suffixes" do
+  %p Possessive suffixes are largely a feature of archaic Alashian, today surviving only in a few fixed expressions. They are added directly to the construct form of the noun being possessed and indicate a pronominal possessor. Each suffix has two forms, one used after words ending in a consonant and one used after words ending in a vowel.
+  %table
+    %tr
+      %th{:colspan => 4} Alashian Possessive Suffixes
+    %tr
+      %th 1 Sg
+      %td= t("-ει/-νει", "-ī/-nī", :linebreak => true)
+      %th 1 Pl
+      %td= t("-ιν/-ν", "-in/-n", :linebreak => true)
+    %tr
+      %th 2 Sg Masc
+      %td= t("-ικ/-κ", "-ik/-k", :linebreak => true)
+      %th 2 Pl Masc
+      %td= t("-καν", "-kan", :linebreak => true)
+    %tr
+      %th 2 Sg Fem
+      %td= t("-ιτζ/-τζ", "-ič/-č", :linebreak => true)
+      %th 2 Pl Fem
+      %td= t("-τζεν", "-čen", :linebreak => true)
+    %tr
+      %th 3 Sg Masc
+      %td= t("-ου/-ιου", "-ū/-yū", :linebreak => true)
+      %th 3 Pl Masc
+      %td= t("-αν/-ιαν", "-an/-yan", :linebreak => true)
+    %tr
+      %th 3 Sg Fem
+      %td= t("-ω/-ιω", "-ā/-yā", :linebreak => true)
+      %th 3 Pl Fem
+      %td= t("-αν/-ιαν", "-an/-yan", :linebreak => true)
+  %p The following tables demonstrate the use of the possessive endings with the singular noun #{t "αβώ", "'abā"} “father” (construct #{t "άβετ", "'abet"}) and the plural noun #{t "ιαδεί", "yadī"} “hands” (construct #{t "ιαδή", "yadē"}). The former is used quite frequently in the modern language, while the latter is more archaic.
+  %table.invisible
+    %tr
+      %td
+        %table
+          %tr
+            %th{:colspan => 6} Possessive Endings: <i>'abā</i> “father”
+          %tr
+            %th
+            %th Form
+            %th Meaning
+            %th
+            %th Form
+            %th Meaning
+          %tr
+            %th 1 Sg
+            %td= t("αβετεί", "'abetī", :linebreak => true)
+            %td “my father”
+            %th 1 Pl
+            %td= t("άβετιν", "'abetin", :linebreak => true)
+            %td “our father”
+          %tr
+            %th 2 Sg Masc
+            %td= t("άβετικ", "'abetik", :linebreak => true)
+            %td “your (m) father”
+            %th 2 Pl Masc
+            %td= t("άβετκαν", "'abetkan", :linebreak => true)
+            %td “you all's (m) father”
+          %tr
+            %th 2 Sg Fem
+            %td= t("άβετιτζ", "'abetič", :linebreak => true)
+            %td “your (f) father”
+            %th 2 Pl Fem
+            %td= t("άβεττζεν", "'abetčen", :linebreak => true)
+            %td “you all's (f) father”
+          %tr
+            %th 3 Sg Masc
+            %td= t("αβετού", "'abetū", :linebreak => true)
+            %td “his father”
+            %th 3 Pl Masc
+            %td= t("άβεταν", "'abetan", :linebreak => true)
+            %td “their father”
+          %tr
+            %th 3 Sg Fem
+            %td= t("αβετώ", "'abetā", :linebreak => true)
+            %td “her father”
+            %th 3 Pl Masc
+            %td= t("άβεταν", "'abetan", :linebreak => true)
+            %td “their father” 
+      %td
+        %table
+          %tr
+            %th{:colspan => 6} Possessive Endings: <i>'yadī</i> “hands”
+          %tr
+            %th
+            %th Form
+            %th Meaning
+            %th
+            %th Form
+            %th Meaning
+          %tr
+            %th 1 Sg
+            %td= t("ιαδηνεί", "yadēnī", :linebreak => true)
+            %td “my hands”
+            %th 1 Pl
+            %td= t("ιαδήν", "yadēn", :linebreak => true)
+            %td “our hands”
+          %tr
+            %th 2 Sg Masc
+            %td= t("ιαδήκ", "yadēk", :linebreak => true)
+            %td “your (m) hands”
+            %th 2 Pl Masc
+            %td= t("ιαδήκαν", "yadēkan", :linebreak => true)
+            %td “you all's (m) hands”
+          %tr
+            %th 2 Sg Fem
+            %td= t("ιαδήτζ", "yadēč", :linebreak => true)
+            %td “your (f) hands”
+            %th 2 Pl Fem
+            %td= t("ιαδήτζεν", "yadēčen", :linebreak => true)
+            %td “you all's (f) hands”
+          %tr
+            %th 3 Sg Masc
+            %td= t("ιαδηιού", "yadēyū", :linebreak => true)
+            %td “his hands”
+            %th 3 Pl Masc
+            %td= t("ιαδήιαν", "yadēyan", :linebreak => true)
+            %td “their hands”
+          %tr
+            %th 3 Sg Fem
+            %td= t("ιαδηιώ", "yadēyā", :linebreak => true)
+            %td “her hands”
+            %th 3 Pl Masc
+            %td= t("ιαδήιαν", "yadēyan", :linebreak => true)
+            %td “their hands”
+
+= section "Reflexive Pronoun" do
+  %p The reflexive pronoun simply consists of the noun #{t "νάφσε", "nafse"} “breath” (originally, “soul, spirit”) with the appropriate possessive suffixes. Naturally #{t "νάφσε", "nafse"} appears in its plural form #{t "νεφώς", "nefās"} when the subject is plural.
+  %table
+    %tr
+      %th{:colspan => 4} The Reflexive Pronoun
+    %tr
+      %th 1 Sg
+      %td= t("ναφσεί", "nafsī", :linebreak => true)
+      %th 1 Pl
+      %td= t("νεφώσιν", "nefāsin", :linebreak => true)
+    %tr
+      %th 2 Sg Masc
+      %td= t("νάφσικ", "nafsik", :linebreak => true)
+      %th 2 Pl Masc
+      %td= t("νεφώσκαν", "nefāskan", :linebreak => true)
+    %tr
+      %th 2 Sg Fem
+      %td= t("νάφσιτζ", "nafsič", :linebreak => true)
+      %th 2 Pl Fem
+      %td= t("νεφώστζεν", "nefāsčen", :linebreak => true)
+    %tr
+      %th 3 Sg Masc
+      %td= t("ναφσού", "nafsū", :linebreak => true)
+      %th 3 Pl Masc
+      %td= t("νεφώσαν", "nefāsan", :linebreak => true)
+    %tr
+      %th 3 Sg Fem
+      %td= t("ναφσώ", "nafsā", :linebreak => true)
+      %th 3 Pl Fem
+      %td= t("νεφώσαν", "nefāsan", :linebreak => true)
+
+= section "“By Oneself”" do
+  %p The adverbial pronouns of the “by oneself” type are formed with declined forms of the preposition #{t "βήν", "bēn"} “between” (cf. section 17.2).
+  %table
+    %tr
+      %th{:colspan => 6} “By Oneself”
+    %tr
+      %th 1 Sg
+      %td= t("βηνεί", "bēnī", :linebreak => true)
+      %td “by myself”
+      %th 1 Pl
+      %td= t("βήνεν", "bēnen", :linebreak => true)
+      %td “by ourselves”
+    %tr
+      %th 2 Sg Masc
+      %td= t("βήνικ", "bēnik", :linebreak => true)
+      %td “by yourself”
+      %th 2 Pl Masc
+      %td= t("βήνεκαν", "bēnekan", :linebreak => true)
+      %td “by yourselves”
+    %tr
+      %th 2 Sg Fem
+      %td= t("βήνιτζ", "bēnič", :linebreak => true)
+      %td “by yourself”
+      %th 2 Pl Fem
+      %td= t("βήνετζεν", "bēnečen", :linebreak => true)
+      %td “by yourselves”
+    %tr
+      %th 3 Sg Masc
+      %td= t("βηνού", "bēnū", :linebreak => true)
+      %td “by himself”
+      %th 3 Pl Masc
+      %td= t("βήνειαν", "bēneyan", :linebreak => true)
+      %td “by themselves”
+    %tr
+      %th 3 Sg Fem
+      %td= t("βηνώ", "bēnā", :linebreak => true)
+      %td “by herself”
+      %th 3 Pl Fem
+      %td= t("βήνειαν", "bēneyan", :linebreak => true)
+      %td “by themselves”
+
+= section "Demonstrative Pronouns" do
+  %p Alashian has two levels of demonstrative pronouns, proximal (“this/these”) and distal (“that/those”). They mark gender in the singular, but have a single genderless form in the plural.
+  %p The demonstrative pronouns and adjectives have distinct (though related) forms, with the pronouns having a prefix historically related to the definite article and various suffixial flotsam that no longer has a clear purpose. The demonstrative adjectives, unlike most other adjectives, do not show any sort of state agreement at all.
+  %table
+    %tr
+      %th{:colspan => 6} Alashian Demonstratives
+    %tr
+      %th 
+      %th{:colspan => 2} Proximal
+      %th 
+      %th{:colspan => 2} Distal
+    %tr
+      %th 
+      %th Pronoun
+      %th Adjective
+      %th 
+      %th Pronoun
+      %th Adjective
+    %tr
+      %th Masc Sg
+      %td= t("αδ̄δ̄εκώ", "'aḏḏekā", :linebreak => true)
+      %td= t("δή", "dē", :linebreak => true)
+      %th Masc Sg
+      %td= t("ανού", "'anū", :linebreak => true)
+      %td= t("ηού", "hū", :linebreak => true)
+    %tr
+      %th Fem Sg
+      %td= t("αδ̄δ̄ιτζεί", "'aḏḏičī", :linebreak => true)
+      %td= t("δίτ", "dit", :linebreak => true)
+      %th Fem Sg
+      %td= t("ανεί", "'anī", :linebreak => true)
+      %td= t("ηεί", "hī", :linebreak => true)
+    %tr
+      %th Pl
+      %td= t("αδ̄ήλεκ", "'aḏēlek", :linebreak => true)
+      %td= t("δέλε", "dele", :linebreak => true)
+      %th Pl
+      %td= t("ανυών", "'anuon", :linebreak => true)
+      %td= t("ηυών", "huon", :linebreak => true)
+
+= section "Interrogative Pronouns" do
+  %p Alashian has two interrogative pronouns, as well as a number of interrogative adjectives and adverbs.
+  %p The interrogative pronouns are μώ <i>mā</i> “what?”, used with inanimate referents, and μιή <i>mie</i> “who?”, used with animate referents. These decline in all three cases, though they do not contrast number:
+  %table
+    %tr
+      %th{:colspan => 4} Interrogative Pronoun Declension
+    %tr
+      %th
+      %th Nominative
+      %th Accusative
+      %th Genitive
+    %tr
+      %th μώ “what?”
+      %td= t("μώ", "mā")
+      %td= t("μώτ", "māt")
+      %td= t("λιμή", "limē")
+    %tr
+      %th μιή “who?”
+      %td= t("μιή", "mie")
+      %td= t("μείτ", "mīt")
+      %td= t("λιμεί", "limī")
+  %p There are three interrogative adjectives and determiners: #{t "ιή", "yē"} “which, what? (animate)”, #{t "έδα", "'eda"} “which, what, what kind of? (inanimate)”, and #{t "κάν", "kan"} “how much, how many?”. They each have a full adjectival declension (though <i>kan</i> lacks plural forms), although the first two are somewhat irregular:
+  %table.invisible
+    %tr
+      %td
+        %table
+          %tr
+            %th{:colspan => 5} Adjectival Declension: <i>yē</i> “which, what?”
+          %tr
+            %th
+            %th{:colspan => 2} Masculine
+            %th{:colspan => 2} Feminine
+          %tr
+            %th
+            %th Singular
+            %th Plural
+            %th Singular
+            %th Plural
+          %tr
+            %th Absolute
+            %td= t("ιή", "yē", :linebreak => true)
+            %td= t("ειήν", "'eyēn", :linebreak => true)
+            %td= t("ιώ", "yā", :linebreak => true)
+            %td= t("ειούς̄", "'eyūš", :linebreak => true)
+          %tr
+            %th Determinate
+            %td= t("νιή", "nie", :linebreak => true)
+            %td= t("νειήν", "neyēn", :linebreak => true)
+            %td= t("νιώ", "nyā", :linebreak => true)
+            %td= t("νειούς̄", "neyūš", :linebreak => true)
+          %tr
+            %th Partitive<br>(Attributive)
+            %td= t("ιή", "yē", :linebreak => true)
+            %td= t("νειήν", "neyēn", :linebreak => true)
+            %td= t("ιώ", "yā", :linebreak => true)
+            %td= t("νειούς̄", "neyūš", :linebreak => true)
+          %tr
+            %th Partitive<br>(Independent)
+            %td= t("μινιή", "minie", :linebreak => true)
+            %td= t("μινειήν", "mineyēn", :linebreak => true)
+            %td= t("μινιώ", "minyā", :linebreak => true)
+            %td= t("μινειούς̄", "mineyūš", :linebreak => true)
+          %tr
+            %th Construct
+            %td= t("ιή", "yē", :linebreak => true)
+            %td= t("ειή", "'eyē", :linebreak => true)
+            %td= t("ιάτ", "yat", :linebreak => true)
+            %td= t("ειούτ", "'eyūt", :linebreak => true)
+      %td
+        %table
+          %tr
+            %th{:colspan => 5} Adjectival Declension: <i>'eda</i> “which, what?”
+          %tr
+            %th 
+            %th{:colspan => 2} Masculine
+            %th{:colspan => 2} Feminine
+          %tr
+            %th 
+            %th Singular
+            %th Plural
+            %th Singular
+            %th Plural
+          %tr
+            %th Absolute
+            %td= t("έδα", "'eda", :linebreak => true)
+            %td= t("εδιήν", "'edien", :linebreak => true)
+            %td= t("εδιώ", "'edyā", :linebreak => true)
+            %td= t("εδιούς̄", "'edyūš", :linebreak => true)
+          %tr
+            %th Determinate
+            %td= t("νέδα", "neda", :linebreak => true)
+            %td= t("νεδιήν", "nedien", :linebreak => true)
+            %td= t("νεδιώ", "nedyā", :linebreak => true)
+            %td= t("νεδιούς̄", "nedyūš", :linebreak => true)
+          %tr
+            %th Partitive<br>(Attributive)
+            %td= t("έδα", "'eda", :linebreak => true)
+            %td= t("νεδιήν", "nedien", :linebreak => true)
+            %td= t("εδιώ", "'edyā", :linebreak => true)
+            %td= t("νεδιούς̄", "nedyūš", :linebreak => true)
+          %tr
+            %th Partitive<br>(Independent)
+            %td= t("μίνεδα", "mineda", :linebreak => true)
+            %td= t("μινεδιήν", "minedien", :linebreak => true)
+            %td= t("μινεδιώ", "minedyā", :linebreak => true)
+            %td= t("μινεδιούς̄", "minedyūš", :linebreak => true)
+          %tr
+            %th Construct
+            %td= t("έδατ", "'edat", :linebreak => true)
+            %td= t("εδή", "'edē", :linebreak => true)
+            %td= t("έδιατ", "'edyat", :linebreak => true)
+            %td= t("εδιούτ", "'edyūt", :linebreak => true)
+  %p Interrogative adverbs are non-declining, and include #{t "μασή", "masē"} “when?”, #{t "ήκα", "'ēka"} “where?”, and #{t "βιμώ", "bimā"} “how?”. “Why?” is expressed using #{t "μώ", "mā"}, the same word as the nominative form of “what?”.
+
+= section "Correlatives Tables" do
+  %p The above information dealing with pro-forms and determiners, along with other minor classes of determiners, may be summarized in a series of correlatives tables.
+  - correlatives = { "Interrogative" => { :determiner => { :ala => "ιή/έδα", :lat => "yē/'eda" },
+                                          :quality    => { :ala => "ιή/έδα", :lat => "yē/'eda" },
+                                          :person     => { :ala => "μιή", :lat => "mie" },
+                                          :thing      => { :ala => "μώ", :lat => "mā" },
+                                          :place      => { :ala => "ήκα", :lat => "'ēka" },
+                                          :direction  => { :ala => "αδ ήκα", :lat => "'ad 'ēka" },
+                                          :origin     => { :ala => "βνε ήκα", :lat => "bne 'ēka" },
+                                          :time       => { :ala => "μασή", :lat => "masē" },
+                                          :amount     => { :ala => "κάν", :lat => "kan" },
+                                          :way        => { :ala => "βιμώ", :lat => "bimā" },
+                                          :reason     => { :ala => "μώ", :lat => "mā" } },
+                     "Proximal"      => { :determiner => { :ala => "δή", :lat => "dē" },
+                                          :quality    => { :ala => "κααδ̄δ̄εκώ", :lat => "ka'aḏḏekā" },
+                                          :person     => { :ala => "αδ̄δ̄εκώ", :lat => "'aḏḏekā" },
+                                          :thing      => { :ala => "αδ̄δ̄εκώ", :lat => "'aḏḏekā" },
+                                          :place      => { :ala => "ηών", :lat => "hān" },
+                                          :direction  => { :ala => "κυώ", :lat => "kuo" },
+                                          :origin     => { :ala => "βνε ηών", :lat => "bne hān" },
+                                          :time       => { :ala => "αππών", :lat => "'əphān" },
+                                          :amount     => { :ala => "δη πυώς", :lat => "dē puos" },
+                                          :way        => { :ala => "κάκ", :lat => "kak" },
+                                          :reason     => { :ala => "βεαδ̄δ̄εκώ", :lat => "be'aḏḏekā" } },
+                     "Distal"        => { :determiner => { :ala => "ηού", :lat => "hū" },
+                                          :quality    => { :ala => "καανού", :lat => "ka'anū" },
+                                          :person     => { :ala => "ανού", :lat => "'anū" },
+                                          :thing      => { :ala => "ανού", :lat => "'anū" },
+                                          :place      => { :ala => "θών", :lat => "ṯān" },
+                                          :direction  => { :ala => "αδών", :lat => "'adān" },
+                                          :origin     => { :ala => "βνε θών", :lat => "bne ṯān" },
+                                          :time       => { :ala => "πλέ", :lat => "ple" },
+                                          :amount     => { :ala => "ηου πυώς", :lat => "hū puos" },
+                                          :way        => { :ala => "κάκ", :lat => "kak" },
+                                          :reason     => { :ala => "βεανού", :lat => "be'anū" } } }
+  = render 'correlative_table', :alignment => "left", :correlatives => correlatives
+  
+  = section "Interrogative Forms" do
+    %p The interrogative forms have for the most part already been discussed. The 'determiner' (“which? what?”) and 'quality' (“what kind of?”) are both handled by the adjectives #{t "ιή", "yē"} and #{t "έδα", "'eda"}, depending on the animacy of the noun being described. The 'person' (“who?”) and 'thing' (“what?”) fields are filled by the native pronouns #{t "μώ", "mā"} and #{t "μιή", "mie"}, which have cognates in most modern Semitic languages. The distinction between <i>mā</i> and <i>mie</i> is also a question of animacy.
+    %p The interrogative of place (“where?”) is handled by the adverb #{t "ήκα", "'ēka"}, which etymologically consists of an adjective *ʔay- “which” (cf. Alashian #{t "ιή", "yē"}) and an adverb *kā “here”. #{t "Ήκα", "'ēka"} is used for location only; the interrogatives of direction (“whither? to where?”) and origin (“whence? from where?”) consist of prepositions plus <i>'ēka</i>: #{t "αδ ήκα", "'ad 'ēka"} (lit. “towards where?”) and #{t "βνε ήκα", "bne 'ēka"} (lit. “from where?”).
+    %p The interrogative of time (“when?”) is #{t "μασή", "masē"}, another native form with cognates in a number of Semitic languages. The interrogative of amount (“how much? how many?”) is #{t "κάν", "kan"}, which behaves as a noun and will typically appear in the construct state accompanied by whatever is being quantified. The quantified noun always appears in the singular, regardless of logical number.
+    %p The interrogative of way (“how?”) is #{t "βιμώ", "bimā"}, which consists of the clitic instrumental preposition #{t "βι-", "bi-"} “with” and the pronoun #{t "μώ", "mā"} “what?”. The interrogative of reason (“why?”) is simply #{t "μώ", "mā"}, having acquired an idiomatic adverbial function alongside its more typical pronominal one.
+  
+  = section "Proximal Forms" do
+    %p Proximal forms have the basic meaning of “this”; that is, they reference something in close proximity to the speaker.
+    %p The proximal determiner (“this”) is simply the quasi-adjective #{t "δή", "dē"}, which shows agreement in gender in number. Its pronominal equivalent, #{t "αδ̄δ̄εκώ", "'aḏḏekā"} and its other forms, fill the roles of the 'person' (“this person, this one”) and 'thing' (“this thing, this one”) categories. It also has two variants derived using prepositions, #{t "κααδ̄δ̄εκώ", "ka'aḏḏekā"} “such, like this” (and its feminine and plural counterparts) and #{t "βεαδ̄δ̄εκώ", "be'aḏḏekā"} “for this reason, therefore” (usually always masculine singular).
+    %p The 'place' and 'direction' forms are primitive Semitic forms: #{t "ηών", "hān"} “here” and #{t "κυώ", "kuo"} “hither, to here”. The proximal adverb of origin, however, employs the preposition #{t "βνε", "bne"} “from”: #{t "βνε ηών", "bne hān"} “hence, from here”.
+    %p The adverb #{t "αππών", "'əphān"} “now” is directly related to the noun #{t "πών", "pān"} “time, instance, occurrence” with what was once a definite article prefixed, though the connection between the two words is not readily apparent to most Alashian speakers.
+    %p The proximal quantifier is #{t "δή πυώς", "dē puos"} “this amount [of]”, which consists of the demonstrative “this” plus the noun #{t "πυώς", "puos"} “amount, total”, borrowed from Greek #{t "πόσο", "póso"} “how much?”.
+    %p The proximal adverb of way is #{t "κάκ", "kak"} “thus, this way”, which etymologically consists of the preposition <i>ka-</i> “like” and the locatival adverb *kā “here”.
+
+  = section "Distal Forms" do
+    %p The distal forms have a basic meaning of “that”, referencing something more distant from the speaker, whether physically or metaphorically. These closely parallel the proximal correlatives in their formation.
+    %p As with the proximals, a number of these forms are directly derived from the demonstratives. The determiner #{t "ηού", "hū"} “that” is the distal demonstrative adjective, while the distal 'person' and 'thing' categories are filled by the distal pronouns such as #{t "ανού", "'anū"} “that person, that thing, that one”. The 'quality' and 'reason' categories are filled with pronouns augmented by clitic prepositions, namely #{t "καανού", "ka'anū"} “that kind of, like that” and #{t "βεανού", "be'anū"} “for that reason, therefore”.
+    %p The distal adverb of place is #{t "θών", "ṯān"} “there”, a primitive Semitic form. The directional adverb is #{t "αδών", "'adān"} “thither, to there”, which historically consists of the preposition #{t "αδ", "'ad"} “toward” + #{t "θών", "ṯān"}. The adverb of origin is phrasal: #{t "βνε θών", "bne ṯān"} “thence, from there”.
+    %p The distal adverb of time is #{t "πλέ", "ple"} “then”, a loanword from Cypriot Greek #{t "πιλαί", "pilé"} “already”, which in both languages also serves as a general marker of the perfect aspect.
+    %p The distal quantifier is #{t "ηού πυώς", "hū puos"} “that amount, that much”, clearly built on the same model as #{t "δή πυώς", "dē puos"} “this amount, this much”. The adverb of way is #{t "κάκ", "kak"} “that way, like that, thus”, and is not distinguished from the proximal adverb of way.
+
+  - correlatives = { "Indefinite" => { :determiner => { :ala => "ρ̄άδ", :lat => "řad" },
+                                       :quality    => { :ala => "κάαρ̄αδ", :lat => "ka'ařad" },
+                                       :person     => { :ala => "ρ̄αμμιή", :lat => "řammie" },
+                                       :thing      => { :ala => "ρ̄αμμώ", :lat => "řammā" },
+                                       :place      => { :ala => "ηαλ ρ̄άδ μακκούν", :lat => "hal řad məkhūn" },
+                                       :direction  => { :ala => "ρ̄άδ μακκούνα", :lat => "řad məkhūna" },
+                                       :origin     => { :ala => "βνε ρ̄άδ μακκούν", :lat => "bne řad məkhūn" },
+                                       :time       => { :ala => "πών", :lat => "pān" },
+                                       :amount     => { :ala => "ριδ̄μυώς", :lat => "riḏmuos" },
+                                       :way        => { :ala => "βερ̄άδ μυώδ", :lat => "beřad muod" },
+                                       :reason     => { :ala => "βερ̄άδ λούχ", :lat => "beřad lūx" } },
+                     "Negative"   => { :determiner => { :ala => "ήμα", :lat => "'ēma" },
+                                       :quality    => { :ala => "ήμα", :lat => "'ēma" },
+                                       :person     => { :ala => "μιμμώ", :lat => "mimmā" },
+                                       :thing      => { :ala => "μαμμώ", :lat => "mammā" },
+                                       :place      => { :ala => "ηαλ ήμα μακκούν", :lat => "hal 'ēma məkhūn" },
+                                       :direction  => { :ala => "ήμα μακκούνα", :lat => "'ēma məkhūna" },
+                                       :origin     => { :ala => "βνε ήμα μακκούν", :lat => "bne 'ēma məkhūn" },
+                                       :time       => { :ala => "μαζμώ", :lat => "mazmā" },
+                                       :amount     => { :ala => "ήμα πυώς", :lat => "'ēma puos" },
+                                       :way        => { :ala => "βεήμα μυώδ", :lat => "be'ēma muod" },
+                                       :reason     => { :ala => "βεήμα λούχ", :lat => "be'ēma lūx" } },
+                     "Universal"  => { :determiner => { :ala => "κάλ", :lat => "kal" },
+                                       :quality    => { :ala => "καλ τείπ", :lat => "kal tīp" },
+                                       :person     => { :ala => "καλ άρ̄αδ", :lat => "kal 'ařad" },
+                                       :thing      => { :ala => "κάλ", :lat => "kal" },
+                                       :place      => { :ala => "ηαλ κάλ μακκούν", :lat => "hal kal məkhūn" },
+                                       :direction  => { :ala => "κάλ μακκούνα", :lat => "kal məkhūna" },
+                                       :origin     => { :ala => "βνε κάλ μακκούν", :lat => "bne kal məkhūn" },
+                                       :time       => { :ala => "παχεί", :lat => "paxī" },
+                                       :amount     => { :ala => "κάλ πυώς", :lat => "kal puos" },
+                                       :way        => { :ala => "βικάλ μυώδ", :lat => "bikal muod" },
+                                       :reason     => { :ala => "βικάλ λούχ", :lat => "bikal lūx" } } }
+  = render 'correlative_table', :alignment => "left", :correlatives => correlatives
+
+  = section "Indefinite Forms" do
+    %p The indefinite forms mark an unknown or inspecific quantity or quality, either because the speaker does not know (e.g., “I saw something strange”) or simply is not revealing the information (e.g., “I saw someone you know”). Most Alashian indefinites involve the numeral #{t "(ά)ρ̄αδ", "('a)řad"} “one” in some form.
+    %p The indefinite determiner “some, some kind of” is simply #{t "ρ̄άδ", "řad"}, the same as the adjectival form of “one”. Despite the illogic of it, #{t "ρ̄άδ", "řad"} may freely appear with plural endings if modifying a plural noun.
+    %p The indefinite pronouns marking persons and things consist of an assimilated <i>řad</i> fused with the interrogative pronoun: #{t "ρ̄αμμιή", "řammie"} “someone”, #{t "ρ̄αμμώ", "řammā"} “something”. These decline in the same manner as the interrogative pronouns they were based on.
+    %p The indefinite marker of quality is the adverb #{t "κάαρ̄αδ", "ka'ařad"}, which literally means “like one” or “like something”. Analogy likely played some role in its adoption.
+    %p All of the indefinite locative and directional adverbs are phrasal. “Somewhere” is #{t "ηαλ ρ̄αδ μακκούν", "hal řad məkhūn"}, literally “at some place”. The directional “to somewhere” is #{t "ρ̄άδ μακκούνα", "řad məkhūna"}, featuring a frozen non-productive directional suffix *-a, eliminating the need for a preposition. “From somewhere” is, not surprisingly, #{t "βνε ρ̄άδ μακκούν", "bne řad məkhūn"}, literally “from some place”.
+    %p Alashian has a number of indefinite adverbs of time. The one shown in the chart is #{t "πών", "pān"}, which means “once” or “sometime”, implying a single indefinite occurence sometime in the past. Indefinite future occurrences are generally handled with the idiom #{t "ιούν ηαλ αιιουνυώς̄", "yūn hal hayyūnuoš"}, literally “a day out of days”. Multiple indefinite occurrences (i.e., “sometimes”), whether past of future, are generally handled with #{t "πωνιήν", "pānien"}, the plural form of #{t "πών", "pān"}.
+    %p The last few indefinites are loanwords. The indefinite quantifier “some, some amount” is #{t "ριδ̄μυώς", "riḏmuos"}, derived from Greek αριθμός “a number [of]”. The indefinite adverb of manner is #{t "βερ̄άδ μυώδ", "beřad muod"} “somehow, in some manner, by some means”, where #{t "μυώδ", "muod"} ultimately comes from French <i>mode</i>. The indefinite adverb of reason is #{t "βερ̄άδ λούχ", "beřad lūx"} “for some reason”, with #{t "λούχ", "lūx"} coming from Greek #{t "λόγος", "lógos"}.
+
+  = section "Negative Forms" do
+    %p Most of the negative correlatives feature a negative suffix *-ma or *-mā, which is related to the interrogative #{t "μώ", "mā"} “what?”; this is a fairly common Semitic construction, where sentences like “What is in my hand?” come to mean “There is nothing in my hand”. All of these negative forms must be accompanied by a negated verb (double negation).
+    %p The *-ma/*-mā suffix is seen most clearly in the negative pronouns #{t "μιμμώ", "mimmā"} “nobody” and #{t "μαμμώ", "mammā"} “nothing”, both of which are non-declining. The negative determiner/adjective of quality, #{t "ήμα", "'ēma"} “no, no kind of” also uses it; note that this form acts as a prenominal particle or adjunct more than an adjective, since it also does not decline. The adverb of time, #{t "μαζμώ", "mazmā"} “never”, is derived from #{t "μασή", "masē"} “when?” + *-mā, but has undergone some vowel reduction and assimilation.
+    %p All other negatives are phrasal and employ #{t "ήμα", "'ēma"}: #{t "ηαλ ήμα μακκούν", "hal 'ēma məkhūn"} “nowhere”, #{t "ήμα μακκούνα", "'ēma məkhūna"} “to nowhere”, #{t "βνε ήμα μακκούν", "bne 'ēma məkhūn"} “from nowhere”, #{t "ήμα πυώς", "'ēma puos"} “no amount of”, #{t "βεήμα μυώδ", "be'ēma muod"} “in no way”, #{t "βεήμα λούχ", "be'ēma lūx"} “for no reason”.
+
+  = section "Universal Forms" do
+    %p The universal correlatives all have the basic meaning of “all” or “every”. Many of these forms revolve around the adjective #{t "κάλ", "kal"} “all, every”.
+    %p There are only two universal correlatives that are not phrasal. One is #{t "κάλ", "kal"}, which means “all” or “every” when used attributively or “everything” when used nominally; it also has a derived adjective #{t "καλεί", "kalī"} “each”. The other is #{t "παχεί", "paxī"} “always”, derived from Greek #{t "εποχή", "epoxí"} “period, age, epoch”.
+    %p The following forms are phrasal: #{t "κάλ τείπ", "kal tīp"} “every kind of”, #{t "κάλ άρ̄αδ", "kal 'ařad"} “everyone, each”, #{t "ηαλ κάλ μακκούν", "hal kal məkhūn"} “everywhere”, #{t "καλ μακκούνα", "kal məkhūna"} “to everywhere”, #{t "βνε κάλ μακκούν", "bne kal məkhūn"} “from everywhere”, #{t "κάλ πυώς", "kal puos"} “every amount of”, #{t "βικάλ μυώδ", "bikal muod"} “in every way, by all means”, #{t "βικάλ λούχ", "bikal lūx"} “for every reason”.
+
+  - correlatives = { "Indeterminate" => { :determiner => { :ala => "ήμα", :lat => "'ēma" },
+                                          :quality    => { :ala => "ήμα", :lat => "'ēma" },
+                                          :person     => { :ala => "μιμμώ", :lat => "mimmā" },
+                                          :thing      => { :ala => "μαμμώ", :lat => "mammā" },
+                                          :place      => { :ala => "ηαλ ήμα μακκούν", :lat => "hal 'ēma məkhūn" },
+                                          :direction  => { :ala => "ήμα μακκούνα", :lat => "'ēma məkhūna" },
+                                          :origin     => { :ala => "βνε ήμα μακκούν", :lat => "bne 'ēma məkhūn" },
+                                          :time       => { :ala => "μαζμώ", :lat => "mazmā" },
+                                          :amount     => { :ala => "ήμα πυώς", :lat => "'ēma puos" },
+                                          :way        => { :ala => "βεήμα μυώδ", :lat => "be'ēma muod" },
+                                          :reason     => { :ala => "βεήμα λούχ", :lat => "be'ēma lūx" } },
+                     "Alternative"   => { :determiner => { :ala => "χάρ", :lat => "xar" },
+                                          :quality    => { :ala => "άλλυν", :lat => "'allun" },
+                                          :person     => { :ala => "αλλιμιή", :lat => "'allimie" },
+                                          :thing      => { :ala => "αλλιμώ", :lat => "'allimā" },
+                                          :place      => { :ala => "ηαλ χάρ μακκούν", :lat => "hal xar məkhūn" },
+                                          :direction  => { :ala => "χάρ μακκούνα", :lat => "xar məkhūna" },
+                                          :origin     => { :ala => "βνε χάρ μακκούν", :lat => "bne xar məkhūn" },
+                                          :time       => { :ala => "αλλιπαχεί", :lat => "'allipaxī" },
+                                          :amount     => { :ala => "χάρ πυώς", :lat => "xar puos" },
+                                          :way        => { :ala => "βεχαρείς", :lat => "bexarīs" },
+                                          :reason     => { :ala => "βεχάρ λούχ", :lat => "bexar lūx" } } }
+  = render 'correlative_table', :alignment => "left", :correlatives => correlatives
+
+  = section "Indeterminate Forms" do
+    %p The indeterminate forms have the basic meaning of “any”. They are completely identical to the negative forms; the two are distinguished only by the polarity of the main verb, with positive verbs giving indeterminate meaning and negative verbs giving negative meaning.
+  
+  = section "Alternative Forms" do
+    %p The alternative correlatives mean “other” or “else”. There are two main stems at work: the native Semitic #{t "χάρ", "xar"} “other” and the Greek prefixial #{t "αλλι-", "'alli-"}, from Greek #{t "άλλος", "allós"} “other”.
+    %p The alternative determiner is simply the adjective #{t "χάρ", "xar"} “other, another”. The qualitative alternative is the loaned Greek adjective #{t "αλλούν", "'allun"} “another kind of”.
+    %p The pronouns feature the prefix <i>'alli-</i> attached to an interrogative base: #{t "αλλιμιή", "'allimie"} “someone else, another”, #{t "αλλιμώ", "'allimā"} “something else, another”. A similar form is seen in #{t "αλλιπαχεί", "'allipaxī"} “some other time”, though this is instead created from the base #{t "παχεί", "paxī"} “always”.
+    %p All other forms are phrasal: #{t "ηαλ χάρ μακκούν", "hal xar məkhūn"} “somewhere else”, #{t "χάρ μακκούνα", "xar məkhūna"} “to somewhere else”, #{t "βνε χάρ μακκούν", "bne xar məkhūn"} “from somewhere else”, #{t "χάρ πυώς", "xar puos"} “some other amount”, #{t "βιχάρ λούχ", "bixar lūx"} “for some other reason”. The adverb of alternative method, #{t "βιχαρείς", "bixarīs"} “another way, differently” is also technically phrasal, but is formed from the noun #{t "χαρείς", "xarīs"} “otherness, difference”, a nominalized form of #{t "χάρ", "xar"}.
+
+%div{:style => "clear: both;"}
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
