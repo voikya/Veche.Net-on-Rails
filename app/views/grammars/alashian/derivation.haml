@@ -1,0 +1,382 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αχλήφ".html_safe
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p Derivational morphology refers to the processes by which new lexical items can be generated from other lexical items or from roots, as opposed to inflectional morphology which creates different grammatical forms from a single lexical item.
+  %p Much like many other aspects of Alashian morphology, the derivational morphology is bifurcated into discontiguous and concatenating patterns. Discontinguous patterns act on Semitic-style roots, featuring an abstract vowel template superimposed on a consonantal root. Concatenating patterns consist of prefixes and suffixes which act on European-style (contiguous) roots or on already-existing lexical items of either Semitic or European origin. It is not unusual for many affixes to have both a discontiguous and a concatenating equivalent, defaulting to the former if a Semitic root is available and to the latter if not.
+
+= section "Nominalization" do
+  = section "Discontiguous Patterns" do
+    %p The purely discontiguous derivational templates represent some of the oldest derivational processes in Alashian. Since they operate on the same basic root + vowel pattern framework as the verbal system, they are tightly integrated with it and often quite productive for any form for which a Semitic-style root exists. All of these patterns have cognates in other Semitic languages, albeit often with various morphological and semantic details and productivity varying heavily from language to language.
+    %p Note that discontiguous patterns are most productive with triconsonantal roots, as well as geminate roots that can be converted into triconsonantal roots. Biconsonantal and quadriconsonantal roots share many aspects in common with European-style roots in that they have a much stronger tendency to stay intact than triconsonantal verbs do. For this reason, such roots tend more towards concatenating derivational morphology rather than discontiguous morphology; in the case of biconsonantal roots, however, they may at times be forced into a triconsonantal mould via internal extension.
+    %p The pattern #{template "*C1aC2C2ūC3"}, with gemination of the medial consonant, is quite commonly used to form professions from verbal roots; note that this is strictly for professions, not agentives in general. This pattern is no longer highly productive, and as such most nouns with this pattern represent professions that have existed for a very long time. Its feminine counterpart is #{template "*C1aC2C2uC3C3ā"}.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Profession (M)", "Profession (F)", "Meaning" ]
+    - words = [ [ "*ṯfāth", "govern", :arrow, {:ala => "θαφφούτ", :lat => "ṯaffūt"}, {:ala => "θαφφαττώ", :lat => "ṯaffəthā"}, "governor, lord" ],
+                [ "*ktāb", "write", :arrow, {:ala => "καττούβ", :lat => "kəthūb"}, {:ala => "καττυββώ", :lat => "kəthubbā"}, "scribe" ],
+                [ "*ngār", "cut [wood, etc]", :arrow, {:ala => "ναγγούρ", :lat => "naggūr"}, {:ala => "ναγγυρρώ", :lat => "naggurrā"}, "carpenter" ],
+                [ "*phrān", "heal", :arrow, {:ala => "παρρούν", :lat => "parrūn"}, {:ala => "παρρυννώ", :lat => "parrunnā"}, "doctor" ],
+                [ "*sān", "teach", :arrow, {:ala => "σωηούν", :lat => "sāhūn"}, {:ala => "σωηυννώ", :lat => "sāhunnā"}, "teacher" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*C1ūC2C3an"} is the most common pattern used to form professions (as well as many other role-like agentives) in modern-day Alashian. It is highly productive. However, it is only derivable (morphologically and semantically) from Scale I active verbs; it actually consists of the <i>katab</i> active participle <i>kūtib</i> + the *-an afformative. Its feminine counterpart is #{template "*C1ūC2C3anā"}.
+    - words = [ [ "*gnāb", "steal", :arrow, {:ala => "γούμβαν", :lat => "gūmban"}, {:ala => "γουμβανώ", :lat => "gūmbanā"}, "thief" ],
+                [ "*khdīs", "be special", :arrow, {:ala => "κούδσαν", :lat => "kūdsan"}, {:ala => "κουδσανώ", :lat => "kūdsanā"}, "specialist" ],
+                [ "*mnāw", "count", :arrow, {:ala => "μούνναν", :lat => "mūnnan"}, {:ala => "μουννανώ", :lat => "mūnnanā"}, "accountant" ],
+                [ "*slāř", "send", :arrow, {:ala => "σούλρ̄αν", :lat => "sūlřan"}, {:ala => "σουλρ̄ανώ", :lat => "sūlřanā"}, "messenger, envoy" ],
+                [ "*sřāt", "trick", :arrow, {:ala => "σούρ̄ταν", :lat => "sūřtan"}, {:ala => "σουρ̄τανώ", :lat => "sūřtanā"}, "trickster, hooligan" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The patterns #{template "*taC1C2iC3"} (if the stem vowel is *ī) and #{template "*tiC1C2aC3"} (if the stem vowel is *ā) create agentives referring to people (never inanimate objects) from roots describing an activity that is somehow social in nature, that is, activities that typically involve more than one person and are not done on their own. It also creates many human roles or professions not involving a physical trade.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Agentive (M)", "Agentive (F)", "Meaning" ]
+    - words = [ [ "*'hāb", "love", :arrow, {:ala => "τίαηαβ", :lat => "ti'ahab"}, {:ala => "τιαηαβώ", :lat => "ti'ahabā"}, "lover" ],
+                [ "*bū'", "come", :arrow, {:ala => "ταβού", :lat => "tabū"}, {:ala => "ταβουώ", :lat => "tabū'ā"}, "guest" ],
+                [ "*hbād", "work", :arrow, {:ala => "τίηαβαδ", :lat => "tihabad"}, {:ala => "τίηαβαδώ", :lat => "tihabadā"}, "worker, employee" ],
+                [ "*lmād", "learn", :arrow, {:ala => "τίλμαδ", :lat => "tilmad"}, {:ala => "τιλμαδώ", :lat => "tilmadā"}, "student" ],
+                [ "*nkīr", "recognize", :arrow, {:ala => "τάκκιρ", :lat => "təkhir"}, {:ala => "τακκιρώ", :lat => "təkhirā"}, "witness" ],
+                [ "*wṯīb", "sit", :arrow, {:ala => "τήθιβ", :lat => "tēṯib"}, {:ala => "τηθιβώ", :lat => "tēṯibā"}, "resident" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*maC1C2VC3"}, where 'V' represents the long version of the root vowel, typically forms nouns of place and location, such as physical features and buildings. This pattern is highly productive for all types of roots; with biconsonantal and quadriconsonantal roots, it simply consists of adding the prefix *ma- to the intact root.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Location", "Meaning" ]
+    - words = [ [ "*ǧrīb", "set [sun, moon, etc.]", :arrow, {:ala => "μαγ̄ρείβ", :lat => "maǧrīb"}, "west" ],
+                [ "*dīn", "judge", :arrow, {:ala => "μαδείν", :lat => "madīn"}, "court" ],
+                [ "*khdīs", "be special", :arrow, {:ala => "μαγδείς", :lat => "magdīs"}, "temple" ],
+                [ "*khūn", "get up, stand", :arrow, {:ala => "μακκούν", :lat => "məkhūn"}, "place, location" ],
+                [ "*rxāčh", "bathe", :arrow, {:ala => "μαρχώτζ", :lat => "marxāč"}, "bath, bathtub" ],
+                [ "*skīb", "lie down", :arrow, {:ala => "μασκείβ", :lat => "maskīb"}, "bed" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*miC1C2VC3"}, where 'V' represents the short version of the root vowel, usually forms nouns describing tools or instruments used to perform an action; it is also highly productive for all root types. Less commonly, it may also form abstract resultative nouns.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Instrument", "Meaning" ]
+    - words = [ [ "*glāř", "shave", :arrow, {:ala => "μίγλαρ̄", :lat => "miglař"}, "razor" ],
+                [ "*ṯkhāl", "weigh", :arrow, {:ala => "μίθκαλ", :lat => "miṯkal"}, "scale" ],
+                [ "*dīn", "judge", :arrow, {:ala => "μιδείν", :lat => "midīn"}, "judgment" ],
+                [ "*sabb", "turn", :arrow, {:ala => "μίσβαβ", :lat => "misbab"}, "crank" ],
+                [ "*ftāř", "open", :arrow, {:ala => "μίφταρ̄", :lat => "miftař"}, "key" ],
+                [ "*wkhād", "burn", :arrow, {:ala => "μούκκαδ", :lat => "mūkhad"}, "lighter" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*C1iC2ūC3"} similarly forms names of tools and other physical objects, but is no longer productive. The first consonant may undergo palatalization.
+    - words = [ [ "*'zār", "tie, bind", :arrow, {:ala => "ιζούρ", :lat => "'izūr"}, "belt" ],
+                [ "*hall", "praise", :arrow, {:ala => "ηιλούλ", :lat => "hilūl"}, "praise, adulation" ],
+                [ "*ktāb", "write", :arrow, {:ala => "τζιτούβ", :lat => "čitūb"}, "document" ],
+                [ "*lvīs", "wear", :arrow, {:ala => "λιв̄ούς", :lat => "livūs"}, "garment" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*muC1C2VC3"}, where 'V' represents the short version of the root vowel, forms abstract nouns, primarily from adjectives/stative roots which denote physical or temporal characteristics.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Noun", "Meaning" ]
+    - words = [ [ "*brāk", "wish luck", :arrow, {:ala => "μύβρακ", :lat => "mubrak"}, "luck" ],
+                [ "*lthīf", "small", :arrow, {:ala => "μύλτιφ", :lat => "multif"}, "smallness" ],
+                [ "*rthīb", "wet", :arrow, {:ala => "μύρτιβ", :lat => "murtib"}, "wetness, humidity" ],
+                [ "*řdāṯ", "new", :arrow, {:ala => "μύρ̄δαθ", :lat => "muřdiṯ"}, "age" ],
+                [ "*sdīr", "ready", :arrow, {:ala => "μύσδιρ", :lat => "musdir"}, "readiness" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*C1aC2īC3"} also forms abstract nouns from roots and adjectives denoting physical qualities, though it is less frequent except for a few very common words. Its singulative, #{template "*C1aC2iC3C3ā"}, is often used to denote units of measurement.
+    - words = [ [ "hūlī", "high", :arrow, {:ala => "ηαλεί", :lat => "halī"}, "height" ],
+                [ "hūlī", "high", :arrow, {:ala => "ηαλιιώ", :lat => "haliyyā"}, "storey, floor" ],
+                [ "*lřāb", "be wide", :arrow, {:ala => "λαρ̄είβ", :lat => "lařīb"}, "area, shape" ],
+                [ "*mnāw", "count", :arrow, {:ala => "μανεί", :lat => "manī"}, "quantity" ],
+                [ "rāb", "large", :arrow, {:ala => "ραηείβ", :lat => "rahīb"}, "size" ],
+                [ "*řūn", "be hot", :arrow, {:ala => "ρ̄αυείν", :lat => "řawīn"}, "heat, temperature" ],
+                [ "*řūn", "be hot", :arrow, {:ala => "ρ̄αυιννώ", :lat => "řawinnā"}, "degree" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The pattern #{template "*C1uC2ēC3"} and its feminine counterpart #{template "*C1uC2aC3C3ā"} (note the change in vowel quality) denotes youth, transforming a noun referring to a human or animal into a new noun referring to a younger human or animal.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Diminutive (M)", "Diminutive (F)", "Meaning" ]
+    - words = [ [ "bəkrā", "cow", :arrow, {:ala => "βακκήρ", :lat => "bəkhēr"}, {:ala => "βακκαρρώ", :lat => "bəkharrā"}, "calf" ],
+                [ "vūd/valdā", "child", :arrow, {:ala => "в̄υλήδ", :lat => "vulēd"}, {:ala => "в̄υλαδδώ", :lat => "vuladdā"}, "baby, toddler" ],
+                [ "kattā", "cat", :arrow, {:ala => "κυτήτ", :lat => "kutēt"}, {:ala => "κυταττώ", :lat => "kutattā"}, "kitten" ],
+                [ "kūb/kalbā", "dog", :arrow, {:ala => "κυλήβ", :lat => "kulēb"}, {:ala => "κυλαββώ", :lat => "kulabbā"}, "puppy" ],
+                [ "safrā", "bird", :arrow, {:ala => "συφήρ", :lat => "sufēr"}, {:ala => "συφαρρώ", :lat => "sufarrā"}, "chick, hatchling" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The reduplicative pattern #{template "*C1VC2C3VC3"} is one of several Alashian diminutive patterns, this one limited to inanimate nouns and generally denoting small things or small amounts. The quality of the vowels is highly dependent on the vowels of the word from which it was derived.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Diminutive", "Meaning" ]
+    - words = [ [ "bēt", "house", :arrow, {:ala => "βήτετ", :lat => "bētet"}, "little house" ],
+                [ "vivle", "book", :arrow, {:ala => "в̄ίв̄λιλ", :lat => "vivlil"}, "booklet" ],
+                [ "hukāb", "star", :arrow, {:ala => "ηυκβώβ", :lat => "hukbāb"}, "little star" ],
+                [ "ṯalūt", "three", :arrow, {:ala => "θαλτούτ", :lat => "ṯaltūt"}, "three [little]" ],
+                [ "medinā", "city", :arrow, {:ala => "μεδνινώ", :lat => "medninā"}, "little city" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+
+  = section "Concatenating Patterns" do
+    %p Concatenating derivational patterns represent a mix of origins. Some have deep Semitic roots, with clear cognates in a number of Semitic languages. Others are much newer, reflecting the many years of European (especially Greek and Turkish) influence on the language. And finally there is a modern layer of internationalisms, affixes that have spread to languages around the world in the last few centuries due to the spread of Western thought, culture, and technology.
+    %p The suffix <i>-an</i> is widely used to form agentives and professions, particularly from associated nouns or from verbs of European origin. It may also be used with adjectives bases to describe people who have that quality. Its feminine counterpart is <i>-anā</i>.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Agentive (M)", "Agentive (F)", "Meaning" ]
+    - words = [ [ "banke", "bank", :arrow, {:ala => "βάνκαν", :lat => "bankan"}, {:ala => "βανκανώ", :lat => "bankanā"}, "banker" ],
+                [ "gazēt", "newspaper", :arrow, {:ala => "γαζήταν", :lat => "gazētan"}, {:ala => "γαζητανώ", :lat => "gazētanā"}, "journalist" ],
+                [ "tabrinā", "to interpret", :arrow, {:ala => "τάβριναν", :lat => "tabrinan"}, {:ala => "ταβρινανώ", :lat => "tabrinanā"}, "seer, psychic" ],
+                [ "taksī", "taxi", :arrow, {:ala => "τάκσιαν", :lat => "taksiyan"}, {:ala => "τακσιανώ", :lat => "taksiyanā"}, "taxi driver" ],
+                [ "tuxuos", "poor", :arrow, {:ala => "τυχυώσαν", :lat => "tuxuosan"}, {:ala => "τυχυωσανώ", :lat => "tuxuosanā"}, "poor [wo]man" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-ī</i> (feminine <i>-yā</i>), known as the 'nisba' or 'gentilic', forms terms for people from other nouns. In particular, this is highly productive with bases that are place names to designate someone from that area. Such derivations decline as independent adjectives.
+    %p Note that when the nisba is added to a stem ending in *-ēn (see below), the *-ēn first drops. If the stem ends in *-ā, it is replaced by *-awī.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Person", "Meaning" ]
+    - words = [ [ "'Amerikā", "America", :arrow, {:ala => "αμερικαυεί", :lat => "'amerikawī"}, "American" ],
+                [ "Gallēn", "France", :arrow, {:ala => "γαλλεί", :lat => "gallī"}, "Frenchman" ],
+                [ "Məsrēn", "Egypt", :arrow, {:ala => "μασρεί", :lat => "məsrī"}, "Egyptian" ],
+                [ "Parīz", "Paris", :arrow, {:ala => "παριζζεί", :lat => "parizzī"}, "Parisian" ],
+                [ "Čīnā", "China", :arrow, {:ala => "τζειναυεί", :lat => "čīnawī"}, "Chinese" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix *-ēn is used to form the names of nations. Nouns with this suffix are grammatically plural (so forms such as <i>Məsrēn</i> are equivalent to something like English “the Egyptians”). It is also used to form some modern country names, so that in Alashian “Egypt” and “the Egyptians/the Egyptian nation” are not formally distinguished.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Nation", "Meaning" ]
+    - words = [ [ "harabī", "Arab", :arrow, {:ala => "ηαραβήν", :lat => "Harabēn"}, "the Arabs, the Arab World" ],
+                [ "yawanī", "Greek", :arrow, {:ala => "Ιαυανήν", :lat => "Yawanēn"}, "the Greeks, Greece" ],
+                [ "məsrī", "Egyptian", :arrow, {:ala => "Μασρήν", :lat => "Məsrēn"}, "the Egyptians, Egypt" ],
+                [ "rūnī", "Roman", :arrow, {:ala => "Ρουνήν", :lat => "Rūnēn"}, "the Romans" ],
+                [ "rūsī", "Russian", :arrow, {:ala => "Ρουσήν", :lat => "Rūsēn"}, "the Russians, Russia" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-yā</i> (that is, the feminine singular nisba) is used to form the names of languages. The feminine gender comes from the implied word #{t "λασούν", "lasūn"} “tongue, language”. The definite article is usually present as well.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Language", "Meaning" ] 
+    - words = [ [ "'alasī", "Alashian", :arrow, {:ala => "ναλασκιώ", :lat => "nalaskyā"}, "Alashian" ],
+                [ "'angličī", "English", :arrow, {:ala => "νανγλιτζκιώ", :lat => "nangličkyā"}, "English" ],
+                [ "germanī", "German", :arrow, {:ala => "αγγερμανιώ", :lat => "haggermanyā"}, "German" ],
+                [ "harabī", "Arab", :arrow, {:ala => "ναραβιώ", :lat => "narabyā"}, "Arabic" ],
+                [ "yawanī", "Greek", :arrow, {:ala => "αιιαυανιώ", :lat => "hayyawanyā"}, "Greek" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-īs</i> forms a variety of abstract nouns. It is particularly common and productive with adjective stems, forming their nominalizations; in this capacity, it works with stems of both Semitic and foreign origin. With nominal bases, only a handful of forms remain in common use, all of them Semitic in origin. The addition of <i>-īs</i> may result in palatalization.
+    %p The variant form <i>-ūs</i> may also be seen occasionally, but it is not productive and rather uncommon.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Noun", "Meaning" ]
+    - words = [ [ "badū", "empty", :arrow, {:ala => "βαδούς", :lat => "badūs"}, "emptiness" ],
+                [ "'elektrīk", "electric", :arrow, {:ala => "ελεκτριτζείς", :lat => "'električīs"}, "electricity" ],
+                [ "malek", "king", :arrow, {:ala => "μαλτζείς", :lat => "malčīs"}, "kingdom" ],
+                [ "rās", "head", :arrow, {:ala => "ρωσούς", :lat => "rāsūs"}, "beginning" ],
+                [ "rāx", "bad", :arrow, {:ala => "ρωχείς", :lat => "rāxīs"}, "evil" ],
+                [ "tuxuos", "poor", :arrow, {:ala => "τυχυωσείς", :lat => "tuxuosīs"}, "poverty" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p However, one productive use of <i>-ūs</i> remains the nominalization of adjectives containing a nisba (which reduces to -y-), due to higher contrast of the sequence -yūs as compared to -yīs: #{t "αλασεί", "'alasī"} “Alashian” → #{t "αλασκιούς", "'alaskyūs"} “Alashianness, Alashian culture”, #{t "θαννεί", "ṯannī"} “second” → #{t "θαννιούς", "ṯanniyūs"} “unoriginality, repetitiveness”.
+    %p The suffix <i>-(i)līk</i> (underlyingly *-(i)līkh), of Turkish origin, forms abstract nouns of state from other nouns. It is highly productive.
+    - words = [ [ "malek", "king", :arrow, {:ala => "μαλεκλείκ", :lat => "maleklīk"}, "kingship" ],
+                [ "manačer", "manager", :arrow, {:ala => "μανατζερλείκ", :lat => "manačerlīk"}, "management" ],
+                [ "prezidente", "president", :arrow, {:ala => "πρεζιδεντιλείκ", :lat => "prezidentilīk"}, "presidency" ],
+                [ "pulīt", "citizen", :arrow, {:ala => "πυλειτιλείκ", :lat => "pulītilīk"}, "citizenship" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-ā</i>, in addition to forming feminine nouns from masculine ones, also forms resultatives from gerunds/infinitives.
+    - words = [ [ "valūd", "[the act of] giving birth", :arrow, {:ala => "в̄αλυδδώ", :lat => "valuddā"}, "birth" ],
+                [ "katūb", "[the act of] writing", :arrow, {:ala => "κατυββώ", :lat => "katubbā"}, "[a piece of] writing" ],
+                [ "matargūn", "[the act of] translation", :arrow, {:ala => "ματαργυννώ", :lat => "matargunnā"}, "[a] translation" ],
+                [ "salūt", "[the act of] winning", :arrow, {:ala => "σαλαττώ", :lat => "saləthā"}, "victory" ],
+                [ "sāl", "[the act of] asking", :arrow, {:ala => "σωλώ", :lat => "sālā"}, "question" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-ā</i> also forms diminutives from kinship terms. In modern Alashian, however, these diminutives are by far the most common forms, with the unsuffixed versions having a very formal feeling to them.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Diminutive", "Meaning" ]
+    - words = [ [ "'ab", "father", :arrow, {:ala => "αβώ", :lat => "'abā"}, "father, dad" ],
+                [ "'ax", "brother", :arrow, {:ala => "αχώ", :lat => "'axā"}, "brother, bro" ],
+                [ "'afat", "sister", :arrow, {:ala => "αφτώ", :lat => "'aftā"}, "sister, sis" ],
+                [ "bīt", "daughter", :arrow, {:ala => "βιττώ", :lat => "bittā"}, "daughter" ],
+                [ "ben", "son", :arrow, {:ala => "βνώ", :lat => "bnā"}, "son" ],
+                [ "'īn", "mother", :arrow, {:ala => "ιννώ", :lat => "'innā"}, "mother, mom" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffixes <i>-īče</i> or <i>-itsā</i> are often used to form diminutives, typically but not exclusively from inanimates. They may also derive non-diminutive nouns denoting something related to the base, but this is rather unpredictable.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Noun", "Meaning" ]
+    - words = [ [ "'aftā", "sister", :arrow, {:ala => "αφτιτσώ", :lat => "'aftitsā"}, "sister (dim.), sis" ],
+                [ "bēčhā", "egg", :arrow, {:ala => "βητζζιτσώ", :lat => "bēčhitsā"}, "omelette" ],
+                [ "tūrtā", "cake", :arrow, {:ala => "τουρτιτσώ", :lat => "tūrtitsā"}, "cake (dim.)" ],
+                [ "čay", "tea", :arrow, {:ala => "τζαιείτζε", :lat => "čayīče"}, "tea kettle" ],
+                [ "'uorā", "hour", :arrow, {:ala => "υωριτσώ", :lat => "'uoritsā"}, "hour (dim.)" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-īsme</i>, Greek in origin but now part of international vocabulary, forms the names of beliefs, movements, ideologies, and various scientific phenomena. It thus has a lot in common with English <i>-ism</i>, but the correlation is not perfect.
+    - words = [ [ "dimukratī", "democratic", :arrow, {:ala => "διμυκρατείσμε", :lat => "dimukratīsme"}, "democracy" ],
+                [ "kristyanī", "Christian", :arrow, {:ala => "κριστιανείσμε", :lat => "kristyanīsme"}, "Christianity" ],
+                [ "magnetī", "magnetic", :arrow, {:ala => "μαγνετείσμε", :lat => "magnetīsme"}, "magnetism" ],
+                [ "riyal", "real", :arrow, {:ala => "ριαλείσμε", :lat => "riyalīsme"}, "realism" ],
+                [ "susyalī", "social", :arrow, {:ala => "συσιαλείσμε", :lat => "susyalīsme"}, "socialism" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffixes <i>-īste</i> (of Greek/international origin) and <i>-ēr</i> (of French/English origin) both form a variety of terms for people (and in the case of <i>-ēr</i>, tools), designating agentives from verbal stems, associatives from nominal stems, and people who profess a certain belief or possess a certain quality from various adjective stems. These suffixes are most common with non-Semitic stems, but interestingly are compatable with biconsonantal and quadriconsonantal verbal roots<sup>1</sup> <sup>2</sup>. When referring to people, these suffixes are unmarked for gender, and thus may freely take either masculine or feminine agreement as appropriate, despite being morphologically masculine-like.
+    - words = [ [ "drayvā", "drive", :arrow, {:ala => "δραιв̄ήρ", :lat => "drayvēr"}, "driver" ],
+                [ "zalzēl", "annoy", :arrow, {:ala => "ζαλζελλήρ", :lat => "zalzellēr"}, "annoying person" ],
+                [ "yūdī", "Jewish", :arrow, {:ala => "ιουδείστε", :lat => "yūdīste"}, "Jew [by faith]" ],
+                [ "sāl", "ask", :arrow, {:ala => "σωλήρ", :lat => "sālēr"}, "one who asks too many questions" ],
+                [ "traguḏā", "sing", :arrow, {:ala => "τραγυδ̄είστε", :lat => "traguḏīste"}, "singer" ],
+                [ "činimatuǧrāfkyā", "cinematography", :arrow, {:ala => "τζινιματυγ̄ρωφείστε", :lat => "činimatuǧrafīste"}, "filmmaker" ],
+                [ "futbuol", "football", :arrow, {:ala => "φυτβυωλείστε", :lat => "futbuolīste"}, "football player" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix <i>-(u)luyā</i> forms the names of disciplines and sciences, along the lines of English -ology. It is almost always used with stems of Greek origin. Practitioners of such a discipline are formed with the suffix <i>-(u)luos</i>. These suffixes come from the Cypriot Greek pronunciations of #{t "-λογία", "-loyía"} and #{t "-λόγος", "-lóghos"}, respectively.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Noun", "Person", "Meaning" ]
+    - words = [ [ "*bīyu-", "life", :arrow, {:ala => "βειυλυιώ", :lat => "bīyuluyā"}, {:ala => "βειυλυώς", :lat => "bīyuluos"}, "biology<br>biologist" ],
+                [ "*ṯēyu-", "god", :arrow, {:ala => "θηιυλυιώ", :lat => "ṯēyuluyā"}, {:ala => "θηιυλυώς", :lat => "ṯēyuluos"}, "theology<br>theologian" ],
+                [ "sixē", "soul", :arrow, {:ala => "σιχηλυώ", :lat => "sixēluyā"}, {:ala => "σιχηλυώς", :lat => "sixēluos"}, "psychology<br>psychologist" ],
+                [ "*tēxnu-", "art", :arrow, {:ala => "τηχνυλυιώ", :lat => "tēxnuluyā"}, {:ala => "τηχνυλυώς", :lat => "tēxnuluos"}, "technology<br>technologist" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+
+  = section "Both Discontiguous and Concatenating Patterns" do
+    %p Patterns that have both discontiguous and concatenating forms can be used with any stem in Alashian, whether Semitic or European in structure.
+    %p The template #{template "*taC1C2iC3C3ā"} (for roots with an inherent vowel *ī) or #{template "*teC1C2aC3C3ā"} (for roots with an inherent vowel *ā), or the discontiguous pattern *ta-stem-ā, is used to form concrete nouns of action or result.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Noun", "Meaning" ]
+    - words = [ [ "kalkēl", "ring", :arrow, {:ala => "τακαλκελλώ", :lat => "takalkellā"}, "ringing" ],
+                [ "māxā", "do battle, fight", :arrow, {:ala => "ταμωχώ", :lat => "tamāxā"}, "battle" ],
+                [ "*sān", "teach", :arrow, {:ala => "τασωνώ", :lat => "tasānā"}, "lesson" ],
+                [ "*tshlāy", "pray", :arrow, {:ala => "τασλαιιώ", :lat => "təslayyā"}, "prayer" ],
+                [ "*flāg", "divide", :arrow, {:ala => "τεφλαγγώ", :lat => "teflaggā"}, "division" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The suffix *-ūn and template #{template "C1VC2C3ūn"} have several different functions, in particular:
+    %ul
+      %li forming abstract nominalizations of adjectives of non-Semitic origin
+      %li forming instruments from verbs or adjectives, particularly if the object is small in size
+      %li forming diminutives of non-human nouns (including both animals and inanimate objects)
+    - words = [ [ "ḏī-'eṯnī", "international", :arrow, {:ala => "δ̄ει-εθνιούν", :lat => "ḏī-'eṯniyūn"}, "internationality" ],
+                [ "'īšī", "true", :arrow, {:ala => "εισ̄κιούν", :lat => "'īškyūn"}, "truth" ],
+                [ "kāšik", "[large] spoon, ladle", :arrow, {:ala => "κωσ̄ικούν", :lat => "kāšikūn"}, "spoon" ],
+                [ "kattā", "cat", :arrow, {:ala => "καττούν", :lat => "kattūn"}, "little cat, kitty" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The feminine equivalent, <i>-unnā</i> / #{template "C1VC2C3unnā"}, is generally used to form diminutives or pejoratives referring to people from adjective bases.
+    - headers = [ "Root/Base", "Meaning", :arrow, "Noun", "Person", "Meaning" ]
+    - words = [ [ "*'dīn", "red", :arrow, {:ala => "ιδνυννώ", :lat => "'idnunnā"}, "red [communist]" ],
+                [ "nūsī", "clever", :arrow, {:ala => "νουσιυννώ", :lat => "nūsyunnā"}, "witty person" ],
+                [ "*rākh", "sick", :arrow, {:ala => "ρωκκυννώ", :lat => "rākhunnā"}, "patient" ],
+                [ "*smīn", "fat", :arrow, {:ala => "σιμνυννώ", :lat => "simnunnā"}, "fatso" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p Participles (whether the discontiguous pattern of Semitic roots or the concatenating pattern of European-type roots) are frequently used as agentives. These sorts tend to have a much stronger sense of currency than the other agentives previously discussed; that is, they carry much more of a connotation of “this action is happening right now” as opposed to “this is action this person regularly does”. Since participles are more tightly tied to the verbal system, they are also used to maintain some of the subtle differences in meaning of the different scales of a single verb root which other derivational morphology is unable to preserve.
+    - words = [ [ "'amar", "say", :arrow, {:ala => "ούμιρ", :lat => "'ūmir"}, "speaker" ],
+                [ "starče", "covet", :arrow, {:ala => "μάσταρτζη", :lat => "mastarčē"}, "covetous person" ],
+                [ "talsēn", "gossip", :arrow, {:ala => "μίτλασιν", :lat => "mitlasin"}, "[a] gossip" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    %p The infinitive of any verb may also be used as a gerund, a simple nominalization of the action. In fact, Alashian infinitives are for all intents and purposes nouns.
+
+  = section "Constructs" do
+    %p Constructs, while not strictly a morphological derivation, represent one of the most frequent means of creating new lexemes, much akin to compounding. Constructs may be animate or inanimate, but the second component noun (the 'possessor') may not be animate. The syntax of constructs will be left for later, but a few examples may show how they are used to create new lexemes that are more than simply a sum of the two nouns that form them.
+    - headers = [ "Noun 1", "Meaning", "Noun 2", "Meaning", :arrow, "Construct", "Meaning" ]
+    - words = [ [ "bēt", "house", "kaffē", "coffee", :arrow, {:ala => "βήτ καφφή", :lat => "bēt kaffē"}, "coffee house" ],
+                [ "bukāl", "bottle", "mē", "water", :arrow, {:ala => "βυκώλ μή", :lat => "bukāl mē"}, "water bottle" ],
+                [ "yūbil", "carrier", "hān", "people", :arrow, {:ala => "ιούβιλ ηών", :lat => "yūbil hān"}, "bus" ],
+                [ "limēn", "port", "Čəthien", "Larnaka", :arrow, {:ala => "Λιμήν Τζαττιήν", :lat => "Limēn Čəthien"}, "Port of Larnaka" ],
+                [ "menečēr", "manager", "banke", "bank", :arrow, {:ala => "μενετζήρ βάνκε", :lat => "menečēr banke"}, "bank director" ],
+                [ "stēsen", "station", "tren", "train", :arrow, {:ala => "στήσεν τρέν", :lat => "stēsen tren"}, "train station" ] ]
+    = render 'derivation_table', :headers => headers, :words => words
+    
+= section "Adjectivalization" do
+  %p Only two types of adjectivalization remain in common use in modern Alashian: participles and the nisba.
+  %p Participles are used to form adjectives from verbs, while retaining a number of verbal qualities such as scale and voice. The formation of participles depends on the verbal scale in question and on the structure of the root; the details have previously been discussed.
+  %p The nisba *-ī is used extremely productively to generate adjectives from nouns. The exact meaning of the resulting adjective depends on the type of noun to which it was attached.
+  %p When added to place names (the so-called 'gentilic' function) it forms adjectives of origin, ethnicity, locality, etc. This has been previously discussed. This same function can also be seen in a handful of adverbial bases, such as #{t "ηών", "hān"} “here” → #{t "ηωνεί", "hānī"} “local”.
+  %p When added to most other inanimate nouns, the resulting adjective usually takes on the meaning “of or related to X”. For most nouns, the addition of the nisba is fairly regular, accompanied only by morphophonemic changes common throughout the language, such as palatalization or the conversion of a long vowel in the final syllable to gemination of the following consonant: #{t "λασούν", "lasūn"} “tongue, language” → #{t "λασυννεί", "lasunnī"} “lingual, linguistic”. However, in the oldest layer of Semitic nouns (the so-called 'primitives' or non-derived nouns), the addition of a nisba can have unexpected effects due to the reappearance of older root structures: #{t "σώτζε", "sāče"} “sun” → #{t "σιντζεί", "sinčī"} “solar”. Note that unlike the gentilic nisba, when added to a noun ending in *-ā, this form of the nisba becomes *-ašī, not *-awī.
+  - headers = [ "Root/Base", "Meaning", :arrow, "Adjective", "Meaning" ]
+  - words = [ [ "vūd", "child", :arrow, {:ala => "в̄αλδεί", :lat => "valdī"}, "childlike" ],
+              [ "kūb", "dog", :arrow, {:ala => "καλβεί", :lat => "kalbī"}, "canine" ],
+              [ "lēl", "night", :arrow, {:ala => "ληλεί", :lat => "lēlī"}, "nighttime, nocturnal" ],
+              [ "lieb", "heart", :arrow, {:ala => "λιββεί", :lat => "libbī"}, "cardiac, emotional" ],
+              [ "mēnā", "month", :arrow, {:ala => "μηνασ̄εί", :lat => "mēnašī"}, "monthly" ],
+              [ "paratmā", "crime", :arrow, {:ala => "παρατμασ̄εί", :lat => "paratmašī"}, "criminal" ],
+              [ "rās", "head", :arrow, {:ala => "ρωσεί", :lat => "rāsī"}, "head, top, foremost" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+  %p When added to abstract nouns, the nisba creates adjectives meaning “possessing the quality X”. It is not unusual to see this added to abstract nouns that themselves were derived from adjectives.
+  - words = [ [ "'īškyūn", "truth", :arrow, {:ala => "εισ̄ιυννεί", :lat => "'išyunnī"}, "truthful" ],
+              [ "mubrak", "luck", :arrow, {:ala => "μυβρατζεί", :lat => "mubračī"}, "lucky" ],
+              [ "rahīb", "size", :arrow, {:ala => "ραηιββεί", :lat => "rahibbī"}, "large, spacious" ],
+              [ "tuxuosīs", "poverty", :arrow, {:ala => "τυχυωσισσεί", :lat => "tuxuosissī"}, "impoverished" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+  %p The nisba-like pattern #{template "*C1āC2iC3ī"}, used to form ordinals from cardinal numbers, was discussed in section 15.3.4.
+  %p The pattern #{template "*C1āC2eC3"} is used to form some adjectives from stative roots, but is no longer productive.
+  - words = [ [ "lařab", "be wide", :arrow, {:ala => "λώρ̄εβ", :lat => "lāřeb"}, "wide" ],
+              [ "fasad", "be rotten", :arrow, {:ala => "φώσεδ", :lat => "fāsed"}, "rotten" ],
+              [ "sadar", "be ready", :arrow, {:ala => "σώδερ", :lat => "sāder"}, "ready" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+
+= section "Adverbialization" do
+  %p Alashian has a number of different means of forming adverbs, depending on the part of speech of the source word. All adverbialization patterns are concatenating.
+  %p The most common type of adverbialization, derivation from adjectives, is done with the suffixes *-at and *-it, the latter used if the adjective contains the nisba<sup>3</sup>.
+  - headers = [ "Root/Base", "Meaning", :arrow, "Adverb", "Meaning" ]
+  - words = [ [ "'axre", "slow", :arrow, {:ala => "άχρατ", :lat => "'axrat"}, "slowly" ],
+              [ "būri", "clear", :arrow, {:ala => "βούριατ", :lat => "būri'at"}, "clearly" ],
+              [ "sūleř", "successful", :arrow, {:ala => "σούλερ̄ατ", :lat => "sūleřat"}, "successfully" ],
+              [ "tēxnī", "skillful", :arrow, {:ala => "τήχνιτ", :lat => "tēxnit"}, "skillfully" ],
+              [ "tēb", "good", :arrow, {:ala => "τήβατ", :lat => "tēbat"}, "well" ],
+              [ "'ufisyālī", "official", :arrow, {:ala => "υφισκιώλιτ", :lat => "'ufiskyālit"}, "officially" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+  %p The suffix *-uon forms a number of adverbs from nominal bases, particularly adverbs of time and place. However, it is no longer generally productive.
+  - words = [ [ "lēl", "night", :arrow, {:ala => "ληλυών", :lat => "lēluon"}, "at night" ],
+              [ "sāř", "morning", :arrow, {:ala => "σωρ̄υών", :lat => "sāřuon"}, "in the morning" ],
+              [ "tāt", "lower part", :arrow, {:ala => "τωτυών", :lat => "tātuon"}, "down below, downstairs" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+  %p The suffix *-ū is used, non-productively, to form many adverbs of time from adjectival stems.
+  - words = [ [ "'əgdan", "first", :arrow, {:ala => "αγδανού", :lat => "'əgdanū"}, "first[ly]" ],
+              [ "kadnī", "previous", :arrow, {:ala => "καδνού", :lat => "kadnū"}, "earlier, beforehand" ],
+              [ "'ūxir", "late", :arrow, {:ala => "ουχρού", :lat => "'ūxrū"}, "later, afterwards" ],
+              [ "fəthī", "sudden", :arrow, {:ala => "φαττού", :lat => "fəthū"}, "suddenly" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+  %p The suffix *-a forms directional adverbs from nominal stems. It is no longer productive, but quite a few frozen forms with it are in common usage.
+  - words = [ [ "bār", "sea", :arrow, {:ala => "βώρα", :lat => "bāra"}, "towards the sea" ],
+              [ "bēt", "house", :arrow, {:ala => "βήτα", :lat => "bēta"}, "homeward" ],
+              [ "gabre", "mountain", :arrow, {:ala => "γάβρα", :lat => "gabra"}, "inland" ],
+              [ "kaf", "upper part", :arrow, {:ala => "κάφα", :lat => "kafa"}, "upwards" ],
+              [ "fitān", "interior", :arrow, {:ala => "φιτώνα", :lat => "fitāna"}, "[to] inside" ] ]
+  = render 'derivation_table', :headers => headers, :words => words
+  %p Note that the adverbs #{t "κάφα", "kafa"} “upwards” and #{t "τώτα", "tāta"} “downwards” may be prefixed by <i>'īši-</i> (a clipped form of #{t "είσ̄ιτ", "'īšit"} “truly”, originally “directly”) to make #{t "εισ̄ίκαφα", "'īšikafa"} “[to] upstairs” and #{t "εισ̄ιτώτα", "'īšitāta"} “[to] downstairs”.
+
+= section "Verbalization" do
+  %p Since the advent of contiguous European-style roots in Alashian, all productive verbal derivation creates new contiguous roots, never the discontinguous triconsonantal roots typical of Semitic languages; the only exceptions are sporadic cases of analogy which cannot rightly be labelled 'productive'.
+  %p Only a few traces of morphology meant for deriving new triconsonantal roots can still be seen (whether in Alashian or in other Semitic languages). Typically new roots would be created simply by extracting three consonants from a non-verbal base, with no additional derivational morphology needed, for example Proto-Semitic *milḥ-um “salt” → *m-l-ḥ → *malaḥa “be salty” (modern Alashian #{t "μώρ̄α", "māřa"} and #{t "μάλαρ̄", "malař"}). A root vowel would also be assigned to the new verbal root by means that are not fully understood due to having been subjected to many sorts of analogical levellings in different Semitic languages; in Alashian at least it appears as though *-ā- became generalized to most dynamic verbs and *-ī- to most stative verbs.
+  %p However, this sort of derivation is not possible when the source word only has two consonants. In this situation the two consonant stem would be augmented by a third consonant, most often an initial *ʔ or final *Y. The original meaning of initial *ʔ is unclear, since doublets without it do not appear to have survived in the modern Semitic languages<sup>4</sup>. Final *Y, however, clearly had a causative function, and many doublets still exist: *rabb- “many” → *r-b-y → *rabaya “make many, increase” (Alashian #{t "ρώβ", "rāb"} “large” and #{t "ραβή", "rabē"} “increase”), *ṯin- “two” → *ṯ-n-y → *ṯanaya “make two, double” (Alashian #{t "θινείν", "ṯinīn"} “two” and #{t "θανή", "ṯanē"} “repeat, double”).
+  %p New roots can also come into existence irregularly from older ones due to semantic splits, when sound changes or other morphophonemic phenomena result in the dissociation of what were originally two forms of a single root. For instance, the original Semitic root *w-ṣ́-ʔ “leave” has yielded in modern Alashian both *wčā' “leave” and *wčāč “remove”, and the root *š-m-ʕ “hear” has yielded both *smāh “hear” and *sān “teach”.
+  %p The vast majority of verbal derivation with Semitic-type roots does not occur through the derivation of new roots, however; the bulk of derivation is handled by conjugating a single root according to the various verbal scales. To this day the six scales remain highly productive.
+  %p Contiguous, European-type roots can generally be derived with little or no change to the source word other than adaptation to Alashian phonotactics, if needed. Final short vowels are typically lost, while final long vowels (or more integral vowels) are augmented by a final glottal stop. The suffix *-ā is then added to the stem. Occasionally, if the root has a CVCCVC structure, it will adopt a #{template "C1aC2C3ēC4"} vowel pattern and become a quadriconsonantal root.
+  %p Due to the large number of foreign words that end up embedded into Alashian European-type roots, quite a bit of foreign morphological material can appear in borrowed verbs, such as the -ize seen in verbs such as #{t "υργανιζώ", "'urganizā"} “organize”. Only one has actually become productive, however: *-in-, which presumably has some connection to the old Greek infinitive ending, although it is actually most commonly seen with roots of Turkish, French, or English origin. With Turkish roots, *-in- tends to replace the morpheme *-mak/-mek, a generic verbalizing suffix: Turkish <i>süpürmek</i> “sweep” → #{t "σουπρινώ", "sūprinā"} “sweep”, Turkish <i>bayılmak</i> “faint” → #{t "βαιλινώ", "baylinā"} “faint”. With English or French roots, *-in- will often be used whenever the new verb root is based on a nominal stem, as in English <i>computer</i> → Alashian #{t "κυμπιουτρινώ", "kumpiyūtrinā"} “computerize”.
+
+= section "Greek Prefixes" do
+  %p Many centuries of direct contact with spoken Greek has also resulted in the productive incorporation of some Greek prefixes into Alashian as nominal, verbal, and adjectival derivational morphemes. When used with nouns or adjectives, they are attached to the beginning of the noun stem and hyphenated; the definite marker *ha(n)- is still placed before any prefix, however. When used with verbs, the prefixes are added directly to the beginning of the stem with no hyphenation.
+  %p The following prefixes of Greek origin may be seen in Alashian:
+  %ul
+    %li
+      'antī - in place of, against (cf. English vice-, anti-, counter-), from Greek αντι-
+      %ul
+        %li #{t "αντει-πρεζίδεντε", "'antī-prezidente"} “vice-president”
+        %li #{t "αντει-επανωστασεί", "'antī-'epanāstasī"} “counterrevolutionary”
+        %li #{t "αντεισ̄εινώ", "'antišīnā"} “obstruct, oppose”
+    %li
+      dī - two, again (cf. English bi-, re-), from Greek δι-
+      %ul
+        %li #{t "δει-βωρ̄ώ", "dī-bāřā"} “reelection”
+        %li #{t "δει-σαννασ̄εί", "dī-sannašī"} “biannually”
+        %li #{t "δεικτωβώ", "dīktābā"} “rewrite”
+    %li
+      'ipu - inferiority, insufficiency (cf. English hypo-, sub-), from Greek υπο-
+      %ul
+        %li #{t "ιπυ-σούμ", "'ipu-sūm"} “subtotal”
+        %li #{t "ιπυ-βωρεί", "'ipu-bārī"} “submarine, underwater”
+        %li #{t "ιπυρ̄ατή", "'ipuřatē"} “cut too short”
+    %li
+      meta - after (cf. English post-), from Greek μετα-
+      %ul
+        %li #{t "μετα-ακυλλώ", "meta-'akullā"} “dessert”
+        %li #{t "μετα-πυωλενεί", "meta-puolenī"} “postwar”
+        %li #{t "μεταιαραχώ", "metayaraxā"} “reschedule for later”
+    %li
+      per - superiority, excessiveness (cf. English hyper-, super-, trans-), from Greek υπερ-
+      %ul
+        %li #{t "Περ-Ιυρδανιώ", "Per-Yurdanyā"} “Trans-Jordan”
+        %li #{t "περ-φισιτζεί", "per-fisičī"} “supernatural”
+        %li #{t "περαμαρώ", "peramarā"} “exaggerate, overstate”
+    %li
+      pruo - before (cf. English pre-), from Greek προ-
+      %ul
+        %li #{t "πρυω-λασούν", "pruo-lasūn"} “protolanguage”
+        %li #{t "πρυω-πυωλενεί", "pruo-puolenī"} “prewar”
+        %li #{t "πρυωιαραχώ", "pruoyaraxā"} “reschedule for earlier”
+    %li
+      pulī - many (cf. English poly-, multi-), from Greek πολυ-; used only with nouns and adjectives
+      %ul
+        %li #{t "πυλει-θηιείσμε", "pulī-ṯēyīsme"} “polytheism”
+        %li #{t "πυλει-λασυννεί", "pulī-lasunnī"} “multilingual”
+    %li
+      sīn - together, same (cf. English co-), from Greek συν-; used only with nouns and adjectives
+      %ul
+        %li #{t "σειν-άρτζαν", "sīn-'arčan"} “compatriot”
+        %li #{t "σειν-παθεί", "sīn-paṯī"} “nice, kind, sympathetic”
+  %p In addition to the above, Alashian has one native prefix that has come to work in the same way as the Greek prefixes above: *'ī-, expressing negation of nouns and adjectives. It is not used with verbs.
+  %ul
+    %li
+      'ī - negation (cf. English a-, un-, in-)
+      %ul
+        %li #{t "ει-в̄ούριδ", "'ī-vūrid"} “impossible”
+        %li #{t "ει-μηδού", "'ī-mēdū"} “unknown”
+        %li #{t "ει-θηιείσμε", "'ī-ṯēyīsme"} “atheism”
+        %li #{t "ει-τώτ", "'ī-tāt"} “abyss”
+  %p When a triconsonantal verb root takes on a prefix, it is no longer able to behave triconsonantally. Forms such as μεταιάραχ (*meta + *y-r-x) above conjugate as contiguous, European-style verbs.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) This combination of Semitic verb roots with non-Semitic morphology is highly unusual within the Semitic languages and is testament to the amount of influence Indo-European languages have had on Alashian.
+%p 2) Such mixing occasionally results in some cross-linguistic puns, such as the Alashian word #{t "τζειλήρ", "čīlēr"} “air conditioner”, which can be interpretted both as the Semitic stem *čīl “cold” + the agentive -ēr (i.e., “thing that makes it cold”) and as the pseudo-English word “chiller”. Similar coinages can be seen in other Semitic languages as well, such as Hebrew #{t "אווירון", "'aviron"} “airplane” (lit. “air-machine”), a play on French <i>avion</i>.
+%p 3) In southern Alashian dialects, the /t/ is lost with compensatory lengthening, resulting in the suffixes *-ā and *-ī. This results in the curious situation of adverbs being identical to the feminine singular of adjectives without the nisba and the masculine singular of adjectives with the nisba.
+%p 4) The addition of *ʔ, however, does seem to have been a common means of converting inherited verb roots with only two consonants into triconsonantal roots more typical of Semitic, as can be seen in Proto-Semitic *(ʔ)kl “eat” or *(ʔ)ḥd “one”. In fact, in modern Alashian roots with initial *ʔ lose it in the imperative, which is the only verb form of Proto-Afro-Asiatic origin (pre-Semitic) origin to survive into the modern language.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
