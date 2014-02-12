@@ -1,5 +1,7 @@
 module Grammars
   module AlashianHelper
+    include Grammars::GrammarsHelper
+
     @@abbreviations_hash = {
       '1' => "First Person",
       '1SG' => "First Person Singular",
@@ -26,6 +28,7 @@ module Grammars
       'FEM' => "Feminine",
       'FUT' => "Future Auxiliary",
       'GEN' => "Genitive–Dative",
+      'GENT' => "Gentilic",
       'IMPER' => "Imperative",
       'IMPF' => "Imperfect",
       'INF' => "Infinitive",
@@ -44,6 +47,7 @@ module Grammars
       'PRET' => "Preterite",
       'PRON' => "Pronoun",
       'PTCPL' => "Participle",
+      'REAL' => "Real Conditional",
       'SG' => "Singular",
       'SUB' => "Subordinating Conjunction",
       'SUBJ' => "Subjunctive",

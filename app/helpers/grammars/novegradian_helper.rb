@@ -1,5 +1,7 @@
 module Grammars
   module NovegradianHelper
+    include Grammars::GrammarsHelper
+
     @@abbreviations_hash = {
       '1' => "First Person",
       '1SG' => "First Person Singular",

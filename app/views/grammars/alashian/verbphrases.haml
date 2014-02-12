@@ -1,0 +1,991 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Φερασσιήν Ηυνε Ρειμιήν".html_safe
+
+= render :partial => 'navigation'
+
+= section "The Structure of the Verb Phrase" do
+  %p The Alashian verb phrase has the following overall structure:
+  %p.pattern [pronominal clitic] [auxiliary verb] [main verb] [secondary verb] [pronominal clitic]
+  %p No verb, however, employs all slots at once; the vast majority only use two or three at once. The only slot that is filled for every verb is of course the main verb.
+  %p The secondary verb slot is used in multi-verb phrases, as in “want to X” or “forbid to X”. It is typically filled by an infinitive, usually preceded by some sort of marker such as the preposition #{t "λι-", "li-"}.
+  %p Most Alashian verbs require a clitic pronoun of some sort; whether it goes before or after the main verb depends on the morphological form of the main verb. Clitic pronouns may be absent only in a few specific cases, such as objectless imperatives, reflexive imperatives, and occasionally when emphatic pronouns are present or in the perfect tenses.
+  %p Auxiliary verbs in Alashian are secondary verbs that modify the main verb in some way, typically introducing new modality information. Syntactically they are notable for carrying all tense information instead of the main verb, and forcing the main verb to appear in the perfective subjunctive.
+
+= section "The Indicative Mood" do
+  = section "The Present Tense" do
+    %p The present tense is used to denote actions taking place at the present moment:
+    = example_sentence "Ουν ισαδρού αδδίννε.",
+                       "'Ūn yisədrū haddinne.",
+                       "{3pl.nom.clitic} prepare-{3pl.pres} {det}-dinner",
+                       "They are preparing dinner."
+    = example_sentence "Αιιουριή υεΑσσουφκιώ ιακραού в̄ίв̄λε.",
+                       "Hayyūrie veHassūfkyā yəkra'ū vivle.",
+                       "{det}-Ayyūrie and-{det}-Assūfkyā read-{3pl.pres} book",
+                       "Ayyūrie and Assūfkyā are reading a book."
+    = example_sentence "Αττουλαδεί λιή ουν ιδουνού ηαλ Τζιρείν, με τζ' αδρείς βιπανεπεστείμ ηαλ Λιδρώ.",
+                       "Hattūladī lie 'ūn yidūnū hal Čirīn, me č 'adrīs bipanepestīm hal Lidrā.",
+                       "{det}-parent-{pl} {1sg.gen} {3pl.nom.clitic} reside-{3pl.pres} on Kerinia, but {1sg.nom.clitic} study-{1sg.pres} by-university on Lefkosia",
+                       "My parents live in Kerinia, but I am attending university in Lefkosia."
+    %p Habitual actions that have taken place before and are expected to continue taking place typically used the present tense as well, whether or not the action itself is actually taking place at the present moment:
+    = example_sentence "Τζ' ακκαυυήλ βαναλασκιώ.",
+                       "Č 'əkhəwwēl banalaskyā.",
+                       "{1sg.nom.clitic} speak-{1sg.pres} by-{det}-Alashian-{fem.sg}",
+                       "I speak Alashian."
+    = example_sentence "Ει ιββαδεί εν υέιτρες αττώτ ιв̄ μαακώλ.",
+                       "'Ī yibbadī 'en weytres hattāt 'iv ma'akāl.",
+                       "{3sg.fem.nom.clitic} work-{3sg.fem.pres} as waitress {det}-bottom in restaurant",
+                       "She works as a waitress in a restaurant downtown."
+    %p It also is used for actions that started in the past and continue into the present:
+    = example_sentence "Νω νιζαγζαγού αφφυτβυώλ ιτ ιανδε υήν σαγ̄ιρριήν.",
+                       "Nā nizagzagū haffutbuol 'it yande wēn saǧirrien.",
+                       "{1pl.nom.clitic} play-{1pl.pres} {det}-soccer since when be.{1pl.impf} young-{masc.pl}",
+                       "We've played soccer since we were young."
+    = example_sentence "Λω αρώ τζι ιτ ριδ̄μυώς τυμυώς̄.",
+                       "Lā 'arā či 'it riḏmuos tumuoš.",
+                       "{neg} see-{1sg.pres} {2sg.fem.acc.clitic} since number-{const} week-{pl}",
+                       "I haven't seen you for several weeks."
+    %p As in many other languages, the present tense may also describe events that are to take place in the near future; the timing is typically implied by adverbs such as “tomorrow” or “soon”.
+    = example_sentence "Τζ' αυώβ αμμώρ̄ χιυώτ ακκασπώ.",
+                       "Č 'awāb hammāř xiwāt hakkaspā.",
+                       "{1sg.nom.clitic} give-{1sg.pres} tomorrow to-{3sg.masc} {det}-money",
+                       "I'll give him the money tomorrow."
+    = example_sentence "Ιούβιλ υνών ιβού μετώ ηάσ̄ρετ λατφώ.",
+                       "Yūbil 'unān yibū metā hašret lətfā.",
+                       "carrier-{const} {det}-people come-{3sg.masc.pres} after ten-{const} minute",
+                       "The bus is coming in 10 minutes."
+    %p Within narration, present tense forms may also mark past events. This is usually known as the 'historical present'.
+    = example_sentence "Νάγδαν δ' ασμώ ου λενώ ακκούν, αδ̄δ̄εκώ ατσαρ̄ού μιφτών λιρ̄αμμεί.",
+                       "Nəgdan d 'asmā 'ū lenā 'əkhūn, 'aḏḏekā hətshařū miftān liřammī.",
+                       "{det}-first {sub} hear-{1sg.pres} {3sg.masc.acc.clitic} after get_up-{1sg.pres}, this-{masc.sg.pron} {det}-shout.{inf} outside of-someone.{gen}",
+                       "The first thing I hear when I get up is someone shouting outside."
+
+  = section "The Preterite Tense" do
+    %p The preterite tense marks actions that were completed in the past.
+    = example_sentence "Αννικλούς ου σάγαρ μακκάδδανατ αμμαχώζιν βιλέτζ αττέμπετζε.",
+                       "Hanniklūs 'ū sagar məkhəddanat hammaxāzin bileč hattempeče.",
+                       "{det}-Anniklūs {3sg.masc.nom.clitic} close-{3sg.masc.pret} early-{adv} {det}-store by-word-{const} {det}-storm",
+                       "Anniklūs closed the shop early because of the storm."
+    = example_sentence "Ουν αγαρού βυκώλ в̄ήν λαδδίννε.",
+                       "'Ūn 'agarū bukāl vēn laddinne.",
+                       "{3pl.nom.clitic} buy-{3pl.pret} bottle-{const} wine of-{det}-dinner",
+                       "They bought a bottle of wine for dinner."
+    = example_sentence "Τζε κάταβετ άμυς σάππετ σελιώ.",
+                       "Če katabet 'amus səphet selyā.",
+                       "{1sg.nom.clitic} write-{1sg.pret} yesterday seven-{const} page",
+                       "Yesterday I wrote seven pages."
+    %p This includes actions that took place over a protracted period of time, so long as the action is being treated as a whole and not as a series of repeated events each with their own beginning and end. Compare, for instance, the following two sentences, the first of which requires the preterite, the second the imperfect.
+    = example_sentence "Αμμιχώλ ου δάρας νανγλιτζκιώ βιπανεπεστείμ.",
+                       "Hammixāl 'ū daras nangličkyā bipanepestīm.",
+                       "{det}-Ammixāl {3sg.masc.nom.clitic} study-{3sg.masc.pret} {det}-English-{fem.sg} by-university",
+                       "Ammixāl studied English at university."
+    = example_sentence "Αμμιχώλ ου διήρες νανγλιτζκιώ καλώ ιούν βιπανεπεστείμ.",
+                       "Hammixāl 'ū dieres nangličkyā kalā yūn bipanepestīm.",
+                       "{det}-Ammixāl {3sg.masc.nom.clitic} study-{3sg.masc.impf} {det}-English-{fem.sg} all-{fem.sg} day by-university",
+                       "Ammixāl studied English every day at university."
+
+  = section "The Imperfect Tense" do
+    %p The imperfect tense marks a past action as a process with an internal temporal structure beyond the simple 'start' and 'end' model suggested by the preterite tense. It is thus used for a number of different types of actions.
+    %p The imperfect is used when one action takes place during or interrupts another action, since such an interruption indicates the existence of a temporal 'middle'. The interrupted action takes the imperfect, while the interrupting action takes the preterite.
+    = example_sentence "Ει κευυελώ ηυν αχετεί τζιήν καλκήλ αττελεφούν.",
+                       "'Ī kewwelā hun 'axetī čien kalkēl hattelefūn.",
+                       "{3sg.fem.nom.clitic} talk-{3sg.fem.impf} with brother-{1sg} when ring-{3sg.masc.pret} {det}-telephone",
+                       "She was talking with my brother when the phone rang."
+    = example_sentence "Α τα ιήσατ τζιήν τζώτ;",
+                       "'A ta yēsat čien čāt?",
+                       "{interr} {2sg.masc.nom.clitic} sleep-{2sg.masc.impf} when leave-{1sg.pret}",
+                       "Were you sleeping when I left?"
+    = example_sentence "Τζιήν νυμουνού Λαννώ ηασ̄ρε θιμούν, ει θαβρώ ασσανδή λών.",
+                       "Čien numūnū Lannā hašre ṯimūn, 'ī ṯabrā hassandē lān.",
+                       "when be_counted-{3pl.impf} of-Annā ten eight, {3sg.fem.nom.clitic} break-{3sg.fem.pret} {det}-arm {3sg.fem.gen}",
+                       "When Annā was 18, she broke her arm."
+    %p The imperfect is used when an action is habitual or repeated, since this indicates the existence of many start and end points.
+    = example_sentence "Νω τιήρεδ̄εν καλώ σώρ̄.",
+                       "Nā tiereḏen kalā sāř.",
+                       "{1pl.nom.clitic} run-{1pl.impf} all-{fem.sg} morning.",
+                       "We used to run every morning."
+    = example_sentence "Τζιήν δήυεν αδδούρ λιή ηαλ Σουριώ, ετζεί υενεσκιούν λιή δε ηαλ Τζιπριώ νω τακτιήв̄εν.",
+                       "Čien dēwen haddūr lie hal Sūryā, 'ečī veneskyūn lie de hal Čipriyā nā taktieven.",
+                       "when live-{3sg.masc.impf} {det}-family {1sg.gen} on Syria, {1sg.nom} and-{det}-friend.{pl} {1sg.gen} {sub} on Cyprus {1pl.nom.clitic} write_one_another-{1pl.impf}",
+                       "When my family lived in Syria I would write to my friends in Cyprus."
+    %p If the duration of an action is specified, it will generally appear in the imperfect, since duration implies process. However, this does not hold if the verb has an implied perfective aspect. Contrast the two sentences below, where the verb appears in the imperfect in the first case and preterite in the second. This is because “read” is contextually perfective in the second example, and it could be thought of as an instantaneous action of “finishing reading” taking place after a period fifteen minutes, rather than a prolonged action of “reading” taking place over fifteen minutes.
+    = example_sentence "Αδδέμετρε ου κήρε αв̄в̄ίв̄λε ιв̄ε ηασ̄ρε χάφσετ λατφώ.",
+                       "Haddemetre 'ū kēre havvivle 'ive hašre xafset lətfā.",
+                       "{det}-Addemetre {3sg.masc.nom.clitic} read-{3sg.masc.impf} in-{pl} ten five-{const} minute",
+                       "Addemetre read the book for fifteen minutes."
+    = example_sentence "Αδδέμετρε ου κήρε αв̄в̄ίв̄λε μετώ ηασ̄ρε χάφσετ λατφώ.",
+                       "Haddemetre 'ū kara havvivvle metā hašre xafset lətfā.",
+                       "{det}-Addemetre {3sg.masc.nom.clitic} read-{3sg.masc.pret} after ten five-{const} minute",
+                       "Addemetre read the book in fifteen minutes."
+    %p Another pair, the first using the preterite, the second the imperfect:
+    = example_sentence "Κάλ άρ̄αδ ου ινσ̄υωκινώ τζιήν αμβρώ Αμμαριώ ανού.",
+                       "Kal 'ařad 'ū 'inšuokinā čien 'ambrā Hammaryā 'anū.",
+                       "all-{masc.sg} one-{masc.sg} {3sg.masc.nom.clitic} {pass}-shock-{3sg.masc.pret} when say-{3sg.fem.pret} that.{pron}-{masc.sg}",
+                       "Everyone was shocked when [=because] Ammaryā said that."
+    = example_sentence "Κάλ άρ̄αδ ου σήτζερ τζιήν αμβρώ Αμμαριώ ανού.",
+                       "Kal 'ařad 'ū sēčer čien 'ambra Hammaryā 'anū.",
+                       "all-{masc.sg} one-{masc.sg} {3sg.masc.nom.clitic} be_drunk-{3sg.masc.impf} when say-{3sg.fem.pret} that.{pron}-{masc.sg}",
+                       "Everyone was drunk when [=at the same time as] Ammaryā said that."
+    
+  = section "The Future Tense" do
+    %p The future tense is a complex tense formed using the auxiliary verb *lək plus the perfective subjunctive. It marks any sort of future action, whether structurally perfective or imperfective, once or repeatedly.
+    = example_sentence "Τζ' αλακ в̄αγγώρ αμμώρ̄ ζυώγ παππυτζζιήν ρ̄ουδιθιήν.",
+                       "Č 'alək vaggār hammāř zuog pəphuččien řūdiṯien.",
+                       "{1sg.nom.clitic} {fut.1sg} buy-{1sg.subj.pf} tomorrow pair-{const} shoe-{pl} new-{masc.pl}",
+                       "Tomorrow I'll buy a pair of new shoes."
+    = example_sentence "Χαρατσώ λω ιλκι в̄ηννυχώδ αδ αθθαννιώ.",
+                       "Xarətshā lā yilki vēnnuxād 'ad haṯṯanniyā.",
+                       "decision {neg} {fut.3sg.fem} be_taken-{3sg.subj.pf} until {det}-Monday",
+                       "A decision will not be made until Monday."
+    = example_sentence "Δε ιννυμώρ με δή ακκυώτζ ιλακ в̄είυε κιυ ρ̄ούν μιμμύσαδδαρ.",
+                       "De yinnumār me dē həkhuoč yilək vīwe kyu řūn mimmusəddar.",
+                       "{expl} be_said-{3sg.masc.pres} {sub} this-{masc.sg} {det}-summer {fut.3sg.masc} be-{3sg.subj.pf} more hot-{masc.sg} {part}-usual-{masc.sg}",
+                       "They are saying that this summer will be hotter than usual."
+
+  = section "The Present Perfect Tense" do
+    %p The present perfect is another periphrastic tense, although with slightly different syntactic behavior. The subject is marked by a mandatory <em>genitive</em> pronoun or genitive construction with the preposition #{t "λι-", "li-"}, with nominative case pronouns and clitics forbidden, while the main verb appears in the perfective subjunctive. The adverb #{t "πλέ", "ple"} “then” is also nearly always present in the same clause.
+    %p The present perfect marks a past event with a result that has present relevance. In this sense it is similar to the English perfect, but with the added condition that the resulting state must still be true at the present time. Thus, a sentence such as “I have opened the window” (present perfect) implies the window is still opened, while “I opened the window” (preterite) makes no statement as to whether the window was subsequently closed. In most cases the present perfect can be replaced by another tense and still be fully grammatical, just with a slightly different emphasis on consequences.
+    = example_sentence "Λών в̄ήφταρ̄ πλέ αδδαλλούν καδ είθ μιφτών ναφυσσώ.",
+                       "Lān vēftař ple haddallūn kad 'īṯ miftān nafussā.",
+                       "{3pl.gen} open-{3pl.subj.pf} then {det}-window because there_is outside breeze",
+                       "They've opened the window because there is a breeze outside.",
+                       :comment => "<br>With present perfect: the window is still open.<br>Contrast preterite: the window may or may not still be open."
+    = example_sentence "Λιή λω в̄άμμιλ πλέ ήμα λέτζε ιτ ιανδε ναττάλησ̄ε λαμμακκαυυούλ.",
+                       "Lie lā vammil ple 'ēma leče 'it yande nəthalēše lamməkhəwwūl.",
+                       "{1sg.gen} {neg} understand-{1sg.subj.pf} then any word since when begin-{2sg.fem.pret} of-{det}-speak-{inf}",
+                       "I haven't understood a word since you started talking.",
+                       :comment => "<br>With present perfect: I still don't understand.<br>Contrast present: I may or may not be starting to understand."
+    = example_sentence "Λατζζείριλ υεΛαζζυιεί в̄ηβού πλέ в̄ήστακραβ αβλέ.",
+                       "Laččīril veLazzuyī vēbū ple vēstəkrab 'able.",
+                       "of-{det}-Aččīril and-of-{det}-Azzuyī come-{3pl.subj.pf} then arrive-{3pl.subj.pf} already",
+                       "Aččīril and Azzuyī have already arrived here.",
+                       :comment => "<br>With present perfect: they are still here.<br>Contrast preterite: they may have left already"
+    %p The present perfect is also frequently used to mark reported information that the speaker cannot personally attest to. It is thus quite commonly used in clauses introduced by verbs of communication.
+    = example_sentence "Ου ιμώρ με λού в̄ήταννεν πλέ κάλ μιναββυδώ.",
+                       "'Ū yimār me lū vētənnen ple kal minabuddā.",
+                       "{3sg.masc.nom.clitic} say-{3sg.masc.pres} {sub} {3sg.masc.gen} finish-{3sg.subj.pf} then all-{masc.sg} {part}-work",
+                       "He says that he finished [lit. 'has finished'] all of the work."
+    = example_sentence "Αννώ ει μωρώ χιώ με λάκ в̄αταρτζεί πλέ λατσώλ.",
+                       "Hannā 'ī mārā xiyā me lak vatarčī ple lətshāl.",
+                       "{det}-Annā {3sg.fem.nom.clitic} to-{1sg} {sub} {2sg.masc.gen} enjoy-{2sg.subj.pf} then of-swim-{inf}",
+                       "Annā told me that you like [lit. 'have liked'] swimming."
+
+  = section "The Pluperfect Tense" do
+    %p The pluperfect tense (or past perfect) is quite similar to the present perfect; the only syntactic difference is the inclusion of an invariant verb #{t "υή", "wē"} “it was” immediately before the verbal complex. This form has the same purpose as the present perfect, simply with a past reference point rather than a present one. In other words, the pluperfect expresses an action with consequences relevant for a particular point in the past, or indirect evidentiality in reference to a past action.
+    = example_sentence "Τζε ριήγ̄εв̄ καδ υή λιή λώ в̄άκκαλ πλέ.",
+                       "Če rieǧev kad wē lie lā vəkhal ple.",
+                       "{1sg.nom.clitic} be_hungry-{1sg.impf} because be-{3sg.masc.impf} {1sg.gen} {neg} eat-{1sg.subj.pf} then",
+                       "I was hungry because I had not eaten."
+    = example_sentence "Υή λιπαππατεί υελιταττατεί в̄ήρ̄υ πλέ βεέκσιδετ σαννώ αδ ιανδε в̄ατζαού αγδανού βνε νάρτζε.",
+                       "Wē lipəphatī velitəthatī vēřu ple be'eksidet sannā 'ad yande vača'ū 'əgdanū bne narče.",
+                       "be-{3sg.masc.impf} of-grandfather-{1sg} and-of-grandmother-{1sg} live-{3pl.subj.pf} then by-sixty-{const} year until when leave-{3pl.pret} first-{adv} from {det}-country",
+                       "My grandfather and grandmother had lived sixty years before they left the country for the first time."
+    = example_sentence "Ου μώρ χιώ με υή λών в̄ηνεв̄λυώια ηαλαδεί αππατριαρχεί.",
+                       "'Ū mār xiyā me wē lān vēnevluoya haladī happatriyarxī.",
+                       "{3sg.masc.nom.clitic} say-{3sg.masc.pret} to-{1sg} {sub} be-{3sg.masc.impf} {3sg.fem.gen} be_blessed-{3sg.subj.pf} by {det}-patriarch",
+                       "He told me that she received a blessing from the Patriarch."
+    = example_sentence "Αλλούκ ου βού υευή λού в̄ήχσιρ λιμωρή ρ̄αμμώτ χικυώ.",
+                       "Hallūk 'ū bū' vewē lū vēxsir limārē řammāt xikwā.",
+                       "{det}-Allūk {3sg.masc.nom.clitic} come-{3sg.masc.pret} and-be-{3sg.masc.impf} {3sg.masc.gen} want-{3sg.subj.pf} of-show-{inf} something-{acc} to-{2sg.masc}",
+                       "Allūk came by and wanted [lit. 'had wanted'] to show you something."
+
+= section "The Subjunctive Mood" do
+  %p The subjunctive mood in Alashian has two main purposes: marking the main verb of a clause when accompanied by an auxiliary, and marking the main verb of an irrealis subordinate clause. Unlike in the indicative mood, Alashian has two subjunctive mood forms that are distinguished by <em>aspect</em>, not by tense: a perfective subjunctive and an imperfective subjunctive. These two forms have very different origins, and so demonstrate very different syntactic behavior.
+  %p A third form, the volitive, is usually classified among the subjunctive forms due to its formation. It fulfils a number of non-subjunctive irrealis functions, in particular the optative, hortative, and deontic moods.
+
+  = section "The Perfective Subjunctive" do
+    %p As can be seen in the formation of complex tenses, the perfective subjunctive is always used when an auxiliary verb is present, with the auxiliary taking indicative forms and the main verb subjunctive forms. This is also true of modal auxiliaries, such as the capacitative #{t "в̄άραδ", "varad"} “be able to X” and ventive #{t "βού", "bū"} “X to here, X towards me”. However, this does not apply to all two-verb constructs; verbs such as #{t "χάσαρ", "xasar"} “want [to X]” and #{t "μανώ", "manā"} “forbid [from Xing]” are not considered auxiliaries, and so require infinitives rather than subjunctive mood verbs. The distinction between auxiliary verbs and secondary verbs is elaborated upon in section 19.8.
+    %p Note that no coordination is needed when an auxiliary verb is present; the subjunctive verb is simply placed after the indicative auxiliary. Adverbs may intervene between the two verbs, however.
+    = example_sentence "Τζε λω в̄άραδετ в̄άκκαββελ ουν βαδ ετζεί τζείνετ.",
+                       "Če lā varadet vəkhəbbel 'ūn bad 'ečī čīnet.",
+                       "{1sg.nom.clitic} {neg} be_able-{1sg.pret} convince-{1sg.subj.pf} {3pl.acc.clitic} by_which {1sg.nom} be_correct-{1sg.pret}",
+                       "I could not convince them that <em>I</em> was right."
+    = example_sentence "Βούνα в̄άταχχαδ νακείλ!",
+                       "Būna vataxxad nakīl!",
+                       "come-{2sg.masc.prec} take-{2sg.subj.pf} {det}-food.{pl}",
+                       "Bring the food over here!"
+    = example_sentence "Α σ̄ι τιλκι в̄ετάτταδρακ ηυνεί λιμικκαφφή;",
+                       "'A ši tilki vetəthadrak hunī limikkaffē?",
+                       "{interr} {2sg.fem.nom.clitic} {fut.2sg.fem} accompany-{2sg.subj.pf} with-{1sg} of-{part}-coffee",
+                       "Would you like to [lit. 'will you'] go for coffee?"
+    %p The perfective subjunctive also makes an appearance in purpositive irrealis clauses, that is, in clauses expressing intended purpose or result. This form is therefore frequently seen after verbs like #{t "χάσαρ", "xasar"} “want” or #{t "ναββήτ", "nəbbēt"} “hope”<sup>1</sup>, impersonal adverbs such as #{t "ισ̄αλλώ", "'išallā"} “hopefully”, and the conjunction #{t "λίκ", "lik"} “so that, lest”. Interestingly, in all three situations, the perfective subjunctive verb may appear either with or without the conjunction <i>lik</i>, so that such verbs may immediately follow other verbs serially; in the modern language this is generally viewed as a null conjunction, though historically it is the result of the conjunction <i>ve-</i> “and” merging with an older perfect form (cf. the waw-consecutive in Biblical Hebrew).
+    = example_sentence "Αννικλούς ου ιαχσείρ ζδάν [λίκ] в̄ηρώ ει θάννιτ.",
+                       "Hanniklūs 'ū yaxsīr zdan [lik] vērā 'ī ṯannit.",
+                       "{det}-Anniklūs {3sg.masc.nom.clitic} want-{3sg.masc.pres} very [so_that] see-{3sg.subj.pf} {3sg.fem.acc.clitic} again",
+                       "Anniklūs really wants him to see her again."
+    = example_sentence "Δ' ισ̄αλλώ [λίκ] λω в̄ημματτώρ αμμώρ̄.",
+                       "D 'išallā [lik] lā vēmməthār hammāř.",
+                       "{expl} hopefully [so_that] {neg} rain-{3sg.masc.pres} tomorrow",
+                       "Hopefully it won't rain tomorrow."
+    = example_sentence "Νω καυυηλνώ βιρωβώ κούλ [λίκ] в̄ησμώ νω κάλ άρ̄αδ.",
+                       "Nā kəwwēlnā birābā kūl [lik] vēsmā nā kal 'ařad.",
+                       "{1pl.nom.clitic} speak-{1pl.pret} by-large-{fem.sg} voice [so_that] hear-{3pl.subj.pf} {1pl.acc.clitic} all-{masc.sg} one-{masc.sg}",
+                       "We spoke loudly so that everyone could hear us."
+    %p In conjunction with verbs in the past tense, the perfect subjunctive may also mark consequence, taking the place of conjunctions such as “[such] that”, “and then”, and “consequently.”
+    = example_sentence "Αμματτώρ ου в̄ιού τυως ρώβ в̄ηττασήρ̄ σαττυφφώ ηαλε φάλγε μιστρατυώς̄ ιв̄ αμμεδνινώ.",
+                       "Hamməthār 'ū vyū tuos rāb vēthasēř səthuffā hale falge mistratuoš 'iv hammedninā.",
+                       "{det}-rain.{pl} {3sg.masc.nom.clitic} be-{3sg.masc.pret} so large-{masc.sg} flow_over-{3sg.subj.pf} flood on-{pl} half-{const} {part}-road-{pl} in {det}-town",
+                       "The rains were so heavy that half the streets in town were flooded."
+    = example_sentence "Τζε σώλετ Χαιιούν в̄ήδρικ λεαγούρ μιννούν.",
+                       "Če sālet Xayyūn vēdrik le'agūr minnūn.",
+                       "{1sg.nom.clitic} ask-{1sg.pret} to-{det}-Ayyūn go-{3sg.subj.pf} of-buy-{inf} {part}-fish.{pl}",
+                       "I asked Ayyūn to go buy some fish.",
+                       :comment => "(lit. 'I asked Ayyūn [and then] he went to buy some fish.'"
+    
+  = section "The Imperfective Subjunctive" do
+    %p The imperfective subjunctive is a derivative of the present tense, and so has an additional progressive or imperfective aspect to it. Unlike the perfective subjuntive, it may appear as the sole verb in an independent clause, though it is far more common as a marker of irrealis statives or progressives.
+    %p In independent clauses, the imperfective subjunctive may only appear negated, where it marks both present/future tense and some degree of doubt on the part of the speaker. Such clauses can often be translated as “I do not foresee that...”.
+    = example_sentence "Αδ̄δ̄εκώ λω ιυώια πρυв̄λιμώ.",
+                       "'Aḏḏekā lā yiwāya pruvlimā.",
+                       "this.{pron}-{masc.sg} {neg} be-{3sg.masc.subj.impf} problem",
+                       "This will not be a problem [I believe]."
+    = example_sentence "Λω ισαλλήνα ήμα μιμμιλλούς̄ λού.",
+                       "Lā yisəllēna 'ēma mimmillūš lū.",
+                       "{neg} preserve-{3sg.masc.subj.impf} any {part}-promise-{pl} {3sg.masc.gen}",
+                       "He will not keep any of his promises [from what I can tell]."
+    %p It is also employed in counterfactual present- and future-tense statements. The former is most commonly seen in conjunction with the adverb #{t "λω...αδ", "lā...'ad"} “not yet”, while the latter appears most often with the conjunction #{t "τζιήν", "čien"} “when, once” in its counterfactual sense.
+    = example_sentence "Τζε λω αχχείρα αδ!",
+                       "Če lā 'axxīra 'ad!",
+                       "{1sg.nom.clitic} {neg} be_late-{1sg.subj.impf} yet",
+                       "I'm not late yet!"
+    = example_sentence "Α τα τιλακ ηύνεν в̄ετάτταηαχαδ τζιήν τιτάννανα ναβυδδώ λάκ;",
+                       "'A ta tilək hunen vetəthahaxad čien titənnana nabuddā lak?",
+                       "{interr} {2sg.masc.nom.clitic} {fut.2sg.masc} with-{1pl} meet_up-{2sg.subj.pf} when finish-{2sg.masc.subj.impf} {det}-work {2sg.masc.gen}",
+                       "Will you meet us once you finish your work?"
+    %p Finally, the imperfective subjunctive appears in substantive clauses with imperfective meaning; that is, in clauses fulfilling the role of the direct object of a verb such as #{t "ιαδώ", "yadā"} “know”, #{t "ρώ", "rā"} “see”, or #{t "υρδινώ", "'urdinā"} “command, order”. The conjunction #{t "με", "me"} is used as a subordinator.
+    = example_sentence "Ει ρώετ με ιв̄κείια.",
+                       "'Ī rā'et me yivkīyiya.",
+                       "{3sg.fem.acc.clitic} see-{1sg.pret} {sub} cry-{3sg.fem.subj.impf}",
+                       "I saw her crying."
+    = example_sentence "Α τα τειδώ με ιυώιυυα ιв̄ σαμή αλλήλ υγ̄δυδώ-τίμυννετ αστερείσμε;",
+                       "'A ta tīdā me yiwāyuwa 'iv samē hallēl 'uǧdudā-ṯimunnet 'asterīsme?",
+                       "{interr} {2sg.masc.nom.clitic} know-{2sg.masc.pres} {sub} be-{3pl.subj.impf} in sky-{const} {det}-night eighty-eight-{const} constellation",
+                       "Did [lit. 'do'] you know that there are 88 constellations in the night sky?"
+
+  = section "The Volitive Mood" do
+    %p The volitive, when used by itself, indicates wishes, hopes, and desires, and corresponds with English modal particles like 'let' and 'may'.
+    = example_sentence "Αττυν τειτζαούνα βασσαλούν!",
+                       "'Əthun tīča'ūna bassalūn!",
+                       "{2pl.masc.nom.clitic} leave-{2pl.masc.vol} by-{det}-peace",
+                       "May you depart in peace!"
+    = example_sentence "Νω ναδρικούνα ναχρώ ιλ αββώρ.",
+                       "Nā nadrikūna naxrā 'il habbār.",
+                       "{1pl.nom.clitic} go-{1pl.vol} {det}-evening to {det}-bar",
+                       "Let's go to the bar tonight."
+    = example_sentence "Ετζεί ωρ̄υφώναννα!",
+                       "'Ečī 'āřufānanna!",
+                       "{1sg.nom} be_held-{1sg.vol}",
+                       "If only I were rich! (lit. 'were held')"
+    %p The volitive is also used to express promises or threats, particularly in the first person.
+    = example_sentence "Νω νατταρωούνα ασώ θάννιτ!",
+                       "Nā nətharā'ūna 'asā ṯannit!",
+                       "{1pl.nom.clitic} see_each_other-{1pl.vol} soon again",
+                       "We shall see each other again soon!"
+    = example_sentence "Ου ιαδρείκαννα αββού δίτ αππών.",
+                       "'Ū yadrīkanna habbū dit happān.",
+                       "{3sg.masc.nom.clitic} remember-{3sg.masc.vol} {det}-come-{inf} this-{fem.sg} {det}-time",
+                       "He will remember to come this time."
+    %p In conditional sentences, the apodosis (result clause) will appear in the volitive if a) it has future meaning and b) is something the speaker views as beneficial or otherwise in a positive light. This usage likely originates from swearing oaths.
+    = example_sentence "Μίρ ιαδρείκ, φ' αλού άττα ταδρείκαννα.",
+                       "Mir yadrīk, f 'alū 'əthα tadrīkanna.",
+                       "if go-{3sg.masc.pres}, then also {2sg.masc.nom} go-{2sg.masc.vol}",
+                       "If he goes, then you should go too."
+    = example_sentence "Μίρ ατζζερυώς ασσάβατ τήβ, φα νω ναδρικούνα ιλ αββαζώρ.",
+                       "Mir haččeruos hassabat tēb, fa nā nadrikūna 'il habbazār.",
+                       "if {det}-weather {det}-Saturday good-{masc.sg}, then {1pl.nom.clitic} go-{1pl.vol} to {det}-bazaar",
+                       "If the weather is nice on Saturday, we should go to the bazaar."
+    %p Weak obligation (“should”) can also be expressed by the volitive. Stronger obligation (“ought”, “must”) requires other auxiliary constructions, and so does not need the volitive.
+    = example_sentence "Τζ' αδρείκαννα βήτα αδ αττείσσα.",
+                       "Č 'adrīkanna bēta 'ad hattīssa.",
+                       "{1sg.nom.clitic} go-{1sg.vol} homeward before {det}-nine",
+                       "I should go home by nine o'clock."
+    %p The volitive is also typically used in questions that expect an imperative verb in response, or at least an implied imperative.
+    = example_sentence "“Μώτ τζε αφφώλαννα αππών;” “Σαυλινώ μιφτών ιв̄ λατφώ.”",
+                       "“Māt če 'affālanna 'əphān?” “Sawlinā miftān 'iv lətfā.”",
+                       "what-{acc} {1sg.nom.clitic} do-{1sg.vol} now? step_aside-{2sg.masc.imper} outside in minute",
+                       "What should I do now?” “Step outside for a moment."
+    = example_sentence "“Βεμώ 'τζι ωηώβ' ου ιννυμώραννα βαγγαλλιώ;” “[Μώρ] 'Je t'aime'.”",
+                       "“Bemā 'či 'āhāb' 'ū yinnumāranna baggalliyā?” “[Mār] 'Je t'aime'.”",
+                       "how '{2sg.fem.acc.clitic} love-{1sg.pres}' {3sg.masc.nom.clitic} be_said-{3sg.masc.vol} by-{det}-French-{fem.sg}? say-{2sg.masc.imper} 'Je t'aime'",
+                       "How do you say 'I love you' in French?” “[You say] 'Je t'aime'."
+
+= section "The Imperative Moods" do
+  %p The imperative mood forms mark commands. They are a defective conjugation, existing only in the second person. They also have a system of verbal negation separate from the other verbal forms.
+
+  = section "The Imperative Mood" do
+    %p The imperative forms are used for most general commands.
+    = example_sentence "Στή αρ̄ρ̄άλιβ λάκ!",
+                       "Stē hařřalib lak!",
+                       "drink-{2sg.masc.imper} {det}-milk {2sg.masc.gen}",
+                       "Drink your milk!"
+    = example_sentence "Ατταρ̄λατσού βαππαππυτζζιήν αδ ιανδε ταδρικού φιτώνα.",
+                       "'Əthařlətshū bappəphuččien 'ad yande tadrikū fitāna.",
+                       "remove-{2pl.imper} by-{det}-shoe-{pl} before that go-{2pl.pres} to_inside",
+                       "Take off your shoes before entering."
+    %p The imperative is negated with the negative marker #{t "ελ", "'el"} and the enclitic #{t "ακ/'κ", "(ə)k"}. However, the presence of another enclitic (i.e., a direct object pronoun) will displace <i>(ə)k</i>.
+    = example_sentence "Ελ στή 'κ ακκαφφή βιρ̄ούν!",
+                       "'El stē k hakkaffē biřūn!",
+                       "{neg} drink-{2sg.masc.imper} {neg.clitic} {det}-coffee by-hot-{masc.sg}",
+                       "Don't drink the coffee while it's hot!"
+    = example_sentence "Ελ στή ου βιρ̄ούν!",
+                       "'El stē 'ū biřūn!",
+                       "{neg} drink-{2sg.masc.imper} {3sg.masc.acc.clitic} by-hot-{masc.sg}",
+                       "Don't drink it while it's hot!"
+    = example_sentence "Ελ γ̄αθθενού 'κ ηών.",
+                       "'El ǧəṯṯenū k hān.",
+                       "{neg} smoke-{2pl.imper} {neg.clitic} here",
+                       "No smoking."
+
+  = section "The Precative Mood" do
+    %p The precative mood is a milder form of imperative used to mark requests and encouragement. Negation works the same way as in the imperative.
+    = example_sentence "Βυούνα φιτώνα.",
+                       "Bwūna fitāna.",
+                       "come-{2pl.prec} to_inside",
+                       "Would you like to come in?"
+    = example_sentence "Αττασώδνα χιώ βιδή αιιαβούλ.",
+                       "'Əthasādna xiyā bidē hayyabūl.",
+                       "assist_with-{2sg.masc.prec} to-{1sg} by-this-{masc.sg} {det}-carry-{inf}",
+                       "Would you help carry this for me?"
+    = example_sentence "Ινδρατζζού ελ μαρείνα 'κ λών μώτ δε μώρετ ου λάτζ.",
+                       "'Indračhū 'el marīna k lān māt de māret 'ū lač.",
+                       "please {neg} say-{2sg.fem.prec} {neg} {3sg.fem.gen} what-{acc} {sub} say-{1sg.pret} {3sg.masc.acc.clitic} {2sg.fem.gen}",
+                       "Please don't tell her what I told you."
+    = example_sentence "Κυριή ρωήννα!",
+                       "Kurie rā'ēnna!",
+                       "Lord have_mercy-{2sg.masc.prec}",
+                       "Lord have mercy!"
+
+= section "Negation" do
+  %p Most verbs can be negated using the preverbal adverb #{t "λω", "lā"}.
+  = example_sentence "Λω νερ̄σαβού με περ-τζείλ ηών.",
+                     "Lā neřsabū me per-čīl hān.",
+                     "{neg} think-{1pl.pres} {sub} over-cold-{masc.sg} here",
+                     "We don't think it's too cold here."
+  = example_sentence "Λω διήκερ μώτ δε αβρ̄ήθ νι.",
+                     "Lā dieker māt de 'abřēṯ ni.",
+                     "{neg} remember-{1sg.impf} what-{acc} {sub} anger-{3sg.masc.pret} {1sg.acc.clitic}",
+                     "I didn't remember what angered me."
+  %p Imperatives and precatives use the adverb #{t "ελ", "'el"} instead (since prohibitory negation is fundamentally very different than factual negation). This is typically accompanied by a post-verbal enclitic <i>k</i> or <i>ək</i>, although this may be dropped if a clitic pronoun attempts to fill the same slot.
+  = example_sentence "Ελ νατζζώρ ακ μιμμωρούκ λάκ!",
+                     "'El nəčhār ək mimmārūk lak!",
+                     "{neg} look-{2sg.masc.imper} {neg} behind {2sg.masc.gen}",
+                     "Don't look behind you!"
+  %p In indirect commands (which always appear in the perfective subjunctive), either <i>lā</i> or <i>'el</i> (without the <i>(ə)k</i> component) may be used. The difference is mostly dialectal, with <i>lā</i> dominating in the north and <i>'el</i> in the south.
+  = example_sentence "Ιννατεί ει αμβρώ χιώ [λίκ] λω/ελ в̄αρ̄δ̄αλ ούχιρατ.",
+                     "'Innatī 'ī 'ambrā xiyā lik lā/'el vařḏal 'ūxirat.",
+                     "mother-{1sg} {3sg.fem.nom.clitic} to-{1sg} so_that {neg} return-{1sg.subj.pf} late-{adv}",
+                     "My mother told me to not come back late."
+  = example_sentence "Αττατζζαρεί [λίκ] λω/ελ в̄ετάτταηαμαρ.",
+                     "'Əthəčharī [lik] lā/'el vetəthahamar.",
+                     "pay_attention-{2sg.fem.imper} so_that {neg} misspeak-{2sg.subj.pf}",
+                     "Be careful not to misspeak."
+  %p In multiple-verb constructions employing an auxiliary, only the auxiliary may be negated. Double negations (such as “I can't not go”) require rephrasing (“It cannot be that I do not go”). This contrasts with the purpositives in sentences 73 and 74 above by the fact that auxiliaries cannot be followed by the conjunction <i>lik</i> “so that”, while the purpositives may.
+  = example_sentence "Λω ιουριδού в̄ηβείτ βήνικ αδ αχχωφισκιώ.",
+                     "Lā yūridū vēbīt bēnik 'ad haxxāfiskyā.",
+                     "{neg} be_able-{3pl.pres} visit-{3pl.subj.pf} between-{2sg.masc} until {det}-Friday",
+                     "They can't stop by your house until Friday."
+  = example_sentence "Δ' ει-в̄ούριδ με λω αδρείκ.",
+                     "D 'ī-vūrid me lā 'adrīk.",
+                     "{expl} {neg}-possible-{masc.sg} {sub} {neg} go-{1sg.pres}",
+                     "I can't not go."
+  %p In multiple-verb constructions employing an infinitive, either or both verbs may be negated independently of the other. However, infinitives, being nominal in form, cannot use adverbial negation as verbs do; they must be negated either with the pseudo-adjective #{t "ήμα", "'ēma"} or the prefix #{t "ει-", "'ī-"}, with the former being far more frequent. The same is true of substantive clauses with an infinitive component.
+  = example_sentence "Τζ' αχσείρ λεήμα ηαβούδ (ει-ηαβούδ).",
+                     "Č 'axsīr le'ēma habūd ('ī-habūd).",
+                     "{1sg.nom.clitic} want-{1sg.pres} of-no work-{inf} ({neg}-work-{inf})",
+                     "I want to not work."
+  = example_sentence "Λω αχσείρ χιτζιώ λεήμα αμούρ (ει-αμούρ) μώτ δε νίστυσαβ.",
+                     "Lā 'axsīr xičyā le'ēma 'amūr ('ī-'amūr) māt de nistusab.",
+                     "{neg} want-{1sg} to-{2sg.fem} of-no say-{inf} ({neg}-say-{inf}) what-{acc} {sub} happen-{3sg.masc.pret}",
+                     "I don't want to not tell you what happened."
+  = example_sentence "Ήμα ρατζούβ ιв̄ ιούβιλ υνών αδ̄δ̄εκώ κιυ ασατεί.",
+                     "'Ēma račūb 'iv yūbil 'unān 'aḏḏekā kyu 'asatī.",
+                     "no ride-{inf} in carrier-{const} {det}-people this.{pron}-{masc.sg} more quick-{masc.sg}",
+                     "Not taking the bus would be faster."
+  %p Negative adverbs in the protasis of a conditional sentence typically fuse with the conditional conjunction. In factual conditions, #{t "μίρ", "mir"} and #{t "λω", "lā"} fuse to become #{t "ιλλώ", "'illā"} “if not” (the form coming from an older conditional <i>'in</i> “if”), while in counterfactual conditions, #{t "λού", "lū"} and #{t "λω", "lā"} merge into #{t "λυλλώ", "lullā"} “if [it were] not”.
+  = example_sentence "Φα τζ' αλακ в̄ασώλ ιλλώ ηδώ ασσέντε.",
+                     "Fa č 'alək vasāl 'illā 'ēdā hassente.",
+                     "then {1sg.nom.clitic} {fut.1sg} ask-{1sg.subj.pf} if.{real.neg} know-{1sg.pres} {det}-path",
+                     "I will ask if I don't know the way."
+  = example_sentence "Λυλλώ τζεσουρώ νι, φα λω ταηαζηρνώ βακκαφρ̄ώ.",
+                     "Lullā česūrā ni, fa lā tahazērnā bəkhafřā.",
+                     "if.{counterf.neg} provoke-{3sg.masc.pret} {1sg.acc.clitic}, then {neg} become_entangled-{1pl.pret} by-fight",
+                     "If he hadn't provoked me, we wouldn't have gotten into a fight."
+
+= section "The Copula в̄εί vī “to be”" do
+  %p The verb #{t "в̄εί", "vī"} (root *hwāy) means “to be”, and is the main Alashian copula used to link together multiple noun phrases. Its conjugation is highly irregular, as is its behavior.
+  %p In the present tense the copula generally surfaces as zero, with the subject and complement simply juxtaposed (the so-called “nominal sentence”). If the subject is a pronoun, it will always appear in its full form, never as a clitic.
+  = example_sentence "Αδ̄ήλεκ νουλείδ λιή.",
+                     "'Aḏēlek nūlīd lie.",
+                     "these.{pron}-{pl} {det}-children.{pl} {1sg.gen}",
+                     "These are my children."
+  = example_sentence "Ίσ̄σ̄ε βνε Μασρήν.",
+                     "'Išše bne Məsrēn.",
+                     "{2sg.fem.nom} from Egypt",
+                     "You are from Egypt."
+  %p The present tense forms can be used for emphatic meaning. Subject pronouns may appear as clitics, but due to the emphatic nature of non-zero copulas in the present tense, full pronouns are far more common.
+  = example_sentence "Ηού είσ̄ιτ ιυή Ναв̄δήλ.",
+                     "Hū 'īšit yiwē Navdēl.",
+                     "{3sg.masc.nom} really be-{3sg.masc.pres} {det}-Navdēl",
+                     "He really <em>is</em> Navdēl."
+  %p In other tenses the copula is always overt.
+  = example_sentence "Παππατεί υεταττατεί υειού ζερρανιήν.",
+                     "Pəphatī vetəthatī weyū zerranien.",
+                     "grandfather-{1sg} and-grandmother-{1sg} be-{3pl.impf} farmer-{pl}",
+                     "My grandparents were farmers."
+  = example_sentence "Τζ' αχσείρ λεηαυού αв̄υκώτ.",
+                     "Č 'axsīr lehawū 'avukāt.",
+                     "{1sg.nom.clitic} want-{1sg.pres} of-be-{inf}-{const} lawyer",
+                     "I wish to be a lawyer."
+  %p In the preterite and imperfect tenses, the third person forms have two variants: the 'weak' forms, which serve as the normal copula, and the 'strong' forms, which are used as existentials (see section 19.10). Since the act of 'being' is inherently imperfective, the imperfect forms are the most common in the past tense. The preterite forms of 'be' are used only in the context of other preterite verbs to refer to states at a particular point in time; this is particularly common in substantive clauses.
+  = example_sentence "Λω ιαδώτ με в̄είτα παρρούν.",
+                     "Lā yadāt me vīta parrūn.",
+                     "{neg} know-{1sg.pret} {sub} be-{2sg.masc.pret} doctor",
+                     "I did not know that you were a doctor [at that time]."
+  = example_sentence "Λω ιαδώτ με υήτ παρρούν.",
+                     "Lā yadāt me wēt parrūn.",
+                     "{neg} know-{1sg.impf} {sub} be-{2sg.masc.pret} doctor",
+                     "I did not know that you used to be a doctor"
+  = example_sentence "Δε в̄εί φάλγ αιιούν τζιην в̄ατζαού.",
+                     "De vī falg hayyūn čien vača'ū.",
+                     "{expl} be-{3sg.masc.pret} half-{const} {det}-day when leave-{3pl.pret}",
+                     "It was noon when they left."
+  = example_sentence "Δε υή άμυς ζδάν ρ̄ούν υειούβις.",
+                     "De wē 'amus zdan řūn veyūbis.",
+                     "{expl} be-{3sg.masc.impf} yesterday very hot-{masc.sg} and-dry-{masc.sg}",
+                     "It was very hot and dry yesterday."
+
+= section "Voice" do
+  %p Alashian has two voices, the active and passive. These are distinguished morphologically for the most part, so that syntactically there is little difference between a passive verb and an intransitive active verb.
+  = example_sentence "Τζ' ακρώ.",
+                     "Č 'əkrā.",
+                     "{1sg.nom.clitic} read-{1sg.pres}",
+                     "I am reading."
+  = example_sentence "Αв̄в̄ίв̄λε ου ιακκυρώ.",
+                     "Havvivle 'ū yəkhurā.",
+                     "{det}-book {3sg.masc.nom.clitic} be_read-{3sg.masc.pres}",
+                     "The book is being read."
+  %p The one major morphological difference is that most passive verbs (other than those in Scale I <i>nuktāb</i>) lack an imperative and precative. Instead, a periphrastic construction consisting of the conjunction <i>lik</i> “so that” plus the second person perfective subjunctive must be used. In this case, there is no formal distinction between the imperative and precative.
+  = example_sentence "Άτταγλη υενινακκώρ!",
+                     "'Əthaglē veninəkhār!",
+                     "reveal_oneself-{2sg.imper} and-be_recognized-{2sg.imper}",
+                     "Show yourself!” (lit. 'Reveal yourself and be recognized!'"
+  = example_sentence "Λίκ в̄ατώστυσ̄φαν βιμώτ δε λω τειδώ μώτ δε τιφφώλ.",
+                     "Lik vatāstušfan bimāt de lā tīdā māt de tiffāl.",
+                     "so_that admit-{2sg.subj.pf} by-what-{acc} {sub} {neg} know-{2sg.masc.pres} what-{acc} {sub} do-{2sg.masc.pres}",
+                     "Admit that you don't know what you're doing!"
+  %p As can be seen above, not all morphologically passive verbs are semantically passive, usually due to gradual semantic drift. In addition to #{t "νίστυσ̄φαν", "nistušfan"} “admit” above, some other such 'deponent' verbs include: #{t "εννυτώρ", "'ennutār"} “remain”, #{t "νίστυσαβ", "nistusab"} “happen”, #{t "νυντώρ", "nuntār"} “rain”, #{t "νίστυσκαβ", "nistuskab"} “surrender”, and many others.
+  %p The agent of a passive verb may be marked with the preposition #{t "ηαλαδεί", "haladī"} “by”.
+  = example_sentence "Ηεί νεκλισ̄ώ ει νυβνωιώ ηαλαδεί в̄ιζαντήν ιв̄ ανευών νωσ̄ιρεί.",
+                     "Hī neklišā 'ī nubnāyā haladī vizantēn 'iv 'anewān nāširī.",
+                     "that-{fem.sg} {det}-church {3sg.fem.nom.clitic} be_built-{3sg.fem.pres} by Byzantine-{gent} in {det}-century {det}-tenth",
+                     "That church was built by the Byzantines in the tenth century."
+  = example_sentence "Ου αχχώρ ηαλαδεί ατιχιμώ ηυν αδρυώμ.",
+                     "'Ū 'əxxār haladī 'atiximā hun hadruom.",
+                     "{3sg.masc.nom.clitic} be_delayed-{3sg.masc.pret} by accident with {det}-highway",
+                     "He was delayed by an accident on the highway."
+  %p The one time passive verbs are able to take a direct object is in the 'internal object' construction, where an infinitive cognate to the main verb is used to indicate emphasis or totality. Internal objects are discussed further in section 19.13.
+  = example_sentence "Βιλέτζε νής, αββήτ ου в̄ακκώδ μαв̄ακκούδ.",
+                     "Bileče nēs, habbēt 'ū vəkhād mavəkhūd.",
+                     "by-word {det}-fire, {det}-house {3sg.masc.nom.clitic} be_burned-{3sg.masc} burn-{inf}",
+                     "After the fire the house was burnt to the ground.” (lit. 'was burnt a burning'"
+  %p Scale V (<i>nitkatab</i>), while normally reflexive, can also serve as a mediopassive. Morphologically and syntactically it patterns as active, however.
+  = example_sentence "Αθθέλγε δε ηάλε αγγυβώρ ου ιάττασσαρ̄ διστυών.",
+                     "Haṯṯelge de hale haggubār 'ū yəthassař distuon.",
+                     "{det}-snow {sub} on-{pl} {det}-mountain.{pl} {3sg.masc.nom.clitic} melt-{3sg.masc.pres} in_spring",
+                     "The snow in the mountains melts in the spring."
+  = example_sentence "Τζ' ατδουσ̄ώ καλώ σώρ̄ λενώ ακκούν.",
+                     "Č 'atdūšā kalā sāř lenā 'əkhūn.",
+                     "{1sg.nom.clitic} take_shower-{1sg.pres} all-{fem.sg} morning after get_up-{1sg.pres}",
+                     "I shower every morning after I get up."
+
+= section "Secondary Verbs" do
+  %p Alashian secondary verb constructions involve a finite main verb plus an infinitive representing the secondary verb. The main verb must be transitive; secondary verb constructions are, in effect, a means of replacing the direct object of the main verb with another verb, as can be seen in the examples below.
+  = example_sentence "Τζ' αχσείρ τυφώρ̄.",
+                     "Č 'axsīr tufāř.",
+                     "{1sg.nom.clitic} want-{1sg.pres} apple",
+                     "I want an apple."
+  = example_sentence "Τζ' αχσείρ λιδαρούκ.",
+                     "Č 'axsīr lidarūk.",
+                     "{1sg.nom.clitic} want-{1sg.pres} of-go-{inf}",
+                     "I want to go."
+  = example_sentence "Ουν ιμναηού νάλκυηυλ ιв̄ αββήτ λών.",
+                     "'Ūn yimnahū nalkuhul 'iv habbēt lān.",
+                     "{3pl.nom.clitic} forbid-{3pl.pres} {det}-alcohol in {det}-house {3pl.gen}",
+                     "They forbid alcohol in their home."
+  = example_sentence "Ουν ιμναηού χιώ λιμώτταηαγαζ ιв̄ αββήτ λών.",
+                     "'Ūn yimnahū xiyā limāthahagaz 'iv habbēt lān.",
+                     "{3pl.nom.clitic} forbid-{3pl.pres} to-{1sg} of-swear-{inf} in {det}-house {3pl.gen}",
+                     "They forbid me from swearing in their home."
+  %p However, while these verbs are capable of taking a direct object (as in sentences 100 and 102 above), the infinitive in a secondary verbal construction typically is not syntactically the direct object of the main verb, although it may be semantically. More often than not, the infinitive must be preceded by a preposition; which preposition is determined by the semantics of the main verb. The following possibilities cover the vast majority of cases:
+  %ul
+    %li #{t "βι-", "bi-"} “by” is used when the secondary verb clarifies the method of performing the primary verb, as in “help X”, “agree to X”, “fail to X” (this last one requires a negated infinitive). In all of these cases the secondary verb actually takes place: helping someone carry something involves carrying, agreeing to speak involves speaking, and failing to complete something (lit. 'not complete') involves not completing it.
+    %li #{t "λι-", "li-"} “of”, by far the most common preposition, is used when the secondary verb does not represent an action that is actually taking place, as in “want to X”, “like X”, “hate X”, “feel like X”.
+    %li Ø (i.e., no preposition) is required of a handful of common verbs whose semantics do not appear to be clearly differentiated from those requiring <i>li-</i>, as in “remember to X”, “try to X”.
+  = example_sentence "Ου κάτσαρ βεήμα ιαδού σεριούς απρυв̄λιμώ δίτ.",
+                     "'Ū kətshar be'ēma yadū seryūs hapruvlimā dit.",
+                     "{3sg.masc.nom.clitic} fail-{3sg.masc.pret} by-no understand-{inf}-{const} seriousness-{const} {det}-problem this-{fem.sg}",
+                     "He failed to comprehend the seriousness of this problem."
+  = example_sentence "Τζ' αχσείρ λατταττού ηαλ αστάς αχχούλιφ.",
+                     "Č 'axsīr lattəthū hal hastas haxxūlif.",
+                     "{1sg.nom.clitic} want-{1sg.pres} of-{det}-descend-{inf} on {det}-stop {det}-follow-{ptcpl.act}-{masc.sg}",
+                     "I want to get off at the next stop."
+  = example_sentence "Δαβώρνα μαηακκούβ αμμίφταρ̄ λιή.",
+                     "Dabārna mahəkhūb hammiftař lie.",
+                     "try-{2sg.masc.prec} find-{inf}-{const} {det}-key {1sg.gen}",
+                     "See if you can find my key.",
+                     :comment => "(lit. 'try to find...')"
+  %p The infinitive may take its own direct objects. Since the infinitives are technically nouns, this is expressed by means of a nominal construct, with the infinitive appearing in the construct state and the direct object immediately following it in the absolute, definite, or partitive state as appropriate. The construct state of all infinitives is identical to the absolute state, even if its surface form would suggest an explicit construct marker.
+  = example_sentence "Αβρακήλ ου ιαρτζή λεακούλ υνακυλλούς̄ λού βεούχιρ.",
+                     "Habrakēl 'ū yarčē le'akūl unakullūš lū be'ūxir.",
+                     "{det}-Abrakēl {3sg.masc.nom.clitic} enjoy-{3sg.masc.pres} of-eat-{inf}-{const} {det}-meal-{pl} {3sg.masc.gen} by-late-{masc.sg}",
+                     "Abrakēl likes to eat his meals late."
+  %p If the direct object is a pronoun, it may be marked either by possessive suffixes or genitive pronouns following the infinitive.
+  = example_sentence "Λω ναββήτετ λιράκαν (λαρρώ λάκαν) ηών.",
+                     "Lā nəbbētet lirākan (larrā lakan) hān.",
+                     "{neg} expect-{1sg.pret} of-see-{inf}-{2pl.masc} (of-{det}-see-{inf} {2pl.masc.gen}) here",
+                     "I didn't expect to see you all here."
+  %p If the infinitive does not have its own direct object (i.e., is not in a construct), it may appear either in the absolute or determinate states. The determinate state is used when the action is somehow specified to refer to a specific timing or manner by means of adverbs; otherwise the absolute state is the default form. When the infinitive has a direct object, this is not an issue, since the infinitive always appears in the construct state.
+  = example_sentence "Τζ' αχσείρ λιδαρούκ.",
+                     "Č 'axsīr lidarūk.",
+                     "{1sg.nom.clitic} want-{1sg.pres} of-go-{inf}",
+                     "I want to go."
+  = example_sentence "Τζ' αχσείρ λαδδαρούκ αππών.",
+                     "Č 'axsīr laddarūk 'əphān.",
+                     "{1sg.nom.clitic} want-{1sg.pres} of-{det}-go-{inf} now",
+                     "I want to go now.",
+                     :comment => "(Determinate)"
+  %p Single adverbs may intervene between the main verb and secondary verb, but generally no more than one word can appear in this position.
+
+= section "Modal Auxiliary Verbs" do
+  %p The modal auxiliaries are a closed set of verbs that are used in conjunction with another verb in the perfective subjunctive to convey some particular modal or aspectual distinction. Verbs in auxiliary position have generally undergone some degree of semantic bleaching; in several cases a single verb may have both a full non-auxiliary form and a bleached auxiliary form, distinguished only by whether it appears in auxiliary position or not. The following overview covers some of the most common auxiliaries.
+  %p Alashian has only one defective auxiliary, the future tense marker #{t "ιλακ", "yilək"}, which only has present tense forms. This is not particularly surprising, however, given its function.
+  = example_sentence "Α αττυν τιλκυ в̄ατούτιρ λαδδίννε;",
+                     "'A 'əthun tilku vatūtir laddinne?",
+                     "{interr} {2pl.masc.nom.clitic} {fut}-{2pl.masc} stay-{2pl.subj.pf} of-{det}-dinner",
+                     "Will you stay for dinner?"
+  %p The auxiliary #{t "в̄άραδ", "varad"} (root *wrīd) indicates possibility, and so is translated “be able” or “can”.
+  = example_sentence "Κάν μιθθακκείλ τα τουρείδ в̄ατήβαλ;",
+                     "Kan miṯṯəkhīl ta tūrīd vatēbal?",
+                     "how_much-{const} {part}-weight {2sg.masc.nom.clitic} be_able-{2sg.masc.pres} carry-{2sg.subj.pf}",
+                     "How much weight can you carry?"
+  = example_sentence "Λω в̄άραδετ αιιούν в̄άζαγζεγ καδ ριήηακ.",
+                     "Lā varadet hayyūn vazagzeg kad riehək.",
+                     "{neg} be_able-{1sg.pret} today play-{1sg.subj.pf} because be_sick-{1sg.impf}",
+                     "I couldn't play today, since I was feeling ill."
+  %p #{t "Β̄άκαλ", "vakal"} (root *wkāl) indicates permission, translated as “may” or “has permission to”. It can also mark weak instructions.
+  = example_sentence "Αττυν τεικώλ в̄ατουτζώ αλλιπαχεί δε ταχσιρού.",
+                     "'Əthun tīkāl vatūčā 'allipaxī de taxsirū.",
+                     "{2pl.masc.nom.clitic} may-{2pl.masc.pres} leave-{2pl.subj.pf} another_time {sub} want-{2pl.masc.pres}",
+                     "You all may leave whenever you want."
+  = example_sentence "Αννώ ει ιμαρεί με λού λω в̄ήκαλ πλε в̄ηννυμών.",
+                     "Hannā 'ī yimarī me lū lā vēkal ple vēnnumān.",
+                     "{det}-Annā {3sg.fem.nom.clitic} {sub} {3sg.masc.gen} {neg} may-{3sg.subj.pf} then be_believed-{3sg.subj.pf}",
+                     "Annā says he cannot be trusted/is not to be trusted."
+  = example_sentence "Ασσαηώ λω ιεικαλεί в̄ήννυφσαδ.",
+                     "Hassahā lā yīkalī vēnnufsad.",
+                     "{det}-time {neg} may-{3sg.fem.pres} be_wasted-{3sg.subj.pf}",
+                     "There is no time to lose!” (lit. 'Time may not be wasted'"
+  %p #{t "Ρατζζή", "rəčhē"} (root *rčhīy) indicates willingness to perform an action. When not being used as an auxiliary, this same verb means “like, enjoy”.
+  = example_sentence "Α τα ταρτζεί в̄ετάτταρ̄φαν λιή;",
+                     "'A ta tarčī vetəthařfan lie?",
+                     "{interr} {2sg.masc.nom.clitic} be_willing-{2sg.masc.pres} wait-{2sg.subj.pf} {1sg.gen}",
+                     "Will you wait for me?"
+  = example_sentence "Τζε λω αρτζεί μακκάδδανατ в̄ακκούν σωρ̄υών.",
+                     "Če lā 'arčī məkhəddanat vəkhūn sāřuon.",
+                     "{1sg.nom.clitic} {neg} be_willing-{1sg.pres} early-{adv} get_up-{1sg.subj.pf} in_the_morning",
+                     "I'm not willing to wake up early in the morning."
+  %p The verb #{t "βού", "bū"} (root *bū'), the same as the non-auxiliary verb meaning “come”, has a few different functions. Most generally, it indicates that an action is occurring in the direction of the speaker (a “ventive”), and so is often translated simply as the adverb “here”. In the first person alone, it may also serve as an autobenefactive, indicating than an action was done for one's own benefit. It can also stand in place of a purpose clause to indicate that an action was done with some sort of future utility in mind.
+  = example_sentence "Βούνα в̄άταχχαδ ηεί ατζζηρώ.",
+                     "Būna vataxxad hī haččērā.",
+                     "come-{2sg.prec} take-{2sg.subj.pf} that-{fem.sg} {det}-chair",
+                     "Bring that chair over here."
+  = example_sentence "Ου ταηαμήδ υεου βού в̄ήκκαυυελ χακκαλεί βνέν.",
+                     "'Ū tahamēd ve'ū bū vēkhəwwel xakkalī bnen.",
+                     "{3sg.masc.nom.clitic} stand-{3sg.masc.pret} and-{3sg.masc.nom.clitic} come-{3sg.masc.pret} speak-{3sg.subj.pf} to-{det}-each-{masc.sg} from-{1pl}",
+                     "He stood up and spoke to each of us."
+  = example_sentence "Τζε βυώτ в̄άγγαρ ρ̄ούδιθ πυκμείς.",
+                     "Če buot vaggar řūdiṯ pukmīs.",
+                     "{1sg.nom.clitic} come-{1sg.pret} buy-{1sg.subj.pf} new-{masc.sg} shirt",
+                     "I bought myself a new shirt."
+  = example_sentence "Νω βιήν в̄άνακνας μιμμή.",
+                     "Nā bien vanaknas mimmē.",
+                     "{1pl.nom.clitic} come-{1pl.impf} gather-{1pl.subj.pf} {part}-water",
+                     "We were stocking up on water.",
+                     :comment => "(lit. 'We were coming and collecting some water [so that...]')"
+  %p The verbs #{t "νατταλή", "nəthalē"} “start” (root *hlīy) and less frequently #{t "ταννήν", "tənnēn"} “stop” (root *tann) often function as auxiliaries, although they needn't necessarily; they may also appear in standard primary/secondary verb constructions with little difference in meaning. Generally speaking, they will be used as auxiliaries if the beginning/end of an action is viewed as distinct from the action above; this contrast is demonstrated in sentences 125 and 126 below.
+  = example_sentence "Ει νατταλαιώ в̄ήττατζλας λενώ δακαρώ ρ̄άδ ανήκδ̄υτ.",
+                     "'Ī nəthalayā vēthəčlas lenā dakarā řad 'anēkḏut.",
+                     "{3sg.fem.nom.clitic} start-{3sg.fem.pret} laugh-{3sg.subj.pf} after remember-{3sg.fem.pret} one-{masc.sg} joke",
+                     "She burst out laughing after remembering some joke."
+  = example_sentence "Ει τιννηνώ φαττού в̄ήκκαυυελ υεου μαδαδώ βιμάτζζαρ.",
+                     "'Ī tinnēnā fəthū vēkhəwwel ve'ū madadā biməčhar.",
+                     "{3sg.fem.nom.clitic} stop-{3sg.fem.pret} suddenly speak-{3sg.subj.pf} and-{3sg.masc.acc.clitic} measure-{3sg.fem.pret} by-glance",
+                     "She suddenly stopped speaking and glared at him."
+  = example_sentence "Αв̄в̄υλήδ ου νατταλή μακκαυυούλ κιυ μακκάδδανατ μιμμύσαδδαρ.",
+                     "Havvulēd 'ū nəthalē məkhəwwūl kyu məkhəddanat mimmusəddar.",
+                     "{det}-infant {3sg.masc.nom.clitic} begin-{3sg.masc.pret} speak-{inf} more early-{adv} {part}-usual-{masc.sg}",
+                     "The baby began speaking earlier than usual.",
+                     :comment => "(secondary verb)"
+  = example_sentence "Ει νατταλαιώ πλέ в̄ήκκαυυελ λενώ σμαηώ ασσέν λών.",
+                     "'Ī nəthalayā ple vēkhəwwel lenā smahā hassen lān.",
+                     "{3sg.fem.nom.clitic} start-{3sg.fem.pret} then speak-{3sg.subj.pf} after hear-{3sg.fem.pret} {det}-name {3sg.fem.gen}",
+                     "She immediately spoke up after hearing her name.",
+                     :comment => "(auxiliary verb)"
+  %p Multiple auxiliary verbs may be combined. As expected, only the first auxiliary independently shows tense information, while any subsequent auxiliaries are subordinate to it and so must appear in the perfective subjunctive.
+  = example_sentence "Ου ιλακ в̄ήριδ в̄ήδρικ ιв̄ε θάλυττετ μηνυώς̄ μετώ χίρυριετ αρρέγλε.",
+                     "'Ū yilək vērid vēdrik 'ive ṯaluttet mēnuoš metā xiruryet harregle.",
+                     "{3sg.masc.nom.clitic} {fut}-{3sg.masc} be_able-{3sg.subj.pf} walk-{3sg.subj.pf} in-{pl} three-{const} month-{pl} after surgery-{const} {det}-leg",
+                     "He'll be able to walk again three months after the leg surgery."
+
+= section "Existentials" do
+  %p Alashian has two types of existentials (“there is/are”): a 'pseudoverb' #{t "είθ", "'īṯ"} used only in the present tense and a specialized use of #{t "в̄εί", "vī"} “be” in all other tenses. Syntactically these two constructions behave slightly differently, given their different origins.
+
+  = section "In the Present Tense" do
+    %p In the present tense, existence is expressed using the pseudoverb #{t "είθ", "'īṯ"} “there is/are”, a frozen form of an older Semitic root *yṯw "be present" that is now otherwise defunct in Alashian. #{t "Είθ", "'īṯ"} in this sense is invariable and typically lives at the beginning of a clause. If in an independent clause, it will typically be preceded by the expletive #{t "δε", "de"} (which reduces to #{t "δ'", "d"} before a vowel, as with #{t "είθ", "'īṯ"}); in dependent clauses, no such deictic element is used.
+    = example_sentence "Δ' είθ ηάκραβ ιв̄ ηού ακκάμβρε.",
+                       "D 'īṯ həkrab 'iv hū hakkambre.",
+                       "{expl} there_is scorpion in that-{masc.sg} {det}-room",
+                       "There is a scorpion in that room."
+    = example_sentence "Ηιήν, αδ̄δ̄εκώ νίστυσαβ βαμμυώδ ασ̄σ̄ιρούττερ δ' είθ.",
+                       "Hien, 'aḏḏekā nistusab bammuod hašširūther d 'īṯ.",
+                       "well, this.{pron}-{masc.sg} turn_out-{3sg.masc.pret} by-{det}-manner {det}-worst {sub} there_is",
+                       "Well, this turned out the worst way possible.",
+                       :comment => "(lit. 'in the worst way that there is')"
+    %p #{t "Είθ", "'īṯ"} can also mean “be present” in all persons, a relic of the particle's origins. When the thing that is present is an actual noun, it behaves identically to #{t "είθ", "'īṯ"} in its existential sense. If the thing that is present is a pronoun, however, then <em>accusative</em> clitics are used, placed before #{t "είθ", "'īṯ"} in independent clauses (displacing <i>de</i>) and after #{t "είθ", "'īṯ"} in dependent clauses.
+    = example_sentence "Δ' είθ ιв̄ ανεκλισ̄ώ τράδετ ηών.",
+                       "D 'īṯ 'iv 'aneklišā tradet hān.",
+                       "{expl} there_is in {det}-church thirty-{const} people",
+                       "There are thirty people present in the church."
+    = example_sentence "Νι είθ ηών.",
+                       "Ni 'īṯ hān.",
+                       "{1sg.acc.clitic} there_is here",
+                       "I am here."
+    = example_sentence "Δε τήβ δ' είθ κα ηών.",
+                       "De tēb d 'īṯ ka hān.",
+                       "{expl} good-{masc.sg} {sub} there_is {2sg.masc.acc.clitic} here",
+                       "It's good that you're here."
+    %p The negation of #{t "είθ", "'īṯ"} is #{t "λήθ", "lēṯ"} “there isn't/aren't”, a contraction of <i>lā 'īṯ</i>. It behaves identically to #{t "είθ", "'īṯ"}.
+    = example_sentence "Δε λήθ ιв̄ αφφερείτζ ήμα υκλώ.",
+                       "De lēṯ 'iv hafferīč 'ēma 'uklā.",
+                       "{expl} there_is_not in {det}-fridge no food",
+                       "There isn't any food in the fridge."
+    = example_sentence "Ουν γλαιού με λήθ νω αιιούν ηαλ αμμωβώδ.",
+                       "'Ūn glayū me lēṯ nā hayyūn hal hammābād.",
+                       "{3pl.nom.clitic} reveal-{3pl.pret} {sub} there_is_not {1pl.acc.clitic} today on {det}-place_of_work",
+                       "They found out that we aren't at work today."
+    = example_sentence "Δε λήθ ηών μιμμώτ.",
+                       "De lēṯ hān mimmāt.",
+                       "{expl} there_is_not here no_one-{acc}",
+                       "There isn't anyone here."
+
+  = section "In Other Tenses" do
+    %p In other tenses, existence is expressed using third person forms of #{t "в̄εί", "vī"} “to be”, conjugated according to tense and agreeing in number with whatever is being marked for existence. Unusually for #{t "в̄εί", "vī"}, the verb typically appears at the very beginning of the clause, and in independent clauses it is usually accompanied by a nominative clitic pronoun. In the past tenses, the strong (non-reduced) third person forms are always used, never the weak (reduced) forms.
+    %p Negation is handled regularly, using #{t "λω", "lā"} or #{t "ελ", "'el"} as appropriate.
+    = example_sentence "Ου λω ηείυε λούχ λαδδαρούκ.",
+                       "'Ū lā hīwe lūx laddarūk.",
+                       "{3sg.masc.nom.clitic} {neg} be-{3sg.masc.impf} reason of-{det}-go-{inf}",
+                       "There wasn't any reason to go."
+    = example_sentence "Ου ιλακ αλλήλ в̄είυε πυώγ.",
+                       "'Ū yilək hallēl vīwe puog.",
+                       "{3sg.masc.nom.clitic} {fut}-{3sg.masc} overnight be-{3sg.subj.pf} frost",
+                       "There will be a frost tonight."
+    = example_sentence "Ου μώρ χιώ με λών в̄είυε πλέ σιλυλλή κραв̄ιήν ηαλ αλλιμήν.",
+                       "'Ū mār xiyā me lān vīwe ple silullē kravien hal hallimēn.",
+                       "{3sg.masc.nom.clitic} say-{3sg.masc.pret} to-{1sg} {sub} {3pl.gen} be-{3pl.subj.pf} then heap-{const.pl} boat-{pl} on {det}-harbor",
+                       "He told me that there were a lot of boats in the harbor."
+    = example_sentence "Ει λω ιυώια αδ ιμνασκιώ ηαλ ηεί ακκαρεί.",
+                       "'Ī lā yiwāya 'ad yimnaskyā hal hī həkharī.",
+                       "{3sg.fem.nom.clitic} {neg} be-{3sg.fem.subj.impf} still high_school on that-{fem.sg} {det}-village",
+                       "There is not yet a high school in that village."
+    %p The “be present” meaning can also be expressed with #{t "в̄εί", "vī"} used in this way. If the thing that was/will be present is a personal pronoun, the third person forms of #{t "в̄εί", "vī"} (again, agreeing in number) will be accompanied by an <em>accusative</em> clitic pronoun with the correct person marking. This unusual agreement pattern is likely caused by influence from the present tense forms.
+    = example_sentence "Νω λω ηείυ ιв̄ ήμα μισσεινυδ̄ιήν.",
+                       "Nā lā hīyu 'iv 'ēma missīnuḏien.",
+                       "{1pl.acc.clitic} {neg} be-{3pl.impf} in any {part}-meeting-{pl}",
+                       "We were not present at any of the meetings."
+    = example_sentence "Α τζι λω ιλκι в̄είυε αμμώρ̄ ιв̄ αππάρτι;",
+                       "'A či lā yilki vīwe hammāř 'iv happarti?",
+                       "{interr} {2sg.fem.acc.clitic} {neg} {fut}-{3sg.fem} be-{3sg.subj.pf} tomorrow in {det}-party",
+                       "You won't be at the party tomorrow?"
+
+  = section "In Possessive Constructions" do
+    %p Straddling the boundary between Semitic- and Indo-European-speaking territory, Alashian has picked up both Semitic 'locative-type' and Indo-European 'have-type' possessive constructions, the former being inherited and the latter being developed under Greek influence.
+    %p 'Locative-type' possession requires the use of an existential in conjunction with the preposition of possession #{t "λι-", "li-"} “of”, so that a sentence such as “I have a book” is expressed as “There is a book of me”. This is the standard construction used in most cases of possession whenever the thing possessed is a tangible object.
+    = example_sentence "Δ' είθ λιή θαττεί αφτούς̄ υερ̄αδώ αχώ.",
+                       "D 'īṯ lie ṯəthī 'aftūš veřadā 'axā.",
+                       "{expl} there_is {1sg.gen} two.{fem}-{const} sister-{pl} and-one-{fem.sg} brother",
+                       "I have two sisters and a brother."
+    = example_sentence "Ου ηείυε Λαιιούριη ριδ̄μυώς βυκαλλή в̄ήν.",
+                       "'Ū hīwe Layyūrie riḏmuos bukallē vēn.",
+                       "{3sg.masc.acc.clitic} be-{3sg.masc.impf} of-{det}-Ayyūrie number-{const} bottle-{const.pl} wine",
+                       "Ayyūrie had a few bottles of wine."
+    = example_sentence "Δ' είθ λού κάλ δε ιαχσείρ.",
+                       "D 'īṯ lū kal de yaxsīr.",
+                       "{2sg.fem.acc.clitic} {neg} {fut}-{3sg.fem} be-{3sg.subj.pf} tomorrow in {det}-party",
+                       "He has everything he wants."
+    %p The negation of a locative-type possessive construction simply entails negating the existential component.
+    = example_sentence "Δε λήθ λού αυτού.",
+                       "De lēṯ lū 'awtū.",
+                       "{expl} there_is_not {3sg.masc.gen} car",
+                       "He does not own a car."
+    %p 'Have-type' possession involves the use of a dedicated verb, specficically <i>ləkhař</i> (root *lkhāř) “have”. It is generally used whenever the possessed object is abstract, as well as in many idiomatic constructs; for instance, it is commonly used with references to food or drink to mean “partake in” (cf. English “have breakfast”, “have a drink”, etc.).
+    = example_sentence "Δίτ νυκλώ λω ιλκαρ̄εί τών.",
+                       "Dit nuklā lā yilkařī tān.",
+                       "this-{fem.sg} {det}-food {neg} have-{3sg.fem.pres} taste",
+                       "This food has no taste."
+    = example_sentence "Γάβρε Νυώλιμπυς ηαλ Τζιπριώ ου ιλκώρ̄ κούριβατ θινεί αλφή μέταρ βιηαλεί.",
+                       "Gabre Nuolimpus de hal Čipriyā 'ū yilkāř kūribat ṯinī 'alfē metər bihalī.",
+                       "mountain-{const} {det}-Olympus {sub} on Cyprus {3sg.masc.nom.clitic} have-{3sg.masc.pres} approaching-{adv} two.{masc}-{const} thousand-{const.pl} by-height",
+                       "Mount Olympos on Cyprus is nearly 2000 meters high.",
+                       :comment => "(lit. 'has 2000 meters in height')"
+    = example_sentence "Ει λακρώ μιв̄в̄ήν ηυν αδδίννε.",
+                       "'Ī ləkrā mivvēn hun haddinne.",
+                       "{3sg.fem.nom.clitic} have-{3sg.fem.pres} {part}-wine with {det}-dinner",
+                       "She had some wine with dinner."
+
+= section "Pronominal Clitics" do
+  %p Alashian has two sets of pronominal clitics, one representing the nominative series of personal pronouns and the other the accusative series. These clitic pronouns are ubiquitous in Alashian; the majority of verbs are accompanied by them, though the rules for when they are used and where they are positioned are somewhat involved.
+  %p It is first necessary to distinguish how clitics are used with verbs in independent clauses versus subordinate clauses.
+
+  = section "In Independent Clauses" do
+    %p In independent clauses, clitics always precede the verb in all forms except in the imperative and precative moods. This normally takes the form of a nominative clitic; only if the direct object of the verb is a pronoun can an accusative clitic displace the nominative one. Only one clitic may be used with a single verb, so if an accusative clitic is used, the nominative clitic will drop entirely.
+    = example_sentence "Τζ' ωηώβ λακκαρού.",
+                       "Č 'āhāb ləkharū.",
+                       "{1sg.masc.nom.clitic} love-{1sg.pres} of-read-{inf}",
+                       "I love reading."
+    = example_sentence "Τζι ωηώβ.",
+                       "Či 'āhāb.",
+                       "{2sg.fem.acc.clitic} love-{1sg.pres}",
+                       "I love you."
+    = example_sentence "Αντούν τζι ιειηώβ.",
+                       "Hantūn či yīhāb.",
+                       "{det}-Antūn {2sg.fem.acc.clitic} love-{3sg.masc.pres}",
+                       "Antūn loves you."
+    %p If there is no direct object, the nominative clitic will always be present, even if the subject of the verb is overt or if it is an emphatic pronoun. This is not true of accusative clitics; if the direct object is a noun phrase, then no accusative clitic can be used.
+    = example_sentence "Ετζεί τζι ωηώβ.",
+                       "'Ečī či 'āhāb.",
+                       "{1sg.nom} {2sg.fem.acc.clitic} love-{1sg.pres}",
+                       "I love you."
+    = example_sentence "Τζ' ωηώβ τζιώ.",
+                       "Č 'āhāb čyā.",
+                       "{1sg.nom.clitic} love-{1sg.pres} {2sg.fem.acc}",
+                       "I love you."
+    %p In the imperative and precative, nominative clitics may never be used. Accusative clitics may be used if the direct object is a pronoun, but in this case they always follow the verb, never precede it.
+    = example_sentence "Μώρ ου χιώ!",
+                       "Mār 'ū xiyā!",
+                       "say-{2sg.masc.imper} {3sg.masc.acc.clitic} to-{1sg}",
+                       "Tell me it!"
+    = example_sentence "Ελ ρ̄αβώτ νι!",
+                       "'El řabāt ni!",
+                       "{neg} hit-{2sg.masc.imper} {1sg.acc.clitic}",
+                       "Don't hit me!"
+    %p If the verb is negated, nominative clitics become optional; if they are used, they come before the negation particle. Accusative clitics may continue to be used, but they always come after the verb.
+    = example_sentence "Λω ρώ ου.",
+                       "Lā rā 'ū.",
+                       "{neg} see-{3sg.masc.pret} {3sg.masc.acc.clitic}",
+                       "He didn't see it."
+    = example_sentence "[Τζε] λω ακβώλ!",
+                       "[Če] lā 'əkbāl!",
+                       "[{1sg.nom.clitic}] {neg} agree-{1sg.pres}",
+                       "I don't agree!"
+    %p If the direct object of the verb is an animate noun phrase marked with #{t "τα", "ta"} (discussed in the next chapter), accusative clitics will be used instead of nominative clitics, the only time the accusative is allowed to be doubly marked.
+    = example_sentence "Ει ναττάχαδετ άμυς τ' Αννώ.",
+                       "'Ī nəthaxadet 'amus t Hannā.",
+                       "{3sg.fem.acc.clitic} meet_up-{1sg.pret} yesterday {acc} {det}-Annā",
+                       "I met Annā yesterday."
+    = example_sentence "Β̄ασσήν ουν τα νεσκιών λάκ.",
+                       "Vəssēn 'ūn ta neskyān lak.",
+                       "part_ways_for_the_night-{2sg.masc.imper} {3pl.acc.clitic} {acc} {det}-friend.{pl} {2sg.masc.gen}",
+                       "Say good night to your friends."
+
+  = section "In Subordinate Clauses" do
+    %p In subordinate clauses nominative clitics may not be used at all. In situations where a nominative clitic would be used in an independent clause, the verb will appear unaccompanied by pronominal clitics in subordinate clauses.
+    = example_sentence "Ει σωλώ ήκα δ' αδούν.",
+                       "'Ī sālā 'ēka d 'adūn.",
+                       "{3sg.fem.nom.clitic} ask-{3sg.fem.pret} where {sub} dwell-{1sg.pres}",
+                       "She asked where I live."
+    = example_sentence "Ου ιερ̄σώβ με ιαχσείρια λαв̄в̄ατζού.",
+                       "'Ū yeřsāb me yaxsīriya lavvačū.",
+                       "{3sg.masc.nom.clitic} think-{3sg.masc.pres} {sub} want-{3sg.fem.subj.impf} of-{det}-leave-{inf}",
+                       "He thinks she wants to leave."
+    %p Accusative clitics will always follow the verb.
+    = example_sentence "Τζ' ηδώ με ρώττα ει.",
+                       "Č 'ēdā me rātha 'ī.",
+                       "{1sg.nom.clitic} know-{1sg.pres} {sub} see-{2sg.masc.pret} {3sg.fem.acc.clitic}",
+                       "I know that you saw her."
+    = example_sentence "Ηώβ αδ̄δ̄εκώ χεαλλιμιή δε ιμαιιήδ ου.",
+                       "Hāb 'aḏḏekā xe'allimie de yiməyyēd 'ū.",
+                       "give-{2sg.masc.imper} this.{pron}-{masc.sg} to-anyone_else {sub} need-{3sg.masc.pres} {3sg.masc.acc.clitic}",
+                       "Give this to whoever needs it."
+
+  = section "In Complex Verbal Constructs" do
+    %p Nominative clitics in two-verb constructs are regular, always appearing in front of the entire verbal construct.
+    = example_sentence "Τζ' αχσείρ λιв̄ασούν.",
+                       "Č 'axsīr livasūn.",
+                       "{1sg.nom.clitic} want-{1sg.pres} of-sleep-{inf}",
+                       "I want to sleep."
+    = example_sentence "Ει ιαχσιρεί в̄ηρρώ μώτ δε κάταв̄τα.",
+                       "'Ī yaxsirī vērrā māt de katavta.",
+                       "{3sg.fem.nom.clitic} want-{3sg.fem.pres} see-{3sg.subj.pf} what-{acc} {sub} write-{2sg.masc.pret}",
+                       "She would like to see what you wrote."
+    %p Accusative clitics are not used in secondary verb constructions; these indicate direct objects using genitive formations.
+    = example_sentence "Αττασώδ χιώ βαττών λού.",
+                       "'Əthasād xiyā battān lū.",
+                       "help_with-{2sg.masc.imper} to-{1sg} by-{det}-finish-{inf} {3sg.masc.gen}",
+                       "Help me finish it."
+    %p In auxiliary verb constructions, accusative clitics are either placed before the auxiliary verb or after the main verb, according to the normal rules.
+    = example_sentence "Αφφύρνυς λω ιννυφφώλ. Α ου τουρείδ в̄ετείαιιες̄;",
+                       "Haffurnus lā yinnuffāl. 'A 'ū tūrīd vetīyəyyeš?",
+                       "{det}-furnace {neg} be_turned_on-{3sg.masc.pres}. {interr} {3sg.masc.nom.clitic} be_able-{2sg.masc.pret} repair-{2sg.subj.pf}",
+                       "The furnace isn't working. Can you fix it?"
+    %p Perfect verbs are more complicated, given their syntactically impersonal nature. Nominative clitics are never used with perfects to mark subjects, but direct object marking is more complex. In standard Alashian direct objects are marked an accusative clitic that is typically placed before the verb (but after the genitive-marked subject), though this moves after the verb if a negative particle is present. However, in some dialects as well as in older texts, the direct object is instead marked with <em>nominative</em> clitics, a trait also found in some idioms even in the standard language. Another common dialectal variation involves always using postverbal clitics, even in positive sentences. In general, the use of clitics with perfect verbs is highly variable across dialects.
+    = example_sentence "Α λάκ ει в̄άταλκιν πλέ;",
+                       "'A lak 'ī vatalkin ple?",
+                       "{interr} {2sg.masc.gen} {3sg.fem.acc.clitic} kiss-{2sg.subj.pf} then",
+                       "Have you kissed her?"
+    = example_sentence "Λάν λω в̄άναταν ου πλέ άδ.",
+                       "Lan lā vanatan 'ū ple 'ad.",
+                       "{1pl.gen} {neg} finish-{1pl.subj.pf} {3sg.masc.acc.clitic} then yet",
+                       "We haven't yet finished it."
+    = example_sentence "Υή λού νι в̄ήκκιρ πλέ αδ ιανδε ρώτ ου.",
+                       "Wē lū ni vēkhir ple 'ad yande rāt 'ū.",
+                       "be-{3sg.masc.impf} {3sg.masc.gen} {1sg.acc.clitic} recognize-{3sg.subj.pf} then until when see-{1sg.pret} {3sg.masc.acc.clitic}",
+                       "He had recognized me before I saw him."
+
+= section "Valency" do
+  %p Verbs in Alashian can take between zero and three arguments.
+  %p Impersonal (avalent) verbs in Alashian consist of two types: structurally-impersonal verbs and impersonal passives. The structurally-impersonal group consists of verbs that are inherently incapable of taking any arguments, such as various weather phenomena, (“It is raining”, “It is snowing”), statements of time (“It is Monday”, “It is 9:00”), and headless adjectives or adverbs (“It is cold”, “It is hot”, “It is impossible [that]” “Hopefully”). Impersonal passives refer the use of passive verbs with no explicit subject to imply a general agent (“It is thought that...”, “It is asked that...”, “It is disputed that...”).
+  %p All impersonal verbs in independent clauses must be preceded by the syntactic expletive #{t "δε", "de"} (or #{t "δ'", "d"} before a vowel), which serves as a dummy subject and occupies the position that a nominative clitic normally would. As with pronominal clitics, however, in subordinate clauses this expletive will not be present.
+  = example_sentence "Δε αττείσσα ηυν φαλγώ σωρ̄υών.",
+                     "De hattīssa hun falgā sāřuon.",
+                     "{expl} {det}-nine with half-{3sg.fem} in_the_morning",
+                     "It's 9:30 in the morning."
+  = example_sentence "Δε περ-τζείλ ιв̄ αφφιτών υετζε μέιιεδ αμμώτταλв̄ας βιπυλυώв̄ερ.",
+                     "De per-čīl 'iv haffitān veče meyyed hammāthalvas bipuluover.",
+                     "{expl} over-cold-{masc.sg} in {det}-interior and-{1sg.nom.clitic} need-{1sg.impf} {det}-dress_oneself-{inf} by-sweater",
+                     "It's too cold inside; I had to put on a sweater."
+  = example_sentence "Δε ιννυμών με δηνού ναλασκιήν ηαλ Σουριώ αμμυδερνιώ αδ αμμωστουθώβ ηαλ Τζιπριώ.",
+                     "De yinnumān me dēnū nalaskyēn hal Sūryā hammuderniyā 'ad hammāstūṯāb hal Čipriyā.",
+                     "{expl} be_believed-{3sg.masc.pres} {sub} dwell-{3pl.impf} {det}-Alashian-{masc.pl} on Syria {det}-modern-{fem.sg} until {det}-resettle-{inf} on Cyprus",
+                     "It is believed that the Alashians lived in modern Syria before migrating to Cyprus."
+  = example_sentence "Ου μώρ χιώ με βιτζεινείς λίκ в̄ημματτώρ ουχρού.",
+                     "'Ū mār xiyā me bičīnīs lik vēmməthār 'ūxrū.",
+                     "{3sg.masc.nom.clitic} say-{3sg.masc.pret} to-{1sg} {sub} by-certainty so_that rain-{3sg.subj.pf} later",
+                     "He told me that it's supposed to rain later."
+  %p Intransitive (monovalent) verbs consist of intransitive active verbs, passive verbs, and reflexives/reciprocals. These verbs have a subject, but are incapable of taking a direct object (even if, as in the case of reflexives and reciprocals, there is clearly a logical patient). Transitivity in Alashian is a structural feature; it is inherent in individual verbs, and a transitive verb generally cannot be made intransitive or vice versa without first modifying the verb's morphology. Notice below, for instance, how the transitive and intransitive senses of the English verb “break” are expressed using two different verbs in Alashian.
+  = example_sentence "Υή λικάλ άρ̄αδ в̄ήννυλв̄ας πλέ βατζζαλυννώ.",
+                     "Wē likal 'ařad vēnnulvas ple bəčhalunnā.",
+                     "be-{3sg.masc.impf} of-all-{masc.sg} one-{masc.sg} be_dressed-{3sg.subj.pf} then by-black-{fem.sg}",
+                     "Everyone was dressed in black.",
+                     :comment => "(lit. 'had been dressed')"
+  = example_sentence "Τηβιήν εσκιών ουν ιαστωδού.",
+                     "Tēbien 'eskyān 'ūn yastādū.",
+                     "good-{masc.pl} friend-{pl} {3pl.nom.clitic} help_each_other-{3pl.pres}",
+                     "Good friends help each other."
+  = example_sentence "Αδδαλλούν ου νάτταφαρ.",
+                     "Haddallūn 'ū nəthafar.",
+                     "{det}-window {3sg.masc.nom.clitic} shatter-{3sg.masc.pret}",
+                     "The window broke.",
+                     :comment => "(Intransitive)"
+  = example_sentence "Νάννε δε αв̄в̄ούδ ραμή ει ιφφηρώ αδδαλλούν.",
+                     "Nanne de havvūd ramē 'ī 'iffērā haddallūn.",
+                     "{det}-rock {sub} {det}-boy throw-{3sg.masc.pret} {3sg.fem.nom.clitic} shatter-{3sg.fem.pret} {det}-window",
+                     "The rock that the boy threw broke the window.",
+                     :comment => "(Transitive)"
+  %p Transitive (bivalent) verbs are generally active-voice verbs that require both a subject and direct object. There are also a sizable number of 'pseudo-transitive' verbs that require a subject and a prepositional phrase governed by a particular preposition inherent to the verb, typically one of the clitics #{t "βι-", "bi-"} “by, with”, #{t "λι-", "li-"} “of, for”, or #{t "χι-", "xi-"} “to”. Pseudo-transitive verbs have much in common with true transitives, and often the prepositional phrase may be replaced by an accusative pronoun, suggesting that it is in fact perceived as a direct object.
+  = example_sentence "Σγώρνα αδδώλ.",
+                     "Sgārna haddāl.",
+                     "close-{2sg.masc.prec} {det}-door",
+                     "Could you shut the door?"
+  = example_sentence "Κ' αβαρρήκ!",
+                     "K 'abərrēk!",
+                     "{2sg.masc.acc.clitic} wish_well-{1sg.pres}",
+                     "I wish you well!"
+  = example_sentence "Τζε σιήηεδ̄ Χασσυφκιώ. / Ει σιήηεδ̄.",
+                     "Če sieheḏ Xassufkyā. / 'Ī sieheḏ.",
+                     "{1sg.nom.clitic} help-{1sg.impf} to-{det}-Assufkyā / {3sg.fem.acc.clitic} help-{1sg.impf}",
+                     "I was helping Assufkyā. / I was helping her.",
+                     :comment => "(with xi-)"
+  = example_sentence "Τζ' ακβώλ βιμώτ δε μώρτα. / Ου ακβώλ.",
+                     "Č 'əkbāl bimāt de mārta. / 'Ū 'əkbāl.",
+                     "{1sg.nom.clitic} agree-{1sg.pres} by-what-{acc} {sub} say-{2sg.masc.pret} / {3sg.masc.acc.clitic} agree-{1sg.pres}",
+                     "I agree with what you said. / I agree with it.",
+                     :comment => "(with bi-)"
+  %p Trivalent verbs take a subject, direct object, and indirect object, the last of which is introduced by one of the same prepositions as above. This group includes a number of primitive verbs mostly dealing with social interaction (“give”, “say”) as well as causatives derived from transitive bases.
+  = example_sentence "Ηώβ χιώ αππαττατζζιήν δε ηαλ ατταв̄λώ.",
+                     "Hāb xiyā happəthaččien de hal hattavlā.",
+                     "give-{2sg.masc.imper} to-{1sg} {det}-ticket-{pl} {sub} on {det}-table",
+                     "Give me the tickets on the table."
+  = example_sentence "Ου μάλαλ χιώ в̄ήγγαρ ασώ.",
+                     "'Ū malal xiyā vēggar 'asā.",
+                     "{3sg.masc.nom.clitic} promise-{3sg.masc.pret} to-{1sg} repay-{3sg.subj.pf} soon",
+                     "He promised that he will repay me soon."
+  = example_sentence "Λάκ в̄ατώηακελ ακκούβ βατζζιββυννιήν;",
+                     "Lak vatāhakel hakkūb baččibbunnien?",
+                     "{2sg.masc.gen} feed-{2sg.subj.pf} {det}-dog by-{det}-morsel-{pl}",
+                     "Have you fed the dog the scraps?",
+                     :comment => "(with bi-)"
+  %p Valency switching is typically done morphologically, but not always. For instance, a number of transitive verbs (sometimes referred to as 'ambitransitive') can be used intransitively simply by not expressing a direct object (see “read” below); this is sometimes simply considered an implied object, however.
+  = example_sentence "Ουν ιπεραθειρού καρού ιв̄ αв̄в̄ιв̄λιυθείκε.",
+                     "'Ūn yiperaṯīrū karū 'iv havvivliyuṯīke.",
+                     "{3pl.nom.clitic} prefer-{3pl.pres} read-{inf} in {det}-library.",
+                     "They prefer to read in the library."
+  = example_sentence "Αννειτζώ ρατζζιώ λιπαλούκ.",
+                     "Hannīčā rəčhiyā lipalūk.",
+                     "{det}-Annīčā like-{3sg.fem.pres} of-knit-{inf}",
+                     "Annīčā likes to knit."
+  %p Passive verbs, which are usually all monovalent, can also be made transitive in one particular construction: the so-called 'internal object', where a verb is paired with a cognate verbal noun (see next section).
+  = example_sentence "Τζε ρ̄άλανετ άμυς ληλυών κέσεν ρ̄αλούν.",
+                     "Če řalanet 'amus lēluon kesen řalūn.",
+                     "{1sg.nom.clitic} dream-{1sg.pret} yesterday at_night strange-{masc.sg} dream",
+                     "I dreamt a strange dream last night."
+
+= section "Non-Finite Forms" do
+  %p Alashian verbs have two types of non-finite forms: the participles (or verbal adjectives) and infinitives (or verbal nouns).
+  %p All verbs have at least one participle, with <i>katab</i> (Active Scale I) having two. In <i>katab</i>, the two participles have present active and past passive meaning, while the passive participle of <i>nuktāb</i> always has present passive meaning. In other active scales, the participle has present active meaning, while in other passive scales, the semantics are a little more complicated: the participle can have either present passive or past passive senses, generally depending on the semantics of the verb in question and on context, although a past passive sense tends to be more common.
+  %p Alashian participles behave just like any other adjectives. They typically cannot take their own arguments, so complex participial phrases do not exist in Alashian; relative clauses must be used instead.
+  = example_sentence "Ελ ακκήν в̄ούσιν διήβ.",
+                     "'El 'əkhēn vūsin dieb.",
+                     "{neg} awaken-{masc.sg.imper} sleep-{pres.act.ptcpl}-{masc.sg} wolf",
+                     "Don't wake a sleeping wolf."
+  = example_sentence "Αδρουτζιβιήν αμμυιαχχαριήν ουν ιατταβρ̄αθού.",
+                     "Hadrūčibien hammuyəxxarien 'ūn yəthabřaṯū.",
+                     "{det}-passenger-{pl} {det}-be_delayed-{pres.pass.ptcpl}-{pl} {3pl.nom.clitic} become_upset-{3pl.pres}",
+                     "The delayed passengers are getting upset."
+  = example_sentence "Αστυριούς̄ δε νυαμωρού άμυς ουν νατσουρού.",
+                     "Hasturyūš de nu'amārū 'amus 'ūn nətshūrū.",
+                     "{det}-story-{pl} {sub} be_said-{3pl.pret} yesterday {3pl.nom.clitic} be_imagined-{3pl.pret}",
+                     "The stories told yesterday were made up.",
+                     :comment => "(relative clause)"
+  %p Alashian infinitives, similarly, are true nouns; they cannot have subjects or direct objects except in the form of genitival relationships, and can appear in the absolute, determinate, and construct states (though the absolute and construct states are always identical in form). As abstract mass nouns, however, they have no number contrast. They may serve as both the subject and direct object of other verbs, although in direct object position they will often have to be preceded by various lexically-determined prepositions (see section 19.8 above).
+  = example_sentence "Μωφσήδ υνυκλώ αδ̄δ̄εκώ ρώχ.",
+                     "Māfsēd 'unuklā 'aḏḏekā rāx.",
+                     "waste-{inf}-{const} {det}-food this.{pron}-{masc.sg} bad-{masc.sg}",
+                     "Wasting food is bad."
+  = example_sentence "Λού παχεί в̄ησ̄νώ πλέ λιμασαλλούν αμμιστικυωνιήν.",
+                     "Lū paxī vēšnā limasəllūn hammistikuonien.",
+                     "{3sg.masc.gen} always hate-{3sg.subj.pf} of-preserve-{inf}-{const} {det}-secret-{pl}",
+                     "He has always hated keeping secrets."
+  %p Infinitives may be modified by adjectives, which are often translated to English as adverbs.
+  = example_sentence "Αμμαλλακκών νάγδαν λω ιλακ в̄ήββαδ μαζμώ.",
+                     "Hammalləkhān nəgdan lā yilək vēnnubād mazmā.",
+                     "{det}-be_kissed-{inf} {det}-first-{masc.sg} {neg} {fut}-{3sg.masc} be_forgotten-{3sg.subj.pf} never",
+                     "You never forget the first time you got kissed.” (lit. 'The first being-kissed will never be forgotten'"
+  = example_sentence "Τα τιλακ в̄ετίστακραβ αδών κιυ ασώ βατταρούδ κιυ τούριδ.",
+                     "Ta vetistəkrab 'adān kyu 'asā bətharūd kyu tūrid.",
+                     "{2sg.masc.nom.clitic} reach-{2sg.subj.pf} to_there more soon by-run-{inf} more fast-{masc.sg}",
+                     "You'll get there sooner by running faster."
+  %p Infinitives are also employed in the internal object construction, where the infinitive of a verb is used as the direct object of the same verb, always without the intervention of prepositions, in order to make the meaning of the verb more emphatic. This can be done in theory with any verb, even ones that are normally intransitive. It is, however, somewhat of a marked construction that is not particularly common in colloquial speech outside of idioms.
+  = example_sentence "Ου ιλακ в̄ήτταπραν μώτταπραν.",
+                     "'Ū yilək vēthəpran māthəpran.",
+                     "{3sg.masc.nom.clitic} {fut}-{3sg.masc} recover-{3sg.subj.pf} recover-{inf}",
+                     "He will certainly recover.” (lit. 'recover a recovering'"
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) See section 19.8 for when to use an infinitive with such verbs and when to use a purpositive clause.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
