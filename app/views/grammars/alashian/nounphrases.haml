@@ -1,0 +1,830 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Φερασσιήν Ηυνε Υωνυμιήν".html_safe
+
+= render :partial => 'navigation'
+
+= section "The Structure of the Noun Phrase" do
+  %p The Alashian verb phrase has the following overall structure:
+  %p.pattern [demonstrative] [quantifier] [adjective(s)] [noun] [genitive phrase] [adjective(s)]
+  %p Proto-Semitic appears to have been fairly strongly head-initial, as are most of Alashian's closer relatives. However, modern Alashian has a decidedly mixed structure, with demonstratives and quantifiers preceding the noun and genitive phrases following it; adjectives may come either before or after the noun, depending on its state.
+
+= section "State" do
+  = section "Construct State" do
+    %p The construct state marks the head of a genitive construction. Construct forms historically appear to be variants of non-construct forms that appeared due to the different stress pattern of genitive constructions versus the noun in isolation elsewhere; in genitive constructions the stress pattern of the head and modifiers tend to become more closely connected, which over time can result in divergent phonetic development.
+    %p In modern Alashian, the construct serves two primary purposes: to form 'compounds' (i.e., tightly-bound endocentric or exocentric noun-noun compounds with distinct lexical meaning) and to form possessor-possessee constructions with <em>inanimate</em> heads.
+    %p Construct 'compounds' are similar to noun-noun compounds in Indo-European languages. The head appears in the construct state, followed by the modifier in either the absolute or determinate states. These compounds are pluralized by pluralizing the head (e.g., <i>yūbil hān</i> “bus” (lit. “carrier of people”) → <i>yūbilē hān</i> “buses” (lit. “carriers of people”)), although in casual usage it is not uncommon for some more frequent compounds to be treated as though they were a single word (e.g., <i>yūbilannien</i> “buses”, as though the singular were <i>yūbilān</i>).
+    = example_sentence "Δε λήθ λιή δ̄ίπλυμετ δραιв̄ήρ.",
+                       "De lēṯ lie ḏiplumet drayvēr.",
+                       "{expl} there_is_not {1sg.gen} certificate-{const} driver",
+                       "I do not have a driver's license."
+    = example_sentence "Ήκα βήτ αμμεδινώ;",
+                       "'Ēka bēt hammedinā?",
+                       "where house-{const} {det}-city",
+                       "Where is city hall?"
+    = example_sentence "Ου ιαττών θινεί μασκιββή в̄ούδ.",
+                       "'Ū yəthān ṯinī maskibbē vūd.",
+                       "{3sg.masc.nom.clitic} sell-{3sg.masc.pres} two.{masc}-{const} bed-{const.pl} child",
+                       "He's selling two children's beds."
+    %p Constructs are also the standard means of expressing looser genitive relationships whenever the possessor is non-human. Constructs with an animate possessor can be seen in archaic language (particularly in the Bible), but such phrases that are still in common usage tend to be viewed more as compounds nowadays than as possessor-possessee constructions.
+    = example_sentence "Ατζζών αννουνώ αδ̄δ̄ιτζεί ζδαν λαττιφυώς̄.",
+                       "Həčhān hannūnā 'aḏḏičī zdan ləthifuoš.",
+                       "bone.{pl}-{const} {det}-fish these-{fem.pl.pron} very small-{fem.pl}",
+                       "The fish's bones are very small."
+    = example_sentence "Τών δίτ ακκαφφή αδ̄δ̄εκώ ζδαν μώρ.",
+                       "Tān hakkaffē dit 'aḏḏekā zdan mār.",
+                       "taste-{const} {det}-coffee this-{fem.sg} this-{masc.sg.pron} very bitter-{masc.sg}",
+                       "This coffee tastes very bitter.",
+                       :comment => "(lit. 'The taste of this coffee is...')"
+    = example_sentence "Δ' είθ λού σιλυλλή в̄αηυββούτ Ιλλώ.",
+                       "D 'īṯ lū silullē vahubbūt 'Illā.",
+                       "{expl} there_is {3sg.masc.gen} heap-{const.pl} gift-{const.pl} God",
+                       "He has many talents.” (lit. 'God's gifts'"
+    %p Multiple constructs may be chained together to create complex genitive phrases, in which cases all nouns other than the last one appear in the construct state.
+    = example_sentence "Μέγαρυν Πρεζίδεντ Αδδιμυκρατκιώ Ατζζιπριώ ιαστακρώβ ιв̄ τζέδρ Αλλιδρώ.",
+                       "Megarun Prezident Haddimukratkyā Haččipriyā yastəkrāb 'iv čedr Hallidrā.",
+                       "mansion-{const} president-{const} {det}-republic {det}-Cypriot-{fem.sg} be_near-{3sg.masc.pres} in center-{const} {det}-Nicosia",
+                       "The Presidential Palace of the Republic of Cyprus is located near the center of Nicosia."
+    %p If the head is a compound noun phrase (conjoined with #{t "υε-", "ve-"} “and”), only the last noun will appear in the construct state; all others will be in the absolute state, even if the construct as a whole is definite.
+    = example_sentence "Ρωσούς υετζής αφφίλμε αδ̄ήλεκ в̄ιού πυλεί καλειττεριήν μιμμυννούταρ.",
+                       "Rāsūs večēs haffilme 'aḏēlek vyū pulī kalītherien mimmunnūtar.",
+                       "beginning and-end-{const} {det}-film these-{pl.pron} be-{3pl.pret} much better-{masc.pl} {part}-remaining-{masc.sg}",
+                       "The beginning and end of the film were much better than the rest of it."
+    = example_sentence "Τζ' άγαρετ ταв̄λώ υετζηρούτ μαακώλ ρ̄ουδιθυώς̄.",
+                       "Č 'agaret tavlā večērūt ma'akāl řūdiṯuoš.",
+                       "{1sg.nom.clitic} buy-{1sg.pret} table and-chair-{const.pl} dining_room new-{fem.pl}",
+                       "I bought a new dining room table and chairs."
+    %p Note that if the construct noun ends in a short vowel and the following word begins with either a vowel or the definite prefix <i>ha-</i>, the short vowel will drop: #{t "τζέδρε", "čedre"} “center” → #{t "τζέδρε μεδινώ", "čedre medinā"} “center of a city” → #{t "τζέδρ αμμεδινώ", "čedr (h)ammedinā"} “center of the city”.
+
+  = section "Determinate State" do
+    %p The determinate state marks a noun as being definite. It can appear in any syntactic role other than the head of a genitive construction.
+    = example_sentence "Ήκα ατταχιδρυμιώ ακκαρυββώ;",
+                       "'Ēka hattaxidrumyā həkharubbā?",
+                       "where {det}-post_office {det}-close-{fem.sg}",
+                       "Where is the nearest post office?"
+    = example_sentence "Α τα τειδώ ασσέντε βήτα;",
+                       "'A ta tīdā hassente bēta?",
+                       "{interr} {2sg.masc.nom.clitic} {det}-way homeward",
+                       "Do you know the way home?"
+    = example_sentence "Δ' είθ ιв̄ αδδώς εδδώβ υεχαρώ ζυών.",
+                       "D 'īṯ 'iv haddās 'eddāb vexarā zuon.",
+                       "{expl} there_is in {det}-forest wolf.{pl} and-other-{fem.sg} animal.{pl}",
+                       "There are wolves and other animals in the woods."
+    %p When a noun in the determinate state follows a noun in the construct state, the entire construct is made definite.
+    = example_sentence "Τζ' άτταρ̄φαν λιιούβιλ υνών.",
+                       "Č 'əthařfan liyūbil 'unān.",
+                       "{1sg.nom.clitic} wait-{1sg.pres} of-carrier-{const} {det}-people",
+                       "I'm waiting for the bus."
+    = example_sentence "Α τα τειδώ ριδ̄μυώς τελεφούν αππανεπεστείμ;",
+                       "'A ta tīdā riḏmuos telefūn happanepestīm?",
+                       "{interr} {2sg.masc.nom.clitic} know-{2sg.masc.pres} number-{const} telephone-{const} {det}-university",
+                       "Do you know the university's telephone number?"
+    = example_sentence "Αββυιώ ει ιαττουτζατζεί ιτ τζέλλετ ατταв̄λώ.",
+                       "Habbuyā 'ī yəthūčačī 'it čellet hattavlā.",
+                       "{det}-paint {3sg.fem.nom.clitic} come_off-{3sg.fem.pres} from side-{const} {det}-table",
+                       "The paint is coming off the side of the table."
+    %p The determinate prefix <i>ha-</i> becomes <i>n-</i> when the nominal stem begins with /ʔ/ or /h/. However, this <i>n-</i> becomes <i>'un-</i> when following a noun in the construct state that ends in a consonant or a phrasal/nominal preposition ending in a consonant, or <i>'an-</i> when following a primitive preposition ending in a consonant.
+    = example_sentence "Νήν λιή ει ιακκαβεί.",
+                       "Nēn lie 'ī yəkhabī.",
+                       "{det}-eye {1sg.gen} {3sg.fem.nom.clitic} hurt-{3sg.fem.pres}",
+                       "My eye hurts."
+    = example_sentence "Ου νίστυσαβ βιτέντεν υνήν.",
+                       "'U nistusab bitenten 'unēn.",
+                       "{3sg.masc.nom.clitic} happen-{3sg.masc.pret} by-blink-{const} {det}-eye",
+                       "It happened in the blink of an eye."
+    = example_sentence "Μώρ ου ιв̄ ανήν λιή!",
+                       "Mār 'ū 'iv 'anēn lie!",
+                       "say-{2sg.masc.imper} {3sg.masc.acc.clitic} in {det}-eye {1sg.gen}",
+                       "Say it to my face! (lit. 'in my eye')"
+    %p After the clitic prepositions #{t "λι-", "li-"}, #{t "βι-", "bi-"}, and #{t "χι-", "xi-"}, the prefix <i>ha-</i> becomes <i>-a-</i> and <i>n-</i> becomes <i>-an-</i>.
+    = example_sentence "Ηώβ δή αμμίκταβ χαττουλαδεί λιή.",
+                       "Hāb dē hammiktab xattūladī lie.",
+                       "give-{2sg.masc.imper} this-{masc.sg} {det}-letter to-{det}-parent-{pl} {1sg.gen}",
+                       "Give this letter to my parents."
+    = example_sentence "Ου καταστρεφώ βανής ναπυώδ̄ικσε.",
+                       "'Ū katastrefā banēs napuoḏikse.",
+                       "{3sg.masc.nom.clitic} destroy-{3sg.masc.pret} by-{det}-fire {det}-evidence",
+                       "He destroyed the evidence in the fire."
+    %p All proper nouns are considered to be in the determinate state, even if it is not explicitly marked with the determinate prefix <i>ha-</i>/<i>n-</i>. Personal names are always marked, hence why nearly all Alashian names appear to begin with <i>(h)a-</i>. If both a first name and last name are given, the determinate prefix is only added to the first word.
+    = example_sentence "Α λιμιμμώ в̄ηρώ πλέ τ' Αμμαριανώ;",
+                       "'A limimmā vērā ple t Hammaryanā?",
+                       "{interr} of-anyone see-{3sg.subj.pf} then {acc} {det}-Ammaryanā",
+                       "Has anyone seen Ammaryanā?"
+    = example_sentence "Τζ' αλμώδ βισκυλιώ είρυ Ασσέρ Άιζακ Νιούτυν.",
+                       "Č 'almād biskulyā 'īru Hasser 'Ayzak Nyūtun.",
+                       "{1sg.nom.clitic} learn-{1sg.pres} by-school about {det}-[Sir Isaac Newton]",
+                       "I'm learning about Sir Isaac Newton at school."
+    %p Country names, although always determinate, are usually not marked in standard Alashian, although in colloquial/dialectal usage they often are. However, if the country name follows a noun in the construct state, it will always appear explicitly marked.
+    = example_sentence "Πρεζίδεντ Ατζζιπριώ ιλακ в̄ησείνυδ̄α τε Πρυθιπυργυώς Αμμαλτζείς Αμμυιαρ̄αδώ.",
+                       "Prezident Haččipriyā yilək vēsīnuḏa te Pruṯipurguos Hammalčīs Hammuyəřadā.",
+                       "president-{const} {det}-Cyprus {fut}-{3sg.masc} meet-{3sg.subj.pf} {acc} prime_minister-{const} {det}-kingdom {det}-be_united-{ptcpl}-{fem.sg}",
+                       "The President of Cyprus will meet with the Prime Minister of the United Kingdom."
+    %p Generic nouns, and especially generic abstract nouns, usually appear in the determinate state, whereas in English they will be indefinite.
+    = example_sentence "Τζ' ωηώβ αππαραλιούς̄.",
+                       "Č 'āhāb happaralyūš.",
+                       "{1sg.nom.clitic} love-{1sg.pres} {det}-beach-{pl}",
+                       "I love beaches.",
+                       :comment => "(lit. 'the beaches')"
+    = example_sentence "Ου ηαυή ναηούβ ιτ αμμάτζζαρ νάγδαν.",
+                       "'Ū hawē nahūb 'it hamməčhar nəgdan.",
+                       "{3sg.masc.nom.clitic} be-{3sg.masc.pret} {det}-love-{inf} since {det}-view {det}-first-{masc.sg}",
+                       "It was love at first sight.",
+                       :comment => "(lit. 'the love')"
+    = example_sentence "Αππυλειτικανιήν ουν λω ιννυμωνούνα.",
+                       "Happulītikanien 'ūn lā yinnumānūna.",
+                       "{det}-politician-{pl} {3pl.nom.clitic} {neg} be_believed-{3pl.vol}",
+                       "Politicians should not be trusted.",
+                       :comment => "(lit. 'the politicians')"
+
+  = section "Partitive State" do
+    %p The partitive state is unique to Alashian, not found in the other Semitic languages. It ultimately derives from the Old Alashian preposition <i>min</i> “from” (Proto-Semitic *minay-), which cliticized to the following word<sup>1</sup> and eventually was reanalyzed as a prefix rather than a preposition. It serves a number of different functions.
+    %p By itself, the partitive state indicates a partial or indefinite quantity, usually translated as “some”. This meaning is most often seen on direct objects or in existential expressions; subjects in the bare partitive state are quite rare, instead employing a construct with <i>riḏmuos</i> “a number of”.
+    = example_sentence "Τζ' άκαλετ μισσαρυσουππώ λιφάλγ αιιούν.",
+                       "Č 'akalet missarusūphā lifalg hayyūn.",
+                       "{1sg.nom.clitic} eat-{1sg.pret} {part}-fish_soup of-half-{const} {det}-day",
+                       "I ate some fish soup for lunch."
+    = example_sentence "Δ' είθ μιββάρδε ιв̄ αφφερειζήρ.",
+                       "D 'īṯ mibbarde 'iv hafferīzēr.",
+                       "{expl} there_is {part}-ice in {det}-freezer",
+                       "There is some ice in the freezer."
+    = example_sentence "Σ̄είν μιρ̄άτταβ ιв̄ αμμερ̄ούν.",
+                       "Šīn miřəthab 'iv hammeřūn.",
+                       "put-{2sg.masc.imper} {part}-firewood.{pl} in {det}-stove",
+                       "Put some wood in the stove."
+    %p However, a partitive state noun in a possessive construction may appear in any position. The construction <span class="pattern">Y-part of-X</span> is translated as “some of X's Y”.
+    = example_sentence "Τζ' ωρείδ в̄άδ̄κιρ μιρ̄αλυννιήν λιή.",
+                       "Č 'ārīd vaḏkir miřalunnien lie.",
+                       "{1sg.nom.clitic} be_able-{1sg.pres} remember-{1sg.subj.pf} {part}-dream-{pl} {1sg.gen}",
+                       "I can remember some of my dreams."
+    = example_sentence "Μινεκρώβ λιή ούν ζδάν θιριτζκιήν.",
+                       "Minekrāb lie 'ūn zdan ṯiričkyien.",
+                       "{part}-relative.{pl} {1sg.gen} {3pl.nom} very religious-{masc.pl}",
+                       "Some of my relatives are very religious."
+    %p The partitive is also consistently used after a number of contruct quantifiers: #{t "κάλ", "kal"} “all [of]”, #{t "κάν", "kan"} “how many?”, #{t "φάλγε", "falge"} “half [of]”, #{t "ήμα", "'ēma"} “any [of]”. If the quantifier is a concrete noun (e.g., “a cup of tea”), the partitive is optional. The partitive is not used with #{t "σιλυλλή", "silullē"} “many”, however.
+    = example_sentence "Φάλγε μιππιτσώ ου ιννουτώρ αδ.",
+                       "Falge mippitsā 'ū yinnūtār 'ad.",
+                       "half-{const} {part}-pizza {3sg.masc.nom.clitic} be_left_over-{3sg.masc.pres} still",
+                       "There's still half of the pizza left."
+    = example_sentence "Λω в̄άτζα βιπρυώς βνε αββήτ κάλ μιδδετζιήμβρε.",
+                       "Lā vača bipruos bne habbēt kal middečiembre.",
+                       "{neg} leave-{3sg.masc.pret} barely from {det}-house all-{const} {part}-December",
+                       "He barely left home all December."
+    = example_sentence "Α αττυν ταχσιρού κώς μικκαφφή;",
+                       "'A 'əthun taxsirū kās mikkaffē?",
+                       "{interr} {2pl.masc.nom.clitic} want-{2pl.masc.pres} cup-{const} {part}-coffee",
+                       "Would you like a cup of coffee?"
+    %p In what is clearly a frozen usage from when the partitive prefix still meant “from”, the standard of comparison in a comparative construction (i.e., the 'Y' in 'X is bigger than Y') is expressed using the bare partitive state.
+    = example_sentence "Τυρτζήν κιυ καρυββούς̄ Μιμμασρήν.",
+                       "Turčēn kyu karubbūš Mimməsrēn.",
+                       "Turkey more near-{fem.pl} {part}-Egypt",
+                       "Turkey is closer than Egypt."
+    = example_sentence "Ηεί κιυ σειν-παθκιώ μιμμώτ δ' αδ̄κείρ.",
+                       "Hī kyu sīn-paṯkyā mimmāt d 'aḏkīr.",
+                       "{3sg.fem.nom} more nice-{fem.sg} {part}-what.{acc} {sub} remember-{1sg.pres}",
+                       "She's nicer than I remember."
+    %p If the standard of comparison (or some other partitive construction) requires a nominal construct, the form is more interesting. This 'partitive construct' behaves like the 'compound' forms described above in section 20.2.1, so that the entire construct phrase behaves like a single noun in the partitive state. Notice below, for instance, how the construct #{t "ληλούτ αζζάμαν", "lēlūt hazzaman"} “summer nights” takes on the partitive form #{t "μιλληλούτ αζζαμανιήν", "millēlūt hazzamanien"}, as though the partitive prefix <i>mi-</i> and plural suffix <i>-ien</i> were being added to the 'stem' <i>lēlūt hazzaman</i>.
+    = example_sentence "Λελούτ αστώ αδ̄ήλεκ κιυ ραττυβυώς̄ μιλληλούτ αζζαμανιήν.",
+                       "Lēlūt hastā 'aḏēlek kyu rəthubuoš millēlūt hazzamanien.",
+                       "night-{const.pl} {det}-winter these.{pron}-{pl} more wet-{fem.pl} {part}-[night-{const.pl} {det}-summer]-{pl}",
+                       "Winter nights are wetter than summer nights."
+    = example_sentence "Κάν μιββθκαλλή в̄ηνυώς̄ ου αφφήρ;",
+                       "Kan mibbukallē vēnuoš 'ū 'əffēr?",
+                       "how_many-{const} {part}-[bottle-{const.pl} wine]-{pl} {3sg.masc.nom.clitic} break-{3sg.masc.pret}",
+                       "How many wine bottles did he break?"
+
+  = section "Absolute State" do
+    %p The absolute state is used for all nouns that are not construct, determinate, or partitive. They are inherently indefinite.
+    = example_sentence "Ηώβ χιώ τυφώρ̄!",
+                       "Hāb xiyā tufāř!",
+                       "give-{2sg.masc.imper} to-{1sg} apple",
+                       "Give me an apple!"
+    = example_sentence "Δ' είθ λάκ κούνεν;",
+                       "D 'īṯ lak kūnen?",
+                       "{expl} there_is {2sg.masc.gen} pencil",
+                       "Do you have a pencil?"
+    = example_sentence "Νανγλιτζκιώ λω в̄ακκαρώ λασούν.",
+                       "Nangličkyā lā vəkharā lasūn.",
+                       "{det}-English-{fem.sg} {neg} difficult-{fem.sg} language",
+                       "English is not a difficult language."
+    %p When a noun in the absolute state follows a noun in the construct state, the entire contruct is indefinite.
+    = example_sentence "Δ' είθ γ̄έδ̄ερ κουβιήν ηαλ ανιστρατώ.",
+                       "D 'īṯ ǧeḏer kūbien hal 'anistratā.",
+                       "{expl} there_is herd-{const} dog-{pl} on {det}-street",
+                       "There is a pack of dogs in the street."
+    = example_sentence "Ηάτζ ζήτ ου ιατυαρείκ μιμμωρούκ αββήτ λιή.",
+                       "Həč zēt 'ū yatwarīk mimmārūk habbēt lie.",
+                       "tree-{const} olive {3sg.masc.nom.clitic} grow-{3sg.masc.pres} behind {det}-house {1sg.gen}",
+                       "An olive tree grows behind my house."
+    %p The absolute state is the citation form of nouns. This is the form nouns will appear in when completely devoid of syntactic context, such as in dictionaries or on signs.
+    = example_sentence "Δρυώμ A3 – Αερυπυώρτε",
+                       "Druom A3 – 'A'erupuorte",
+                       "highway A3 – airport",
+                       "A3 Motorway – Airport"
+    
+= section "Number" do
+  %p Alashian has two productive numbers: singular and plural. However, this simple model is complicated by existence of four different types of plurals: external, internal, dual, and gentilic-plural.
+  %p The singular is used for lone nouns as opposed to multiple nouns. It is also used for mass/uncountable nouns (known as “singularia tantum”, or 'singular only') and many abstract nouns. Such singular nouns take singular agreement on verbs and adjectives.
+  = example_sentence "Τζε νιτυάταρετ ατζζαντούν λιή ιв̄ αββήτ.",
+                     "Če nitwataret haččantūn lie 'iv habbēt.",
+                     "{1sg.nom.clitic} leave_by_accident-{1sg.pret} {det}-wallet {1sg.gen} in {det}-house",
+                     "I left my wallet at home."
+  = example_sentence "Βένιτζ ίζαγζαγ ηαλ ανάв̄λε.",
+                     "Benič yizagzag hal 'anavle.",
+                     "son-{2sg.fem} play-{3sg.masc.pres} on {det}-courtyard",
+                     "Your son is playing in the courtyard."
+  = example_sentence "Αββείρ ιούβις υεδε λήθ ιв̄ού ήμα μή.",
+                     "Habbīr yūbis vede lēṯ 'ivū 'ēma mē.",
+                     "{det}-well dry-{masc.sg} and-{expl} there_is_not in-{3sg.masc} any water",
+                     "The well is dry; there's no water in it."
+  = example_sentence "Νω νωλδεούνα λασσηνλείκ!",
+                     "Nā nālde'ūna lassēnlīk!",
+                     "{1pl.nom.clitic} raise-{1pl.vol} of-{det}-friendship",
+                     "Let us toast to friendship!"
+  %p In addition, the singular is used with nouns modified by a numeral more than ten. Here, however, adjective and verb agreement is plural, keeping in line with the phrase's semantics.
+  = example_sentence "Φάλγ αιιούν ιφφώλ ηασ̄ρε-θινεί ευρώ.",
+                     "Falg hayyūn yiffāl hašre-ṯinī 'ewrā.",
+                     "half-{const} {det}-day cost-{3sg.masc.pres} ten-two.{masc}-{const} euro",
+                     "Lunch cost twelve euros.",
+                     :comment => "(not *'ewrūš)"
+  = example_sentence "Δε ηείυ ιв̄ ακκελώρ κούσιτ κυώτ καδείν κάαρ̄αδ.",
+                     "De hīyu 'iv hakkelār kūsit kuot kadīn ka'ařad.",
+                     "{expl} be-{3pl.impf} in {det}-cellar twenty-{const} box old-{masc.sg} some_kind",
+                     "There were maybe twenty old boxes in the cellar."
+  %p The external plural, consisting of a suffix such as <i>-ien</i> or <i>-uoš</i> in the absolute state, is the most common means of forming plural forms. Nouns with external plurals always take plural adjective and verb agreement.
+  = example_sentence "Νω ιήσαν ιв̄ε χαριήν καμβριήν.",
+                     "Nā yēsan 'ive xarien kambrien.",
+                     "{1pl.nom.clitic} sleep-{1pl.impf} in-{pl} other-{masc.pl} room-{pl}",
+                     "We slept in different rooms."
+  = example_sentence "Ναστινυμειστιήν ουν αμβρού χινυώ в̄ανουτζώ.",
+                     "Nastinumīstien 'ūn 'ambrū xinuwā vanūčā.",
+                     "{det}-police_officer-{pl} {3pl.nom.clitic} say-{3pl.pret} to-{1pl} leave-{1pl.subj.pf}",
+                     "The policemen told us to leave."
+  = example_sentence "Τζ' ακβείδ ιτ ριδ̄μυώς αιιουνυώς̄.",
+                     "Č 'akbīd 'it riḏmuos yūnuoš.",
+                     "{1sg.nom.clitic} be_tired-{1sg.pres} since number-{const} day-{pl}",
+                     "I've been tired the last several days."
+  %p A handful of nouns, known as “pluralia tantum” or 'plural only', have an external plural but no singular, even though they refer to a singular object. These nevertheless always take plural agreement.
+  = example_sentence "Ατζζινσιήν αδ̄ήλεκ αππανταλυννιήν ανναηιβιήν λιή.",
+                     "Haččinsien 'aḏēlek happantalunnien hannahibien lie.",
+                     "{det}-jeans-{pl} these.{pron}-{pl} {det}-pants-{pl} {det}-favorite-{masc.pl} {1sg.gen}",
+                     "Jeans are my favorite pants."
+  %p When accompanied by a numeral between two and ten, the external plural will be used.
+  = example_sentence "Νω αγαρνώ θάλυττετ κιλουούτ μιλλών.",
+                     "Nā 'agarnā ṯaluttet kilūwūt millān.",
+                     "{1pl.nom.clitic} buy-{1pl.pret} three-{const} kilo-{const.pl} {part}-meat",
+                     "We bought three kilograms of meat."
+  = example_sentence "Δ' είθ λών θαττεί βινυώς̄.",
+                     "D 'īṯ lān ṯəthī binuoš.",
+                     "{expl} there_is {3sg.fem.gen} two.{fem}-{const} daughter-{pl}",
+                     "She has two daughters."
+  %p The dual, marked by <i>-ī</i> in the absolute state, is a special type of external plural used with nouns that commonly occur in pairs. The dual was once a distinct number in Alashian, separate from the singular and plural, but in modern Alashian it is simply a relic ending used to mark the plural on certain nouns. Just like other external plurals, nouns with dual endings take plural agreement on both adjectives and verbs.
+  = example_sentence "Δ' είθ λιή θαττεί ιαδεί σ̄εμαλλούς̄.",
+                     "D 'īṯ lie ṯəthī yadī šemallūš.",
+                     "{expl} there_is {1sg.gen} two.{fem}-{const} hand-{pl} left-{fem.pl}",
+                     "I have two left hands.",
+                     :comment => "(i.e., am clumsy)"
+  = example_sentence "Ραββείς μιζζυών ιταβταβεί βείβρετ ρεγλεί.",
+                     "Rabbīs mizzuon yitabtabī be'ibret reglī.",
+                     "majority-{const} {part}-animal.{pl} walk-{3sg.fem} by-four-{const} leg-{pl}",
+                     "Most animals walk on four legs."
+  = example_sentence "Νυνδ̄εί λού αδ̄ήλεκ μάλλυν ρωβυώς̄.",
+                     "Nunḏī lū 'aḏēlek mallun rābuoš.",
+                     "{det}-ear-{pl} {3sg.masc.gen} these.{pron}-{pl} rather big-{fem.pl}",
+                     "His ears are rather big."
+  %p Some nouns have both a dual form and an external plural, but always with distinct semantics, with the dual form typically preserving the original meaning and the plural having acquired a metaphorical one. For instance, the noun #{t "ιάδ", "yad"} “hand” has the dual form #{t "ιαδεί", "yadī"} “hands” and the plural #{t "ιαδιήν", "yadien"} “shares, lots”.
+  %p The internal plural (also called a broken plural, discontiguous plural, or collective plural) is morphologically singular but semantically (and sometimes synactically) plural. Internal plurals have no explicit plural markings. If an internal plural refers to a human, it takes plural adjective and verb agreement, just like other plural forms.
+  = example_sentence "Νεσκιών λιή ιαβειτού ναχρώ.",
+                     "Neskyān lie yabītū naxrā.",
+                     "{det}-friend.{pl} {1sg.gen} visit-{3pl.pres} {det}-evening",
+                     "My friends are visiting tonight."
+  = example_sentence "Νεκρώβ λού ούν κεσενιήν.",
+                     "Nekrāb lū 'ūn kesenien.",
+                     "{det}-relative.{pl} {3sg.masc.gen} {3pl.masc.nom} strange-{masc.pl}",
+                     "His relatives are strange."
+  %p If the internal plural refers to anything other than a human, attributive adjective and verbal agreement is <em>feminine singular</em>, while predicate adjective agreement is plural and matches the gender of the noun in the singular. Pronouns referring to such a noun may be either feminine singular or plural, with a general preference for plural forms.
+  = example_sentence "Λω αρώ ήμα γ̄ενών τέμπετζε.",
+                     "Lā 'arā 'ēma ǧenān tempeče.",
+                     "{neg} see-{1sg.pres} any cloud.{pl}-{const} storm",
+                     "I don't see any storm clouds."
+  = example_sentence "Δ' είθ λών καστανώ σ̄ώρ.",
+                     "D 'īṯ lān kastanā šār.",
+                     "{expl} there_is {3sg.fem.gen} brown-{fem.sg} hair.{pl}",
+                     "She has brown hair."
+  = example_sentence "Ασ̄σ̄ώρ λών αδ̄ήλεκ καστανυώς̄.",
+                     "Haššār lān 'aḏēlek kastanuoš.",
+                     "{det}-hair.{pl} {3sg.fem.gen} these.{pron}-{pl} brown-{fem.pl}",
+                     "Her hair is brown."
+  %p Internal plurals are <em>not</em> used alongside numerals. Even if the usual plural form of a noun is internal, it will always appear as an external plural when modified by a numeral between two and ten.
+  = example_sentence "Θινεί αв̄в̄ουδιήν τραδού βήτα βιβακού.",
+                     "Ṯinī havvūdien tradū bēta bibakū.",
+                     "two.{masc}-{const} {det}-child-{pl} run-{3pl.pret} homeward by-cry-{inf}",
+                     "The two children ran home crying.",
+                     :comment => "(normal plural 'ūlīd)"
+  = example_sentence "Δ' είθ χάφσετ αννούς̄ ρωβυώς̄ ηαλ αππαρκώ.",
+                     "D 'īṯ xafset 'annūš rābuoš hal happarkā.",
+                     "{expl} there_is five-{const} rock-{pl} on {det}-park",
+                     "There are five large rocks in the park.",
+                     :comment => "(normal plural 'anan)"
+  %p The gentilic plural is a special suffix <i>-ēn</i> that forms the names of many different nations and peoples. Such nouns always take feminine plural agreement in both adjectives and verbs.
+  = example_sentence "Γαλλήν αμμυδερνιούς̄ ουν νουλωδού βνε Νεπανώστας Αγγαλλεί.",
+                     "Gallēn hammuderniyūš 'ūn nūlādū bne Nepanāstas Haggallī.",
+                     "France {det}-modern-{fem.pl} {3pl.nom.clitic} be_born-{3pl.pret} from {det}-revolution {det}-French-{masc.sg}",
+                     "Modern France was born in the French Revolution."
+  = example_sentence "Ρουνήν Ναρχιούς̄ υειού αππυλιτείσμε νισχισσεί ηαλ ακκυώσμε.",
+                     "Rūnēn Narxiyūš weyū happulitīsme nisxissī hal hakkuosme.",
+                     "Romans {det}-ancient-{fem.pl} be-{3pl.impf} {det}-civilization {det}-powerful-{masc.sg} on {det}-world",
+                     "Ancient Rome was/the Ancient Romans were the most powerful civilization on Earth."
+
+= section "Case" do
+  = section "Case in Nouns" do
+    %p Although Proto-Semitic appears to have had a well-developed case system with a three-way nominative-accusative-genitive contrast, by the time of the earliest extant Alashian texts this system had nearly completely been lost, other than some debatable instances in texts that were already deliberately archaizing. Modern Alashian now makes no morphological case distinctions in its nominal system, although a few syntactic traces of this older system remain.
+    %p Like a number of the Canaanite languages, Alashian has a <i>nota accusativi</i>, a specialized preposition serving as a marker of the accusative case. It only appears when the direct object is human; otherwise the direct object is unmarked. The nota accusativi is #{t "τα", "ta"} before a consonant and #{t "τ'", "t"} before a vowel or the definite prefix <i>ha-</i> (the combination of which, <i>t ha-</i>, is pronounced /tʰa/).
+    = example_sentence "Αδδιήβ ου κάτταλ ήλ.",
+                       "Haddieb 'ū kəthal 'ēl.",
+                       "{det}-wolf {3sg.masc.nom.clitic} kill-{3sg.masc.pret} sheep",
+                       "The wolf killed a sheep.",
+                       :comment => "(non-human)"
+    = example_sentence "Αδδιήβ ου κάτταλ τα κιδνυννώ.",
+                       "Haddieb 'ū kəthal ta kidnunnā.",
+                       "{det}-wolf {3sg.masc.nom.clitic} kill-{3sg.masc.pret} {acc} old_man",
+                       "The wolf killed an old man.",
+                       :comment => "(human)"
+    = example_sentence "Δ' είθ Αμμιχώλ δε ρ̄άβατ τ' Αννικλούς.",
+                       "D 'īṯ Hammixāl de řabət t Hanniklūs.",
+                       "{expl} there_is {det}-Ammixāl {sub} hit-{3sg.masc.pret} {acc} {det}-Anniklūs",
+                       "It was Ammixāl who hit Anniklūs."
+    = example_sentence "Α λακ в̄άτακκιρ τα θαττεί ναφτούς̄ λιή;",
+                       "'A lak vatəkhir ta ṯəthī naftūš lie?",
+                       "{interr} {2sg.masc.gen} meet-{2sg.subj.pf} {acc} two.{fem}-{const} {det}-sister-{pl} {1sg.gen}",
+                       "Have you met my two sisters?"
+    %p Proto-Semitic used the bare accusative as an adverbial marker of time and destination. In modern Alashian, this survives as the use of bare, prepositionless noun phrases that serve as duratives. If definite, they may also mark when an action occurred or will occur.
+    = example_sentence "Ου κλειδιή ναφσού θίμυννετ υωρυώς̄ ιв̄ αγραφκιώ λού.",
+                       "'Ū klīdie nafsū ṯimunnet 'uoruoš 'iv hagrafkyā lū.",
+                       "{3sg.masc.nom.clitic} lock-{3sg.masc.impf} oneself-{3sg.masc} eight-{const} hour-{pl} in {det}-office {3sg.masc.gen}",
+                       "He locked himself in his office for eight hours."
+    = example_sentence "Τζε ιήσα αλλήλ άρ̄δατ θαττεί υωρυώς̄.",
+                       "Če yēsa hallēl 'ařdat ṯəthī 'uoruoš.",
+                       "{1sg.nom.clitic} sleep-{1sg.impf} {det}-night only two.{fem}-{const} hour-{pl}",
+                       "I only slept for two hours last night."
+    = example_sentence "Ρ̄αμμιή ου γάναβ ηώδζε αιιούν.",
+                       "Řammie 'ū ganab hādze hayyūn.",
+                       "someone {3sg.masc.nom.clitic} steal-{3sg.masc.pret} goat {det}-day",
+                       "Someone stole a goat today."
+    = example_sentence "Αννώρ ου ιήβες νάв̄γυστε.",
+                       "Hannār 'ū yēbes navguste.",
+                       "{det}-river {3sg.masc.nom.clitic} be_dry-{3sg.masc.impf} {det}-August",
+                       "The river was dry this August."
+    %p The accusative of destination does not have an unambiguous descendent in modern Alashian<sup>2</sup>. However, a number of 'transitive' verbs of motion can been seen in older texts, where an original directional adverb was reinterpreted as an actual direct object. Such usage is no longer encountered in the modern language. The verb #{t "γ̄άλαλ", "ǧalal"} “enter” seen in the citation below requires the directional preposition #{t "ιλ", "'il"} “towards” in the modern language.
+    = example_sentence "Υελενώ γ̄άλαλ Αιιερυσ̄λείν, ει νιδ̄βαρ̄αθώ καλώ μιμμεδινώ υεουν μιηρού, μιή δή νείς;",
+                       "Velenā ǧalal Hayyerušlīn, 'ī niḏbařaṯā kalā mimmedinā ve'ūn mierū, mie dē nīs?",
+                       "and-when enter-{3sg.masc.pret} {det}-Jerusalem, {3sg.fem.nom.clitic} be_stirred-{3sg.fem.pret} all-{fem.sg} {part}-city and-{3pl.nom.clitic} say-{3pl.impf}, who this-{masc.sg} {det}-man",
+                       "And when he was come into Jerusalem, all the city was stirred, saying, Who is this man? (Matthew 21:10)"
+    %p The epenthetic *a- and *u- that can appear in between the two nouns of a construct or a preposition and its object are the only morphological remnants of Semitic case marking (the accusative and nominative cases respectively). The tightly-bound nature of these two environments encouraged the preservation of the intervening case marker while they were entirely lost in all other positions.
+
+  = section "Case in Pronouns" do
+    %p The Alashian pronominal system has a more robust case system, with direct reflexes of the Proto-Semitic nominative and possibly accusative<sup>3</sup> pronouns and an innovated genitive pronoun series based on the preposition #{t "λι-", "li-"} “of” (originally, “to”).
+    %p The nominative case is used for the subject of a sentence as well as for resumptive pronouns.
+    = example_sentence "Α ουν ιφφαλού αв̄в̄ήν δε λιυμώ;",
+                       "'A 'ūn yiffalū havvēn de liyumā?",
+                       "{interr} {3pl.nom.clitic} make-{3pl.pres} {det}-wine {sub} of-{3pl.emph}",
+                       "Do they make their own wine?"
+    = example_sentence "Τζ' αδ̄κείρ αδ βούριατ πρά νιστυσαββού σιλυλλή σαννιήν.",
+                       "Č 'aḏkīr 'ad būri'at pra nistusabbū silullē sannien.",
+                       "{1sg.nom.clitic} remember-{1sg.pres} still clear-{adv} despite pass-{3pl.pret} heap-{const.pl} year-{pl}",
+                       "I still remember clearly, even though many years have passed."
+    = example_sentence "Ηού αμμυναστείρ ακκαδείν δε νιστάβαβετ ιв̄ού ου ιωστακρώβ ιв̄ κάφ άκρε.",
+                       "Hū hammunastīr həkhadīn de nistababet 'ivū 'ū yāstəkrāb 'iv kaf 'akre.",
+                       "that.{pron}-{masc.sg} {det}-monastery {det}-old-{masc.sg} {sub} visit-{1sg.pret} in-{3sg.masc} {3sg.masc.nom.clitic} be_near-{3sg.masc.pres} in top-{const} cliff",
+                       "That old monastery that I visited is near the edge of a cliff."
+    = example_sentence "Σαφρώ ει γ̄αλαλώ βιμακαννούφ φιτώνα μιφφάλγ αδδαλλούν υελώ ιηρδώ в̄είτλαττιρ.",
+                       "Safrā 'ī ǧalalā bimakənnūf fitāna miffalg haddallūn velā yērdā vītləthir.",
+                       "bird {3sg.fem.nom.clitic} enter-{3sg.fem.pret} by-fly-{inf} inwards through {det}-window and-{neg} be_able-{3sg.fem.impf} free_oneself-{3sg.subj.pf}",
+                       "A bird flew in through the window and couldn't get out."
+    %p The accusative case is used for the direct object of a sentence, as well as after prepositions. When an accusative personal pronoun follows a preposition, it carries an emphatic sense (in contrast to the more typical declined prepositions); there is no such emphatic meaning for other pronouns.
+    = example_sentence "Ού αρμήιετ άρτζα βιταιωδώ.",
+                       "'Ū 'armēyet 'arča bitayādā.",
+                       "{3sg.masc.acc.clitic} topple-{1sg.pret} towards_the_ground by-chance",
+                       "I knocked him over by accident."
+    = example_sentence "Άττα νι τωσ̄νή ιώ.",
+                       "'Ətta ni tāšnē yā.",
+                       "{2sg.masc.nom.emph} {1sg.acc.clitic} disgust-{2sg.masc.pret} {1sg.acc.emph}",
+                       "You disgust me."
+    = example_sentence "Α ου ηάβ αμμιφταρ̄ιήν χιτζιώ ιυ Χαδσ̄υών;",
+                       "'A 'ū hab hammiftařien xičyā yu Xadšuon?",
+                       "{interr} {3sg.masc.nom.clitic} give-{3sg.masc.pret} {det}-key-{pl} to-{2sg.fem} or to-{det}-John",
+                       "Did he give the keys to you or to John?"
+    = example_sentence "Ηυν μείτ τα νιδδάρακτα;",
+                       "Hun mīt ta niddarakta?",
+                       "with who.{acc} {2sg.masc.nom.clitic} accompany-{2sg.masc.pret}",
+                       "Who did you go with?"
+    %p Genitive pronouns mark possession, and can be used in either attributive or predicate position. They always follow the noun they modify. In predicate position, it is more common to hear the 'full' declined forms of <i>li-</i> rather than the short forms.
+    = example_sentence "Ηεί ασσατζιδ̄ώ λιώ.",
+                       "Hī hassačiḏā liyā.",
+                       "that-{fem.sg} {det}-backpack of-{1sg.emph}",
+                       "That backpack is mine."
+    = example_sentence "Ανεί ασσατζιδ̄ώ λιή.",
+                       "'Anī hassačiḏā lie.",
+                       "that.{pron}-{fem.sg} {det}-backpack {1sg.gen}",
+                       "That is my backpack."
+    = example_sentence "Λιμεί δέλε αλλαв̄είς;",
+                       "Limī dele hallavīs?",
+                       "who.{gen} these {det}-garment.{pl}",
+                       "Whose clothes are these?"
+    %p Disjunctive personal pronouns (used in situations devoid of syntactic context) consist of the full accusative forms in the first and second persons and the full nominative forms in the third person. This includes dislocated/emphatic pronouns, clefts, and verbless elliptical constructions.
+    = example_sentence "Ιώ τζε βώρ̄ετ αв̄в̄ατούρ κιυ μάτταχιρ.",
+                       "Yā če bāřet havvatūr kyu məthaxir.",
+                       "{1sg.acc.emph} {1sg.nom.clitic} choose-{1sg.pret} {det}-stay-{inf} more long-{masc.sg}",
+                       "Me, I decided to stay longer."
+    = example_sentence "Δ' είθ νυώ δε νω τίχαλλαφ.",
+                       "D 'īṯ nuwā de nā tixəllaf.",
+                       "{expl} there_is {1pl.acc.emph} {sub} {1pl.acc.clitic} seek-{2sg.masc.pres}",
+                       "It's us you're looking for."
+    = example_sentence "“Μιή αιήδ χικιώ ασσείνυδ̄ δε αμμώρ̄;” “Ηυών.”",
+                       "“Mie 'ayēd xikyā hassīnuḏ de hammāř?” “Huon.”",
+                       "who.{nom} inform-{3sg.masc.pret} to-{2sg.masc} {det}-meeting {sub} tomorrow? {3pl.nom.emph}",
+                       "Who told you about the meeting tomorrow?” “They did."
+    %p These disjunctive pronouns are also the basis of the 'pseudo-partitive' used when the standard of comparison in a comparative construction is a pronoun or after quantifiers requiring partitives. This merely consists of the <i>mi-</i> prefix added directly to the pronoun form with appropriate gemination at the boundary. Non-personal pronouns use the accusative as a base.
+    = example_sentence "Ηού κιυ ηουλεί μιιώ.",
+                       "Hū kyu hūlī miyyā.",
+                       "{3sg.masc.nom} more tall-{masc.sg} {part}-{1sg.acc}",
+                       "He is taller than me."
+    = example_sentence "Αδ̄δ̄εκώ ου ιωστυσώμ λιή καλείττερατ μιμμώτ δε νυαμώρ χιώ.",
+                       "'Aḏḏekā 'ū yāstusām lie kalītherat mimmāt de nu'amār xiyā.",
+                       "this.{pron}-{masc.sg} {3sg.masc.nom.clitic} sound-{3sg.masc.pres} {1sg.gen} better-{adv} {part}-what.{acc} {sub} be_said-{3sg.masc.pret} to-{1sg}",
+                       "That sounds better than what I was told."
+    = example_sentence "Τζε φάηαλετ μιββακλαв̄ώ άμυς. Α τ' άκαλτα μινεί;",
+                       "Če fahalet mibbaklavā 'amus. A t 'akalta minī?",
+                       "{1sg.nom.clitic} make-{1sg.pret} {part}-baklava yesterday. {interr} {2sg.masc.nom.clitic} eat-{2sg.masc.pret} {part}-{3sg.fem.nom}",
+                       "I made some baklava yesterday; did you eat any of it?"
+
+= section "Adjectives" do
+  = section "Ordering" do
+    %p Typically, an attributive adjective in the absolute state will appear before the noun it modifies, while an attributive adjective in any other state (determinate, partitive, construct) comes afterwards.
+    = example_sentence "Ανεί εντερεσαννώ ιδεηώ.",
+                       "'Anī 'enteresannā yidehā.",
+                       "that.{pron}-{fem.sg} interesting-{fem.sg} idea",
+                       "That's an interesting idea."
+    = example_sentence "Τζε νιτυάταρετ ατζζινιτυών λιή ηαλ ατταв̄λώ αχχαρώ.",
+                       "Če nitwataret haččinituon lie hal hattavlā haxxarā.",
+                       "{1sg.nom.clitic} leave_by_accident-{1sg.pret} {det}-mobile_phone {1sg.gen} on {det}-table {det}-other-{fem.sg}",
+                       "I left my cell phone on the other table."
+    = example_sentence "Ναντιπρυωσυπιήν αιιαυανιήν υεαττυρτζιήν ουν σεινυδ̄αιού ηαλ Ασταμβούλ.",
+                       "Nantipruosupien hayyawanien vehatturčien 'ūn sīnuḏayū hal Hastambūl.",
+                       "{det}-representative-{pl} {det}-Greek-{masc.pl} and-{det}-Turkish-{masc.pl} {3pl.nom.clitic} meet-{3pl.pret} on {det}-Istanbul",
+                       "The Greek and Turkish representatives met in Istanbul."
+    = example_sentence "Τζε χαλλήφετ μιμμή τζείλ.",
+                       "Če xəllēfet mimmē čīl.",
+                       "{1sg.nom.clitic} seek-{1sg.pret} {part}-water {part}-cold-{masc.sg}",
+                       "I asked for some cold water."
+    = example_sentence "Α σ̄ι ρώτζζε ηουλεί είς ηυν τζαλούν καππήλ δε βώρ αππών υεβατταρούδ;",
+                       "'A ši rāčhe hūlī 'īs hun čalūn kəphēl de bār 'əphān vebətharūd?",
+                       "{interr} {2sg.fem.nom.clitic} see-{2sg.fem.pret} tall-{masc.sg} man with black-{masc.sg} hat {sub} cross-{3sg.masc.pret} now and-by-run-{inf}",
+                       "Did you see a tall man in a black hat run by?"
+    %p However, any adjective modifying a nominal construct (whether the whole construct, the head, or the modifier) must come after the entire construct. It can thus sometimes be ambiguous what exactly the adjective is modifying if other agreement clues (e.g., gender) are not able to help.
+    = example_sentence "Τζ' αφφήρετ κώς αββιρρώ αρ̄ουδιθώ λιή.",
+                       "Č 'əffēret kās habbirrā hařūdiṯā lie.",
+                       "{1sg.nom.clitic} break-{1sg.pret} cup-{const} {det}-beer {det}-new-{fem.sg} {1sg.gen}",
+                       "I broke my new beer glass."
+    = example_sentence "Αστεφών Χατζιιοάννου ηού καθειτεί αλλυγυτηχνιώ ναρχιώ.",
+                       "Hastefān Hadjiioannu hū kaṯītī hallugutēxniyā narxiyā.",
+                       "{det}-Astefān Hadjiioannu {3sg.masc.nom} professor-{const} {det}-literature {det}-ancient-{fem.sg}",
+                       "Astefān Hadjiioannu is a professor of ancient literature."
+    %p Adjectives that are modifying any sort of pronoun always come afterwards, even if the pronoun has an indefinite meaning.
+    = example_sentence "Α δ' είθ μαμμώ ρ̄ούδιθ;",
+                       "'A d 'īṯ mammā řūdiṯ?",
+                       "{interr} {expl} there_is anything.{nom} new-{masc.sg}",
+                       "Is there anything new?"
+    %p Adjectives that are attached to their head with the intervention of some modifier, such as the comparative #{t "κιυ", "kyu"} “more”, always follow the noun. In addition, such adjectives always appear in the absolute state, regardless of the state of the head noun.
+    = example_sentence "Λεείς κιυ γαλαντυώμ μινού λω в̄ιωστυιώδ πλέ λιή.",
+                       "Le'īs kyu galantuom minū lā vyāstuyād ple lie.",
+                       "of-man more generous-{masc.sg} {part}-{3sg.masc.nom} {neg} become_known-{3sg.subj.pf} then {1sg.gen}",
+                       "I have not heard of a more generous person than him."
+    = example_sentence "Ακλαδδιήν κιυ в̄ακκαριήν ουν ναφαλού ηυν αττέμπετζε.",
+                       "Hakladdien kyu vəkharien 'ūn nafalū hun hattempeče.",
+                       "{det}-branch-{pl} more heavy-{masc.pl} {3pl.nom.clitic} fall-{3pl.pret} with {det}-storm",
+                       "The heavier branches fell during the storm."
+
+  = section "Construct Adjectives" do
+    %p Alashian allows attributive adjectives to appear in the construct state and take their own genitive modifier, in effect allowing a nominal construct to function as an adjective. These are often equivalent to English compound adjectives such as “dark-haired”, “two-winged”, “good-hearted”, “low-fat”, “oil-rich”, etc., but also to some phrasal adjectives such as “full of smoke”.
+    %p Construct adjectives agree their their head in gender, but appear in the construct state rather than whatever state their head is in. The noun that is in turn modifying the adjective will appear afterwards, typically in the absolute state.
+    = example_sentence "Ανναφούς υή в̄άκκαρ ιв̄ δε ακκάμβρε μώλ ταγ̄θιννώ.",
+                       "Hannafūs wē vəkhar 'iv de hakkambre māl taǧṯinnā.",
+                       "{det}-breathe-{inf} be-{3sg.masc.impf} difficult-{masc.sg} in that-{masc.sg} {det}-room full-{masc.sg.const} smoke",
+                       "It was hard to breathe in that smoke-filled room."
+    = example_sentence "Αθθαλιώ αββιττώ ίβρετ σαννιήν λιή.",
+                       "Haṯṯalyā habbittā 'ibret sannien lie.",
+                       "{det}-Aṯṯalyā {det}-daughter four-{const} year-{pl} {1sg.gen}",
+                       "Aṯṯalyā is my four year old daughter."
+    = example_sentence "Α τ' άγαρτα μιρ̄άλιβ χάσχιρετ σώμ;",
+                       "'A t 'agarta miřalib xasxiret sām?",
+                       "{interr} {2sg.masc.nom.clitic} buy-{2sg.masc.pret} {part}-milk poor-{fem.sg.const} fat",
+                       "Did you buy low-fat milk?"
+    = example_sentence "Ηού είς ζδάν διναμεί αννούς.",
+                       "Hū 'īs zdan dinamī hannūs.",
+                       "{3sg.masc.nom} man very strong-{masc.sg.const} {det}-mind",
+                       "He is a very resolute man.",
+                       :comment => "(lit. 'strong-minded')"
+    %p In colloquial usage, it is not uncommon to hear construct adjectives replaced by a normal adjective plus a prepositional phrase beginning with #{t "βι-", "bi-"}.
+    = example_sentence "Ηαραβιώ Ασσαυδιώ ηεί άρτζε γουμιμώ βιπετρελειούν [γούμιμετ πετρελειούν].",
+                       "Harabyā Hassa'udyā hī 'arče gūmimā bipetreleyūn [gūmimet petreleyūn].",
+                       "Arabia {det}-Saudi-{fem.sg} {3sg.fem.nom} country abundant-{fem.sg} by-oil [abundant-{fem.sg.const} oil]",
+                       "Saudi Arabia is an oil-rich country.",
+                       :comment => "(or 'country rich in oil')"
+    = example_sentence "Αμμιχώλ κούσιν βισαννιήν [κούσιτ σαννιήν].",
+                       "Hammixāl kūsin bisannien [kūsit sannien].",
+                       "{det}-Ammixāl twenty by-year-{pl} [twenty-{const} year-{pl}]",
+                       "Ammixāl is 20 years old.",
+                       :comment => "(or 'twenty in years')"
+
+  = section "Secondary Predicate Adjectives" do
+    %p Secondary predicate adjectives are adjectives that describe the state of the another noun while the action of the primary predicate is taking place, as in “He came home tired”. In Alashian secondary predicate adjectives behave in much the same way as typical predicate adjectives: they show gender and number agreement, but are always in the absolute state. The only difference is that secondary predicates must always be preceded by the preposition #{t "βι-", "bi-"}.
+    = example_sentence "Ει στακραβώ βήτα βνε αμμωβώδ βιζδαν καβιδώ.",
+                       "'Ī stəkrabā bēta bne hammābād bizdan kabidā.",
+                       "{3sg.fem.nom.clitic} arrive-{3sg.fem.pret} homewards from {det}-place_of_work by-very tired-{fem.sg}",
+                       "She came home very tired after work."
+    = example_sentence "Ου ιστώ ακκαφφή βιρ̄ούν σαν βούριζ.",
+                       "'Ū yistā hakkaffē biřūn san būriz.",
+                       "{3sg.masc.nom.clitic} drink-{3sg.masc.pret} {det}-coffee by-hot-{masc.sg} like boil-{ptcpl}-{masc.sg}",
+                       "He drinks his coffee boiling hot."
+    = example_sentence "Τζ' αρτζώ λιρώ λών βιματταγ̄λιζιήν.",
+                       "Č 'arčā lirā lān biməthaǧlizien.",
+                       "{1sg.nom.clitic} enjoy-{1sg.pres} of-see-{inf} {3pl.gen} by-happy-{masc.pl}",
+                       "I enjoy seeing them happy."
+
+  = section "Adjectives versus Stative Verbs" do
+    %p There often exists some semantic overlap between basic Alashian adjectives and their cognate stative verbs (e.g., the adjective #{t "τζείλ", "čīl"} “cold” versus the verb #{t "τζείλ", "čīl"} “be cold”, or #{t "ραττούβ", "rəthūb"} “wet” versus #{t "ράτταβ", "rəthab"} “be wet”). The choice of forms generally comes down to the animacy of the noun: animate nouns prefer stative verbs (or stative participles attributively), while inanimate nouns prefer adjectives. Naturally, this distinction only applies for concepts that have both an adjective and a stative verb.
+    = example_sentence "Τζ' αρτείβ καδ λιή в̄ωτδούσ̄α αππών.",
+                       "Č 'artīb kad lie vātdūša 'əphān.",
+                       "{1sg.nom.clitic} be_wet-{1sg.pres} because {1sg.gen} take_a_shower-{1sg.subj.pf} now",
+                       "I'm wet because I just took a shower"
+    = example_sentence "Νέδαφ υή ραττούβ μετώ αμμάττερ.",
+                       "Nedaf wē rəthūb metā hamməther.",
+                       "{det}-ground be-{3sg.masc.impf} wet-{masc.sg} after {det}-rain",
+                       "The ground was wet after the rain."
+    = example_sentence "Ουν ιαχχιρού ιλ αμμωβώδ.",
+                       "'Ūn yaxxirū 'il hammābād.",
+                       "{3pl.nom.clitic} be_late-{3pl.pres} towards {det}-place_of_employment",
+                       "They are late for work."
+    = example_sentence "Ατρήν ου ούχιρ ιλ αστήσεν.",
+                       "Hatrēn 'ū 'ūxir 'il hastēsen.",
+                       "{det}-train {3sg.masc.nom.clitic} towards {det}-station",
+                       "The train is late to the station."
+    %p However, secondary predicates never employ stative verbs when there is an adjectival equivalent, as could be seen in example 111, where the adjective #{t "κάβιδ", "kabid"} “tired” was used rather than the verb #{t "κάβαδ", "kabad"} “be tired”.
+
+  = section "Numerals" do
+    %p Numerals constitute a special subclass of adjectives with their own unique behavior. In the modern language<sup>4</sup>, they do not agree in gender or number with the noun they modify. In fact, they generally do not modify nouns at all; they form adjectival constructs, with the quantified noun forming the genitive component of the construct. That is, a numeric construction like #{t "θάλυττετ εισιήν", "ṯaluttet 'īsien"} “three people” is grammatically identical to an adjectival construct like #{t "τήβ λιήβ", "tēb lieb"} “good-hearted”, except that the numeric construct is generally headless, while the adjectival construct is more often attributive (though the headless form #{t "τηβιήν αλλιήβ", "tēbien hallieb"} “the good in heart, the good-hearted [people]” does exist as well, but is far less common).
+    %p As constructs, numeric expressions can be made definite by switching the modifying noun to the definite state.
+    = example_sentence "Αββενιώ ει ιλκαρ̄ήι ίβρετ ηαλιιούς̄ βιηαλεί.",
+                       "Habbenyā 'ī yilkařēyi 'ibret haliyyūš bihalī.",
+                       "{det}-building {3sg.fem.nom.clitic} have-{3sg.fem.pres} four-{const} floor-{pl} by-height",
+                       "The building is four storeys tall."
+    = example_sentence "Θάλυττετ αв̄в̄ουδιήν λαζζαττιήν ηυών ιв̄ αμμαχώζιν.",
+                       "Ṯaluttet havvūdien lazzəthien huon 'iv hammaxāzin.",
+                       "three-{const} {det}-child-{pl} of-{det}-neighbor-{pl} {3pl.nom} in {det}-store",
+                       "The neighbors' three children are at the store."
+    %p Only the numerals '1' and '2' are somewhat exceptional. '2' is also a construct, but unlike other numerals, it shows gender agreement. '1', however, is a true attributive adjective, and so shows full gender, number, and state agreement, and also follows normal adjective ordering rules.
+    = example_sentence "Ου ηέιιεν αττελεв̄ιζιών θαττεί υωρυώς̄.",
+                       "'Ū heyyen hattelevizyān ṯəthī 'uoruoš.",
+                       "{3sg.masc.nom.clitic} watch-{3sg.masc.impf} {det}-television two.{fem}-{const} hour-{pl}",
+                       "He was watching television for two hours."
+    = example_sentence "Αλλούχ αρ̄άδ δε βού ηύνιν βιλέτζε λού αδ̄δ̄εκώ φέв̄γατ ατταβυιιήν ιв̄ αββήτ.",
+                       "Hallūx hařad de bū hunin bileče lū 'aḏḏekā fevgat hattabuyyēn 'iv habbēt.",
+                       "{det}-reason {det}-one-{masc.sg} {sub} come-{3sg.masc.pret} with-{1pl} because_of {3sg.masc.gen} this.{pron}-{masc.sg} avoid-{inf}-{const} {det}-guest-{pl} in {det}-house",
+                       "The only [lit. 'one'] reason he came with us was to avoid the guests at home."
+    %p Numerals can also serve a pronominal function, as in “the two of us”, “the three of you”, “the four of them”, etc. These sorts of quantified pronouns can be formed in several different ways.
+    %p For low numbers (primarily 2-6, although it is grammatical for numbers up to 10), possessive suffixes may be added directly to the construct form of the numeral. These forms take verbal agreement matching the possessive suffix, so that #{t "θινείν/θαττείν", "ṯinīn/ṯəthīn"} “the two of us (m/f)” will take first person plural agreement, for example.
+    %p Another means of forming quantified pronouns which can be used with any numeral is to take the numeral in the determinate state (i.e., the 'counting' form with the definite prefix added) and follow it by a genitive pronoun. This sort of construction will always take third person agreement.
+    = example_sentence "Θαλύττετκαν αττυν τεικαλού в̄αταβείτ ηυνεί μαζμώ ιв̄ αδδιαμηρισμώ.",
+                       "Ṯaluttetkan 'əthun tīkalū vatəbīt hunī mazmā 'iv haddiyamērismā.",
+                       "three-{const}-{2pl.masc} {2pl.masc.nom.clitic} may-{2pl.masc.pres} visit-{2pl.subj.pf} with-{1sg} any_time in {det}-apartment",
+                       "The three of you are welcome to visit my apartment any time."
+    = example_sentence "Αθθαλούτ λάκαν ουν ιεικαλού в̄αταβείτ ηυνεί μαζμώ ιв̄ αδδιαμηρισμώ.",
+                       "Haṯṯalūt lakan 'ūn yīkalū vatəbīt hunī mazmā 'iv haddiyamērismā.",
+                       "{det}-three {2pl.masc.gen} {3pl.nom.clitic} may-{3pl.pres} visit-{2pl.subj.pf} with-{1sg} any_time in {det}-apartment",
+                       "The three of you are welcome to visit my apartment any time."
+
+= section "Pronouns and Proforms" do
+  = section "Personal Pronouns" do
+    %p The full-form nominative and accusative pronouns are generally only seen in three circumstances: disjunction (discussed above in section 20.4.2), marking the arguments of the copula #{t "в̄εί", "vī"}, and marking emphasis.
+    %p If the subject or complement of #{t "в̄εί", "vī"} “be” is a pronoun, it will always appear in its full form, never as a clitic.
+    = example_sentence "Ετζεί βνε Αππυλιτιούς̄ Αμμανενυνυώς̄.",
+                       "'Ečī bne Happulitiyūš Hammanenunuoš.",
+                       "{1sg.nom} from {det}-state-{pl} {det}-be_united-{ptcpl}-{fem.pl}",
+                       "I am from the United States."
+    %p If the subject of a verb is emphasized, the full-form nominative pronoun may appear <em>in addition to</em> the clitic.
+    = example_sentence "Ίσ̄σ̄ε σ̄ι μώρσ̄ε χιώ αδ̄δ̄εκώ!",
+                       "'Išše ši mārše xiyā 'aḏḏekā!",
+                       "{2sg.fem.nom} {2sg.fem.nom.clitic} say-{2sg.fem.pret} to-{1sg} this.{pron}-{masc.sg}",
+                       "You told me that!"
+    %p If the direct object of a verb is emphasized, the full-form accusative pronoun may appear <em>instead of</em> the accusative clitic. This may cause the nominative clitic to reappear in its place, however; compare the following two sentences, one with a non-emphatic object and one with an emphatic object.
+    = example_sentence "Τζι ωηώβ.",
+                       "Či 'āhāb.",
+                       "{2sg.fem.acc.clitic} love-{1sg.pres}",
+                       "I love you."
+    = example_sentence "Τζ' ωηώβ τζιώ.",
+                       "Č 'āhāb čyā.",
+                       "{1sg.nom.clitic} love-{1sg.pres} {2sg.fem.acc}",
+                       "I love you."
+    %p Full-form pronouns are also always used when an adverb is modifying the pronoun. This can be considered a type of emphasis.
+    = example_sentence "Αλού ετζεί τζ' αδρώκ.",
+                       "'Alū 'ečī č 'adrāk.",
+                       "also {1sg.nom} {1sg.nom.clitic} go-{1sg.pres}",
+                       "I too am going."
+
+  = section "Reflexive Pronouns" do
+    %p For the majority of native Semitic roots, reflexive verbs are formed simply by conjugating a root according the <i>nitkatab</i> paradigm. <i>Nitkatab</i> is inherently reflexive, and so requires no external marking of a direct object.
+    = example_sentence "Τζε νιτρώτ ιв̄ ακκάθραττε.",
+                       "Če nitrāt 'iv hakkaṯrəthe.",
+                       "{1sg.nom.clitic} see_oneself-{1sg.pret} in {det}-mirror",
+                       "I saw myself in the mirror."
+    %p However, newer verbs following the concatenating European-type paradigm do not have reflexive forms, nor do quadriconsonantal roots of any origin. These form reflexives periphrastically, by using the reflexive pronoun as the direct object. The reflexive pronoun behaves syntactically as a noun, so it almost always follows the verb and a nominative clitic usually accompanies the verb.
+    = example_sentence "Ει ι'ανεισιχεί υδή ναφσώ в̄ήνερв̄α ναφσώ.",
+                       "'Ī yanīsixī 'udē nafsā vēnerva nafsā.",
+                       "{3sg.fem.nom.clitic} worry-{3sg.fem.pres} too_much self-{3sg.fem} make_nervous-{3sg.subj.pf} self-{3sg.fem}",
+                       "She worries too much and makes herself nervous."
+    = example_sentence "Τα τίβαλβαλ ζδάν υδή άσατιτ νάφσικ.",
+                       "Ta tibalbal zdan 'udē 'asatit nafsik.",
+                       "{2sg.masc.nom.clitic} confuse-{2sg.masc.pres} very too quick-{adv} self-{2sg.masc}",
+                       "You confuse yourself far too easily."
+    %p However, the reflexive pronoun may be used with <i>nitkatab</i> verbs for emphasis. When this is done, the pronoun must be preceded by the nota accusativi #{t "τα", "ta"}, even though it never appears with the reflexive pronoun elsewhere; <i>ta</i> appears to be serving a transitivizing role here, since <i>nitkatab</i> verbs are normally unable to take direct objects.
+    = example_sentence "Ου δήβερ σών χιυμώ, με ου απυκαρδ̄ιώ ναφσού υενίδ̄βαρ̄αθ μιήζ τα ναφσού.",
+                       "'Ū dēber sān xiyumā, me 'ū 'apukarḏiyā nafsū veniḏbařaṯ miez ta nafsū.",
+                       "{3sg.masc.acc.clitic} try-{3sg.masc.impf} teach-{inf} to-{3pl}, but {3sg.masc.nom.clitic} dishearten-{3sg.masc.pret} self-{3sg.masc} and-become_angry-{3sg.masc.pret} instead {acc} self-{3sg.masc}",
+                       "He was trying to teach them, but he just got frustrated and angered himself instead."
+
+  = section "Possessive Pronouns and Suffixes" do
+    %p The main purpose of the genitive pronouns is naturally to indicate possession. However, they also serve a number of dative functions, hence why they were first introduced as the genitive/dative series. In particular, the genitive/dative pronouns are used to mark the indirect objects of verbs of mental state such as “seem”, “look [like]”, “sound [like]”, “interest”, and so on.
+    = example_sentence "Α Αννικλούς ου ιαββείτ λάκ εν κιυ είρεμ μιμμύσαδδαρ;",
+                       "'A Hanniklūs 'ū yabbīt lak 'en kyu 'īrem mimmusəddar?",
+                       "{interr} {det}-Anniklūs {3sg.masc.nom.clitic} seem-{3sg.masc.pres} {2sg.masc.gen} like more quiet-{masc.sg} {part}-usual-{masc.sg}",
+                       "Does Anniklūs seem quieter than usual to you?"
+    = example_sentence "Ουν ιαββιτού λιή εν τυρείστιην.",
+                       "'Ūn yabbitū lie 'en turīstien.",
+                       "{3pl.nom.clitic} seem-{3pl.pres} {1sg.gen} like tourist-{pl}",
+                       "They look like tourists to me."
+    = example_sentence "Αμμαθιματικώ λω ι'εντερεσεί λών βεήμα μυώδ.",
+                       "Hammaṯimatikā lā yenteresī lān be'ēma muod.",
+                       "{det}-mathematics {neg} interest-{3sg.fem.pres} {3pl.gen} by-any manner",
+                       "Mathematics doesn't interest them at all."
+    %p Curiously, with these same verbs, if the indirect object is a noun rather than a person pronoun, the preposition #{t "χι-", "xi-"} is always used, never #{t "λι-", "li-"} as the pronoun would suggest. For instance, modifying example #135 above, the sentence “Mathematics doesn't interest Assufkyā at all” would be rendered #{t "Αμμαθιματικώ λω ι'εντερεσεί Χασσυφκιώ βεήμα μυώδ", "Hammaṯimatikā lā y'enteresī <u>Xassufkyā</u> be'ēma muod"}.
+    %p The possessive suffixes are used to indicate the possessor of a handful of common nouns, particularly kinship terms. However, they are incompatible with nouns that have any other modifier such as a numeral or adjective; in such an environment, genitive pronouns must be used instead.
+    = example_sentence "Αδ̄δ̄ιτζεί αφτετεί.",
+                       "'Aḏḏiči 'aftetī.",
+                       "this.{pron}-{fem.sg} sister-{1sg}",
+                       "This is my sister."
+    = example_sentence "Αδ̄ήλεκ θαττεί ναφτούς̄ λιή.",
+                       "'Aḏēlek ṯəthī naftūš lie.",
+                       "these.{pron}-{pl} two.{fem}-{const} {det}-sister-{pl} {1sg.gen}",
+                       "These are my two sisters."
+
+  = section "Demonstrative Pronouns and Adjectives" do
+    %p Demonstrative pronouns are also fairly noun-like syntactically, in that they cannot ever take the place of clitic pronouns as, for instance, personal pronouns can. They always take third person agreement. The masculine singular is the default form used with an indeterminate referant.
+    = example_sentence "Αδ̄δ̄εκώ ιαββείτ βικαλείττερ, με ανού κιυ τζιππεί.",
+                       "'Aḏḏekā yabbīt bikalīther, me 'anū kyu čippī.",
+                       "this.{pron}-{masc.sg} look-{3sg.masc.pres} by-better-{masc.sg}, but that.{pron}-{masc.sg} more cheap-{masc.sg}",
+                       "This one looks better, but that one is cheaper."
+    = example_sentence "Αδ̄δ̄εκώ μώ δ' αμβρώ.",
+                       "'Aḏḏekā mā d 'ambrā.",
+                       "this.{pron}-{masc.sg} what-{nom} {sub} say-{3sg.fem.pret}",
+                       "That's what she said."
+    %p Demonstrative adjectives, however, have unique behaviors. The noun they modify cannot be in the absolute state; by default they must be in the determinate state. They always precede a noun in the determinate or construct states, unlike typical adjectives, but follow nouns in the partitive state.
+    = example_sentence "Λιδέλε αππαππυτζζιήν ακκαδιννιήν в̄ήιαγγαζ πλέ.",
+                       "Lidele happappuččien hakkadinnien vēyəggaz ple.",
+                       "of-these-{pl} {det}-shoe-{pl} {det}-old-{masc.pl} be_worn_out-{3sg.subj.pf} then",
+                       "These old shoes are [lit. 'have been'] worn out."
+    = example_sentence "Λιδή ιούβιλ υνών в̄ιχτώλ πλέ.",
+                       "Lidē yūbil 'unān vīxtāl ple.",
+                       "of-this-{masc.sg} carrier-{const} {det}-people break_down-{3sg.subj.pf} then",
+                       "This bus has broken down."
+    = example_sentence "Ηαβείνα χιώ μισσουππώ ηεί.",
+                       "Habīna xiyā missūphā hī.",
+                       "give-{2sg.fem.prec} to-{1sg} {part}-soup that-{fem.sg}",
+                       "Could you give me some of that soup?"
+
+  = section "Resumptive Pronouns" do
+    %p Alashian makes frequent use of two types of resumptive pronouns, copular and relative.
+    %p In copular sentences containing the verb “be”, resumptive pronouns are often used whenever the subject noun phrase is considered 'heavy'. More specifically, they may be used when the subject NP:
+    %ul
+      %li Includes a relative clause.
+      %li Is modified by any postposed adjectives (but not if the adjective(s) are exclusively preposed).
+      %li Is compound (i.e., includes the conjunction #{t "υε-", "ve-"} “and”).
+      %li Is a determinate construct (but not if the construct is indeterminate, unless adjectives are postposed).
+    %p The resumptive pronoun simply consists of a third person personal pronoun or demonstrative pronoun matching the subject's gender and number. Personal pronouns are used if the subject is animate, demonstrative pronouns if inanimate.
+    = example_sentence "Νείς δ' άμυς ρώετ ηού αχετώ.",
+                       "Nīs d 'amus rā'et hū 'axetā.",
+                       "{det}-man {sub} yesterday see-{1sg.pret} {3sg.masc.nom} brother-{3sg.fem}",
+                       "The man I saw yesterday is her brother."
+    = example_sentence "Ρωσούς Αππυώλεν Αππανκυωσμεί Νάγδαν αδ̄δ̄ιτζεί в̄ιώ ιв̄ 1914.",
+                       "Rāsūs Happuolen Happankuosmī Nəgdan 'aḏḏiči vyā 'iv 1914.",
+                       "beginning-{const} {det}-war {det}-worldwide-{masc.sg} {det}-first-{masc.sg} this.{pron}-{fem.sg} be-{3sg.fem.pret} in 1914.",
+                       "The beginning of the First World War was in 1914."
+    = example_sentence "Ακκαρφιήν ανναηιβιήν λιή αδ̄ήλεκ ηενώβ υεβατχούς̄.",
+                       "Hakkarfien hannahibien lie 'aḏēlek henāb vebətxūš.",
+                       "{det}-fruit-{pl} {det}-favorite-{masc.pl} {1sg.gen} these.{pron}-{pl} grape-{pl} and-watermelon-{pl}",
+                       "My favorite fruits are grapes and watermelon."
+    = example_sentence "Αδδιαμηρισμώ λιή αδ̄δ̄ιτζεί ηαλ αναλιιώ αθθωλιτκιώ.",
+                       "Haddiyamērismā lie 'aḏḏičī hal 'analiyyā haṯṯālitkyā.",
+                       "{det}-apartment {1sg.gen} this.{pron}-{fem.sg} on {det}-floor {det}-third-{fem.sg}",
+                       "My apartment is on the third floor."
+    %p Resumptive pronouns are also always found in embedded clauses whenever the embedded clause is the object of a preposition in the matrix clause. The Alashian general purpose subordinator #{t "δε", "de"} cannot be preceded by a preposition, so the preposition appears in the embedded clause along with a resumptive personal pronoun or prepositional inflection. An expression such as “the room that I am in” is thus rendered “the room that I am in it”.
+    = example_sentence "Αδ̄δ̄εκώ αв̄в̄ίв̄λε δε καυυήλετ ηύνικ ειρυιού.",
+                       "'Aḏḏekā havvivle de kəwwēlet hunik 'īruyū.",
+                       "this.{pron}-{masc.sg} {det}-book {sub} speak-{1sg.pret} with-{2sg.masc} about-{3sg.masc}",
+                       "This is the book I told you about."
+    = example_sentence "Ακκατάθλιπσε δε νάφαλ λιβού ου ταηαχιήρ σαννώ.",
+                       "Hakkataṯlipse de nafal libū 'ū tahaxier sannā.",
+                       "{det}-depression {sub} fall-{3sg.masc.pret} against-{3sg.masc} {3sg.masc.nom.clitic} last-{3sg.masc.impf} year",
+                       "The depression into which he fell lasted for a year."
+    = example_sentence "Ανυών αγγυβώρ δε ιακκαυυήλ κάλ άρ̄αδ άρ̄δατ βαιιαυανιώ ηαλ αρτζείς λών.",
+                       "'Anuon haggubār de yəkhəwwēl kal 'ařad 'ařdāt bayyawanyā hal 'arčīs lān.",
+                       "those.{pron}-{pl} {det}-mountain-{pl} {sub} speak-{3sg.masc.pres} all-{masc.sg} one only by-{det}-Greek-{fem.sg} on distance {3pl.gen}",
+                       "Those are the mountains beyond which everyone speaks only Greek."
+
+  = section "Pseudo-Pronouns" do
+    %p The use of possessive suffixes with quantifiers or other non-nominal words results in what are termed 'pseudo-pronouns', nominal constructions that have pronominal meaning. One type, numeric pseudo-pronouns, was previously discussed in section 20.5.5. This same formation can be used with other quantifiers, such as #{t "κάλ", "kal"} “all [of]”, #{t "σιλυλλή", "silullē"} “many [of]”, and #{t "κάν", "kan"} “how many [of]”. The syntax is the same as with numerals: forms with possessive suffixes show verbal agreement matching the possessive, while forms with genitive pronouns always show third person agreement.
+  = example_sentence "Σιλυλλήν νω ναμμινού με ισταλв̄άσυα ναλασκιήν ατζζιв̄ερνείς δε λιυμώ.",
+                     "Silullēn nā namminū me yistalvasuwa nalaskyēn haččivernīs de liyumā.",
+                     "heap-{pl}-{1pl} {1pl.nom.clitic} believe-{1pl.pres} {sub} deserve-{3pl.subj.impf} {det}-Alashian-{masc.pl} {det}-government {sub} of-{3pl.emph}",
+                     "Many of us believe the Alashians deserve their own government."
+  = example_sentence "Α κάναν ουν ιουριδού в̄ήκκαυυελ βαττυρτζιώ.",
+                     "'A kanan 'ūn yūridū vēkhəwel batturčiyā?",
+                     "{interr} how_many-{3pl} {3pl.nom.clitic} be_able-{3pl.pres} speak-{3sg.subj.pf} by-{det}-Turkish-{fem.sg}",
+                     "How many of them can speak Turkish?"
+  = example_sentence "Κάλ λών λω ιυούνα γ̄αβιήν καανού λικ в̄ιώφσεδ κάλ μικκασπώ βαστειχίμινατ.",
+                     "Kal lān lā yiwūna ǧabyēn ka'anū lik vyāfsed kal mikkaspā bastīximinat.",
+                     "all {3pl.gen} {neg} be-{3pl.vol} stupid-{masc.pl} such so_that lose-{3pl.subj.pf} all {part}-money by-{det}-gamble-{inf}",
+                     "They all should know better than to waste all their money gambling."
+  = example_sentence "Αμμώζδρε ου καυυήλ ηύνε κάλιν μετώ φάλγ αιιούν.",
+                     "Hammāzdre 'ū kəwwēl hune kalin metā falg hayyūn.",
+                     "{det}-boss {3sg.masc.nom.clitic} speak-{3sg.masc.pret} with-{pl} all-{1pl} after half-{const} {det}-day",
+                     "The boss spoke with all of us after lunch."
+  %p In formal language, pseudo-pronominal forms of #{t "είθ", "'īṯ"} “there is” and #{t "λήθ", "lēṯ"} “there is not” are used as general affirmatives and negatives: #{t "ειθεί/είθ λιή", "'īṯī/'īṯ lie"} “Yes, I am/did/will”, #{t "λήθικ/λήθ λάκ", "lēṯik/lēṯ lak"} “No, you aren't/didn't/won't”, etc. These forms are rarely used in colloquial speech other than in one frozen construction consisting of these + a present participle, emphasizing that an action is taking place right at the present moment or that is going to take place momentarily.
+  = example_sentence "Ειθεί μιτελεφυννώ αππών τ' Αιιούριη.",
+                     "'Īṯī mitelefunnā 'əphān t Hayyūrie.",
+                     "there_is-{1sg} telephone-{ptcpl}-{fem.sg} now {acc} {det}-Ayyūrie",
+                     "I'll go call Ayyūrie right now."
+  = example_sentence "Λήθικ μάκκαυυιλ θάννιτ είρυ αδ̄δ̄εκώ.",
+                     "Lēṯik məkhəwwil ṯannit 'īru 'aḏḏekā.",
+                     "there_is_not-{2sg.masc} speak-{ptcpl}-{masc.sg} again about this.{pron}-{masc.sg}",
+                     "You are not to speak of this again."
+
+= section "Prepositions" do
+  %p In many respects, Alashian prepositions are construct-<em>like</em>, but not necessarily actual constructs. In Old Alashian, there were two classes of prepositions: the clitics—#{t "βι-", "bi-"}, #{t "λι-", "li-"}, #{t "χι-", "xi-"} as in the modern language, plus #{t "κα-", "ka-"} “like, as”—and the constructs. Over time, however, and aided by the development of ADJ-N word order, a third class emerged—the modern primitive prepositions—which have more in common with the clitics than with the constructs.
+  %p Construct prepositions, in both Old and Modern Alashian, form a true nominal construct with their direct object, and this entails all of the usual syntactic properties of constructs; for instance, head-first N-ADJ order is mandatory, since Alashian does not permit adjectives to intervene in the middle of a construct. In contrast, the clitic prepositions and the modern primitive prepositions allow for an unrestricted noun phrase as their object; that is, all of the same rules that govern independent noun phrases, such as the subject or object of a verb, also apply to the object of one of these prepositions. Thus both head-first and head-final word orders are allowed, and even adverbs can intervene between the preposition and object.
+  %p The clitic prepositions behave just as primitive prepositions syntactically, the only difference being that they cannot occur independently. They are always prefixed to the first word of the noun phrase constituting their object, whether it be a noun, adjective, or adverb.
+  %table
+    %tr
+      %th
+      %th Old Alashian
+      %th Modern Alashian
+    %tr
+      %th Clitic
+      %td
+        %span.translit li-bētĭ ḥūdiṯ
+        %br
+        %span.gloss of-house.#{abbrev "abs"} new
+        %br
+        %span.eng “of a new house”
+      %td
+        %span.translit li-řūdiṯ bēt
+        %br
+        %span.gloss of-new house.#{abbrev "abs"}
+        %br
+        %span.eng “of a new house”
+    %tr
+      %th Primitive
+      %td
+      %td
+        %span.translit bne řūdiṯ bēt
+        %br
+        %span.gloss from new house.#{abbrev "abs"}
+        %br
+        %span.eng “from a new house”
+    %tr
+      %th Construct
+      %td
+        %span.translit minē bētĭ ḥūdiṯ
+        %br
+        %span.gloss from.#{abbrev "const"} house.#{abbrev "abs"} new
+        %br
+        %span.eng “from a new house”
+      %td
+        %span.translit miftān bēt řūdiṯ
+        %br
+        %span.gloss outside.#{abbrev "const"} house.#{abbrev "abs"} new
+        %br
+        %span.eng “outside a new house”
+  %p Prepositions do not allow personal pronouns as their objects without some modification. As previously discussed, clitic and primitive prepositions may decline (a remnant of an older clitic pronoun that fused to the preposition), while the construct prepositions incorporate themselves into possessive formations, either with genitive pronouns or with possessive suffixes. For emphasis, clitic prepositions may take their special emphatic/extended forms and primitive prepositions may be followed by disjunctive pronouns; construct pronouns have no form marked as emphatic, although possessive suffixes are markedly non-emphatic.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) This cliticization has occurred in some of the Canaanite languages as well, cf. Modern Hebrew #{t "מבית", "mi-bayit"} “from a house”, #{t "מהבית", "me-ha-bayit"} “from the house”. This usage remains fully prepositional, however, since it can be combined with different states and cannot be preceded by another preposition.
+%p 2) The directional suffix *-a, as in <i>bēta</i> “homeward”, has sometimes been argued to be a survival of the Proto-Semitic accusative, although it is now typically considered to have different origins.
+%p 3) The exact origins of the Alashian accusative pronouns are not entirely clear, since independent accusative pronouns are very poorly attested across the Semitic family. In most Semitic languages, any independent pronouns appear to consist of a prepositional or nominal base with a possessive marker; of the modern Semitic languages, Alashian is unique in having pronouns that appear to be related to the nominative series.
+%p 4) The older Alashian numeral system, which more closely resembles the system seen in other Semitic languages, does have full gender agreement. Their apparent reverse gender marking and atypical endings preclude them from being analyzed as constructs as clearly as modern Alashian numerals can be.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
