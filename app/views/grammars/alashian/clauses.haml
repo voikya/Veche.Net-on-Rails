@@ -1,0 +1,446 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Ριητρούς̄".html_safe
+
+= render :partial => 'navigation'
+
+= section "Simple Sentences and Independent Clauses" do
+  %p The unmarked word order in a simple sentence in Alashian is SVO. Adverbs, including expressions of time and place as well as indirect objects, typically go between the verb and direct object, though clause-final position is possible for emphasis or when the adverbial phrase is too heavy (i.e., any more complicated than a preposition + noun).
+  = example_sentence "Αππάв̄λε ου ιακκώλ σώνδυιτζ.",
+                     "Happavle 'ū yəkhāl sāndwič.",
+                     "{det}-Appavle {3sg.masc.nom.clitic} eat-{3sg.masc.pres} sandwich",
+                     "Appavle is eating a sandwich."
+  = example_sentence "Αιιούριη ου σ̄είν ηαλ ατταв̄λώ ακκώς λού.",
+                     "Hayyūrie 'ū šīn hal hattavlā hakkās lū.",
+                     "{det}-Ayyūrie {3sg.masc.nom.clitic} set-{3sg.masc.pret} on {det}-table {det}-cup {3sg.masc.gen}",
+                     "Ayyūrie set his cup on the table."
+  = example_sentence "Νελενώ ει νιτυαταρώ βαββισείκαλ λών άμυς ούχιρατ ληλυών δυιλ μίκλιδ υαρ̄αμμιή ου γάναβ.",
+                     "Nelenā 'ī nitwatarā babbisīkəl lān 'amus 'ūxirat lēluon dwil miklid vařammie 'ū ganab.",
+                     "{det}-Nelenā {3sg.fem.nom.clitic} leave_by_accident-{3sg.fem.pret} by-{det}-bicycle {3sg.fem.gen} yesterday late-{adv} at_night without key and-someone-{nom} {3sg.masc.acc.clitic} steal-{3sg.masc.pret}",
+                     "Nelenā left her bicycle unlocked late last night and it was stolen."
+  %p VSO and OSV orders are also possible in order to emphasize the verb or direct object respectively, but some with some syntactic quirks. Fronted verbs are never accompanied by preposed clitic pronouns, meaning subject clitics are not used and object clitics must follow the verb. When the direct object is fronted, the verb must be accompanied by a resumptive object clitic (as though the object had been removed from the sentence). Adverbs tend to be clause-final whenever VSO or OSV order is used.
+  = example_sentence "Καταστρεφώ ακκούβ λάκ φάλγε μιββήτ!",
+                     "Katastrefā hakkūb lak falge mibbēt!",
+                     "destroy-{3sg.masc.pret} {det}-dog {2sg.masc.gen} half-{const} {part}-house",
+                     "Your dog destroyed half the house."
+  = example_sentence "Αφφασυώλ ουν ασ̄νώ.",
+                     "Haffasuol 'ūn 'ašnā.",
+                     "{det}-bean-{pl} {3pl.acc.clitic} detest-{1sg.pres}",
+                     "Beans I can't stand."
+  %p VSO order is, however, the unmarked order in older texts such as the Bible. The same rules apply as above.
+  = example_sentence "Βαρρωσούς βάρα Ιλλώ ασσαμή υανάρτζε (Σίφρετ Βαρρωσούς 1:1).",
+                     "Barrāsūs bara 'Illā hassamē vanarče (Sifret Barrāsūs 1:1).",
+                     "by-{det}-beginning create-{3sg.masc.pret} God {det}-heaven and-{det}-earth (volume-{const} Genesis 1:1)",
+                     "In the beginning God created the heavens and the earth. (Genesis 1:1)"
+  %p Note that clitic pronouns are treated as part of the verb phrase, not as autonomous noun phrases. The aforementioned word ordering rules only apply for nouns and full-form pronouns, never clitics. The genitive components of perfect verbs, however, pattern as true subjects.
+  = example_sentence "Λιή в̄αρώ πλέ τ' Αμμαριώ σιλυλλή μιππωνιήν ριδ̄μυώς αττυμυώς̄ ακκαδνεί.",
+                     "Lie varā ple t Hammaryā silullē mippānien riḏmuos hattumuoš həkhadnī.",
+                     "{1sg.gen} see-{1sg.subj.pf} then {acc} {det}-Ammaryā heap-{const.pl} {part}-time-{pl} number-{const} {det}-week-{pl} {det}-preceding-{masc.sg}",
+                     "I have seen Ammaryā many times in the last several weeks."
+
+= section "Compound Sentences and Conjunctions" do
+  %p Compound sentences consist of two or more independent clauses joined by a coordinating conjunction. No word order modifications are required when two simple sentences are joined into a compound sentence other than the insertion of a conjunction in between the two.
+  %p The conjunction <i>ve-</i> (spelled υε-) means “and”, and is used to conjoin both noun and verb phrases. It is a clitic conjunction, and so is written as part of whatever word immediately follows it. It becomes <i>va-</i> (υα-) when immediately followed by /h/ or /ʁ/, with the exception of the definite article <i>ha-</i>, where it remains <i>ve-</i> (likely a dissimilatory phenomenon). In formal usage the form <i>va-</i> is also used immediately before the reduced form of the definite article <i>n-</i> (#{t "υανήν", "vanēn"} “and the eye”), though in practice <i>ve-</i> is heard here in most spoken usage (#{t "υενήν", "venēn"}).
+  = example_sentence "Ει ραχτζώ υειββησώ ασ̄σ̄ώρ.",
+                     "'Ī raxčā veyibbēsā haššār.",
+                     "{3sg.fem.nom.clitic} wash-{3sg.fem.pret} and-dry-{3sg.fem.pret} {det}-hair.{pl}",
+                     "She washed and dried her hair."
+  = example_sentence "Τζε δαφώτ αδδάλ υεαδδάλ ει ναφλώ βνε αμμέντες̄.",
+                     "Če dafāt haddal vehaddal 'ī naflā bne hammenteš.",
+                     "{1sg.nom.clitic} push-{1sg.pret} {det}-door and-{det}-door {3sg.fem.nom.clitic} fall-{3sg.fem.pret} from {det}-hinge",
+                     "I pushed the door and the door fell off its hinges."
+  %p The non-clitic conjunction #{t "τζε", "če"} is also frequently heard for “and”, and exists in free distribution with <i>ve-</i>. It is a direct borrowing of Greek #{t "και", "ke"} “and”.<sup>1</sup>
+  %p The conjunction #{t "ιυ", "yu"} means “or”, both in noun phrases and in verb phrases. Its actual pronunciation varies significantly, with all of /ju ~ u ~ uː ~ ɑː ~ wu ~ wuo/ being heard among different speakers.
+  = example_sentence "Βού в̄άταγ̄αλ βνε αμμάττερ ιυ τα τιλακ в̄εταττατζείλ!",
+                     "Bū vatağal bne hamməther yu ta tilək vetəthačīl!",
+                     "come-{2sg.masc.imper} go_in-{2sg.subj.pf} from {det}-rain or {2sg.masc.nom.clitic} {fut.2sg.masc} catch_a_cold-{2sg.subj.pf}",
+                     "Get out of the rain, or you'll catch a cold!"
+  %p The conjunction #{t "με", "me"} (from Greek #{t "μα", "ma"}) means “but” or “whereas”, and is used to express contrast.
+  = example_sentence "Τζε διήβερ αв̄в̄αηούζ χικυώ, με λω νιτνιήτζζερετ.",
+                     "Če dieber havvahūz xikwā, me lā nitniečheret.",
+                     "{1sg.nom.clitic} try-{1sg.impf} {det}-warn-{inf} to-{2sg.masc}, but {neg} heed-{2sg.masc.impf}",
+                     "I tried to warn you, but you wouldn't listen."
+  %p The reduplicated conjunction #{t "ιν... ιν...", "'in... 'in..."} means “either... or...”. Its negative counterpart is #{t "βλω... βλω...", "blā... blā..."} “neither... nor...”.
+  = example_sentence "Ιν ου ιειδώ τήβατ, ιν ου ιωρή ζδάν τήβατ βαιιαδού.",
+                     "'In 'ū yīdā tēbat, 'in 'ū yārē zdan tēbat bayyadū.",
+                     "either {3sg.masc.nom.clitic} know-{3sg.masc.pres} good-{adv}, either {3sg.masc.nom.clitic} show-{3sg.masc.pres} very good-{adv} by-{det}-know-{inf}",
+                     "He either knows it well, or is very good at pretending to."
+  = example_sentence "Βλω τζ' αργ̄είβ, βλω τζ' αζμώ.",
+                     "Blā č 'arğīb, blā č 'azmā.",
+                     "neither {1sg.nom.clitic} be_hungry-{1sg.pres}, neither {1sg.nom.clitic} be_thirsty-{1sg.pres}",
+                     "I am neither hungry, nor thirsty."
+  %p If both independent clauses share a single subject, it need only be explicitly present in the first clause. Clitic pronouns, however, can never be dropped in this fashion. Similarly, if both clauses share a direct object, it may be mentioned only in the first clause, with an accusative clitic pronoun taking its place in the second clause.
+  = example_sentence "Αμμαριώ ει σβαβώ λαζζώρ υεει в̄ατζαώ μιφτών.",
+                     "Hammaryā 'ī sbabā lazzār ve'ī vača'ā miftān.",
+                     "{det}-Ammaryā {3sg.fem.nom.clitic} turn-{3sg.fem.pret} of-{det}-back and-{3sg.fem.nom.clitic} leave-{3sg.fem.pret} outside",
+                     "Ammaryā turned around and walked out."
+  = example_sentence "Τζε πασσινώτ Χαμμιχώλ αββυώλ υεου σ̄ουτινώ ιв̄ αγγυώλ.",
+                     "Če passināt Xammixāl habbuol ve'ū šūtinā 'iv hagguol.",
+                     "{1sg.nom.clitic} pass-{1sg.pret} to-{det}-Ammixāl {det}-ball and-{3sg.masc.acc.clitic} shoot-{3sg.masc.pret} in {det}-goal",
+                     "I passed the ball to Ammixāl and he kicked it into the goal."
+
+= section "Relative Clauses" do
+  %p The relative clause is one means of joining a subordinate clause to an independent clause, by converting the former into a modifier of a noun phrase in the latter. In such a context, the subordinate clause will often be called the <i>embedded</i> clause, while the independent clause is termed the <i>matrix</i> clause. Alashian subordinate clauses display a number of distinct syntactic behaviors and word orderings not seen in independent clauses.
+  %p Alashian contrasts restrictive and non-restrictive relative clauses, a contrast much like the formal English usage of 'that' and 'which'. Restrictive relative clauses limit the scope of their head (as in “My brother who lives in Athens is named Alexandros”, which has a narrower sense than just “my brother”), while non-restrictive relative clauses behave more like appositives and simply provide supplementary information (as in “My brother, who lives in Athens, is named Alexandros”).
+
+  = section "Restrictive Relative Clauses" do
+    %p Restrictive relative clauses are formed using the complementizer #{t "δε", "de"} “that, who”, which always follows the noun phrase in the matrix clause that it modifies, and precedes the embedded clause. It is not a relative pronoun as seen in many Indo-European languages, but simply a conjunction that links a complete subordinate clause to the outer matrix clause. Consequently, resumptive pronouns are frequently seen in the embedded clause, so that noun phrases such as “the school that I attended” and “the restaurant in which we ate” are rendered “the school that I attended it” and “the restaurant that we ate in it”. In practice, however, resumptive pronouns are rarely used if they are the subject of the embedded verb, and optional if they are the direct object; they are mandatory in all oblique positions.
+    = example_sentence "Τζε νάκαρετ τ' είς δε ικτώβ μιστιριασ̄κιήν ρυμαννιήν.",
+                       "Če nakaret t 'īs de yiktāb mistiryaškyēn rumannien.",
+                       "{1sg.nom.clitic} meet-{1sg.pret} {acc} man {sub} write-{3sg.masc.pres} mystery.{adj}-{masc.pl} novel-{pl}",
+                       "I met a man who writes mystery novels."
+    = example_sentence "Κάλ δε ιμώρ Αννικλούς αδ̄δ̄εκώ ίνναμιν.",
+                       "Kal de yimār Hanniklūs 'aḏḏekā 'innamin.",
+                       "all {sub} say-{3sg.masc.pres} {det}-Anniklūs this.{masc.sg.pron} false-{masc.sg}",
+                       "Everything that Anniklūs says is wrong."
+    = example_sentence "Ου νυαχώδ τ' αππαρρούν δε αμμείν αχχαρατσούς̄ λού.",
+                       "'U nu'axād t happarrūn de 'ammīn haxxarətshūš lū.",
+                       "{3sg.masc.nom.clitic} be_received-{3sg.masc.pret} {acc} {det}-doctor {sub} believe-{1sg.pres} {det}-opinion-{pl} {3sg.masc.gen}",
+                       "He saw a doctor whose opinion I trust."
+    %p As can be seen above, the word order of a subordinate clause differs from that of an independent clause. The primary order is VSO, with nominative clitics always omitted from the verb phrase and accusative clitics always following the verb. However, embedded clauses involving the verb “to be” retain their usual word order.
+    = example_sentence "Ανού νείς δε νάκαρ νι.",
+                       "'Anū nīs de nakar ni.",
+                       "that.{masc.sg.pron} {det}-man {sub} recognize-{3sg.masc.pret} {1sg.acc.clitic}",
+                       "That is the man who recognized me."
+    = example_sentence "Ανεί αв̄в̄αλδώ δε ιδουνεί ηυν ανιστρατώ.",
+                       "'Anī havvaldā de yidūnī hun 'anistratā.",
+                       "that.{fem.sg.pron} {det}-girl {sub} reside-{3sg.fem.pres} with {det}-street",
+                       "That is the girl who lives down the street."
+    %p The subordinating conjunction #{t "δε", "de"} will often reduce to just #{t "δ'", "d"} when the following word begins with a vowel or the definite article. This is nearly universal in speech, and is optional in all written registers.
+    = example_sentence "Αββήτ δ' αδούν ιв̄ού αδ̄δ̄εκώ ζδαν καδείν.",
+                       "Habbēt d 'adūn 'ivū 'aḏḏekā zdan kadīn.",
+                       "{det}-house {sub} reside-{1sg.pres} in-{3sg.masc} this.{masc.sg.pron} very old-{masc.sg}",
+                       "The house I live in is very old."
+
+  = section "Non-Restrictive Relative Clauses" do
+    %p Non-restrictive relative clauses are introduced by proximal demonstrative pronouns, namely <i>'aḏḏekā</i> (masculine singular), <i>'aḏḏičī</i> (feminine singular), and <i>'aḏēlek</i> (plural), agreeing in gender and number with their head noun in the matrix clause.
+    %p Unlike with restrictive relative clauses, no resumptive pronouns may be used in non-restrictive clauses, a consequence of the presence of an actual pronoun as opposed to a generic subordinator such as <i>de</i>. This also means that the accessibility hierarchy becomes a concern in non-restrictive clauses—only the subject and direct object of the embedded clause are accessible from the matrix clause.
+    = example_sentence "Ου ιερ̄λώθ μικκαρφιήν, αδ̄ήλεκ λών в̄είυε ακκαλειττεριήν ηαλ ακλείν λάν.",
+                       "'Ū yeřlāṯ mikkarfien, 'aḏēlek lān vīwe hakkalītherien hal haklīn lan.",
+                       "{3sg.masc.nom.clitic} cultivate-{3sg.masc.pres} {part}-fruit-{pl}, these.{pron} {3pl.gen} be-{3pl.subj.pf} {det}-better-{masc.pl} on {det}-region {1pl.gen}",
+                       "He grows fruit, which I am told is the best in the area."
+    %p Other nouns in the embedded non-restrictive clause may be accessed by inserting the subordinating conjunction <i>de</i> after the demonstrative pronoun and using resumptive pronouns, giving <i>'aḏḏekā de</i>, <i>'aḏḏičī de</i>, and <i>'aḏēlek de</i>. Some more conservative dialects may use these forms in all non-restrictive clauses, including those previously described.
+    = example_sentence "Ισκωδελφετεί, αδ̄δ̄ιτζεί δ' ασσέν λών Αννώ, ηεί ιв̄ αττάκσε ασσωππιτεί.",
+                       "'Iskādelfetī, 'aḏḏičī d hassen lān Hannā, hī 'iv hattakse hassāphitī.",
+                       "female_cousin-{const}-{1sg}, this.{fem.sg.pron} {sub} {det}-name {3sg.fem.gen} {det}-Annā, {3sg.fem.nom} in {det}-class {det}-seventh-{masc.sg}",
+                       "My cousin, who is named Annā, is in the seventh grade."
+
+= section "Substantive Clauses" do
+  = section "Object Clauses" do
+    %p Object substantive clauses are dependent clauses that serve as the direct object complement of a particular transitive verb. In Alashian such clauses are introduced by the complementizer #{t "με", "me"}.
+    = example_sentence "Αδδέμετρε ου χάρας με ανεί ιαυεί ιδεηώ ρωχώ.",
+                       "Haddemetre 'ū xarəs me 'anī yawī yidehā rāxā.",
+                       "{det}-Addemetre {3sg.masc.nom.clitic} decide-{3sg.masc.pret} {sub} that.{fem.sg.pron} be-{3sg.fem.pres} idea bad-{fem.sg}",
+                       "Addemetre decided that it was a bad idea."
+    = example_sentence "Τζ' ηδώ με в̄ούριδ με λω νιλκυ в̄ανατρώ λιματταχιρώ σαηώ.",
+                       "Č 'ēdā me vūrid me lā nilku vənatrā liməthaxirā sahā.",
+                       "{1sg.nom.clitic} know-{1sg.pres} {sub} possible-{masc.sg} {sub} {neg} {fut}-{1pl} see_one_another-{1pl.subj.pf} of-prolonged-{fem.sg} time",
+                       "I know that we may not see each other for a while."
+    %p #{t "Με", "me"} also serves to introduce the complement of an impersonal adjective.
+    = example_sentence "Δε κέσεν με ταλείκ μακκάδδανατ κααδ̄δ̄εκώ.",
+                       "De kesen me talīk məkhəddanat ka'aḏḏekā.",
+                       "{expl} strange-{masc.sg} {sub} grow_dim-{3sg.masc.pret} early-{adv} like_this-{masc.sg}",
+                       "It's odd that it got dark so early."
+    %p Secondary predicates (known also as 'extended objects' in Alashian), marking the state of a direct object when the main predicate verb takes place, are akin to object complement clauses. In older literature and more conservative dialects, they are formed with the structure <span class="pattern">and-complementizer verb</span>. In modern speech a non-finite construction is more common: <span class="pattern">and-by infinitive</span>.
+    = example_sentence "Τζε σιημή μιφτών τα νυλείδ υεμε νιττζιηλεσού.",
+                       "Če siemē miftān ta nulīd veme nitčielesū.",
+                       "{1sg.nom} hear-{1sg.impf} outside {acc} {det}-child.{pl} and-{sub} laugh-{3pl.impf}",
+                       "I heard the children laughing outside."
+    = example_sentence "Τζε σιημή μιφτών τα νυλείδ υεβιμώττατζλας.",
+                       "Če siemē miftān ta nulīd vebimāthəčlas.",
+                       "{1sg.nom} hear-{1sg.impf} outside {acc} {det}-child.{pl} and-by-laugh-{inf}",
+                       "I heard the children laughing outside."
+
+  = section "Predicate Clauses" do
+    %p Predicate clauses are a subclass of substantival clauses that consist of a dependent clause embedded within the complement of a copula. They are introduced with #{t "μώ δε/δ'", "mā de/d"}, which is more or less functionly equivalent to English “that which”.
+    = example_sentence "Αδ̄δ̄εκώ μω δ' αμβρώ Νελενώ χιώ.",
+                       "'Aḏḏekā mā d 'ambrā Nelenā xiyā.",
+                       "this.{masc.sg.pron} what.{nom} {sub} say-{3sg.fem.pret} {det}-Nelenā to-{1sg}",
+                       "That's what Nelenā told me."
+    = example_sentence "Μω δε νίστυσαβ άμυς, αδ̄δ̄εκώ αδ ει-βούρι.",
+                       "Mā de nistusab 'amus, 'aḏḏekā 'ad 'ī-būri.",
+                       "what.{nom} {sub} happen-{3sg.masc.pret} yesterday, this.{masc.sg.pron} still unclear-{masc.sg}",
+                       "What happened yesterday is still unclear."
+
+= section "Adverbial Clauses" do
+  = section "General Structure of Adverbial Clauses" do
+    %p Adverbial clauses are dependent clauses that function as an adverb within the matrix clause, specifying various additional attributes of the main verb. As with other dependent clauses, the adverbial clause is introduced by a subordinating conjunction. However, if the adverbial clause is fronted and appears at the start of the matrix clause, a special “resumptive” conjunction is inserted to indicate the end of the adverbial clause.
+    %p The use of conjunctions in many ways parallels the use of “if” and “then” in English, with “if” being a mandatory conjunction introducing a dependent clause and “then” being an optional conjunction introducing the main clause. As in English, the resumptive “then” is only used if the dependent clause precedes the main clause (i.e., “if X then Y”, never “then Y if X”). However, unlike English, the resumptive conjunction is never optional and is required in many more circumstances than in English.
+
+  = section "Clauses of Time" do
+    %p Clauses of time indicate the chronology of the action in the main clause relative to the action of the adverbial clause. All clauses of time make use of the resumptive conjunction #{t "τυώτε", "tuote"}, which frequently shortens to #{t "τυώτ'", "tuot"} when followed by a vowel sound.
+    %table
+      %tr
+        %th{:colspan => 2} Time Conjunctions
+      %tr
+        %th Alashian
+        %th Meaning
+      %tr
+        %td= t("αδ ιύνδε", "'ad yunde")
+        %td until
+      %tr
+        %td= t("αδ-τζήν", "'ad-čēn")
+        %td as long as
+      %tr
+        %td= t("ιτ ιύνδε", "'it yunde")
+        %td since
+      %tr
+        %td= t("λενώ", "lenā")
+        %td when, after, consequently
+      %tr
+        %td= t("μετώ ιυνδε", "metā yunde")
+        %td after
+      %tr
+        %td= t("τζιήν", "čien")
+        %td when, while
+    %p The distinction between #{t "λενώ", "lenā"} and #{t "μετώ ιυνδε", "metā yunde"}, both translated as “after”, is generally one of causality. <i>Lenā</i> implies that the subsequent action is either a direct consequence of the preceding action or immediately follows it within a single reference frame; <i>metā yunde</i> suggests a greater disconnect, with no necessary causal connection, and the possibility of intervening events between the two actions.
+    = example_sentence "Λενώ νιστυταννού ασσελεβρασιήν τυώτε νω βουνώ βήτα.",
+                       "Lenā nistutannū hasselebrasien tuote nā būnā bēta.",
+                       "after conclude-{3pl.pret} {det}-celebration-{pl} then {1pl.nom.clitic} come-{1pl.pret} homeward",
+                       "After the celebration ended we came home. (i.e., we were there)"
+    = example_sentence "Νω βουνώ βήτα μετώ ιυνδε νιστυταννού ασσελεβρασιήν.",
+                       "Nā būnā bēta metā yunde nistutannū hasselebrasien.",
+                       "{1pl.nom.clitic} come-{1pl.pret} homeward after that conclude-{3pl.pret} {det}-celebration-{pl}",
+                       "We came home after the celebration ended. (i.e., we missed it)"
+
+  = section "Clauses of Place" do
+    %p Clauses of place indicate the location where a particular event happened. The resumptive conjunction is usually #{t "θών", "ṯān"} “there”, although conjunctions indicating direction rather than static location may optionally use forms such as #{t "αδών", "'adān"} “to there” or #{t "θώνα", "ṯāna"} (a now otherwise-defunct adverb originally meaning “to there”).
+    %table
+      %tr
+        %th{:colspan => 2} Place Conjunctions
+      %tr
+        %th Alashian
+        %th Meaning
+      %tr
+        %td= t("δ' ηαλού", "d halū")
+        %td where, wherever
+      %tr
+        %td= t("δ' ιλού", "d 'ilū")
+        %td to wherever
+      %tr
+        %td= t("ηαλ κάλ μακκούν δε", "hal kal məkhūn de")
+        %td wherever
+      %tr
+        %td= t("ηαλ μακκούν δε", "hal məkhūn de")
+        %td where
+      %tr
+        %td= t("μακκούνα δε", "məkhūna de")
+        %td to wherever
+    %p As can be seen in the table above, the majority of place conjunctions are based on the noun #{t "μακκούν", "məkhūn"} “place” plus a relative conjunction, so that “wherever”, for example, is literally expressed as “in each place that”. However, in the spoken language, it is becoming increasingly common to use the short forms #{t "δ' ηαλού", "d halū"} “wherever” and #{t "δ' ιλού", "d 'ilū"} “to wherever”, consisting of declined forms of the prepositions #{t "ηαλ", "hal"} “on” and #{t "ιλ", "'il"} “towards”. Informally these may even be written/pronounced as #{t "δώλυ", "dālu"} and #{t "δείλυ", "dīlu"} respectively.
+    = example_sentence "Νω ναδρικούνα λαδδίννε μακκούνα δε ταχσιρεί.",
+                       "Nā nadrikūna laddinne məkhūna de taxsirī.",
+                       "{1pl.nom.clitic} go-{1pl.vol} for-{det}-dinner to_place {sub} want-{2sg.fem.pres}",
+                       "We can go wherever you want for dinner. (formal)"
+    = example_sentence "Νω ναδρικούνα λαδδίννε δ' ιλού (δείλυ) ταχσιρεί.",
+                       "Nā nadrikūna laddinne d 'ilū (dīlu) taxsirī.",
+                       "{1pl.nom.clitic} go-{1pl.vol} for-{det}-dinner {sub} towards-{3sg.masc} (to_wherever) want-{2sg.fem.pres}",
+                       "We can go wherever you want for dinner. (informal)"
+
+  = section "Clauses of Manner" do
+    %p Clauses of manner indicate how the action in the main clause was performed, either by elaboration or by comparison. The resumptive conjunction used with such clauses is #{t "κάκ", "kak"} “thus”, except for #{t "χήν", "xēn"} “as if”, which uses #{t "φα/φ'", "fa/f"}.
+    %table
+      %tr
+        %th{:colspan => 2} Manner Conjunctions
+      %tr
+        %th Alashian
+        %th Meaning
+      %tr
+        %td= t("έδδε", "'edde")
+        %td like, just as
+      %tr
+        %td= t("λίκ", "lik")
+        %td so that, in order that
+      %tr
+        %td= t("σάν", "san")
+        %td like
+      %tr
+        %td= t("χήν", "xēn")
+        %td as if, as though
+    = example_sentence "Τζ' αλακ в̄άφφαλ έδδε σιμβιήλετ.",
+                       "Č 'alək vaffal 'edde simbielet.",
+                       "{1sg.nom.clitic} {fut.1sg} do-{1sg.subj.pf} just_as advise-{2sg.masc.impf}",
+                       "I'll do just as you advised."
+
+  = section "Clauses of Cause" do
+    %p Clauses of cause indicate the reason or motivation behind an action. The resumptive conjunction for such clauses is #{t "φα", "fa"}, or #{t "φ'", "f"} when followed by a vowel.
+    %table
+      %tr
+        %th{:colspan => 2} Cause Conjunctions
+      %tr
+        %th Alashian
+        %th Meaning
+      %tr
+        %td= t("βαλλούχ δε", "ballūx de")
+        %td because
+      %tr
+        %td= t("βιχαλούφ", "bixalūf")
+        %td because, consequently
+      %tr
+        %td= t("κάδ", "kad")
+        %td because
+      %tr
+        %td= t("λιβού βνε μώτ δε", "libū bne māt de")
+        %td because, considering
+      %tr
+        %td= t("μώ", "mā")
+        %td because, since
+    %p For the most part, all of the above forms are interchangeable as far as semantic considerations are concerned. The main difference is one of register, with <i>kad</i> being the most neutral, <i>mā</i> being rather colloquial, and the phrasal forms more typical of higher styles.
+    = example_sentence "Ου φαηαλού κάκ κάδ υη λων в̄ήθθαρ ου πλε εν ακκαθείκ.",
+                       "'Ū fahalū kak kad wē lān vēṯṯar ū ple 'en hakkaṯīk.",
+                       "{3sg.masc.acc.clitic} do-{3pl.pret} thus because be-{3sg.masc.impf} {3pl.gen} consider-{3pl.subj.pf} {3sg.masc.acc.clitic} then as {det}-duty",
+                       "They did it because they believed it their duty."
+
+  = section "Clauses of Contradistinction" do
+    %p Conjunctions of contradistinction indicate that the action of the main clause is somehow unexpected or incomplete when the information in the adverbial clause is taken into consideration. The resumptive conjunction may be either #{t "φα/φ'", "fa/f"} or #{t "κακ", "kak"} in more or less free variation.
+    %table
+      %tr
+        %th{:colspan => 2} Contradistinction Conjunctions
+      %tr
+        %th Alashian
+        %th Meaning
+      %tr
+        %td= t("ακυών δε", "'akuon de")
+        %td even though
+      %tr
+        %td= t("в̄είν", "vīn")
+        %td although
+      %tr
+        %td= t("δυιλ μάτζζαρ δε", "dwil məčhar de")
+        %td despite, even though
+      %tr
+        %td= t("εί-καδ", "'ī-kad")
+        %td except
+      %tr
+        %td= t("πρά", "pra")
+        %td despite, even though
+    = example_sentence "Ακυών δε ιωστυμειδεί χιώ ναβούδ βηνεί φα τζ' αρτζεί αμμακκαυυούλ ηυνε χαριήν ινείς.",
+                       "'Akuon de yāstumīdī xiyā nabūd bēnī fa č 'arčī hamməkhəwwūl hune xarien 'inīs.",
+                       "even {sub} be_required_of-{3sg.fem.pres} to-{1sg} {det}-work-{inf} between-{1sg} then {1sg.nom.clitic} enjoy-{1sg.pres} {det}-speak-{inf} with-{pl} other-{masc.pl} people.{pl}",
+                       "Even though I'm supposed to work by myself, I enjoy talking with other people."
+
+  = section "Clauses of Comparison" do
+    %p Clauses of comparison express a relation (in terms of 'more' or 'less') between two clauses—often, but not necessarily, with an adverb serving as the standard of comparison. The conjunctions used are <i>kyu [adv] pra</i> “more than” and <i>lətfat [adv] pra</i> “less than”. The resumptive conjunction, though rarely used, is #{t "φα/φ'", "fa/f"}.
+    %p Much of the comparison clause can be elided if the verb in both clauses is identical. If the comparison clause is reduced to just a single pronoun, disjunctive forms will be used.
+    = example_sentence "Ει ημνώ με βενώ υη λου αδ в̄ήρ̄υ κιυ τζείνατ πρα κάλ χάρ.",
+                       "'Ī 'ēmnā me benā wē lū 'ad vēřu kyu čīnat pra kal xar.",
+                       "{3sg.fem.nom.clitic} believe-{3sg.fem.impf} {sub} son-{3sg.fem} be-{3sg.masc.impf} {3sg.masc.gen} still live-{3sg.subj.pf} than all-{masc.sg} other-{masc.sg}",
+                       "She believed her son was still alive more strongly than everyone else."
+    = example_sentence "Ου ιειτζώ ηαλ ανεκσυτερικιώ λάτφατ σίχνιτ πρα ιώ.",
+                       "'Ū yīčā hal aneksuterikyā lətfat sixnit pra yā.",
+                       "{3sg.masc.nom.clitic} go_out-{3sg.masc.pres} on {det}-exterior-{fem.sg} less frequent-{adv} than {1sg.disjunct}",
+                       "He travels abroad for work less often than I do."
+    %p The absence of an adverb results in a comparison of quantity.
+    = example_sentence "Τα τικδ̄ώβ κιυ πρα κάλ άρ̄αδ δ' ακκείρ.",
+                       "Ta tikḏāb kyu pra kal 'ařad d 'əkhīr.",
+                       "{2sg.masc.nom.clitic} lie-{2sg.masc.pres} more than all-{masc.sg} one-{masc.sg} {sub} recognize-{1sg.pres}",
+                       "You lie more than anyone I know."
+    %p When the standard of comparison is “better” or “worse” (the two adjectives with synthetic comparatives in Alashian), it is rendered as #{t "καλείττερατ", "kalītherat"} and #{t "σ̄ιρούττερατ", "širūtherat"} respectively. In other words, the adverbs are formed from the comparative stems. However, unlike adjective comparison, it is not unusual for the adverb κιυ “more” to remain present.
+    = example_sentence "Ου υαμμείλ κιυ καλείττερατ πρα ιωρή.",
+                       "'Ū yammīl kyu kalītherat pra yārē.",
+                       "{3sg.masc.nom.clitic} understand-{3sg.masc.pres} more better-{adv} than show-{3sg.masc.pres}",
+                       "He understands better than he appears to."
+
+= section "Conditional Sentences" do
+  %p The conditional sentence consists of two clauses, the protasis (the condition or 'if' clause) and the apodosis (the result or 'then' clause). As with adverbial clauses, the protasis must always be introduced by a conjunction and the apodosis only if it follows the protasis, with the protasis acting syntactically as a dependent clause and the apodosis as an independent clause.
+
+  = section "Factual Conditionals" do
+    %p A factual conditional sentence is one in which the truth of the protasis is unknown, and it simply follows that if the condition in the protasis is true, then the resulting state described in the apodosis has or will come to pass. The protasis is introduced by the conjunction #{t "μίρ", "mir"} “if” and the apodosis by #{t "φα", "fa"} “then”, which becomes #{t "φ'", "f"} when followed by a vowel. Since the clause introduced by φα is independent, clitic pronouns will generally appear in their usual pre-verbal position.
+    %p The verb in the protasis may appear in the present or present perfect; the present tense form is also used with future meaning, while the present perfect is used for all past tense meanings. The verb in the apodosis is unrestricted and may appear in any indicative mood tense. Notice that a perfect or pluperfect verb in the protasis generally does not need the adverb <i>ple</i> seen in most other positions.
+    = example_sentence "Τζ' αλακ в̄ώτταρτζει μίρ τιβού ηύνεν.",
+                       "Č 'alək vātharčī mir tibū hunen.",
+                       "{1sg.nom.clitic} {fut.1sg} be_pleased-{1sg.subj.pf} if come-{2sg.masc.pres} with-{1pl}",
+                       "I would be pleased if you come with us."
+    = example_sentence "Μίρ λου αβλέ в̄ήκκαλ φα νω νεικώλ βήνεν в̄ανουτζώ.",
+                       "Mir lū 'able vēkhal fa nā nīkāl bēnen vanūčā.",
+                       "if {3sg.masc.gen} already eat-{3sg.subj.pf} then {1pl.nom.clitic} may-{1pl.pres} between-{1pl} leave-{1pl.subj.pf}",
+                       "If he has already eaten, we can go by ourselves."
+    = example_sentence "Αιήδνα λιη μίρ τειτζαεί μακκάδδανατ.",
+                       "'Ayēdna lie mir tīča'ī məkhəddanat.",
+                       "inform-{2sg.fem.prec} {1sg.gen} if leave-{2sg.fem.pres} early-{adv}",
+                       "Let me know if you leave early."
+    %p The apodosis may also appear in the volitive as described previously in section 19.3.3 when the action both takes place in the future and is viewed by the speaker in a positive light.
+    = example_sentence "Μίρ μιφτών υδή ρ̄ούν φα τζε в̄ουτάραννα ιв̄ αββήτ.",
+                       "Mir miftān 'udē řūn, fa če vūtaranna 'iv habbēt.",
+                       "if outside too hot-{masc.sg} then {1sg.nom.clitic} stay-{1sg.vol} in {det}-house",
+                       "If it's too hot outside, I should stay home."
+    %p The factual conditional structure, with both the protasis and apodosis in the present tense, is also used for universal conditionals, which state that the result clause always has and always will follow from the condition. In such cases #{t "μίρ", "mir"} can often be translated as “whenever” or “every time” in addition to “if”.
+    = example_sentence "Τα τούκαλ παχεί в̄ατασώλ λιη μίρ ιαμειδεί ασσώδ.",
+                       "Ta tūkal paxī vatasāl lie mir yamīdī hassād.",
+                       "{2sg.masc.nom.clitic} may-{2sg.masc.pres} always ask-{2sg.subj.pf} {1sg.gen} if be_necessary-{3sg.fem.pres} {det}-help-{inf}",
+                       "You can always ask me if you need help."
+    %p When the verb of the protasis is negated, the conjunction <i>mir</i> and the negative <i>lā</i> fuse into a single word #{t "ιλλώ", "'illā"} “if not”.<sup>2</sup>
+    = example_sentence "Ιλλώ ιειδαηεί υώφτατ μινακείλ φα τα τιλακ в̄ετατταμείλ.",
+                       "'Illā yīdahī 'uoftat minakīl fa ta tilək vetəthamīl.",
+                       "if_not know-{3sg.fem.pres} cook-{inf}-{const} {part}-food.{pl} then {2sg.masc.nom.clitic} {fut.2sg.masc} take_care_of_oneself-{2sg.subj.pf}",
+                       "If she can't cook, you'll have to fend for yourself."
+    = example_sentence "Ιλλώ τειδώ ασσέντε φα τα τισώλαννα τσώς λιρ̄αμμιή!",
+                       "'Illā tīdā hassente fa ta tisālanna tsās liřammie!",
+                       "if_not know-{2sg.masc.pres} {det}-path then {2sg.masc.nom.clitic} ask-{2sg.masc.vol} just of-someone",
+                       "If you don't know the way, you should just ask!"
+
+  = section "Counterfactual Conditionals" do
+    %p A counterfactual conditional sentence describes a hypothetical state. The condition in the protasis is untrue or unlikely, and the result clause describes what supposedly would have happened if the condition had been true. The protasis is introduced by the conjunction #{t "λού", "lū"} “if” and the apodosis by #{t "φα/φ'", "fa/f"} “then”.
+    %p The protasis may appear in the present, present perfect, or pluperfect, while the apodosis may appear in any indicative mood tense.
+    = example_sentence "Λού ιίαρρακ ου ακυών φα λώ αμμείν ου.",
+                       "Lū yiyərrak 'ū 'akuon fa lā 'ammīn 'ū.",
+                       "if swear-{3sg.masc.pres} {3sg.masc.acc.clitic} even then {neg} believe-{1sg.pres} {3sg.masc.acc.clitic}",
+                       "Even if he were to swear it I would not believe him."
+    = example_sentence "Λού ιθθυλώγ φα νω νειτζαού λισκείινγατ.",
+                       "Lū yiṯṯulāg fa nā nīča'ū liskīyingat.",
+                       "if snow-{3sg.masc.pres} then {1pl.nom.clitic} go_out-{1pl.pres} of-ski-{inf}",
+                       "If it were to snow we could go skiing."
+    = example_sentence "Λού λιη в̄ούτιρ ιв̄ αββήτ φα λιη λώ в̄ωτρώκ.",
+                       "Lū lie vūtir 'iv habbēt fa lie lā vātrāk.",
+                       "if {1sg.gen} stay-{1sg.subj.pf} in {det}-house then {1sg.gen} {neg} fall_sick-{1sg.subj.pf}",
+                       "If I had stayed home I would not have gotten sick."
+    %p When the verb of the protasis is negated, the conjunction #{t "λου", "lū"} and the negative #{t "λω", "lā"} fuse into a single word #{t "λυλλώ", "lullā"} “if not”.
+    = example_sentence "Λυλλώ υη в̄είυε πυώλεν φα λαν λώ в̄αναππούγ πλε βνε νάρτζε.",
+                       "Lullā wē vīwe puolen fa lan lā vanəphūg ple bne narče.",
+                       "if_not be-{3sg.masc.impf} be-{3sg.subj.pf} war then {1pl.gen} {neg} flee-{1pl.subj.pf} then from {det}-country",
+                       "If there hadn't been a war we wouldn't have fled the country."
+    = example_sentence "Λυλλώ υη в̄άιαιιες̄ άμυς αστήγ φ' αββήτ λαν λου πλε в̄ήττασταφ μετώ αττέμπετζε αλληλυννεί.",
+                       "Lullā wē vayəyyeš 'amus hastēg f habbēt lan lū ple vēthastaf metā hattempeče hallēlunnī.",
+                       "if_not be-{3sg.masc.impf} fix-{1sg.subj.pf} yesterday {det}-roof then {det}-house {1pl.gen} {3sg.masc.gen} then be_flooded-{3sg.subj.pf} after {det}-storm {det}-occurring_overnight-{masc.sg}",
+                       "If I hadn't fixed the roof yesterday, our house would have flooded after the storm overnight."
+
+= section "Interrogative Sentences" do
+  = section "Direct Questions" do
+    %p Interrogative sentences can be formed in three ways: with an interrogative pronoun, with an interrogative particle, or with interrogative word order.
+    %p Interrogative pronouns (as described previously) generally appear at the start of the sentence, no matter their usual syntactic role. If multiple interrogative words are present in a single sentence, generally only one is fronted, while the other remains in situ.
+    = example_sentence "Μιή ου ιαδρείκ αδ ήκα;",
+                       "Mie 'ū yadrīk 'ad 'ēka?",
+                       "who.{nom} {3sg.masc.nom.clitic} go-{3sg.masc.pres} towards where",
+                       "Who is going where?"
+    %p Yes/No questions can be formed either with the interrogative particle #{t "α", "'a"} (dialectically #{t "ηα", "ha"}) or a change in word order. When the interrogative particle is used, it appears in absolute clause-initial position, while the rest of the clause appears in its normal indicative-mood order. This is accompanied by a rising intonation.
+    %p Alternatively, if <i>'a</i> is not used, interrogative mood can also be marked by a change to a VSO (verb-subject-object) word order alongside rising intonation.
+    = example_sentence "Α τ' άχαδ̄τα αβλέ σιμв̄υώλιυν ενείτζινατ λιρ̄ουδιθώ διαμηρισμώ;",
+                       "'A t 'axaḏta 'able simvuolyun 'enīčinat liřūdiṯā diyamērismā?",
+                       "{interr} {2sg.masc.nom.clitic} take-{2sg.masc.pret} already contract-{const} rent-{inf} of-new-{fem.sg} apartment",
+                       "Did you sign the lease for a new apartment yet?"
+
+  = section "Indirect Questions" do
+    %p Indirect questions only require a conjunction if the entire clause is being questioned. In this case, the conjunction #{t "αν", "'an"} “whether” is used, and the question appears in a dependent clause.
+    = example_sentence "Τζ' αττασώλ αν ιλακ αλλήλ в̄ημματτώρ.",
+                       "Č 'əthasāl 'an yilək hallēl vēmməthār.",
+                       "{1sg.nom.clitic} wonder-{1sg.pres} whether {fut.3sg.masc} tonight rain-{3sg.subj.pf}",
+                       "I wonder whether it will rain tonight."
+    %p If the question contains an interrogative pronoun of some sort, it can be incorporated as-is with no conjunction at all.
+    = example_sentence "Μαρεί χιώ, μείτ ακάννηνα ου.",
+                       "Marī xiyā, mīt 'akənnēna 'ū.",
+                       "say-{fem.sg.imper} to-{1sg}, who.{acc} invite-{1sg.vol} {3sg.masc.acc.clitic}",
+                       "Tell me who to invite."
+    = example_sentence "Αμμαριώ ει σωλώ λιη, έδα τείπ είς ιυή.",
+                       "Hammaryā 'ī sālā lie, 'eda tīp 'īs yiwē.",
+                       "{det}-Ammaryā {3sg.fem.nom.clitic} ask-{3sg.fem.pret} of-{1sg}, what_kind type-{const} man be-{3sg.masc.pres}",
+                       "Ammaryā asked me what kind of a man he was."
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) <i>Če</i> does, however, have a few distinct non-coordinating functions that <i>ve-</i> does not; for instance, it will occasionally intervene between the main and secondary verb in two-verb constructions with no apparent change in overall meaning, much like <i>lik</i>: #{t "Τζ' αχσείρ τζε в̄ήδρικ", "Č 'axsīr če vēdrik"} “I want him to go” in place of <i>Č 'axsīr [lik] vēdrik</i>.
+%p 2) Etymologically speaking, ιλλώ is unrelated to μίρ, but instead traces back to an older, now-defunct conjunction #{t "ιν/ιεν", "'in/yen"}.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

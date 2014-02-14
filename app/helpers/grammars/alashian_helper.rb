@@ -15,6 +15,7 @@ module Grammars
       'ABS' => "Absolute State",
       'ACC' => "Accusative",
       'ACT' => "Active",
+      'ADJ' => "Adjective",
       'ADV' => "Adverb",
       'CLITIC' => "Clitic Pronoun",
       'CONST' => "Construct State",
