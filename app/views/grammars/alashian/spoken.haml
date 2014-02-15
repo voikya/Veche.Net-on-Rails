@@ -1,0 +1,390 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αλλασούν Ναλασκιώ Αμμακκαυυαλώ".html_safe
+
+= render :partial => 'navigation'
+
+= section "Alashian Dialectology" do
+  %p Alashian falls into two geographically-separated dialect groups: the northern group along the northern coastline of Cyprus, and the southern group in along the southeast coastline centered at Larnaka. Although the northern dialects span a significantly larger territory than the southern dialects, the populations speaking each are close in number, due to much denser settlement in the south.
+  %p The most significant differences between dialects are phonological and lexical. Although some variation does exist, the morphological and syntactic differences are considerably smaller.
+
+= section "Northern Alashian Dialects" do
+  %p The Northern Alashian Dialects span a wide geographical territory, covering the entire northern coastline of Cyprus as well as a number of interior areas. Consequently, it can be divided into several subdialects: northwestern (centered around Soli and in the Troodos Mountains), northeastern (centered around the Karpass Peninsula), and central (spoken throughout the Kyrenia Range and the lowlands, centered on Kyrenia). Standard Alashian is based on the central dialect of Kyrenia.
+
+  = section "Central Dialect Speech" do
+    %p Due to the nature of standard Alashian, central dialect speech is mostly identical to the standard. The chief exceptions are considered more as colloquialisms than as regionalisms, since many of these features are also heard in colloquial speech from throughout the Alashian-speaking territory.
+    %p Alashian vowels are fairly unstable. A short vowel in the syllable immediately following a stressed vowel is highly prone to dropping. This results in compensatory lengthening of the stressed vowel.
+    %ul
+      %li #{t "κάβιδ", "kabid"} “tired” → #{t "κώβδ", "kābd"}
+      %li #{t "μάλεκ", "malek"} “king” → #{t "μώλκ", "mālk"}
+      %li #{t "ασσάβατ", "hassabat"} “Saturday” → #{t "ασσώπτ", "'assāpt"}
+      %li #{t "ρ̄άλιβ", "řalib"} “milk” → #{t "ρ̄ώλβ", "řālb"}
+      %li #{t "ηέδαφ", "hedaf"} “ground” → #{t "ήτφ", "'ētf"}
+    %p Hyperlong vowels (i.e., an original long vowel that underwent such lengthening) either shorten or break into diphthongs: <i>āā</i> → [ɑː], <i>ēē</i> → [ie], <i>īī</i> → [ɛɪ], <i>ūū</i> → [uo].
+    %ul
+      %li #{t "κούτιβ", "kūtib"} “writing” → #{t "κυώτπ", "kuotp"}
+      %li #{t "πυλείτικ", "pulītik"} “politician” → #{t "πυλειίτκ", "puleytk"}
+      %li #{t "κούνεν", "kūnen"} “pencil” → #{t "κυώνν", "kuonn"}
+    %p Vowels immediately preceding a stressed vowel may also be dropped, although this never results in compensatory lengthening.
+    %ul
+      %li #{t "σαμή", "samē"} “sky” → #{t "σμή", "smē"}
+      %li #{t "σιφρώ", "sifrā"} “volume” → #{t "σφρώ", "sfrā"}
+      %li #{t "μεδινώ", "medinā"} “city” → #{t "μεδνώ", "mednā"}
+      %li #{t "ιζούρ", "'izūr"} “belt” → #{t "ζζούρ", "zzūr"}
+      %li #{t "γαζήτ", "gazēt"} “newspaper” → #{t "γζήτ", "gzēt"}
+    %p Consonants are by and large more stable. The most prominent loss in colloquial speech is /h/ and /ʔ/, both of which disappear in all positions except when immediately preceding a stressed vowel.
+    %ul
+      %li #{t "μαακώλ", "ma'akāl"} “dining room” → #{t "μωκώλ", "mākāl"}
+      %li #{t "τίαηαβ", "ti'ahab"} “lover” → #{t "τίωβ", "tiāb"}
+      %li #{t "σωηούν", "sāhūn"} “teacher” → #{t "σωούν", "sāūn"}
+      %li #{t "ραηείβ", "rahīb"} “size” → #{t "ρείβ", "rīb"}
+    %p Initial glottal stop or /h/ + unstressed short vowel is often lost, resulting in gemination of the following consonant.
+    %ul
+      %li #{t "αθείρ", "'aṯīr"} “honorable” → #{t "θθείρ", "ṯṯīr"}
+      %li #{t "αππών", "'əphān"} “now” → #{t "ππών", "pphān"}
+      %li #{t "αλασεί", "'alasī"} “Alashian” → #{t "λλασεί", "llasī"}
+    %p Fricatives and affricates voice when immediately before a liquid or nasal consonant.
+    %ul
+      %li #{t "ρ̄υφνώ", "řufnā"} “handful” → #{t "ρ̄υв̄νώ", "řuvnā"}
+      %li #{t "ηάσ̄ρε", "hašre"} “ten” → #{t "ηώζζρ", "hāžr"}
+      %li #{t "σίχνιτ", "sixnit"} “often” → #{t "σείγ̄νατ", "sīǧnət"}
+      %li #{t "τασλαιιώ", "təslayyā"} “prayer” → #{t "δζλαιιώ", "dzlayyā"}
+    %p The consonant /l/ lenites to [j] when followed by /i(ː)/; the sequence /lj/ becomes [jj].
+    %ul
+      %li #{t "μιλιούν", "milyūn"} “million” → #{t "μιούν", "myūn"}
+      %li #{t "σκυλιώ", "skulyā"} “school” → #{t "σκυιιώ", "skuyyā"}
+      %li #{t "καλεί", "kalī"} “each” → #{t "κιεί", "kyī"}
+      %li #{t "μυλείκ", "mulīk"} “twilight” → #{t "μυιείκ", "muyīk"}
+    %p Most morphological forms remain largely intact, simply showing the results of the above phonological changes with few systemic alterations. One systemic change that has taken place, however, is the generalization of <i>-kyā</i> as the feminine singular <i>nisba</i> suffix, whereas originally the [c] only appeared when the adjective stem ends in a voiceless consonant.
+    %ul
+      %li #{t "αλασκιώ", "'alaskyā"} “Alashian” → #{t "λλασκιώ", "llaskyā"}
+      %li #{t "τζιπριώ", "čipriyā"} “Cypriot” → #{t "τζιπρικιώ", "čiprikyā"}
+      %li #{t "κουλιώ", "kūlyā"} “loud” → #{t "κουλκιώ", "kūlkyā"}
+
+  = section "Northwest Dialect Speech" do
+    %p The northwest dialects share much in common with the central dialects. They are known primarily for their more conservative lexicon which has a higher percentage of Semitic words in common use and fewer Greek loans, aside from more modern terminology that has no Semitic equivalent: #{t "μαλκούτ", "malkūt"} “state, country” (standard Alashian #{t "πυλειτιώ", "pulītiyā"}), #{t "μιρώ", "mirā"} “mirror” (standard Alashian #{t "κάθραττε", "kaṯrəthe"}), #{t "βάρακ", "barak"} “to bless” (standard Alashian #{t "εв̄λυωιώ", "'evluoyā"}), etc.
+    %p Northwestern speech also tends to conserve a number of palatalization-induced consonant alternations that have been levelled out in other dialects:
+    %ul
+      %li #{t "βήτ", "bēt"} “house” → #{t "βησιήν", "bēsien"} “houses” (standard <i>bēt</i>, <i>bētien</i>)
+      %li #{t "μόλκ", "mōlk"} “king” → #{t "μολτζιήν", "mōlčien"} “kings” (standard <i>malek</i>, <i>malekien</i>)
+      %li #{t "Αμβρικώ", "'Ambrikā"} “America” → #{t "αμβριτζεί", "'ambričī"} “American” (standard <i>'Amerikā</i>, <i>'amerikawī</i>)
+      %li #{t "в̄λήδ", "vlēd"} “infant” → #{t "в̄λεδζιήν", "vledzien"} “infants” (standard <i>vulēd</i>, <i>vuleddien</i>)
+      %li #{t "θλούτ", "ṯlūt"} “three” → #{t "θολσεί", "ṯōlsī"} “third” (standard <i>ṯalūt</i>, <i>ṯālitī</i>)
+    %p Northwestern speech does contain a few innovative features as well. Two of the most distinctive features are the definite article <i>'e(n)-</i> instead of standard <i>ha-/n-</i> (e.g., #{t "εββήτ", "'ebbēt"} “the house” for standard #{t "αββήτ", "habbēt"}, #{t "ενείς", "'enīs"} “the man” for standard #{t "νείς", "nīs"}) and the rounding of /ɑː/ to [ɒː] before voiced consonants, usually transcribed as <i>ō</i> (e.g., #{t "σολώ", "sōlā"} “question” for standard #{t "σωλώ", "sālā"}, #{t "φόν", "fōn"} “face” for standard #{t "φών", "fān"}).
+
+  = section "Northeast Dialect Speech" do
+    %p The northeastern dialects are distinguished primarily by a number of phonological peculiarities. Most distinctive is the complete lack of aspiration, with all aspirated consonants merging with their non-aspirated counterparts: #{t "λακυννώ", "ləkunnā"} “kiss” (standard #{t "λακκυννώ", "ləkhunnā"}), #{t "βάτσαλ", "bətsal"} “onion” (standard #{t "βάτσαλ", "bətshal"}), #{t "απών", "'əpān"} “now” (standard #{t "αππών", "'əphān"}).
+    %p The northeast also has a minor vowel shift, where long /ɛː/ in checked syllables is diphthongized into /ie/, as in #{t "βιήτ", "biet"} “house” (standard #{t "βήτ", "bēt"}). This often results in a new ē/ie alternation, as in <i>tieb</i> “good (m. sg.)” vs. <i>tēbā</i> “good (f. sg.)”.
+    %p Some speakers in the northeast lose final nasal consonants in many inflectional endings, a trait shared with southern dialects: #{t "κουβιή", "kūbie"} “dogs” (standard #{t "κουβιήν", "kūbien"}).
+
+= section "Southern Alashian Dialects" do
+  %p The Southern Alashian dialects show significantly more divergence from the standard than any of the northern dialects. This is in large part due to their historical and geographic separation from northern Alashians. While South Alashian does not have a standardized literary form, its usage in the south is quite widespread outside of professional contexts.
+
+  = section "Phonology" do
+    %p Southern Alashian has a very different sound and cadence from the standard language. A number of features of the colloquial northern dialects—such as the loss of short vowels in syllables immediately preceding or following the stress and loss of unstressed /h/ and /ʔ/—are also present in the south.
+    %p One of the most significant phonological differences is that South Alashian has lost all contrastive vowel length in unstressed syllables. All unstressed long vowels are shortened. This in turn has triggered some analogical levelling in (primarily verbal) paradigms, where a complex alternation of stress and vowel length had emerged that strongly lent itself to certain paradigmatic changes. One example is the complete generalization of short stem vowels in the <i>katab</i> present tense, so that southern speakers now say #{t "άκταβ", "'aktab"} rather than #{t "ακτώβ", "'aktāb"}.
+    %p Southern Alashian also lacks the diphthongs /ie/ and /uo/ that are so typical of northern speech. Where these phonemes exist in the north, /iː/ and /oː/ are typically seen in the south. The vowel system is thus a much more balanced six-vowel system /ɑ(ː) ɛ(ː) i(ː) o(ː) u(ː) ə/, where short /o/ results almost entirely from loan words.
+    %p Word-final short vowels are also prone to loss, although these are not particularly common in Alashian in general: #{t "νάφς", "nafs"} “breath” (standard #{t "νάφσε", "nafse"}), #{t "в̄άτζ", "vač"} “he left” (standard #{t "в̄άτζα", "vača"}). If this lost vowel was /i/, this may trigger vowel raising in the previous syllable; this is most noticeable in the second-person singular feminine preterite and imperfect, which in Old Alashian was marked with *-ši: #{t "κάτεφς̄", "katefš"} “you asked” (standard #{t "κάταв̄σ̄ε", "katavše"}), #{t "κείτφις̄", "kītfiš"} (standard #{t "κιήτεв̄ες̄", "kieteveš"}). When the loss of a short vowel results in a geminate or aspirated consonant becoming word-final, it undergoes simplification: #{t "άτ", "'ət"} “you” (standard #{t "άττα", "'ətha"}).
+    %p As far as consonants are concerned, Southern Alashian completely lacks /h/ and /ʁ/. As previously mentioned, historical /h/ was lost in all unstressed syllables. All remaining /h/ subsequently underwent fortition, becoming /x/: #{t "χχούβ", "xxūb"} “love” (standard #{t "αηούβ", "'ahūb"}, colloquial central #{t "ηηούβ", "hhūb"}).
+    %p /ʁ/, on the other hand, has transformed into a number of different consonants. Word-initially or in C_V position, it has become /w/: #{t "υούν", "wūn"} “hot” (standard #{t "ρ̄ούν", "řūn"}). In intervocalic position, it becomes /γ/: #{t "άγ̄δ", "'aǧd"} “one” (standard #{t "άρ̄αδ", "'ařad"}). Word-finally or syllable-finally, it disappears entirely and lengthens the previous vowel if it can be lengthened. However, if the newly-lengthened vowel is unstressed, it once again undergoes shortening due to Southern Alashian's loss of the length distinction in unstressed syllables. This has the effect of restoring unstressed word-final vowels, as in #{t "μίγλα", "migla"} “razor” (standard #{t "μίγλαρ̄", "miglař"}, via an intermediate stage #{t "μίγλω", "miglā"}); compare the preserved length in #{t "μούδαθ", "mūdaṯ"} “age” (standard #{t "μύρ̄δαθ", "muřdaṯ"}).
+    %p Final nasal consonants are almost universally lost except in monosyllabic words: #{t "κυββεί", "kubbī"} “dogs” (standard #{t "κουβιήν", "kūbien"}). In monosyllables, loss is rare in nominal or verbal stems, and optional but common in adverbial and other 'grammatical' words. Clitics are treated as part of whatever word they are phonetically associated with, so final nasals will be kept in proclitics but lost in enclitics.
+
+  = section "Morphology and Syntax" do
+    %p Southern Alashian dialects have a number of morphosyntactic pecularities as well.
+    %p In the realm of verbs, Southern Alashian marks the second person in prefixed conjugations (i.e., the present tense) with <i>sV-</i> rather than standard <i>tV-</i>. This also affects a number of derived forms, such as the second person future auxiliaries #{t "σικ", "sik"} (m. sg., standard <i>tilək</i>), #{t "σιτζ", "sič"} (f. sg., standard <i>tilki</i>), and #{t "σιγ", "sig"} (pl, standard <i>tilku</i>).
+    %p The prefixing perfective subjunctive, however, does not show any of this, since it is entirely absent. Southern Alashian uses present participles in place of the perfective subjunctive in complex verbal constructions, and the imperfective subjunctive in all other cases (where it has essentially become the only subjunctive tense). The participles show gender and number agreement with their subject, except in the perfect and pluperfect tenses, where they agree with their direct object or, if there is no direct object, their subject. The resulting situation resembles a very basic sort of split-ergativity.
+    = example_sentence "Κυν ακ αμμώ ραώ!",
+                       "Kun ak 'ammā ra'ā!",
+                       "{2pl.masc.acc.clitic} {fut.1sg} tomorrow see-{pres.ptcpl}-{fem.sg}",
+                       "I (f) will see you (m pl) tomorrow!",
+                       :comment => "<br>Standard <span class=\"translit\">Kun 'alək hammāř varā!</span>"
+    = example_sentence "Υι λεί άνς ραιεί κυ!",
+                       "Wi lī 'ans rayī ku!",
+                       "be-{3sg.masc.impf} {1sg.gen} yesterday see-{pres.ptcpl}-{masc.pl} {2pl.masc.acc.clitic}",
+                       "I (f) have seen you (m pl) yesterday!",
+                       :comment => "<br>Standard <span class=\"translit\">Wē lie 'amus varā kun!</span>"
+    = example_sentence "Υι λεί πλε υυικιώ θώ!",
+                       "Wi lī ple wwikyā ṯā!",
+                       "be-{3sg.masc.impf} {1sg.gen} then be-{pres.ptcpl}-{fem.sg} there",
+                       "I (f) have been there!",
+                       :comment => "<br>Standard <span class=\"translit\">Wē lie ple vāwe ṯān!</span>"
+    %p The nominal system, interestingly, shows a number of stronger Indo-European influences than seen in Northern Alashian. The two main external plural suffixes are masculine <i>-ī</i> (standard <i>-ien</i>) and feminine <i>-ēs</i> (standard <i>-uoš</i>). The masculine form is expected given correspondences, but the feminine is very much unexpected; it appears to be the result of contamination by Romance-type plurals ending in -s, with the oldest attestations all being Romance loan words: #{t "τζερώ", "čerā"} “chair” → #{t "τζερής", "čerēs"} “chairs” (standard <i>čēruoš</i>), #{t "ταв̄λώ", "tavlā"} “table” → #{t "ταв̄λής", "tavlēs"} “tables” (standard <i>tavlūš</i>). This sort of plural has now been generalized to all feminine nouns ending in <i>-ā</i>.
+    %p Southern Alashian also has attempted to make sense out of the unusual pattern of feminine singular agreement for nouns with internal ('broken') plurals. Whereas northern speech has a number of internal plurals that are semantically plural but morphologically singular (e.g., #{t "γ̄ήναν", "ǧēnan"} “cloud” → #{t "γ̄ενών", "ǧenān"} “clouds”), southern speech usually augments such plurals with the suffix #{t "-ιώ", "-yā"}: #{t "γ̄ήνα", "ǧēna"} → #{t "γ̄νανιώ", "ǧnanyā"}. This suffix, Greek in origin, has the dual effect of both marking internal plurals as morphological plurals, and doing so with a suffix that appears like the feminine singular, thereby rationalizing feminine singular agreement. This type of plural marking is not used for all internal plurals, however: it is not used with animate nouns (which take masculine plural agreement) or when the singular already ends in <i>-ā</i><sup>1</sup>.
+    %p The southern dialects also have a distinctive definite article, demonstrative in origin: #{t "δα", "da"} (masculine singular), #{t "δι", "di"} (feminine singular), and #{t "(δε)λα", "(de)la"} (plural). Unlike the inherited definite prefix <i>ha-</i> of standard Alashian, the <i>da</i>/<i>di</i>/<i>(de)la</i> forms are free morphemes that are located at the beginning of the noun phrase. However, the older article (realized as <i>'a-</i> or simply gemination of the following consonant) still is required in some circumstances, such as definite adjective agreement and on the noun following a noun in the construct state: #{t "δα βήτ αδρώβ", "da bēt 'adrāb"} “the big house” (standard <i>habbēt hadrāb</i>), #{t "λα τενκεί ββυιώ", "la tenkī bbuyā"} “the paint cans” (standard <i>tenekē habbuyā</i>).
+
+= section "A Comparison" do
+  %p For demonstrative purposes, the following chart shows the partial conjugation of the verb <i>katab</i> “write” in each of the major dialect groups.
+  %table
+    %tr
+      %th{:colspan => 9} The Present Tense
+    %tr
+      %th
+      %th 1 Sg
+      %th 2 Sg M
+      %th 2 Sg F
+      %th 3 Sg M
+      %th 3 Sg F
+      %th 1 Pl
+      %th 2 Pl
+      %th 3 Pl
+    %tr
+      %th Standard
+      %td= t("ακτώβ", "'aktāb", :linebreak => true)
+      %td= t("τικτώβ", "tiktāb", :linebreak => true)
+      %td= t("τικταβεί", "tiktabī", :linebreak => true)
+      %td= t("ικτώβ", "yiktāb", :linebreak => true)
+      %td= t("ικταβεί", "yiktabī", :linebreak => true)
+      %td= t("νικταβού", "niktabū", :linebreak => true)
+      %td= t("τικταβού", "tiktabū", :linebreak => true)
+      %td= t("ικταβού", "yiktabū", :linebreak => true)
+    %tr
+      %th Central
+      %td= t("ακτώβ", "'aktāb", :linebreak => true)
+      %td= t("τικτώβ", "tiktāb", :linebreak => true)
+      %td= t("τικταβεί", "tiktabī", :linebreak => true)
+      %td= t("ικτώβ", "yiktāb", :linebreak => true)
+      %td= t("ικταβεί", "yiktabī", :linebreak => true)
+      %td= t("νικταβού", "niktabū", :linebreak => true)
+      %td= t("τικταβού", "tiktabū", :linebreak => true)
+      %td= t("ικταβού", "yiktabū", :linebreak => true)
+    %tr
+      %th Northwestern
+      %td= t("ακτόβ", "'aktōb", :linebreak => true)
+      %td= t("τικτόβ", "tiktōb", :linebreak => true)
+      %td= t("τικταβεί", "tiktabī", :linebreak => true)
+      %td= t("ικτόβ", "yiktōb", :linebreak => true)
+      %td= t("ικταβεί", "yiktabī", :linebreak => true)
+      %td= t("νικταβού", "niktabū", :linebreak => true)
+      %td= t("τικταβού", "tiktabū", :linebreak => true)
+      %td= t("ικταβού", "yiktabū", :linebreak => true)
+    %tr
+      %th Northeastern
+      %td= t("ακτώβ", "'aktāb", :linebreak => true)
+      %td= t("τικτώβ", "tiktāb", :linebreak => true)
+      %td= t("τικταβεί", "tiktabī", :linebreak => true)
+      %td= t("ικτώβ", "yiktāb", :linebreak => true)
+      %td= t("ικταβεί", "yiktabī", :linebreak => true)
+      %td= t("νικταβού", "niktabū", :linebreak => true)
+      %td= t("τικταβού", "tiktabū", :linebreak => true)
+      %td= t("ικταβού", "yiktabū", :linebreak => true)
+    %tr
+      %th Southern
+      %td= t("άκταβ", "'aktab", :linebreak => true)
+      %td= t("σίκταβ", "siktab", :linebreak => true)
+      %td= t("σικταβεί", "siktabī", :linebreak => true)
+      %td= t("ίκταβ", "'iktāb", :linebreak => true)
+      %td= t("ικταβεί", "'iktabī", :linebreak => true)
+      %td= t("νικταβού", "niktabū", :linebreak => true)
+      %td= t("σικταβού", "siktabū", :linebreak => true)
+      %td= t("ικταβού", "'iktabū", :linebreak => true)
+  %table
+    %tr
+      %th{:colspan => 10} The Preterite Tense
+    %tr
+      %th
+      %th 1 Sg
+      %th 2 Sg M
+      %th 2 Sg F
+      %th 3 Sg M
+      %th 3 Sg F
+      %th 1 Pl
+      %th 2 Pl M
+      %th 2 Pl F
+      %th 3 Pl
+    %tr
+      %th Standard
+      %td= t("κάταβετ", "katabet", :linebreak => true)
+      %td= t("κάταв̄τα", "katavta", :linebreak => true)
+      %td= t("κάταв̄σ̄ε", "katavše", :linebreak => true)
+      %td= t("κάταβ", "katab", :linebreak => true)
+      %td= t("κταβώ", "ktabā", :linebreak => true)
+      %td= t("κταβνώ", "ktabnā", :linebreak => true)
+      %td= t("κάταв̄τυν", "katavtun", :linebreak => true)
+      %td= t("κάταв̄σ̄ιν", "katavšin", :linebreak => true)
+      %td= t("κταβού", "ktabū", :linebreak => true)
+    %tr
+      %th Central
+      %td= t("κώδβετ", "kādbet", :linebreak => true)
+      %td= t("κώτφτα", "kātfta", :linebreak => true)
+      %td= t("κώτφσ̄ε", "kātfše", :linebreak => true)
+      %td= t("κώδβ", "kādb", :linebreak => true)
+      %td= t("κταβώ", "ktabā", :linebreak => true)
+      %td= t("κταβνώ", "ktabnā", :linebreak => true)
+      %td= t("κώτφτυν", "kātftun", :linebreak => true)
+      %td= t("κώτφσ̄ιν", "kātfšin", :linebreak => true)
+      %td= t("κταβού", "ktabū", :linebreak => true)
+    %tr
+      %th Northwestern
+      %td= t("κόδβετ", "kōdbet", :linebreak => true)
+      %td= t("κώτφτα", "kātfta", :linebreak => true)
+      %td= t("κώτφσ̄ε", "kātfše", :linebreak => true)
+      %td= t("κόδβ", "kōdb", :linebreak => true)
+      %td= t("κταβώ", "ktabā", :linebreak => true)
+      %td= t("κταβνώ", "ktabnā", :linebreak => true)
+      %td= t("κώτφτυν", "kātftun", :linebreak => true)
+      %td= t("κώτφσ̄ιν", "kātfšin", :linebreak => true)
+      %td= t("κταβού", "ktabū", :linebreak => true)
+    %tr
+      %th Northeastern
+      %td= t("κώδβετ", "kādbet", :linebreak => true)
+      %td= t("κώτφτα", "kātfta", :linebreak => true)
+      %td= t("κώτφσ̄ε", "kātfše", :linebreak => true)
+      %td= t("κώδβ", "kādb", :linebreak => true)
+      %td= t("κταβώ", "ktabā", :linebreak => true)
+      %td= t("κταβνώ", "ktabnā", :linebreak => true)
+      %td= t("κώτφτυν", "kātftun", :linebreak => true)
+      %td= t("κώτφσ̄ιν", "kātfšin", :linebreak => true)
+      %td= t("κταβού", "ktabū", :linebreak => true)
+    %tr
+      %th Southern
+      %td= t("κώδβετ", "kādbet", :linebreak => true)
+      %td= t("κώταφτ", "kātaft", :linebreak => true)
+      %td= t("κώτεφς̄", "kātefš", :linebreak => true)
+      %td= t("κώδβ", "kādb", :linebreak => true)
+      %td= t("κταβώ", "ktabā", :linebreak => true)
+      %td= t("κταβνώ", "ktabnā", :linebreak => true)
+      %td= t("κώτφτυ", "kātftu", :linebreak => true)
+      %td= t("κώτφσ̄ι", "kātfši", :linebreak => true)
+      %td= t("κταβού", "ktabū", :linebreak => true)
+  %table
+    %tr
+      %th{:colspan => 10} The Imperfect Tense
+    %tr
+      %th
+      %th 1 Sg
+      %th 2 Sg M
+      %th 2 Sg F
+      %th 3 Sg M
+      %th 3 Sg F
+      %th 1 Pl
+      %th 2 Pl M
+      %th 2 Pl F
+      %th 3 Pl
+    %tr
+      %th Standard
+      %td= t("κιήτεв̄", "kietev", :linebreak => true)
+      %td= t("κιήτεв̄ετ", "kietevet", :linebreak => true)
+      %td= t("κιήτεв̄ες̄", "kieteveš", :linebreak => true)
+      %td= t("κήτεβ", "kēteb", :linebreak => true)
+      %td= t("κητβώ", "kētbā", :linebreak => true)
+      %td= t("κιήτεв̄εν", "kieteven", :linebreak => true)
+      %td= t("κιήτεв̄τυν", "kietevtun", :linebreak => true)
+      %td= t("κιήτεв̄σ̄ιν", "kietevšin", :linebreak => true)
+      %td= t("κητβού", "kētbū", :linebreak => true)
+    %tr
+      %th Central
+      %td= t("κιήτφ", "kietf", :linebreak => true)
+      %td= t("κιήτφετ", "kietfet", :linebreak => true)
+      %td= t("κιήτφες̄", "kietfeš", :linebreak => true)
+      %td= t("κείδβ", "kīdb", :linebreak => true)
+      %td= t("κηδβώ", "kēdbā", :linebreak => true)
+      %td= t("κιήτφεν", "kietfen", :linebreak => true)
+      %td= t("κιήτφτυν", "kietftun", :linebreak => true)
+      %td= t("κιήτφσ̄ιν", "kietfšin", :linebreak => true)
+      %td= t("κηδβού", "kēdbū", :linebreak => true)
+    %tr
+      %th Northwestern
+      %td= t("κιήτφ", "kietf", :linebreak => true)
+      %td= t("κιήτφετ", "kietfet", :linebreak => true)
+      %td= t("κιήτφες̄", "kietfeš", :linebreak => true)
+      %td= t("κείδβ", "kīdb", :linebreak => true)
+      %td= t("κηδβώ", "kēdbā", :linebreak => true)
+      %td= t("κιήτφεν", "kietfen", :linebreak => true)
+      %td= t("κιήτφτυν", "kietftun", :linebreak => true)
+      %td= t("κιήτφσ̄ιν", "kietfšin", :linebreak => true)
+      %td= t("κηδβού", "kēdbū", :linebreak => true)
+    %tr
+      %th Northeastern
+      %td= t("κιήτφ", "kietf", :linebreak => true)
+      %td= t("κιήτφετ", "kietfet", :linebreak => true)
+      %td= t("κιήτφες̄", "kietfeš", :linebreak => true)
+      %td= t("κιήδβ", "kiedb", :linebreak => true)
+      %td= t("κιηδβώ", "kiedbā", :linebreak => true)
+      %td= t("κιήτφεν", "kietfen", :linebreak => true)
+      %td= t("κιήτφτυν", "kietftun", :linebreak => true)
+      %td= t("κιήτφσ̄ιν", "kietfšin", :linebreak => true)
+      %td= t("κιηδβού", "kiedbū", :linebreak => true)
+    %tr
+      %th Southern
+      %td= t("κείτφ", "kītf", :linebreak => true)
+      %td= t("κείτφετ", "kītfet", :linebreak => true)
+      %td= t("κείτφις̄", "kītfiš", :linebreak => true)
+      %td= t("κείδβ", "kīdb", :linebreak => true)
+      %td= t("κεδβώ", "kedbā", :linebreak => true)
+      %td= t("κείτφε", "kītfe", :linebreak => true)
+      %td= t("κείτφτυ", "kītftu", :linebreak => true)
+      %td= t("κείτφσ̄ι", "kītfši", :linebreak => true)
+      %td= t("κεδβού", "kedbū", :linebreak => true)
+  %table
+    %tr
+      %th{:colspan => 9} The Future Tense
+    %tr
+      %th
+      %th 1 Sg
+      %th 2 Sg M
+      %th 2 Sg F
+      %th 3 Sg M
+      %th 3 Sg F
+      %th 1 Pl
+      %th 2 Pl
+      %th 3 Pl
+    %tr
+      %th Standard
+      %td= t("αλακ в̄άκταβ", "'alək vaktab", :linebreak => true)
+      %td= t("τιλακ в̄άτακταβ", "tilək vataktab", :linebreak => true)
+      %td= t("τιλκι в̄άτακταβ", "tilki vataktab", :linebreak => true)
+      %td= t("ιλακ в̄ήκταβ", "yilək vēktab", :linebreak => true)
+      %td= t("ιλκι в̄ήκταβ", "yilki vēktab", :linebreak => true)
+      %td= t("νιλκυ в̄άνακταβ", "nilku vanaktab", :linebreak => true)
+      %td= t("τιλκυ в̄άτακταβ", "tilku vataktab", :linebreak => true)
+      %td= t("ιλκυ в̄ήκταβ", "yilku vēktab", :linebreak => true)
+    %tr
+      %th Central
+      %td= t("ωλκ в̄άκταβ", "'ālk vaktab", :linebreak => true)
+      %td= t("τειλκ в̄ώτκταβ", "tīlk vātktab", :linebreak => true)
+      %td= t("τιλκι в̄ώτκταβ", "tilki vātktab", :linebreak => true)
+      %td= t("ιειλκ в̄ήκταβ", "yīlk vēktab", :linebreak => true)
+      %td= t("ιλκι в̄ήκταβ", "yilki vēktab", :linebreak => true)
+      %td= t("νιλκυ в̄ώνκταβ", "nilku vānktab", :linebreak => true)
+      %td= t("τιλκυ в̄ώτκταβ", "tilku vātktab", :linebreak => true)
+      %td= t("ιλκυ в̄ήκταβ", "yilku vēktab", :linebreak => true)
+    %tr
+      %th Northwestern
+      %td= t("ολκ в̄άκταβ", "'ōlk vaktab", :linebreak => true)
+      %td= t("τειλκ в̄ώτκταβ", "tīlk vātktab", :linebreak => true)
+      %td= t("τιλτζι в̄ώτκταβ", "tilči vātktab", :linebreak => true)
+      %td= t("ιειλκ в̄ήκταβ", "yīlk vēktab", :linebreak => true)
+      %td= t("ιλτζι в̄ήκταβ", "yilči vēktab", :linebreak => true)
+      %td= t("νιλκυ в̄ώνκταβ", "nilku vānktab", :linebreak => true)
+      %td= t("τιλκυ в̄ώτκταβ", "tilku vātktab", :linebreak => true)
+      %td= t("ιλκυ в̄ήκταβ", "yilku vēktab", :linebreak => true)
+    %tr
+      %th Northeastern
+      %td= t("ωλκ в̄άκταβ", "'ālk vaktab", :linebreak => true)
+      %td= t("τειλκ в̄ώτκταβ", "tīlk vātktab", :linebreak => true)
+      %td= t("τιλκι в̄ώτκταβ", "tilki vātktab", :linebreak => true)
+      %td= t("ιειλκ в̄ιήκταβ", "yīlk viektab", :linebreak => true)
+      %td= t("ιλκι в̄ιήκταβ", "yilki viektab", :linebreak => true)
+      %td= t("νιλκυ в̄ώνκταβ", "nilku vānktab", :linebreak => true)
+      %td= t("τιλκυ в̄ώτκταβ", "tilku vātktab", :linebreak => true)
+      %td= t("ιλκυ в̄ιήκταβ", "yilku viektab", :linebreak => true)
+    %tr
+      %th Southern
+      %td= t("ακ κούδβ/κυδβώ", "'ak kūdb/kudbā", :linebreak => true)
+      %td= t("σικ κούδβ", "sik kūdb", :linebreak => true)
+      %td= t("σιτζ κυδβώ", "sič kudbā", :linebreak => true)
+      %td= t("ικ κούδβ", "'ik kūdb", :linebreak => true)
+      %td= t("ιτζ κυδβώ", "'ič kudbā", :linebreak => true)
+      %td= t("νιγ κυδβεί/κυδβής", "nig kudbī/kudbēs", :linebreak => true)
+      %td= t("σιγ κυδβεί/κυδβής", "sig kudbī/kudbēs", :linebreak => true)
+      %td= t("ιγ κυδβεί/κυδβής", "'ig kudbī/kudbēs", :linebreak => true)
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) More accurately, the plural <i>-yā</i> is not used when the singular is in fact a singulative derived with the suffix <i>-ā</i>, and the 'plural' form is originally a mass noun, such as <i>šarrā</i> “strand of hair” → <i>šār</i> “hair”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
