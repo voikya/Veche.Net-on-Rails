@@ -1,0 +1,228 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Куучат"
+
+= render :partial => 'navigation'
+
+= section "The Alphabet" do
+  %p Očets uses a modified form of the Cyrillic alphabet with 34 letters, as shown in the following table. The orthography bears many similarities to other languages of Siberia. Alongside each character are the letter’s standard transliteration (as used in this document), primary phonetic value, and name.
+  %table
+    %tr
+      %th Letter
+      %th IPA
+      %th Translit.
+      %th Name<br>(IPA)
+      %th Name<br>(Translit.)
+    %tr
+      %td А а
+      %td a
+      %td a
+      %td a
+      %td a
+    %tr
+      %td Ә ә
+      %td ə
+      %td ə
+      %td ə
+      %td ə
+    %tr
+      %td Б б
+      %td b
+      %td b
+      %td be
+      %td be
+    %tr
+      %td В в
+      %td w
+      %td w
+      %td we
+      %td we
+    %tr
+      %td Г г
+      %td g
+      %td g
+      %td ge
+      %td ge
+    %tr
+      %td Ҕ ҕ
+      %td γ
+      %td ğ
+      %td eγe
+      %td eǧe
+    %tr
+      %td Д д
+      %td d
+      %td d
+      %td de
+      %td de
+    %tr
+      %td Е е
+      %td e
+      %td e
+      %td e
+      %td e
+    %tr
+      %td Ж ж
+      %td ʒ
+      %td ž
+      %td ʒe
+      %td že
+    %tr
+      %td З з
+      %td z
+      %td z
+      %td ze
+      %td ze
+    %tr
+      %td Ѕ ѕ
+      %td dz
+      %td dz
+      %td dze
+      %td dze
+    %tr
+      %td И и
+      %td i, j
+      %td i
+      %td i
+      %td i
+    %tr
+      %td К к
+      %td k
+      %td k
+      %td ke
+      %td ke
+    %tr
+      %td Қ қ
+      %td q
+      %td q
+      %td qa
+      %td qa
+    %tr
+      %td Л л
+      %td l
+      %td l
+      %td le
+      %td le
+    %tr
+      %td М м
+      %td m
+      %td m
+      %td me
+      %td me
+    %tr
+      %td Н н
+      %td n
+      %td n
+      %td ne
+      %td ne
+    %tr
+      %td Ҥ ҥ
+      %td ŋ
+      %td ŋ
+      %td ŋe
+      %td ŋe
+    %tr
+      %td О о
+      %td o
+      %td o
+      %td o
+      %td o
+    %tr
+      %td Ө ө
+      %td ø
+      %td ö
+      %td ø
+      %td ö
+    %tr
+      %td П п
+      %td p
+      %td p
+      %td pe
+      %td pe
+    %tr
+      %td Р р
+      %td r
+      %td r
+      %td ere
+      %td ere
+    %tr
+      %td С с
+      %td s
+      %td s
+      %td se
+      %td se
+    %tr
+      %td Һ һ
+      %td h
+      %td h
+      %td he
+      %td he
+    %tr
+      %td Т т
+      %td t
+      %td t
+      %td te
+      %td te
+    %tr
+      %td У у
+      %td u, w
+      %td u
+      %td u
+      %td u
+    %tr
+      %td Ү ү
+      %td y
+      %td ü
+      %td y
+      %td ü
+    %tr
+      %td Ф ф
+      %td f
+      %td f
+      %td fe
+      %td fe
+    %tr
+      %td Х х
+      %td x
+      %td x
+      %td exe
+      %td exe
+    %tr
+      %td Ц ц
+      %td ts
+      %td ts
+      %td tse
+      %td tse
+    %tr
+      %td Ч ч
+      %td tʃ
+      %td č
+      %td tʃe
+      %td če
+    %tr
+      %td Џ џ
+      %td dʒ
+      %td ǰ
+      %td dʒe
+      %td ǰe
+    %tr
+      %td Ш ш
+      %td ʃ
+      %td š
+      %td ʃe
+      %td še
+    %tr
+      %td Ы ы
+      %td ɨ
+      %td y
+      %td ɨ
+      %td y
+
+= section "Spelling" do
+  %p Očets spelling is quite regular, with a close to one-to-one correspondence between letters and phonemes. The most common exception is и, which can represent both the vowel /i/ and the semivowels /j/. When acting as a semivowel, it may be written as й, although this is nonstandard and often seen as a Novegradianism. The other semivowel, /w/, coopts the Cyrillic letter normally used to represent /v/. Long vowels and geminate consonants are indicated by doubling the letter (дд /dd/, аа /a:/). Labialized velars are indicated with a normal velar followed by в: кво /k(ʷ)o/ (cf. the diphthong in куо /kuo/).
+  %p The spelling system fairly strictly follows the phonetic principle; words are spelled as they are pronounced, ignoring their etymology or the structure of the root. Word-internal sandhi, ablaut, and other types of alterations are always reflected in spelling. Sandhi occurring between multiple words, however, usually is not marked except in certain specific circumstances, which will be described later.
+  %p Novegradian words that have been fully nativized usually occur with a native spelling. More recent loans, however, may retain their Novegradian spelling, even if it uses letters not normally used in Očets. The extent to which individuals use nativized spellings or preserve Novegradian conventions varies significantly. However, non-nativized words do not show any sort of sandhi orthographically, even if it appears in speech.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
