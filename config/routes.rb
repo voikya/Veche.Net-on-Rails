@@ -14,6 +14,7 @@ VecheNet::Application.routes.draw do
 
   scope 'ochets', :module => :grammars do
     get '/' => 'ochets#index', :as => 'ochets_index'
+    get '/:page' => 'ochets#show', :as => 'ochets_grammar_page'
   end
 
   scope 'alashian', :module => :grammars do
