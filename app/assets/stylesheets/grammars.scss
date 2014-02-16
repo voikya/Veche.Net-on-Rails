@@ -190,6 +190,15 @@ body.grammar {
     }
   }
 
+  dl {
+    font-size: 12px;
+
+    dt {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  }
+
   .center {
     text-align: center;
   }
@@ -244,6 +253,7 @@ body.grammar {
     }
 
     dt {
+      font-weight: normal;
       font-style: italic;
     }
 

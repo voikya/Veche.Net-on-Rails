@@ -1,0 +1,1149 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πάραρτιμ".html_safe
+
+= render :partial => 'navigation'
+
+= section "Semitic vs Non-Semitic Forms" do
+  %p The prevalence of words of Greek/European origin and words of native Semitic origin depends heavily on the register and context. Semitic vocabulary tends to dominate most informal spoken registers and is widely heard in most day-to-day speech. Vocabulary of Turkish origin fills a similar niche. Greek and 'international' vocabulary, however, is more typical of a higher register; the use of Greek words where native Alashian close-equivalents already exist is a common feature of formal usage. The situation is by and large comparable to the use of Germanic and Latinate vocabulary in English where, should a pair such as Germanic 'hound' and Latinate 'canine' coexist, the Latinate form almost always belongs to a higher register.
+  %p This is not to say that all Greek words belong to high registers and all Semitic words belong to low registers, of course. Many Greek words are stylistically neutral, and a comparatively small proportion of Semitic words are actually markedly low register. Neutral words may be found in speech of any register, and it is primarily through a higher-than-normal use of stylistically marked vocabulary that speech itself becomes stylistically marked.
+  %p Many of the example sentences used throughout this grammar have a larger proportion of Semitic words due to drawing from mostly everyday spoken sources. In contrast, the following example, Article I of the United Nations' Universal Declaration of Human Rights, is written in a much more formal register, and so has a much higher concentration of Greek forms (marked in <span class="highlight">red</span>).
+  %p
+    %span.native Καλώ ινισσώ ει ιυυλωδεί εν <span class="highlight">λαττερώ</span> υε<span class="highlight">ιδδιώ</span> βαν<span class="highlight">ακσ̄υπρεπκιώ</span> υεβα<span class="highlight">δ̄δ̄ιτζευμμιήν</span> λων. Λικaλ άρ̄αδ <span class="highlight">в̄ηνπριήκινα</span> πλε βα<span class="highlight">λλουχούν</span> υεβα<span class="highlight">σσινιδ̄είς</span>, υεου ιιαλλάκαννα ηυνε νεφώσαν βι<span class="highlight">νέμετ</span> υναχλείκ.
+    %br
+    %span.translit Kalā 'inissā 'ī yiwwulādī 'en <span class="highlight">lətherā</span> ve<span class="highlight">yiddiyā</span> ban<span class="highlight">akšuprepkyā</span> veba<span class="highlight">ḏḏiče'ummien</span> lān. Likal 'ařad <span class="highlight">vēnpriekina</span> ple ba<span class="highlight">llūxūn</span> veba<span class="highlight">ssiniḏīs</span>, ve'ū yiyəllakanna hune nefāsan bi<span class="highlight">nemet</span> unaxlīk.
+    %br
+    %span.eng “All human beings are born <span class="highlight">free</span> and <span class="highlight">equal</span> in <span class="highlight">dignity</span> and <span class="highlight">rights</span>. They are <span class="highlight">endowed</span> with <span class="highlight">reason</span> and <span class="highlight">conscience</span> and should act towards one another in a <span class="highlight">spirit</span> of brotherhood.”
+  %audio{:controls => "controls", :height => 100, :width => 100}
+    %source{:src => path_to_asset("alashian/ala1.mp3"), :type => "audio/mp3"}
+    %source{:src => path_to_asset("alashian/ala1.ogg"), :type => "audio/ogg"}
+    %embed{:height => 100, :width => 100, :src => path_to_asset("alashian/ala1.mp3")}
+  %p However, there is one context where Semitic vocabulary far outnumbers Greek loanwords despite belonging to a high register: older religious texts that predate the widespread adoption of Christianity (and thus belonging to an older tradition more influenced by Aramaic/Syriac). This includes much of the Bible, which makes significant use of Semitic vocabulary that is no longer used at all in the modern language. However, once Christianity became more established, the predominance of the Greek Church in the region led to a great influx of Greek theological vocabulary into the language. Various religious texts thus have very different styles depending on when they were written; the Lord's Prayer (based on the Gospels of Matthew and Luke), for instance, has an almost purely Semitic vocabulary, while the Nicene Creed (formulated in 325 AD) makes significant use of Greek religious terminology.
+  %p
+    %span.native Αβάηιν δ' ιв̄ ασσαμή, ιαττακδασείνα σνίκ. Ιβείνα μαλτζείσικ, ιννυσ̄ωιείνα χασούρικ, εν ιв̄ ασσαμή κακ ηαλε ναρτζούς̄. Ηώβ χινυώ αιιούν χάζαв̄ μείδιν, υενασή χινυώ χατκιούτιν κυωζ λών αφ μασσουιιιήν μυχαττιιήν. Υεελ χώδ νω ιλ αννεσ̄ούν, χα ιην <span class="highlight">αλτήρ</span> νω μνε αδρώχ. Καδ λικυώ αμμαλτζείς υεαμμύγ̄βιρ υεα<span class="highlight">δ̄δ̄υκσώ</span> ιλ ηυννή ηυννιήν. Αμείν.
+    %span.translit 'Abahin d 'iv hassamē, yəthəkdasīna snik. Yibīna malčīsik, yinnušāyīna xasūrik, 'en 'iv hassamē kak hale narčūš. Hāb xinuwā hayyūn xazav mīdin, venasē xinuwā xətkyūtin kuoz lān 'af massūyiyyēn muxəthiyyēn. Ve'el xād nā 'il hannešūn, xa yēn <span class="highlight">'altēr</span> nā mne hadrāx. Kad likwā hammalčīs vehammuǧbir veha<span class="highlight">ḏḏuksā</span> 'il hunnē hunnien. 'Amīn.
+    %span.eng Our Father who are in heaven, hallowed be your name. Your kingdom come, your will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who traspress against us. And lead us not into temptation, but <span class="highlight">deliver</span> us from evil. For yours is the kingdom, and the power, and the <span class="highlight">glory</span> unto ages of ages. Amen.
+  %audio{:controls => "controls", :height => 100, :width => 100}
+    %source{:src => path_to_asset("alashian/ala2.mp3"), :type => "audio/mp3"}
+    %source{:src => path_to_asset("alashian/ala2.ogg"), :type => "audio/ogg"}
+    %embed{:height => 100, :width => 100, :src => path_to_asset("alashian/ala2.mp3")}
+
+= section "Common Phrases" do
+  %dl
+    %dt Hello (informal)
+    %dd= t("Σαλούν", "Salūn")
+    %dt Hello (formal)
+    %dd
+      #{t("Ασσαλούν ηάλεκαν", "Hassalūn halekan")} (to a man/men/mixed group),
+      %br
+      #{t("Ασσαλούν ηάλετζεν", "Hassalūn halečen")} (to a woman/women)
+    %dt Hello (formal response)
+    %dd
+      #{t("Υεηάλεκαν ασσαλούν", "Vehalekan hassalūn")} (to a man/men/mixed group),
+      %br
+      #{t("Υεηάλετζεν ασσαλούν", "Vehalečen hassalūn")} (to a woman/women)
+    %dt Goodbye
+    %dd= t("Αδ αμματρώ", "'Ad hammatrā")
+    %dt Good morning
+    %dd
+      #{t("Τηβώ σώρ̄", "Tēbā sāř")} (formal),
+      %br
+      #{t("Τεβώσαρ̄", "Tebāsař")} (colloquial)
+    %dt Good day
+    %dd
+      #{t("Τηβώ ιούν", "Tēbā yūn")} (formal),
+      %br
+      #{t("Τεβώιυν", "Tebāyun")} (colloquial)
+    %dt Good evening
+    %dd
+      #{t("Τηβώ αχρώ", "Tēbā 'axrā")} (formal),
+      %br
+      #{t("Τεβωχρώ", "Tebāxrā")} (colloquial)
+    %dt Good night
+    %dd
+      #{t("Τηβώ λήλ", "Tēbā lēl")} (formal),
+      %br
+      #{t("Τεβώλελ", "Tebālel")} (colloquial)
+    %dt How are you?
+    %dd
+      #{t("Βεμώ 'ττα;", "Bemā tha?")} (to a man)
+      %br
+      #{t("Βεμώ 'σ̄σ̄ε;", "Bemā šše?")} (to a woman)
+      %br
+      #{t("Βεμώ 'ττυν;", "Bemā thun?")} (to men/a mixed group)
+      %br
+      #{t("Βεμώ 'σ̄σ̄ιν;", "Bemā ššin?")} (to women)
+    %dt Good/Well
+    %dd= t("Τήβατ", "Tēbat")
+    %dt So-so
+    %dd= t("Μαμμώ", "Mammā")
+    %dt Bad/Poorly
+    %dd= t("Ρώατ", "Rā'at")
+    %dt What is your name?
+    %dd
+      #{t("Μώ σνίκ;", "Mā snik?")} (to a man)
+      %br
+      #{t("Μώ σνίτζ;", "Mā snič?")} (to a woman)
+    %dt My name is _____
+    %dd= t("Σνεί _____", "Snī _____")
+    %dt Please
+    %dd= t("Ινδρατζζού", "'Indrəčhū")
+    %dt Thank you
+    %dd= t("Μέρσε", "Merse")
+    %dt Yes
+    %dd= t("Νή", "Nē")
+    %dt No
+    %dd= t("Λώ", "Lā")
+    %dt Excuse me
+    %dd
+      #{t("Νασή χιώ", "Nasē xiyā")} (to a man)
+      %br
+      #{t("Νασεί χιώ", "Nasī xiyā")} (to a woman)
+      %br
+      #{t("Νασού χιώ", "Nasū xiyā")} (to a group)
+    %dt I don't know
+    %dd= t("Λω ηδώ", "Lā 'ēdā")
+    %dt I don't understand
+    %dd= t("Λω αμμείλ", "Lā 'ammīl")
+
+= section "Vocabulary Comparison" do
+  %p The following list compares 100 Alashian words (the #{link_to "Swadesh List", "http://en.wikipedia.org/wiki/Swadesh_list"}) against six other Semitic languages: Arabic, Hebrew, Aramaic, Ge'ez, Mehri, and Akkadian. Forms that are not cognate with the Alashian word are in gray. A grayed-out word does not necessarily mean that language does not have any cognate for the Alashian word in question or vice versa; it simply means that the language does not use a cognate word with the same meaning. The final column gives the etymology of the Alashian form.
+  %p Of these languages, Hebrew is genetically the closest to Alashian; both are part of the Canaanite–Alashian branch of the Northwest Semitic languages, with Hebrew belonging to the Canaanite subbranch and Alashian to the Alashian subbranch. The forms and pronunciation shown below are those of Modern Hebrew.
+  %p Aramaic is also a Northwest Semitic language, but belongs to the Aramaic branch rather than Canaanite-Alashian. However, on a purely lexical level, Alashian is generally considered to have more in common with Aramaic than the Canaanite languages due to the historical influence Aramaic has had on the language, extending from the ancient period through the early Christian era. The forms shown below are those of Classical Aramaic, which remains the liturgical language of many Oriental Orthodox Christians.
+  %p Arabic is one level further removed from Alashian genealogically. Both Arabic and Alashian are Central Semitic, one of the three main families of Semitic languages, but Alashian further belongs to the Northwestern group historically anchored in the Levant while Arabic belongs to its own family, with its historical homeland in northern Arabia. The rise of Islam and Islamic rule on Cyprus for over a millennium has resulted in some lexical influence on Alashian, but relatively little in day-to-day vocabulary like that shown below. The forms shown below are Modern Standard Arabic, the standardized literary form of the language used throughout the Arab world.
+  %p Ge'ez belongs to the Western (African) branch of the South Semitic languages, and thus is quite removed from Alashian historically and geographically. It was once spoken in northern Ethiopia and today remains the liturgical language of Ethiopian Orthodox Christians. Amharic, the modern-day official language of Ethiopia, is also South Semitic, but has had significant lexical influence from neighboring Cushitic languages that has displaced many words of Semitic origin.
+  %p Mehri belongs to the Eastern (South Arabian) branch of the South Semitic languages, and is the most populous of the Modern South Arabian languages spoken by minority communities in Yemen and Oman. The language has been extensively influenced by Arabic. Of the languages in the chart below, Mehri shows the least number of cognate forms with Alashian, but in many cases related forms do exist but have been obscured by semantic drift.
+  %p Akkadian belongs to the now-extinct Eastern Semitic family, but was once spoken throughout Mesopotamia and the Levant as the dominant language of the Assyrian and Babylonian Empires. The influence of these ancient empires has left a notable linguistic imprint on many of the Central Semitic languages once under their rule, though this is less apparent in Alashian and Arabic which have historically found themselves on the periphery of this territory. The forms shown below come mostly from the later Assyrian period.
+  %table
+    %tr
+      %th English
+      %th Alashian
+      %th Arabic
+      %th Hebrew
+      %th Aramaic
+      %th Ge'ez
+      %th Mehri
+      %th Akkadian
+      %th.etymology Etymology
+    %tr
+      %th 1. I
+      %td= t("ετζεί", "'ečī", :linebreak => true)
+      %td= t("أنا", "'ana", :linebreak => true)
+      %td= t("אני", "ani", :linebreak => true)
+      %td= t("ܐܢܐ", "enā", :linebreak => true)
+      %td= t("አነ", "'ana", :linebreak => true)
+      %td hō
+      %td= t("𒀀𒈾𒄖", "anāku", :linebreak => true)
+      %td Proto-Semitic *ʔan(ā)-kī “I”
+    %tr
+      %th 2. you (sg)
+      %td= t("άττα/ίσ̄σ̄ε", "'ətha/'išše", :linebreak => true)
+      %td= t("أنت/أنت", "'anta/'anti", :linebreak => true)
+      %td= t("אתה/את", "ata/at", :linebreak => true)
+      %td= t("ܐܢܬ/ܐܢܬܝ", "'att/'att", :linebreak => true)
+      %td= t("አንተ/አንቲ", "'anta/'anti", :linebreak => true)
+      %td hēt
+      %td= t("𒀜𒋫/𒀜𒋾", "atta/atti", :linebreak => true)
+      %td Proto-Semitic *ʔanta, *ʔanti “you”
+    %tr
+      %th 3. we
+      %td= t("νώνυ", "nānu", :linebreak => true)
+      %td= t("نحن", "naħnu", :linebreak => true)
+      %td= t("אנחנו", "anachnu", :linebreak => true)
+      %td= t("ܚܢܢ", "ḥnan", :linebreak => true)
+      %td= t("ንሕነ", "nəḥna", :linebreak => true)
+      %td ənḥā
+      %td= t("𒉌𒄿𒉡", "nīnu", :linebreak => true)
+      %td Proto-Semitic *niẖnū “we”
+    %tr
+      %th 4. this
+      %td= t("αδ̄δ̄εκώ/αδ̄δ̄ιτζεί", "'aḏḏekā/'aḏḏičī", :linebreak => true)
+      %td= t("هذا/هذه", "hāḏā/hāḏihi", :linebreak => true)
+      %td= t("זה/זאת", "ze/zot", :linebreak => true)
+      %td= t("ܗܢܐ/ܗܕܐ", "hānā/hāde", :linebreak => true)
+      %td= t("ዝ/ዛ", "zə/zā", :linebreak => true)
+      %td ḏōməh
+      %td.notcognate= t("𒀭𒉡𒌑/𒀭𒉌𒌅", "annū/annītu", :linebreak => true)
+      %td Proto-Semitic *han-ḏ-u-kā, *han-ḏ-k(ā)-īt-u “this”
+    %tr
+      %th 5. that
+      %td= t("ανού/ανεί", "'anū/'anī", :linebreak => true)
+      %td.notcognate= t("ذلك/تلك", "ḏālik/tilka", :linebreak => true)
+      %td= t("הוא/היא", "hu/hi", :linebreak => true)
+      %td= t("ܗܘ/ܗܝ", "haw/hay", :linebreak => true)
+      %td.notcognate= t("ዝኩ/አንትኩ", "zəkku/'əntəkku", :linebreak => true)
+      %td.notcognate ḏēk
+      %td.notcognate= t("𒌌𒇻/𒌌𒇷𒌅", "ullū/ullītu", :linebreak => true)
+      %td Proto-Semitic *han-huwa, *han-hiya “that”
+    %tr
+      %th 6. who?
+      %td= t("μιή;", "mie?", :linebreak => true)
+      %td= t("من؟", "man?", :linebreak => true)
+      %td מי?&rlm;<br>mi?
+      %td= t("ܡܢ&rlm;", "man?", :linebreak => true)
+      %td= t("መኑ፧", "mannu?", :linebreak => true)
+      %td mōn
+      %td= t("𒀀𒁀", "mannu?", :linebreak => true)
+      %td Proto-Semitic *mī “who?”
+    %tr
+      %th 7. what?
+      %td= t("μώ;", "mā?", :linebreak => true)
+      %td= t("ما؟", "mā?", :linebreak => true)
+      %td= t("מה?&rlm;", "ma?", :linebreak => true)
+      %td= t("ܡܢ&rlm;", "mān?", :linebreak => true)
+      %td= t("ምንት፧", "mənt?", :linebreak => true)
+      %td.notcognate hāśən
+      %td= t("𒂗𒉆", "mīnū?", :linebreak => true)
+      %td Proto-Semitic *mā “what?”
+    %tr
+      %th 8. not
+      %td= t("λώ", "lā", :linebreak => true)
+      %td= t("لا", "lā", :linebreak => true)
+      %td= t("לא", "lo", :linebreak => true)
+      %td= t("ܠܐ", "lā", :linebreak => true)
+      %td.notcognate= t("አልቦ", "'albo", :linebreak => true)
+      %td.notcognate 'əl
+      %td= t("𒉡", "lā", :linebreak => true)
+      %td Proto-Semitic *lā “not”
+    %tr
+      %th 9. all
+      %td= t("κάλ", "kal", :linebreak => true)
+      %td= t("كل", "kull", :linebreak => true)
+      %td= t("כל", "kol", :linebreak => true)
+      %td= t("ܟܠ", "koll", :linebreak => true)
+      %td= t("ኵሉ", "kʷəllu", :linebreak => true)
+      %td kal
+      %td= t("𒆕", "kalu", :linebreak => true)
+      %td Proto-Semitic *kullum “all”
+    %tr
+      %th 10. many
+      %td= t("σιλυλλή", "silullē", :linebreak => true)
+      %td.notcognate= t("كثير", "kaṯīr", :linebreak => true)
+      %td.notcognate= t("רב", "rav", :linebreak => true)
+      %td.notcognate= t("ܤܓܝ", "saggi", :linebreak => true)
+      %td.notcognate= t("ብዙኅ", "bəzuḫ", :linebreak => true)
+      %td.notcognate mēkən
+      %td.notcognate= t("𒈠𒀀𒁺", "mādu", :linebreak => true)
+      %td Plural construct of σιλούλ “heap”, ultimately from Proto-Semitic *tillum “hill”
+    %tr
+      %th 11. one
+      %td= t("άρ̄αδ", "'ařad", :linebreak => true)
+      %td= t("واحد", "wāħid", :linebreak => true)
+      %td= t("אחת", "achat", :linebreak => true)
+      %td= t("ܚܕ", "ḥad", :linebreak => true)
+      %td= t("አሐዱ", "'aḥadu", :linebreak => true)
+      %td.notcognate ṭāṭ
+      %td.notcognate= t("𒁹", "ištēn", :linebreak => true)
+      %td Proto-Semitic *(ʔa)ḥadum “one”
+    %tr
+      %th 12. two
+      %td= t("θινείν", "ṯinīn", :linebreak => true)
+      %td= t("اثنان", "'iṯnān", :linebreak => true)
+      %td= t("שתיים", "shtayim", :linebreak => true)
+      %td.notcognate= t("ܬܪܝܢ", "trēn", :linebreak => true)
+      %td.notcognate= t("ክልኤ", "kəll'e", :linebreak => true)
+      %td əṯrō
+      %td= t("𒈫", "šina", :linebreak => true)
+      %td Proto-Semitic *θinayn “two”
+    %tr
+      %th 13. big
+      %td= t("ρώβ", "rāb", :linebreak => true)
+      %td.notcognate= t("كبير", "kabīr", :linebreak => true)
+      %td.notcognate= t("גדול", "gadol", :linebreak => true)
+      %td= t("ܪܒ", "rav", :linebreak => true)
+      %td.notcognate= t("ዐቢይ", "ʕabiyy", :linebreak => true)
+      %td.notcognate śōx/nōb
+      %td= t("𒃲", "rabū", :linebreak => true)
+      %td Proto-Semitic *rabbum “many, numerous”
+    %tr
+      %th 14. long
+      %td= t("μάκρε", "makre", :linebreak => true)
+      %td.notcognate= t("طويل", "ṭawīl", :linebreak => true)
+      %td.notcognate= t("ארוך", "aroch", :linebreak => true)
+      %td.notcognate= t("ܐܪܝܟ", "arik", :linebreak => true)
+      %td.notcognate= t("ነዋኅ", "nawwāḫ", :linebreak => true)
+      %td.notcognate ṭəwáyl
+      %td.notcognate= t("𒅈𒆪", "arku", :linebreak => true)
+      %td Greek μακρός “long”
+    %tr
+      %th 15. small
+      %td= t("λάττιφ", "ləthif", :linebreak => true)
+      %td.notcognate= t("صغير", "ṣaǧīr", :linebreak => true)
+      %td.notcognate= t("קטן", "katan", :linebreak => true)
+      %td.notcognate= t("ܙܥܘܪ", "zʕor", :linebreak => true)
+      %td.notcognate= t("ንኡስ", "na'us", :linebreak => true)
+      %td.notcognate ḳənnáwn
+      %td.notcognate 𒌉<br>ṣiḫru
+      %td Proto-Semitic *laṭip “gentle, delicate”
+    %tr
+      %th 16. woman
+      %td= t("ιθθώ", "'iṯṯā", :linebreak => true)
+      %td.notcognate= t("امرأة", "'imra'a", :linebreak => true)
+      %td= t("אישה", "isha", :linebreak => true)
+      %td= t("ܐܢܬܬܐ", "atttā", :linebreak => true)
+      %td= t("አንስት", "'anəst", :linebreak => true)
+      %td tēṯ
+      %td.notcognate= t("𒊩", "sinništu", :linebreak => true)
+      %td Proto-Semitic *ʔinθatum “woman”
+    %tr
+      %th 17. man
+      %td= t("είς", "'īs", :linebreak => true)
+      %td.notcognate= t("رجل", "rajul", :linebreak => true)
+      %td= t("איש", "ish", :linebreak => true)
+      %td.notcognate= t("ܓܒܪܐ", "gavrā", :linebreak => true)
+      %td.notcognate= t("ዕድ", "ʕəd", :linebreak => true)
+      %td.notcognate ğayg
+      %td.notcognate= t("𒁮", "mutu", :linebreak => true)
+      %td Proto-Semitic *ʔinšum “man”
+    %tr
+      %th 18. person
+      %td= t("ινισσώ", "'inissā", :linebreak => true)
+      %td.notcognate= t("شخص", "šaxṣ", :linebreak => true)
+      %td.notcognate= t("אדם", "adam", :linebreak => true)
+      %td= t("ܐܢܫܐ", "nāšā", :linebreak => true)
+      %td.notcognate= t("አባል", "'abāl", :linebreak => true)
+      %td.notcognate nə́far
+      %td= t("𒌦𒈨", "nišū", :linebreak => true)
+      %td Back-derivation from ινείς, plural of είς “man”
+    %tr
+      %th 19. fish
+      %td= t("νουνώ", "nūnā", :linebreak => true)
+      %td.notcognate= t("سمكة", "samaka", :linebreak => true)
+      %td.notcognate= t("דג", "dag", :linebreak => true)
+      %td= t("ܢܘܢܐ", "nunā", :linebreak => true)
+      %td.notcognate= t("ዓሣ", "ʕāśā", :linebreak => true)
+      %td.notcognate ḥawt
+      %td= t("𒄩", "nūnu", :linebreak => true)
+      %td Proto-Semitic *nūn(at)um “fish”
+    %tr
+      %th 20. bird
+      %td= t("σαφρώ", "safrā", :linebreak => true)
+      %td.notcognate= t("طائر", "ṭa'r", :linebreak => true)
+      %td= t("ציפור", "tzipor", :linebreak => true)
+      %td= t("ܨܦܪܐ", "ṣeppra", :linebreak => true)
+      %td.notcognate= t("ዖፍ", "ʕof", :linebreak => true)
+      %td.notcognate 'āḳəbēt
+      %td.notcognate= t("𒄑𒋢𒊒", "iṣṣūru", :linebreak => true)
+      %td Proto-Semitic *ṣapur(at)um “bird”
+    %tr
+      %th 21. dog
+      %td= t("κούβ", "kūb", :linebreak => true)
+      %td= t("كلب", "kalb", :linebreak => true)
+      %td= t("כלב", "kelev", :linebreak => true)
+      %td= t("ܟܠܒܐ", "kalbā", :linebreak => true)
+      %td= t("ከልብ", "kalb", :linebreak => true)
+      %td kawb
+      %td= t("𒌨", "kalbu", :linebreak => true)
+      %td Proto-Semitic *kalbum “dog    ”
+    %tr
+      %th 22. louse
+      %td= t("καμβλώ", "kamblā", :linebreak => true)
+      %td= t("قملة", "qamla", :linebreak => true)
+      %td= t("כינה", "kina", :linebreak => true)
+      %td= t("ܩܠܡܐ", "qalmā", :linebreak => true)
+      %td= t("ቍማል", "qʷəmāl", :linebreak => true)
+      %td kənəmōt
+      %td.notcognate= t("𒄴", "uplu", :linebreak => true)
+      %td Proto-Semitic *ḳamlatum “louse”
+    %tr
+      %th 23. tree
+      %td= t("ηάτζ", "həč", :linebreak => true)
+      %td.notcognate= t("شجرة", "šajara", :linebreak => true)
+      %td= t("עץ", "etz", :linebreak => true)
+      %td.notcognate= t("ܐܝܠܢܐ", "ilānā", :linebreak => true)
+      %td= t("ዕፅ", "ʕəḍ", :linebreak => true)
+      %td.notcognate hərmáyt
+      %td= t("𒄑", "iṣu", :linebreak => true)
+      %td Proto-Semitic *ʕīṣ́um “tree”
+    %tr
+      %th 24. seed
+      %td= t("ζερώ", "zerā", :linebreak => true)
+      %td.notcognate= t("بذرة", "biḏra", :linebreak => true)
+      %td= t("זרע", "zera", :linebreak => true)
+      %td= t("ܙܪܥܐ", "zarʕā", :linebreak => true)
+      %td= t("ዘርአ", "zar'a", :linebreak => true)
+      %td.notcognate bēḏər
+      %td= t("𒍣𒂊𒊒", "zēru", :linebreak => true)
+      %td Proto-Semitic *zirʕum “seed”
+    %tr
+      %th 25. leaf
+      %td= t("λαμμώ", "lammā", :linebreak => true)
+      %td.notcognate= t("ورقة", "waraqa", :linebreak => true)
+      %td.notcognate= t("עלה", "ale", :linebreak => true)
+      %td.notcognate= t("ܛܪܦܐ", "ṭarpā", :linebreak => true)
+      %td.notcognate= t("ቈጽል", "qʷaṣl", :linebreak => true)
+      %td.notcognate ṣəǧāfēt
+      %td.notcognate= t("𒄩𒊍𒄬𒌅", "ḫasḫaltu", :linebreak => true)
+      %td From λαμμώ “be verdant”, ultimately Proto-Semitic *lamaʕ “shine, be verdant”
+    %tr
+      %th 26. root
+      %td= t("σ̄είς̄", "šīš", :linebreak => true)
+      %td.notcognate= t("جذر", "jaḏr", :linebreak => true)
+      %td= t("שורש", "shoresh", :linebreak => true)
+      %td= t("ܫܪܫܐ", "šeršā", :linebreak => true)
+      %td= t("ሥርው", "śərw", :linebreak => true)
+      %td.notcognate 'ārḳ
+      %td= t("𒁼", "šuršu", :linebreak => true)
+      %td Proto-Semitic *śirśum “root”
+    %tr
+      %th 27. bark
+      %td= t("καλφώ", "kalfā", :linebreak => true)
+      %td.notcognate= t("لحاء", "liħā'", :linebreak => true)
+      %td= t("קליפה", "klipa", :linebreak => true)
+      %td= t("ܩܠܦܬܐ", "qlāptā", :linebreak => true)
+      %td.notcognate= t("ልሕጽ", "ləḥṣ", :linebreak => true)
+      %td ḳəlēfōt
+      %td= t("𒁇", "quliptu", :linebreak => true)
+      %td Proto-Semitic *ḳalip(at)um “scale, shell, bark”
+    %tr
+      %th 28. skin
+      %td= t("в̄ούρ", "vūr", :linebreak => true)
+      %td.notcognate= t("جلد", "jild", :linebreak => true)
+      %td= t("עור", "or", :linebreak => true)
+      %td.notcognate= t("ܡܫܟܐ", "meškā", :linebreak => true)
+      %td.notcognate= t("ማእስ", "mā's", :linebreak => true)
+      %td.notcognate bəśərēt
+      %td.notcognate= t("𒈠𒀸𒆪", "mašku", :linebreak => true)
+      %td Proto-Semitic *ǧārum “skin”
+    %tr
+      %th 29. meat
+      %td= t("λών", "lān", :linebreak => true)
+      %td= t("لحم", "laħm", :linebreak => true)
+      %td.notcognate= t("בשר", "basar", :linebreak => true)
+      %td.notcognate= t("ܒܣܪܬܐ", "besrātā", :linebreak => true)
+      %td.notcognate= t("ሥጋ", "śəgā", :linebreak => true)
+      %td.notcognate táywi
+      %td.notcognate= t("𒍜", "šīru", :linebreak => true)
+      %td Proto-Semitic *laħmum “meat, food”
+    %tr
+      %th 30. blood
+      %td= t("δάν", "dan", :linebreak => true)
+      %td= t("دماء", "dimā'", :linebreak => true)
+      %td= t("דם", "dam", :linebreak => true)
+      %td= t("ܕܡܐ", "dmā", :linebreak => true)
+      %td= t("ደም", "dam", :linebreak => true)
+      %td ḏōrə
+      %td= t("𒁕𒈬", "damu", :linebreak => true)
+      %td Proto-Semitic *damum “blood”
+    %tr
+      %th 31. bone
+      %td= t("ηάτζζαν", "həčhan", :linebreak => true)
+      %td= t("عظم", "ʕaẓm", :linebreak => true)
+      %td= t("עצם", "etzem", :linebreak => true)
+      %td.notcognate= t("ܓܪܡܐ", "garmā", :linebreak => true)
+      %td= t("ዐፅም", "ʕaḍm", :linebreak => true)
+      %td.notcognate 'āźáyź
+      %td= t("𒂊𒍣𒅎𒌅", "eṣemtu", :linebreak => true)
+      %td Proto-Semitic *ʕaṣ́mum “bone”
+    %tr
+      %th 32. grease
+      %td= t("σώμ", "sām", :linebreak => true)
+      %td.notcognate= t("شحم", "šaħm", :linebreak => true)
+      %td= t("שומן", "shuman", :linebreak => true)
+      %td.notcognate= t("ܫܘܦܝܐ", "šupyā", :linebreak => true)
+      %td.notcognate= t("ቀብአ", "qab'a", :linebreak => true)
+      %td.notcognate ǧəwḏáyn
+      %td= t("𒉌𒄑", "šamnu", :linebreak => true)
+      %td Proto-Semitic *šamnum “fat”
+    %tr
+      %th 33. egg
+      %td= t("βητζζώ", "bēčhā", :linebreak => true)
+      %td= t("بيضة", "bayḍa", :linebreak => true)
+      %td= t("ביצה", "beytza", :linebreak => true)
+      %td= t("ܒܝܥܬܐ", "bēʕtā", :linebreak => true)
+      %td.notcognate= t("አንቆቅሆ", "'anqoqəho", :linebreak => true)
+      %td bīḏáyt
+      %td.notcognate= t("𒉭", "pelū", :linebreak => true)
+      %td Proto-Semitic *bayṣ́(at)um “egg”
+    %tr
+      %th 34. horn
+      %td= t("κάραν", "karan", :linebreak => true)
+      %td= t("قرن", "qarn", :linebreak => true)
+      %td= t("קרן", "keren", :linebreak => true)
+      %td= t("ܩܪܢܐ", "qarnā", :linebreak => true)
+      %td= t("ቀርን", "qarn", :linebreak => true)
+      %td ḳōn
+      %td= t("𒋛", "qarnu", :linebreak => true)
+      %td Proto-Semitic *ḳarnum “horn”
+    %tr
+      %th 35. tail
+      %td= t("δάναβ", "danab", :linebreak => true)
+      %td= t("ذنب", "ḏanab", :linebreak => true)
+      %td= t("זנב", "zanav", :linebreak => true)
+      %td= t("ܕܘܢܒܐ", "dunbā", :linebreak => true)
+      %td= t("ዘነብ", "zanab", :linebreak => true)
+      %td ḏənōb
+      %td= t("𒆲", "zibbatu", :linebreak => true)
+      %td Proto-Semitic *ḏanibum “tail”
+    %tr
+      %th 36. feather
+      %td= t("νατσώ", "nətshā", :linebreak => true)
+      %td.notcognate= t("ريش", "rīš", :linebreak => true)
+      %td= t("נוצה", "notza", :linebreak => true)
+      %td.notcognate= t("ܐܒܪܐ", "evrā", :linebreak => true)
+      %td.notcognate= t("ጸጕር", "ṣagʷr", :linebreak => true)
+      %td.notcognate ḳəṭfēf
+      %td= t("𒈾𒀀𒋢", "nāṣu", :linebreak => true)
+      %td Proto-Semitic *nūṣ(at)um “feather”
+    %tr
+      %th 37. hair
+      %td= t("σ̄ώρ", "šār", :linebreak => true)
+      %td= t("شعر", "šaʕr", :linebreak => true)
+      %td= t("שער", "sear", :linebreak => true)
+      %td= t("ܣܥܪܐ", "saʕrā", :linebreak => true)
+      %td.notcognate= t("ጸጕር", "ṣagʷr", :linebreak => true)
+      %td.notcognate śəfēt
+      %td= t("𒋠", "šārtu", :linebreak => true)
+      %td Proto-Semitic *ṣaʕrum “hair”
+    %tr
+      %th 38. head
+      %td= t("ρώς", "rās", :linebreak => true)
+      %td= t("رأس", "ra's", :linebreak => true)
+      %td= t("ראש", "rosh", :linebreak => true)
+      %td= t("ܪܝܫܐ", "rešā", :linebreak => true)
+      %td= t("ርእስ", "rə'əs", :linebreak => true)
+      %td ḥərōh
+      %td= t("𒊕", "rēšu", :linebreak => true)
+      %td Proto-Semitic *raʔšum “head”
+    %tr
+      %th 39. ear
+      %td= t("ύνδ̄ε", "'unḏe", :linebreak => true)
+      %td= t("أذن", "'uḏn", :linebreak => true)
+      %td= t("אוזן", "ozen", :linebreak => true)
+      %td= t("ܐܕܢܐ", "ednā", :linebreak => true)
+      %td= t("እዝን", "'əzn", :linebreak => true)
+      %td ḥəyḏēn
+      %td= t("𒉿", "uznu", :linebreak => true)
+      %td Proto-Semitic *uḏnum “ear”
+    %tr
+      %th 40. eye
+      %td= t("ηήν", "hēn", :linebreak => true)
+      %td= t("عين", "ʕayn", :linebreak => true)
+      %td= t("עין", "ayin", :linebreak => true)
+      %td= t("ܥܝܢܐ", "ʕaynā", :linebreak => true)
+      %td= t("ዐይን", "ʕayn", :linebreak => true)
+      %td 'āyn
+      %td= t("𒅆", "īnu", :linebreak => true)
+      %td Proto-Semitic *ʕaynum “eye”
+    %tr
+      %th 41. nose
+      %td= t("ώφ", "'āf", :linebreak => true)
+      %td= t("أنف", "'anf", :linebreak => true)
+      %td= t("אף", "af", :linebreak => true)
+      %td= t("ܐܦܐ", "appē", :linebreak => true)
+      %td= t("አንፍ", "'anf", :linebreak => true)
+      %td.notcognate nəxrēr
+      %td= t("𒀊𒁍", "appu", :linebreak => true)
+      %td Proto-Semitic *ʔanpum “nose”
+    %tr
+      %th 42. mouth
+      %td= t("φιήν", "fien", :linebreak => true)
+      %td= t("فم", "fam", :linebreak => true)
+      %td= t("פה", "pe", :linebreak => true)
+      %td= t("ܦܘܡܐ", "pumā", :linebreak => true)
+      %td= t("አፍ", "'af", :linebreak => true)
+      %td.notcognate xā
+      %td= t("𒅗", "pū", :linebreak => true)
+      %td Proto-Semitic *payum “mouth”
+    %tr
+      %th 43. tooth
+      %td= t("σιήν", "sien", :linebreak => true)
+      %td= t("سن", "sinn", :linebreak => true)
+      %td= t("שן", "shen", :linebreak => true)
+      %td= t("ܫܢܐ", "šennā", :linebreak => true)
+      %td= t("ስን", "sənn", :linebreak => true)
+      %td.notcognate məźrāḥ
+      %td= t("𒅗", "šinnu", :linebreak => true)
+      %td Proto-Semitic *šinnum “tooth”
+    %tr
+      %th 44. tongue
+      %td= t("λασούν", "lasūn", :linebreak => true)
+      %td= t("لسان", "lisān", :linebreak => true)
+      %td= t("לשון", "lashon", :linebreak => true)
+      %td= t("ܠܫܢܐ", "leššānā", :linebreak => true)
+      %td= t("ልሳን", "ləssān", :linebreak => true)
+      %td əwšēn
+      %td= t("𒅴", "lišānu", :linebreak => true)
+      %td Proto-Semitic *lašānum “tongue”
+    %tr
+      %th 45. fingernail
+      %td= t("ζιφρώ", "zifrā", :linebreak => true)
+      %td= t("ظفر", "ẓufr", :linebreak => true)
+      %td= t("ציפורן", "tziporen", :linebreak => true)
+      %td= t("ܛܦܪܐ", "ṭeprā", :linebreak => true)
+      %td= t("ጽፍስ", "ṣəfr", :linebreak => true)
+      %td ḍfēr
+      %td= t("𒋢𒌒𒊒", "ṣupru", :linebreak => true)
+      %td Proto-Semitic *θ̣ipr(at)um “fingernail”
+    %tr
+      %th 46. foot
+      %td= t("ρέγλε", "regle", :linebreak => true)
+      %td= t("رجل", "rijl", :linebreak => true)
+      %td= t("רגל", "regel", :linebreak => true)
+      %td= t("ܪܓܠܐ", "reglā", :linebreak => true)
+      %td.notcognate= t("እግር", "'əgr", :linebreak => true)
+      %td.notcognate gēdəl
+      %td.notcognate= t("𒊺𒂊𒁍", "šēpu", :linebreak => true)
+      %td Proto-Semitic *riglum “leg”
+    %tr
+      %th 47. knee
+      %td= t("ρυκβώ", "rukbā", :linebreak => true)
+      %td= t("ركبة", "rukba", :linebreak => true)
+      %td= t("ברך", "berech", :linebreak => true)
+      %td= t("ܒܘܪܟܐ", "burkā", :linebreak => true)
+      %td= t("ብርክ", "bərk", :linebreak => true)
+      %td bark
+      %td= t("𒁉𒅕𒆪", "birku", :linebreak => true)
+      %td Proto-Semitic *rukbatum/*barikum “knee”
+    %tr
+      %th 48. hand
+      %td= t("ιάδ", "yad", :linebreak => true)
+      %td= t("يد", "yad", :linebreak => true)
+      %td= t("יד", "yad", :linebreak => true)
+      %td= t("ܐܝܕܐ", "idā", :linebreak => true)
+      %td= t("እድ", "'əd", :linebreak => true)
+      %td ḥayd
+      %td.notcognate= t("𒊑𒀉𒌅", "rittu", :linebreak => true)
+      %td Proto-Semitic *yadum “hand”
+    %tr
+      %th 49. belly
+      %td= t("βάττιν", "bəthin", :linebreak => true)
+      %td= t("بطن", "baṭn", :linebreak => true)
+      %td= t("בטן", "beten", :linebreak => true)
+      %td.notcognate= t("ܟܪܣܐ", "karsā", :linebreak => true)
+      %td.notcognate= t("ከብድ", "kabd", :linebreak => true)
+      %td.notcognate hōfəl
+      %td.notcognate= t("𒅗𒊏𒋗", "karšu", :linebreak => true)
+      %td Proto-Semitic *baṭnum “belly”
+    %tr
+      %th 50. neck
+      %td= t("ηυώκ", "huok", :linebreak => true)
+      %td= t("عنق", "ʕunuq", :linebreak => true)
+      %td.notcognate= t("צוואר", "tzavar", :linebreak => true)
+      %td.notcognate= t("ܩܕܠܐ", "qdālā", :linebreak => true)
+      %td.notcognate= t("ጕርኤ", "gʷər'e", :linebreak => true)
+      %td.notcognate ǧōṯi
+      %td.notcognate= t("𒆠𒐼𒁺", "kišadu", :linebreak => true)
+      %td Proto-Semitic *ʕunḳum “neck”
+    %tr
+      %th 51. breast
+      %td= t("θάδ", "ṯad", :linebreak => true)
+      %td= t("ثدي", "ṯadī", :linebreak => true)
+      %td= t("שד", "shad", :linebreak => true)
+      %td= t("ܬܕܐ", "tdā", :linebreak => true)
+      %td.notcognate= t("ጥብ", "ṭəb", :linebreak => true)
+      %td ṯōdi
+      %td.notcognate= t("𒃮", "irtu", :linebreak => true)
+      %td Proto-Semitic *θadum “breast”
+    %tr
+      %th 52. heart
+      %td= t("λιήβ", "lieb", :linebreak => true)
+      %td.notcognate= t("قلب", "qalb", :linebreak => true)
+      %td= t("לב", "lev", :linebreak => true)
+      %td= t("ܠܒܐ", "lebbā", :linebreak => true)
+      %td= t("ልብ", "ləbb", :linebreak => true)
+      %td ḥəwbēb
+      %td= t("𒊮", "libbu", :linebreak => true)
+      %td Proto-Semitic *libbum “heart”
+    %tr
+      %th 53. liver
+      %td= t("κάв̄δε", "kavde", :linebreak => true)
+      %td= t("كبد", "kabid", :linebreak => true)
+      %td= t("כבד", "kaved", :linebreak => true)
+      %td= t("ܟܒܕܐ", "kevdā", :linebreak => true)
+      %td= t("ከብድ", "kabd", :linebreak => true)
+      %td šəbdēt
+      %td= t("𒂵𒁉𒁺", "gabīdu", :linebreak => true)
+      %td Proto-Semitic *kabdum “liver”
+    %tr
+      %th 54. drink (v)
+      %td= t("σατή", "satē", :linebreak => true)
+      %td.notcognate= t("شرب", "šariba", :linebreak => true)
+      %td= t("שתה", "shata", :linebreak => true)
+      %td= t("ܐܫܬܝ", "ešti", :linebreak => true)
+      %td= t("ሰትየ", "satya", :linebreak => true)
+      %td.notcognate təḳ
+      %td= t("𒐼𒌅", "šatū", :linebreak => true)
+      %td Proto-Semitic *šatay “drink”
+    %tr
+      %th 55. eat
+      %td= t("άκαλ", "'akal", :linebreak => true)
+      %td= t("أكل", "'akala", :linebreak => true)
+      %td= t("אכל", "achal", :linebreak => true)
+      %td= t("ܐܟܠ", "ekal", :linebreak => true)
+      %td.notcognate= t("በልዐ", "balʕa", :linebreak => true)
+      %td.notcognate təwō
+      %td= t("𒅥", "akālu", :linebreak => true)
+      %td Proto-Semitic *(ʔa)kal “eat”
+    %tr
+      %th 56. bite
+      %td= t("νάκαθ", "nakaṯ", :linebreak => true)
+      %td.notcognate= t("عض", "ʕaḍḍa", :linebreak => true)
+      %td= t("נשך", "nashach", :linebreak => true)
+      %td= t("ܢܟܬ", "nkat", :linebreak => true)
+      %td= t("ንከሰ", "nakasa", :linebreak => true)
+      %td nəṯk
+      %td= t("𒈾𒊭𒆪", "našāku", :linebreak => true)
+      %td Proto-Semitic *nakaθ “bite”
+    %tr
+      %th 57. see
+      %td= t("ρώ", "rā", :linebreak => true)
+      %td= t("رأى", "ra'ā", :linebreak => true)
+      %td= t("ראה", "raa", :linebreak => true)
+      %td.notcognate= t("ܚܙܐ", "ḥzā", :linebreak => true)
+      %td= t("ርእየ", "rə'ya", :linebreak => true)
+      %td.notcognate śēni
+      %td.notcognate= t("𒀀𒈠𒊒", "amāru", :linebreak => true)
+      %td Proto-Semitic *raʔay “see”
+    %tr
+      %th 58. hear
+      %td= t("σαμώ", "samā", :linebreak => true)
+      %td= t("سمع", "samiʕa", :linebreak => true)
+      %td= t("שמע", "shama", :linebreak => true)
+      %td= t("ܫܡܥ", "šmaʕ", :linebreak => true)
+      %td= t("ሰምዐ", "samʕa", :linebreak => true)
+      %td hēma
+      %td= t("𒊺𒈬𒌑", "šemū", :linebreak => true)
+      %td Proto-Semitic *šamaʕ “hear”
+    %tr
+      %th 59. know
+      %td= t("ιαδώ", "yadā", :linebreak => true)
+      %td.notcognate= t("عرف", "ʕarafa", :linebreak => true)
+      %td= t("ידע", "yada", :linebreak => true)
+      %td= t("ܝܕܥ", "idā", :linebreak => true)
+      %td.notcognate= t("እመረ", "'mara", :linebreak => true)
+      %td wēda
+      %td= t("𒂊𒁺𒌑", "edū", :linebreak => true)
+      %td Proto-Semitic *yadaʕ “know”
+    %tr
+      %th 60. sleep
+      %td= t("в̄άσαν", "vasan", :linebreak => true)
+      %td.notcognate= t("نام", "nāma", :linebreak => true)
+      %td= t("ישן", "yashan", :linebreak => true)
+      %td= t("ܫܢܬܐ", "šentā", :linebreak => true)
+      %td.notcognate= t("ኖመ", "noma", :linebreak => true)
+      %td šənēt
+      %td= t("𒅆𒀉𒌅", "šittu", :linebreak => true)
+      %td Proto-Semitic *wašin “sleep”
+    %tr
+      %th 61. die
+      %td= t("μούτ", "mūt", :linebreak => true)
+      %td= t("مات", "māta", :linebreak => true)
+      %td= t("מת", "met", :linebreak => true)
+      %td= t("ܡܬ", "mat", :linebreak => true)
+      %td= t("ሞተ", "mota", :linebreak => true)
+      %td mōt
+      %td= t("𒈬𒀀𒌅", "mātu", :linebreak => true)
+      %td Proto-Semitic *mat “die”
+    %tr
+      %th 62. kill
+      %td= t("κάτταλ", "kəthal", :linebreak => true)
+      %td= t("قتل", "qatala", :linebreak => true)
+      %td.notcognate= t("הרג", "harag", :linebreak => true)
+      %td= t("ܩܛܠ", "qṭal", :linebreak => true)
+      %td= t("ገደለ", "gadala", :linebreak => true)
+      %td.notcognate lōtəǧ
+      %td= t("𒅗𒋫𒇻", "qatālu", :linebreak => true)
+      %td Proto-Semitic *ḳatal “kill”
+    %tr
+      %th 63. swim
+      %td= t("σάλαλ", "salal", :linebreak => true)
+      %td.notcognate= t("سبح", "sabaħa", :linebreak => true)
+      %td.notcognate= t("שחה", "sacha", :linebreak => true)
+      %td.notcognate= t("ܣܚܐ", "sḥā", :linebreak => true)
+      %td.notcognate= t("ኀመሰ", "ḫammasa", :linebreak => true)
+      %td.notcognate sōbəḥ
+      %td —
+      %td Proto-Semitic *ṣall “float”
+    %tr
+      %th 64. fly (v)
+      %td= t("καννήφ", "kənnēf", :linebreak => true)
+      %td.notcognate= t("طار", "ṭāra", :linebreak => true)
+      %td.notcognate= t("עף", "af", :linebreak => true)
+      %td.notcognate= t("ܦܪܚ", "praḥ", :linebreak => true)
+      %td.notcognate= t("ሰረረ", "sarara", :linebreak => true)
+      %td.notcognate fər
+      %td.notcognate= t("𒄷", "naprušu", :linebreak => true)
+      %td From κάναφ “wing”, ultimately from Proto-Semitic *kanapum “wing”
+    %tr
+      %th 65. walk
+      %td= t("ταβτήβ", "tabtēb", :linebreak => true)
+      %td.notcognate= t("مشى", "mašā", :linebreak => true)
+      %td.notcognate= t("הלך", "halach", :linebreak => true)
+      %td.notcognate= t("ܗܠܟ", "hallek", :linebreak => true)
+      %td.notcognate= t("ሐውረ", "ḥawra", :linebreak => true)
+      %td.notcognate səyōr
+      %td.notcognate= t("𒁺", "alāku", :linebreak => true)
+      %td Probably onomatopoeic
+    %tr
+      %th 66. come
+      %td= t("βού", "bū", :linebreak => true)
+      %td.notcognate= t("جاء", "jā'a", :linebreak => true)
+      %td= t("בא", "ba", :linebreak => true)
+      %td.notcognate= t("ܐܬܐ", "etā", :linebreak => true)
+      %td.notcognate= t("መጽአ", "maṣ'a", :linebreak => true)
+      %td.notcognate nōka
+      %td= t("𒁳", "bā'u", :linebreak => true)
+      %td Proto-Semitic *baʔ “come”
+    %tr
+      %th 67. lie, recline
+      %td= t("σάκαβ", "sakab", :linebreak => true)
+      %td.notcognate= t("رقد", "raqada", :linebreak => true)
+      %td= t("שכב", "shachav", :linebreak => true)
+      %td= t("ܫܟܒ", "škav", :linebreak => true)
+      %td= t("ሰከበ", "sakaba", :linebreak => true)
+      %td.notcognate šəwkōf
+      %td= t("𒊓𒅗𒁍", "sakapu", :linebreak => true)
+      %td Proto-Semitic *šakab “lie down”
+    %tr
+      %th 68. sit
+      %td= t("в̄άθαβ", "vaṯab", :linebreak => true)
+      %td.notcognate= t("جلس", "jalisa", :linebreak => true)
+      %td= t("ישב", "yashav", :linebreak => true)
+      %td= t("ܝܬܒ", "itev", :linebreak => true)
+      %td.notcognate= t("ነበረ", "nabara", :linebreak => true)
+      %td.notcognate śxəwəlōl
+      %td= t("𒂉", "ašābu", :linebreak => true)
+      %td Proto-Semitic *waθib “sit”
+    %tr
+      %th 69. stand
+      %td= t("κούν", "kūn", :linebreak => true)
+      %td= t("قام", "qāma", :linebreak => true)
+      %td.notcognate= t("עמד", "amad", :linebreak => true)
+      %td= t("ܩܘܡ", "qām", :linebreak => true)
+      %td= t("ቆመ", "qoma", :linebreak => true)
+      %td.notcognate ṣōr
+      %td.notcognate= t("𒌑𒍪𒍪", "uzuzzu", :linebreak => true)
+      %td Proto-Semitic *ḳam “stand, get up”
+    %tr
+      %th 70. give
+      %td= t("ηάβ", "hab", :linebreak => true)
+      %td.notcognate= t("أعطى", "'aʕṭā", :linebreak => true)
+      %td.notcognate= t("נתן", "natan", :linebreak => true)
+      %td= t("ܝܗܒ", "yav", :linebreak => true)
+      %td= t("ወሀበ", "wahaba", :linebreak => true)
+      %td.notcognate wəzōm
+      %td.notcognate= t("𒋧", "nadānu", :linebreak => true)
+      %td Proto-Semitic *(wa)hab “give”
+    %tr
+      %th 71. say
+      %td= t("άμαρ", "'amar", :linebreak => true)
+      %td.notcognate= t("قال", "qāla", :linebreak => true)
+      %td= t("אמר", "amar", :linebreak => true)
+      %td= t("ܐܡܪ", "emar", :linebreak => true)
+      %td.notcognate= t("ብህለ", "bəhla", :linebreak => true)
+      %td 'āmōr
+      %td.notcognate= t("𒅗", "qabū", :linebreak => true)
+      %td Proto-Semitic *ʔamar “say”
+    %tr
+      %th 72. sun
+      %td= t("σώτζε", "sāče", :linebreak => true)
+      %td= t("شمس", "šams", :linebreak => true)
+      %td= t("שמש", "shemesh", :linebreak => true)
+      %td= t("ܫܡܫܐ", "šemšā", :linebreak => true)
+      %td.notcognate= t("ፀሐይ", "ḍaḥay", :linebreak => true)
+      %td.notcognate ḥəyám
+      %td= t("𒌓", "šamšu", :linebreak => true)
+      %td Proto-Semitic *šimšum “sun”
+    %tr
+      %th 73. moon
+      %td= t("в̄υώχ", "vuox", :linebreak => true)
+      %td.notcognate= t("قمر", "qamar", :linebreak => true)
+      %td= t("ירח", "yareach", :linebreak => true)
+      %td.notcognate= t("ܣܗܪܐ", "sahrā", :linebreak => true)
+      %td= t("ወርኅ", "warḫ", :linebreak => true)
+      %td.notcognate ḥārēt
+      %td= t("𒌗", "arḫu", :linebreak => true)
+      %td Proto-Semitic *warxum “moon”
+    %tr
+      %th 74. star
+      %td= t("ηυκώβ", "hukāb", :linebreak => true)
+      %td.notcognate= t("نجمة", "najma", :linebreak => true)
+      %td= t("כוכב", "kochav", :linebreak => true)
+      %td= t("ܟܘܟܒܐ", "kawkvā", :linebreak => true)
+      %td= t("ኮከብ", "kokab", :linebreak => true)
+      %td kəbkēb
+      %td= t("𒀯", "kakkabu", :linebreak => true)
+      %td Proto-Semitic *kawkabum “star”
+    %tr
+      %th 75. water
+      %td= t("μή", "mē", :linebreak => true)
+      %td= t("ماء", "mā'", :linebreak => true)
+      %td= t("מיים", "mayim", :linebreak => true)
+      %td= t("ܡܝܐ", "mayyā", :linebreak => true)
+      %td= t("ማይ", "māy", :linebreak => true)
+      %td ḥəmō
+      %td= t("𒀀", "mū", :linebreak => true)
+      %td Proto-Semitic *mayum “water”
+    %tr
+      %th 76. rain (n)
+      %td= t("μάττερ", "məther", :linebreak => true)
+      %td= t("مطر", "maṭar", :linebreak => true)
+      %td.notcognate= t("גשם", "geshem", :linebreak => true)
+      %td= t("ܡܛܪܐ", "meṭrā", :linebreak => true)
+      %td.notcognate= t("ዝናም", "zənām", :linebreak => true)
+      %td.notcognate məwsē
+      %td.notcognate= t("𒍣𒉡", "zinnu", :linebreak => true)
+      %td Proto-Semitic *miṭarum “rain”
+    %tr
+      %th 77. stone
+      %td= t("αννώ", "'annā", :linebreak => true)
+      %td.notcognate= t("حجر", "ħajar", :linebreak => true)
+      %td= t("אבן", "even", :linebreak => true)
+      %td= t("ܐܒܢܐ", "avna", :linebreak => true)
+      %td= t("እብን", "'əbn", :linebreak => true)
+      %td.notcognate ḥəṣəlēt
+      %td= t("𒉌𒌓", "abnu", :linebreak => true)
+      %td Proto-Semitic *ʔabnum “stone”
+    %tr
+      %th 78. sand
+      %td= t("ών", "'ān", :linebreak => true)
+      %td.notcognate= t("رمل", "ramil", :linebreak => true)
+      %td.notcognate= t("חול", "chol", :linebreak => true)
+      %td.notcognate= t("ܚܠܐ", "ḥālā", :linebreak => true)
+      %td.notcognate= t("ኆጻ", "ḫoṣā", :linebreak => true)
+      %td.notcognate baṭḥ
+      %td.notcognate= t("𒅖", "baṣṣu", :linebreak => true)
+      %td Cross-contamination of Proto-Semitic *maʕatum “grain of sand” and Greek άμμος “sand”
+    %tr
+      %th 79. soil, earth
+      %td= t("ηέδαφ", "hedaf", :linebreak => true)
+      %td.notcognate= t("تربة", "turba", :linebreak => true)
+      %td.notcognate= t("אדמה", "adama", :linebreak => true)
+      %td.notcognate= t("ܐܪܥܐ", "arʕā", :linebreak => true)
+      %td.notcognate= t("ምድር", "mədr", :linebreak => true)
+      %td.notcognate ṭayn
+      %td.notcognate= t("𒆠", "erṣetu", :linebreak => true)
+      %td Ancient Greek ἔδαφος “ground”
+    %tr
+      %th 80. cloud
+      %td= t("γ̄ήναν", "ǧēnan", :linebreak => true)
+      %td= t("غيمة", "ǧayma", :linebreak => true)
+      %td= t("ענן", "anan", :linebreak => true)
+      %td= t("ܥܢܢܐ", "ʕnānā", :linebreak => true)
+      %td= t("ጊሜ", "gime", :linebreak => true)
+      %td.notcognate 'āfōr
+      %td.notcognate= t("𒅕𒉿𒌅", "erpetu", :linebreak => true)
+      %td Proto-Semitic *ǧayn(an)um “cloud”
+    %tr
+      %th 81. smoke
+      %td= t("ταγ̄θιννώ", "taǧṯinnā", :linebreak => true)
+      %td.notcognate= t("دخان", "duxān", :linebreak => true)
+      %td= t("עשן", "ashan", :linebreak => true)
+      %td= t("ܬܢܢܐ", "tenānā", :linebreak => true)
+      %td= t("ተን", "tann", :linebreak => true)
+      %td.notcognate nēdēx
+      %td.notcognate= t("𒆪𒌓𒊒", "qutru", :linebreak => true)
+      %td From γ̄άθαν “(to) smoke”, ultimately from Proto-Semitic *ǧaθan “smoke”
+    %tr
+      %th 82. fire
+      %td= t("ής", "'ēs", :linebreak => true)
+      %td.notcognate= t("نار", "nār", :linebreak => true)
+      %td= t("אש", "esh", :linebreak => true)
+      %td.notcognate= t("ܢܘܪܐ", "nurā", :linebreak => true)
+      %td= t("ኤሳት", "'esāt", :linebreak => true)
+      %td.notcognate śīwōṭ
+      %td= t("𒉈", "išātu", :linebreak => true)
+      %td Proto-Semitic *ʔiššum “fire”
+    %tr
+      %th 83. ash
+      %td= t("ταπρώ", "təprā", :linebreak => true)
+      %td.notcognate= t("رماد", "ramād", :linebreak => true)
+      %td.notcognate= t("אפר", "efer", :linebreak => true)
+      %td.notcognate= t("ܩܛܡܐ", "qeṭmā", :linebreak => true)
+      %td.notcognate= t("ሐመድ", "ḥamad", :linebreak => true)
+      %td.notcognate rəmēd
+      %td.notcognate= t("𒁲𒅅𒈨𒉡", "ṭikmennu", :linebreak => true)
+      %td Ancient Greek τέφρα “ash”
+    %tr
+      %th 84. burn (intr)
+      %td= t("в̄άκκαδ", "vəkhad", :linebreak => true)
+      %td.notcognate= t("حرق", "ħaraqa", :linebreak => true)
+      %td= t("יקד", "yakad", :linebreak => true)
+      %td= t("ܝܩܕ", "iqed", :linebreak => true)
+      %td.notcognate= t("ሐለለ", "ḥalala", :linebreak => true)
+      %td.notcognate ḥrōk
+      %td.notcognate= t("𒉋", "qalū", :linebreak => true)
+      %td Proto-Semitic *waḳid “burn”
+    %tr
+      %th 85. path
+      %td= t("σέντε", "sente", :linebreak => true)
+      %td.notcognate= t("طريق", "ṭarīq", :linebreak => true)
+      %td.notcognate= t("דרך", "derech", :linebreak => true)
+      %td.notcognate= t("ܐܘܪܚܐ", "urḥā", :linebreak => true)
+      %td.notcognate= t("አሠር", "'aśar", :linebreak => true)
+      %td.notcognate məlwəyēt
+      %td.notcognate= t("𒆜", "ḫarrānu", :linebreak => true)
+      %td Latin semita “path”
+    %tr
+      %th 86. mountain
+      %td= t("γάβρε", "gabre", :linebreak => true)
+      %td= t("جبل", "jabal", :linebreak => true)
+      %td.notcognate= t("הר", "har", :linebreak => true)
+      %td.notcognate= t("ܛܘܪܐ", "ṭurā", :linebreak => true)
+      %td.notcognate= t("ደብር", "dabr", :linebreak => true)
+      %td.notcognate kərmáym
+      %td.notcognate= t("𒐼𒁺𒌋", "šadū", :linebreak => true)
+      %td Proto-Semitic *gabalum “mountain”
+    %tr
+      %th 87. red
+      %td= t("αδούν", "'adūn", :linebreak => true)
+      %td.notcognate= t("أحمر", "'aħmar", :linebreak => true)
+      %td= t("אדום", "adom", :linebreak => true)
+      %td.notcognate= t("ܣܘܡܩ", "sumāq", :linebreak => true)
+      %td= t("አዳማዊ", "'addāmāwi", :linebreak => true)
+      %td.notcognate 'ōfər
+      %td= t("𒀀𒁕𒈬", "adamu", :linebreak => true)
+      %td Proto-Semitic *ʔadāmum “red”
+    %tr
+      %th 88. green
+      %td= t("в̄αρούκ", "varūk", :linebreak => true)
+      %td.notcognate= t("اخضر", "'axḍar", :linebreak => true)
+      %td= t("ירוק", "yarok", :linebreak => true)
+      %td= t("ܝܘܪܩ", "yurāq", :linebreak => true)
+      %td.notcognate= t("ሐመልሚል", "ḥamalmil", :linebreak => true)
+      %td.notcognate ṣāfər
+      %td= t("𒅊", "arqu", :linebreak => true)
+      %td Proto-Semitic *warāḳum “green”
+    %tr
+      %th 89. yellow
+      %td= t("τζατούρ", "čatūr", :linebreak => true)
+      %td.notcognate= t("أصفر", "'aṣfar", :linebreak => true)
+      %td.notcognate= t("צהוב", "tzahov", :linebreak => true)
+      %td.notcognate= t("ܟܘܪܟܡܢ", "kurkmān", :linebreak => true)
+      %td.notcognate= t("አስፋር", "'asfār", :linebreak => true)
+      %td.notcognate həźáwr
+      %td.notcognate= t("𒌑𒍤𒆸", "azupīru", :linebreak => true)
+      %td From τζίτρε “citron” with a color vowel pattern
+    %tr
+      %th 90. white
+      %td= t("λαβούν", "labūn", :linebreak => true)
+      %td.notcognate= t("أبيض", "'abyaḍ", :linebreak => true)
+      %td= t("לבן", "lavan", :linebreak => true)
+      %td.notcognate= t("ܚܘܪܐ", "ḥewwār", :linebreak => true)
+      %td.notcognate= t("ጻዕዳ", "ṣāʕdā", :linebreak => true)
+      %td əwbōn
+      %td.notcognate= t("𒌓𒌓", "peṣū", :linebreak => true)
+      %td Proto-Semitic *labanum “white” with a color vowel pattern
+    %tr
+      %th 91. black
+      %td= t("τζαλούν", "čalūn", :linebreak => true)
+      %td.notcognate= t("أسود", "'aswad", :linebreak => true)
+      %td.notcognate= t("שחור", "shachor", :linebreak => true)
+      %td.notcognate= t("ܐܘܟܡܐ", "ukām", :linebreak => true)
+      %td= t("ጸሊም", "ṣallim", :linebreak => true)
+      %td.notcognate ḥōwər
+      %td= t("𒈪𒈪", "ṣalmu", :linebreak => true)
+      %td Proto-Semitic *ṣ́alamum “dark” with a color vowel pattern
+    %tr
+      %th 92. night
+      %td= t("λήλ", "lēl", :linebreak => true)
+      %td= t("ليلة", "layla", :linebreak => true)
+      %td= t("לילה", "layla", :linebreak => true)
+      %td= t("ܠܠܝܐ", "lêlyā", :linebreak => true)
+      %td= t("ሌሊት", "lelit", :linebreak => true)
+      %td láylət
+      %td.notcognate= t("𒈪", "mūšu", :linebreak => true)
+      %td Proto-Semitic *laylum “night”
+    %tr
+      %th 93. hot
+      %td= t("ρ̄ούν", "řūn", :linebreak => true)
+      %td.notcognate= t("حار", "ħarr", :linebreak => true)
+      %td= t("חם", "cham", :linebreak => true)
+      %td= t("ܚܡܝܡ", "ḥamim", :linebreak => true)
+      %td.notcognate= t("ምውቅ", "məwwəq", :linebreak => true)
+      %td.notcognate gōna
+      %td= t("𒅎𒈬", "emmu", :linebreak => true)
+      %td Proto-Semitic *ħūmum “hot”
+    %tr
+      %th 94. cold
+      %td= t("τζείλ", "čīl", :linebreak => true)
+      %td.notcognate= t("بارد", "bārid", :linebreak => true)
+      %td= t("קר", "kar", :linebreak => true)
+      %td= t("ܩܪܝܪ", "qarir", :linebreak => true)
+      %td= t("ቈሪር", "qʷarir", :linebreak => true)
+      %td.notcognate ḳāṣəm
+      %td.notcognate= t("𒅗𒋢", "kaṣū", :linebreak => true)
+      %td Proto-Semitic *ḳīrum “cold”
+    %tr
+      %th 95. full
+      %td= t("μώλ", "māl", :linebreak => true)
+      %td= t("مليء", "malī'", :linebreak => true)
+      %td= t("מלא", "male", :linebreak => true)
+      %td= t("ܡܠܝ", "mle", :linebreak => true)
+      %td= t("መልአ", "mal'a", :linebreak => true)
+      %td mīlə'
+      %td= t("𒈠𒇻𒌑", "malū", :linebreak => true)
+      %td Proto-Semitic *malʔum “full”
+    %tr
+      %th 96. new
+      %td= t("ρ̄ούδιθ", "řūdiṯ", :linebreak => true)
+      %td.notcognate= t("جديد", "jadīd", :linebreak => true)
+      %td= t("חדש", "chadash", :linebreak => true)
+      %td= t("ܚܕܝܬ", "ḥdet", :linebreak => true)
+      %td= t("ሐዲስ", "ḥaddis", :linebreak => true)
+      %td ḥəydēn
+      %td= t("𒉋", "eššu", :linebreak => true)
+      %td Proto-Semitic *ħadaθum “new”
+    %tr
+      %th 97. good
+      %td= t("τήβ", "tēb", :linebreak => true)
+      %td= t("طيب", "ṭayyib", :linebreak => true)
+      %td= t("טוב", "tov", :linebreak => true)
+      %td= t("ܛܒܐ", "ṭāv", :linebreak => true)
+      %td.notcognate= t("በጉዕ", "baguʕ", :linebreak => true)
+      %td.notcognate gīd
+      %td= t("𒄭", "ṭābu", :linebreak => true)
+      %td Proto-Semitic *ṭaybum “good”
+    %tr
+      %th 98. round
+      %td= t("γαλούλ", "galūl", :linebreak => true)
+      %td.notcognate= t("دائر", "dā'ir", :linebreak => true)
+      %td.notcognate= t("עגול", "agol", :linebreak => true)
+      %td= t("ܓܠܝܠ", "glil", :linebreak => true)
+      %td.notcognate= t("ኬብ", "kəbb", :linebreak => true)
+      %td.notcognate mədáwwər
+      %td.notcognate= t("𒃻𒊒", "garru", :linebreak => true)
+      %td Proto-Semitic *galalum “round”
+    %tr
+      %th 99. dry
+      %td= t("ιούβις", "yūbis", :linebreak => true)
+      %td.notcognate= t("جاف", "jāf", :linebreak => true)
+      %td= t("יבש", "yavesh", :linebreak => true)
+      %td= t("ܝܒܫ", "yabbeš", :linebreak => true)
+      %td= t("ይቡስ", "yəbus", :linebreak => true)
+      %td.notcognate ḳáyṣa
+      %td.notcognate= t("𒀊𒇻", "ablu", :linebreak => true)
+      %td Proto-Semitic *wābišum “dry”
+    %tr
+      %th 100. name
+      %td= t("σέν", "sen", :linebreak => true)
+      %td= t("اسم", "'ism", :linebreak => true)
+      %td= t("שם", "shem", :linebreak => true)
+      %td= t("ܫܡܐ", "šmā", :linebreak => true)
+      %td= t("ስም", "səm", :linebreak => true)
+      %td ham
+      %td= t("𒈬", "šumu", :linebreak => true)
+      %td Proto-Semitic *šmum “name”
+  %p Sources:
+  %dl
+    %dt Hebrew
+    %dd "Morfix Dictionary," Melingo Ltd. (Britannica Israel), #{link_to "http://www.morfix.co.il/en/"}.
+    %dt Arabic
+    %dd "Arabic, Standard Swadesh List," The Rosetta Project, The Long Now Foundation, #{link_to "http://archive.org/stream/rosettaproject_arb_swadesh-1/arb.txt"}.
+    %dd "English &lt;-&gt; Arabic Online Dictionary," ECTACO, #{link_to "http://www.ectaco.co.uk/English-Arabic-Dictionary/"}.
+    %dt Aramaic
+    %dd "Aramaic Lexicon and Concordance," Peshitta.org, The Way International, #{link_to "http://www.peshitta.org/lexicon/"}.
+    %dd "The Comprehensive Aramaic Lexicon," Hebrew Union College of Cincinnati, #{link_to "http://cal1.cn.huc.edu/"}.
+    %dd Smith, J. Payne. <i>A Compendious Syriac Dictionary</i> (Oxford: Clarendon Press, 1903).
+    %dt Ge'ez
+    %dd Leslau, Wolf. <i>Comparative Dictionary of Ge'ez</i> (Wiesbaden: Otto Harrassowitz, 1991).
+    %dt Mehri
+    %dd Johnstone, T. M. <i>Mehri Lexicon and English–Mehri Word List</i> (London: University of London, 1987).
+    %dt Akkadian
+    %dd "The Pennsylvania Sumerian Dictionary," University of Pennsylvania Museum of Anthropology and Archaeology, #{link_to "http://psd.museum.upenn.edu/epsd/index.html"}.
+    %dd Roth, Martha T. et al., ed., <i>The Assyrian Dictionary of the Oriental Institute of the University of Chicago</i> (Chicago: The Oriental Institute, 1956-2010).
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

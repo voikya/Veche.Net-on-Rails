@@ -35,6 +35,10 @@ body.grammar.alashian {
     background-color: $background-color;
   }
 
+  th.etymology {
+    width: 200px;
+  }
+
   table {
     border: solid 3px $background_color;
     border-bottom: solid 2px $table_border_bottom_right;
