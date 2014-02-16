@@ -1,0 +1,844 @@
+- content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αφφυνυλυιώ υεΑμμυρφυλυιώ Νιστυριτζκιούς̄".html_safe
+
+= render :partial => 'navigation'
+
+%p Proto-Semitic is the reconstructed ancestor of the Semitic language family, including Alashian as well as such languages as Arabic, Hebrew, Amharic, Phoenician, and Assyrian. It is believed to have been spoken around the fourth milennium BC somewhere in the modern-day Middle East, with most theories placing it in Arabia, the Levant, or in Northern Mesopotamia. Proto-Semitic itself is a member of the much larger Afro-Asiatic family, spanning much of northern Africa and the Middle East; Proto-Semitic's closest siblings include Ancient Egyptian and the Berber languages of the Sahara and Maghreb.
+%p Since the Semitic languages are so well-attested historically (as many of the earliest written languages were Semitic), we are able to reconstruct the Proto-Semitic phonology with a fairly high degree of certainty. The morphology and syntax, however, are considerably more complex issues. While certain features—such as the famous triconsonantal roots—are present in all of the modern Semitic languages and thus were certainly part of Proto-Semitic, the modern languages show quite a bit of variety in the structure and function of various morphological forms. To make matters worse, much of Semitic morphology is highly dependent on vowel quality, and the historical Semitic scripts were generally very poor when it came to marking vowel quality consistently. While significant progress in this area has certainly been made, there remain many unanswered questions about features that we only see trace evidence of in attested languages.
+
+= section "The Phonology of Proto-Semitic" do
+  %p Proto-Semitic is generally reconstructed with 29 consonants and three vowels (which can be either short or long). The most distinctive feature is the series of voiceless 'emphatic' consonants contrasting with normal voiceless and voiced consonants. Emphatic consonants are generally held to have been glottalized.
+  %p The following chart shows the phonemic inventory of Proto-Semitic, showing both the traditional Semiticist transcription and their phonetic values as currently understood. Notice in particular that the coronal fricatives and affricates' notation does not correspond very logically with their phonetic values; this is the result of revisions in our understanding of Proto-Semitic in the years since the common adoption of this notation.
+  %table
+    %tr
+      %th{:colspan => 2, :rowspan => 2} 
+      %th{:rowspan => 2} Labial
+      %th{:rowspan => 2} Interdental
+      %th{:colspan => 2} Alveolar
+      %th{:rowspan => 2} Palatal
+      %th{:rowspan => 2} Velar
+      %th{:rowspan => 2} Pharyngeal
+      %th{:rowspan => 2} Glottal
+    %tr
+      %th Central
+      %th Lateral
+    %tr
+      %th{:rowspan => 3} Plosive
+      %th Voiceless
+      %td p [p]
+      %td
+      %td t [t]
+      %td
+      %td
+      %td k [k]
+      %td
+      %td ʼ [ʔ]
+    %tr
+      %th Voiced
+      %td b [b]
+      %td
+      %td d [d]
+      %td
+      %td
+      %td g [g]
+      %td
+      %td
+    %tr
+      %th Emphatic
+      %td
+      %td
+      %td ṭ [tˀ]
+      %td
+      %td
+      %td q [kˀ]
+      %td
+      %td
+    %tr
+      %th{:rowspan => 3} Fricative
+      %th Voiceless
+      %td
+      %td ṯ [θ]
+      %td š [s]
+      %td
+      %td
+      %td ḫ [x]
+      %td ḥ [ħ]
+      %td h [h]
+    %tr
+      %th Voiced
+      %td
+      %td ḏ [ð]
+      %td
+      %td
+      %td
+      %td ġ [γ]
+      %td ʻ [ʕ]
+      %td
+    %tr
+      %th Emphatic
+      %td
+      %td ṱ [θˀ]
+      %td
+      %td
+      %td
+      %td
+      %td
+      %td
+    %tr
+      %th{:rowspan => 3} Affricate
+      %th Voiceless
+      %td
+      %td
+      %td s [ts]
+      %td ś [tɬ]
+      %td
+      %td
+      %td
+      %td
+    %tr
+      %th Voiced
+      %td
+      %td
+      %td z [dz]
+      %td
+      %td
+      %td
+      %td
+      %td
+    %tr
+      %th Emphatic
+      %td
+      %td
+      %td ṣ [tsˀ]
+      %td ṣ́ [tɬˀ]
+      %td
+      %td
+      %td
+      %td
+    %tr
+      %th Nasal
+      %th Voiced
+      %td m [m]
+      %td
+      %td n [n]
+      %td
+      %td
+      %td
+      %td
+      %td
+    %tr
+      %th Other
+      %th Voiced
+      %td
+      %td
+      %td r [r]
+      %td l [l]
+      %td y [j]
+      %td w [w]
+      %td
+      %td
+  %table
+    %tr
+      %th{:colspan => 2}
+      %th Front
+      %th Back
+    %tr
+      %th{:rowspan => 2} High
+      %th Long
+      %td ī [iː]
+      %td ū [uː]
+    %tr
+      %th Short
+      %td i [i]
+      %td u [u]
+    %tr
+      %th{:rowspan => 2} Low
+      %th Long
+      %td{:colspan => 2} ā [ɑː]
+    %tr
+      %th Short
+      %td{:colspan => 2} a [ɑ]
+    %tr
+      %th{:colspan => 2} Diphthongs
+      %td ay [ɑj]
+      %td aw [ɑw]
+  %p To aid in consistency and readability, a slightly modified version of the above transcription will be used:
+  %ul
+    %li q [kˀ] will be represented <i>ḳ</i>, to emphasize its emphatic nature
+    %li ʼ [ʔ] and ʻ [ʕ] will be represented as <i>ʔ</i> and <i>ʕ</i> respectively, to make them more legible
+    %li ṯ [θ] and ṱ [θˀ] will be represented as <i>θ</i> and <i>θ̣</i>, to make diacritic usage more consistent
+    %li ḫ [x] and ḥ [ħ] will be represented as <i>x</i> and <i>ħ</i>, to make their values clearer
+  %p Due to the complexity and uncertainty in the alveolar fricatives and affricates, the traditional notation will be maintained here.
+
+= section "Phonological Developments" do
+  %p The phonological history of the Semitic languages tends to be quite simple and regular across the family. Due to the tremendous analogical pressure exerted by their morphology (i.e., the discontiguous roots and extensive derivational mechanisms), conditional sound changes are quite rare; analogy often serves to level out the results.
+
+  = section "Loss of Lateral Fricatives" do
+    %p The lateral fricatives (or affricates) were some of the first sounds to be lost throughout the Semitic language family outside of South Semitic. Given the similar fate of the laterals in all of its sister languages, the lateral quality of Proto-Semitic *ś and *ṣ́ was probably lost early on. However, in Alashian these phonemes remained distinctive, probably as something along the lines of *č and *č̣ (i.e., non-lateral affricates). Later on these would become modern Alashian /ʃ/ and /tʃ(ʰ)/, respectively.
+    %p As in virtually all of the other Semitic languages, Proto-Semitic *ś became a fricative in Alashian, namely /ʃ/. However, Greek transcriptions of Old Alashian names attest to its original affricate quality, such as Ancient Greek #{t "Ατσαέλ", "Atsaél"} for what was presumably Old Alashian <i>*ʕačē-ʔel</i> (modern #{t "Νασ̄ώλ", "Našāl"}), literally “God has made/made by God”, from Proto-Semitic <i>*ʕaśaya-ʔilu</i>. Its emphatic counterpart, *ṣ́, remained an affricate in Alashian (namely /tʃ(ʰ)/), and is in good company: this sound is also reflected in Hebrew צ /ts/ and in Arabic ض /dˤ/, which, though not an affricate, retains its non-fricative component.
+    - examples = [ {:sem => "*śīma", :sem_gloss => "he put", :ala => "σ̄είν", :lat => "šīn", :ala_gloss => "he put"},
+                   {:sem => "*ʕaśru", :sem_gloss => "ten", :ala => "ηάσ̄ρε", :lat => "hašre", :ala_gloss => "ten"},
+                   {:sem => "*ʕaśayku", :sem_gloss => "I made", :ala => "ηασ̄ήτ", :lat => "hašēt", :ala_gloss => "I made"},
+                   {:sem => "*ʕiṣ́u", :sem_gloss => "tree", :ala => "ηάτζ", :lat => "həč", :ala_gloss => "tree"},
+                   {:sem => "*bayṣ́(at)u", :sem_gloss => "egg", :ala => "βητζζώ", :lat => "bēčhā", :ala_gloss => "egg"},
+                   {:sem => "*rāmiṣ́u", :sem_gloss => "glowing with heat", :ala => "ρούματζ", :lat => "rūməč", :ala_gloss => "shining, glowing"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Coronal Fricative Mergers" do
+    %p Another development seen in various forms throughout the Semitic family is the reduction in the total number of coronal fricatives and affricates. Proto-Semitic had nine such consonants; Arabic reduced them to eight, Aramaic to six, Hebrew to four. Alashian reduced them to seven—/θ ð s z ʃ tsʰ tʃʰ/—although an eighth phoneme /tʃ/ is also present as a later development not related to the original Proto-Semitic coronals.
+    %p The two non-emphatic interdental fricatives *θ and *ḏ have survived into modern Alashian largely untouched, most often resulting in /θ/ and /ð/. A few irregular conditional developments have obscured this correspondence, such as the common conversion of word-initial *ḏ to /d/. The emphatic fricative *θ̣, although quite rare overall, always corresponds to modern Alashian /z/. The reason for this change is not entirely clear, although the voicing is also seen in languages such as Arabic and Ugaritic.
+    - examples = [ {:sem => "*ʔaθīru", :sem_gloss => "wealthy", :ala => "αθείρ", :lat => "'aṯīr", :ala_gloss => "honorable"},
+                   {:sem => "*θmānu", :sem_gloss => "eight", :ala => "θιμούν", :lat => "ṯimūn", :ala_gloss => "eight"},
+                   {:sem => "*kaḏaba", :sem_gloss => "he lied", :ala => "κάδ̄αβ", :lat => "kaḏab", :ala_gloss => "he lied"},
+                   {:sem => "*ḏakarta", :sem_gloss => "you remembered", :ala => "δάκαρτα", :lat => "dakarta", :ala_gloss => "you remembered"},
+                   {:sem => "*θ̣aħru", :sem_gloss => "back", :ala => "ζώρ", :lat => "zār", :ala_gloss => "spine"},
+                   {:sem => "*ʔaθ̣māy(u)", :sem_gloss => "I thirst", :ala => "αζμώ", :lat => "'azmā", :ala_gloss => "I am thirsty"} ]
+    = render 'sound_change', :examples => examples
+    %p The two voiceless fricatives *š and *s merged as /s/. The voiced *z remained as /z/. /ʃ/ was reintroduced from *ś, as previously discussed.
+    - examples = [ {:sem => "*lašānu", :sem_gloss => "tongue", :ala => "λασούν", :lat => "lasūn", :ala_gloss => "tongue"},
+                   {:sem => "*šimšu", :sem_gloss => "sun", :ala => "σώτζε", :lat => "sāče", :ala_gloss => "sun"},
+                   {:sem => "*yisaddir(u)", :sem_gloss => "he prepares", :ala => "ίσαδδαρ", :lat => "yisəddar", :ala_gloss => "he prepares"},
+                   {:sem => "*sandayu", :sem_gloss => "forearms (dual)", :ala => "σανδή", :lat => "sandē", :ala_gloss => "arm"},
+                   {:sem => "*zawgu", :sem_gloss => "pair", :ala => "ζυώγ", :lat => "zuog", :ala_gloss => "pair"},
+                   {:sem => "*zirʕ(at)u", :sem_gloss => "seed", :ala => "ζερώ", :lat => "zerā", :ala_gloss => "seed"} ]
+    %p While the emphatic *θ̣ completely lost all trace of its original emphatic quality, *ṣ and *ṣ́ retained it, probably originally as *ṭṣ and *č̣. These later developed into the modern aspirates /ts(ʰ)/ and /tʃ(ʰ)/.
+    - examples = [ {:sem => "*baṣalu", :sem_gloss => "onion", :ala => "βάτσαλ", :lat => "bətshal", :ala_gloss => "onion"},
+                   {:sem => "*ḳīṣīm", :sem_gloss => "edges (gen pl)", :ala => "τζητσιήν", :lat => "čētshien", :ala_gloss => "ends"},
+                   {:sem => "*ʕaṣ́mu", :sem_gloss => "bone", :ala => "ηάτζζαν", :lat => "həčhan", :ala_gloss => "bone"},
+                   {:sem => "*raṣ́ayku", :sem_gloss => "I wanted", :ala => "ρατζζήτ", :lat => "rəčhēt", :ala_gloss => "I enjoyed"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Loss of /p/" do
+    %p The Proto-Semitic labial stop *p lenited to /f/ in all positions, a change Alashian has in common with Arabic, South Semitic, and positionally Aramaic and Hebrew. /p/ would later be reintroduced, but entirely through loanwords from languages such as Greek, French, and Turkish. Geminated *pp was not originally affected by this change as is evidenced by some frozen forms such as #{t "αππών", "'əphān"} “now” from Proto-Semitic *<i>han-paʕma</i> (→ *<i>happaʔma</i>), but analogy eventually removed most of these exceptions.
+    - examples = [ {:sem => "*napsu", :sem_gloss => "breath, soul", :ala => "νάφσε", :lat => "nafse", :ala_gloss => "breath"},
+                   {:sem => "*palgu", :sem_gloss => "section", :ala => "φάλγε", :lat => "falge", :ala_gloss => "half"},
+                   {:sem => "*ṣapuru", :sem_gloss => "flock of birds", :ala => "σάφαρ", :lat => "safar", :ala_gloss => "birds (pl)"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Canaanite Vowel Shift" do
+    %p The Canaanite Vowel Shift is the shift of Proto-Semitic *ā to *ō or *ū in the Canaanite languages and Alashian. In Alashian this affected all non-final *ā, which became /uː/. In the modern languages these correspond to either /uː/ or /uo/.
+    - examples = [ {:sem => "*kātibu", :sem_gloss => "writer", :ala => "κούτιβ", :lat => "kūtib", :ala_gloss => "writer"},
+                   {:sem => "*šalāmu", :sem_gloss => "peace", :ala => "σαλούν", :lat => "salūn", :ala_gloss => "peace"},
+                   {:sem => "*saʔlāti", :sem_gloss => "questions (gen pl)", :ala => "σωλυώς̄", :lat => "sāluoš", :ala_gloss => "questions"} ]
+    = render 'sound_change', :examples => examples
+    %p The Canaanite vowel shift can be used to date the loss of various consonants as well. For instance, Proto-Semitic *raʔšu “head” gives modern Alashian #{t "ρώς", "rās"}; this form in place of **<i>rūs</i> shows that the loss of this glottal stop and the compensatory lengthening of the vowel before it postdates the vowel shift. The same is true of the Alashian feminine suffix <i>-ā</i>, from Proto-Semitic *-at-, where the loss of final *t resulted in compensatory lengthening.
+    %p Although not part of the shift proper, the Alashian and the Canaanite languages both underwent a monophthongization shift as well, where the two Proto-Semitic diphthongs *ay and *aw became *ē and *ū. This change introduced a new vowel into Alashian, the front vowel /ɛː/.
+    - examples = [ {:sem => "*baytu", :sem_gloss => "house", :ala => "βήτ", :lat => "bēt", :ala_gloss => "house"},
+                   {:sem => "*dawru", :sem_gloss => "clan", :ala => "δούρ", :lat => "dūr", :ala_gloss => "family"},
+                   {:sem => "*ṣallaya", :sem_gloss => "he bent, knelt", :ala => "σαλλή", :lat => "sallē", :ala_gloss => "he prayed"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Loss of Pharyngeals" do
+    %p Milennia of contact with the Greeks on Cyprus has resulted in the loss of a number of Semitic phonemes not present in Cypriot Greek. One such group of consonants where the pharyngeals *ħ and *ʕ. *ħ developed into a voiced uvular fricative or approximant, a sound that, while absent in Greek, may have nevertheless been easier to pronounce. Its actual phonetic history is unclear. *ʕ developed regularly into /h/.
+    - examples = [ {:sem => "*pataħa", :sem_gloss => "he opened", :ala => "φάταρ̄", :lat => "fatař", :ala_gloss => "he opened"},
+                   {:sem => "*ħalibu", :sem_gloss => "milk", :ala => "ρ̄άλιβ", :lat => "řalib", :ala_gloss => "milk"},
+                   {:sem => "*ʕummu", :sem_gloss => "people, nation", :ala => "ηών", :lat => "hān", :ala_gloss => "people"},
+                   {:sem => "*ʕinab(at)u", :sem_gloss => "grape", :ala => "ηεμβώ", :lat => "hembā", :ala_gloss => "grape"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Rise of the Aspirates" do
+    %p Contact with Greek also brought about the demise of the Semitic emphatic consonants. The emphatic consonants at first appear to have developed into non-emphatic geminates, with *ṭ, *ḳ, *ṭṣ (Proto-Semitic *ṣ), and *č̣ (Proto-Semitic *ṣ́) becoming *tt, *kk, *tss, and *čš when intervocalic and *t, *k, *s, and *č elsewhere. Subsequently, all unvoiced geminated stops and affricates became non-geminated aspirates, so that the former emphatic consonants became /tʰ/, /kʰ/, /tsʰ/, and /tʃʰ/ when intervocalic. Consequently, Proto-Semitic *ṭ and *ḳ merged with *tt and *kk, while a new aspirate, /pʰ/, was born from original *pp.
+    %p The net result of these changes was the loss of the remaining emphatic consonants and the rise of a new aspirate series /pʰ tʰ kʰ tsʰ tʃʰ/. These aspirates may only appear in intervocalic positon, however; elsewhere they alternate with non-emphatic /p t k s tʃ/, either because they descend from emphatics that were not intervocalic, or because they descend from geminates where the geminating environment was removed.
+    %p These changes certainly came about under the influence of Cypriot Greek, which similarly underwent a sound change where unvoiced geminate stops became aspirated.
+    - examples = [ {:sem => "*laṭapa", :sem_gloss => "it was delicate", :ala => "λάτταφ", :lat => "ləthaf", :ala_gloss => "it was small"},
+                   {:sem => "*yalṭipu", :sem_gloss => "it is delicate", :ala => "ιαλτείφ", :lat => "yaltīf", :ala_gloss => "it is small"},
+                   {:sem => "*ʔatta", :sem_gloss => "you", :ala => "άττα", :lat => "'ətha", :ala_gloss => "you"},
+                   {:sem => "*munṣ́aru", :sem_gloss => "guard, sentry", :ala => "μάτζζαρ", :lat => "məčhar", :ala_gloss => "look, glance"},
+                   {:sem => "*šabʕu", :sem_gloss => "seven", :ala => "σείππα", :lat => "sīpha", :ala_gloss => "seven"} ]
+    = render 'sound_change', :examples => examples
+    %p As can be seen above in cases like #{t "σείππα", "sīpha"}, the aspirates do not need to be from original Proto-Semitic emphatics or geminates. They can also result from assimilation (in this case *bʕ → *pʕ → *pp) or simply from borrowings. However, consonants seem to be resisting to aspiration across morpheme boundaries, as in modern Alashian #{t "ακκούτιβ", "hakkūtib"} “the writer” (Proto-Semitic *han-kātibu) rather than **<i>həkhūtib</i>.
+
+  = section "Environment-Driven Vowel Shifts" do
+    %p Although monophthongization introduced a new phoneme /ɛː/ in Alashian and the Canaanite languages, the modern five-vowel and two-diphthong system did not emerge until much later, after Alashian's geographic isolation on Cyprus. This system took form through a complex series of environment-driven vowel shifts. Listed here are some of the most common types.
+    %p Pharyngeal Lowering: The two former pharyngeal consonants *ħ and *ʕ often induce lowering of neighboring consonants, with the changes *i → e and *e → a (back consonants were not usually affected). This is especially true if the pharyngeal closes a syllable. In the case of word-final *ʕ, which later became /h/ regularly, the consonant was later lost and the preceding vowel lengthened in compensation.
+    - examples = [ {:sem => "*ṣāliħu", :sem_gloss => "fortunate", :ala => "σούλερ̄", :lat => "sūleř", :ala_gloss => "successful"},
+                   {:sem => "*yiħūmu", :sem_gloss => "it is hot", :ala => "ιαρ̄ούν", :lat => "yařūn", :ala_gloss => "it is hot"},
+                   {:sem => "*šāmiʕu", :sem_gloss => "hearing", :ala => "σούμη", :lat => "sūmē", :ala_gloss => "hearing"} ]
+    = render 'sound_change', :examples => examples
+    %p Aspirate Centralization: The aspirated consonants (i.e., former geminates and emphatics not including reflexes of Proto-Semitic *θ̣, which lost its emphatic quality) cause all preceding short vowels to centralize to /ə/, thereby losing all vowel distinctions. Long vowels centralize somewhat, but all remain distinct from one another.
+    - examples = [ {:sem => "*ṯaḳala", :sem_gloss => "he weighed", :ala => "θάκκαλ", :lat => "ṯəkhal", :ala_gloss => "he weighed"},
+                   {:sem => "*niṣbaġa", :sem_gloss => "it was dyed", :ala => "νασβώγ̄", :lat => "nəsbāǧ", :ala_gloss => "it was colored"},
+                   {:sem => "*miṭaru", :sem_gloss => "rain", :ala => "μάττερ", :lat => "məther", :ala_gloss => "rain"},
+                   {:sem => "*han-paʕma", :sem_gloss => "at the time", :ala => "αππών", :lat => "'əphān", :ala_gloss => "now"} ]
+    = render 'sound_change', :examples => examples
+    %p Word-Final Loss: Word-final short vowels are almost universally lost, which among other things nearly obliterated the Proto-Semitic case system. Where this resulted in final clusters, new epenthetic vowels were inserted which do not reflect the character of the original vowel; less commonly, the final cluster could also simplify (cf. #{t "κούβ", "kūb"} “male dog” vs. #{t "καλβώ", "kalbā"} “female dog”, from Proto-Semitic *kalbu and *kalbatu).
+    - examples = [ {:sem => "*ʕabdu", :sem_gloss => "servant", :ala => "ηάв̄δε", :lat => "havde", :ala_gloss => "worker"},
+                   {:sem => "*θalgu", :sem_gloss => "snow", :ala => "θέλγε", :lat => "ṯelge", :ala_gloss => "snow"},
+                   {:sem => "*'aktabu", :sem_gloss => "I write", :ala => "ακτώβ", :lat => "'aktāb", :ala_gloss => "I write"},
+                   {:sem => "*šmu", :sem_gloss => "name", :ala => "σέν", :lat => "sen", :ala_gloss => "name"} ]
+    = render 'sound_change', :examples => examples
+    %p Compensatory Lengthening: The loss of coda *h (including original *ʕ) or *ʔ results in the compensatory lengthening of the previous vowel. This also occurs when a geminate consonant finds itself word-final due to vowel loss and is de-geminated. This results in new morphophonemic alterations between short vowel + geminate consonant and long vowel + single consonant.
+    - examples = [ {:sem => "*šamaʕku", :sem_gloss => "I heard", :ala => "σαμώτ", :lat => "samāt", :ala_gloss => "I heard"},
+                   {:sem => "*tisabbu", :sem_gloss => "you rotate (m)", :ala => "τισώβ", :lat => "tisāb", :ala_gloss => "you turn (m)"},
+                   {:sem => "*tisabbī", :sem_gloss => "you rotate (f)", :ala => "τισαββεί", :lat => "tisabbī", :ala_gloss => "you turn (f)"},
+                   {:sem => "*libbu", :sem_gloss => "heart", :ala => "λιήβ", :lat => "lieb", :ala_gloss => "heart"},
+                   {:sem => "*libbāti", :sem_gloss => "hearts (gen)", :ala => "λιββούς̄", :lat => "libbūš", :ala_gloss => "hearts"} ]
+    = render 'sound_change', :examples => examples
+    %p Stress-Induced Diphthongization: The long vowels *ī and *ū irregularly diphthongize to /ie/ and /uo/ when under stress. This usually happens in closed syllables, though there are a handful of examples of the change taking place in open syllables as well. The conditioning appears to be partly rhythmic, with neighboring long vowels often stopping the change. This sound change is sometimes specifically called “the Alashian Vowel Shift”, due to the characteristic nature of these two vowels in the modern language.
+    - examples = [ {:sem => "*ḏiʔbu", :sem_gloss => "wolf", :ala => "διήβ", :lat => "dieb", :ala_gloss => "wolf"},
+                   {:sem => {:native => "γείτων", :lat => "geitōn"}, :sem_gloss => "neighbor", :ala => "ζιήτ", :lat => "ziet", :ala_gloss => "neighbor"},
+                   {:sem => "*ħupnu", :sem_gloss => "palm", :ala => "ρ̄υώφνε", :lat => "řuofne", :ala_gloss => "fist"},
+                   {:sem => {:native => "πάγος", :lat => "pagos"}, :sem_gloss => "frost", :ala => "πυώγ", :lat => "puog", :ala_gloss => "cold weather"} ]
+    = render 'sound_change', :examples => examples, :labels => ["Proto-Semitic/Greek", "Meaning", :arrow, "Alashian", "Meaning"]
+    %p Weak Vowel Loss: Short vowels in certain positions appear to have been especially weak and prone to loss. The most regular examples are between two long vowels (e.g., with CāCaCā becoming CāCCā) or two syllables before a long vowel (e.g., CaCaCā becoming CCaCā).
+    - examples = [ {:sem => "*katabā", :sem_gloss => "she wrote", :ala => "κταβώ", :lat => "ktabā", :ala_gloss => "she wrote"},
+                   {:sem => "*kattibā", :sem_gloss => "she wrote repeatedly", :ala => "κητβώ", :lat => "kētbā", :ala_gloss => "she was writing"} ]
+    = render 'sound_change', :examples => examples
+    %p Assimilation: Although vocalic assimilation is highly irregular and unpredictable, there are many examples of vowels dragging other vowels toward themselves in Alashian. Many of these patterns have become systematized. One example is the imperfect tense of <i>katab</i> verbs, historically derived from the Proto-Semitic D-stem perfect: the Proto-Semitic form <i>*kattibku</i> “I wrote [repeatedly]”, which became <i>*kaytibt</i> → <i>*kētibt[e]</i> in Proto-Alashian, underwent progressive vocalic assimilation with generalized the vowel /ɛ/ throughout the whole word, ultimately resulting in Old Alashian <i>kētevte</i> and modern #{t "κιήτεв̄", "kietev"} “I was writing, I used to write”.
+
+  = section "Emergence of /e/" do
+    %p While the emergence of /eː/ is historically quite straightforward, having developed regularly from older *ay, the creation of short /e/ is far more complex. It almost certainly developed after /eː/ had become established, motivated by the desire to balance the long and short vowel inventories. The primary sources of short /e/ are, in no particular order:
+    %ol
+      %li
+        Lowering of *i in the vicinity of former pharyngeals:
+        %br
+        - examples = [ {:sem => "*niḥasu", :sem_gloss => "copper", :ala => "νέρ̄ας", :lat => "neřas", :ala_gloss => "copper"},
+                       {:sem => "*ḥimāru", :sem_gloss => "donkey", :ala => "ρ̄εμούρ", :lat => "řemūr", :ala_gloss => "donkey"},
+                       {:sem => "*ʕinabatu", :sem_gloss => "grape", :ala => "ηεμβώ", :lat => "hembā", :ala_gloss => "grape"} ]
+        = render 'sound_change', :examples => examples
+      %li As an epenthetic vowel word-initially. Particularly in verbs, epenethetic vowels would be added to support formants if no other prefix was present: *š-n-V-ktāb → #{t "εννυκτώβ", "'ennuktāb"} “be dictated”. Comparative evidence suggests this was original /i/, but lowered to /e/ in Alashian, perhaps due to the weak stress. This also occurs with word-final epenthetic vowels, but these have a very different history (see section 23.4.2 on case).
+      %li
+        From *i in nouns originally of the form *CiCC, as in *rigl-u “leg” (modern #{t "ρέγλε", "regle"}). In early Old Alashian, final short vowels became extra short before they were completely lost in most words; the preceding vowel became half-long in compensation. This half-long *î subsequently lowered to /e/, a consequence of the cross-linguistic phonetic tendency for vowel length to be inversely correlated with vowel height.
+        %br
+        - examples = [ {:sem => "*riglu", :sem_gloss => "leg", :ala => "ρέγλε", :lat => "regle", :ala_gloss => "leg"},
+                       {:sem => "*θilgu", :sem_gloss => "snow", :ala => "θέλγε", :lat => "ṯelge", :ala_gloss => "snow"},
+                       {:sem => "*dibsu", :sem_gloss => "honey", :ala => "δέπσε", :lat => "depse", :ala_gloss => "honey"} ]
+        = render 'sound_change', :examples => examples
+    %p Aside from these few sources, however, the vast majority of /e/ present in modern Alashian comes from foreign loanwords.
+
+  = section "Glide Shifts" do
+    %p Word-initial *w has generally been unstable in the Northwest Semitic languages, encompassing Alashian, Aramaic, and the Canaanite languages. In Canaanite and Aramaic the general resolution has been to convert it to /j/, as in Hebrew #{t "ילד", "yeled"} or Aramaic #{t "ܝܠܘܕܐ", "yalūdā"} “child” from Proto-Semitic *waldu (cf. Arabic #{t "ولد", "wald"}), with a general exception for clitics such as *wa- “and”. Alashian, on the other hand, converted all initial *w to /v/, including clitics.
+    - examples = [ {:sem => "*waldu", :sem_gloss => "child", :ala => "в̄ούδ", :lat => "vūd", :ala_gloss => "child"},
+                   {:sem => "*waynu", :sem_gloss => "wine", :ala => "в̄ήν", :lat => "vēn", :ala_gloss => "wine"},
+                   {:sem => "*wa-ʔim", :sem_gloss => "and if", :ala => "в̄είν", :lat => "vīn", :ala_gloss => "although"} ]
+    = render 'sound_change', :examples => examples
+    %p In an unrelated change, Alashian also underwent a process of yod fortition, whereby the glide *y strengthened into a palatal plosive [c] immediately after an unvoiced consonant and before a stressed vowel. This parallels a similar development in Cypriot Greek, where, for instance, #{t "σπίτια", "spítia"} “homes” is pronounced [spiθca].
+    - examples = [ {:sem => "*śāliθatu", :sem_gloss => "third (f sg)", :ala => "θωλιτκιώ", :lat => "ṯālitkyā", :ala_gloss => "third (f sg)"},
+                   {:sem => {:native => "θρησκεία", :lat => "thrēskeía"}, :sem_gloss => "religion", :ala => "θιριτζκιώ", :lat => "ṯiričkyā", :ala_gloss => "religion"},
+                   {:sem => "*ʔalasiyīm", :sem_gloss => "Alashians (m pl)", :ala => "αλασκιήν", :lat => "'alaskyien", :ala_gloss => "Alashians (m pl)"} ]
+    = render 'sound_change', :examples => examples, :labels => ["Proto-Semitic/Greek", "Meaning", :arrow, "Alashian", "Meaning"]
+    
+  = section "Liquid Assimilation and Dissimilation" do
+    %p The two liquid consonants *l and *r historically have not been well-behaved in the vicinity of reflexes of Proto-Semitic *ħ, which in Alashian acquired a rhotic-like pronunciation. This results in the frequent dissimilation of *r → /l/ in the vicinity of *ħ/ř. However, /l/ (whether from *r or *l) was not stable in direct contact with /ʁ/, resulting in assimilation, with /ʁl/ → /l/ and /lʁ/ → /ʁ/.
+    - examples = [ {:sem => "*milħu", :sem_gloss => "salt", :ala => "μώρ̄α", :lat => "māřa", :ala_gloss => "salt"},
+                   {:sem => "*yiħraθu", :sem_gloss => "he ploughs", :ala => "ιερ̄λώθ", :lat => "yeřlāṯ", :ala_gloss => "he farms"},
+                   {:sem => "*rāħibu", :sem_gloss => "wide", :ala => "λώρ̄εβ", :lat => "lāřeb", :ala_gloss => "wide"} ]
+    = render 'sound_change', :examples => examples
+    %p The lateral /l/ also played a special role in the resolution of word-final clusters resulting from final vowel loss. Whereas most final clusters CC# resulted either in simplification (i.e., → C#) or epenthesis (i.e., → CVC# or → CCV#), /l/ alone was prone to weakening, with final *-VlC# developing into -VwC#, with a diphthong that would in turn monophthongize.
+    - examples = [ {:sem => "*kalbu", :sem_gloss => "dog", :ala => "κούβ", :lat => "kūb", :ala_gloss => "dog"},
+                   {:sem => "*ħirbu", :sem_gloss => "sword", :ala => "ρ̄ώβε", :lat => "řābe", :ala_gloss => "sword", :comment => "(via *ħilb-)"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Voiced Stop Coda Lenition" do
+    %p Another change with strong analogues in both Northwest Semitic and Cypriot Greek, the voiced stops *b, *d, and *g regularly lenite to /v/, /ð/, and /γ/ when immediately followed by another plosive.
+    - examples = [ {:sem => "*ʔabdu", :sem_gloss => "servant", :ala => "ηάв̄δε", :lat => "havde", :ala_gloss => "worker"},
+                   {:sem => "*waladti", :sem_gloss => "you gave birth", :ala => "в̄άλαδ̄σ̄ε", :lat => "valaḏše", :ala_gloss => "you have birth"},
+                   {:sem => "*fallagku", :sem_gloss => "I divided [repeatedly]", :ala => "φιήλεγ̄", :lat => "fieleǧ", :ala_gloss => "I was splitting"} ]
+    = render 'sound_change', :examples => examples
+
+  = section "Nasal Assimilation and Other Developments" do
+    %p All Northwest Semitic languages show an instability in coda nasals. As in these other languages, any nasal immediately preceding an obstruent (plosive, fricative, or affricate) will undergo complete assimilation, resulting in gemination of the obstruent. Naturally, if the obstruent was one of /p t k s č/, the geminate consonant will in turn become aspirated.
+    - examples = [ {:sem => "*śapanta", :sem_gloss => "you covered", :ala => "σ̄άφαττα", :lat => "šafətha", :ala_gloss => "you covered"},
+                   {:sem => "*ʕanzu", :sem_gloss => "goat", :ala => "ηώδζε", :lat => "hādze", :ala_gloss => "goat"},
+                   {:sem => "*šimšu", :sem_gloss => "sun", :ala => "σώτζε", :lat => "sāče", :ala_gloss => "sun"},
+                   {:sem => {:native => "κέντρον", :lat => "kentron"}, :sem_gloss => "center", :ala => "τζέδρε", :lat => "čedre", :ala_gloss => "center"} ]
+    = render 'sound_change', :examples => examples, :labels => ["Proto-Semitic/Greek", "Meaning", :arrow, "Alashian", "Meaning"]
+    %p Unlike the other Northwest Semitic languages, however, even word-final nasals suffered from some instability. The only allowable word-final nasal becomes /n/, with all original word-final *m shifting to /n/. In some dialects this process is continued further, with the total loss of word-final nasals.
+    - examples = [ {:sem => "*maḳūmu", :sem_gloss => "site", :ala => "μακκούν", :lat => "məkhūn", :ala_gloss => "place"},
+                   {:sem => "*salāmu", :sem_gloss => "peace", :ala => "σαλούν", :lat => "salūn", :ala_gloss => "peace"},
+                   {:sem => {:native => "πόλεμος", :lat => "pólemos"}, :sem_gloss => "war", :ala => "πυώλεν", :lat => "puolen", :ala_gloss => "war"},
+                   {:sem => {:native => "Ρώμη", :lat => "Rṓmē"}, :sem_gloss => "Rome", :ala => "Ρούν", :lat => "Rūn", :ala_gloss => "Rome"} ]
+    = render 'sound_change', :examples => examples, :labels => ["Proto-Semitic/Greek", "Meaning", :arrow, "Alashian", "Meaning"]
+
+  = section "Palatalization" do
+    %p The sounds *t, *s, and *k are prone to palatalization before *i/*ī or *y, becoming /ʃ/, /ʃ/, and /tʃ/ respectively. Irregularly, *d may also become /z/. This change was perhaps influenced by the Cypriot Greek palatalization of /k/ to /tʃ/, although Alashian palatalization ultimately affects more sounds than Greek palatalization. Note that forms undergoing such a palatalization tend to be levelled in one way or another—either the palatalization is generalized through a paradigm, or it is removed entirely. Only in a few lexemes do you see a consonant alteration maintained, as in #{t "τζιτούβ", "čitūb"} “document” from #{t "κάταβ", "katab"} “write” or #{t "σαννασ̄εί", "sannašī"} “annual” from #{t "σαννώ", "sannā"} “year” (older *sannat-).
+    - examples = [ {:sem => "*lašānāti", :sem_gloss => "tongues", :ala => "λασυννούς̄", :lat => "lasunnūš", :ala_gloss => "tongues (gen)"},
+                   {:sem => "*marti", :sem_gloss => "you said (f)", :ala => "άμαρσ̄ε", :lat => "'amarše", :ala_gloss => "you said (f)"},
+                   {:sem => {:native => "εκκλησία", :lat => "ekklēsía"}, :sem_gloss => "church", :ala => "εκλισ̄ώ", :lat => "'eklišā", :ala_gloss => "church"},
+                   {:sem => "*ʔankī", :sem_gloss => "I", :ala => "ετζεί", :lat => "'ečī", :ala_gloss => "I"} ]
+    = render 'sound_change', :examples => examples, :labels => ["Proto-Semitic/Greek", "Meaning", :arrow, "Alashian", "Meaning"]
+
+= section "The Morphology of Proto-Semitic" do
+  = section "Nominal Morphology" do
+    %p Proto-Semitic nouns had two genders (masculine and feminine), three cases (nominative, accusative, and genitive), three numbers (singular, dual, and plural), and at least four states (absolute, predicative, definite, and construct).
+
+    = section "Gender" do
+      %p As in many Indo-European languages, the assignment of masculine and feminine gender in Proto-Semitic appears to have been fairly arbitrary among non-human and non-domesticated animal nouns, but very regular among nouns referring to humans. In the vast majority of cases, feminine nouns were marked with the suffix *-t, often augmented with a vowel as *-at, *-it, or *-ut, while masculine nouns were unmarked as such. Unmarked feminine nouns often fall into clear semantic groupings, such as body parts (<i>*ʕayn-</i> “eye”, <i>*ʔuḏn-</i> “ear”, <i>*baṭn-</i> “stomach”) or heavenly bodies (<i>*šimš-</i> “sun”, <i>*warħ-</i> “moon”). A handful of unmarked nouns were epicene, appearing to freely take masculine or feminine agreement.
+      %p Though no longer productive, Semitic shows strong evidence of some additional gender formants beyond just the feminine *-t. These include a marker *-b of wild animals (<i>*ḏiʔb-</i> “wolf”, <i>*kalb-</i> “wild dog”, <i>*ʔarnab-</i> “hare”, <i>*ʕaḳrab-</i> “scorpion”, etc), a marker *-l/*-r of domesticated animals (<i>*θawr-</i> “bull”, <i>*baḳar-</i> “cow”, <i>*xVzzīr-</i> “pig”, <i>*ħVmār-</i> “donkey”, <i>*gamal-</i> “camel”, etc.), and a marker *-n of body parts (<i>*baṭn-</i> “stomach”, <i>*ʕayn-</i> “eye”, <i>*lašān-</i> “tongue”, <i>*šinn-</i> “tooth”, <i>*ḳarn-</i> “horn”, etc). Unlike the feminine marker *-t, these formants have become an inseparable part of their respective stems and so are only evident through lexical comparison or cross-linguistic comparison, as these suffixes are absent in the cognate words in many other Afro-Asiatic languages.
+
+    = section "Case" do
+      %p Classical Semitic languages show three cases, the so-called <i>triptotic</i> paradigm: a nominative marked with *-u in the singular, an accusative marked with *-a, and a genitive marked with *-i. Broadly speaking, the nominative marked the subject of a sentence, the accusative the direct object or complement, and the genitive the object of a preposition or the complement of a construct. In the dual and plural the accusative/genitive contrast is neutralized. A number of nouns, however, had a <i>diptotic</i> (two case) paradigm even in the singular, with the nominative contrasting against a combined accusative-genitive marked with *-a.
+      %p When compared with the rest of the Afro-Asiatic family, however, the case system of Proto-Semitic seems to be somewhat of an outlier. Some branches, such as Egyptian, show no evidence of cases, while others, such as Berber, suggest a two-case ergatively-aligned system, with an ergative case marked by the prefix *u- and an absolutive case marked with the prefix *a- (or *i- in the plural). It appears as though sometime in its history Proto-Semitic reanalyzed the ergative as a nominative and the absolutive as an accusative, with some nouns innovating a genitive singular by back-deriving the original absolutive plural. The Semitic diptotes are therefore likely the original paradigm.
+
+    = section "Number" do
+      %p Semitic nouns were inflected for three numbers: the singular, dual, and plural. The singular was generally triptotic, with some nouns having a diptotic paradigm, while all duals and plurals were diptotes.
+      %p The singular was marked simply by adding the appropriate case ending to the stem: <i>*-u</i> for the nominative, <i>*-a</i> for the accusative (and genitive in diptotes), and <i>*-i</i> for the genitive.
+      %p The dual also features specialized suffixes added after the stem, namely <i>*-ā</i> in the nominative case and <i>*-ay</i> in the accusative and genitive.
+      %p The plural is somewhat more complex. For masculine nouns, the plural was marked with elongated forms of the singular diptotic endings, with <i>*-ū</i> in the nominative case and <i>*-ī</i> in the accusative and genitive cases. Feminine nouns with the suffix *-Vt, on the other hand, formed their plurals by elongating the final stem vowel and adding the usual short diptotic endings <i>*-u</i> or <i>*-i</i>. Due to the frequency of the feminine suffix <i>*-at-</i> in the singular, the plural suffixes <i>*-āt-u</i>/<i>*-āt-i</i> were frequently generalized.
+      %p Nouns could also be pluralized by applying a new vowel template to the singular stem, which resulted in a collective form. This change, while originally strictly-speaking derivational, became so frequent with some nouns that it essentially displaced the regular inflectional plural. Such collectives are morphological singular, so they display triptotic singular case endings and take feminine singular agreement.
+      %p The following chart shows the Proto-Semitic nouns <i>*malk-</i> “king” and <i>*malk-at-</i> “queen” in all cases and numbers, along with the Tuareg (Berber) declension of <i>a-funas</i> “bull” and <i>ta-funas-t</i> “cow” for comparison<sup>2</sup>.
+      %table
+        %tr
+          %th{:colspan => 7} Proto-Semitic Declension
+        %tr
+          %th
+          %th{:colspan => 3} Masculine
+          %th{:colspan => 3} Feminine
+        %tr
+          %th
+          %th Singular
+          %th Dual
+          %th Plural
+          %th Singular
+          %th Dual
+          %th Plural
+        %tr
+          %th Nominative
+          %td <i>*malk-u</i>
+          %td <i>*malk-ā</i>
+          %td <i>*malk-ū</i>
+          %td <i>*malk-at-u</i>
+          %td <i>*malk-at-ā</i>
+          %td <i>*malk-āt-u</i>
+        %tr
+          %th Accusative
+          %td <i>*malk-a</i>
+          %td <i>*malk-ay</i>
+          %td <i>*malk-ī</i>
+          %td <i>*malk-at-a</i>
+          %td <i>*malk-at-ay</i>
+          %td <i>*malk-āt-i</i>
+        %tr
+          %th Genitive
+          %td <i>*malk-i</i>
+          %td <i>*malk-ay</i>
+          %td <i>*malk-ī</i>
+          %td <i>*malk-at-i</i>
+          %td <i>*malk-at-ay</i>
+          %td <i>*malk-āt-i</i>
+      %table
+        %tr
+          %th{:colspan => 5} Tuareg Declension
+        %tr
+          %th
+          %th{:colspan => 2} Masculine
+          %th{:colspan => 2} Feminine
+        %tr
+          %th
+          %th Singular
+          %th Plural
+          %th Singular
+          %th Plural
+        %tr
+          %th Ergative
+          %td <i>u-funas</i>
+          %td <i>u-funas-ən</i>
+          %td <i>tu-funas-t</i>
+          %td <i>tu-funas-in</i>
+        %tr
+          %th Absolutive
+          %td <i>a-funas</i>
+          %td <i>i-funas-ən</i>
+          %td <i>ta-funas-t</i>
+          %td <i>ti-funas-in</i>
+
+    = section "State" do
+      %p The four nominal “states” of Proto-Semitic referred to four distinct syntactic roles, which may be but not necessarily are associated with some specialized inflectional behavior as well. In many of the modern Semitic languages several states may become more differentiated inflectionally, thereby transforming state into more of a morphological than a syntactic category.
+      %p The construct state describes a bound form a noun, where the construct noun is followed by a genitive qualifier (whether noun or pronoun). It similarly applied to most denominal prepositions. Inflectionally, the construct state was the simplest form, able to acquire case and number marking but no other features, and was also generally incapable of being modified by determiners.
+      %p The predicative state marks the head nominal of the predicate, whether a true noun (e.g., with complements of “to be”) or a stative verb, which were structurally predicate adjectives capable of taking further nominal arguments. The predicative state appears to have been marked by a suffix <i>*-a</i>.
+      %p The determinate state identifies an individually determined noun that is neither syntactically a construct nor a predicate. It is often equivalent to the definite article of many European languages, except that it cannot co-occur with constructs or predicates, it typically does co-occur with other determiners such as demonstrative adjectives, and it was also frequently used to mark classes (i.e., “sheep” in the determinate singular may mean both “the sheep” and “sheep in general”). The modern Semitic languages mark the determinate state with a variety of prefixes and suffixes, suggesting Proto-Semitic may have had several possible forms as well. Much of Western Semitic, include Alashian, Hebrew, and Arabic, suggest a Proto-Semitic prefix <i>*han-</i>.
+      %p The absolute (or indeterminate) state is merely the form of a noun that is neither construct, nor predicative, nor determinate. It had no special marking.
+
+    = section "Other Formants" do
+      %p Non-construct state nouns were frequently accompanied by a suffix <i>*-m</i>/<i>*-n</i>, known as mimation or nunation. These two suffixes appear to have been variants of a single original morpheme, likely a masculine marker, that acquired a generalized function. This suffix comes after any case endings.
+      %p Mass and abstract nouns could be converted into count nouns with the singulative suffix <i>*-at-</i> (i.e., by acquiring a feminine suffix). This pattern of mass noun → singulative was often reinterpreted in the reverse direction as feminine singular noun → irregular (broken) plural.
+
+    = section "Adjectives and Numerals" do
+      %p Adjectives constitute a subclass of nouns, capable of inflecting for all of the same categories as nouns. When in a non-attributive function (i.e., used independently or predicatively), adjectives are wholly indistinguishable from nouns, and may even have broken plurals. When used attributively, they agree with their head noun in gender, number, and case. Number agreement may be either morphological or logical; a broken plural of a masculine noun may take either feminine singular agreement (since mass nouns were mostly originally feminine) or masculine plural agreement (since the sense is plural and the singular is masculine).
+      %p Proto-Semitic cardinal numerals, however, require additional explanation. These numerals <i>*ħad-</i> “one” behaved as a normal adjective, and occasionally <i>*θin-</i> “two” could as well. However, higher numerals (as well as optionally “two”) tended instead to appear as the head of a nominal construct; a form such as <i>*ślāθu ʔinθāti</i> “three women” more literally could be interpreted as “a trio of woman”. Consequently, the numerals often acquired the abstract feminine suffix <i>*-t</i>, yielding forms such as <i>*ślāθtu ʔinšī(m)</i> “three men”. At some point this suffixed numeral became generalized to masculine nouns, while feminine nouns continued using the original unsuffixed form. This is the origin of the so-called <i>gender polarity</i> seen in numerals in many ancient languages, where masculine nouns appear to be modified by feminine numerals and feminine nouns appear to be modified by masculine numerals.
+
+    = section "Pronouns" do
+      %p Proto-Semitic had two types of personal pronouns: independent and suffixed.
+      %p The independent personal pronouns have two reconstructable cases, a nominative and an oblique. The nominative forms consist mostly of various personal suffixes being attached to a pronominal base <i>*n-</i>/<i>*ʔan-</i>, also attested in a number of other Afro-Asiatic languages. The third person pronouns are of more recent demonstrative origin. The oblique forms are only attested in a few languages, but appear to have consisted of a stem similar to the suffixed pronouns plus <i>*-(w)āti</i>/<i>*-ūti</i>. A dative case suffix <i>*-(w)āši</i>/<i>*-ūši</i> is attested in Akkadian, Babylonian, and Paleosyrian, but no trace of it has been identified elsewhere, so its status as a common Semitic feature is doubtful.
+      %p The suffixed personal pronouns are the more archaic form. They could be attached as clitics to several different parts of speech: for nouns they served as possessive markers, for prepositions their complement, and for verbs either their direct or indirect object.
+      %table
+        %tr
+          %th{:rowspan => 2}
+          %th{:colspan => 3} Singular
+          %th{:rowspan => 7}
+          %th{:colspan => 3} Dual
+          %th{:rowspan => 7}
+          %th{:colspan => 3} Plural
+          %th{:rowspan => 2}
+        %tr
+          %th Independent<br>(nom)
+          %th Independent<br>(obl)
+          %th Suffixed
+          %th Independent<br>(nom)
+          %th Independent<br>(obl)
+          %th Suffixed
+          %th Independent<br>(nom)
+          %th Independent<br>(obl)
+          %th Suffixed
+        %tr
+          %th 1
+          %td <i>*ʔan-a</i>
+          %td <i>*y-āti</i>
+          %td <i>*-iy</i>
+          %td <i>*ʔan-kā</i>
+          %td ?
+          %td <i>*-naya</i>
+          %td <i>*niħ-nu</i>
+          %td <i>*ni-yāti</i>
+          %td <i>*-na</i>
+          %th 1
+        %tr
+          %th 2m
+          %td <i>*ʔan-ta</i>
+          %td <i>*ku-wāti</i>
+          %td <i>*-ka</i>
+          %td <i>*ʔan-ta-nā</i>
+          %td <i>*kun-īti</i>
+          %td <i>*-kunaya</i>
+          %td <i>*ʔan-ta-nu</i>
+          %td <i>*kun-ūti</i>
+          %td <i>*-kun</i>
+          %th 2m
+        %tr
+          %th 2f
+          %td <i>*ʔan-ti</i>
+          %td <i>*ki-yāti</i>
+          %td <i>*-ki</i>
+          %td <i>*ʔan-ta-nā</i>
+          %td <i>*kun-īti</i>
+          %td <i>*-kunaya</i>
+          %td <i>*ʔan-ti-na</i>
+          %td <i>*kin-āti</i>
+          %td <i>*-kin</i>
+          %th 2f
+        %tr
+          %th 3m
+          %td <i>*šu-wa</i>
+          %td <i>*šu-wāti</i>
+          %td <i>*-šu</i>
+          %td <i>*šu-nā</i>
+          %td <i>*šun-īti</i>
+          %td <i>*-šunaya</i>
+          %td <i>*šu-nu</i>
+          %td <i>*šun-ūti</i>
+          %td <i>*-šun</i>
+          %th 3m
+        %tr
+          %th 3f
+          %td <i>*ši-ya</i>
+          %td <i>*ši-yāti</i>
+          %td <i>*-ša</i>
+          %td <i>*šu-nā</i>
+          %td <i>*šun-īti</i>
+          %td <i>*-šunaya</i>
+          %td <i>*ši-na</i>
+          %td <i>*šin-āti</i>
+          %td <i>*-šin</i>
+          %th 3f
+    
+    = section "Verbal Morphology" do
+      = section "Tenses, Moods, and Aspects" do
+        %p Proto-Semitic verbs revolved around two basic inherited stems: the verbal (or imperative) stem and the nominal (or verbal adjective) stem. For most triconsonantal verbs, these had the structure *-CCVC- and *-CaCC- respectively, with the vowel in the verbal stem being inherent to the root. For instance, the verb “come close” had the verbal stem <i>*-ḳrib-</i> and the nominal stem <i>*-ḳarb-</i>.
+        %p The verbal stem was used to form the imperative, jussive, and preterite verb forms. The imperative, expressing commands, consisted of the bare verbal stem plus gender and number suffixes; it only existed in the second person. The jussive filled in the gaps in the imperative paradigm, adding prefixes to express person.
+        %p The preterite expressed a simple past tense event, and was marked with prefixes expressing person and suffixes expressing number and gender, just like the jussive. Aside from the lack of second person jussive forms, the preterite and jussive were identical with the sole exception of stress, with the accent lying on the prefix in the preterite and on the stem in the jussive.
+        %p The nominal stem forms the perfect, imperfect, and stative verb forms. Unlike the verbal stem derivatives, these nominal stem derivatives only express aspectual information and not tense or mood. Note that while the nominal stem is underlyingly *-CaCC-, an epenthetic vowel of variable quality is inserted between the last two consonants to prevent illegal clusters or word-final clusters. The perfective, indicating completed action, was formed using the same prefixes and suffixes as preterite, plus an infixed *-t- occurring immediately after the first root consonant, giving the stem *-CtaC(V)C-. The imperfect, marking incomplete action, consisted of these same prefixes and suffixes attached to an elongated stem with a geminated medial consonant (i.e., *-CaCCVC-).
+        %p The stative is aspectually neutral, a verb form that is neither perfective nor imperfective, indicating a state rather than a process. The stative is conjugated purely through personal suffixes that are historically related to the suffixed forms of pronouns. Note that the third person singular forms, which take no ending other than the usual masculine ending *-Ø and feminine ending *-at, will usually appear with the predicative suffix *-a.
+
+      = section "Transitivity" do
+        %p As a holdover from its Afro-Asiatic ergative/absolutive alignment, Proto-Semitic possessed two conjugation classes, one for transitive verbs and one for intransitive verbs. The intransitive conjugation was the most basic, consisting of simply adding prefixes and suffixes as previously described to the verbal stem *-CCVC- and nominal stem *-CaCC-. In addition, the prefix vowel was *a in the singular and *i in the plural, reflexes of the original absolutive case endings attached to a pronominal base.
+        %p Transitive verbs, however, had slightly different stems. They were marked by gemination of the second root consonant, resulting in the verbal stem *-CVCCVC- and the nominal stem *-CaCCVC-. The prefix vowel is always *u, a reflex of the Proto-Afro-Asiatic ergative case ending.
+        %p Verb roots could generally freely switch between the two conjugations to change their transitivity. The intransitive verb <i>*-ḳrib-</i> “come close”, for instance, could be made transitive by conjugating it as <i>*-ḳarrib-</i> “bring close”.
+        %p Based on evidence in the modern Semitic languages, it appears that the gemination was interchangeable with lengthening the previous vowel, so that the forms <i>*ʔuḳarrib</i> and <i>*ʔuḳārib</i> “I brought close” are equivalent. It is not clear whether these existed in free or dialectal variation.
+
+      = section "Example" do
+        %p The following tables show the intransitive and transitive conjugations of the Proto-Semitic root *ḳrīb “close, near”.
+        %table.invisible
+          %tr
+            %td
+              %table
+                %tr
+                  %th{:colspan => 7} <i>*ḳrib</i> “come close”
+                %tr
+                  %th
+                  %th Preterite
+                  %th Imperfect
+                  %th Perfect
+                  %th Stative
+                  %th Imperative
+                  %th Jussive
+                %tr
+                  %th 1 Sg
+                  %td <i>ʔaḳrib</i>
+                  %td <i>ʔaḳarrab</i>
+                  %td <i>ʔaḳtarab</i>
+                  %td <i>ḳaribku</i>
+                  %td
+                  %td <i>ʔaḳríb</i>
+                %tr
+                  %th 2 Sg M
+                  %td <i>taḳrib</i>
+                  %td <i>taḳarrab</i>
+                  %td <i>taḳtarab</i>
+                  %td <i>ḳaribta</i>
+                  %td <i>ḳrib</i>
+                  %td
+                %tr
+                  %th 2 Sg F
+                  %td <i>taḳribī</i>
+                  %td <i>taḳarrabī</i>
+                  %td <i>taḳtarbī</i>
+                  %td <i>ḳaribti</i>
+                  %td <i>ḳribi</i>
+                  %td
+                %tr
+                  %th 3 Sg M
+                  %td <i>yaḳrib</i>
+                  %td <i>yaḳarrab</i>
+                  %td <i>yaḳtarab</i>
+                  %td <i>ḳarib</i>
+                  %td
+                  %td <i>yaḳríb</i>
+                %tr
+                  %th 3 Sg F
+                  %td <i>taḳrib</i>
+                  %td <i>taḳarrab</i>
+                  %td <i>taḳtarab</i>
+                  %td <i>ḳarbat</i>
+                  %td
+                  %td <i>taḳríb</i>
+                %tr
+                  %th 1 Pl
+                  %td <i>niḳrib</i>
+                  %td <i>niḳarrab</i>
+                  %td <i>niḳtarab</i>
+                  %td <i>ḳaribna</i>
+                  %td
+                  %td <i>niḳríb</i>
+                %tr
+                  %th 2 Pl M
+                  %td <i>tiḳribū</i>
+                  %td <i>tiḳarrabū</i>
+                  %td <i>tiḳtarbū</i>
+                  %td <i>ḳaribkan</i>
+                  %td <i>ḳríbū</i>
+                  %td
+                %tr
+                  %th 2 Pl F
+                  %td <i>tiḳribā</i>
+                  %td <i>tiḳarrabā</i>
+                  %td <i>tiḳtarbā</i>
+                  %td <i>ḳaribkin</i>
+                  %td <i>ḳríbā</i>
+                  %td
+                %tr
+                  %th 3 Pl M
+                  %td <i>yiḳribū</i>
+                  %td <i>yiḳarrabū</i>
+                  %td <i>yiḳtarbū</i>
+                  %td <i>ḳaribū</i>
+                  %td
+                  %td <i>yiḳríbū</i>
+                %tr
+                  %th 3 Pl F
+                  %td <i>yiḳribā</i>
+                  %td <i>yiḳarrabā</i>
+                  %td <i>yiḳtarbā</i>
+                  %td <i>ḳaribā</i>
+                  %td
+                  %td <i>yiḳríbā</i>
+            %td
+              %table
+                %tr
+                  %th{:colspan => 7} <i>*ḳarrib</i> “bring close”
+                %tr
+                  %th
+                  %th Preterite
+                  %th Imperfect
+                  %th Perfect
+                  %th Stative
+                  %th Imperative
+                  %th Jussive
+                %tr
+                  %th 1 Sg
+                  %td <i>ʔuḳarrib</i>
+                  %td <i>ʔuḳarrab</i>
+                  %td <i>ʔuḳtarrib</i>
+                  %td <i>ḳurrubku</i>
+                  %td
+                  %td <i>ʔuḳárrib</i>
+                %tr
+                  %th 2 Sg M
+                  %td <i>tuḳarrib</i>
+                  %td <i>tuḳarrab</i>
+                  %td <i>tuḳtarrib</i>
+                  %td <i>ḳurrubta</i>
+                  %td <i>ḳarrib</i>
+                  %td
+                %tr
+                  %th 2 Sg F
+                  %td <i>tuḳarribī</i>
+                  %td <i>tuḳarrabī</i>
+                  %td <i>tuḳtarribī</i>
+                  %td <i>ḳurrubti</i>
+                  %td <i>ḳarribi</i>
+                  %td
+                %tr
+                  %th 3 Sg M
+                  %td <i>yuḳarrib</i>
+                  %td <i>yuḳarrab</i>
+                  %td <i>yuḳtarrib</i>
+                  %td <i>ḳurrub</i>
+                  %td
+                  %td <i>yuḳárrib</i>
+                %tr
+                  %th 3 Sg F
+                  %td <i>tuḳarrib</i>
+                  %td <i>tuḳarrab</i>
+                  %td <i>tuḳtarrib</i>
+                  %td <i>ḳurrubat</i>
+                  %td
+                  %td <i>tuḳárrib</i>
+                %tr
+                  %th 1 Pl
+                  %td <i>nuḳarrib</i>
+                  %td <i>nuḳarrab</i>
+                  %td <i>nuḳtarrib</i>
+                  %td <i>ḳurrubna</i>
+                  %td
+                  %td <i>nuḳárrib</i>
+                %tr
+                  %th 2 Pl M
+                  %td <i>tuḳarribū</i>
+                  %td <i>tuḳarrabū</i>
+                  %td <i>tuḳtarribū</i>
+                  %td <i>ḳurrubkan</i>
+                  %td <i>ḳarribū</i>
+                  %td
+                %tr
+                  %th 2 Pl F
+                  %td <i>tuḳarribā</i>
+                  %td <i>tuḳarrabā</i>
+                  %td <i>tuḳtarribā</i>
+                  %td <i>ḳurrubkin</i>
+                  %td <i>ḳarribā</i>
+                  %td
+                %tr
+                  %th 3 Pl M
+                  %td <i>yuḳarribū</i>
+                  %td <i>yuḳarrabū</i>
+                  %td <i>yuḳtarribū</i>
+                  %td <i>ḳurrubū</i>
+                  %td
+                  %td <i>yuḳárribū</i>
+                %tr
+                  %th 3 Pl F
+                  %td <i>yuḳarribā</i>
+                  %td <i>yuḳarrabā</i>
+                  %td <i>yuḳtarribā</i>
+                  %td <i>ḳurrubā</i>
+                  %td
+                  %td <i>yuḳárribā</i>
+
+    = section "Other Formants" do
+      %p Proto-Semitic had several additional formants that could be placed between immediately before the stem of a conjugated verb (after any personal prefixes) to modify the meaning. They could be applied either to the intransitive stem (known as the B-stem, for 'base') or the transitive stem (known as the D-stem, for 'doubled'). Multiple formants could be present on a single verb. The three formants present throughout the modern Semitic languages are the causative *-š-, the passive *-n-, and the mediopassive *-t-.
+
+= section "Development of the Nominal System" do
+  = section "Gender" do
+    %p The Semitic gender system remains largely intact in Alashian. The masculine and feminine genders still exist in roughly their original distribution, although due to various phonetic developments /t/ is no longer associated with the feminine. As in the rest of West Semitic, the Proto-Semitic suffix *-at- largely displaced *-t-, *-ut-, and *-it- as the primary feminine marker, and the subsequent loss of this final *t in all but the construct state has left just <i>-ā</i> as the feminine marker (with lengthening to compensate for the dropped consonant). This was likely further strengthened by Greek influence, which also uses final /a/ as a feminine marker.
+    %p The former feminine marker *-t- (with no vowel augment) has been lost entirely in Alashian. Words that once used it either replaced it with <i>-ā</i> (#{t "μυταργινώ", "mutarginā"} “translator (female)”, cf. Hebrew #{t "מתרגמת", "metargemet"}), dropped it entirely and ceased to explicitly mark the feminine (#{t "δάλ", "dal"} “door”, cf. Hebrew #{t "דלת", "delet"}), or fused it with the stem so it no longer appears to be a suffix at all (#{t "βιττώ", "bittā"} “daughter”, which reacquired <i>-ā</i>, cf. Hebrew #{t "בת", "bat"}). Fusion with the stem often allowed for divergent development in masculine/feminine pairs, as in #{t "βνώ", "bnā"} “son” vs. #{t "βιττώ", "bittā"} “daughter” (Proto-Semitic <i>*bn-u</i>, <i>*b(i)n-t-u</i>) or #{t "αχώ", "'axā"} “brother” vs. #{t "αφτώ", "'aftā"} “sister” (Proto-Semitic <i>*ʔax-u</i>, <i>*ʔax-t-u</i>).
+    %p The markers *-it- and *-ut- have been repurposed as derivational suffixes that generate abstract nouns from primarily adjectival bases: modern <i>-īs</i> and <i>-ūs</i><sup>3</sup>. A similar phenomenon is present in other Northwest Semitic languages, as seen in cognate forms such as Alashian #{t "μαλτζείς", "malčīs"}, Hebrew #{t "מלכות", "malkut"}, and Aramaic #{t "ܡܠܟܘܬܐ", "malkutha"}, all meaning “kingdom”.
+    %p At some point the feminine gender in Alashian also acquired an emotive function, which is also seen in some South Semitic languages. Kinship terms and other nouns could be switched to the feminine gender to indicate familiarity or closeness. It has been speculated that misinterpretation of the Aramaic emphatic state may have been a contributing factor (cf. Aramaic #{t "ܐܒܐ", "'abā"} “father (emph)”, Alashian #{t "αβώ", "'abā"} “father, dad”).
+
+  = section "Case" do
+    %p The loss of final short vowels completely demolished the Proto-Semitic case system in Alashian, at least as far as singular nouns are concerned. However, Alashian was also simply taking part in a much larger trend across the Semitic family towards a complete loss of the case system. Relatively early on, the accusative and genitive cases merged into an oblique case, as in the rest of Northwest Semitic. Likely under the influence of Greek, this two-case system appears to have survived into Alashian with plural nouns much later than closely related languages like Aramaic or Hebrew; for instance, the earliest written records still show a fairly robust contrast between the nominative masculine plural ending <i>-ūn</i> and its oblique counterpart <i>-īn</i>.
+    %p Eventually the oblique case forms completely displaced the nominative. This can still be seen in the modern masculine plural ending <i>-ien</i> (Proto-Semitic *-ī-m) or in the palatalization of the feminine plural ending <i>-uoš</i> (Proto-Semitic *-āt-i).
+    %p The original nominative ending *-u and accusative ending *-a survive only in two specific circumstances: in constructs or in prepositional phrases when the second element has an elided definite article <i>n-</i> prefixed. This protected environment allowed the vowel to be preserved since it no longer appear word-finally as far as stress is concerned. In constructs the nominative form /u/ was generalized: #{t "τέντεν υνήν", "tenten 'unen"} “the blink of an eye” (pseudo-Proto-Semitic <i>*tintin-u han-ʕayn-i</i>); in prepositional phrases the accusative /a/ was generalized: #{t "ιв̄ ανήν λιή", "'iv 'anēn lie"} “in my eye” (pseudo-Proto-Semitic <i>*ʔib-a han-ʕayn-i l-iy</i>). These forms no longer have any real function, but are simply lingering relics that have in effect fused with the definite article on the following word.
+    %p A trace of the original genitive singular ending *-i actually survives in quite a few nouns, including #{t "άννε", "’anne"} “stone”, #{t "θέλγε", "ṯelge"} “snow”, and #{t "ρέγλε", "regle"} “leg”. In proto-Canaanite-Alashian, these had the forms *’abn-i, *ṯilg-i, *rigl-i. In early Proto-Canaanite, where all final short vowels were lost early on, these became *’âbn, *šêlg, *rêgl; at a later point, the language stopped tolerating final consonant clusters, so an epenthetic vowel was inserted, yielding *’âben, *šêleg, *rêgel. In Proto-Alashian, on the other hand, the prohibition against word-final clusters came into operation before short vowels were lost; thus, in these three words and many others, the case ending was not permitted to be lost, since doing so would result in a phonologically impermissable form. Thus, the case ending came to be reanalyzed as a part of the stem, essentially a support vowel that appears whenever no other suffix is present. This ‘suffix’ has since spread analogically, being added to loanwords that originally ended in a cluster in order to conform to Alashian phonotactics.
+
+  = section "Number" do
+    %p The three numbers of Proto-Semitic have been reduced to two in Alashian, following the loss of the dual as a productive and distinct inflection.
+    %p In the absolute state, three plural endings survive in Alashian: <i>-ien</i>, <i>-uoš/-ūš</i>, and <i>-ī</i>. The masculine ending, <i>-ien</i>, comes from the oblique plural *-ī plus mimation, which fused with the masculine plural ending and was lost elsewhere. The feminine ending, <i>-uoš</i>/<i>-ūš</i>, comes from the oblique plural <i>-āt-i</i>, with the ending vowel *a being generalized to all feminines just as in the singular. The ending <i>-ī</i> is an irregular development of the oblique dual ending *-ay; many nouns that commonly appear in twos, such as paired body parts, reinterpreted this dual ending as a plural which is used even when more than two objects are being described.
+    %p With regards to broken plurals, Alashian took a middle ground between Arabic and Aramaic/Canaanite within the West Semitic languages. A fairly large number of Proto-Semitic collectives were reinterpreted as true plurals, but not nearly as many as in Arabic. As in Canaanite and Aramaic, many former broken plurals acquired a regularized paradigm. The tension between preserving broken plurals and regularizing them can still be seen in how Alashian nouns are quantified: when modified by a numeral, nouns that normally have a broken plural will take regularized plural endings.
+
+  = section "State" do
+    %p The absolute, determinate, and construct states all survive in Alashian, while the predicative state was lost and a new state, the partitive, was added.
+    %p The Alashian determinate state reflects a Proto-Semitic demonstrative <i>*han-</i>, seen also in the Canaanite languages and Arabic, though not in Aramaic. For the most part the final *n assimilated to the first consonant of the noun stem, resulting in the gemination characteristic of the determinate state. With nouns that began with /ʔ/ or /h/, then /n/ remained in place and the preceding vowel was later lost, e.g., Modern #{t "νήν", "nēn"} “the eye” ← Old Alashian <i>hanēn</i> ← Proto-Semitic <i>*han-ʕayn-i</i>.
+    %p Due to diverging phonetic developments, the modern Alashian construct state is no longer identical to the absolute state less mimation. In particular, the protected environment allowed for the preservation of the feminine suffix *-t on singular nouns, whereas it was mostly lost in the absolute state.
+    %p The partitive state derives from the West Semitic preposition <i>*minay</i> “from”. As in several other Northwest Semitic languages, <i>*minay</i> developed a weakened clitic form that attached itself to the following word. In languages such as Hebrew, this form persists as a new type of clitic preposition (e.g., #{t "מהבית", "me-ha-bayit"} “from the house”). In Alashian, both a full and clitic form coexisted for a time, but the clitic form eventually developed a specialized function denoting indefinite or limited quantity, while the full form (Modern #{t "βνε", "bne"} “from”) continued the original prepositional function.
+
+  = section "Adjectives and Numerals" do
+    %p The Semitic adjectival system has remained largely intact in Alashian, at least with respect to morphology. Adjectives continue to agree with the noun they modify in gender and number, as well as definiteness when the adjective is attributive rather than predicative. All adjectives have regular plurals; broken paradigms have been completely eliminated. The Proto-Semitic elative, a pattern used in some other Semitic languages to form superlatives, has been lost, with a few remnants that have become lexicalized: #{t "αττήβ", "'əthēb"} “excellent” (cf. #{t "τήβ", "tēb"} “good”), #{t "άγδαν", "'əgdan"} “first, foremost” (cf. #{t "κούδιν", "kūdin"} “preceding”).
+    %p Syntactically, however, Alashian adjectives have been greatly influenced by Greek. The Semitic <span class="pattern">noun adjective</span> order has been replaced by <span class="pattern">adjective noun</span> as the default, although so-called 'heavy' adjectives (determinate, multiple words, or subordinate phrases) continue to follow the noun. The comparative and superlative constructions are calqued from Greek, while also borrowing the particle #{t "κιυ", "kyu"} “more” from Greek #{t "πιο", "pio"} (pronounced [pco] on Cyprus). The synthetic comparatives #{t "καλείττερ", "kalīther"} “better” and #{t "σ̄ιρούττερ", "širūther"} “worse” are borrowed from Greek #{t "καλύτερος", "kalíteros"} and #{t "χειρότερος", "xiróteros"}, respectively.
+    %p Across the Semitic family, numerals by and large have tended to preserve the reversed 'polarity' seen in Proto-Semitic. For many centuries, Alashian was no exception. However, in Old Alashian, the numerals had largely ceased to function as nominal elements, with distinct absolute, construct, and determinate states largely being relegated to the poetic (archaizing) layer of the language. The numeral 'two' was reinterpreted as an adjective, with its original dual construct ending merging with the nisba adjectival suffix. With higher numbers, the absolute state came to displace all other forms, despite syntactically continuing to behave essentially as a construct.
+    %p In the medieval period, the inherited reversed polarity finally began to fully break down. Gender agreement of any sort was lost in the numerals 'three' and higher, motivated by the fact that nowhere else in the language is the head of a genitive noun phrase forced to agree with its complement. The masculine forms for the most part won out, although the original feminine forms continued to be used in non-quantifying (non-construct) environments, such as for counting. With only the <i>ā</i>-suffixed construct numerals remaining, the numerals once again came to be treated as true nouns rather than an anomolous class of quantifiers, thereby (re)acquiring more typical construct endings.
+    %p In Modern Alashian, the numeral system shows a very high degree of Greek influence. In all but some of the most remote dialects, the decades between 20 and 90 have been completely replaced by Greek loanwords. In non-quantifying conditions such as counting or telephone numbers, it is not unusual to hear all Greek forms, even for numbers below ten.
+
+  = section "Pronouns" do
+    %p Uniquely amongst the modern-day Semitic languages, Alashian preserves productive or semi-productive use of all three classes of Proto-Semitic pronoun: the independent nominative, independent oblique, and suffixed.
+    %p Aside from the loss of the dual series, the independent nominative pronouns largely survive intact. Only the first person singular pronoun #{t "ετζεί", "'ečī"} does not directly derive from its Proto-Semitic counterpart *ʔana; it actually comes from the extended form *ʔan-kī, attested in a number of other Semitic languages as well as Egyptian. The original purpose of this suffix is not clear, though it may be the result of analogy with the *-k- suffixes of the second person, where forms such as *ʔan-ka and *ʔan-ki “you” were occasionally seen alongside *ʔan-ta and *ʔan-ti.
+    %p The independent oblique pronouns are a highly distinctive feature of Alashian only shared by a handful of long-extinct Semitic languages, such as Akkadian and Babylonian, with only questionable traces in other languages. The reason for their preservation in Alashian is often ascribed to Greek influence, since Greek had quite a vibrant case system in contrast to the general Semitic trend towards case loss. The fact that many of the forms appear to have undergone analogical levelling may suggest that these pronouns were actually in decline in a very early stage of Alashian prior to inhabitation on Cyprus.
+    %p The Proto-Semitic suffixed pronouns, which originally could be used with both nouns (indicating possession) and verbs (indicating direct or indirect object), underwent a bifurcation in Alashian. The nominal series went into a long period of decline, such that in modern Alashian the suffixed pronouns are generally only seen with a handful of common nouns and with prepositions. Suffixed pronouns in possessive roles could be used alongside prepositional phrases in later classical Alashian, and by the medieval period these prepositional phrases had become nearly universal and had acquired more pronoun-like qualities.
+    %p Suffixed verbal pronouns actually became freer in usage in Alashian. These original suffixes can now be placed as clitics either before or after any fully-conjugated verb, following rules that are nearly identical with object clitic positioning in Cypriot Greek. Alashian clitic pronouns are perhaps the clearest example of Alashian/Cypriot Greek metatypy.
+    %p The clitic nominative pronouns are more of an Alashian innovation. They are simply reduced forms of the independent nominative pronouns, the result of once-mandatory pronouns that lost their stress.
+
+= section "Development of the Verbal System" do
+  %p The breakup of Proto-Semitic started a number of very rapid developments in the verbal system, particularly in the Central Semitic languages, where very little of the original Proto-Semitic verbal system survives.
+
+  = section "Tenses, Moods, and Aspects" do
+    %p Early on in Central Semitic, the perfective series was lost entirely in favor of the preterite. This was likely motivated by the fact that perfective verbs are far more frequently used to describe past actions than non-past ones; combined with a decline in use of the perfective with future meaning, the perfective and preterite probably came to occupy more or less identical semantic space. The original perfective leaves no trace behind in modern Alashian.
+    %p Later on, the preterite found itself displaced as well, this time by the stative. With a great many verbs the semantic difference between a resultative preterite verb and a resultant present state is very slight (e.g., compare “I have become tired” and “I am tired”), and thus this change was once again likely motivated by the increasingly blurred functions of the two verb forms. Retaining some of its original stative-resultant sense, this new form once more served to mark perfective aspect, whether in the past or future. It ultimately acquired a fixed past tense meaning in Old Alashian, becoming the modern Alashian preterite tense.
+    %p However, the original preterite did not disappear completely. It survived as a narrative past, almost always preceded by the conjunction *wa- “and”. This construction is most famous in Biblical Hebrew (where it is known as the waw-consecutive), but can be seen in Classical Arabic and Alashian as well. While this narrative past eventually died out, in Alashian it morphed into the modern perfective subjunctive, having passed through an intermediate stage of serving as a sort of deictic past that was first generalized to, then confined to subordinate clauses. This process may have been further motivated by the loss of the Central Semitic subjunctive, as will be described below.
+    %p The Proto-Semitic jussive survived fairly late into Alashian and other Central Semitic languages; in Old Alashian it was still productively used in wishes and oaths. By the first few centuries AD, however, it had completely lost its productive role and was relegated to a few fixed expressions and archaizing language.
+    %p While the jussive was ultimately lost, it did spawn a new form, the Central Semitic subjunctive, that ultimately forms the basis of the modern Alashian present tense. This subjunctive consisted of the jussive plus an ending -u. Early on in Central Semitic this subjunctive form was generalized to all verbs in subordinate clauses with imperfective meaning, and eventually was reinterpreted as simply an imperfective indicative (as seen in Biblical Hebrew and Classical Arabic, for instance). In Alashian, under pressure from the tense-oriented system of Greek, this form eventually acquired a fixed present-tense meaning.
+    %p The original Semitic imperfect has an interesting history in Alashian. In the rest of Central Semitic, the imperfect was lost in favor of the new imperfective derived from the jussive. In Alashian, however, this development did not completely displace the original form; the imperfect was crossed with a D-stem verbal form that had also acquired an imperfective sense and also had the characteristic repeated second radical. See the next section for a more detailed description of the history of the D-stem in Alashian.
+    %p The Semitic imperative is the one form that has survived more or less unchanged from Proto-Semitic to modern Alashian, except for the loss of a distinct feminine plural form. Aside from a few analogical phonetic developments such as the lengthening of the feminine singular suffix *-i to *-ī (based on the feminine suffix *-ī seen in other tenses) and occasional metathesis, the imperative appears to have essentially kept its original form and function over the last several millennia. This trend is seen in other Semitic languages as well; in fact, given the unique personal/number marking on the imperative compared to the other Proto-Semitic verbal forms, this may well be one of the oldest verbal forms in Proto-Semitic as well.
+    %p The Alashian imperfective subjunctive is a variant of the Proto-Semitic jussive with a frozen predicative marker, with cognate forms in a number of Central Semitic languages. Both the northern and southern dialectical forms have undergone analogical levelling in order to make the subjunctive marker *-a more salient; originally, it would have only been marked on masculine singular forms that did not have any personal suffix already in place. The imperfective meaning is a specialization that took place once the perfective subjunctive became dominant.
+    %p The volitive and precative continue an older Semitic 'energetic' suffix, whose original semantics are not clear aside from representing some sort of irrealis modality.
+    %p The Alashian complex future tense began to take form as the original perfective~imperfective aspectual distinction began to be displaced by tense under the influence of Greek. The auxiliary verb is a reduced form of the imperfective of the now-defunct verb <i>halak</i> “walk”. The use of the perfective subjunctive after the auxiliary suggests the original meaning was “go [in order to]”.
+    %p The Alashian perfect tenses arose due to Greek influence, as perfect tenses are foreign to most Semitic languages. The present perfect is actually a calque of the Greek #{t "έχω", "éxō"} “have” perfect; since Alashian has no verb meaning “have” but instead uses a locative-type “to me there is” possessive construction, the present perfect similarly uses genitive pronouns or nouns to denote the logical subject. Written records show that the earliest not-fully-grammaticized incarnations of this construction used passive participles (i.e., <i>lie maktūb vivle</i> “I have written a book/To me is a written book”), eventually replaced by a grammaticized construction in which a finite verb agrees with the logical object (i.e., <i>lie katab vivle</i> “I have written a book/to me a book wrote”). The modern construction represents a new phase of grammaticalization where the verb now agrees with the genitive-marked subject.
+
+  = section "Verbal Scales and Valency" do
+    %p Proto-Semitic had two primary means of marking valency—the transitive and intransitive conjunctions—as well as a number of preverbal formants able to modify the basic meaning of the verb they were attached to. Throughout the Semitic world, these two systems coalesced into a single, unified system whereby a single verb root could be conjugated according to a sizable number of patterns simply by modifying the vowel template and added verbal formants. The six Alashian scales descend from this unified system.
+    %p Active Scale I, <i>katab</i>, derives from the Proto-Semitic intransitive conjugation. Throughout the Semitic languages this conjugation has in effect become the default verb form, having lost its original semantics of intransitivity. Clear traces of its original function remain, such as the fact that virtually all primitive stative roots conjugate in <i>katab</i> (e.g., #{t "κάβαδ", "kabad"} “be tired”, #{t "ράγ̄αβ", "raǧab"} “be hungry”, #{t "σάδαρ", "sadar"} “be ready”, etc).
+    %p Passive Scale I, <i>nuktāb</i>, consists of the intransitive conjugation plus the passive *n- formant. The characteristic u-ā vowel pattern, seen across Central Semitic, has uncertain origins, but has been generalized across all of the passive conjugations; in this case, it displaced an older form *nV-katab-a that predates written Alashian, but still exists in the Arabic counterpart <i>'infaʕala</i>.
+    %p Active Scale II, <i>kəthēb</i>, has a more storied history. Ultimately, it traces its origin to the Proto-Semitic transitive conjugation, with some analogical levelling eliminating the original distribution of prefix vowels. At some point in history, two variants of the transitive stem existed with an uncertain distribution: the original stem #{template "*C1VC2C2VC3"} with a geminated second consonant, and a variant #{template "*C1V̄C2VC3"} where the gemination has been lost in favor of compensatory lengthening of the previous vowel. The original stem went on to become the modern Alashian <i>kəthēb</i>, while the newer form came to represent iteration and ultimately merged with the Semitic imperfect tense, taking the form of the original transitive stative (later perfective) and the meaning of the original imperfect<sup>4</sup>.
+    %p Passive Scale II, <i>kəthāb</i>, is simply the reflex of the transitive conjugation with the u-ā internal passive vowel pattern.
+    %p Active Scale III, <i>'aktēb</i>, consists of the intransitive conjugation plus the causative *š- formant, which underwent an irregular reduction to simply /ʔ/ in Alashian. A handful of common verbs preserve the original formant in their imperative form, as in #{t "ισσεθήβ ου!", "'isseṯēb 'ū!"} “lower it!” (Proto-Semitic *š(V)-wṯib-aw) in place of expected  <i>*'ūṯēb 'ū</i>.
+    %p Passive Scale III, <i>'ennuktāb</i>, consists of the intransitive conjugation with both a passive *n- formant and a causative *š- formant, plus the internal passive u-ā pattern. The addition of the *n- formant appears to be a more recent development, as many older Alashian texts show an n-less form that has been termed <i>'uktāb</i>. The addition of *n- has caused the reflex of the original *š- formant to disappear, with historical *(V)nʔuktāb reducing to modern <i>'ennuktāb</i>.
+    %p Scale IV, <i>taktēb</i>, consists of the intransitive conjugation plus a mediopassive *t- formant. As in several other Central Semitic languages, this /t/ will occasionally undergo metathesis with the first root consonant; in Alashian, this occurs whenever C<sub>1</sub> is a fricative.
+    %p Scale V, <i>nitkatab</i>, was made from the intransitive conjugation plus both a mediopassive *t- formant and a passive *n- formant. This *n- formant clearly does not have a passive function here, but rather seems to reinforce the valency-reducing function of the *t- formant. As with <i>taktēb</i>, metathesis takes place when the *t- comes in contact with the first root consonant.
+    %p Active Scale VI, <i>staktab</i>, consists of the intransitive conjugation plus the causative *š- and mediopassive *t- formants. Its original function was as a reflexive counterpart to the causative <i>'aktēb</i>, although the semantics have blurred significantly over the millennia.
+    %p Passive Scale VI, <i>nistuktāb</i>, consists of three prefixes—the passive *n-, the causative *š-, and the mediopassive *t- formants—combined with the intransitive conjugation plus an internal passive. While formally it is paired with <i>staktab</i>, in practice it seems to have little relation to it, and originally appears to have been an alternative passive counterpart to the causative <i>'aktēb</i>, perhaps with implications of impersonalness/lack of agency.
+
+  = section "The Embedded European Root" do
+    %p The intact embedded root is a much newer development, the result of centuries of close contact with Indo-European and Turkic languages that for the most part have stable, unchanging root morphemes that can have a variety of phonetic shapes and virtually any vowel pattern.
+    %p The oldest layers of Indo-European borrowings show a clear adaptation of foreign verbs to a Semitic structure, including the generation of a new abstract three- or four-consonant root by extracting the more salient consonants in the foreign stem. Thus we see roots such as *ksīn “strange, odd” (Greek #{t "ξένος", "ksénos"} “strange, foreign”), *'īš “true, correct” (Greek #{t "ίσιος", "ísios"} “straight”), and even *čpīr “Cypriot, Cyprus” (Greek #{t "Κύπρος", "Kýpros"} “Cyprus”), which are fully nativized and have some fairly complex derived forms: #{t "νίτκασαν", "nitkasan"} “distance oneself, disavow”, #{t "αιιής̄", "'ayyēš"} “repair, fix”, #{t "τατζπήρ", "tačpēr"} “become Cypriot, adopt Cypriot traditions”. These fully-nativized forms show no regard for the vocalization of the original loanword.
+    %p As intimate contact with European languages increased, new mechanisms began to appear to allow the more transparent and simple incorporation of foreign words. From the early years AD we start seeing verb roots that have only been partially adapted. Some had an Alashian-like consonantal structure but preserved their original vowels, such as Classical Alashian #{t "μαρτείρ", "martīr"} “testify” (from Greek #{t "μάρτυρας", "mártyras"} “witness”), which coexisted with fully-nativized forms such as #{t "μαρτήρ", "martēr"} and #{t "ράταρ", "ratar"}<sup>5</sup>. Other words might have a non-Alashian consonant structure but a nativized vowel pattern, as in Classical #{t "πρασκήν", "praskēn"} “do homage” (from Greek #{t "προςκυνειν", "proskynein"} “do homage”).
+    %p In time, this unstable system where a variety of partial nativization schemes coexisted with full adaptation stabilized in favor of preserving the original forms as much as possible. More frequent bilingualism between Alashian and Greek necessitated an easier method to facilitate the free transition of loanwords between the two languages. This ultimately resulted in the abstraction of many of Alashian's person, number, and tense markers away from the vowel templates so characteristic of Semitic languages. Only in the imperfect tense, where the vowel pattern is by far the most salient feature, has analogical pressure forced even loanwords to adopt an ablaut, albeit in a more limited form.
+    %p The formants *n- and *t- regained a degree of productivity with loaned roots, as they were repurposed as true markers of passive and reciprocal verbs, respectively. Unlike in native Semitic verbs, all 'European'-type verbs with the *n- formant are passive, and those with *t- are reciprocal. These formants also never display assimilation or any other adaptive changes as seen with native roots. The causative formant *š- (as /ʔ/ in modern Alashian) has never been observed with such loaned verb roots; perhaps the reduction of this formant to /ʔ/ or even Ø in the modern language has left it less salient, with the causative paradigm of <i>'aktēb</i> marked more by vocalization than by the presence of a causative formant.
+    %p Interestingly, this new 'European' conjugation has become such an integral part of the language that even some native Semitic verbs make use of it. Specifically, in most dialects of modern Alashian, roots with four root consonants such as *balbēl “confuse” are no longer able to conjugate in the reciprocal <i>taktēb</i> scale, and so rely on the European conjugation to form reciprocals: #{t "ιτβαλβηλώ", "'itbalbēlā"} “confuse one another”.
+
+  = section "Personal Affixes" do
+    %p Alashian continues the Proto-Semitic personal affixes more or less intact. The only significant non-phonological changes are the loss of a gender contrast in the third person plural (with the masculine form taking over), the generalization of the plural suffix -ū to the first person plural present (Proto-Semitic *ni-ktab “that we write” (jussive), Alashian <i>ni-ktab-ū</i> “we are writing” (present)), and the generalization of the third person prefix *yV- to the third person singular feminine present (Proto-Semitic *ti-ktab “that she writes” (jussive), Alashian <i>yi-ktab-ī</i> “she is writing” (present)).
+    %p The prefix vowels in Proto-Semitic prefixial conjugations were originally distributed based on transitivity, with *a for intransitive verbs with singular subjects, *i for intransitive verbs with plural subjects, and *u for transitive verbs, corresponding to Proto-Afro-Asiatic case markers. As the transitivity contrast began to break down in Proto-Semitic, these prefix vowels were redistributed on a phonological basis known as Barth's Law, a dissimilatory principle which states that the prefix vowel should be /i/ if the following vowel is /a/ or /u/, or /a/ if the following vowel is /i/. Barth's Law continues to operate in the present tense of the <i>katab</i> conjugation, while elsewhere a single vowel has usually been generalized.
+    %p The Alashian preterite continues the original Proto-Semitic suffixial conjugation largely intact. The imperfect also continues the suffixial conjugation, but a historical change in stress has resulted in the erosion of many of the endings. It appears likely that many of the imperfect endings were once asyllabic (having completely lost their original vowels) before an epenthetic vowel was later reinserted; the historical evolution of a form like <i>kieteveš</i> “you (f) were writing” was likely something along the lines of *kuttubti → *kattabti → *kātabti → *kētabši → *kietebši → *kietevš → <i>kieteveš</i>. A similar erosion of endings took place in the perfective subjunctive, where the original feminine ending *ī and plural ending *ū dropped due to the fusion of the *vV- morpheme to the verb.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The preservation of long *ā in the stative adjective pattern #{template "*C1āC2eC3"}, with no sign of the Canaanite Vowel Shift, is unexplained. Etymologically this form is identical to the <i>katab</i> present participle (modern #{template "*C1ūC2iC3"}), which shows the shift, which at some point must have undergone a lexical split.
+%p 2) Tuareg forms from <i>Semitic Languages: Outline of a Comparative Grammar</i> by Edward Lipiński (1997), p. 254.
+%p 3) The /s/ in the modern forms results from palatalization of the original *t by the former oblique case marker *-i. That is, the suffixes <i>-īs</i> and <i>-ūs</i> come from Proto-Semitic <i>*-it-i</i> and <i>*-ut-i</i>.
+%p 4) The distinctive vowel pattern of the Alashian imperfect, #{template "*C1ieC2eC3"}, clearly shows the reflex of this original long vowel from an earlier form #{template "**C1āC2aC3"}. The passive pattern #{template "*C1uoC2aC3"} is an analogous formation. The more 'front-heavy' imperfect stem, in contrast to the more balanced short vowels of the preterite #{template "*C1aC2aC3"} stem, contributed to the reduction and/or loss of many of the original personal endings, hence the discrepancy between modern Alashian preterite and imperfect endings.
+%p 5) Two of these forms survive into modern Alashian. #{t "Μαρτιρώ", "martirā"}, a slightly adapted form of μαρτείρ, now means “bear witness, testify” within religious contexts, while #{t "ράταρ", "ratar"}, a reanalyzed form where the prefix <i>ma-</i> was interpreted as a derivational prefix, now means “lay claim to”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

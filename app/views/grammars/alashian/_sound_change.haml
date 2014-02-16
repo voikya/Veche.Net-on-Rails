@@ -1,0 +1,23 @@
+- labels ||= ["Proto-Semitic", "Meaning", :arrow, "Alashian", "Meaning"]
+- examples ||= []
+
+%table.soundchange
+  - labels.each do |label|
+    %th= label.is_a?(String) ? label : nil
+  - examples.each do |example|
+    %tr
+      %td
+        - if example[:sem].is_a? String
+          %i= example[:sem].html_safe
+        - elsif example[:sem].is_a? Hash
+          = t(example[:sem][:native], example[:sem][:lat])
+      %td
+        = surround '“', '”' do
+          = example[:sem_gloss].html_safe
+      %td.arrow →
+      %td= t(example[:ala], example[:lat])
+      %td
+        = surround '“', '”' do
+          = example[:ala_gloss].html_safe
+        - if example[:comment]
+          = example[:comment]
