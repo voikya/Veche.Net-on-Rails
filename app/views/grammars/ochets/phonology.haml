@@ -1,0 +1,559 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Воонологиа"
+
+= render :partial => 'navigation'
+
+= section "Vowels" do
+  = section "Phonemes" do
+    %p Očets has nine short vowels and eight long vowels. The reduced vowel /ə/ has no long counterpart.
+    %table
+      %tr
+        %th
+        %th{:colspan => 3} Short Vowels
+        %th{:rowspan => 5}
+        %th{:colspan => 3} Long Vowels
+      %tr
+        %th
+        %th Front
+        %th Mid
+        %th Back
+        %th Front
+        %th Mid
+        %th Back
+      %tr
+        %th High
+        %td i y
+        %td ɨ
+        %td u
+        %td iː yː
+        %td ɨː
+        %td uː
+      %tr
+        %th Mid
+        %td e ø
+        %td ə
+        %td o
+        %td eː øː
+        %td
+        %td oː
+      %tr
+        %th Low
+        %td
+        %td
+        %td a
+        %td
+        %td
+        %td aː
+    %p Permitted diphthongs are summarized in the following table. They all pattern as long vowels.
+    %table
+      %tr
+        %th
+        %th{:colspan => 3} Closing Diphthongs
+        %th{:colspan => 2} Opening Diphthongs
+      %tr
+        %th
+        %th -i
+        %th -y
+        %th -u
+        %th -e
+        %th -o
+      %tr
+        %th a-
+        %td ai
+        %td ay
+        %td au
+        %td
+        %td
+      %tr
+        %th e-
+        %td ei
+        %td ey
+        %td eu
+        %td
+        %td
+      %tr
+        %th ø-
+        %td øi
+        %td
+        %td øu
+        %td
+        %td
+      %tr
+        %th i-
+        %td
+        %td
+        %td
+        %td ie
+        %td io
+      %tr
+        %th y-
+        %td
+        %td
+        %td
+        %td
+        %td
+      %tr
+        %th ɨ-
+        %td
+        %td
+        %td
+        %td
+        %td
+      %tr
+        %th o-
+        %td oi
+        %td
+        %td ou
+        %td
+        %td
+      %tr
+        %th u-
+        %td
+        %td
+        %td
+        %td ue
+        %td uo
+
+  = section "Allophony" do
+    %p Očets vowels for the most part are very stable phonetically. They do not vary in quality based on their environment or whether they are stressed, although stressed vowels tend to have a slightly higher pitch. Only the schwa /ə/ may be considered a reduced vowel, as it frequently (though not always) results from the reduction of another vowel that is no longer stressed; however, this alteration is now morphologically-conditioned and unpredictable, even though it presumably emerged from a regular phonetic process.
+
+  = section "Vowel Harmony" do
+    %p Očets has a semi-productive system of front-back vowel harmony, where all vowels in a single word must be either front or back vowels, based on the vowel(s) of the root morpheme. However, it should be noted that this system has a large number of irregularities which will be discussed in later sections. Očets vowel harmony is sometimes described as “broken”—a system with so many exceptions that it might better be described as having multiple declension/conjugation classes. However, this is somewhat of a misnomer; more likely Očets harmony never developed full productivity, so it is not so much “broken” as “never completed”.<sup>1</sup>
+    %p In the classical interpretation, every vowel and diphthong (with the exception of /ə/) has a corresponding front or back counterpart, while maintaining height and roundedness. Most affixes have two variants, one containing a front vowel and one containing its paired back vowel; which one is used depends on whether the word as a whole takes front harmony or back harmony. Diphthongs are classified based on their nucleus.
+    %table
+      %tr
+        %th
+        %th{:colspan => 10} Vowel Harmony Pairs
+      %tr
+        %th Front
+        %td e
+        %td ø
+        %td i
+        %td y
+        %td ei
+        %td øi
+        %td ey
+        %td eu
+        %td ie
+        %td ue
+      %tr
+        %th Back
+        %td a
+        %td o
+        %td ɨ
+        %td u
+        %td ai
+        %td oi
+        %td ay
+        %td au
+        %td io
+        %td uo
+    %p Note that ie/io and ue/uo are pairs, even though /e/ usually pairs with /a/ and /o/ with /ø/.
+
+= section "Consonants" do
+  = section "Overview" do
+    %p The Očets consonant inventory is summarized in the following table:
+    %table
+      %tr
+        %th
+        %th Labial
+        %th Dental
+        %th Post-Alv.
+        %th Palatal
+        %th Velar
+        %th Uvular
+        %th Glottal
+      %tr
+        %th Plosive
+        %td p b
+        %td t d
+        %td
+        %td
+        %td k g<br>(kʷ)
+        %td q
+        %td
+      %tr
+        %th Fricative
+        %td f
+        %td s z
+        %td ʃ ʒ
+        %td
+        %td x γ<br>(xʷ γʷ)
+        %td
+        %td h
+      %tr
+        %th Nasal
+        %td m
+        %td n
+        %td
+        %td
+        %td ŋ
+        %td
+        %td
+      %tr
+        %th Affricate
+        %td
+        %td ts dz
+        %td tʃ dʒ
+        %td
+        %td
+        %td
+        %td
+      %tr
+        %th Other
+        %td w
+        %td r l
+        %td
+        %td j
+        %td
+        %td
+        %td
+  
+  = section "Plosive Series" do
+    %p Očets has plosives articulated in four different locations: bilabial, dental, velar, and uvular. Of these, the first three distinguish voicing, making a total of seven consonants: /p b t d k g q/.
+    %p The voiceless stops /p t k/ are strongly aspirated word-initially, word-finally, and in consonant clusters. Intervocally, however, this aspiration is often lost. Voiced stops are never aspirated.
+    %p The dentals /t d/ are are velarized before back vowels; in some cases this is prominent enough for [x] to be excreted after /t/, especially in conjunction with aspiration. Velarization also occurs after the labial consonants /p b/, although it is far less noticeable.
+    %p Before the stressed rounded back vowels /ˈo(ː) ˈu(ː)/, the velar plosive /k/ becomse strongly labialized: [kʷ]. Curiously, in the environment, /g/ both labializes and devoices, also becoming [kʷ]. Both phenomena are indicated orthographically. However, these do not occur in recent Novegradian or Russian loanwords, suggesting that the labialized consonant /kʷ/, and possibly /gʷ/ as well, could be considered true phonemes, albeit ones that only occur in the onset of stressed syllables before /ˈo(ː) ˈu(ː)/.
+    %p The uvular /q/ has not been discussed up to this point because it does not behave like the other plosives. It has four main allophones: [q χ ʁ ʔ]. It is pronounced as a voiceless uvular fricative [χ] when preceded by another voiceless plosive, or as a voiced uvular fricative [ʁ] after a voiced plosive. It also becomes [ʁ] immediately before a stressed vowel. /q/ debuccalizes to a glottal stop [ʔ] when it is immediately followed by another plosive. In all other positions, it is actually realized as [q]. Some speakers also have an aspirated [qʰ] and/or a labialized [qʷ] according to the same rules as velar plosives, but this appears to be fairly idiosyncratic.
+
+  = section "Fricative Series" do
+    %p Očets fricatives occur at five different points of articulation: labial, dental, post-alveolar, velar, and glottal. Voicing is distinguished among dental, post-alveolar, and velar fricatives, for a total of eight consonants: /f s z ʃ ʒ x γ h/.
+    %p The sole labial fricative /f/ is more specifically labio-dental, articulated with the lower lip and upper teeth. Intervocally, it frequently though not always weakens to a voiceless or voiced approximant [ʋ].
+    %p The coronal fricatives /s z ʃ ʒ/ are by and large quite stable, with little prominent allophony. Before back vowels /s z/ tend to become velarized, but excrescence is nonexistent.
+    %p The velar fricatives /x γ/, like the velar plosives, become labialized before /ˈo(ː) ˈu(ː)/ in all words except recent loans. However, unlike /g(ʷ)/, /γ(ʷ)/ never devoices. /xʷ γʷ/ too, therefore, may be considered phonemes with very restricted distribution.
+
+  = section "Nasal Series" do
+    %p Očets distinguishes nasals at three points of articulation: labial /m/, dental /n/, and velar /ŋ/. /m/ and /n/ are quite stable, with only minor variation. /m/ becomes labiodental [ɱ] before /f/, while /n/ becomes post-alveolar before /ʃ ʒ tʃ dʒ/.
+    %p The velar nasal /ŋ/ is more interesting. Before /q/, it naturally backs to a uvular position [ɴ]. Before coronal consonants, however, a prenasalized [nd] is inserted, such that /aŋza/, for instance, is pronounced [aŋndza]. As a result, the nasal articulation is held for about 1.5 to 2 times longer than a nasal consonant in any other position.
+
+  = section "Affricate Series" do
+    %p Očets has four affricates, dental and post-alveolar, both voiced and voiceless: /ts dz tʃ dʒ/. These too tend to be very stable. The dental affricates /ts dz/ are velarized before back vowels, but as with /s z/, there is never any excrescence.
+
+  = section "Liquids and Semivowels" do
+    %p There are two liquids, the dental /l/ and the alveolar /r/. /l/ is always pronounced “clear”, except immediately before back vowels or in coda position after them, where is is velarized. /r/ is usually pronounced as an alveolar trill, although it becomes a single tap [ɾ] between two vowels, so long as the second one isn’t stressed (i.e., V[±stress]_V[-stress]).
+    %p Očets has two semivowels, the labiovelar /w/ and the palatal /j/. They themselves do not vary significantly, but they can cause a very slight backing or fronting (respectively) of vowels around them.
+
+  = section "Gemination" do
+    %p All consonants except for /h j w/ may be geminated. /qq/, however, is pronounced [qχ].
+  
+  = section "Syllabic Consonants" do
+    %p Word-finally or before another consonant (i.e., _# or _C), the sequences schwa + nasal and schwa + liquid /əm ən əŋ ər əl/ collapse into a single syllabic consonant: [m̥ n̥ ŋ̊ r̥ l̥].
+
+= section "Syllables" do
+  %p Syllables are usually divided immediately following the vowel whenever possible. This applies across word boundaries as well, meaning a word ending in a consonant is usually slurred together with the following word if it begins with a vowel.
+
+= section "Stress" do
+  %p Očets stress is, for the most part, weight-sensitive along the left edge, meaning the accent occurs on one of the first two syllables in a phonological word, and which one can usually be predicted from the vowels in them.
+  %p Očets syllables can be divided into two classes: heavy syllables are those that contain a long vowel or diphthong, while light syllables are those that contain a short vowel. The reduced vowel /ə/ appears to be outside of both classes.
+  %p When exactly one of the first two vowels is heavy, that vowel will be stressed. If both vowels are heavy, then the first one is stressed. If both vowels are light, then the second one is stressed.
+  %ul
+    %li [ (<b>H</b> L) ... ]
+    %li [ (L <b>H</b>) ... ]
+    %li [ (<b>H</b> H) ... ]
+    %li [ (L <b>L</b>) ... ]
+  %p In words of three or more syllables, secondary stress is then assigned to the second syllable after the stressed one, whether it be heavy or weak. If it is a /ə/, the secondary stress will fall one syllable later, as /ə/ can never be stressed.
+  %p However, there are a number of exceptions to this rule. A relatively small, though prominent subset of words appears to have fixed lexical stress that deviates from this pattern. When examining surface realization, this only occurs when the first syllable is weak and the second contains /ə/, in which case the first syllable will be stressed. However, identifying the stressed syllable from the underlying form can be much trickier, because the insertion of an epenthetic /ə/ is frequently morphologically-conditioned.
+  %p Recently borrowed vocabulary that has not been fully assimilated may retain the same stress as the language of origin.
+  %p Since it is essentially governed by a fixed set of rules, Očets stress is non-distinctive.
+
+= section "Phonotactics" do
+  %p Note that the following two sections, 2.5.1 and 2.5.2, describe <em>surface</em> distribution of phonemes, not underlying distributions. Whereas clusters with surface /h/ are not allowed, clusters with underlying {h} may certainly occur. All this means is that some process (cf. 2.5.3) converts the unrestricted underlying form into the restricted surface form, such as by deleting {h} from clusters.
+
+  = section "Consonant Distribution" do
+    = section "General Distribution" do
+      %p The following chart demonstrates the distribution of all Očets consonants in various general environments. The first row #_ represents word-initial position, C_V word-internal position after another consonant, V_V intervocal position, V_C word-internal position before another consonant, and _# word-final position.
+      %table
+        %tr
+          %th
+          %th p
+          %th b
+          %th t
+          %th d
+          %th k
+          %th g
+          %th q
+          %th f
+          %th s
+          %th z
+          %th ʃ
+          %th ʒ
+          %th x
+          %th γ
+          %th h
+          %th m
+          %th n
+          %th ŋ
+          %th ts
+          %th dz
+          %th tʃ
+          %th dʒ
+          %th r
+          %th l
+          %th w
+          %th j
+        %tr
+          %th #_
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td +
+        %tr
+          %th C_V
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td -
+        %tr
+          %th V_V
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+        %tr
+          %th V_C
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td -
+        %tr
+          %th _#
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td -
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td -
+          %td +
+          %td +
+          %td +
+          %td +
+          %td -
+          %td +
+          %td -
+          %td +
+          %td +
+          %td -
+          %td -
+      %p Plosives, affricates, and fricatives for the most part have very absolute restrictions, as least as far as single consonants are concerned. /d/ may not appear as the first consonant in a cluster, while /q f ʒ dz dʒ/ are not allowed word-finally. /γ/ is not allowed word-initially. While not indicated in the chart above, /q/ may not be followed by a front vowel, although it can be preceded by one.
+      %p In addition, certain vowel-conditioned environments are possible, but rare. This includes /t d k g/ (and to a lesser extent, /s z/) before front vowels; in most native words these consonants underwent palatalization in these environments.
+      %p The glottal fricative /h/ is highly restricted, as it is in many languages. It may only occur word-initially or intervocally; it never appears in clusters within a single word.
+      %p The nasal consonants are unrestricted except for /ŋ/. Word-internally, the /ŋ/ may only be the syllabic onset when preceded by a vowel, never by a consonant. Word-initially, it may also appear, but only when immediately followed by a long vowel or diphthong, never a short vowel (the result of the loss of an older unstressed initial short vowel).
+      %p /l/ can appear in any location, while /r/ cannot appear word-initially, due to a historical change of all initial /r/ to /l/.
+      %p /j/ and /w/ may only appear word-initially or intervocalically. Before a consonant, after a consonant, or word-finally, diphthongs in /i/ and /u/ may be used to the same end.
+
+    = section "Initial Clusters" do
+      %p Word-initial clusters are limited to: /pt bd tq kt gd tf tx dγ km kn gm gn pl bl kl gl ql sp st sk ʃt ʃk mz mγ/. Initial clusters are relatively uncommon in native morphemes; however, they may appear on fully-inflected forms due to the addition of various morphological and derivational prefixes.
+
+    = section "Final Clusters" do
+      %p Final clusters are much more common and more permissable in Očets. This is a common trait of Siberian languages. Allowed clusters consist of:
+      %ul
+        %li
+          \/ps pʃ px ks kʃ qs qʃ bz bγ gz/
+          %br
+          All non-homorganic plosive + fricative clusters with the same voicing, excluding:
+          %ul
+            %li Any clusters with /d/ (which cannot occur before another consonant)
+            %li Any clusters with /f ʒ h/ (which cannot occur word-finally)
+            %li Uvular + velar clusters
+        %li
+          \/ft fk fq sp sk sq ʃp ʃk ʃq xp xt zb zg ʒb ʒg γb γd/
+          %br
+          All non-homorganic fricative + plosive clusters with the same voicing, excluding:
+          %ul
+            %li Any clusters with /h/ (which cannot occur before another consonant)
+            %li Velar + uvular clusters
+        %li
+          \/st ʃt zd ʒd/
+          %br
+          Homorganic coronal fricative + plosive clusters, as an exception to the above rule
+        %li
+          \/mp mb nt nd nts ntʃ ŋk ŋg/
+          %br
+          All homorganic nasal + plosive/affricate clusters, excluding:
+          %ul
+            %li Clusters with /dz/ or /dʒ/ (which cannot occur word-finally)
+        %li
+          \/rp rt rk rq rb rd rg rs rz rʃ rx rγ rm rn rŋ rts rtʃ
+          %br
+          lp lt lk lq lb ld lg ls lz lʃ lx lγ lm ln lŋ lts ltʃ/
+          %br
+          All /r l/ + plosive, nasal, fricative, or affricate, excluding:
+          %ul
+            %li Clusters ending in /f ʒ dz dʒ/ (which cannot occur word-finally)
+      %p /p/ is not found in native words, except as the result of assimilatory devoicing of underlying {b} or older *b.
+
+    = section "Internal Clusters" do
+      %p Očets does not allow more than two consonants in a row word-internally. Affricates count as a single consonant, and diphthongs do not count as consonants. For a full listing of permissable word-internal clusters, see section 2.5.3 below.
+
+  = section "Vowel Distribution" do
+    %p The absolute restrictions on vowel distribution are far fewer than for consonants. /ə/ is forbidden in stressed syllables.
+    %p However, several vowels do have marked tendencies regarding where they appear. Long /yː øː/, for instance, are never found in native roots, although they can appear in affixes.
+
+  = section "Sandhi and Other Morphophonemic Alterations" do
+    = section "Unconditional Changes" do
+      %p Očets has a decidedly complex system of internal sandhi and other morphophonemic alterations that affect the boundaries of any two adjacent morphemes. The following table summarizes all unconditional forms of two-consonant word-internal assimilation, with the first underlying consonants listed along the left side and the second along the top, and the contents of the table showing surface realizations. Empty spaces are impossible pairs (as no morpheme can end in h, w, or j), while shaded combinations are those that undergo sandhi. This table may also be used to demonstrate what word-internal clusters are permissible: all pairs shown in the body of the table are the word-internal clusters allowed in the surface realization. Clicking the 'Toggle' link immediately below the table will toggle a more detailed view showing different classes of alterations.
+      #sandhi= render 'sandhi_table'
+      %p There are about fifteen different types of processes observed in the sandhi table, as well as a few others that are more complex.
+      %p <b>Full Regressive Assimilation</b> is one of the most frequent sandhi phenomena in Očets, where a C<sub>1</sub>C<sub>2</sub> cluster is resolved as C<sub>2</sub>C<sub>2</sub>, and a geminate is formed. It is by far most common with plosives and fricatives. A number of these (e.g., p+b → bb) could just be considered voicing assimilation of homorganic sounds, and so aren’t particularly interesting. More interesting cases include homorganic plosive + fricative combinations (p+f → ff, t+s → ss, etc), which result in lenition of labial and dental plosives, though not velar ones. A few consonants seem to be especially prone to this type of change:
+      %ul
+        %li /d/, which never appears as the first consonant of a cluster, frequently completely assimilates to the following consonant.
+        %li /f/ tends to assimilate to following voiced consonants, perhaps a consequence of the lack of a voiced counterpart /v/.
+        %li Dental and post-alveolar fricatives when in clusters amongst themselves; these two points of articulation are close enough in the mouth that non-assimilated clusters are not tolerated.
+      %p At the same time, there are several consonants that are especially prone to triggering this change:
+      %ul
+        %li /γ/, which will assimilate any non-labial plosive as well as /f/.
+        %li /g/, which assimilates many types of stops as well as /f/.
+        %li Nasal consonants, especially when preceded by a homorganic plosive.
+        %li /l/, which assimilates homorganic plosives, nasals, and /r/.
+      %p <b>Full Progressive Assimilation</b>, however, is much less frequent. This is where a C<sub>1</sub>C<sub>2</sub> cluster is resolved as C<sub>1</sub>C<sub>1</sub>. It is also far less systematic, occurring only in a few sporadic combinations. In particular it is common among velar and uvular consonants, fricative + homorganic affricate clusters, clusters where /w/ or /j/ is the second element, and the one outlying case of b+f → bb.
+      %p <b>Regressive Voicing Assimilation</b> is the most common change, affecting virtually every remaining cluster involving plosives and fricatives, as well as many clusters containing affricates. This is a far less drastic form of assimilation, where the first consonant acquires the same voicing as the second. The only outliers are clusters of /s ʃ x/ + /m n/, wherein these fricatives acquire voicing despite the non-distinctiveness the feature [±voicing] among nasals.
+      %p <b>Progressive Voicing Assimilation</b>, like other progressive changes in Očets, is very rare, limited to only five possible combinations of underlying consonants: g+p, dz+p, dz+k, dz+x, and dʒ+x. The reason for these apparent exceptions to the trend have yet to be satisfactorily explained.
+      %p <b>Elision of the Second Consonant</b>, that is, the complete loss of the second consonant, is common when the second element is one of the traditionally ‘weak’ consonants /h w j/. With /h/, this is the rule; it is lost in all cases. With /w/, it seems to occur whenever the first element is velar or an affricate. With /j/, this only occurs with /tʃ dʒ/. This change is also common with clusters of two identical affricates, as well as an affricate + a homorganic plosive.
+      %p <b>Elision of the First Consonant</b> is limited to cases where affricates are the second underlying consonant. This occurs in clusters involving two affricates, clusters involving a homorganic stop + affricate combination, and f + a voiced affricate. The first is a result of the general dislike for affricate + affricate clusters, the second from the phonetic similarity of /t d/ with the onset of dental/post-alveolar affricates, and the last from the lack of a voiced counterpart of /f/ (so that f + dz → dz mirrors f + d → dd).
+      %p <b>Nasalization of the First Consonant</b>, where the first consonant becomes a nasal at the same point of articulation, occurs with most non-homorganic plosive + nasal clusters. This could be considered a type of regressive assimilation, where the feature [+nasal] spreads from the nasal consonant to the oral one.
+      %p <b>Denasalization of the Second Consonant</b> exclusively occurs with /ŋ/. This a progressive assimilation where the feature [-nasal] spreads from the oral consonant to the nasal. The velar nasal is cross-linguistically far less likely than /m/ or /n/ to appear in the onset of a syllable, so this seems to be a normal realization of this natural tendency. However, after underlying /ŋ/ shifts to /g/, other further changes can then take place, including both the devoicing of itself or the voicing of the preceding consonant. What is especially curious is how several consonant + /ŋ/ clusters are resolved versus how the same consonant behaves with following /g/, with four especial cases of note:
+      %ul
+        %li t+g → gg, but t+ŋ → tg → tk
+        %li f+g → gg, but f+ŋ → fg → fk
+        %li tʃ+g → dʒg, but tʃ+ŋ → tʃg → ʃk
+        %li dʒ+g → dʒg, but dʒ+ŋ → dʒg → ʒg
+      %p This strongly suggests that the denasalization of underlying /ŋ/ began long after the these various /g/-related changes took place. However, the irregular conjugation of a few verbs does suggest that there may have been some confusion of these two processes at some point in time.
+      %p <b>Denasalization of the First Consonant</b> only affects four combinations of consonants; not surprisingly, three of these involve /ŋ/. Underlying /ŋ/ denasalizes and devoices before /s/ and /f/, and lenites to a fricative /γ/ before /l/. /m/, on the other hand, does not lenite before /l/, but undergoes a simple denasalization to /b/.
+      %p <b>Point-of-Articulation Assimilation of an Initial Nasal</b> occurs universally among nasal + non-homorganic plosive or affricate clusters, where the nasal shifts to the same point of articulation as the second element. This also affects /n/ (and only /n/) before velar fricatives: n+x → ŋx, and the “two-way assimilation” of n+γ → ŋŋ, which combines nasal PoA assimilation with total progressive assimilation.
+      %p <b>Miscellaneous Assimilation with the Elision of the Second Consonant</b> combines three similar processes:
+      %ol
+        %li Among dental affricate + homorganic plosive clusters, it consists of voicing assimilation with subsequent elision, in accordance with the general trend of simplifying clusters of plosives and affricates.
+        %li Among affricates and coronal fricatives, it includes voicing and PoA assimilation with subsequent elision. In these cases, the juxtaposition of the fricative portion of the affricate consonants with other fricatives allowed certain features to transfer to the affricate.
+        %li Among /j/ clusters, it consists of palatalization, whereby dental plosives become dental fricatives, velar plosives became post-alveolar affricatives, and dental fricatives and affricates became post-alveolar fricatives and affricates.
+      %p The <b>Miscellaneous Lenition</b> category includes three one-off changes involving liquids: the lenition of /p/ to /f/ before /r l/, and the lenition of /g/ before /l/.
+      %p <b>Miscellaneous Fortition</b> affects clusters in which a velar fricative is the first element. Before affricates, both of these strengthen to velar plosives, matching the voicing of the affricate. Curiously, they both also strengthen to /g/ before /j/. While rare, this sort of change has been attested in several other languages, and likely took place through the mediation of palatal plosives.
+      %p <b>Epenthesis</b>, the addition of a new consonant to break up a cluster, takes place between /n/ and coronal fricatives. Here, an oral dental release has been added, converting the underlying fricatives into affricates.
+      %p <b>Excrescence</b> is a form of epenthesis in which one consonant excretes some property of itself in the form of an independent consonant. In Očets this only occurs with /w/ as the second element. As a labiovelar consonant, /w/ has both the property [+labial] and [+velar], and so in certain circumstances can excrete either a labial or velar consonant. It appears as /x/ after /f/, /γ/ after /p b/, /g/ after /ŋ/, and /b/ after /m/.
+
+    = section "Conditional Changes" do
+      %p A number of other changes are conditional. One of the most common is palatalization, where /t d s z k g/ become /s z ʃ ʒ tʃ dʒ/ respectively before front vowels. Such conditional changes are not always consistent or predictable, however, and so will be discussed over the course of the next few sections when relevant.
+      %p The most common morphophonemic alterations occurring with vowels, after harmony, are ablaut and indeterminate vowel strengthening. Ablaut will be discussed later. Indeterminate vowel strengthening is the result of stress shifting to an underlying indeterminate vowel, which can result in many possible surface realizations. This too will be discussed in more detail later, as it is closely related to Očets’s declension and conjugation systems.
+      %p Stressed vowel-initial syllables are not allowed. If an underlying vowel-initial syllable (i.e., at the beginning of a word) becomes stressed, an epenthetic [h] is added. This is distinguishable from true initial underlying /h/ by the fact that the underlying /h/ will remain even when the stress shifts or when a prefix is added.
+      %p Other miscellaneous changes that can take place at morpheme boundaries include:
+      %ul
+        %li /kʷ/ (before stressed /o(ː) u(ː)/) ↔ /k g/ (elsewhere)
+        %li /xʷ/ (before stressed /o(ː) u(ː)/) ↔ /x/ (elsewhere)
+        %li /γʷ/ (before stressed /o(ː) u(ː)/) ↔ /γ/ (elsewhere)
+        %li /z/ (word-finally) ↔ /ʒ/ (elsewhere)
+        %li /k/ (word-initially) ↔ /x/ (elsewhere)
+        %li /j/ (before stressed /i(ː)/ or sometimes Ø) ↔ /n/ (elsewhere)
+        %li /oi/ (after /q/) ↔ /i(ː)/ (elsewhere)
+        %li /a(ː)/ (after /q/) ↔ /e(ː)/ (elsewhere)
+        %li /e y/ (after /ʃ ʒ tʃ dʒ n/) ↔ /a u/ (elsewhere)
+      %p as well as others. Such changes will be discussed in greater detail when relevant.
+
+  = section "Foreign Loans" do
+    %p For the last several hundred years, Očets has been not been a socially pretigious language. First Komi, then Russian, and now Novegradian have served the lingua franca among the people of northwest Siberia. Novegradian influence has been especially strong over the last century, and a significant amount of borrowings from Novegradian over that period have not been fully integrated. They defy principles of vowel harmony, contain clusters not found in native words, and sometimes these loans may even be pronounced with a Novegradian accent and with Novegradian phonemes (especially among younger urban speakers who use Novegradian frequently in their daily lives).
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Since the Yeniseian languages show no signs of vowel harmony, this is likely an Ob family innovation. Its development was probably influenced by the many nearby Uralic and Turkic languages with productive harmony.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

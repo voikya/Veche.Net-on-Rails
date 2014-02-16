@@ -35,6 +35,10 @@ body.grammar.ochets {
     background-color: $background-color;
   }
 
+  td.assimilated {
+    font-weight: bold;
+  }
+
   table {
     border: solid 3px $background_color;
     border-bottom: solid 2px $table_border_bottom_right;
@@ -49,6 +53,121 @@ body.grammar.ochets {
 
     &.header {
       color: $header_color;
+    }
+  }
+
+  #sandhitable {
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  #sandhitablekey {
+    border-collapse: collapse;
+    border: none;
+
+    td {
+      text-align: left;
+    }
+
+    col.key {
+      border: solid 1px black;
+      width: 30px;
+    }
+  }
+
+  #sandhi {
+    .assimToSecond {
+      background-color: #bbd500;
+      font-weight: bold;
+    }
+
+    .assimToFirst {
+      background-color: #fffb78;
+      font-weight: bold;
+    }
+
+    .voiceToSecond{
+      background-color: #ffd927;
+      font-weight: bold;
+    }
+
+    .voiceToFirst{
+      background-color: #d6d7ff;
+      font-weight: bold;
+    }
+
+    .lossOfSecond {
+      background-color: #a8d6ff;
+      font-weight: bold;
+    }
+
+    .nasalOfFirst {
+      background-color: #f1774e;
+      font-weight: bold;
+    }
+
+    .denasalOfSecond {
+      background-color: #ab80d6;
+      font-weight: bold;
+    }
+
+    .poaInitialNasal {
+      background-color: #ffd5a9;
+      font-weight: bold;
+    }
+
+    .assimWithLoss {
+      background-color: #159b9c;
+      font-weight: bold;
+    }
+
+    .lossOfFirst {
+      background-color: #939100;
+      color: white;
+      font-weight: bold;
+    }
+
+    .denasalOfFirst {
+      background-color: #941200;
+      color: white;
+      font-weight: bold;
+    }
+
+    .lenition {
+      background-color: #011892;
+      color: white;
+      font-weight: bold;
+    }
+
+    .fortition {
+      background-color: #0a8f00;
+      color: white;
+      font-weight: bold;
+    }
+
+    .epenthesis {
+      background-color: #942192;
+      color: white;
+      font-weight: bold;
+    }
+
+    .excrescence {
+      background-color: #ff4f7a;
+      font-weight: bold;
+    }
+
+    .mixed {
+      background-color: #5e5e60;
+      color: white;
+      font-weight: bold;
+    }
+
+    #otherContent {
+      display: none;
+    }
+
+    a {
+      cursor: pointer;
     }
   }
 }
