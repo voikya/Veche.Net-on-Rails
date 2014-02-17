@@ -15,6 +15,7 @@ module Grammars
       'ABE' => "Abessive",
       'ABL' => "Ablative",
       'ANIM' => "Animate",
+      'COLL' => "Collective",
       'COM' => "Comitative",
       'DEF' => "Definite",
       'DL' => "Dual",
@@ -28,6 +29,8 @@ module Grammars
       'OBJ' => "Objective",
       'PL' => "Plural",
       'POS' => "Possessive",
+      'PRED' => "Predicative",
+      'REL' => "Relative",
       'SG' => "Singular",
       'TRA' => "Translative"
     }
@@ -39,6 +42,50 @@ module Grammars
         meaning << (@@abbreviations_hash[s.upcase] or raise "Abbreviation #{s.upcase} is not defined")
       end
       "<abbr title='#{meaning.join(' ')}'>#{string.gsub('*', '')}</abbr>".html_safe
+    end
+
+    def underlying(string)
+      string.gsub(/{.*?}/) { |m| "<sup>#{m[1..-2]}</sup>" }.html_safe
+    end
+
+    # Custom example sentence helper for Očets
+    def example_sentence(fields)
+      @example_index += 1
+      capture_haml do
+        haml_tag 'table.textgloss' do
+          haml_tag :tr do
+            haml_tag :td, "(#{@example_index})"
+            haml_tag :td do
+              if fields[:ochets]
+                haml_tag 'span.native', fields[:ochets].html_safe
+                haml_tag :br
+              end
+              if fields[:translit]
+                haml_tag 'span.translit', fields[:translit].html_safe
+                haml_tag :br
+              end
+              if fields[:breakdown]
+                haml_tag 'span.translit', fields[:breakdown].html_safe
+                haml_tag :br
+              end
+              if fields[:underlying]
+                haml_tag 'span.underlying', underlying(fields[:underlying])
+                haml_tag :br
+              end
+              if fields[:gloss]
+                haml_tag 'span.gloss', fields[:gloss].gsub(/{.*?}/) { |m| abbrev(m[1..-2]) }.html_safe
+                haml_tag :br
+              end
+              if fields[:eng]
+                haml_tag 'span.eng', "“#{fields[:eng].html_safe}”"
+              end
+              if fields[:comment]
+                haml_tag :span, fields[:comment].html_safe
+              end
+            end
+          end
+        end
+      end
     end
   end
 end

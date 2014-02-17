@@ -1,0 +1,26 @@
+- title ||= ""
+- forms ||= {}
+
+%table.noundecl
+  %tr
+    %th{:colspan => 4}= title.html_safe
+  %tr
+    %th Nom
+    %th Obj
+    %th Gen
+    %th Ins
+  %tr
+    %td= t(forms[:nom][:cyr], forms[:nom][:lat], :linebreak => true)
+    %td= t(forms[:obj][:cyr], forms[:obj][:lat], :linebreak => true)
+    %td= t(forms[:gen][:cyr], forms[:gen][:lat], :linebreak => true)
+    %td= t(forms[:ins][:cyr], forms[:ins][:lat], :linebreak => true)
+  %tr
+    %th Loc
+    %th Lat
+    %th Tra
+    %th Abl
+  %tr
+    %td= t(forms[:loc][:cyr], forms[:loc][:lat], :linebreak => true)
+    %td= t(forms[:lat][:cyr], forms[:lat][:lat], :linebreak => true)
+    %td= t(forms[:tra][:cyr], forms[:tra][:lat], :linebreak => true)
+    %td= t(forms[:abl][:cyr], forms[:abl][:lat], :linebreak => true)

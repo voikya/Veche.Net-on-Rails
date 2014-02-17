@@ -1,0 +1,2399 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Һанцәвыс моорполоогиа"
+
+= render :partial => 'navigation'
+
+= section "Structure of the Noun" do
+  %p Očets is a predominantly agglutinating language with a high morpheme-to-word ratio. That being said, the exact lines between morphemes can at times be hard to identify due to various forms of inter-morpheme interactions.
+  %p The typical native Očets root consists of one or two syllables, the most common forms being CV, CVC, CVCC, CVC(C)V, or CVCVC (where “C” represents a consonant and “V” a vowel or diphthong). Derived stems can be longer and have different syllable structures. More recent loans can have almost any shape. In roots of CVCVC structure, the second “V” may drop in certain inflections if it is a short or reduced vowel, though never if it is a long vowel. There are no restrictions on the distribution of long and short vowels, except in CV-type roots, which must have a long vowel or diphthong. Some example roots:
+  %ul
+    %li
+      CV
+      %ul
+        %li <i>*šyy</i> “sun”
+        %li <i>*xee</i> “night”
+        %li <i>*čaa</i> “salt”
+        %li <i>*tai</i> “frost”
+        %li <i>*mei</i> “fruit”
+    %li
+      CVC
+      %ul
+        %li <i>*kuor</i> “village”
+        %li <i>*sič</i> “snow”
+        %li <i>*nas</i> “eye”
+        %li <i>*den</i> “lake”
+        %li <i>*kyys</i> “baby”
+    %li
+      CVCC
+      %ul
+        %li <i>*bulg</i> “uneasiness”
+        %li <i>*seeŋk</i> “coin”
+        %li <i>*šips</i> “hill”
+        %li <i>*qants</i> “ant”
+        %li <i>*iast</i> “stomach”
+    %li
+      CVC(C)V
+      %ul
+        %li <i>*kalča</i> “trash”
+        %li <i>*meme</i> “mother”
+        %li <i>*torma</i> “prison”
+        %li <i>*hunne</i> “wolf”
+        %li <i>*heždi</i> “sable”
+    %li
+      CVCVC
+      %ul
+        %li <i>*heemis</i> “raspberry”
+        %li <i>*daǧən</i> “edible plant, vegetable”
+        %li <i>*texəl</i> “otter”
+        %li <i>*haatər</i> “front door”
+        %li <i>*čieǧəl</i> “sled”
+    %li
+      Other Native (&gt;300 years old)
+      %ul
+        %li <i>*plis</i> “splash”
+        %li <i>*hurgaan</i> “powerful wind storm”
+        %li <i>*škaan</i> “hair of the head”
+    %li
+      Other Foreign (&lt; ~300 years old)
+      %ul
+        %li <i>*otobus</i> “bus”
+        %li <i>*kompiutər</i> “computer”
+        %li <i>*park</i> “park”
+        %li <i>*raadio</i> “radio”
+        %li <i>*skoola</i> “school”
+  %p Notice that final clusters appear in a number of inherited roots, but initial clusters are very rare, and appear to always originate from onomatopoeia (as with <i>*plis</i>) or irregular reduction of compounds (as with <i>*škaan</i>, from Proto-Ob-Yeniseian *k<sup>y</sup>i-qā-n’ (head-hair-#{abbrev 'coll'}).
+  %p Roots of the form CVCəC, with a reduced vowel, can usually also be interpreted as CVCC roots which end in an illegal final cluster. In this analysis, the root for “otter” is <i>*texl</i>, but in isolation it becomes <i>texəl</i> because /xl/ is not permitted as a final cluster. This view works well when a suffix beginning with a vowel is added (<i>texle</i> “otter-#{abbrev 'obj'}”), but can be problematic when a suffix beginning with a consonant is added (<i>texəlze</i> “otter-#{abbrev 'gen'}”—why not **texləze?).
+  %p The noun root must be distinguished from the noun stem, which can have a very different overall structure and can easily be four, five, or more syllables in length. A noun stem consists of a root plus any derivational affixes; this is the base to which grammatical affixes are added. For so-called “simple” nouns, including many of the ones listed above, the root and stem are identical.
+  %p All Očets nouns inherently belong to one of two noun classes. One, which for sake of brevity will be called “animate”, includes all nouns referring to people, terms for “useful” animals (generally meaning domesticated or huntable species), edible plants, and certain body parts (particularly those that do work, such as hands or feet, or those responsible with sense perception, such as the eyes, tongue, or ears). Self-powered vehicles such as cars, ships containing a motor, and airplanes are included as well, perhaps by analogy with the beasts of burden. The other classs, here referred to as “inanimate”, includes all other nouns. These two classes have different declensions and behave slightly differently syntactically. There is also a third specialized quantifier declension that is not inherent, but which other nouns can transfer into in certain circumstances. This will be discussed later.
+  %table
+    %tr
+      %th Animate
+      %th Inanimate
+    %tr
+      %td <i>*baba</i> — “father”
+      %td <i>*ǧuu</i> — “house”
+    %tr
+      %td <i>*niit</i> — “sister”
+      %td <i>*xil</i> — “sky”
+    %tr
+      %td <i>*stas</i> — “teacher”
+      %td <i>*šyy</i> — “sun”
+    %tr
+      %td <i>*čib</i> — “dog”
+      %td <i>*hok</i> — “tree”
+    %tr
+      %td <i>*hyyn</i> — “cow”
+      %td <i>*hoǧ</i> — “grass”
+    %tr
+      %td <i>*iai</i> — “deer”
+      %td <i>*kaa</i> — “mountain”
+    %tr
+      %td <i>*sor</i> — “fish”
+      %td <i>*kwor</i> — “water”
+    %tr
+      %td <i>*šyynd</i> — “wheat”
+      %td <i>*wino</i> — “wine”
+    %tr
+      %td <i>*holma</i> — “apple”
+      %td <i>*hiot</i> — “mouse”
+    %tr
+      %td <i>*kaartok</i> — “potato”
+      %td <i>*kwoi</i> — “bear”
+    %tr
+      %td <i>*nas</i> — “eye”
+      %td <i>*iast</i> — “stomach”
+    %tr
+      %td <i>*ǧal</i> — “hand”
+      %td <i>*čii</i> — “head”
+    %tr
+      %td <i>*hele</i> — “nose”
+      %td <i>*dax</i> — “land”
+    %tr
+      %td <i>*wooz</i> — “car”
+      %td <i>*laad</i> — “city”
+    %tr
+      %td <i>*samoled</i> — “airplane”
+      %td <i>*šuud</i> — “happiness”
+  %p Očets nouns inflect for case, number, definiteness, and possessor. There are also several miscellaneous affixes.
+  %p All nouns are also inherently front-vowel roots, back-vowel roots, or “epicene” roots, as determined by the final vowel of the root (or next-to-last if the last is a schwa). Front-vowel roots only take affixes with front vowels, while back-vowel roots only take affixes with back vowels. Epicene nouns can go either way according to some somewhat complex rules. This is complicated, however, by the fact that certain affixes are harmony-neutral and therefore invariable. These are subdivided further into two types: “weak” neutral vowels which simply ignore harmony rules, and “strong” neutral vowels which force all subsequent vowels to follow their own harmony pattern, ignoring whatever the noun root may normally call for. Compare, for instance, the following:
+  = example_sentence :ochets => "котыынемакаи",
+                     :translit => "kotyynemakai",
+                     :breakdown => "ko-tyy-n-em-a-kai",
+                     :underlying => "*ko{b}-tyy{b+}s-n-è{f}m-A{b}-kA{b}i",
+                     :gloss => "#{abbrev '2sg'}-brother-#{abbrev 'pl'}-#{abbrev 'tra'}-#{abbrev 'ind'}-and",
+                     :eng => "and [as] your brothers"
+  = example_sentence :ochets => "котыынеечеи",
+                     :translit => "kotyyneečei",
+                     :breakdown => "ko-tyy-n-e-e-čei",
+                     :underlying => "*ko{b}-tyy{b+}s-n-è{f+}-A{f}-kA{f}i",
+                     :gloss => "#{abbrev '2sg'}-brother-#{abbrev 'pl'}-#{abbrev 'obj'}-#{abbrev 'ind'}-and",
+                     :eng => "and [to] your brothers"
+  %p The first word means “and your brothers” in the translative case, while the second means the same thing in the objective case. Both are back-vowel roots, as can be seen in the root vowel /ɨ:/. However, in both of these words, after the plural suffix is a case ending containing a neutral vowel /e/. In the first case, it is weak, so even though the suffix introduces a front vowel /e/, the plural possessive suffix afterwards still contains a back vowel—the case suffix had no effect on harmony at all, despite its own dissonance with the otherwise back-vowel-dominated word. Thus both the indirective suffix and clitic “and” show back-vowel harmony, according to the root <i>*tyys</i>.
+  %p In the second example, however, this /e/ is strong, and therefore “resets” the harmony of the word for all morphemes after it; thus the indirective suffix and clitic “and” show front-vowel harmony, despite the root.
+  %p Due to the complexity of both the harmony system and sandhi, a special notation will be used to indicate underlying forms alongside surface forms. Underlying forms will always be preceded by an asterisk, like so:
+  = example_sentence :ochets => "тадаҕнее",
+                     :translit => "tadaǧnee",
+                     :breakdown => "ta-daǧn-e-e",
+                     :underlying => "*tV-da{b+}ǧə{0}n-è{f+}-A{f}",
+                     :gloss => "#{abbrev 'def'}-vegetable-#{abbrev 'obj'}-#{abbrev 'ind'}",
+                     :eng => "[to] the plant"
+  %p The first line above represents native script, the second transliteration, the third a simplified breakdown, the fourth a breakdown of the underlying form, and the fifth a gloss.
+  %p Hyphens indicate morpheme boundaries. Superscripts indicate whether a vowel is f(ront), b(ack), or 0 (suppressed). A plus sign after the superscript means this is a harmony-determining vowel, that is, that all vowels following it must match its harmony pattern. In the above example, the back /f/ of the root <i>*daǧən</i> “vegetable” triggers back harmony, but this is then suppressed in favor of front vowel harmony by the objective suffix *-e-, which consists of a strong neutral vowel. Therefore, all affixes following this will have front vowels. If there were an affix between the root and the accusative suffix, it would have back vowel harmony, since it precedes the syllable inducing front vowels.
+  %p When a majuscule vowel appears, this represents a vowel whose quality determined by harmony. “A” represents /e ~ a/, “O” /ø ~ o/, “U” /y ~ u/, and “I” /i ~ ɨ/. An affix *-A- will therefore appear as /a/ on the surface if back vowel harmony is required, or as /e/ if front vowel harmony is needed. The vowels “è” and “ì”, featuring a grave accent, will not trigger palatalization of the previous consonant, while regular “e” and “i” will. A plain “V” with no other markings represents a vowel whose qualities are determined by some other rule; in this case, the definite prefix *tV- tends to match the first vowel of the following syllable.
+  %p Note that è can occur word-internally as well; in such cases, it acts as though it were a back vowel for all intents and purposes. For instance, <i>*dèn</i> “people”, despite containing a front vowel, always takes back vowel endings, as in the genitive plural <i>dènda</i>.
+  %p If all slots are indicated, the Očets noun may be diagrammed as follows. Number markers may appear in several different locations, depending on what other affixes are present.
+  %table.slottable
+    %tr
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+      %th -2
+      %th -3
+      %th -4
+      %th -5
+    %tr
+      %td Prenominal Prefix
+      %td
+        Definite Article
+        %br
+        or
+        %br
+        Possessive Prefix
+      %td Stem
+      %td Number Marker (Type 1)
+      %td Case Ending
+      %td Number Marker (Type 2)
+      %td
+        Relative Suffix
+        %br
+        or
+        %br
+        Indirective Suffix
+      %td Predicative Suffix
+  %p The following sections will discuss these different types of affixes one by one. Unfortunately, due to the significant interaction between affixes, it is impossible to completely compartmentalize them. Each of the following sections will therefore build upon the previous sections. The following section on cases will deal with them only in the singular; when plural suffixes are discussed, cases will be brought up again insofar as they are related to plural suffixes; and so on.
+
+= section "Cases" do
+  %p Both animate and inanimate nouns inflect for eight cases: nominative (#{abbrev 'nom'}), objective (#{abbrev 'obj'}), genitive (#{abbrev 'gen'}), instrumental (#{abbrev 'ins'}), locative (#{abbrev 'loc'}), lative (#{abbrev 'lat'}), translative (#{abbrev 'tra'}), and ablative (#{abbrev 'abl'}). These are all marked by suffixes appearing after the noun root.
+
+  = section "Nominative Case" do
+    %p The nominative case is primarily used to mark the subject of most verbs (and sometimes the direct object), as well as the object of most prepositions and appositive nouns modifying other nouns. It is the simplest case morphologically, consisting of no affix to the noun stem for both animate and inanimate nouns.
+    = render 'noun_endings', :animate => "-Ø", :inanimate => "-Ø"
+    %p The nominative singular indefinite of most nouns is thus formed simply with the bare stem. However, if the stem begins with a vowel, an epenthetic /h/ is added to the beginning of the word. If the noun is epicene and its root contains an indeterminate vowel (i.e., a schwa and no other vowel to determine harmony), such as *-šəǧ- “light” or *-pəs- “manner”, this vowel will default to #{underlying "/e/{f+}"} if the consonant immediately following is /ʃ ʒ tʃ dʒ/, or #{underlying "/a/{b+}"} otherwise. If the stem ends in an illegal word-final cluster, an epenthetic schwa may be inserted between the last two consonants: *-sent- “heart” → <i>sent</i>, but *-texl- “otter” → <i>texəl</i>.
+    %p If the noun contains a velar consonant which is followed by a stressed long or short /o u/ and is not in a consonant cluster, it will usually become labialized. This does not apply to more recent loans. This process is quite regular and predictable: velars become labialized before such stressed vowels, and lose the labialization when the vowel loses its stress. Note that /g/ becomes /kʷ/ when labialized. Compare: *kosa ‘cat’ → #{t "коса", "kosá"} “a cat”, #{t "токвосаа", "tokwósaa"} “the cat”.
+    %p The following table demonstrates the nominative singular of example roots. <i>*meme</i> “mother”, <i>*nas</i> “eye”, <i>*čib</i> “dog”, <i>*ǧəl</i> “hand”, and <i>*sent</i> “heart” are all animate, while <i>*xee</i> “night”, <i>*huun</i> “morning”, <i>*iš</i> “meat”, <i>*čieǧl</i> “sled”, and <i>*laad</i> “city” are inanimate.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "меме", :translit => "meme", :breakdown => "meme-Ø", :underlying => "me{f}me{f+}-Ø" },
+                { :stem => "*nas", :eng => "eye", :ochets => "нас", :translit => "nas", :breakdown => "nas-Ø", :underlying => "na{b+}s-Ø" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чиб", :translit => "čib", :breakdown => "čib-Ø", :underlying => "či{f+}b-Ø" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕал", :translit => "ǧal", :breakdown => "ǧal-Ø", :underlying => "ǧə{b+}l-Ø" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сент", :translit => "sent", :breakdown => "sent-Ø", :underlying => "se{f+}nt-Ø" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хее", :translit => "xee", :breakdown => "xee-Ø", :underlying => "xee{f+}-Ø" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һуун", :translit => "huun", :breakdown => "huun-Ø", :underlying => "huu{b+}n-Ø" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һиш", :translit => "hiš", :breakdown => "hiš-Ø", :underlying => "i{f+}š-Ø" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕәл", :translit => "čieǧəl", :breakdown => "čieǧəl-Ø", :underlying => "čie{f+}ǧl-Ø" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаад", :translit => "laad", :breakdown => "laad-Ø", :underlying => "laa{b+}d-Ø" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+
+  = section "Objective Case" do
+    %p The objective case is most often used to mark the direct object of a verb, though it also can mark the indirect object in certain circumstances. It is marked for animate nouns with the non-palatalizing strong neutral vowel #{underlying "*-è{f+}-"}, and for inanimate nouns with either #{underlying "*-è{f+}-"} or #{underlying "*-s-"}.
+    = render 'noun_endings', :animate => "-è{f+}", :inanimate => "-è{f+}, -s"
+    %p Animate nouns will always use #{underlying "*-è{f+}-"}, even if the stem itself contains only back vowels. If the stem ends in a vowel, however, this accusative marker gains an epenthetic /l/ to prevent hiatus (after /i/, /y/, or /ɨ/), simply lengthens the preceding vowel (after /e/, /ø/, or /a/), or disappears entirely (after /o/ and /u/, or any long vowel).
+    %p However, if the stem is polysyllabic, ends in a vowel that typically lengthens (i.e., /e ø a/), and contains a long vowel in the syllable immediately beforehand, that earlier vowel will shorten: #{t "һотәскоола", "hotəskoola"} “students in a school (#{abbrev 'nom'})” → #{t "һотәсколаа", "hotəskolaa"}.
+    %p All indeterminate vowels in epicene or front-vowel roots become /e/; indeterminate vowels only remain as /a/ if the root contains another fixed back vowel.
+    %p Inanimate nouns simply take #{underlying "*-s-"} regularly if the root ends in a vowel, or #{underlying "*-è{f+}-"} if it ends in a consonant.
+    %p If the syllable immediately before the suffix #{underlying "-è{f+}-"} contains short /a/, it will often mutate to -è-, although it still patterns as a back vowel.
+    %p In CVCVC roots, the second vowel will drop if it is short.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемее", :translit => "memee", :breakdown => "meme-e", :underlying => "me{f}me{f+}-è{f+}" },
+                { :stem => "*nas", :eng => "eye", :ochets => "несе", :translit => "nese", :breakdown => "nes-e", :underlying => "na{b+}s-è{f+}" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чибе", :translit => "čibe", :breakdown => "čib-e", :underlying => "či{f+}b-è{f+}" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕеле", :translit => "ǧele", :breakdown => "ǧel-e", :underlying => "ǧə{f}l-è{f+}" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сенте", :translit => "sente", :breakdown => "sent-e", :underlying => "se{f+}nt-è{f+}" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хеес", :translit => "xees", :breakdown => "xee-s", :underlying => "xee{f+}-s" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һууне", :translit => "huune", :breakdown => "huun-e", :underlying => "huu{b+}n-è{f+}" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һише", :translit => "hiše", :breakdown => "hiš-e", :underlying => "i{f+}š-è{f+}" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕле", :translit => "čieǧle", :breakdown => "čieǧl-e", :underlying => "čie{f+}ǧl-è{f+}" },
+                { :stem => "*laad", :eng => "city", :ochets => "лааде", :translit => "laade", :breakdown => "laad-e", :underlying => "laa{b+}d-è{f+}" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+
+  = section "Genitive Case" do
+    %p The genitive case marks the possessor of another noun. It is formed by the suffix #{underlying "*-dA-"} for animate nouns and #{underlying "*-dI-"} for inanimate nouns (although there are a few exceptions, noted below). The vowel in this suffix is marked for harmony, and so becomes /e/ (animate) or /i/ (inanimate) if the noun triggers front harmony or /a/ (animate) or /ɨ/ (inanimate) if it triggers back harmony. However, if the vowel becomes /i/ or /e/, this in turn palatalizes the /d/ to /z/: #{underlying "*-dA{f}"}/#{underlying "*-dI{f}"} → *-de/*-di → -ze/-zi.
+    = render 'noun_endings', :animate => "-dA", :animate_comments => "(-da, -ze, -d, -z, -əd, -əz)", :inanimate => "-dI", :inanimate_comments => "(-dy, -zi, -d, -z, -əd, -əz)"
+    %p If the root ends in a single consonant, the genitive suffix is added directly after the root, and the C-d or C-z cluster formed may undergo sandhi as described in the table in section 2.5.3. If the root ends in two consonants, however, any cluster would be illegal, so an epenthetic /ə/ is inserted between the root and the genitive suffix. If the noun root is monosyllabic and the genitive is added after a vowel (i.e., the root ends in a vowel, or the root ends in a cluster such that an epenthetic vowel is inserted before the genitive), the vowel of the genitive suffix drops entirely, though any palatalization it may have caused beforehand remains: #{underlying "*V-dA{f}"}/#{underlying "*V-dI{f}"} → *V-de/*V-di → *V-ze/*V-zi → V-z.
+    %p In CVCVC roots, no vowel is dropped. Indeterminate vowels revert to whatever they were in the nominative case.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемези", :translit => "memezi", :breakdown => "meme-zi", :underlying => "me{f}me{f+}-dI{f}" },
+                { :stem => "*nas", :eng => "eye", :ochets => "назда", :translit => "nazda", :breakdown => "naz-da", :underlying => "na{b+}s-dA{b}" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чибзе", :translit => "čibze", :breakdown => "čib-ze", :underlying => "či{f+}b-dA{f}" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕалда", :translit => "ǧalda", :breakdown => "ǧal-da", :underlying => "ǧə{b}l-dA{b}" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сентәз", :translit => "sentəz", :breakdown => "sent-əz", :underlying => "se{f+}nt-dA{f→0}" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хеез", :translit => "xeez", :breakdown => "xee-z", :underlying => "xee{f+}-dI{f→0}" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һуунды", :translit => "huundy", :breakdown => "huun-dy", :underlying => "huu{b+}n-dI{b}" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һиззи", :translit => "hizzi", :breakdown => "hiz-zi", :underlying => "i{f+}š-dI{f}" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕләз", :translit => "cieǧləz", :breakdown => "čieǧlə-z", :underlying => "čie{f+}ǧl-dI{f→0}" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаадды", :translit => "laaddy", :breakdown => "laad-dy", :underlying => "laa{b+}d-dI{b}" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+    %p The one exception to the general rule of genitive endings is that feminine kinship terms, which are all animate, always take the inanimate ending #{underlying "-dI"} rather than the animate #{underlying "-dA"}. Proto-Ob-Yeniseian is believed to have had a three-way gender contrast of masculine, feminine, and inanimate, with the masculine genitive marked by *-da and the feminine and inanimate genitive by *-di. In Proto-Ob, the masculine and feminine merged as the animate, but the feminine possessive retained its use for these few very common words.
+
+  = section "Instrumental Case" do
+    %p The instrumental case plays a number of roles; it can at various times serve as the subject, direct object, or indirect object of a verb. It also describes the means by which an action is performed. The instrumental is marked for both animate and inanimate nouns with the suffix #{underlying "*-Às-"}, that is, *-as- when back harmony is present, or *-ès- when front harmony is present. The second vowel in CVCVC roots drops if it is short. Indeterminate vowels tend to become /a/ in all cases.
+    = render 'noun_endings', :animate => "-Às, -Àk", :animate_comments => "(-as, -es, -ak, -ek)", :inanimate => "-Às", :inanimate_comments => "(-as, -es)"
+    %p If the root ends in a vowel, the same rules apply as in the accusative case: an epenthetic /l/ is added after /i y ɨ/, the root vowel is lengthened and the suffix vowel is lost after /a e ø/, and the suffix vowel is simply lost after /o u/ and long vowels. The same shortening rule applies as in the objective animate as well, except for inanimate nouns as well, so that the instrumental of #{t "скоола", "skoola"} “school” is #{t "сколаас", "skolaas"}.
+    %p A very small set of nouns, all of which are animate, instead form the instrumental with #{underlying "*-Àk-"} rather than #{underlying "*-Às-"}. This derives from an older dative suffix that has long since lost productivity. The most basic kinship terms, for instance, use this form.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемеек", :translit => "memeek", :breakdown => "meme-ek", :underlying => "me{f}me{f+}-À{f}k" },
+                { :stem => "*nas", :eng => "eye", :ochets => "насас", :translit => "nasas", :breakdown => "nas-as", :underlying => "na{b+}s-À{b}s" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чибес", :translit => "čibes", :breakdown => "čib-es", :underlying => "či{f+}b-À{f}s" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕалас", :translit => "ǧalas", :breakdown => "ǧal-as", :underlying => "ǧə{b}l-À{b}s" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сентес", :translit => "sentes", :breakdown => "sent-es", :underlying => "se{f+}nt-À{f}s" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хеес", :translit => "xees", :breakdown => "xee-s", :underlying => "xee{f+}-À{f→0}s" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һуунас", :translit => "huunas", :breakdown => "huun-as", :underlying => "huu{b+}n-À{b}s" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һишес", :translit => "hišes", :breakdown => "hiš-es", :underlying => "i{f+}š-À{f}s" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕлес", :translit => "cieǧles", :breakdown => "čieǧl-es", :underlying => "čie{f+}ǧl-À{f}s" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаадас", :translit => "laadas", :breakdown => "laad-as", :underlying => "laa{b+}d-À{b}s" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+
+  = section "Locative Case" do
+    %p The locative case marks the location where an action takes place, and for certain verbs may mark the subject or object. The basic suffix is #{underlying "*-Ìl-"} for both animate and inanimate nouns. However, stems that end in velar plosive or fricative consonants will always take -yl-, no matter the harmony: #{t "квоох", "kwoox"} “east (#{abbrev 'nom'})” → #{t "квоохыл", "kwooxyl"} “in the east”, #{t "һелх", "helx"} “door (#{abbrev 'nom'})” → #{t "һелхыл", "helxyl"} “at the door”.
+    %p If the noun stem ends in a vowel, the locative suffix reduces to just -l-.
+    = render 'noun_endings', :animate => "-Ìl, -yl", :animate_comments => "(-yl, -il, -l)", :inanimate => "-Ìl, -yl", :inanimate_comments => "(-yl, -il, -l)"
+    %p CVCVC nouns lose their second vowel if it is short. Indeterminate vowels match the vowel of the nominative form.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемел", :translit => "memel", :breakdown => "meme-l", :underlying => "me{f}me{f+}-Ì{0}l" },
+                { :stem => "*nas", :eng => "eye", :ochets => "насыл", :translit => "nasyl", :breakdown => "nas-yl", :underlying => "na{b+}s-Ì{b}l" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чибил", :translit => "čibil", :breakdown => "čib-il", :underlying => "či{f+}b-Ì{f}l" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕалыл", :translit => "ǧalyl", :breakdown => "ǧal-yl", :underlying => "ǧə{b}l-Ì{b}l" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сентил", :translit => "sentil", :breakdown => "sent-il", :underlying => "se{f+}nt-Ì{f}l" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хеел", :translit => "xeel", :breakdown => "xee-l", :underlying => "xee{f+}-Ì{0}l" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һууныл", :translit => "huunyl", :breakdown => "huun-yl", :underlying => "huu{b+}n-Ì{b}l" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һишил", :translit => "hišil", :breakdown => "hiš-il", :underlying => "i{f+}š-Ì{f}l" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕлил", :translit => "cieǧlil", :breakdown => "čieǧl-il", :underlying => "čie{f+}ǧl-Ì{f}l" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаадыл", :translit => "laadyl", :breakdown => "laad-yl", :underlying => "laa{b+}d-Ì{b}l" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+
+  = section "Lative Case" do
+    %p The lative case is primarily used to mark the destination of a verb of motion. Animate nouns take the suffix #{underlying "*-na{b+}-"}, while inanimate nouns take #{underlying "*-lA-"}. Animate nouns show no form of vowel harmony.
+    = render 'noun_endings', :animate => "-na", :animate_comments => "(-na, -na, -ona)", :inanimate => "-lA", :inanimate_comments => "(-la, -le, -ola)"
+    %p If the stem ends in a single consonant, it may undergo sandhi with the first consonant of the lative suffix. If it ends in a cluster, the lative suffix will become -ona (animate) or -ola (inanimate, regardless of harmony), with a strong back vowel; the one exception is when the cluster ends in /t/ or /d/, in which case the /t/ or /d/ will drop and normal suffixes are used: #{t "саалч", "saalč"} “sea (#{abbrev 'nom'})” → #{t "саалчола", "saalčola"} “to sea”, #{t "сент", "sent"} “heart (#{abbrev 'nom'})” → #{t "сенна", "senna"} “heart (#{abbrev 'lat'})”.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемена", :translit => "memena", :breakdown => "meme-na", :underlying => "me{f}me{f+}-na{b+}" },
+                { :stem => "*nas", :eng => "eye", :ochets => "назна", :translit => "nazna", :breakdown => "naz-na", :underlying => "na{b+}s-na{b+}" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чимна", :translit => "čimna", :breakdown => "čim-na", :underlying => "či{f+}b-na{b+}" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕална", :translit => "ǧalna", :breakdown => "ǧal-na", :underlying => "ǧə{b}l-na{b+}" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сенна", :translit => "senna", :breakdown => "sen-na", :underlying => "se{f+}nt-na{b+}" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хееле", :translit => "xeele", :breakdown => "xee-le", :underlying => "xee{f+}-lA{f}" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һуулла", :translit => "huulla", :breakdown => "huul-la", :underlying => "huu{b+}n-lA{b}" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һишле", :translit => "hišle", :breakdown => "hiš-le", :underlying => "i{f+}š-lA{f}" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕлола", :translit => "cieǧlola", :breakdown => "čieǧl-ola", :underlying => "čie{f+}ǧl-o{b+}la{b}" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаалла", :translit => "laalla", :breakdown => "laal-la", :underlying => "laa{b+}d-lA{b}" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+
+  = section "Translative Case" do
+    %p The translative case indicates a change in state, or sometimes just simple static states. The suffix is #{underlying "*-èm-"} or #{underlying "*-m-"} for animate nouns and #{underlying "*-ŋ-"} for inanimate nouns.
+    = render 'noun_endings', :animate => "-èm, -m", :animate_comments => "(-em, -m)", :inanimate => "-ŋ", :inanimate_comments => "(-ŋ, -əŋ)"
+    %p With animate nouns, the suffix #{underlying "*-èm-"} is used when the noun stem ends in a consonant, and #{underlying "*-m-"} when it ends in a vowel. This particular “è” is a weak neutral vowel, meaning it is unchanging, but does not affect the harmony of subsequent vowels in any way. CVCVC nouns will lose their second vowel before #{underlying "*-èm-"} if it is short, and indeterminate vowels will tend towards the front vowel /e/ (even if the suffix is just *-m-).
+    %p The inanimate suffix *-ŋ- will never come in direct contact with a consonant-final stem. An epenthetic schwa is always inserted, even if the final consonant of the root normally could form a final cluster with /n/. CVCVC will never lose their second vowel in this situation.
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемем", :translit => "memem", :breakdown => "meme-m", :underlying => "me{f}me{f+}-m" },
+                { :stem => "*nas", :eng => "eye", :ochets => "насем", :translit => "nasem", :breakdown => "nas-em", :underlying => "na{b+}s-è{b}m" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чибем", :translit => "čibem", :breakdown => "čib-em", :underlying => "či{f+}b-è{b}m" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕелем", :translit => "ǧelem", :breakdown => "ǧal-em", :underlying => "ǧə{f}l-è{f}m" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сентем", :translit => "sentem", :breakdown => "sent-em", :underlying => "se{f+}nt-è{f}m" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хееҥ", :translit => "xeeŋ", :breakdown => "xee-ŋ", :underlying => "xee{f+}-ŋ" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һуунәҥ", :translit => "huunəŋ", :breakdown => "huun-əŋ", :underlying => "huu{b+}n-ŋ" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һишәҥ", :translit => "hišəŋ", :breakdown => "hiš-əŋ", :underlying => "i{f+}š-ŋ" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕләҥ", :translit => "cieǧləŋ", :breakdown => "čieǧl-əŋ", :underlying => "čie{f+}ǧl-ŋ" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаадәҥ", :translit => "laadəŋ", :breakdown => "laad-əŋ", :underlying => "laa{b+}d-ŋ" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+    %p It is, however, not unusual to hear the animate ending -m- generalized to all nouns, presumably to help avoid confusion with the common plural suffix -ŋ.
+
+  = section "Ablative Case" do
+    %p The ablative case’s primary function is to mark the origin of an action. For animate nouns the suffix is -dats or -ats, and for inanimate nouns it is -čis, -iis, or -ič. These endings do not display any sort of vowel harmony, and are considered strong neutral vowels.
+    = render 'noun_endings', :animate => "-dats, -ats", :inanimate => "-čis, -iis, -ič"
+    %p The rules for which endings to use are more complicated for the ablative than for any other case.
+    %p For animate nouns, -dats is used when the stem ends in a vowel or diphthong:
+    %ul
+      %li #{t "қаи", "qai"} ‘falcon’ → #{t "қаидац", "qaidats"} ‘from a falcon’
+      %li #{t "баба", "baba"} ‘father’ → #{t "бабадац", "babadats"} ‘from father’
+      %li #{t "коса", "kosa"} ‘cat’ → #{t "косадац", "kosadats"} ‘from a cat’
+    %p And -ats is used when it ends in a consonant; however, -ats also causes the preceding consonant to be geminated, <em>unless</em> that consonant is preceded by another consonant or a schwa.
+    %ul
+      %li #{t "чаит", "čait"} ‘person’ → #{t "чаиттац", "čaittats"} ‘from a person’
+      %li #{t "һух", "hux"} ‘horse’ → #{t "һуххац", "huxxats"} ‘from a horse’
+      %li #{t "сесәл", "sesəl"} ‘reindeer’ → #{t "сеслац", "seslats"} ‘from a reindeer’
+    %p All indeterminate vowels are realized as /a/, and no vowels are dropped in CVCVC stems.
+    %p With inanimate nouns, the rules become even more involved. The ending -čis is used after polysyllabic stems ending in a vowel, after monosyllabic stems ending in a long high vowel, after any stem ending in a diphthong, and in all recent loanwords, regardless of the final sound of the stem. If added after a consonant, an epenthetic schwa is always inserted: -əčis; sandhi never takes place here.
+    %ul
+      %li #{t "нииге", "niige"} ‘book’ → #{t "ниигечис", "niigečis"} ‘from a book’
+      %li #{t "һии", "hii"} ‘paper’ → #{t "һиичис", "hiičis"} ‘from paper’
+      %li #{t "һеи", "hei"} ‘island’ → #{t "һеичис", "heičis"} ‘from an island’
+      %li #{t "вооз", "wooz"} ‘car’ → #{t "воозәчис", "woozəčis"} ‘from a car’
+    %p The ending -iis is used after all native stems ending in a consonant (meaning the form was incorporated before roughly the 14th century AD), so long as the vowel in the syllable immediately preceding the case ending is short.
+    %ul
+      %li #{t "чен", "čen"} ‘silver’ → #{t "чениис", "čeniis"} ‘from silver’
+      %li #{t "деш", "deš"} ‘river’ → #{t "дешиис", "dešiis"} ‘from a river’
+    %p The ending -ič is used with stems ending in a consonant in which the vowel immediately preceding the ending is long or a diphthong; and after roots ending in /aː eː oː/, which then shorten to /a e o/. It causes gemination of the preceding consonant.
+    %ul
+      %li #{t "коин", "koin"} ‘time’ → #{t "коинич", "koinič"} ‘from a time’
+      %li #{t "чее", "čee"} ‘stone’ → #{t "чеич", "čeič"} ‘from stone’
+      %li #{t "квоо", "kwoo"} ‘ice’ → #{t "квоич", "kwoič"} ‘from ice’
+    %p As with animate nouns, CVCVC stems never lose any vowels, but unlike animate nouns, all indeterminate vowels are realized as /e/.<sup>1</sup>
+    - forms = [ { :stem => "*meme", :eng => "mother", :ochets => "мемедац", :translit => "memedats", :breakdown => "meme-dats", :underlying => "me{f}me{f+}-da{b+}ts" },
+                { :stem => "*nas", :eng => "eye", :ochets => "нассац", :translit => "nassats", :breakdown => "nas-sats", :underlying => "na{b+}s-da{b+}ts" },
+                { :stem => "*čib", :eng => "dog", :ochets => "чиббац", :translit => "čibbats", :breakdown => "čib-bats", :underlying => "či{f+}b-da{b+}ts" },
+                { :stem => "*ǧəl", :eng => "hand", :ochets => "ҕалац", :translit => "ǧalats", :breakdown => "ǧal-ats", :underlying => "ǧə{b}l-da{b+}ts" },
+                { :stem => "*sent", :eng => "heart", :ochets => "сентац", :translit => "sentats", :breakdown => "sent-ats", :underlying => "se{f+}nt-da{b+}ts" } ]
+    = render 'noun_declension', :title => "Animate", :forms => forms
+    - forms = [ { :stem => "*xee", :eng => "night", :ochets => "хеич", :translit => "xeič", :breakdown => "xe-ič", :underlying => "xee{f+}-či{f+}s" },
+                { :stem => "*huun", :eng => "morning", :ochets => "һууннич", :translit => "huunnič", :breakdown => "huun-nič", :underlying => "huu{b+}n-či{f+}s" },
+                { :stem => "*iš", :eng => "meat", :ochets => "һишиис", :translit => "hišiis", :breakdown => "hiš-iis", :underlying => "i{f+}š-či{f+}s" },
+                { :stem => "*čieǧl", :eng => "sled", :ochets => "чиеҕлич", :translit => "cieǧlič", :breakdown => "čieǧl-ič", :underlying => "čie{f+}ǧl-či{f+}s" },
+                { :stem => "*laad", :eng => "city", :ochets => "лаадәчис", :translit => "laadəčis", :breakdown => "laad-əčis", :underlying => "laa{b+}d-či{f+}s" } ]
+    = render 'noun_declension', :title => "Inanimate", :forms => forms
+    %p Note that the rule stating the suffix -čis must be used with loanwords only applies when the ablative suffix is in direct contact with a morpheme of foreign origin. If a derivational or inflectional suffix of native origin is inserted between the foreign root and the ablative case ending, the endings -iis or -ič will be used instead: #{t "лаадәчис", "laadəčis"} “city (#{abbrev 'abl'})” → #{t "лааданииши", "laadaniiši"} “cities (#{abbrev 'abl'})” (underlyingly #{underlying "laa{b+}d-n-či{f+}s-I{f}"}).
+
+= section "Number" do
+  %p Očets has two numbers, a singular and plural. Nouns are by default singular, becoming plural through the use of suffixes. There are three main plural declension patterns: one for animate nouns, one for inanimate ones, and an anomalous class of former duals.
+
+  = section "Animate Declension" do
+    %p Most animate nouns form their plurals using the suffix -ŋ-, which immediately follows the noun stem and precedes any case endings. However, if the noun stem ends in /ŋ/ or /n/ (or in a cluster containing /ŋ/ or /n/), the suffix will change to -n-.
+    %p If the noun stem ends in a vowel or diphthong, using either of these suffixes poses no problem. However, if the stem ends in -a, -e, -o, or -ö, an additional -i- is inserted in between it and the plural ending to form a diphthong /ai ei oi øi/; if the former vowel is long, it is shortened first.
+    %ul
+      %li #{t "коса", "kosa"} ‘cat’ → #{t "косаиҥ", "kosaiŋ"} ‘cats’
+      %li #{t "һежди", "heždi"} ‘sable’ → #{t "һеждиҥ", "heždiŋ"} ‘sables’
+      %li #{t "меи", "mei"} ‘fruit’ → #{t "меиҥ", "meiŋ"} ‘fruits’
+    %p If the noun stem ends in a consonant, the stem is elongated with a final vowel; this form is known as the “full stem”. Unfortunately, the quality of this vowel is unpredictable, although the follow patterns apply:
+    %ul
+      %li The additional vowel is always short.
+      %li For native stems, it is usually a full vowel (i.e., not a schwa), though not always. For foreign stems newer than about 800 years old, it is usually a schwa.
+      %li If a full vowel, it always matches the harmony of the main root.
+    %p Examples:
+    %ul
+      %li #{t "коим", "koim"} ‘wife’ → #{t "коимоҥ", "koimoŋ"} ‘wives’
+      %li #{t "иуул", "iuul"} ‘friend’ → #{t "иууләҥ", "iuuləŋ"} ‘friends’
+      %li #{t "қаал", "qaal"} ‘grandson’ → #{t "қаалаҥ", "qaalaŋ"} ‘grandsons’
+    %p For native stems, these vowels are generally believed to have come from an original final vowel in Proto-Ob-Yeniseian which was later lost. The same is true of foreign stems that take a full vowel. Schwas are generally simply epenthetic consonants for stems that have always ended in a consonant.
+    %p Adding the plural ending to monosyllabic nouns of the form (C)VC (containing a short vowel) will often cause the vowel to lengthen, and sometimes to undergo ablaut as well: /i/ → /eː/, /e/ → /aː/, and /u/ → /oː/. Lengthening is common with all such nouns, no matter their age, while ablaut only occurs on native stems.
+    %ul
+      %li #{t "вал", "wal"} ‘son’ → #{t "ваалыҥ", "waalyŋ"} ‘sons’
+      %li #{t "қан", "qan"} ‘king’ → #{t "қаанән", "qaanən"} ‘kings’
+      %li #{t "һим", "him"} ‘nut’ → #{t "һеемүҥ", "heemüŋ"} ‘nuts’
+    %p Finally, two sorts of final consonants are prone to causing other irregularities: final velar stops /k g/ and final /s/.
+    %p Final /k g/ stems fall into two subclasses. Older native stems usually lose these consonants, and then add the plural suffix -ŋ- directly to this contracted stem. Newer stems instead geminate the velar consonant, add a short echo vowel matching the quality of the vowel in the syllable immediately preceding, and then add -ŋ.
+    %ul
+      %li #{t "хаак", "xaak"} ‘man’ → #{t "хааҥ", "xaaŋ"} ‘men’
+      %li #{t "квоск", "kwosk"} ‘pike (fish)’ → #{t "квосәҥ", "kwosəŋ"} ‘pikes’
+      %li #{t "хундук", "xunduk"} ‘hazelnut’ → #{t "хундуккуҥ", "xundukkuŋ"} ‘hazelnuts’
+    %p Native stems ending in /s/ similarly drop the /s/, and then add the plural ending directly to the contracted root. However, in such cases, the suffix is always -n, never -ŋ. Newer stems ending in /s/ behave regularly.
+    %ul
+      %li #{t "һаас", "haas"} ‘god’ → #{t "һаан", "haan"} ‘gods’
+      %li #{t "тыыс", "tyys"} ‘brother’ → #{t "тыын", "tyyn"} ‘brothers’
+      %li #{t "лаупс", "laups"} ‘fox’ → #{t "лаупсәҥ", "laupsəŋ"} ‘foxes’
+    %p CVCVC nouns are stable, never losing any vowels.
+    %p Stems ending in a cluster are more complex, with their realization frequently dependent on case endings. If the plural marker is followed by nothing or a suffix beginning with a consonant, the stem remains intact (i.e., CVCC-Vŋ-CV); if it is followed by a suffix beginning with a vowel, then a schwa is inserted into the cluster and the plural suffix vowel is lost (i.e., CVCC-Vŋ-V → CVCəC-ŋ-V). Indeterminate vowels are unfortunately completely unpredictable.
+    %ul
+      %li #{t "сент", "sent"} “heart (#{abbrev 'nom'})” → #{t "сентен", "senten"} “hearts (#{abbrev 'nom'})”
+      %li #{t "сенте", "sente"} “heart (#{abbrev 'obj'})” → #{t "сенәнне", "senənne"} “hearts (#{abbrev 'obj'})”
+      %li #{t "техәл", "texəl"} “otter (#{abbrev 'nom'})” → #{t "техлеҥ", "texleŋ"} “otters (#{abbrev 'nom'})”
+      %li #{t "техле", "texle"} “otter (#{abbrev 'obj'})” → #{t "техәлҥе", "texəlŋe"} “otters (#{abbrev 'obj'})”
+    %p Assimilation occurs between the plural suffix and all case endings as expected.
+    %p Note that the genitive has two forms, both of which actually fuse the plural and genitive morphemes into a single, inseparable unit. The “full genitive” is based on the suffix -ndÀ, realized as -Vnda or -Vnde, where V is the same fill vowel seen with the normal plural morpheme. Notice that also the normal genitive ending undergoes palatalization when in front vowel harmony environments (-da, -ze), the genitive plural morpheme does not. The “clipped genitive” is simply formed with the suffix -n, realized as -Vn regardless of harmony; these forms may look very similar to the nominative plural, and for some words may even merge with the nominative plural completely. The full genitive is used with postpositions, for emphasis, and for nominalized possessives, while the clipped genitive is used in normal possessive constructions.
+    %table.noundecl
+      %tr
+        %th
+        %th *meme<br>“mother”
+        %th *baba<br>“father”
+        %th *čib<br>“dog”
+        %th *sək<br>“finger”
+        %th *sent<br>“heart”
+        %th *kyys<br>“infant”
+        %th *xaak<br>“man”
+      %tr
+        %th Nominative
+        %td
+          мемеиҥ
+          %br
+          memeiŋ
+          %br
+          meme-iŋ-Ø
+          %br
+          = underlying("me{f}me{f+}-ŋ-Ø")
+        %td
+          бабаиҥ
+          %br
+          babaiŋ
+          %br
+          baba-iŋ-Ø
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-Ø")
+        %td
+          чеебәҥ
+          %br
+          čeebəŋ
+          %br
+          čeeb-əŋ-Ø
+          %br
+          = underlying("či{f+}b-ŋ-Ø")
+        %td
+          сикеҥ
+          %br
+          sikeŋ
+          %br
+          sik-eŋ-Ø
+          %br
+          = underlying("sə{f}k-ŋ-Ø")
+        %td
+          сентен
+          %br
+          senten
+          %br
+          sent-en-Ø
+          %br
+          = underlying("se{f+}nt-ŋ-Ø")
+        %td
+          кыын
+          %br
+          kyyn
+          %br
+          kyy-n-Ø
+          %br
+          = underlying("kyy{b+}s-ŋ-Ø")
+        %td
+          хааҥ
+          %br
+          xaaŋ
+          %br
+          xaa-ŋ-Ø
+          %br
+          = underlying("xaa{b+}k-ŋ-Ø")
+      %tr
+        %th Objective
+        %td
+          мемеиҥе
+          %br
+          memeiŋe
+          %br
+          meme-iŋ-e
+          %br
+          = underlying("me{f}me{f+}-ŋ-è{f+}")
+        %td
+          бабаиҥе
+          %br
+          babaiŋe
+          %br
+          baba-iŋ-e
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-è{f+}")
+        %td
+          чеебге
+          %br
+          čeebge
+          %br
+          čeeb-g-e
+          %br
+          = underlying("či{f+}b-ŋ-è{f+}")
+        %td
+          сикеҥе
+          %br
+          sikeŋe
+          %br
+          sik-eŋ-e
+          %br
+          = underlying("sə{f}k-ŋ-è{f+}")
+        %td
+          сенәнне
+          %br
+          senənne
+          %br
+          senən-n-e
+          %br
+          = underlying("se{f+}nt-ŋ-è{f+}")
+        %td
+          кыыне
+          %br
+          kyyne
+          %br
+          kyy-n-e
+          %br
+          = underlying("kyy{b+}s-ŋ-è{f+}")
+        %td
+          хааҥе
+          %br
+          xaaŋe
+          %br
+          xaa-ŋ-e
+          %br
+          = underlying("xaa{b+}k-ŋ-è{f+}")
+      %tr
+        %th Genitive<br>(Full)
+        %td
+          мемеинди
+          %br
+          memeindi
+          %br
+          meme-indi
+          %br
+          = underlying("me{f}me{f+}-ndÌ{f}")
+        %td
+          бабаинда
+          %br
+          babainda
+          %br
+          baba-inda
+          %br
+          = underlying("ba{b}ba{b+}-ndÀ{b}")
+        %td
+          чеебәнде
+          %br
+          čeebənde
+          %br
+          čeeb-ənde
+          %br
+          = underlying("či{f+}b-ndÀ{f}")
+        %td
+          сикенде
+          %br
+          sikende
+          %br
+          sik-ende
+          %br
+          = underlying("sə{f}k-ndÀ{f}")
+        %td
+          сентенде
+          %br
+          sentende
+          %br
+          sent-ende
+          %br
+          = underlying("se{f+}nt-ndÀ{f}")
+        %td
+          кыында
+          %br
+          kyynda
+          %br
+          kyy-nda
+          %br
+          = underlying("kyy{b+}s-ndÀ{b}")
+        %td
+          хаанда
+          %br
+          xaanda
+          %br
+          xaa-nda
+          %br
+          = underlying("xaa{b+}n-ndÀ{b}")
+      %tr
+        %th Genitive<br>(Clipped)
+        %td
+          мемеин
+          %br
+          memein
+          %br
+          meme-in
+          %br
+          = underlying("me{f}me{f+}-n")
+        %td
+          бабаин
+          %br
+          babain
+          %br
+          baba-in
+          %br
+          = underlying("ba{b}ba{b+}-n")
+        %td
+          чеебән
+          %br
+          čeebən
+          %br
+          čeeb-ən
+          %br
+          = underlying("či{f+}b-n")
+        %td
+          сикен
+          %br
+          siken
+          %br
+          sik-en
+          %br
+          = underlying("sə{f}k-n")
+        %td
+          сентен
+          %br
+          senten
+          %br
+          sent-en
+          %br
+          = underlying("se{f+}nt-n")
+        %td
+          кыын
+          %br
+          kyyn
+          %br
+          kyy-n
+          %br
+          = underlying("kyy{b+}s-n")
+        %td
+          хаан
+          %br
+          xaan
+          %br
+          xaa-n
+          %br
+          = underlying("xaa{b+}n-n")
+      %tr
+        %th Instrumental
+        %td
+          мемеиҥек
+          %br
+          memeiŋek
+          %br
+          meme-iŋ-ek
+          %br
+          = underlying("me{f}me{f+}-ŋ-À{f}k")
+        %td
+          бабаиҥак
+          %br
+          babaiŋak
+          %br
+          baba-iŋ-ak
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-À{b}k")
+        %td
+          чеебгес
+          %br
+          čeebges
+          %br
+          čeeb-g-es
+          %br
+          = underlying("či{f+}b-ŋ-À{f}s")
+        %td
+          сикенес
+          %br
+          sikenes
+          %br
+          sik-en-es
+          %br
+          = underlying("sə{f}k-ŋ-À{f}s")
+        %td
+          сенәннес
+          %br
+          senənnes
+          %br
+          senən-n-es
+          %br
+          = underlying("se{f+}nt-ŋ-À{f}s")
+        %td
+          кыынас
+          %br
+          kyynas
+          %br
+          kyy-n-as
+          %br
+          = underlying("kyy{b+}s-ŋ-À{b}s")
+        %td
+          хааҥас
+          %br
+          xaaŋas
+          %br
+          xaa-ŋ-as
+          %br
+          = underlying("xaa{b+}n-ŋ-À{b}s")
+      %tr
+        %th Locative
+        %td
+          мемеиҥил
+          %br
+          memeiŋil
+          %br
+          meme-iŋ-il
+          %br
+          = underlying("me{f}me{f+}-ŋ-Ì{f}l")
+        %td
+          бабаиҥыл
+          %br
+          babaiŋyl
+          %br
+          baba-iŋ-yl
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-Ì{b}l")
+        %td
+          чеебгил
+          %br
+          čeebgil
+          %br
+          čeeb-g-il
+          %br
+          = underlying("či{f+}b-ŋ-Ì{f}l")
+        %td
+          сикенил
+          %br
+          sikenil
+          %br
+          sik-en-il
+          %br
+          = underlying("sə{f}k-ŋ-Ì{f}l")
+        %td
+          сенәннил
+          %br
+          senənnil
+          %br
+          senən-n-il
+          %br
+          = underlying("se{f+}nt-ŋ-Ì{f}l")
+        %td
+          кыыныл
+          %br
+          kyynyl
+          %br
+          kyy-n-yl
+          %br
+          = underlying("kyy{b+}s-ŋ-Ì{b}l")
+        %td
+          хааҥыл
+          %br
+          xaaŋyl
+          %br
+          xaa-ŋ-yl
+          %br
+          = underlying("xaa{b+}n-ŋ-Ì{b}l")
+      %tr
+        %th Lative
+        %td
+          мемеиҥна
+          %br
+          memeiŋna
+          %br
+          meme-iŋ-na
+          %br
+          = underlying("me{f}me{f+}-ŋ-na{b+}")
+        %td
+          бабаиҥна
+          %br
+          babaiŋna
+          %br
+          baba-iŋ-na
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-na{b+}")
+        %td
+          чеебгона
+          %br
+          čeebgona
+          %br
+          čeeb-g-ona
+          %br
+          = underlying("či{f+}b-ŋ-na{b+}")
+        %td
+          сикеҥна
+          %br
+          sikeŋna
+          %br
+          sik-eŋ-na
+          %br
+          = underlying("sə{f}k-ŋ-na{b+}")
+        %td
+          сентенна
+          %br
+          sentenna
+          %br
+          sent-en-na
+          %br
+          = underlying("se{f+}nt-ŋ-na{b+}")
+        %td
+          кыынна
+          %br
+          kyynna
+          %br
+          kyy-n-na
+          %br
+          = underlying("kyy{b+}s-ŋ-na{b+}")
+        %td
+          хааҥна
+          %br
+          xaaŋna
+          %br
+          xaa-ŋ-na
+          %br
+          = underlying("xaa{b+}n-ŋ-na{b+}")
+      %tr
+        %th Translative
+        %td
+          мемеиҥем
+          %br
+          memeiŋem
+          %br
+          meme-iŋ-em
+          %br
+          = underlying("me{f}me{f+}-ŋ-e{f}m")
+        %td
+          бабаиҥем
+          %br
+          babaiŋem
+          %br
+          baba-iŋ-em
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-e{f}m")
+        %td
+          чеебгем
+          %br
+          čeebgem
+          %br
+          čeeb-g-em
+          %br
+          = underlying("či{f+}b-ŋ-e{f}m")
+        %td
+          сикеҥем
+          %br
+          sikeŋem
+          %br
+          sik-eŋ-em
+          %br
+          = underlying("sə{f}k-ŋ-e{f}m")
+        %td
+          сенәннем
+          %br
+          senənnem
+          %br
+          senən-n-em
+          %br
+          = underlying("se{f+}nt-ŋ-e{f}m")
+        %td
+          кыынем
+          %br
+          kyynem
+          %br
+          kyy-n-em
+          %br
+          = underlying("kyy{b+}s-ŋ-e{f}m")
+        %td
+          хааҥем
+          %br
+          xaaŋem
+          %br
+          xaa-ŋ-em
+          %br
+          = underlying("xaa{b+}n-ŋ-e{f}m")
+      %tr
+        %th Ablative
+        %td
+          мемеиҥҥац
+          %br
+          memeiŋŋats
+          %br
+          meme-iŋ-ŋats
+          %br
+          = underlying("me{f}me{f+}-ŋ-da{b+}ts")
+        %td
+          бабаиҥҥац
+          %br
+          babaiŋŋats
+          %br
+          baba-iŋ-ŋats
+          %br
+          = underlying("ba{b}ba{b+}-ŋ-da{b+}ts")
+        %td
+          чеебгац
+          %br
+          čeebgats
+          %br
+          čeeb-g-ats
+          %br
+          = underlying("či{f+}b-ŋ-da{b+}ts")
+        %td
+          сикеҥҥац
+          %br
+          sikeŋŋats
+          %br
+          sik-eŋ-ŋats
+          %br
+          = underlying("sə{f}k-ŋ-da{b+}ts")
+        %td
+          сентеннац
+          %br
+          sentennats
+          %br
+          sent-en-nats
+          %br
+          = underlying("se{f+}nt-ŋ-da{b+}ts")
+        %td
+          кыыннац
+          %br
+          kyynnats
+          %br
+          kyy-n-nats
+          %br
+          = underlying("kyy{b+}s-ŋ-da{b+}ts")
+        %td
+          хааҥҥац
+          %br
+          xaaŋŋats
+          %br
+          xaa-ŋ-ŋats
+          %br
+          = underlying("xaa{b+}n-ŋ-da{b+}ts")
+    %p Some of these forms can appear fairly irregular on the surface, although they can be regularly derived from their underlying structure.
+
+  = section "Inanimate Declension" do
+    = section "Regular Declension" do
+      %p Regular plurals in the inanimate declension work somewhat differently. There are three basic sets of suffixes, known as the n-class, t-class, and i-class. They appear after the stem and before any other suffix in the nominative, objective, genitive, instrumental, and locative cases, but immediately follow the case ending in the lative, translative, and ablative cases.
+      %p The n-class is the most common form. The basic ending is -n, which behaves much like the animate ending -ŋ. After stems ending in a consonant, it triggers the insertion of an epenthetic short vowel or schwa which is inherent to the stem, and cannot be predicted with complete accuracy. It has the variant form -ŋ (resembling the animate plural) that occurs after stem-final /n/. Unlike with the animate suffix -ŋ, adding the inanimate plural suffix will never trigger the diphthongization of final vowels, although it does trigger ablaut and lengthening in monosyllables. Reductions of stem-final /k g s/ also apply just as with animate nouns.
+      %ul
+        %li #{t "һеу", "heu"} ‘beetle’ → #{t "һеун", "heun"} ‘beetles’
+        %li #{t "һоот", "hoot"} ‘bone’ → #{t "һоотән", "hootən"} ‘bones’
+        %li #{t "лоок", "look"} ‘thorn’ → #{t "лоон", "loon"} ‘thorns’
+        %li #{t "пирог", "pirog"} ‘pie’ → #{t "пироггон", "piroggon"} ‘pies’
+        %li #{t "киис", "kiis"} ‘wolf’ → #{t "киин", "kiin"} ‘wolves’
+      %p The t- class has three variants: -aut-, -aüt-, and -ot-, none of which have normal harmony patterns. The suffix -aut- is the most common form, while -aüt- is a variant immediately after a syllable containing /i/, though not before other front vowels. The last suffix, -ot-, is used after a syllable containing a long vowel, or irregularly a diphthong. These endings are never used with vowel-final stems, and all three suffixes display strong back harmony (even -aüt-!). Such nouns never show loss of stem-final consonants.
+      %ul
+        %li #{t "һакс", "haks"} ‘food’ → #{t "һаксаут", "haksaut"} ‘food(stuffs)’
+        %li #{t "чиц", "čits"} ‘root’ → #{t "чицаүт", "čitsaüt"} ‘roots’
+        %li #{t "куор", "kuor"} ‘village’ → #{t "куорот", "kuorot"} ‘villages’
+        %li #{t "даук", "dauk"} ‘mould’ → #{t "даукот", "daukot"} ‘moulds’
+      %p The i-class endings are -II- (-ii, -yy) and -I- (-i, -y); the former is known as the “paradigmatic i-plural” and the latter as the “non-paradigmatic i-plural”. Historically, these are believed to be a reduced form of the n-class. Noun stems ending in a labial consonant use the paradigmatic i-plural in all cases except the lative, translative, and ablative.
+      %ul
+        %li #{t "лием", "liem"} ‘table’ → #{t "лиемии", "liemii"} ‘tables’
+        %li #{t "қам", "qam"} ‘arrow’ → #{t "қамыы", "qamyy"} ‘arrows’
+        %li #{t "каб", "kab"} ‘spine’ → #{t "кабыы", "kabyy"} ‘spines’
+      %p However, <em>all</em> nouns use the non-paradigmatic i-plural in the lative, translative, and ablative. Both of these endings can trigger palatalization of the preceding consonant if they contain a front vowel.
+      %p As usual, all CVCVC roots tend to lose their second vowel if it is short before a suffix beginning with a vowel.
+      %p While the i-class endings are predictable, the n-class and t-class endings are not. The t-class is believed to have originally been a collective marker, and so are more commonly seen on nouns denoting objects that tend to appear in groups or clusters, or as an exceptional plural marker used with mass nouns that are typically uncountable:
+      %ul
+        %li #{t "һок", "hok"} ‘tree’ → #{t "һокаут", "hokaut"} ‘trees’
+        %li #{t "шипс", "šips"} ‘hill’ → #{t "шипсаүт", "šipsaüt"} ‘hills’
+        %li #{t "чақәр", "čaqər"} ‘sugar’ → #{t "чақраут", "čaqraut"} ‘sugars’
+      %p Most other nouns take the n-class endings, including overwhelmingly more recent loans:
+      %ul
+        %li #{t "ҕвуу", "ǧwuu"} ‘house’ → #{t "ҕвуун", "ǧwuun"} ‘houses’
+        %li #{t "раадио", "raadio"} ‘radio’ → #{t "раадион", "raadion"} ‘radios’
+        %li #{t "скоола", "skoola"} ‘school’ → #{t "скоолан", "skoolan"} ‘schools’
+      %p Once the correct inherent plural suffix has been determined, however, there still exist some irregularities when cases are thrown into the mix. The plural suffixes behave somewhat irratically in the lative, translative, and ablative cases, and in certain situations the case endings behave strangely as well.
+
+    = section "Lat/Tra/Abl Plural Ending Irregularities" do
+      %p The inherent plural suffix (-n-, -t-, or paradigmatic -ii-/-yy-) is used as expected in all cases except the lative, translative, and ablative. In these three cases, a number of additional rules apply. The non-paradigmatic -I- plural is closely associated with these cases.
+      %p N-class nouns lose their normal -n- plural ending and add -i- or -y- immediately after the case ending (not the stem!). Therefore in the lative, translative, and ablative cases the proper ordering is case marker followed by number marker, while in all other cases the number marker comes first.
+      %ul
+        %li
+          #{t "һооте", "hoote"} ‘bone (#{abbrev 'obj'})’ → #{t "һоонне", "hoonne"} ‘bones (#{abbrev 'obj'})’
+          %br
+          (#{underlying "oo{b+}t-è{f+}"} → #{underlying "oo{b+}t-n-è{f+}"})
+        %li
+          #{t "һоолла", "hoolla"} ‘bone (#{abbrev 'lat'})’ → #{t "һооллаи", "hoollai"} ‘bones (#{abbrev 'lat'})’
+          %br
+          (#{underlying "oo{b+}t-la{b}"} → #{underlying "oo{b+}t-la{b}-I{b}"})
+        %li
+          #{t "һоотәҥ", "hootəŋ"} ‘bone (#{abbrev 'tra'})’ → #{t "һоотәҥы", "hootəŋy"} ‘bones (#{abbrev 'tra'})’
+          %br
+          (#{underlying "oo{b+}t-ŋ"} → #{underlying "oo{b+}t-ŋ-I{b}"})
+        %li
+          #{t "һоотич", "hootič"} ‘bone (#{abbrev 'abl'})’ → #{t "һоотичи", "hootiči"} ‘bones (#{abbrev 'abl'})’
+          %br
+          (#{underlying "oo{b+}t-či{f+}s"} → #{underlying "oo{b+}t-či{f+}s-I{f}"})
+      %p However, if the stem ends in a vowel, the -n- marker is kept in its original location <em>and</em> the -i-/-y- marker is added. These nouns are thus double-marked for plurality.
+      %ul
+        %li
+          #{t "хеес", "xees"} ‘night (#{abbrev 'obj'})’ → #{t "хеене", "xeene"} ‘nights (#{abbrev 'obj'})’
+          %br
+          (#{underlying "xee{f+}-s"} → #{underlying "xee{f+}-n-è{f+}"})
+        %li
+          #{t "хееле", "xeele"} ‘night (#{abbrev 'lat'})’ → #{t "хееллеи", "xeellei"} ‘nights (#{abbrev 'lat'})’
+          %br
+          (#{underlying "xee{f+}-lA{f}"} → #{underlying "xee{f+}-n-lA{f}-I{f}"})
+        %li
+          #{t "хееҥ", "xeeŋ"} ‘night (#{abbrev 'tra'})’ → #{t "хеенәҥи", "xeenəŋi"} ‘nights (#{abbrev 'tra'})’
+          %br
+          (#{underlying "xee{f+}-ŋ"} → #{underlying "xee{f+}-n-ŋ-I{f}"})
+        %li
+          #{t "хеич", "xeič"} ‘night (#{abbrev 'abl'})’ → #{t "хееничи", "xeeniči"} ‘nights (#{abbrev 'abl'})’
+          %br
+          (#{underlying "xee{f+}-či{f+}s"} → #{underlying "xee{f+}-n-či{f+}s-I{f}"})
+      %p T-class nouns always keep the -t- suffix in addition to using the non-paradigmatic i-class ending. However, if the -t- suffix contains a diphthong, it will simplify: -aut- → -ot-, -aüt- → -öt-.
+      %ul
+        %li
+          #{t "чице", "čitse"} ‘root (#{abbrev 'obj'})’ → #{t "чицаүте", "čitsaüte"} ‘roots (#{abbrev 'obj'})’
+          %br
+          (#{underlying "či{f+}ts-è{f+}"} → #{underlying "či{f+}ts-aU{f→b+}t-è{f+}"})
+        %li
+          #{t "чицле", "čitsle"} ‘root (#{abbrev 'lat'})’ → #{t "чицөллаи", "čitsöllai"} ‘roots (#{abbrev 'lat'})’
+          %br
+          (#{underlying "či{f+}ts-è{f+}"} → #{underlying "či{f+}ts-O{f→b+}t-lA{b}-I{b}"})
+        %li
+          #{t "чицәҥ", "čitsəŋ"} ‘root (#{abbrev 'tra'})’ → #{t "чицӧтәҥы", "čitsötəŋy"} ‘roots (#{abbrev 'tra'})’
+          %br
+          (#{underlying "či{f+}ts-ŋ"} → #{underlying "či{f+}ts-O{f→b+}t-ŋ-I{b}"})
+        %li
+          #{t "чициис", "čitsiis"} ‘root (#{abbrev 'abl'})’ → #{t "чицӧтииши", "čitsötiiši"} ‘roots (#{abbrev 'abl'})’
+          %br
+          (#{underlying "či{f+}ts-či{f+}s"} → #{underlying "či{f+}ts-O{f→b+}-či{f+}s-I{f}"})
+      %p I-class nouns that use a paradigmatic suffix lose it, and use the non-paradigmatic forms instead.
+      %ul
+        %li
+          #{t "қаме", "qame"} ‘arrow (#{abbrev 'obj'})’ → #{t "қамыы", "qamyy"} ‘arrows (#{abbrev 'obj'})’
+          %br
+          (#{underlying "qa{b+}m-è{f+}"} → #{underlying "qa{b+}m-II{b}-è{0}"})
+        %li
+          #{t "қабла", "qabla"} ‘arrow (#{abbrev 'lat'})’ → #{t "қаблаи", "qablai"} ‘arrows (#{abbrev 'lat'})’
+          %br
+          (#{underlying "qa{b+}m-lA{b}"} → #{underlying "qa{b+}m-lA{b}-I{b}"})
+        %li
+          #{t "қамәҥ", "qaməŋ"} ‘arrow (#{abbrev 'tra'})’ → #{t "қамәҥы", "qaməŋy"} ‘arrows (#{abbrev 'tra'})’
+          %br
+          (#{underlying "qa{b+}m-ŋ"} → #{underlying "qa{b+}m-ŋ-I{b}"})
+        %li
+          #{t "қамиис", "qamiis"} ‘arrow (#{abbrev 'abl'})’ → #{t "қамииши", "qamiiši"} ‘arrows (#{abbrev 'abl'})’
+          %br
+          (#{underlying "qa{b+}m-či{f+}s"} → #{underlying "qa{b+}m-či{f+}s-I{f}"})
+
+    = section "Case Ending Irregularities" do
+      %p When a plural suffix is present, the case-marking morphemes are for the most part identical to the ones used for singular nouns. However, there are a few exceptions.
+      %p The expected objective ending for i-case plurals is **-s, giving a combined ending of **-ii-s/-yy-s. However, it is actually -Ø, meaning that the nominative plural and objective plural are identical. Note the following examples, instead of expected <i>**liemiis</i>, <i>**qamyys</i>, <i>**kabyys</i>.
+      %ul
+        %li
+          #{t "лиеме", "lieme"} ‘table (#{underlying "#{abbrev 'obj'})’"} → #{underlying "#{t "лиемии", "liemii"} ‘tables (#{abbrev 'obj'}"})’
+          %br
+          (#{underlying "lie{f+}m-è{f+}"} → #{underlying "lie{f+}m-II{f}-Ø"})
+        %li
+          #{t "қаме", "qame"} ‘arrow (#{underlying "#{abbrev 'obj'})’"} → #{underlying "#{t "қамыы", "qamyy"} ‘arrows (#{abbrev 'obj'}"})’
+          %br
+          (#{underlying "qa{b+}m-è{f+}"} → #{underlying "qa{b+}m-II{b}-Ø"})
+        %li
+          #{t "кабе", "kabe"} ‘spine (#{underlying "#{abbrev 'obj'})’"} → #{underlying "#{t "кабыы", "kabyy"} ‘spines (#{abbrev 'obj'}"})’
+          %br
+          (#{underlying "ka{b+}b-è{f+}"} → #{underlying "ka{b+}b-II{b}-Ø"})
+      %p The plural ending and case ending merge in the  genitive plural as *-ndÌ-. In the n-class plurals, this is not especially apparent. This ending has spread analogically to t- and i-class nouns, leading to what appears to be a double marking of plurality.
+      %ul
+        %li
+          #{t "саалчәд", "saalčəd"} ‘sea (#{underlying "#{abbrev 'gen'})’"} → #{underlying "#{t "саалчынды", "saalčyndy"} ‘seas (#{abbrev 'gen'}"})’
+          %br
+          (#{underlying "saa{b+}lč-dI{b→0}"} → #{underlying "saa{b+}lč-ndÌ{b}"})
+        %li
+          #{t "чиѕи", "čidzi"} ‘root (#{underlying "#{abbrev 'gen'})’"} → #{underlying "#{t "чицаүтәнды", "čitsaütəndy"} ‘roots (#{abbrev 'gen'}"})’
+          %br
+          (#{underlying "či{f+}ts-dI{f}"} → #{underlying "či{f+}ts-aU{f→b+}t-ndÌ{b}"})
+        %li
+          #{t "қанды", "qandy"} ‘arrow (#{underlying "#{abbrev 'gen'})’"} → #{underlying "#{t "қамыынды", "qamyyndy"} ‘arrows (#{abbrev 'gen'}"})’
+          %br
+          (#{underlying "qa{b+}m-dI{b}"} → #{underlying "qa{b+}m-II{b}-ndÌ{b}"})
+      %p If the epenthetic vowel of an n-class noun is non-schwa, it stays in the lative and translative cases, even though the actual plural marker -n- disappears. This is also true of the ablative, except in this case the -n- remains (see next comment). For instance, the epenthetic vowel of #{t "саалч", "saalč"} ‘sea’ is -y-, seen in the nominative plural #{t "саалчын", "saalčyn"}.
+      %ul
+        %li
+          #{t "саалче", "saalče"} ‘sea (#{underlying "#{abbrev 'obj'})’"} → #{underlying "#{t "саалчыне", "saalčyne"} ‘seas (#{abbrev 'obj'}"})’
+          %br
+          (#{underlying "saa{b+}lč-è{f+}"} → #{underlying "saa{b+}lč-n-è{f+}"})
+        %li
+          #{t "саалчола", "saalčola"} ‘sea (#{underlying "#{abbrev 'lat'})’"} → #{underlying "#{t "саалчылаи", "saalčylai"} ‘seas (#{abbrev 'lat'}"})’
+          %br
+          (#{underlying "saa{b+}lč-o{b+}la{b}"} → #{underlying "saa{b+}lč-la{b}-I{b}"})
+        %li
+          #{t "саалчәҥ", "saalčəŋ"} ‘sea (#{underlying "#{abbrev 'tra'})’"} → #{underlying "#{t "саалчыҥы", "saalčyŋy"} ‘seas (#{abbrev 'tra'}"})’
+          %br
+          (#{underlying "saa{b+}lč-ŋ"} → #{underlying "saa{b+}lč-ŋ-I{b}"})
+        %li
+          #{t "саалчич", "saalčič"} ‘sea (#{underlying "#{abbrev 'abl'})’"} → #{underlying "#{t "саалчынииши", "saalčyniiši"} ‘seas (#{abbrev 'abl'}"})’
+          %br
+          (#{underlying "saa{b+}lč-či{f+}s"} → #{underlying "saa{b+}lč-n-či{f+}s-I{f}"})
+      %p The ablative case marker has three possible surface realizations in the singular: -čis, -iis, and -ič. In the plural, however, there are only two: -ič-i (with gemination of the preceding consonant if not in a cluster) and -iiš-i (with no gemination); the former is used whenever the previous syllable contains a long vowel or diphthong, and the latter when it contains a short vowel:
+      %ul
+        %li
+          #{t "һоотич", "hootič"} ‘bone (#{underlying "#{abbrev 'abl'})’"} → #{underlying "#{t "һоотичи", "hootiči"} ‘bones (#{abbrev 'abl'}"})’
+          %br
+          (#{underlying "oo{b+}t-či{f+}s"} → #{underlying "oo{b+}t-či{f+}s-I{f}"})
+        %li
+          #{t "қамиис", "qamiis"} ‘arrow (#{underlying "#{abbrev 'abl'})’"} → #{underlying "#{t "қамииши", "qamiiši"} ‘arrows (#{abbrev 'abl'}"})’
+          %br
+          (#{underlying "qa{b+}m-či{f+}s"} → #{underlying "qa{b+}m-či{f+}s-I{f}"})
+      %p However, n-class nouns will reinsert the plural ending -n- if the stem ends in a vowel, before the ablative ending (including when the epenthetic stem-extending vowel is present, as mentioned in the previous note). This -n- will never undergo gemination.
+      %ul
+        %li
+          #{t "хеич", "xeič"} ‘night (#{underlying "#{abbrev 'abl'})’"} → #{underlying "#{t "хееничи", "xeeniči"} ‘nights (#{abbrev 'abl'}"})’
+          %br
+          (#{underlying "xee{f+}-či{f+}s"} → #{underlying "xee{f+}-n-či{f+}s-I{f}"})
+        %li
+          #{t "саалчич", "saalčič"} ‘sea (#{underlying "#{abbrev 'abl'})’"} → #{underlying "#{t "саалчынииши", "saalčyniiši"} ‘seas (#{abbrev 'abl'}"})’
+          %br
+          (#{underlying "saa{b+}lč-či{f+}s"} → #{underlying "saa{b+}lč-n-či{f+}s-I{f}"})
+      %p Finally, n-class nouns with final /k g s/ (which drop before the plural ending) keep the -n- in the lative, translative, and ablative, the result of paradigmatic levelling{2}.
+      %ul
+        %li #{t "лоок", "look"} ‘thorn’ → #{t "лоон", "loon"} ‘thorns’
+        %li #{t "лоокәҥ", "lookəŋ"} ‘thorn (#{underlying "#{abbrev 'tra'})’"} → #{underlying "#{t "лоонәҥы", "loonəŋy"} ‘thorns (#{abbrev 'tra'}"})’
+        %li #{t "киис", "kiis"} ‘wolf’ → #{t "киин", "kiin"} ‘wolves’
+        %li #{t "киисәҥ", "kiisəŋ"} ‘wolf (#{underlying "#{abbrev 'tra'})’"} → #{underlying "#{t "киинәҥи", "kiinəŋi"} ‘wolves (#{abbrev 'tra'}"})’
+      %table.noundecl
+        %tr
+          %th
+          %th *xee<br>“night”
+          %th *huun<br>“morning”
+          %th *čieǧl<br>“sled”
+          %th *laad<br>“city”
+          %th *hok<br>“tree”
+          %th *liem<br>“table”
+          %th *nes<br>“evening”
+        %tr
+          %th Nominative
+          %td
+            хеен
+            %br
+            %i xeen
+            %br
+            %i xee-n-Ø
+            %br
+            = underlying("xee{f+}-n-Ø")
+          %td
+            һуунәҥ
+            %br
+            %i huunəŋ
+            %br
+            %i huun-əŋ-Ø
+            %br
+            = underlying("huu{b+}n-n-Ø")
+          %td
+            чиеҕлен
+            %br
+            %i čieǧlen
+            %br
+            %i čieǧl-en-Ø
+            %br
+            = underlying("čie{f+}ǧl-n-Ø")
+          %td
+            лаадан
+            %br
+            %i laadan
+            %br
+            %i laad-an-Ø
+            %br
+            = underlying("laa{b+}d-n-Ø")
+          %td
+            һокаут
+            %br
+            %i hokaut
+            %br
+            %i hok-aut-Ø
+            %br
+            = underlying("o{b+}k-aU{b+}t-Ø")
+          %td
+            лиемии
+            %br
+            %i liemii
+            %br
+            %i liem-ii-Ø
+            %br
+            = underlying("lie{f+}m-II{f}-Ø")
+          %td
+            нен
+            %br
+            %i nen
+            %br
+            %i ne-n-Ø
+            %br
+            = underlying("ne{f+}s-n-Ø")
+        %tr
+          %th Objective
+          %td
+            хеене
+            %br
+            %i xeene
+            %br
+            %i xee-n-e
+            %br
+            = underlying("xee{f+}-n-è{f+}")
+          %td
+            һууҥҥе
+            %br
+            %i huuŋŋe
+            %br
+            %i huuŋ-ŋ-e
+            %br
+            = underlying("huu{b+}n-n-è{f+}")
+          %td
+            чиеҕлене
+            %br
+            %i čieǧlene
+            %br
+            %i čieǧl-en-e
+            %br
+            = underlying("čie{f+}ǧl-n-è{f+}")
+          %td
+            лаадане
+            %br
+            %i laadane
+            %br
+            %i laad-an-e
+            %br
+            = underlying("laa{b+}d-n-è{f+}")
+          %td
+            һокауте
+            %br
+            %i hokaute
+            %br
+            %i hok-aut-e
+            %br
+            = underlying("o{b+}k-aU{b+}t-è{f+}")
+          %td
+            лиемии
+            %br
+            %i liemii
+            %br
+            %i liem-ii-Ø
+            %br
+            = underlying("lie{f+}m-II{f}-è{0}")
+          %td
+            нене
+            %br
+            %i nene
+            %br
+            %i ne-n-e
+            %br
+            = underlying("ne{f+}s-n-è{f+}")
+        %tr
+          %th Genitive<br>(Full)
+          %td
+            хеенди
+            %br
+            %i xeendi
+            %br
+            %i xee-ndi
+            %br
+            = underlying("xee{f+}-ndÌ{f}")
+          %td
+            һуунәнды
+            %br
+            %i huunəndy
+            %br
+            %i huun-əndy
+            %br
+            = underlying("huu{b+}n-ndÌ{b}")
+          %td
+            чиеҕленды
+            %br
+            %i čieǧlendy
+            %br
+            %i čieǧl-endy
+            %br
+            = underlying("čie{f+}ǧl-ndÌ{b}")
+          %td
+            лааданды
+            %br
+            %i laadandy
+            %br
+            %i laad-andy
+            %br
+            = underlying("laa{b+}d-ndÌ{b}")
+          %td
+            һокаутәнды
+            %br
+            %i hokautəndy
+            %br
+            %i hok-aut-əndy
+            %br
+            = underlying("o{b+}k-aU{b+}t-ndÌ{b}")
+          %td
+            лиемиинди
+            %br
+            %i liemiindi
+            %br
+            %i liem-ii-ndi
+            %br
+            = underlying("lie{f+}m-II{f}-ndÌ{f}")
+          %td
+            ненди
+            %br
+            %i nendi
+            %br
+            %i ne-ndi
+            %br
+            = underlying("ne{f+}s-ndÌ{f}")
+        %tr
+          %th Genitive<br>(Clipped)
+          %td
+            хеен
+            %br
+            %i xeen
+            %br
+            %i xee-n
+            %br
+            = underlying("xee{f+}-n")
+          %td
+            һуунән
+            %br
+            %i huunən
+            %br
+            %i huun-ən
+            %br
+            = underlying("huu{b+}n-n")
+          %td
+            чиеҕлен
+            %br
+            %i čieǧlen
+            %br
+            %i čieǧl-en
+            %br
+            = underlying("čie{f+}ǧl-n")
+          %td
+            лаадан
+            %br
+            %i laadan
+            %br
+            %i laad-an
+            %br
+            = underlying("laa{b+}d-n")
+          %td
+            һокаутән
+            %br
+            %i hokautən
+            %br
+            %i hok-aut-ən
+            %br
+            = underlying("o{b+}k-aU{b+}t-n")
+          %td
+            лиемиин
+            %br
+            %i liemiin
+            %br
+            %i liem-ii-n
+            %br
+            = underlying("lie{f+}m-II{f}-n")
+          %td
+            нен
+            %br
+            %i nen
+            %br
+            %i ne-n
+            %br
+            = underlying("ne{f+}s-n")
+        %tr
+          %th Instrumental
+          %td
+            хеенес
+            %br
+            %i xeenes
+            %br
+            %i xee-n-es
+            %br
+            = underlying("xee{f+}-n-À{f}s")
+          %td
+            һууҥҥас
+            %br
+            %i huuŋŋas
+            %br
+            %i huuŋ-ŋ-as
+            %br
+            = underlying("huu{b+}n-n-À{b}s")
+          %td
+            чиеҕленес
+            %br
+            %i čieǧlenes
+            %br
+            %i čieǧl-en-es
+            %br
+            = underlying("čie{f+}ǧl-n-À{f}s")
+          %td
+            лааданас
+            %br
+            %i laadanas
+            %br
+            %i laad-an-as
+            %br
+            = underlying("laa{b+}d-n-À{b}s")
+          %td
+            һокаутас
+            %br
+            %i hokautas
+            %br
+            %i hok-aut-as
+            %br
+            = underlying("o{b+}k-aU{b+}t-À{b}s")
+          %td
+            лиемиилес
+            %br
+            %i liemiiles
+            %br
+            %i liem-ii-les
+            %br
+            = underlying("lie{f+}m-II{f}-À{f}s")
+          %td
+            ненес
+            %br
+            %i nenes
+            %br
+            %i ne-n-es
+            %br
+            = underlying("ne{f+}s-n-À{f}s")
+        %tr
+          %th Locative
+          %td
+            хеенил
+            %br
+            %i xeenil
+            %br
+            %i xee-n-il
+            %br
+            = underlying("xee{f+}-n-Ì{f}l")
+          %td
+            һууҥҥыл
+            %br
+            %i huuŋŋyl
+            %br
+            %i huuŋ-ŋ-yl
+            %br
+            = underlying("huu{b+}n-n-Ì{b}l")
+          %td
+            чиеҕленил
+            %br
+            %i čieǧlenil
+            %br
+            %i čieǧl-en-il
+            %br
+            = underlying("čie{f+}ǧl-n-Ì{f}l")
+          %td
+            лааданыл
+            %br
+            %i laadanyl
+            %br
+            %i laad-an-yl
+            %br
+            = underlying("laa{b+}d-n-Ì{b}l")
+          %td
+            һокаутыл
+            %br
+            %i hokautyl
+            %br
+            %i hok-aut-yl
+            %br
+            = underlying("o{b+}k-aU{b+}t-Ì{b}l")
+          %td
+            лиемиил
+            %br
+            %i liemiil
+            %br
+            %i liem-ii-l
+            %br
+            = underlying("lie{f+}m-II{f}-Ì{f}l")
+          %td
+            ненил
+            %br
+            %i nenil
+            %br
+            %i ne-n-il
+            %br
+            = underlying("ne{f+}s-n-Ì{f}l")
+        %tr
+          %th Lative
+          %td
+            хеелеи
+            %br
+            %i xeelei
+            %br
+            %i xee-le-i
+            %br
+            = underlying("xee{f+}-lA{f}-I{f}")
+          %td
+            һууллаи
+            %br
+            %i huullai
+            %br
+            %i huul-la-i
+            %br
+            = underlying("huu{b+}n-lA{b}-I{b}")
+          %td
+            чиеҕлелеи
+            %br
+            %i čieǧlelei
+            %br
+            %i čieǧl-e-le-i
+            %br
+            = underlying("čie{f+}ǧl-V-lA{f}-I{f}")
+          %td
+            лаадалаи
+            %br
+            %i laadalai
+            %br
+            %i laad-a-la-i
+            %br
+            = underlying("laa{b+}d-V-lA{b}-I{b}")
+          %td
+            һоколлаи
+            %br
+            %i hokollai
+            %br
+            %i hok-ol-la-i
+            %br
+            = underlying("o{b+}k-O{b+}t-lA{b}-I{b}")
+          %td
+            лиеблеи
+            %br
+            %i lieblei
+            %br
+            %i lieb-le-i
+            %br
+            = underlying("lie{f+}m-lA{f}-I{f}")
+          %td
+            неллеи
+            %br
+            %i nellei
+            %br
+            %i ne-l-le-i
+            %br
+            = underlying("ne{f+}s-n-lA{f}-I{f}")
+        %tr
+          %th Translative
+          %td
+            хееҥи
+            %br
+            %i xeeŋi
+            %br
+            %i xee-ŋ-i
+            %br
+            = underlying("xee{f+}-ŋ-I{f}")
+          %td
+            һуунәҥы
+            %br
+            %i huunəŋy
+            %br
+            %i huun-əŋ-y
+            %br
+            = underlying("huu{b+}n-ŋ-I{b}")
+          %td
+            чиеҕлеҥи
+            %br
+            %i čieǧleŋi
+            %br
+            %i čieǧl-e-ŋ-i
+            %br
+            = underlying("čie{f+}ǧl-V-ŋ-I{f}")
+          %td
+            лаадаҥы
+            %br
+            %i laadaŋy
+            %br
+            %i laad-a-ŋ-y
+            %br
+            = underlying("laa{b+}d-V-ŋ-I{b}")
+          %td
+            һокотәҥы
+            %br
+            %i hokotəŋy
+            %br
+            %i hok-ot-əŋ-y
+            %br
+            = underlying("o{b+}k-O{b+}t-ŋ-I{b}")
+          %td
+            лиемәҥи
+            %br
+            %i lieməŋi
+            %br
+            %i liem-əŋ-i
+            %br
+            = underlying("lie{f+}m-ŋ-I{f}")
+          %td
+            ненәҥи
+            %br
+            %i nenəŋi
+            %br
+            %i ne-n-əŋ-i
+            %br
+            = underlying("ne{f+}s-n-ŋ-I{f}")
+        %tr
+          %th Ablative
+          %td
+            хееничи
+            %br
+            %i xeeniči
+            %br
+            %i xee-n-ič-i
+            %br
+            = underlying("xee{f+}-n-či{f+}s-I{f}")
+          %td
+            һуунничи
+            %br
+            %i huunniči
+            %br
+            %i huun-nič-i
+            %br
+            = underlying("huu{b+}n-či{f+}s-I{f}")
+          %td
+            чиеҕленииши
+            %br
+            %i čieǧleniiši
+            %br
+            %i čieǧl-en-iiš-i
+            %br
+            = underlying("čie{f+}ǧl-n-či{f+}s-I{f}")
+          %td
+            лааданииши
+            %br
+            %i laadaniiši
+            %br
+            %i laad-an-iiš-i
+            %br
+            = underlying("laa{b+}d-n-či{f+}s-I{f}")
+          %td
+            һокотииши
+            %br
+            %i hokotiiši
+            %br
+            %i hok-ot-iiš-i
+            %br
+            = underlying("o{b+}k-O{b+}t-či{f+}s-I{f}")
+          %td
+            лиеммичи
+            %br
+            %i liemmiči
+            %br
+            %i liem-mič-i
+            %br
+            = underlying("lie{f+}m-či{f+}s-I{f}")
+          %td
+            ненииши
+            %br
+            %i neniiši
+            %br
+            %i ne-n-iiš-i
+            %br
+            = underlying("ne{f+}s-n-či{f+}s-I{f}")
+
+  = section "Dual Declension" do
+    %p While the modern language marks only singular and plural, Očets once had a productive dual as well. Since written records are scarce, it is hard to tell when it fell out of use. For most nouns the plural replaced the dual, but for a small set of so-called “natural duals” (objects that usually come in pairs), the dual ending instead took over the plural. These “natural duals” therefore form their plurals using the suffix #{underlying "*-ǧIIn-"} (-ǧiin/-ǧyyn), or #{underlying "*-ǧIn-"} (-ǧin/-ǧyn) after stems containing a long vowel in the final syllable. Whether animate or inanimate, this plural marker always follows the noun stem and precedes any case endings; regular case endings may then be added. Sometime after losing its original function, the dual ending spread to a small set of other nouns as well for unclear reasons; this is especially true of some parts of the body, a semantic domain that already has a large number of natural duals. Examples of nouns that use this suffix are *ǧəl “hand” (animate), *on “ear” (animate), *čies “boot” (inanimate), *kən “shoulder” (inanimate), and *iis “tooth” (inanimate); this last one is an example of a noun that takes the dual ending despite not actually being dual in nature.
+    %p Duals in #{underlying "*-ǧIIn-"} behave much like t-class plurals, with the ending preserved in all cases, and augmented with a non-paradigmatic i-class suffix in the lative, translative, and ablative. The suffix is shortened to #{underlying "*-ǧIn-"} in these three cases as well. Animate duals decline using <em>inanimate</em> endings, with one exception: the full genitive ending is the animate #{underlying "*-ndÀ"}, not the inanimate #{underlying "*-ndÌ"}.
+    - forms = { :nom => { :cyr => "ҕилҕиин", :lat => "ǧilǧiin" },
+                :obj => { :cyr => "ҕилҕиине", :lat => "ǧilǧiine" },
+                :gen => { :cyr => "ҕилҕиинән(де)", :lat => "ǧilǧiinən(de)" },
+                :ins => { :cyr => "ҕилҕиинес", :lat => "ǧilǧiines" },
+                :loc => { :cyr => "ҕилҕиинил", :lat => "ǧilǧiinil" },
+                :lat => { :cyr => "ҕилгиллеи", :lat => "ǧilǧillei" },
+                :tra => { :cyr => "ҕилҕинәҥи", :lat => "ǧilǧinəŋi" },
+                :abl => { :cyr => "ҕилҕинииши", :lat => "ǧilǧiniiši" } }
+    = render 'case_chart', :title => "*ǧəl “hand” (#{abbrev 'anim'})", :forms => forms
+    - forms = { :nom => { :cyr => "һиизҕин", :lat => "hiizǧin" },
+                :obj => { :cyr => "һиизҕине", :lat => "hiizǧine" },
+                :gen => { :cyr => "һиизҕинән(де)", :lat => "hiizǧinən(de)" },
+                :ins => { :cyr => "һиизҕинес", :lat => "hiizǧines" },
+                :loc => { :cyr => "һиизҕинил", :lat => "hiizǧinil" },
+                :lat => { :cyr => "һиизҕиллеи", :lat => "hiizǧillei" },
+                :tra => { :cyr => "һиизҕинәҥи", :lat => "hiizǧinəŋi" },
+                :abl => { :cyr => "һиизҕинииши", :lat => "hiizǧiniiši" } }
+    = render 'case_chart', :title => "*iis “tooth” (#{abbrev 'inan'})", :forms => forms
+
+  = section "Collective Plurals" do
+    %p In addition to the above suffixial derivation, there also exists an additional type of plural, commonly termed “irregular plurals” or, perhaps more descriptively, “collective plurals”. These collectives are morphologically singular but semantically plural; as a result syntactically they behave rather strangely. However, they should nevertheless be considered true plurals, as the singular/singulative forms they are tied to have no other plural form with the same semantics.
+    %p There are two subtypes of collective plurals. One is formed by partial reduplication (probably originally true reduplication that has been worn down over time), and the other consists of true suppletive forms. Due to the age of both of these types, none of them can be predicted.
+    %p Collective plurals formed through reduplication can be both animate and inanimate, although they never refer to humans. Most often they refer to small animals, plants, and objects, as well as certain natural phenomena. Examples include:
+    %ul
+      %li #{t "бөш", "böš"} “fly (insect)” → #{t "бөжәш", "böžəš"}
+      %li #{t "қанц", "qants"} “ant” → #{t "қаҥкант", "qaŋkant"}
+      %li #{t "һеемис", "heemis"} “raspberry” → #{t "һеемжис", "heemžis"}
+      %li #{t "шыынд", "šyynd"} “wheat” → #{t "шыыџынд", "šyyǰynd"}
+      %li #{t "неи", "nei"} “wind” → #{t "неин", "nein"}
+      %li #{t "кова", "kowa"} “star” → #{t "квоока", "kwooka"}
+    %p True suppletives are, naturally, completely unpredictable, and the plural may bear no resemblance to the singular at all. This class is small, but contains some very common words:
+    %ul
+      %li #{t "чаит", "čait"} “person” → #{t "ден", "den"} “people”<sup>3</sup>
+      %li #{t "пач", "pač"} “child” → #{t "џаад", "ǰaad"} “children” (Novegradian дѣдете)
+      %li #{t "дах", "dax"} “country, land” → #{t "ҕан", "ǧan"} “countries”<sup>4</sup>
+    %p Such collective plurals decline as regular animate or inanimate singular nouns. Their declension contains no obvious plural marker.
+    - forms = { :nom => { :cyr => "ден", :lat => "den" },
+                :obj => { :cyr => "дене", :lat => "dene" },
+                :gen => { :cyr => "денда", :lat => "denda" },
+                :ins => { :cyr => "денак", :lat => "denak" },
+                :loc => { :cyr => "деныл", :lat => "denyl" },
+                :lat => { :cyr => "денна", :lat => "denna" },
+                :tra => { :cyr => "денем", :lat => "denem" },
+                :abl => { :cyr => "деннац", :lat => "dennats" } }
+    = render 'case_chart', :title => "*dèn “people” (#{abbrev 'anim'})", :forms => forms
+    - forms = { :nom => { :cyr => "квоока", :lat => "kwooka" },
+                :obj => { :cyr => "квоокас", :lat => "kwookas" },
+                :gen => { :cyr => "квоокады", :lat => "kwookady" },
+                :ins => { :cyr => "квоокаас", :lat => "kwookaas" },
+                :loc => { :cyr => "квоокал", :lat => "kwookal" },
+                :lat => { :cyr => "квоокала", :lat => "kwookala" },
+                :tra => { :cyr => "квоокаҥ", :lat => "kwookaŋ" },
+                :abl => { :cyr => "квоокачис", :lat => "kwookačis" } }
+    = render 'case_chart', :title => "*kwooka “stars (#{abbrev 'inan'})", :forms => forms
+    %p Many speakers will occasionally, albeit irregularly, insert an explicit plural marker into these words so that they have a more normal plural declension. The irregular plural root, however, remains, so that the plural of <i>kowa</i> “star” may be either <i>kwooka</i> (with a singular declension) or <i>kwookan</i> (with a plural declension), but never <i>**kowan</i>. There appears to be a very slight difference in meaning between these two forms, with the explicit plural stressing the existence of multiple individuals, while the unmarked form emphasizes the whole as a mass. The distinction, however, is quite subtle, such that speakers themselves might vary in their usage.
+
+  = section "Indirective Ending" do
+    %p The “indirective” is a suffix, #{underlying "*-A-"}, which can appear on nouns in any case after all case and number markers. It has no meaning in and of itself, but is required in certain forms of nouns when filling various semantic roles. With indefinite nouns, the indirective may only appear on plural nouns that are unbound and not core verbal arguments; that is, anything other than the subject or object of a verb as determined by verbal agreement, and excluding unmarked (nominative-case) genitival modifiers and objects of postpositional phrases. The one exception is the verb 'to be', which allows both its subject and complement to take the indirective ending. Marked (genitive-case) genitival modifiers may freely appear with or without the indirective.
+    %p As a result, some cases, such as the lative and instrumental, are more often seen with the indirective suffix than not, while others, such as the objective, are very rarely seen with it, at least with indefinite nouns.
+    %p The indirective #{underlying "*-A-"} is realized regularly as -a in back vowel environments and -e in front vowel environments. This -e will trigger palatalization of the preceding consonant if possible, which can have secondary effects if in a consonant cluster. If the indirective suffix immediately follows /e/ or /a/, they will merge into a single long vowel. A short /i/ or /ɨ/ immediately before the indirective will drop. After a falling diphthong ending in /i/ or /u/, the suffix is added regularly. In all other cases, the indirective has zero surface realization.
+    %p The genitive with an indirective ending will always be full, never “clipped”, and will always be based on the ending #{underlying "*-dA"}, even if the non-indirective noun uses #{underlying "*-dI"}.
+    - forms = { :nom => { :cyr => "мемеиҥе", :lat => "memeiŋe" },
+                :obj => { :cyr => "мемеиҥее", :lat => "memeiŋee" },
+                :gen => { :cyr => "мемеиндее", :lat => "memeindee" },
+                :ins => { :cyr => "мемеиҥече", :lat => "memeiŋeče" },
+                :loc => { :cyr => "мемеиҥиле", :lat => "memeiŋile" },
+                :lat => { :cyr => "мемеиҥнаа", :lat => "memeiŋnaa" },
+                :tra => { :cyr => "мемеиҥеме", :lat => "memeiŋeme" },
+                :abl => { :cyr => "мемеиҥҥаца", :lat => "memeiŋŋatsa" } }
+    = render 'case_chart', :title => "*meme “mother” (#{abbrev 'anim'}) — Plural with Indirective", :forms => forms
+    - forms = { :nom => { :cyr => "бабаиҥа", :lat => "babaiŋa" },
+                :obj => { :cyr => "бабаиҥее", :lat => "babaiŋee" },
+                :gen => { :cyr => "бабаиндаа", :lat => "babaindaa" },
+                :ins => { :cyr => "бабаиҥака", :lat => "babaiŋaka" },
+                :loc => { :cyr => "бабаиҥыла", :lat => "babaiŋyla" },
+                :lat => { :cyr => "бабаиҥнаа", :lat => "babaiŋnaa" },
+                :tra => { :cyr => "бабаиҥема", :lat => "babaiŋema" },
+                :abl => { :cyr => "бабаиҥҥаца", :lat => "babaiŋŋatsa" } }
+    = render 'case_chart', :title => "*baba “father” (#{abbrev 'anim'}) — Plural with Indirective", :forms => forms
+    - forms = { :nom => { :cyr => "хеене", :lat => "xeene" },
+                :obj => { :cyr => "хеенее", :lat => "xeenee" },
+                :gen => { :cyr => "хеендее", :lat => "xeendee" },
+                :ins => { :cyr => "хеенеше", :lat => "xeeneše" },
+                :loc => { :cyr => "хеениле", :lat => "xeenile" },
+                :lat => { :cyr => "хеелеие", :lat => "xeeleie" },
+                :tra => { :cyr => "хееҥе", :lat => "xeeŋe" },
+                :abl => { :cyr => "хеениче", :lat => "xeeniče" } }
+    = render 'case_chart', :title => "*xee “night” (#{abbrev 'inan'}) — Plural with Indirective", :forms => forms
+    - forms = { :nom => { :cyr => "ҕилҕиине", :lat => "ǧilǧiine" },
+                :obj => { :cyr => "ҕилҕиинее", :lat => "ǧilǧiinee" },
+                :gen => { :cyr => "ҕилҕиинәндее", :lat => "ǧilǧiinəndee" },
+                :ins => { :cyr => "ҕилҕиинеше", :lat => "ǧilǧiineše" },
+                :loc => { :cyr => "ҕилҕииниле", :lat => "ǧilǧiinile" },
+                :lat => { :cyr => "ҕилгиллеие", :lat => "ǧilǧilleie" },
+                :tra => { :cyr => "ҕилҕинәҥе", :lat => "ǧilǧinəŋe" },
+                :abl => { :cyr => "ҕилҕиниише", :lat => "ǧilǧiniiše" } }
+    = render 'case_chart', :title => "*ǧəl “hand” (#{abbrev 'anim'}) — Plural with Indirective", :forms => forms
+    - forms = { :nom => { :cyr => "дена", :lat => "dena" },
+                :obj => { :cyr => "денее", :lat => "denee" },
+                :gen => { :cyr => "дендаа", :lat => "dendaa" },
+                :ins => { :cyr => "денака", :lat => "denaka" },
+                :loc => { :cyr => "деныла", :lat => "denyla" },
+                :lat => { :cyr => "деннаа", :lat => "dennaa" },
+                :tra => { :cyr => "денема", :lat => "denema" },
+                :abl => { :cyr => "деннаца", :lat => "dennatsa" } }
+    = render 'case_chart', :title => "*dèn “people” (#{abbrev 'anim'}) — Plural with Indirective", :forms => forms
+
+= section "Definiteness" do
+  %p Očets distinguishes two degrees of definiteness: nouns may be either definite or indefinite. Indefinite nouns are unmarked, such as all the above examples. Definite nouns feature the definite prefix #{underlying "*t-"}/#{underlying "*tV-"} in all forms, as well as the indirective suffix. Definite nouns have the indirective suffix in all cases and numbers (whereas indefinite nouns only have the indirective when the noun is both plural and in certain specific environments).
+  %p While the underlying form of the definite prefix is always *t-/*tə/*tV-, its actual surface realization is rather complex.
+  %p When the root begins with a vowel or /h/, the prefix is simply t- (or s- before a front vowel). Initial /h/ will always drop. Examples:
+  %table.noundecl
+    %tr
+      %th Indefinite
+      %th Definite
+      %th Underlying
+    %tr
+      %td
+        = t("һолма", "holma", :linebreak => true)
+        %br
+        “apple”
+      %td
+        = t("толмаа", "tolmaa", :linebreak => true)
+        %br
+        “the apple”
+      %td= underlying("t-o{b}lma{b+}-A{b}")
+    %tr
+      %td
+        = t("һелх", "helx", :linebreak => true)
+        %br
+        “door”
+      %td
+        = t("селхе", "selxe", :linebreak => true)
+        %br
+        “the door”
+      %td= underlying("t-he{f+}lx-A{f}")
+    %tr
+      %td
+        = t("һеи", "hei", :linebreak => true)
+        %br
+        “language”
+      %td
+        = t("сеие", "seie", :linebreak => true)
+        %br
+        “the language”
+      %td= underlying("t-ei{f+}-A{f}")
+    %tr
+      %td
+        = t("һуво", "huwo", :linebreak => true)
+        %br
+        “owl”
+      %td
+        = t("туво", "tuwo", :linebreak => true)
+        %br
+        “the owl”
+      %td= underlying("t-hu{b}wo{b+}-A{b→0}")
+  %p When the root begins with /j/, this consonant and the definite prefix merge into a single consonant /s/, no matter the harmony pattern of the rest of the root:
+  %table.noundecl
+    %tr
+      %th Indefinite
+      %th Definite
+      %th Underlying
+    %tr
+      %td
+        = t("иен", "ien", :linebreak => true)
+        %br
+        “bread”
+      %td
+        = t("сене", "sene", :linebreak => true)
+        %br
+        “the bread”
+      %td= underlying("t-ie{f+}n-A{f}")
+    %tr
+      %td
+        = t("иаи", "iai", :linebreak => true)
+        %br
+        “deer”
+      %td
+        = t("саиа", "saia", :linebreak => true)
+        %br
+        “the deer”
+      %td= underlying("t-ia{b+}i-A{b}")
+  %p When the root begins with any other consonant, the vowel of the prefix will generally be realized as a short, non-reduced vowel. It will match the vowel of the following syllable in quality, but not in length, along with triggering the palatalization of *t to /s/ if it is a front vowel; for instance, if the next syllable contains /a/, the prefix becomes ta-; if /ii/, then si-; if /o/, then to-. If the following syllable begins with a diphthong, the definite prefix is harder to predict; it will often match the nucleus of the diphthong (e.g., /ai/ → /a/), but at other times may match a vowel that the diphthong developed out of in an earlier stage of the language.
+  %table.noundecl
+    %tr
+      %th Indefinite
+      %th Definite
+      %th Underlying
+    %tr
+      %td
+        = t("дон", "don", :linebreak => true)
+        %br
+        “knife”
+      %td
+        = t("тодона", "todona", :linebreak => true)
+        %br
+        “the knife”
+      %td= underlying("tV{b}-do{b+}n-A{b}")
+    %tr
+      %td
+        = t("вел", "wel", :linebreak => true)
+        %br
+        “girl”
+      %td
+        = t("севеле", "sewele", :linebreak => true)
+        %br
+        “the girl”
+      %td= underlying("tV{f}-we{f+}l-A{f}")
+    %tr
+      %td
+        = t("нии", "nii", :linebreak => true)
+        %br
+        “name”
+      %td
+        = t("синии", "sinii", :linebreak => true)
+        %br
+        “the name”
+      %td= underlying("tV{f}-nii{b+}-A{f}")
+    %tr
+      %td
+        = t("моук", "mouk", :linebreak => true)
+        %br
+        “moustache”
+      %td
+        = t("тамоука", "tamouka", :linebreak => true)
+        %br
+        “the moustache”
+      %td= underlying("tV{b}-mou{b+}k-A{b}")
+  %p However, when something causes the stress of the stem to shift, such as when another prefix is added or in certain syntactic environments, the definite prefix will reduce to simply *tə-. This surface /ə/ may then disappear in certain specific situations if a legal cluster can be formed (treating the noun and the preceding word as though they were one), which in turn can lead to assimilation.<sup>5</sup>
+  %table.noundecl
+    %tr
+      %th Indefinite
+      %th Definite
+      %th Underlying
+      %th With “Two”
+    %tr
+      %td
+        = t("скоола", "skoola", :linebreak => true)
+        %br
+        “school”
+      %td
+        = t("тоскоола", "toskoola", :linebreak => true)
+        %br
+        “the school”
+      %td= underlying("tV{b}-skoo{b}la{b+}-A{b}")
+      %td
+        = t("кына тәскоола", "kyna təskoola", :linebreak => true)
+        %br
+        “the two schools”
+    %tr
+      %td
+        = t("крест", "krest", :linebreak => true)
+        %br
+        “cross”
+      %td
+        = t("секрессе", "sekresse", :linebreak => true)
+        %br
+        “the cross”
+      %td= underlying("tV{f}-kre{f+}st-A{f}")
+      %td
+        = t("кына тәкрест", "kyna təkrest", :linebreak => true)
+        %br
+        “the two crosses”
+    %tr
+      %td
+        = t("хее", "xee", :linebreak => true)
+        %br
+        “night”
+      %td
+        = t("сехее", "sexee", :linebreak => true)
+        %br
+        “the night”
+      %td= underlying("tV{f}-xee{f+}-A{f→0}")
+      %td
+        = t("кына тхее", "kyna txee", :linebreak => true)
+        %br
+        “the two nights”
+    %tr
+      %td
+        = t("лием", "liem", :linebreak => true)
+        %br
+        “table”
+      %td
+        = t("селиеме", "selieme", :linebreak => true)
+        %br
+        “the table”
+      %td= underlying("tV{f}-lie{f+}m-A{f}")
+      %td
+        = t("кына ллием", "kyna lliem", :linebreak => true)
+        %br
+        “the two tables”
+  %p Note that the definite prefix never undergoes palatalization to /s/ when its vowel is reduced or zero, as there is no longer a palatalizing environment.
+  %p If the root begins with /s/ or /z/ and the definite prefix is in a front vowel harmony environment, the definite prefix will actually be tV- (or sometimes even txV-) instead of sV-. The palatalization is blocked even though it is a palatalizing environment in order to prevent consonant repetition. The occasional appearance of /x/ is the result of a very strong compensatory velarization of the /t/; both variants with and without the /x/ are permissable, as native speakers are not even consistent. The opposite phenomenon is not seen; ta- never becomes anything else when followed by another /t/ or /d/.
+  %table.noundecl
+    %tr
+      %th Indefinite
+      %th Definite
+      %th Underlying
+    %tr
+      %td
+        = t("сент", "sent", :linebreak => true)
+        %br
+        “heart”
+      %td
+        = t("тесенце, тхесенце", "tesentse, txesentse", :linebreak => true)
+        %br
+        “the heart”
+      %td= underlying("tV{f}-se{f+}nt-A{f}")
+    %tr
+      %td
+        = t("земме", "zemme", :linebreak => true)
+        %br
+        “country, state”
+      %td
+        = t("теземмее, тхеземмее", "tezemmee, txezemmee", :linebreak => true)
+        %br
+        “the country”
+      %td= underlying("tV{f}-ze{f}mme{f+}-A{f}")
+  %p Foreign loans with unharmonized stems mixing front and back vowels can behave quite erratically. In a case like #{t "вино", "wino"} “wine”, where the first syllable contains a front vowel and the last a back vowel, the front harmony can end up propagating forwards while the back vowel harmony propagates backwards: #{t "сивинона", "siwinona"} “the wines” ← #{underlying "*tV{f}-wi{f}no{b+}-n-A{b}"}.
+  %p As for the indirective marker, the same rules apply as were explained in section 4.3.5 above. This suffix is generally fairly unproblematic, except when in a front vowel environment in the nominative singular, where the palatalization it triggers can sometimes result in drastic changes to the root.
+
+= section "Possession" do
+  %p Očets, like many other languages of Siberia, can mark the possessor of a noun by means of a possessive affix that conveys the person and number of the possessor; however, unlike other languages of the area, it does so through prefixes rather than suffixes. There are seven basic prefixes. Six correspond to pronouns (#{abbrev '1sg'} “my”, #{abbrev '2sg'} “your”, #{abbrev '3sg'} “his/her”, #{abbrev '1pl'} “our”, #{abbrev '2pl'} “your (#{abbrev 'pl'})”, #{abbrev '3pl'} “their”). The seventh form is an impersonal possessive, which does not translate directly into English and is required in certain constructions. As usual, the possessive prefixes have different forms depending on whether the possessed noun is animate or inanimate.
+
+  = section "Possession of Inanimate Nouns" do
+    %p The inanimate possessive prefixes are summarized in the following table:
+    %table.noundecl
+      %tr
+        %th
+        %th Singular
+        %th Plural
+      %tr
+        %th 1st
+        %td
+          = underlying("*šId-")
+          %br
+          (šid-, šyd-)
+        %td
+          = underlying("*šən-")
+          %br
+          (št-, šan-, šen-)
+      %tr
+        %th 2nd
+        %td
+          = underlying("*kId-")
+          %br
+          (čid-, kyd-)
+        %td
+          = underlying("*un-")
+          %br
+          (ud-, un-)
+      %tr
+        %th 3rd
+        %td
+          = underlying("*Id-")
+          %br
+          (hid-, hyd-)
+        %td
+          = underlying("*nI-")
+          %br
+          (n-, ni-, ny-)
+      %tr
+        %th Impersonal
+        %td{:colspan => 2}
+          = underlying("*n-")
+          %br
+          (n-, nə-, na-)
+    %p These prefixes are inserted immediately prior to the noun stem. Nouns with possessive prefixes are always considered definite (and therefore take the indirective suffix), but are never explicitly marked with a definite prefix.
+    %p Like the definite prefix, possessive prefixes always cause the loss of stem-initial /h/, although other consonants such as initial /j/ will remain.
+    %p The singular possessives are quite straightforward, having two standard forms, one with front vowel harmony and one with back vowel harmony. The final /d/ will often undergo assimilation with the first consonant of the noun stem; however, if placing them in direct contact would cause an illegal cluster, an epenthetic schwa is inserted between the two.
+    %p In the first person plural (“our”), the underlying form is usually considered to be *šən-, but this is for the sake of convenience more than anything. On the surface, it is realized as št- before vowels and as šan-/šen- before consonants, with appropriate vowel harmony. The third person plural (“their”) behaves similarly, with n- before vowels and ni-/ny- before consonants.
+    %p The second person plural (“you all’s”) prefixes contain a weak neutral vowel /u/ regardless of harmony. They are realized as ud- before a vowel and un- before a consonant; of course, at the beginning of a word they then become hud- and hun- respectively.
+    %p The impersonal possessive prefix is simply *n-, realized as n- before a vowel and nə- (with an epenthetic schwa) before a consonant; due to restrictions on schwas in the first syllable of a word, however, the latter is most often seen as na-, regardless of harmony.
+    %table.noundecl
+      %tr
+        %th
+        %th *kuor-<br>“village”
+        %th *nii-<br>“name”
+        %th *il-<br>“song”
+      %tr
+        %th 1Sg
+        %td= t("шыткуора", "šytkuora", :linebreak => true)
+        %td= t("шиннии", "šinnii", :linebreak => true)
+        %td= t("шидиле", "šidile", :linebreak => true)
+      %tr
+        %th 2Sg
+        %td= t("кыткуора", "kytkuora", :linebreak => true)
+        %td= t("чиннии", "činnii", :linebreak => true)
+        %td= t("чидиле", "čidile", :linebreak => true)
+      %tr
+        %th 3Sg
+        %td= t("һыткуора", "hytkuora", :linebreak => true)
+        %td= t("һиннии", "hinnii", :linebreak => true)
+        %td= t("һидиле", "hidile", :linebreak => true)
+      %tr
+        %th 1Pl
+        %td= t("шаҥкуора", "šaŋkuora", :linebreak => true)
+        %td= t("шеннии", "šennii", :linebreak => true)
+        %td= t("штиле", "štile", :linebreak => true)
+      %tr
+        %th 2Pl
+        %td= t("һуҥкуора", "huŋkuora", :linebreak => true)
+        %td= t("һуннии", "hunnii", :linebreak => true)
+        %td= t("һудиле", "hudile", :linebreak => true)
+      %tr
+        %th 3Pl
+        %td= t("ныкуора", "nykuora", :linebreak => true)
+        %td= t("нинии", "ninii", :linebreak => true)
+        %td= t("ниле", "nile", :linebreak => true)
+      %tr
+        %th Imp
+        %td= t("накуора", "nakuora", :linebreak => true)
+        %td= t("нании", "nanii", :linebreak => true)
+        %td= t("ниле", "nile", :linebreak => true)
+
+  = section "Possession of Animate Nouns" do
+    %p Possession marking of animate nouns operates on a similar basis, although a number of the prefixes are slightly different.
+    %table.noundecl
+      %tr
+        %th
+        %th Singular
+        %th Plural
+      %tr
+        %th 1st
+        %td
+          = underlying("*ši-")
+          %br
+          (š-, ši-)
+        %td
+          = underlying("*šin-")
+          %br
+          (šn-, šin-)
+      %tr
+        %th 2nd
+        %td
+          = underlying("*ko-")
+          %br
+          (k-, č-, ko-)
+        %td
+          = underlying("*w-")
+          %br
+          (w-, u-, i-)
+      %tr
+        %th 3rd
+        %td
+          = underlying("*di-")
+          %br
+          (dz-, di-)
+        %td
+          = underlying("*ni-")
+          %br
+          (n-, ni-)
+      %tr
+        %th Impersonal
+        %td{:colspan => 2}
+          = underlying("*n-")
+          %br
+          (n-, nə-, na-)
+    %p Compared to the possessive prefixes used by inanimate nouns, these are both shorter and do not show any sort of vowel harmony, instead having a weak neutral vowel or no vowel in all forms.
+    %p The singular forms are fairly straightforward, with a vowelless prefix that is used before stems beginning with a vowel or /h/ and a vowelled prefix used in all other situations. In the case of the second person singular (“your”), however, the vowelless form k- may palatalize to č- when followed by a front vowel. The vowelless form of the third person singular (“his/her”), however, appears to always be palatalized. In addition, the vowelless form of the first person singular prefix š- causes following short /a e i/ to round to /o ø y/, and diphthongs /ai ei/ to round to /oi øi/, though it does not affect long vowels.
+    %p The first person plural (“our”) has two forms, šn- and šin-, whose usage depends on various prosodic factors in addition to the nature of the following sound. If the stem begins with a consonant, the form is always šin-. Otherwise, if the fully-declined word <em>without</em> the possessive prefix but with the indirective suffix is stressed on the second syllable, then the 1pl possessive prefix is šn-. Otherwise, it is šin-.
+    %p The second person plural (“you all’s”) has three possible forms. If the stem begins with a vowel or /h/, the prefix is w-. If it begins with a consonant, it takes u- if that consonant is labial and i- otherwise (which naturally become hu- and hi- at the beginning of word). Both of these vocallic prefixes cause the first consonant of the stem to become geminated if possible.
+    %p The third person plural (“their”) n-/ni- behaves exactly like the singular prefixes. The animate impersonal prefix is identical to the inanimate impersonal prefix.
+    %p Two nouns, #{t "баба", "baba"} “father” and #{t "меме", "meme"} “mother”, have special possessive stems *-ob- and *-em- that are only used when possessive prefixes are attached: #{t "шоба", "šoba"} “my father”, #{t "шөме", "šöme"} “my mother”, never #{t "**шибабаа", "šibabaa"} and #{t "**шимемее", "šimemee"}.
+    %table.noundecl
+      %tr
+        %th
+        %th *meme-/*em-<br>“mother”
+        %th *wal-<br>“son”
+        %th *čib-<br>“dog”
+      %tr
+        %th 1Sg
+        %td= t("шөме", "šöme", :linebreak => true)
+        %td= t("шивала", "šiwala", :linebreak => true)
+        %td= t("шичибе", "šičibe", :linebreak => true)
+      %tr
+        %th 2Sg
+        %td= t("чеме", "čeme", :linebreak => true)
+        %td= t("ковала", "kowala", :linebreak => true)
+        %td= t("кочибе", "kočibe", :linebreak => true)
+      %tr
+        %th 3Sg
+        %td= t("ѕеме", "dzeme", :linebreak => true)
+        %td= t("дивала", "diwala", :linebreak => true)
+        %td= t("дичибе", "dičibe", :linebreak => true)
+      %tr
+        %th 1Pl
+        %td= t("шнеме", "šneme", :linebreak => true)
+        %td= t("шиннала", "šinnala", :linebreak => true)
+        %td= t("шинчибе", "šinčibe", :linebreak => true)
+      %tr
+        %th 2Pl
+        %td= t("веме", "weme", :linebreak => true)
+        %td= t("һуввала", "huwwala", :linebreak => true)
+        %td= t("һиччибе", "hiččibe", :linebreak => true)
+      %tr
+        %th 3Pl
+        %td= t("неме", "neme", :linebreak => true)
+        %td= t("нивала", "niwala", :linebreak => true)
+        %td= t("ничибе", "ničibe", :linebreak => true)
+      %tr
+        %th Imp
+        %td= t("неме", "neme", :linebreak => true)
+        %td= t("навала", "nawala", :linebreak => true)
+        %td= t("начибе", "načibe", :linebreak => true) 
+
+= section "Prenominal Affixes" do
+  %p “Prenominal affixes” refers to a disparate group of prefixes that share in common the fact that they are attached to the very beginning of an Očets noun, before even the definite or possessive prefixes. In modern Očets only four prenominals are still in use, two of which are of obvious Slavic origin and one which is disputable.
+  %p Prenominals in Ob languages are usually divided into two subclasses: derivational<sup>6</sup> and non-derivational<sup>7</sup>.
+  %p Derivational prenominals serve no grammatical function, but rather modify the meaning of the noun to create a new word entirely. They differ from other forms of derivational morphology only in the fact that they are not contiguous with the actual noun stem. While the other Ob languages that are reasonably well-attested seem to have a rich system of such prenominals, Očets only has one, the collective hO-. It is used most commonly with nationalities, and always in conjunction with the definite article, which will typically appear in its vowelless form and undergo assimilation.
+  %table.noundecl
+    %tr
+      %th Prefix
+      %th Meaning
+    %tr
+      %td ho-/hö-
+      %td collective
+  %table.noundecl
+    %tr
+      %th Base
+      %th With Prenominal
+      %th Underlying
+    %tr
+      %td
+        = t("бикчит", "bikčit", :linebreak => true)
+        %br
+        “(a) Novegradian”
+      %td
+        = t("һөббикчисе", "höbbikčise", :linebreak => true)
+        %br
+        “the Novegradians”
+      %td= underlying("hO{f}-tV{0}-bi{f}kči{b+}t-A{f}")
+    %tr
+      %td
+        = t("лууск", "luusk", :linebreak => true)
+        %br
+        “(a) Russian”
+      %td
+        = t("һоллууска", "holluuska", :linebreak => true)
+        %br
+        “the Russians”
+      %td= underlying("hO{b}-tV{0}-luu{b+}sk-A{b}")
+    %tr
+      %td
+        = t("паранцуус", "parantsuus", :linebreak => true)
+        %br
+        “Frenchman”
+      %td
+        = t("һотпаранцууса", "hotparantsuusa", :linebreak => true)
+        %br
+        “the French”
+      %td= underlying("hO{b}-tV{0}-pa{b}ra{b}ntsuu{b+}s-A{b}")
+    %tr
+      %td
+        = t("һеҕлии", "heǧlii", :linebreak => true)
+        %br
+        “Englishman”
+      %td
+        = t("һөсеҕлии", "höseǧlii", :linebreak => true)
+        %br
+        “the English”
+      %td= underlying("hO{f}-t-he{f}ǧlii{f+}-A{b→0}")
+  %p It can also have an associative plural function, meaning “those people collectively associated with X”. When used with a name as a base (especially surnames), it refers to a family<sup>8</sup>.
+  %table.noundecl
+    %tr
+      %th Base
+      %th With Prenominal
+      %th Underlying
+    %tr
+      %td
+        = t("cкоола", "skoola", :linebreak => true)
+        %br
+        “school”
+      %td
+        = t("һотәскоолаа", "hotəskoolaa", :linebreak => true)
+        %br
+        “school students”
+      %td= underlying("hO{b}-tV{0}-skoo{b}la{b+}-A{b}")
+    %tr
+      %td
+        = t("Иванеу", "Iwáneu", :linebreak => true)
+        %br
+        “Iváneu (surname)”
+      %td
+        = t("һөсиваневе", "hösiwanewe", :linebreak => true)
+        %br
+        “the Iváneu family”
+      %td= underlying("hO{f}-t-I{f}vá{b}neu{f+}-A{f}")
+  %p Non-derivational prenominals have a clear grammatical function, and are sometimes known as “minor cases” due to their somewhat case-like role. Očets has three such forms: the comitative, distributive,  and contrastive negative (or abessive).
+  %table.nounendings
+    %tr
+      %th Prefix
+      %th Meaning
+    %tr
+      %td sa-
+      %td comitative
+    %tr
+      %td po-
+      %td distributive
+    %tr
+      %td nyy-/nii-
+      %td contrastive negative/abessive
+  %p The distributive po- and contrastive negative nyy-/nii- are clearly loans from Novegradian or Russian #{t "по", "po"} and #{t "ни", "ni"}. The comitative sa- is of debatable origin, being either a loan from Novegradian со <i>so</i> “with”, or cognate to the suffix -sa seen in a number of Yeniseian languages. And while po- and nyy-/nii- may be used in conjunction with any case, sa- may only be used with the instrumental case.
+  %p The use of these prefixes will be discussed later.
+
+= section "Predicate Agreement Suffixes" do
+  %p The predicate agreement suffixes are a series of markers that must be placed on the complement of the verb “to be”, whether it be noun, postpositional phrase, adjective, or pronoun. It agrees with the subject of the sentence in person and number, as well as animacy in the third person. There is also an impersonal form for sentences without a grammatical subject. They always appear in the final slot.
+  %table.noundecl
+    %tr
+      %th
+      %th Singular
+      %th Plural
+    %tr
+      %th 1st
+      %td
+        = underlying("*-Àš")
+        %br
+        (-aš, -eš)
+      %td
+        = underlying("*-šÌŋ")
+        %br
+        (-šiŋ, -šyŋ)
+    %tr
+      %th 2nd
+      %td
+        = underlying("*-Àk")
+        %br
+        (-ak, -ek)
+      %td
+        = underlying("*-kÙŋ")
+        %br
+        (-kuŋ, -küŋ)
+    %tr
+      %th 3rd (A)
+      %td
+        = underlying("*-Àd")
+        %br
+        (-ad, -ed)
+      %td
+        = underlying("*-Àn")
+        %br
+        (-an, -en)
+    %tr
+      %th 3rd (I)
+      %td{:colspan => 2}
+        = underlying("*-dÌ")
+        %br
+        (-di, -dy)
+    %tr
+      %th Impersonal
+      %td{:colspan => 2}
+        = underlying("*-Àm")
+        %br
+        (-am, -em)
+  %p The following forms of #{t "һочец", "hočets"} can thus be interpreted as complete sentences:
+  %p
+    #{t "Һочецеш", "Hočetseš"} “I am Očets”
+    %br
+    #{t "Һочецек", "Hočetsek"} “You are Očets”
+    %br
+    #{t "Һочецед", "Hočetsed"} “He/She is Očets”
+    %br
+    #{t "Һочеѕи", "Hočedzi"} “It is Očets”
+    %br
+    #{t "Һочецеҥешиҥ", "Hočetseŋešiŋ"} “We are Očets”
+    %br
+    #{t "Һочецеҥекүҥ", "Hočetseŋeküŋ"} “You all are Očets”
+    %br
+    #{t "Һочецеҥеен", "Hočetseŋeen"} “They are Očets”
+    %br
+    #{t "Һочецеҥеди", "Hočetseŋedi"} “Those are Očets”
+    %br
+    #{t "Һочецем", "Hočetsem"} “One is Očets”
+
+= section "Relative Suffix" do
+  %p The primary function of the relative suffix *-d- is to relativize a postpositional or otherwise oblique phrase, thereby allowing it to directly modify a noun almost like an adjective would (e.g., #{t "туҕвуулд тахаака", "tuǧwuuld taxaaka"} “the man [that is] in the house” from #{underlying "*tV{b}-ǧuu{b+}-I{b→0}l-d tV{b}-xaa{b+}k-A{b}"}). It is inserted after any case/number suffixes, and suppresses the indirective suffix even if the word is definite. Once again, its usage will be discussed at a later point.
+  %p One irregular behavior of this suffix, however, is that it is required on postpositional/oblique phrases serving as the complement of the verb “to be”. Here it will be forced to take a predicate agreement suffix, which comes at the very end of the noun and will result in the indirective marker reappearing if it was suppressed by the relative suffix, though only if the predicate agreement suffix begins with a consonant. For example:
+  = example_sentence :ochets => "Cуулҥа туҕвуулдан.",
+                     :translit => "Suulŋa tuǧwuuldan.",
+                     :breakdown => "S-uul-ŋ-a tu-ǧwuu-l-d-an.",
+                     :underlying => "*t-iuu{b+}l-ŋ-A{b} tV{b}-ǧuu{b+}-I{b→0}l-d-À{b}n",
+                     :gloss => "#{abbrev 'def'}-friend-#{abbrev 'anim.pl'}-#{abbrev 'ind'} #{abbrev 'def'}-house-#{abbrev 'loc'}-#{abbrev 'rel'}-#{abbrev '3pl.anim.pred'}",
+                     :eng => "The friends are in the house",
+                     :comment => "(no indirective on “house”)"
+  = example_sentence :ochets => "Cиниигене туҕвуулдады.",
+                     :translit => "Siniigene tuǧwuuldady.",
+                     :breakdown => "Si-niige-n-e tu-ǧwuu-l-d-a-dy.",
+                     :underlying => "*tV{f}-nii{f}ge{f+}-n-À{f} tV{b}-ǧuu{b+}-I{b→0}l-d-À{b}-dÌ{b}",
+                     :gloss => "#{abbrev 'def'}-book-#{abbrev 'inan.pl'}-#{abbrev 'ind'} #{abbrev 'def'}-house-#{abbrev 'loc'}-#{abbrev 'rel'}-#{abbrev 'ind'}-#{abbrev '3.inan.pred'}",
+                     :eng => "The books are in the house",
+                     :comment => "(with indirective on “house”)"
+
+= section "Foreign Loans" do
+  %p Foreign loans that have not been fully nativized (e.g., they still contain foreign clusters, mix front and back vowels, or simply still feel foreign) still have access to most Očets nominal morphology, although their declension is dramatically simplified. In general, they do not undergo any sort of alteration of the root itself, although sandhi still takes place amongst the native affixes (e.g., #{t "туниверсидатла", "tuniwersidatla"} “to the university” rather than <i>**tuniwersidalla</i>). They also form their plurals quite regularly, using *-(ə)n-.
+  %p The harmony pattern of a loan word is typically determined by the final vowel of the stem. However, even front-vowel suffixes that normally trigger palatalization will not affect the stem.
+  %p Only in one area is the declension of foreign loans truly defective: they are unable to take first- and second-person possessive markers, instead relying on special possessive pronouns. While the third-person and impersonal possessive suffixes are still used, they will often be accompanied by a pronoun as well, resulting in double-marking of the possessor.
+
+= section "Enclitic Coordinators" do
+  %p Nouns and pronouns may appear with one of four enclitic coordinators, discourse particles that attach themselves to the end of a noun to relate its role to a participant in a previous sentence or clause. These are known as the “positive equative” ([X] and Y as well), the “negative equative” ([not X] nor Y), the “positive contrastive” ([not X] but Y), and the “negative contrastive” ([X] but not Y). The full usage of these will be explained at a later time. These enclitics may be used with nouns or pronouns in any case.
+  %table.noundecl
+    %tr
+      %th
+      %th Positive
+      %th Negative
+    %tr
+      %th Equative
+      %td
+        = underlying("*-kAi")
+        %br
+        (-kai, -čei)
+      %td
+        = underlying("*-fa")
+        %br
+        (-fa, -fe)
+    %tr
+      %th Contrastive
+      %td
+        = underlying("*-qA(?)")
+        %br
+        (-ǧe, -qa)
+      %td
+        = underlying("*-sury")
+        %br
+        (-sury)
+  %p The positive forms show harmony agreement, while the negative forms lack it entirely. However, the front vowel form of the positive contrastive #{underlying "*-qA"} is -ǧe, not the expected **qa (← *qe).
+  %p These clitics are added as-is to a word ending in a vowel; if the word ends in a consonant, an epenthetic schwa is always inserted. Compare #{t "шииуулакаи", "šiiuulakai"} “my friend as well” and #{t "иуулəкаи", "iuuləkai"} “a friend as well”.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) This very complex behavior has to do with the fact that in origin, the Očets ablative case is both a compound case built upon an older case (i.e., the genitive), and was at one time phrasal. It is believed to have come from pre-Proto-Ob *qaut-Vs, the instrumental form of *qaut- “way, path, road”, which was preceded by a noun in the genitive case with the sense “by way of X”. In Proto-Ob, the ablative suffix was something like *da-t-as (← *da-qt-as) for animate nouns and *tsi-s-es (← *di-qt-es) for inanimate nouns, with the different vowel patterns emerging from the two different inherited forms of the genitive suffix.
+%p 2) The older forms, before this levelling occurred, were presumably *lookəny and *kiisəŋi. These are not attested in any Očets dialects or the few surviving examples of Old Očets, but they are seen in other Ob languages.
+%p 3) The stem *den- always calls for back vowel harmony.
+%p 4) Etymologically, these two forms are actually related, coming from the Proto-Ob-Yeniseian root *tūx- “clay, earth” and its plural *tūx-Vn’.
+%p 5) The loss of the indirective suffix after a numeral in the examples below will be explained later.
+%p 6) Sometimes also known as “persistent”.
+%p 7) Sometimes also known as “non-persistant” or as “minor cases”.
+%p 8) This is the reason why many Novegradianized Očets surnames begin with /o/. For instance, the surname #{t "Отазатоу", "Otázatou"} derives from Očets #{t "һотазата", "hotazata"} “descendents/clan of Azat”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

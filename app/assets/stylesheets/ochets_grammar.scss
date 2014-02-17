@@ -54,6 +54,40 @@ body.grammar.ochets {
     &.header {
       color: $header_color;
     }
+
+    &.slottable {
+      th {
+        width: 5em;
+      }
+
+      td {
+        vertical-align: top;
+      }
+    }
+
+    &.noundecl {
+      th {
+        width: 10em;
+
+        &.lefthandrot {
+          width: 5em;
+          max-width: 5em;
+        }
+      }
+
+      td {
+        text-align: center;
+      }
+
+      .rotate {
+        display: block;
+        -moz-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
   }
 
   #sandhitable {

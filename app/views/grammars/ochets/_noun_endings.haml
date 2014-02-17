@@ -1,0 +1,20 @@
+- animate ||= ""
+- inanimate ||= ""
+- animate_comments ||= nil
+- inanimate_comments ||= nil
+
+%table.nounendings
+  %tr
+    %th Animate
+    %th Inanimate
+  %tr
+    %td
+      = underlying(animate)
+      - unless animate_comments.nil?
+        %br
+        = animate_comments
+    %td
+      = underlying(inanimate)
+      - unless inanimate_comments.nil?
+        %br
+        = inanimate_comments

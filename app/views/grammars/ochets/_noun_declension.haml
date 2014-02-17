@@ -1,0 +1,22 @@
+- title ||= ""
+- forms ||= []
+
+%table.noundecl
+  %tr
+    %th.lefthandrot{:rowspan => 2}
+      %span.rotate= title
+    - forms.each do |form|
+      %th
+        = form[:stem]
+        %br
+        “#{form[:eng]}”
+  %tr
+    - forms.each do |form|
+      %td
+        = form[:ochets]
+        %br
+        %i= form[:translit]
+        %br
+        %i= form[:breakdown]
+        %br
+        = underlying(form[:underlying])
