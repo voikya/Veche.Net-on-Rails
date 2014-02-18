@@ -1,0 +1,1157 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Деуссыс моорполоогиа"
+
+= render :partial => 'navigation'
+
+= section "Structure of the Quantifier" do
+  %p Quantifiers are words that define the scope or quantity of a noun. They include basic determiners such as “all”, “some”, “many”; cardinal numerals; units of solid and liquid measurement as well as weight, such as “liter (of)”, “gram (of)”, “gallon (of)”; and ad-hoc units of measurement, such as “cups (of)”, “bottles (of)”, “barrels (of)”. Other types of measurement, such as length, cannot act as quantifiers in Očets unless modified by another noun (e.g., “five miles of road”).
+  %p The quantifier is typically considered a distinct class of words in Očets, owing to its mixed noun-like and adjective-like behavior. Like nouns, they can decline for case (though not for number or possession), and like adjectives, they modify nouns (though cannot appear as predicates by themselves).
+  %p The Očets quantifier has a fairly simple structure compared to the noun. The available slots are diagrammed as follows:
+  %table.slottable
+    %tr
+      %th +1
+      %th 0
+      %th -1
+      %th -2
+    %tr
+      %td Distributive Prefix
+      %td Stem
+      %td Case Ending
+      %td Indirective Suffix
+
+= section "Cases" do
+  %p Quantifiers decline for the same eight cases that nouns do, though they have a very distinct set of endings. They are also far more regular and generally predictable than nominal paradigms. There is no division between animate and inanimate; the only variation in endings occurs predictably based on whether the quantifier stem is vowel-final or consonant-final.
+
+  = section "Nominative Case" do
+    %table.nounendings
+      %tr
+        %th C-Final
+        %th V-Final
+      %tr
+        %td= underlying("-Ø")
+        %td= underlying("-Ø")
+    %p The nominative case is consistently formed with no ending, simply the bare quantifier stem.
+    %p The following table demonstrates the nominative of a number of different types of quantifiers: *kan- “many”, *as- “all”, *kyn- “two”, *lan- “hand(ful)”<sup>1</sup>, *liitr- “liter”, *kilo- “kilogram”, *funt- “pound”, *ptel- “bottle”. These last four are Novegradian loans of varying ages.
+    - forms = [ { :stem => "*kan", :eng => "many", :ochets => "кан", :translit => "kan", :breakdown => "kan-Ø", :underlying => "ka{b+}n-Ø" },
+                { :stem => "*as", :eng => "all", :ochets => "һас", :translit => "has", :breakdown => "as-Ø", :underlying => "a{b+}s-Ø" },
+                { :stem => "*kyn", :eng => "two", :ochets => "кын", :translit => "kyn", :breakdown => "kyn-Ø", :underlying => "ky{b+}n-Ø" },
+                { :stem => "*lan", :eng => "handful", :ochets => "лан", :translit => "lan", :breakdown => "lan-Ø", :underlying => "la{b+}n-Ø" } ]
+    = render 'noun_declension', :title => "Native", :forms => forms
+    - forms = [ { :stem => "*liitr", :eng => "liter", :ochets => "лиитәр", :translit => "liitər", :breakdown => "liitər-Ø", :underlying => "lii{f+}tr-Ø" },
+                { :stem => "*kilo", :eng => "kilogram", :ochets => "кило", :translit => "kilo", :breakdown => "kilo-Ø", :underlying => "ki{f}lo{b+}-Ø" },
+                { :stem => "*funt", :eng => "pound", :ochets => "фунт", :translit => "funt", :breakdown => "funt-Ø", :underlying => "fu{b+}nt-Ø" },
+                { :stem => "*ptele", :eng => "bottle", :ochets => "птеле", :translit => "ptele", :breakdown => "ptele-Ø", :underlying => "pte{f}le{f+}-Ø" } ]
+    = render 'noun_declension', :title => "Loaned", :forms => forms
+
+  = section "Objective Case" do
+    %table.nounendings
+      %tr
+        %th C-Final
+        %th V-Final
+      %tr
+        %td
+          = underlying("-Ì")
+          %br
+          (-i, -y)
+        %td
+          = underlying("-I, -Ø")
+          %br
+          (-i, -y, -Ø)
+    %p The objective case of all quantifiers is formed with the strong ending #{underlying "*-Ì"} (-i for front-vowel stems and -y for back-vowel stems, though see the note below). With C-Final stems, this is perfectly regular (though CVCVC stems may contract to CVCC); with V-Final stems, however, either the final vowel of the stem or the objective ending will drop. If the stem ends in /i(ː)/ or /ɨ(ː)/, it and the objective ending will fuse together as /iː/ or /ɨː/. If the stem ends in /u(ː)/ or /y(ː)/, the objective ending becomes zero (and so the nominative and objective will be identical). In all other cases, the final vowel of the stem will drop and the objective ending will be added normally. If the stem ends in a falling diphthong, it will be treated as though it ends in a consonantal /j/ or /w/.
+    %p The -I ending when added to a C-final stem will usually trigger fronting ablaut in native monosyllabic roots (that is, back vowels will shift to their front counterparts), and which may trigger secondary consonant palatalization as well. This process does not affect polysyllabic roots, loanwords, and most ad-hoc quantifiers.
+    - forms = [ { :stem => "*kan", :eng => "many", :ochets => "чени", :translit => "čeni", :breakdown => "čen-i", :underlying => "ka{b→f}n-Ì{f+}" },
+                { :stem => "*as", :eng => "all", :ochets => "һеси", :translit => "hesi", :breakdown => "hes-i", :underlying => "a{b→f}s-Ì{f+}" },
+                { :stem => "*kyn", :eng => "two", :ochets => "чини", :translit => "čini", :breakdown => "čin-i", :underlying => "ky{b→f}n-Ì{f+}" },
+                { :stem => "*lan", :eng => "handful", :ochets => "ланы", :translit => "lany", :breakdown => "lan-y", :underlying => "la{b+}n-Ì{b}" } ]
+    = render 'noun_declension', :title => "Native", :forms => forms
+    - forms = [ { :stem => "*liitr", :eng => "liter", :ochets => "лиитри", :translit => "liitri", :breakdown => "liitr-i", :underlying => "lii{f+}tr-Ì{f+}" },
+                { :stem => "*kilo", :eng => "kilogram", :ochets => "кило", :translit => "kilo", :breakdown => "kilo-Ø", :underlying => "ki{f}lo{b+}-Ì{0}" },
+                { :stem => "*funt", :eng => "pound", :ochets => "фунты", :translit => "funty", :breakdown => "funt-y", :underlying => "fu{b+}nt-Ì{b}" },
+                { :stem => "*ptele", :eng => "bottle", :ochets => "птели", :translit => "pteli", :breakdown => "ptel-i", :underlying => "pte{f+}le{0}-Ì{f+}" } ]
+    = render 'noun_declension', :title => "Loaned", :forms => forms
+
+  = section "Genitive and Ablative Cases" do
+    %table.nounendings
+      %tr
+        %th C-Final
+        %th V-Final
+      %tr
+        %td
+          = underlying("-Ìd")
+          %br
+          (-id, -yd)
+        %td
+          = underlying("-Ìd, -d")
+          %br
+          (-id, -yd, -d)
+    %p The genitive and ablative cases are identical for quantifiers. They are formed with the suffix #{underlying "*-Ìd"}. With C-final stems, it is added regularly and may trigger ablaut and palatalization as described above. With V-final stems, the same rules of truncation apply: if the stem ends in /i(ː)/ or /ɨ(ː)/, it and the genitive ending merge into /iːd/ or /ɨːd/; if the stem ends in /o(ː)/ or /u(ː)/, simply -d is added; elsewhere, the final vowel is dropped and the ending #{underlying "*-Ìd"} is added.
+    - forms = [ { :stem => "*kan", :eng => "many", :ochets => "ченид", :translit => "čenid", :breakdown => "čen-id", :underlying => "ka{b→f}n-Ì{f+}d" },
+                { :stem => "*as", :eng => "all", :ochets => "һесид", :translit => "hesid", :breakdown => "hes-id", :underlying => "a{b→f}s-Ì{f+}d" },
+                { :stem => "*kyn", :eng => "two", :ochets => "чинид", :translit => "činid", :breakdown => "čin-id", :underlying => "ky{b→f}n-Ì{f+}d" },
+                { :stem => "*lan", :eng => "handful", :ochets => "ланыд", :translit => "lanyd", :breakdown => "lan-yd", :underlying => "la{b+}n-Ì{b}d" } ]
+    = render 'noun_declension', :title => "Native", :forms => forms
+    - forms = [ { :stem => "*liitr", :eng => "liter", :ochets => "лиитрид", :translit => "liitrid", :breakdown => "liitr-id", :underlying => "lii{f+}tr-Ì{f+}d" },
+                { :stem => "*kilo", :eng => "kilogram", :ochets => "килод", :translit => "kilod", :breakdown => "kilo-d", :underlying => "ki{f}lo{b+}-Ì{0}d" },
+                { :stem => "*funt", :eng => "pound", :ochets => "фунтыд", :translit => "funtyd", :breakdown => "funt-yd", :underlying => "fu{b+}nt-Ì{b}d" },
+                { :stem => "*ptele", :eng => "bottle", :ochets => "птелид", :translit => "ptelid", :breakdown => "ptel-id", :underlying => "pte{f+}le{0}-Ì{f+}d" } ]
+    = render 'noun_declension', :title => "Loaned", :forms => forms
+    %p Many younger speakers, however, will actually preserve the /i/ after /a e o ø/ (that is, vowels that can form a diphthong with /i/): #{t "килоид", "kiloid"}. This is considered nonstandard.
+
+  = section "Instrumental Case" do
+    %table.nounendings
+      %tr
+        %th C-Final
+        %th V-Final
+      %tr
+        %td
+          = underlying("-Ìs")
+          %br
+          (-is, -ys)
+        %td
+          = underlying("-Is, -s")
+          %br
+          (-is, -ys, -s)
+    %p The instrumental is formed with the suffix #{underlying "*-Ìs"}. It functions in exactly the same way as the genitive, including the colloquial habit of keeping the /i/ after certain vowels.
+    - forms = [ { :stem => "*kan", :eng => "many", :ochets => "ченис", :translit => "čenis", :breakdown => "čen-is", :underlying => "ka{b→f}n-Ì{f+}s" },
+                { :stem => "*as", :eng => "all", :ochets => "һесис", :translit => "hesis", :breakdown => "hes-is", :underlying => "a{b→f}s-Ì{f+}s" },
+                { :stem => "*kyn", :eng => "two", :ochets => "чинис", :translit => "činis", :breakdown => "čin-is", :underlying => "ky{b→f}n-Ì{f+}s" },
+                { :stem => "*lan", :eng => "handful", :ochets => "ланыс", :translit => "lanys", :breakdown => "lan-ys", :underlying => "la{b+}n-Ì{b}s" } ]
+    = render 'noun_declension', :title => "Native", :forms => forms
+    - forms = [ { :stem => "*liitr", :eng => "liter", :ochets => "лиитрис", :translit => "liitris", :breakdown => "liitr-is", :underlying => "lii{f+}tr-Ì{f+}s" },
+                { :stem => "*kilo", :eng => "kilogram", :ochets => "килос", :translit => "kilos", :breakdown => "kilo-s", :underlying => "ki{f}lo{b+}-Ì{0}s" },
+                { :stem => "*funt", :eng => "pound", :ochets => "фунтыс", :translit => "funtys", :breakdown => "funt-ys", :underlying => "fu{b+}nt-Ì{b}s" },
+                { :stem => "*ptele", :eng => "bottle", :ochets => "птелис", :translit => "ptelis", :breakdown => "ptel-is", :underlying => "pte{f+}le{0}-Ì{f+}s" } ]
+    = render 'noun_declension', :title => "Loaned", :forms => forms
+
+  = section "Locative and Lative Cases" do
+    %table.nounendings
+      %tr
+        %th C-Final
+        %th V-Final
+      %tr
+        %td
+          = underlying("-lA")
+          %br
+          (-la, -le)
+        %td
+          = underlying("-lA")
+          %br
+          (-la, -le)
+    %p The locative and lative cases merge in the quantifier declension, taking the ending #{underlying "*-lA"}. This ending does not trigger any ablaut or truncation, but when added to a C-final stem, it may undergo sandhi. CVCVC roots will generally not undergo any sort of contraction. A schwa is inserted after the stem if it ends in a consonant cluster.
+    - forms = [ { :stem => "*kan", :eng => "many", :ochets => "калла", :translit => "kalla", :breakdown => "kal-la", :underlying => "ka{b+}n-lA{b}" },
+                { :stem => "*as", :eng => "all", :ochets => "һасла", :translit => "hasla", :breakdown => "has-la", :underlying => "a{b+}s-lA{b}" },
+                { :stem => "*kyn", :eng => "two", :ochets => "кылла", :translit => "kylla", :breakdown => "kyl-la", :underlying => "ky{b+}n-lA{b}" },
+                { :stem => "*lan", :eng => "handful", :ochets => "лалла", :translit => "lalla", :breakdown => "lal-la", :underlying => "la{b+}n-lA{b}" } ]
+    = render 'noun_declension', :title => "Native", :forms => forms
+    - forms = [ { :stem => "*liitr", :eng => "liter", :ochets => "лиитрәле", :translit => "liitrəle", :breakdown => "liitr-əle", :underlying => "lii{f+}tr-lA{f}" },
+                { :stem => "*kilo", :eng => "kilogram", :ochets => "килола", :translit => "kilola", :breakdown => "kilo-la", :underlying => "ki{f}lo{b+}-lA{b}" },
+                { :stem => "*funt", :eng => "pound", :ochets => "фунтәла", :translit => "funtəla", :breakdown => "funt-əla", :underlying => "fu{b+}nt-lA{b}" },
+                { :stem => "*ptele", :eng => "bottle", :ochets => "птелеле", :translit => "ptelele", :breakdown => "ptele-le", :underlying => "pte{f}le{f+}-lA{f}" } ]
+    = render 'noun_declension', :title => "Loaned", :forms => forms
+
+  = section "Translative Case" do
+    %table.nounendings
+      %tr
+        %th C-Final
+        %th V-Final
+      %tr
+        %td
+          = underlying("-nA")
+          %br
+          (-na, -ne)
+        %td
+          = underlying("-nA")
+          %br
+          (-na, -ne)
+    %p The translative is formed with the ending #{underlying "*-nA"}, which behaves in the same manner as the locative/lative.
+    - forms = [ { :stem => "*kan", :eng => "many", :ochets => "канна", :translit => "kanna", :breakdown => "kan-na", :underlying => "ka{b+}n-nA{b}" },
+                { :stem => "*as", :eng => "all", :ochets => "һазна", :translit => "hazna", :breakdown => "haz-na", :underlying => "a{b+}s-nA{b}" },
+                { :stem => "*kyn", :eng => "two", :ochets => "кынна", :translit => "kynna", :breakdown => "kyn-na", :underlying => "ky{b+}n-nA{b}" },
+                { :stem => "*lan", :eng => "handful", :ochets => "ланна", :translit => "lanna", :breakdown => "lan-na", :underlying => "la{b+}n-nA{b}" } ]
+    = render 'noun_declension', :title => "Native", :forms => forms
+    - forms = [ { :stem => "*liitr", :eng => "liter", :ochets => "лиитрәне", :translit => "liitrəne", :breakdown => "liitr-əne", :underlying => "lii{f+}tr-nA{f}" },
+                { :stem => "*kilo", :eng => "kilogram", :ochets => "килона", :translit => "kilona", :breakdown => "kilo-na", :underlying => "ki{f}lo{b+}-nA{b}" },
+                { :stem => "*funt", :eng => "pound", :ochets => "фунтәна", :translit => "funtəna", :breakdown => "funt-əna", :underlying => "fu{b+}nt-nA{b}" },
+                { :stem => "*ptele", :eng => "bottle", :ochets => "птелене", :translit => "ptelene", :breakdown => "ptele-ne", :underlying => "pte{f}le{f+}-nA{f}" } ]
+    = render 'noun_declension', :title => "Loaned", :forms => forms
+
+  = section "Summary of Quantifier Declension" do
+    %table.noundecl
+      %tr
+        %th
+        %th *kan<br>“many”
+        %th *as<br>“all”
+        %th *kyn<br>“two”
+        %th *lan<br>“handful”
+        %th *liitr<br>“liter”
+        %th *kilo<br>“kilogram”
+        %th *funt<br>“pound”
+        %th *ptele<br>“bottle”
+      %tr
+        %th Nom
+        %td
+          = t("кан", "kan", :linebreak => true)
+          %br
+          %i kan-Ø
+          %br
+          = underlying("ka{b+}n-Ø")
+        %td
+          = t("һас", "has", :linebreak => true)
+          %br
+          %i as-Ø
+          %br
+          = underlying("a{b+}s-Ø")
+        %td
+          = t("кын", "kyn", :linebreak => true)
+          %br
+          %i kyn-Ø
+          %br
+          = underlying("ky{b+}n-Ø")
+        %td
+          = t("лан", "lan", :linebreak => true)
+          %br
+          %i lan-Ø
+          %br
+          = underlying("la{b+}n-Ø")
+        %td
+          = t("лиитәр", "liitər", :linebreak => true)
+          %br
+          %i liitər-Ø
+          %br
+          = underlying("lii{f+}tr-Ø")
+        %td
+          = t("кило", "kilo", :linebreak => true)
+          %br
+          %i kilo-Ø
+          %br
+          = underlying("ki{f}lo{b+}-Ø")
+        %td
+          = t("фунт", "funt", :linebreak => true)
+          %br
+          %i funt-Ø
+          %br
+          = underlying("fu{b+}nt-Ø")
+        %td
+          = t("птеле", "ptele", :linebreak => true)
+          %br
+          %i ptele-Ø
+          %br
+          = underlying("pte{f}le{f+}-Ø")
+      %tr
+        %th Obj
+        %td
+          = t("чени", "čeni", :linebreak => true)
+          %br
+          %i čen-i
+          %br
+          = underlying("ka{b→f}n-Ì{f+}")
+        %td
+          = t("һеси", "hesi", :linebreak => true)
+          %br
+          %i hes-i
+          %br
+          = underlying("a{b→f}s-Ì{f+}")
+        %td
+          = t("чини", "čini", :linebreak => true)
+          %br
+          %i čin-i
+          %br
+          = underlying("ky{b→f}n-Ì{f+}")
+        %td
+          = t("ланы", "lany", :linebreak => true)
+          %br
+          %i lan-i
+          %br
+          = underlying("la{b+}n-Ì{b}")
+        %td
+          = t("лиитри", "liitri", :linebreak => true)
+          %br
+          %i liitr-i
+          %br
+          = underlying("lii{f+}tr-Ì{f+}")
+        %td
+          = t("кило", "kilo", :linebreak => true)
+          %br
+          %i kilo-Ø
+          %br
+          = underlying("ki{f}lo{b+}-Ì{0}")
+        %td
+          = t("фунты", "funty", :linebreak => true)
+          %br
+          %i funt-y
+          %br
+          = underlying("fu{b+}nt-Ì{b}")
+        %td
+          = t("птели", "pteli", :linebreak => true)
+          %br
+          %i ptel-i
+          %br
+          = underlying("pte{f+}le{0}-Ì{f+}")
+      %tr
+        %th Gen
+        %td
+          = t("ченид", "čenid", :linebreak => true)
+          %br
+          %i čen-id
+          %br
+          = underlying("ka{b→f}n-Ì{f+}d")
+        %td
+          = t("һесид", "hesid", :linebreak => true)
+          %br
+          %i hes-id
+          %br
+          = underlying("a{b→f}s-Ì{f+}d")
+        %td
+          = t("чинид", "činid", :linebreak => true)
+          %br
+          %i čin-id
+          %br
+          = underlying("ky{b→f}n-Ì{f+}d")
+        %td
+          = t("ланыд", "lanyd", :linebreak => true)
+          %br
+          %i lan-yd
+          %br
+          = underlying("la{b+}n-Ì{b}d")
+        %td
+          = t("лиитрид", "liitrid", :linebreak => true)
+          %br
+          %i liitr-id
+          %br
+          = underlying("lii{f+}tr-Ì{f+}d")
+        %td
+          = t("килод", "kilod", :linebreak => true)
+          %br
+          %i kilo-d
+          %br
+          = underlying("ki{f}lo{b+}-Ì{0}d")
+        %td
+          = t("фунтыд", "funtyd", :linebreak => true)
+          %br
+          %i funt-yd
+          %br
+          = underlying("fu{b+}nt-Ì{b}d")
+        %td
+          = t("птелид", "ptelid", :linebreak => true)
+          %br
+          %i ptel-id
+          %br
+          = underlying("pte{f+}le{0}-Ì{f+}d")
+      %tr
+        %th Ins
+        %td
+          = t("ченис", "čenis", :linebreak => true)
+          %br
+          %i čen-is
+          %br
+          = underlying("ka{b→f}n-Ì{f+}s")
+        %td
+          = t("һесис", "hesis", :linebreak => true)
+          %br
+          %i hes-is
+          %br
+          = underlying("a{b→f}s-Ì{f+}s")
+        %td
+          = t("чинис", "činis", :linebreak => true)
+          %br
+          %i čin-is
+          %br
+          = underlying("ky{b→f}n-Ì{f+}s")
+        %td
+          = t("ланыс", "lanys", :linebreak => true)
+          %br
+          %i lan-ys
+          %br
+          = underlying("la{b+}n-Ì{b}s")
+        %td
+          = t("лиитрис", "liitris", :linebreak => true)
+          %br
+          %i liitr-is
+          %br
+          = underlying("lii{f+}tr-Ì{f+}s")
+        %td
+          = t("килос", "kilos", :linebreak => true)
+          %br
+          %i kilo-s
+          %br
+          = underlying("ki{f}lo{b+}-Ì{0}s")
+        %td
+          = t("фунтыс", "funtys", :linebreak => true)
+          %br
+          %i funt-ys
+          %br
+          = underlying("fu{b+}nt-Ì{b}s")
+        %td
+          = t("птелис", "ptelis", :linebreak => true)
+          %br
+          %i ptel-is
+          %br
+          = underlying("pte{f+}le{0}-Ì{f+}s")
+      %tr
+        %th Loc
+        %td
+          = t("калла", "kalla", :linebreak => true)
+          %br
+          %i kal-la
+          %br
+          = underlying("ka{b+}n-lA{b}")
+        %td
+          = t("һасла", "hasla", :linebreak => true)
+          %br
+          %i has-la
+          %br
+          = underlying("a{b+}s-lA{b}")
+        %td
+          = t("кылла", "kylla", :linebreak => true)
+          %br
+          %i kyl-la
+          %br
+          = underlying("ky{b+}n-lA{b}")
+        %td
+          = t("лалла", "lalla", :linebreak => true)
+          %br
+          %i lal-la
+          %br
+          = underlying("la{b+}n-lA{b}")
+        %td
+          = t("лиитрәле", "liitrəle", :linebreak => true)
+          %br
+          %i liitr-əle
+          %br
+          = underlying("lii{f+}tr-lA{f}")
+        %td
+          = t("килола", "kilola", :linebreak => true)
+          %br
+          %i kilo-la
+          %br
+          = underlying("ki{f}lo{b+}-lA{b}")
+        %td
+          = t("фунтәла", "funtəla", :linebreak => true)
+          %br
+          %i funt-əla
+          %br
+          = underlying("fu{b+}nt-lA{b}")
+        %td
+          = t("птелеле", "ptelele", :linebreak => true)
+          %br
+          %i ptele-le
+          %br
+          = underlying("pte{f}le{f+}-lA{f}")
+      %tr
+        %th Lat
+        %td
+          = t("калла", "kalla", :linebreak => true)
+          %br
+          %i kal-la
+          %br
+          = underlying("ka{b+}n-lA{b}")
+        %td
+          = t("һасла", "hasla", :linebreak => true)
+          %br
+          %i has-la
+          %br
+          = underlying("a{b+}s-lA{b}")
+        %td
+          = t("кылла", "kylla", :linebreak => true)
+          %br
+          %i kyl-la
+          %br
+          = underlying("ky{b+}n-lA{b}")
+        %td
+          = t("лалла", "lalla", :linebreak => true)
+          %br
+          %i lal-la
+          %br
+          = underlying("la{b+}n-lA{b}")
+        %td
+          = t("лиитрәле", "liitrəle", :linebreak => true)
+          %br
+          %i liitr-əle
+          %br
+          = underlying("lii{f+}tr-lA{f}")
+        %td
+          = t("килола", "kilola", :linebreak => true)
+          %br
+          %i kilo-la
+          %br
+          = underlying("ki{f}lo{b+}-lA{b}")
+        %td
+          = t("фунтәла", "funtəla", :linebreak => true)
+          %br
+          %i funt-əla
+          %br
+          = underlying("fu{b+}nt-lA{b}")
+        %td
+          = t("птелеле", "ptelele", :linebreak => true)
+          %br
+          %i ptele-le
+          %br
+          = underlying("pte{f}le{f+}-lA{f}")
+      %tr
+        %th Tra
+        %td
+          = t("канна", "kanna", :linebreak => true)
+          %br
+          %i kan-na
+          %br
+          = underlying("ka{b+}n-nA{b}")
+        %td
+          = t("һазна", "hazna", :linebreak => true)
+          %br
+          %i haz-na
+          %br
+          = underlying("a{b+}s-nA{b}")
+        %td
+          = t("кынна", "kynna", :linebreak => true)
+          %br
+          %i kyn-na
+          %br
+          = underlying("ky{b+}n-nA{b}")
+        %td
+          = t("ланна", "lanna", :linebreak => true)
+          %br
+          %i lan-na
+          %br
+          = underlying("la{b+}n-nA{b}")
+        %td
+          = t("лиитрәне", "liitrəne", :linebreak => true)
+          %br
+          %i liitr-əne
+          %br
+          = underlying("lii{f+}tr-nA{f}")
+        %td
+          = t("килона", "kilona", :linebreak => true)
+          %br
+          %i kilo-na
+          %br
+          = underlying("ki{f}lo{b+}-nA{b}")
+        %td
+          = t("фунтәна", "funtəna", :linebreak => true)
+          %br
+          %i funt-əna
+          %br
+          = underlying("fu{b+}nt-nA{b}")
+        %td
+          = t("птелене", "ptelene", :linebreak => true)
+          %br
+          %i ptele-ne
+          %br
+          = underlying("pte{f}le{f+}-nA{f}")
+      %tr
+        %th Abl
+        %td
+          = t("ченид", "čenid", :linebreak => true)
+          %br
+          %i čen-id
+          %br
+          = underlying("ka{b→f}n-Ì{f+}d")
+        %td
+          = t("һесид", "hesid", :linebreak => true)
+          %br
+          %i hes-id
+          %br
+          = underlying("a{b→f}s-Ì{f+}d")
+        %td
+          = t("чинид", "činid", :linebreak => true)
+          %br
+          %i čin-id
+          %br
+          = underlying("ky{b→f}n-Ì{f+}d")
+        %td
+          = t("ланыд", "lanyd", :linebreak => true)
+          %br
+          %i lan-yd
+          %br
+          = underlying("la{b+}n-Ì{b}d")
+        %td
+          = t("лиитрид", "liitrid", :linebreak => true)
+          %br
+          %i liitr-id
+          %br
+          = underlying("lii{f+}tr-Ì{f+}d")
+        %td
+          = t("килод", "kilod", :linebreak => true)
+          %br
+          %i kilo-d
+          %br
+          = underlying("ki{f}lo{b+}-Ì{0}d")
+        %td
+          = t("фунтыд", "funtyd", :linebreak => true)
+          %br
+          %i funt-yd
+          %br
+          = underlying("fu{b+}nt-Ì{b}d")
+        %td
+          = t("птелид", "ptelid", :linebreak => true)
+          %br
+          %i ptel-id
+          %br
+          = underlying("pte{f+}le{0}-Ì{f+}d")
+
+= section "The Indirective Marker" do
+  %p Quantifiers may take the indirective marker just as nouns do. They use the same suffix, #{underlying "*-A"}, realized as -a in back vowel harmony conditions and -e in front vowel harmony conditions. It is completely regular except in the accusative case, where the accusative ending and the indirective marker fuse into -ee (preserving any ablaut caused by the original accusative ending).
+  %p Following is the complete declension of several of the previously-used example quantifiers including indirective markers.
+  - forms = { :nom => { :cyr => "кана", :lat => "kana" },
+              :obj => { :cyr => "ченее", :lat => "čenee" },
+              :gen => { :cyr => "ченизе", :lat => "čenize" },
+              :ins => { :cyr => "ченише", :lat => "čeniše" },
+              :loc => { :cyr => "каллаа", :lat => "kallaa" },
+              :lat => { :cyr => "каллаа", :lat => "kallaa" },
+              :tra => { :cyr => "каннаа", :lat => "kannaa" },
+              :abl => { :cyr => "ченизе", :lat => "čenize" } }
+  = render 'case_chart', :title => "*kan “many” — Indirective Forms", :forms => forms
+  - forms = { :nom => { :cyr => "һаса", :lat => "hasa" },
+              :obj => { :cyr => "һесее", :lat => "hesee" },
+              :gen => { :cyr => "һесизе", :lat => "hesize" },
+              :ins => { :cyr => "һесише", :lat => "hesiše" },
+              :loc => { :cyr => "һаслаа", :lat => "haslaa" },
+              :lat => { :cyr => "һаслаа", :lat => "haslaa" },
+              :tra => { :cyr => "һазнаа", :lat => "haznaa" },
+              :abl => { :cyr => "һесизе", :lat => "hesize" } }
+  = render 'case_chart', :title => "*as “all” — Indirective Forms", :forms => forms
+  - forms = { :nom => { :cyr => "лана", :lat => "lana" },
+              :obj => { :cyr => "ланее", :lat => "lanee" },
+              :gen => { :cyr => "ланыда", :lat => "lanyda" },
+              :ins => { :cyr => "ланыса", :lat => "lanysa" },
+              :loc => { :cyr => "лаллаа", :lat => "lallaa" },
+              :lat => { :cyr => "лаллаа", :lat => "lallaa" },
+              :tra => { :cyr => "ланнаа", :lat => "lannaa" },
+              :abl => { :cyr => "ланыда", :lat => "lanyda" } }
+  = render 'case_chart', :title => "*lan “handful” — Indirective Forms", :forms => forms
+  %p Note the palatalization that appears in the genitive and instrumental forms when followed by a front vowel.
+
+= section "Declension Switching" do
+  %p The quantifier declension is exclusively used for any word fulfilling the role of a quantifier. Thus, when a common noun (such as “bottle” above) is used as a quantifier, it switches from a nominal to a quantifier paradigm. Conversely, when something normally used as a quantifier is used nominally or pronominally (e.g., “three” → “three [ones], “three [of them]”), it switches to a nominal paradigm. This conversion is generally unproblematic and quite regular, except for some of the oldest roots that have had the time to undergo divergent evolutions (and may have been influenced by other now-lost derivational morphemes).
+
+= section "The Distributive" do
+  %p The distributive is formed with the prefix sa-/se-. It is most often used with numerals and <i>has</i> “all” (which takes on the meaning “every”). When added to a stem beginning with a plosive, a homorganic nasal may be inserted in between. Other irregular alterations may occur, simply due to the age of these forms. In particular the distributive forms of the numeral “two” are based on the stem *ğyyn/ğiin.
+  %p The distributive of <i>has</i> is #{t "саас", "saas"} “every”. The distributive forms of the numerals are shown in section 5.7 below.
+
+= section "List of Quantifiers" do
+  %p These are some of the most common Očets quantifiers. Note that many of the forms distinguish between mass and count nouns, much as in English (less~fewer, some~several, etc.).
+  %ul
+    %li #{t "һас", "has"} ‘all’
+    %li #{t "кан", "kan"} ‘many’ (for count nouns)
+    %li #{t "канча", "kanča"} ‘much, a lot of’ (for mass nouns)
+    %li #{t "нолча", "nolča"} ‘the majority of, most of’
+    %li #{t "һелче", "helče"} ‘the minority of, the lesser part of’
+    %li #{t "қомат", "qomat"} ‘few, a few’ (for count nouns)
+    %li #{t "қомача", "qomača"} ‘little’ (for mass nouns)
+    %li #{t "вен", "wen"} ‘none, no’
+  %ul
+    %li #{t "шеҥ", "šeŋ"} ‘enough’
+    %li #{t "иес", "ies"} ‘the rest of, the remainder of’
+  %ul
+    %li #{t "маккан", "makkan"} ‘more’ (for count nouns)
+    %li #{t "моолс", "mools"} ‘more’ (for mass nouns)<sup>2</sup>
+    %li #{t "менел", "menel"} ‘fewer’ (for count nouns)
+    %li #{t "мениц", "menits"} ‘less’ (for mass nouns)<sup>3</sup>
+  %p There are also several common temporal quantifiers. These are commonly used with infinitives, participles, or other non-finite verbal forms: #{t "наунт тидеус", "naunt tideus"} ‘reading many times’, #{t "венче шавыс", "wenče šawys"} ‘never saying’.
+  %ul
+    %li #{t "наунт", "naunt"} ‘many times, many iterations’
+    %li #{t "шиен", "šien"} ‘several times’
+    %li #{t "тон", "ton"} ‘once, one time’
+    %li #{t "венче", "wenče"} ‘never, no time’
+  %p A small number of quantifiers are phrasal. The first element is the actual quantifier, while the second is separate particle which may appear either before or after the quantified noun:
+  %ul
+    %li #{t "һаҥуды чинакох", "haŋudy činakox"} ‘any amount of’ (for animate nouns)
+    %li #{t "һаҥоды чинакох", "haŋody činakox"} ‘any amount of’ (for inanimate nouns)
+    %li #{t "һаҥоды выс", "haŋody wys"} ‘some’ (for animate nouns)
+    %li #{t "һаҥуды выс", "haŋudy wys"} ‘some’ (for inanimate nouns)
+    %li #{t "һаҥоды қуу", "haŋody quu"} ‘some’ (amount known to speaker; for animate nouns)
+    %li #{t "һаҥуды қуу", "haŋudy quu"} ‘some’ (amount known to speaker; for inanimate nouns)
+  %p Most other quantifiers are clearly denominal. This class is open, and can include such words as:
+  %ul
+    %li #{t "кар", "kar"} ‘cup (of)’
+    %li #{t "цын", "tsyn"} ‘bowl (of)’
+    %li #{t "һеред", "hered"} ‘row (of)’
+    %li #{t "дыдалт", "dydalt"} ‘bundle (of)’
+    %li #{t "чиц", "čits"} ‘generation (of)’ (lit. ‘root’)
+
+= section "Numerals" do
+  = section "Cardinal Quantifying Numerals" do
+    %p The Očets number system is primarily base twenty, although for values over one hundred it uses a mixed decimal/vigesimal system. There are two distinct sets of numerals, one used when counting animate objects and one for inanimate objects.
+    %table.numdecl
+      %tr
+        %th.num 
+        %th.och Animate
+        %th.och Inanimate
+        %th.num 
+        %th.och Animate
+        %th.och Inanimate
+      %tr
+        %th 1
+        %td= t("қуу", "quu", :linebreak => true)
+        %td= t("қуус", "quus", :linebreak => true)
+        %th 11
+        %td= t("һедеҥкәиод", "hedeŋkəiod", :linebreak => true)
+        %td= t("һедеҥкәиос", "hedeŋkəios", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("кынд", "kynd", :linebreak => true)
+        %td= t("кын", "kyn", :linebreak => true)
+        %th 12
+        %td= t("ҕыыҥкәиод", "ǧyyŋkəiod", :linebreak => true)
+        %td= t("ҕыыҥкәиос", "ǧyyŋkəios", :linebreak => true)
+      %tr
+        %th 3
+        %td= t("донд", "dond", :linebreak => true)
+        %td= t("доҥ", "doŋ", :linebreak => true)
+        %th 13
+        %td= t("доҥкәиод", "doŋkəiod", :linebreak => true)
+        %td= t("доҥкәиос", "doŋkəios", :linebreak => true)
+      %tr
+        %th 4
+        %td= t("шеед", "šeed", :linebreak => true)
+        %td= t("шеес", "šees", :linebreak => true)
+        %th 14
+        %td= t("шеекиод", "šeekiod", :linebreak => true)
+        %td= t("шеекиос", "šeekios", :linebreak => true)
+      %tr
+        %th 5
+        %td= t("кеид", "keid", :linebreak => true)
+        %td= t("кеис", "keis", :linebreak => true)
+        %th 15
+        %td= t("кеикиод", "keikiod", :linebreak => true)
+        %td= t("кеикиос", "keikios", :linebreak => true)
+      %tr
+        %th 6
+        %td= t("каад", "kaad", :linebreak => true)
+        %td= t("каац", "kaats", :linebreak => true)
+        %th 16
+        %td= t("каакиод", "kaakiod", :linebreak => true)
+        %td= t("каакиос", "kaakios", :linebreak => true)
+      %tr
+        %th 7
+        %td= t("һаунд", "haund", :linebreak => true)
+        %td= t("һаун", "haun", :linebreak => true)
+        %th 17
+        %td= t("һауҥкәиод", "hauŋkəiod", :linebreak => true)
+        %td= t("һауҥкәиос", "hauŋkəios", :linebreak => true)
+      %tr
+        %th 8
+        %td= t("воуд", "woud", :linebreak => true)
+        %td= t("воус", "wous", :linebreak => true)
+        %th 18
+        %td= t("воукиод", "woukiod", :linebreak => true)
+        %td= t("воукиос", "woukios", :linebreak => true)
+      %tr
+        %th 9
+        %td= t("џеут", "ǰeut", :linebreak => true)
+        %td= t("џеут", "ǰeut", :linebreak => true)
+        %th 19
+        %td= t("џеуткиод", "ǰeutkiod", :linebreak => true)
+        %td= t("џеуткиос", "ǰeutkios", :linebreak => true)
+      %tr
+        %th 10
+        %td= t("иауд", "iaud", :linebreak => true)
+        %td= t("иаус", "iaus", :linebreak => true)
+        %th 20
+        %td= t("һаш", "haš", :linebreak => true)
+        %td= t("һаш", "haš", :linebreak => true)
+    %p All animate and inanimate numerals share a common root. For most numbers, the animate is marked by an affix -d attached to this root, and the inanimate by -s. However, one or both of these affixes may be absent if the phonetic structure of the root does not allow it. The one clear exception is the animate numeral 1, which has no visible barrier to taking the animate suffix -d and becoming *quud, but which nevertheless always appears as a bare root.
+    %p The units 1-10 are for the most part unanalyzable, with no definitive connections to non-quantifier morphemes. The numerals 8 and 9 are of Novegradian origin (#{t "ошми", "óśmi"} and #{t "девити", "déviti"} respectively). The derivation of the teens 11-19, however, is more transparent, although these forms too are old enough that their formation is not completely regular. Generally speaking, they consist of the unit form, a linking morpheme containing /k/, and the suffix -io- (a reduced form of <i>*-iau-</i> “ten”). The incorporated unit appears as a bare root, without final -d or -s, which instead is placed at the end of the compound. The origin of this linking morpheme is unclear, although a connection to the old Očets dative has been suggested. For 11 and 12, the unit incorporated is suppletive; for 11 it is <i>heden</i>, which is a loan from Novegradian #{t "едене", "iédene"} “one”; for 12, it is <i>ǧyyn</i> “pair”, identical to the dual morpheme used by some nouns.
+    %p Note that the more complex numeral stems, as in the teens, do not necessarily show any sort of word-internal harmony.
+    %p Examining higher numbers up through 99 shows a clear vigesimal pattern emerging:
+    %table.numdecl
+      %tr
+        %th.num
+        %th.och Animate
+        %th.och Inanimate
+      %tr
+        %th 10
+        %td= t("иауд", "iaud", :linebreak => true)
+        %td= t("иаус", "iaus", :linebreak => true)
+      %tr
+        %th 20
+        %td= t("һаш", "haš", :linebreak => true)
+        %td= t("һаш", "haš", :linebreak => true)
+      %tr
+        %th 30
+        %td= t("һашылд иауд", "hašyld iaud", :linebreak => true)
+        %td= t("һашылд иаус", "hašyld iaus", :linebreak => true)
+      %tr
+        %th 40
+        %td= t("ҕыын аш", "ǧyyn aš", :linebreak => true)
+        %td= t("ҕыын аш", "ǧyyn aš", :linebreak => true)
+      %tr
+        %th 50
+        %td= t("ҕыылла ашылд иауд", "ǧyylla ašyld iaud", :linebreak => true)
+        %td= t("ҕыылла ашылд иаус", "ǧyylla ašyld iaus", :linebreak => true)
+      %tr
+        %th 60
+        %td= t("донд аш", "dond aš", :linebreak => true)
+        %td= t("доҥ аш", "doŋ aš", :linebreak => true)
+      %tr
+        %th 70
+        %td= t("дондәла ашылд иауд", "dondəla ašyld iaud", :linebreak => true)
+        %td= t("доҕла ашылд иаус", "doǧla ašyld iaus", :linebreak => true)
+      %tr
+        %th 80
+        %td= t("шеед аш", "šeed aš", :linebreak => true)
+        %td= t("шеес аш", "šees aš", :linebreak => true)
+      %tr
+        %th 90
+        %td= t("шеелле ашылд иауд", "šeelle ašyld iaud", :linebreak => true)
+        %td= t("шеесле ашылд иаус", "šeesle ašyld iaus", :linebreak => true)
+    %p All of these forms above 20 are completely transparent. 30 literally reads “10 [that is] on 20”; 40 reads “a pair of 20s”; 50 is “10 [that is] on a pair of 20s”; 60 is “three 20s”; 70 is “10 [that is] on three 20s”; and so on. Whenever the numeral “20” is quantified (i.e., 40 and above), it adopts a reduced form <i>aš</i>, which acts as though it were phonologically part of the preceding word. The animate/inanimate distinction is maintained on both the free numeral (e.g., <i>iaud</i> vs. <i>iaus</i> above) and on the relativized quantifier (although this is only really visible in <i>dond/doŋ</i> and <i>šeed/šees</i>).
+    %p All other natural numbers up to 99 are formed by placing the appropriate digit 1-19 after the proper relativized form:
+    %table.numdecl
+      %tr
+        %th.num
+        %th.och Animate
+        %th.och Inanimate
+        %th.och Literal
+      %tr
+        %th 21
+        %td= t("һашылд қуу", "hašyld quu", :linebreak => true)
+        %td= t("һашылд қуус", "hašyld quus", :linebreak => true)
+        %td “one that is on twenty”
+      %tr
+        %th 22
+        %td= t("һашылд кынд", "hašyld kynd", :linebreak => true)
+        %td= t("һашылд кын", "hašyld kyn", :linebreak => true)
+        %td “two that is on twenty”
+      %tr
+        %th 25
+        %td= t("һашылд кеид", "hašyld keid", :linebreak => true)
+        %td= t("һашылд кеис", "hašyld keis", :linebreak => true)
+        %td “five that is on twenty”
+      %tr
+        %th 31
+        %td= t("һашылд һедеҥкәиод", "hašyld hedeŋkəiod", :linebreak => true)
+        %td= t("һашылд һедеҥкәиос", "hašyld hedeŋkəios", :linebreak => true)
+        %td “eleven that is on twenty”
+      %tr
+        %th 48
+        %td= t("ҕыылла ашылд воуд", "ǧyylla ašyld woud", :linebreak => true)
+        %td= t("ҕыылла ашылд воус", "ǧyylla ašyld wous", :linebreak => true)
+        %td “eight that is on a pair of twenties”
+      %tr
+        %th 58
+        %td= t("ҕыылла ашылд воукиод", "ǧyylla ašyld woukiod", :linebreak => true)
+        %td= t("ҕыылла ашылд воукиос", "ǧyylla ašyld woukios", :linebreak => true)
+        %td “eighteen that is on a pair of twenties”
+      %tr
+        %th 67
+        %td= t("дондәла ашылд һаунд", "dondəla ašyld haund", :linebreak => true)
+        %td= t("доҕла ашылд һаун", "doǧla ašyld haun", :linebreak => true)
+        %td “seven that is on three twenties”
+      %tr
+        %th 99
+        %td= t("шеелле ашылд џеуткиод", "šeelle ašyld ǰeutkiod", :linebreak => true)
+        %td= t("шеесле ашылд џеуткиос", "šeesle ašyld ǰeutkios", :linebreak => true)
+        %td “nineteen that is on four twenties”
+    %p For 100 and above, Očets speakers use either forms calqued from Novegradian (based on the noun/quantifiers #{t "сот", "sot"} “hundred” and #{t "тыышт", "tyyšt"} “thousand”, which are themselves Novegradian loans) or loaned Novegradian forms themselves. The latter lack an animate/inanimate distinction.
+    %table.numdecl
+      %tr
+        %th.num
+        %th.och Calqued<br>(Animate)
+        %th.och Calqued<br>(Inanimate)
+        %th.och Loaned
+      %tr
+        %th 100
+        %td= t("сот", "sot", :linebreak => true)
+        %td= t("сот", "sot", :linebreak => true)
+        %td= t("сот", "sot", :linebreak => true)
+      %tr
+        %th 200
+        %td= t("кынд сот", "kynd sot", :linebreak => true)
+        %td= t("кын сот", "kyn sot", :linebreak => true)
+        %td= t("дуест", "duest", :linebreak => true)
+      %tr
+        %th 300
+        %td= t("донд сот", "dond sot", :linebreak => true)
+        %td= t("доҥ сот", "doŋ sot", :linebreak => true)
+        %td= t("триист", "triist", :linebreak => true)
+      %tr
+        %th 400
+        %td= t("шеед сот", "šeed sot", :linebreak => true)
+        %td= t("шеес сот", "šees sot", :linebreak => true)
+        %td= t("цеетрест", "tseetrest", :linebreak => true)
+      %tr
+        %th 500
+        %td= t("кеид сот", "keid sot", :linebreak => true)
+        %td= t("кеис сот", "keis sot", :linebreak => true)
+        %td= t("пицоот", "pitsoot", :linebreak => true)
+      %tr
+        %th 600
+        %td= t("каад сот", "kaad sot", :linebreak => true)
+        %td= t("каац сот", "kaats sot", :linebreak => true)
+        %td= t("сестоот", "sestoot", :linebreak => true)
+      %tr
+        %th 700
+        %td= t("һаунд сот", "haund sot", :linebreak => true)
+        %td= t("һаун сот", "haun sot", :linebreak => true)
+        %td= t("сенцоот", "sentsoot", :linebreak => true)
+      %tr
+        %th 800
+        %td= t("воуд сот", "woud sot", :linebreak => true)
+        %td= t("воус сот", "wous sot", :linebreak => true)
+        %td= t("һосцоот", "hostsoot", :linebreak => true)
+      %tr
+        %th 900
+        %td= t("џеут сот", "ǰeut sot", :linebreak => true)
+        %td= t("џеут сот", "ǰeut sot", :linebreak => true)
+        %td= t("деуцоот", "deutsoot", :linebreak => true)
+      %tr
+        %th 1000
+        %td= t("тыышт", "tyyšt", :linebreak => true)
+        %td= t("тыышт", "tyyšt", :linebreak => true)
+        %td= t("тыышт", "tyyšt", :linebreak => true)
+    %p Tens and units are placed in apposition immediately after the hundred or thousand. There is no coordination or subordination of any sort present between the hundreds and smaller units, a result of calquing the Novegradian construction: #{t "кынд сот, ҕыылла ашылд иауд", "kynd sot, ǧyylla ašyld iaud"} “two hundred fifty (animate)” (cf. Novegradian дуѣсти пиздешити).
+    %p The only possible trace of the true vigesimal system that can be seen in numbers over 100 is the expression #{t "һаш аш", "haš aš"} (lit. “twenty twenties”), which nowadays is used to refer to a very large quantity of something and not the specific number 400.
+
+  = section "Declension" do
+    %p With numbers below 100, all elements of complex numbers take case endings except for the locative form ашылд “that is on twenty”, which here is serving as a noun and not a quantifier. However, while the even multiples of twenty (40, 60, 80) should properly decline both elements, younger speakers have a tendency to treat it as a single unit: #{t "гыылла ашла X", "ǧyylla ašla"} (older), #{t "ҕыынашла X", "ǧyynašla"} (newer) “twenty X (#{abbrev 'loc'})”.
+    %p The numerals “one”, “two”, “three”, “six”, “seven”, “ten”, and “twenty” all undergo ablaut when the objective, genitive/ablative, or instrumental endings are added, as is common with many quantifiers. Below are these five numerals (both animate and inanimate) in the nominative case without ablaut and the objective case with ablaut:
+    %table.numdecl
+      %tr
+        %th.num
+        %th.och Animate<br>Nominative
+        %th.och Animate<br>Objective
+        %th.num
+        %th.och Inanimate<br>Nominative
+        %th.och Inanimate<br>Objective
+      %tr
+        %th 1
+        %td= t("қуу", "quu", :linebreak => true)
+        %td= t("қүү", "qüü", :linebreak => true)
+        %th 1
+        %td= t("қуус", "quus", :linebreak => true)
+        %td= t("қүүси", "qüüsi", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("кынд", "kynd", :linebreak => true)
+        %td= t("чинди", "čindi", :linebreak => true)
+        %th 2
+        %td= t("кын", "kyn", :linebreak => true)
+        %td= t("чини", "čini", :linebreak => true)
+      %tr
+        %th 3
+        %td= t("донд", "dond", :linebreak => true)
+        %td= t("дөнди", "döndi", :linebreak => true)
+        %th 3
+        %td= t("доҥ", "doŋ", :linebreak => true)
+        %td= t("дөҥи", "döŋi", :linebreak => true)
+      %tr
+        %th 6
+        %td= t("каад", "kaad", :linebreak => true)
+        %td= t("чееди", "čeedi", :linebreak => true)
+        %th 6
+        %td= t("каац", "kaats", :linebreak => true)
+        %td= t("чееци", "čeetsi", :linebreak => true)
+      %tr
+        %th 7
+        %td= t("һаунд", "haund", :linebreak => true)
+        %td= t("һеунди", "heundi", :linebreak => true)
+        %th 7
+        %td= t("һаун", "haun", :linebreak => true)
+        %td= t("һеуни", "heuni", :linebreak => true)
+      %tr
+        %th 10
+        %td= t("иауд", "iaud", :linebreak => true)
+        %td= t("иеуди", "ieudi", :linebreak => true)
+        %th 10
+        %td= t("иаус", "iaus", :linebreak => true)
+        %td= t("иеуси", "ieusi", :linebreak => true)
+      %tr
+        %th 20
+        %td= t("һаш", "haš", :linebreak => true)
+        %td= t("һеши", "heši", :linebreak => true)
+        %th 20
+        %td= t("һаш", "haš", :linebreak => true)
+        %td= t("һеши", "heši", :linebreak => true)
+    %p Similarly, the reduced form of “twenty” seen in higher numbers becomes #{t "еш-", "eš-"}.
+
+  = section "Other Numeral Forms" do
+    %p In addition to the quantifying numerals, there also exist what are known as “nominal numerals”. As discussed above, the quantifier forms are used when directly quantifying something (e.g., “three chairs”). The nominal numerals, which decline as animate or inanimate nouns, are used more like pronouns, when the quantified object is implied or indirectly quantified (e.g., “I have three” or “the three of them”). Although they may take either animate or inanimate noun endings, they share a single set of stems for both, which are almost always identical to the inanimate quantifier stems.
+    %table.numdecl
+      %tr
+        %th.num
+        %th.och Nominal
+        %th.och Inanimate<br>Quantifier
+        %th.num
+        %th.och Nominal
+        %th.och Inanimate<br>Quantifier
+      %tr
+        %th 1
+        %td= t("һеден", "heden", :linebreak => true)
+        %td= t("қуус", "quus", :linebreak => true)
+        %th 11
+        %td= t("һедеҥкәиос", "hedeŋkəios", :linebreak => true)
+        %td= t("һедеҥкәиос", "hedeŋkəios", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("ҕыын", "ǧyyn", :linebreak => true)
+        %td= t("кын", "kyn", :linebreak => true)
+        %th 12
+        %td= t("ҕыыҥкәиос", "ǧyyŋkəios", :linebreak => true)
+        %td= t("ҕыыҥкәиос", "ǧyyŋkəios", :linebreak => true)
+      %tr
+        %th 3
+        %td= t("доҥ", "doŋ", :linebreak => true)
+        %td= t("доҥ", "doŋ", :linebreak => true)
+        %th 13
+        %td= t("доҥкәиос", "doŋkəios", :linebreak => true)
+        %td= t("доҥкәиос", "doŋkəios", :linebreak => true)
+      %tr
+        %th 4
+        %td= t("шеес", "šees", :linebreak => true)
+        %td= t("шеес", "šees", :linebreak => true)
+        %th 14
+        %td= t("шеекиос", "šeekios", :linebreak => true)
+        %td= t("шеекиос", "šeekios", :linebreak => true)
+      %tr
+        %th 5
+        %td= t("кеис", "keis", :linebreak => true)
+        %td= t("кеис", "keis", :linebreak => true)
+        %th 15
+        %td= t("кеикиос", "keikios", :linebreak => true)
+        %td= t("кеикиос", "keikios", :linebreak => true)
+      %tr
+        %th 6
+        %td= t("каац", "kaats", :linebreak => true)
+        %td= t("каац", "kaats", :linebreak => true)
+        %th 16
+        %td= t("каакиос", "kaakios", :linebreak => true)
+        %td= t("каакиос", "kaakios", :linebreak => true)
+      %tr
+        %th 7
+        %td= t("һаун", "haun", :linebreak => true)
+        %td= t("һаун", "haun", :linebreak => true)
+        %th 17
+        %td= t("һауҥкәиос", "hauŋkəios", :linebreak => true)
+        %td= t("һауҥкәиос", "hauŋkəios", :linebreak => true)
+      %tr
+        %th 8
+        %td= t("воус", "wous", :linebreak => true)
+        %td= t("воус", "wous", :linebreak => true)
+        %th 18
+        %td= t("воукиос", "woukios", :linebreak => true)
+        %td= t("воукиос", "woukios", :linebreak => true)
+      %tr
+        %th 9
+        %td= t("џеут", "ǰeut", :linebreak => true)
+        %td= t("џеут", "ǰeut", :linebreak => true)
+        %th 19
+        %td= t("џеуткиос", "ǰeutkios", :linebreak => true)
+        %td= t("џеуткиос", "ǰeutkios", :linebreak => true)
+      %tr
+        %th 10
+        %td= t("иаус", "iaus", :linebreak => true)
+        %td= t("иаус", "iaus", :linebreak => true)
+        %th 20
+        %td= t("һаш", "haš", :linebreak => true)
+        %td= t("һаш", "haš", :linebreak => true)
+    %p The main exceptions are the numerals 1 and 2, which use suppletive stems.
+    %p The distributive forms will be included in the following tables due to their irregularity:
+    %table.numdecl
+      %tr
+        %th{:colspan => 4} Animate Distributive Numerals
+        %th{:colspan => 4} Inanimate Distributive Numerals
+      %tr
+        %th.num 1
+        %td.och= t("саҥқуу", "saŋquu", :linebreak => true)
+        %th.num 11
+        %td.och= t("сеедеҥкәиодаҥ", "seedeŋkəiodaŋ", :linebreak => true)
+        %th.num 1
+        %td.och= t("саҥқуус", "saŋquus", :linebreak => true)
+        %th.num 11
+        %td.och= t("сеедеҥкәиос", "seedeŋkəios", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("саҥкынд", "saŋkynd", :linebreak => true)
+        %th 12
+        %td= t("саҕыыҥкәиодаҥ", "saǧyyŋkəiodaŋ", :linebreak => true)
+        %th 2
+        %td= t("саҥкын", "saŋkyn", :linebreak => true)
+        %th 12
+        %td= t("саҕыыҥкәиос", "saǧyyŋkəios", :linebreak => true)
+      %tr
+        %th 3
+        %td= t("сандондаҥ", "sandondaŋ", :linebreak => true)
+        %th 13
+        %td= t("сандоҥкәиодаҥ", "sandoŋkəiodaŋ", :linebreak => true)
+        %th 3
+        %td= t("сандоҥ", "sandoŋ", :linebreak => true)
+        %th 13
+        %td= t("сандоҥкәиос", "sandoŋkəios", :linebreak => true)
+      %tr
+        %th 4
+        %td= t("сешеедеҥ", "sešeedeŋ", :linebreak => true)
+        %th 14
+        %td= t("сешеекиодаҥ", "sešeekiodaŋ", :linebreak => true)
+        %th 4
+        %td= t("сешеес", "sešees", :linebreak => true)
+        %th 14
+        %td= t("сешеекиос", "sešeekios", :linebreak => true)
+      %tr
+        %th 5
+        %td= t("сеҥкеидеҥ", "seŋkeideŋ", :linebreak => true)
+        %th 15
+        %td= t("сеҥкеикиодаҥ", "seŋkeikiodaŋ", :linebreak => true)
+        %th 5
+        %td= t("сеҥкеис", "seŋkeis", :linebreak => true)
+        %th 15
+        %td= t("сеҥкеикиос", "seŋkeikios", :linebreak => true)
+      %tr
+        %th 6
+        %td= t("саҥкаадаҥ", "saŋkaadaŋ", :linebreak => true)
+        %th 16
+        %td= t("саҥкаакиодаҥ", "saŋkaakiodaŋ", :linebreak => true)
+        %th 6
+        %td= t("саҥкаац", "saŋkaats", :linebreak => true)
+        %th 16
+        %td= t("саҥкаакиос", "saŋkaakios", :linebreak => true)
+      %tr
+        %th 7
+        %td= t("саһаундаҥ", "sahaundaŋ", :linebreak => true)
+        %th 17
+        %td= t("саһауҥкәиодаҥ", "sahauŋkəiodaŋ", :linebreak => true)
+        %th 7
+        %td= t("саһаун", "sahaun", :linebreak => true)
+        %th 17
+        %td= t("саһауҥкәиос", "sahauŋkəios", :linebreak => true)
+      %tr
+        %th 8
+        %td= t("савоудаҥ", "sawoudaŋ", :linebreak => true)
+        %th 18
+        %td= t("савоукиодаҥ", "sawoukiodaŋ", :linebreak => true)
+        %th 8
+        %td= t("савоус", "sawous", :linebreak => true)
+        %th 18
+        %td= t("савоукиос", "sawoukios", :linebreak => true)
+      %tr
+        %th 9
+        %td= t("сенџеутеҥ", "senǰeuteŋ", :linebreak => true)
+        %th 19
+        %td= t("сеџеуткиодаҥ", "seǰeutkiodaŋ", :linebreak => true)
+        %th 9
+        %td= t("сенџеут", "senǰeut", :linebreak => true)
+        %th 19
+        %td= t("сеџеуткиос", "seǰeutkios", :linebreak => true)
+      %tr
+        %th 10
+        %td= t("саиаудаҥ", "saiaudaŋ", :linebreak => true)
+        %th 20
+        %td= t("саашаҥ", "saašaŋ", :linebreak => true)
+        %th 10
+        %td= t("саиаус", "saiaus", :linebreak => true)
+        %th 20
+        %td= t("сааш", "saaš", :linebreak => true)
+    %p For the most part the distributive numerals are formed with the expected distributive prefix sa-/se-. However, there are a few exceptional forms. The most obvious is the additional of a non-palatalizing suffix #{underlying "*-Aŋ"} to all of the animate forms, which would appear to be a plural marker.
+    %p These forms serve as animate and inanimate quantifiers, while the inanimate forms alone can also serve as nouns (taking either animate or inanimate endings as appropriate). The only exceptions are of course the use of #{t "сееден", "seeden"} and #{t "саҕыын", "saǧyyn"} as nouns rather than <i>saŋquus</i> and <i>saŋkyn</i>.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) Literally “palm”.
+%p 2) From Novegradian #{t "болише", "bóliśe"} ‘more’.
+%p 3) From Novegradian #{t "менише", "méniśe"} ‘less’.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

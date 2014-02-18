@@ -88,6 +88,16 @@ body.grammar.ochets {
         transform: rotate(-90deg);
       }
     }
+
+    &.numdecl {
+      th.num {
+        width: 5em;
+      }
+
+      .och {
+        width: 10em;
+      }
+    }
   }
 
   #sandhitable {
