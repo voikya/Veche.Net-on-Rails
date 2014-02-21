@@ -1,0 +1,197 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Каноҥус моорполоогиа"
+
+= render :partial => 'navigation'
+
+= section "Očets Adjective Classes" do
+  %p Adjectives are words which modify nouns and provide additional information about the nouns they modify. They can describe both physical qualities (“long”, “heavy”, “white”, “young”, etc.) and abstract qualities (“smart”, “happy”, etc.).
+  %p Očets lacks a true adjective class as seen in most European languages. In its place, Očets employs both descriptive nouns and verbs in different circumstances depending on various syntactic and semantic factors. There are no true differences between adjectival nouns and other nouns or adjectival verbs and other verbs. The one feature that could be used to argue the existence of a distinct set of adjectives is their ability to easily switch between nominal and verbal forms depending on polarity.
+
+= section "‘Noun-Like Adjectives’" do
+  %p Noun-like adjectives are modifiers that follow a nominal paradigm. They are used in two circumstances:
+  %ul
+    %li When a non-negated adjective is directly modifying another noun. The adjective always appears in the nominative singular, and shows no form of agreement: #{t "кеш чаит", "keš čait"} “a tall person”. This is typically considered to be an adnominal construction, where the first noun is simply placed in apposition to the head noun (cf. English “train station”, “dog house”, “water fountain”, etc).
+    %li When the adjective is modifying a noun by means of a copula, but only if the noun denotes a physical quality. The adjective will agree in number with the noun<sup>1</sup> and takes whatever case is syntactically appropriate: #{t "тачаита кешед", "tačaita kešed"} “the man is tall”. Literally, this would be translated back into English as “the man is a tall one”, with the independent noun кеш meaning “something tall”, here appearing in the nominative case with a predicate agreement marker.
+  %p The following categories may be considered ‘physical’ for the purposes of determining whether a noun-like form is to be used:
+  %ul
+    %li Length (#{t "һуҕ", "huǧ"} “long”, #{t "хор", "xor"} “short”)
+    %li Width (#{t "иехәр", "iexər"} “wide”, #{t "таук", "tauk"} “narrow”)
+    %li Height (#{t "лиеп", "liep"} “short”, #{t "кеш", "keš"} “tall”, #{t "һииж", "hiiž"} “low”, #{t "суур", "suur"} “high”)
+    %li Depth (#{t "мелк", "melk"} “shallow”, #{t "троҥ", "troŋ"} “deep”, #{t "сауд", "saud"} “located shallow”, #{t "фуук", "fuuk"} “located deep”)
+    %li Size (#{t "нол", "nol"} “large”, #{t "һелс", "hels"} “small”)
+    %li Age (#{t "пан", "pan"} “young”, #{t "хин", "xin"} “old, elderly”, #{t "ват", "wat"} “old”)
+    %li Color (#{t "сорм", "sorm"} “red”, #{t "сон", "son"} “green”, #{t "кии", "kii"} “white”, #{t "ҕоом", "ǧoom"} “black”, etc.)
+    %li Hardness (#{t "иаат", "iaat"} “hard”, #{t "фох", "fox"} “soft”
+  %p However, certain adjectives denoting material (“iron”, “wood”, “plastic”, etc.), which can freely modify nouns directly (#{t "һеҕ қаут", "heǧ qaut"} “railroad”<sup>2</sup>), require another case, such as the ablative, when being used with a copula: #{t "тақаута һеҕииздәди", "taqauta heǧiizdədi"} “the road is iron”<sup>3</sup>). This will be explained later.
+  %p Noun-like adjectives may decline either with animate endings or with inanimate endings, depending on what they are describing. Compare, for instance, #{t "тачаита кежда", "tačaita kežda"} “the man is tall” with #{t "тока кежды", "toka keždy"} “the tree is tall”; the former has an animate predicate suffix, the latter an inanimate one.
+  %p The citation form of adjectives is always the nominative singular of the noun-like form.
+
+= section "‘Verb-Like Adjectives’" do
+  %p Verb-like adjectives are formed by taking the same stem as seen in the nominal forms, adding a stative formant, and then conjugating them as normal verbs. This type of adjective is used in two circumstances:
+  %ul
+    %li When a negated adjective is directly modifying another noun; the adjective must then appear as a participle: #{t "вен-акшес чаит", "wen-akšes čait"} “a not-tall man, a man that is not tall”.
+    %li When an adjective is predicative and is not a physical trait, a finite verb must be used in place of the copula “be”, or a non-finite verb in conjunction with other types of copula: #{t "тачаита һаинаваху", "tačaita hainawaxu"} “the man is strong”.
+  %p The formation of these attributive verbs will be discussed later, in the section on derivational morphology.
+
+= section "Comparatives" do
+  %p Očets has three degrees of comparison: absolute, comparative, and superlative.
+  %p The absolute degree is the basic form of a nominal or verbal adjective.
+  %p The comparative degree expresses the idea of “more” relative to some other measure. It is formed with the prefix #{underlying "*mAn-"} (man-, men-) prefixed to the noun or verb serving as an adjective:
+  %table.noundecl
+    %tr
+      %th Stem
+      %th Noun-Like
+      %th Verb-Like
+    %tr
+      %td
+        *els-
+        %br
+        “small”
+      %td
+        = t("менелс", "menels", :linebreak => true)
+        %br
+        “smaller [one]”
+      %td
+        = t("саменелсост", "samenelsot", :linebreak => true)
+        %br
+        “be smaller”
+    %tr
+      %td
+        *troŋ-
+        %br
+        “deep”
+      %td
+        = t("манәтроҥ", "manətroŋ", :linebreak => true)
+        %br
+        “deeper [one]”
+      %td
+        = t("саманәтроҥост", "samanətroŋost", :linebreak => true)
+        %br
+        “be deeper”
+    %tr
+      %td
+        *xin-
+        %br
+        “old”
+      %td
+        = t("меҥхин", "meŋxin", :linebreak => true)
+        %br
+        “older [one]”
+      %td
+        = t("самеҥхиност", "sameŋxinost", :linebreak => true)
+        %br
+        “be older”
+    %tr
+      %td
+        *iaat-
+        %br
+        “hard”
+      %td
+        = t("маннат", "mannat", :linebreak => true)
+        %br
+        “harder [one]”
+      %td
+        = t("саманнатост", "samannatost", :linebreak => true)
+        %br
+        “be harder”
+    %tr
+      %td
+        *seǧ-
+        %br
+        “difficult”
+      %td
+        = t("менцеҕ", "mentseǧ", :linebreak => true)
+        %br
+        “more difficult [one]”
+      %td
+        = t("саменцеҕост", "samentseǧost", :linebreak => true)
+        %br
+        “be more difficult”
+  %p However, if the #{underlying "*mAn-"} prefix comes directly in contact with a plosive or affricate consonant at the beginning of the adjective stem, the /n/ will drop entirely and the plosive or affricate will become geminate. This does not apply when an epenthetic schwa is inserted (as with троҥ above), or when the affricate does not exist in the underlying form (as in сеҕ above).
+  %table.noundecl
+    %tr
+      %th Stem
+      %th Noun-Like
+      %th Verb-Like
+    %tr
+      %td
+        *kos-
+        %br
+        “warm”
+      %td
+        = t("маккос", "makkos", :linebreak => true)
+        %br
+        “warmer [one]”
+      %td
+        = t("самаккосост", "samakkosost", :linebreak => true)
+        %br
+        “be warmer”
+    %tr
+      %td
+        *pan-
+        %br
+        “young”
+      %td
+        = t("маппан", "mappan", :linebreak => true)
+        %br
+        “younger [one]”
+      %td
+        = t("самаппаност", "samappanost", :linebreak => true)
+        %br
+        “be younger”
+  %p The superlative is phrasal, formed by adding one of the following adverbial or adjectival phrases with the comparative form of the adjective:
+  %ul
+    %li
+      %p #{t "нассацәд", "nassatsəd"} when the noun being compared is animate; it literally means “from all of them”, #{underlying "ni{0}-a{b+}s-a{b+}ts-d"}, #{abbrev "3pl.pos"}-all.#{abbrev "noun"}-#{abbrev "abl"}-#{abbrev "rel"}. If the superlative is attributive, нассацәд may either precede or follow the adjective, since it technically modifies the noun, not the adjective. However, it is generally preferred to place it after the adjective.
+      %p
+        = t("маккеш нассацәд тачаита", "makkeš nassatsəd tačaita", :linebreak => true)
+        %br
+        “the tallest person”
+        %br
+        (lit. “the taller person from all of them”)
+      %p If the superlative is predicative, the adjective must take a predicate agreement suffix and нассацәд must precede the adjective. This is because here the “adjective” is actually serving as a noun, which нассацәд being a direct modifier (whereas in the attibutive case, both нассацәд and the adjective were modifiers of another noun).
+      %p
+        = t("Чи чаита нассацәд маккежда.", "Či čaita nassatsəd makkežda.", :linebreak => true)
+        %br
+        “This person is tallest.”
+        %br
+        (lit. “this person is [the] taller one from all of them”)
+    %li
+      %p #{t "һесид қаничид", "hesid qaničid"} when the noun being compared is inanimate; it literally means “from all of those”, formed from the quantifier #{t "һас", "has"} “all” and the demonstrative pronoun #{t "қан", "qan"} “those”. As above, if the superlative is attributive, it may either precede or follow the adjective, with a preference to place it after:
+      %p
+        = t("мануҕ һесид қаничид седеше", "manuǧ hesid qaničid sedeše", :linebreak => true)
+        %br
+        “the longest river”
+        %br
+        (lit. “the longer river from all of those”)
+      %p If the superlative is predicative, the adjective takes a predicate agreement suffix and һесид қаничид must precede the adjective.
+      %p
+        = t("Чи деше һесид қаничид мануҕды.", "Či deše hesid qaničid manuǧdy.", :linebreak => true)
+        %br
+        “This river is longest.”
+        %br
+        (lit. “this river is [the] longer one from all of those”)
+    %li
+      %p #{t "һесид тоничид", "hesid toničid"} is a contextual variant of һесид қаничид. Whereas һесид қаничид incorporates the so-called “anaphoric demonstrative” қан “those”, which refers to items not physically present, һесид тоничид incorporates the concrete distal demonstrative тон “those”, which refers to items in the immediate area. Һесид тоничид is therefore used to identify a superlative out of a group, the entirety of which is physically present. Compare the following:
+      %p
+        = t("маҥкеш һесид қаничид такаа", "maŋkeš hesid qaničid takaa", :linebreak => true)
+        %br
+        “the tallest [wooded] mountain”
+      %p
+        = t("маҥкеш һесид тоничид такаа", "maŋkeš hesid toničid takaa", :linebreak => true)
+        %br
+        “the tallest [wooded] mountain”
+      %p The former contains the anaphoric demonstrative қан, and so is a normal superlative with no physical restrictions, only contextual ones: the tallest mountian on Earth, the tallest mountain I’ve seen, the tallest mountain I’ve been on, etc. The latter contains the distal demonstrative тон, and so is limited in scope to what can be seen or pointed at from the location of the speaker: the tallest mountain in sight, that tallest mountain in sight that I’ve been on, etc.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) However, this agreement can be complex. This will be discussed later.
+%p 2) Literally “iron road”, from һеҕ “iron” + қаут “road”.
+%p 3) Literally “the road is [made] from iron”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'

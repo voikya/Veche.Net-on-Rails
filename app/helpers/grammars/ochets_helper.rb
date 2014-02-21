@@ -26,6 +26,7 @@ module Grammars
       'LAT' => "Lative",
       'LOC' => "Locative",
       'NOM' => "Nominative",
+      'NOUN' => "Nominal",
       'OBJ' => "Objective",
       'PL' => "Plural",
       'POS' => "Possessive",
