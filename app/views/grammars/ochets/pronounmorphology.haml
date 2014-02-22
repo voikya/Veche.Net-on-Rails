@@ -1,0 +1,516 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Форсәвыс моорполоогиа"
+
+= render :partial => 'navigation'
+
+= section "Personal Pronouns" do
+  = section "Basic Personal Pronouns" do
+    %p Očets has eight personal pronouns. In the first and second person there are distinct singular and plural forms. The third person, however, distinguishes animacy as well as well as number.
+    %p Personal pronouns decline for more cases than regular nouns do. In addition to the eight nominal cases, the dative, possessive, comitative, and abessive cases are also marked (although out of these, only the abessive may be used for the inanimate third person pronouns). The pronominal paradigm seems to very broadly follow nominal declension, sharing the same endings, although the pronominal forms are significantly more irregular.
+  %table
+    %tr
+      %th
+      %th 1Sg
+      %th 2Sg
+      %th 3Sg(A)
+      %th 3Sg(I)
+      %th 1Pl
+      %th 2Pl
+      %th 3Pl(A)
+      %th 3Pl(I)
+    %tr
+      %th Nom
+      %td= t("һеш", "heš", :linebreak => true)
+      %td= t("наи", "nai", :linebreak => true)
+      %td= t("воо", "woo", :linebreak => true)
+      %td= t("тоу", "tou", :linebreak => true)
+      %td= t("шүн", "šün", :linebreak => true)
+      %td= t("наун", "naun", :linebreak => true)
+      %td= t("ваан", "waan", :linebreak => true)
+      %td= t("тон", "ton", :linebreak => true)
+    %tr
+      %th Obj
+      %td= t("һеше", "heše", :linebreak => true)
+      %td= t("наие", "naie", :linebreak => true)
+      %td= t("вои", "woi", :linebreak => true)
+      %td= t("тос", "tos", :linebreak => true)
+      %td= t("шүне", "šüne", :linebreak => true)
+      %td= t("науне", "naune", :linebreak => true)
+      %td= t("ваане", "waane", :linebreak => true)
+      %td= t("тоне", "tone", :linebreak => true)
+    %tr
+      %th Gen
+      %td= t("һешүда", "hešüda", :linebreak => true)
+      %td= t("наида", "naida", :linebreak => true)
+      %td= t("вода", "woda", :linebreak => true)
+      %td= t("тоды", "tody", :linebreak => true)
+      %td= t("шүнда", "šünda", :linebreak => true)
+      %td= t("наунда", "naunda", :linebreak => true)
+      %td= t("ваанда", "waanda", :linebreak => true)
+      %td= t("тонды", "tondy", :linebreak => true)
+    %tr
+      %th Ins
+      %td= t("һешүс", "hešüs", :linebreak => true)
+      %td= t("наис", "nais", :linebreak => true)
+      %td= t("воос", "woos", :linebreak => true)
+      %td= t("тос", "tos", :linebreak => true)
+      %td= t("шүнес", "šünes", :linebreak => true)
+      %td= t("наунас", "naunas", :linebreak => true)
+      %td= t("ваанас", "waanas", :linebreak => true)
+      %td= t("тонас", "tonas", :linebreak => true)
+    %tr
+      %th Loc
+      %td= t("һешүл", "hešül", :linebreak => true)
+      %td= t("наил", "nail", :linebreak => true)
+      %td= t("воол", "wool", :linebreak => true)
+      %td= t("тол", "tol", :linebreak => true)
+      %td= t("шүнил", "šünil", :linebreak => true)
+      %td= t("науныл", "naunyl", :linebreak => true)
+      %td= t("вааныл", "waanyl", :linebreak => true)
+      %td= t("тоныл", "tonyl", :linebreak => true)
+    %tr
+      %th Lat
+      %td= t("һешүна", "hešüna", :linebreak => true)
+      %td= t("наина", "naina", :linebreak => true)
+      %td= t("воона", "woona", :linebreak => true)
+      %td= t("тола", "tola", :linebreak => true)
+      %td= t("шүнна", "šünna", :linebreak => true)
+      %td= t("наунна", "naunna", :linebreak => true)
+      %td= t("ваанна", "waanna", :linebreak => true)
+      %td= t("толлаи", "tollai", :linebreak => true)
+    %tr
+      %th Tra
+      %td= t("һешүм", "hešüm", :linebreak => true)
+      %td= t("наим", "naim", :linebreak => true)
+      %td= t("воом", "woom", :linebreak => true)
+      %td= t("тоҥ", "toŋ", :linebreak => true)
+      %td= t("шүнем", "šünem", :linebreak => true)
+      %td= t("наунем", "naunem", :linebreak => true)
+      %td= t("ваанем", "waanem", :linebreak => true)
+      %td= t("тонәҥи", "tonəŋi", :linebreak => true)
+    %tr
+      %th Abl
+      %td= t("һешүч", "hešüč", :linebreak => true)
+      %td= t("наич", "naič", :linebreak => true)
+      %td= t("воич", "woič", :linebreak => true)
+      %td= t("тоич", "toič", :linebreak => true)
+      %td= t("шүнич", "šünič", :linebreak => true)
+      %td= t("наунич", "naunič", :linebreak => true)
+      %td= t("ваанич", "waanič", :linebreak => true)
+      %td= t("тоничи", "toniči", :linebreak => true)
+    %tr
+      %th Dat
+      %td= t("һешк", "hešk", :linebreak => true)
+      %td= t("наик", "naik", :linebreak => true)
+      %td= t("вок", "wok", :linebreak => true)
+      %td —
+      %td= t("шүҥ", "šüŋ", :linebreak => true)
+      %td= t("науҥ", "nauŋ", :linebreak => true)
+      %td= t("вааҥ", "waaŋ", :linebreak => true)
+      %td —
+    %tr
+      %th Pos
+      %td= t("һош", "hoš", :linebreak => true)
+      %td= t("һок", "hok", :linebreak => true)
+      %td= t("вод", "wod", :linebreak => true)
+      %td —
+      %td= t("шүнда", "šünda", :linebreak => true)
+      %td= t("наунда", "naunda", :linebreak => true)
+      %td= t("ваанда", "waanda", :linebreak => true)
+      %td —
+    %tr
+      %th Com
+      %td= t("сашукс", "sašuks", :linebreak => true)
+      %td= t("санаикс", "sanaiks", :linebreak => true)
+      %td= t("савокс", "sawoks", :linebreak => true)
+      %td —
+      %td= t("сашунакс", "sašunaks", :linebreak => true)
+      %td= t("санаунакс", "sanaunaks", :linebreak => true)
+      %td= t("саваанакс", "sawaanaks", :linebreak => true)
+      %td —
+    %tr
+      %th Abe
+      %td= t("һешфен", "hešfen", :linebreak => true)
+      %td= t("наифан", "naifan", :linebreak => true)
+      %td= t("воофан", "woofan", :linebreak => true)
+      %td= t("тоуфан", "toufan", :linebreak => true)
+      %td= t("шүнфен", "šünfen", :linebreak => true)
+      %td= t("наунфан", "naunfan", :linebreak => true)
+      %td= t("ваанфан", "waanfan", :linebreak => true)
+      %td= t("тонфан", "tonfan", :linebreak => true)
+  %p The nominative forms are, as usual, the base forms, consisting of just the pronoun root. It appears as though the Ob languages did not inherit any plural pronouns from Proto-Ob-Yeniseian, as all of the plural pronouns consist of the singular counterpart plus a plural marker *-n. Of course, modern Očets is sufficiently far removed from Proto-Ob that the plural pronouns are no longer analyzable, although the relationship is still visible. The third person inanimate pronouns are identical in form to the distal demonstrative pronouns (discussed further below).
+  %p The objective forms follow the same pattern as inanimate nouns, with #{underlying "*-è-"} as the primary ending, and #{underlying "*-s-"} for inanimate stems ending in a vowel. The #{abbrev '3sg'} animate pronoun #{t "воо", "woo"} contracts before this suffix, becoming #{t "вои", "woi"}. The root of the #{abbrev '3sg'} inanimate pronoun #{t "тоу", "tou"} also contracts to just *to, but this contracted root is seen throughout the rest of its declension.
+  %p The genitive suffix is #{underlying "*-da"} for animate pronouns and #{underlying "*-dy"} for inanimate pronouns, with no sign of vowel harmony. The #{abbrev '1sg'} pronoun takes on an extended root #{underlying "*hešü-"} in the genitive and in most other cases where the suffix begins with a consonant. The #{abbrev '3sg'} animate pronoun has a contracted root *wo- here.<sup>1</sup>
+  %p The instrumental is regularly formed with the suffix #{underlying "*-Às-"}. The suffix #{underlying "*-Àk-"}, seen in animate nouns, is not used here, as this is the remnant of an older dative case that is now defunct in nouns.
+  %p The locative is regular, formed the same way as with nouns.
+  %p The lative and translative also follow the same basic rules as nouns. Note, however, that the #{abbrev '3pl'} inanimate pronoun has an additional final <i>-i</i>, imitating the i-class plural of inanimate nouns. This is likely analogical.
+  %p The ablative ending is *-(i)č- for all pronouns, a radically simplified form compared to the complex rules governing the nominal ablative endings.
+  %p The dative pronouns seem to be a true holdover of the original Proto-Ob dative case formed with a suffixed -k-, which survives in Očets in some animate nouns as the instrumental #{underlying "*-Àk-"}. In the singular, this -k is simply added to the root, though it may cause contraction. In the plural, this -k caused the final /n/ of all of the pronouns to shift to /ŋ/, followed by the subsequent loss of the dative ending. No inanimate forms of the dative case exist.
+  %p The possessive case looks as though it may be a partial holdover of the original method of indicating personal possession in Proto-Ob-Yeniseian, where the nominative case of a pronoun was simply placed in front of a noun in the first and second persons, or the pronoun + -da/-di was placed in front of a noun in the third person; this is also the source of the modern Očets possessive prefixes. In this position they were weaker than the independent nominative case pronouns, and so underwent a somewhat divergent evolution. The plural possessive pronouns, however, appear to have subsequently been supplanted by their genitive forms. As with the dative, no inanimate possessive case forms exist.
+  %p The comitative case is more of a mystery. It is a circumfix, with a prefixed sa- and suffixed -(a)ks. The prefixed sa- is almost certainly related to the *sa- prenominal affix seen in nouns, although unlike in nouns, the pronominal commitative seems to contain a strong neutral #{underlying "*a{b+}"} rather than a variable #{underlying "*-A-"}, which causes the pronoun stems themselves to harmonize with it. The suffixed -aks is of unknown origins; perhaps it too was an older case ending, but it has no other surviving traces in modern Očets, although a relationship with the instrumental case has been suggested. In addition, the two animate third person pronouns, воо and ваан, have less common comitative variants #{t "савоо", "sawoo"} and #{t "саваан", "sawaan"} without the comitative suffix; in some dialects these are the only allowable third person forms. Like the previous two cases, no inanimate forms exist.
+  %p The abessive case is formed with the suffix #{underlying "*-fAn"}, which derives from a postposition which was still in use in some of the other recorded Ob languages, including Sočak <i>hon</i> “without”. Abessive forms exist for both animate and inanimate pronouns.
+  %p Personal pronouns never take the indirective suffix.
+
+= section "Reflexive Pronouns" do
+  %p Reflexive pronouns are formed from the nominal base *hol- (of Turkic origin, originally meaning “hand”) combined with possessive prefixes, which can then be declined into any case.
+  %p In the singular (myself, yourself, himself/herself/itself), this process is completely regular. *hol- (known as the reflexive stem) declines like a regular animate noun, except the instrumental is always formed with /s/ rather than /k/. Like other nouns, the stem always takes a indirective suffix when possessed. The table below demonstrates the #{abbrev '1sg'}, #{abbrev '2sg'}, and #{abbrev '3sg'} reflexives in the nominative, objective, and instrumental cases:
+  %table.noundecl
+    %tr
+      %th
+      %th 1Sg
+      %th 2Sg
+      %th 3Sg
+    %tr
+      %th Nom
+      %td= t("шола", "šola", :linebreak => true)
+      %td= t("кола", "kola", :linebreak => true)
+      %td= t("ѕола", "dzola", :linebreak => true)
+    %tr
+      %th Obj
+      %td= t("шолее", "šolee", :linebreak => true)
+      %td= t("колее", "kolee", :linebreak => true)
+      %td= t("ѕолее", "dzolee", :linebreak => true)
+    %tr
+      %th Ins
+      %td= t("шоласа", "šolasa", :linebreak => true)
+      %td= t("коласа", "kolasa", :linebreak => true)
+      %td= t("ѕоласа", "dzolasa", :linebreak => true)
+  %p The plural forms (ourselves, yourselves, themselves) are more complicated, as there are two variants: a normal form, and a distributive form. The former suggests that the reflexive action affects the whole group at once (e.g., “they saw themselves [in a mirror]”), while the latter suggests that the action is more procedural (e.g., “they saw themselves one by one/one at a time”). The normal reflexives include the plural suffix #{underlying "*-ŋ-"}, while the distributives lack any plural marking, but include the distributive prenominal ha-, which precedes the possessive morphemes. Both paradigms are demonstrated below.
+  %table.noundecl
+    %tr
+      %th
+      %th 1Pl
+      %th 2Pl
+      %th 3Pl
+    %tr
+      %th Nom
+      %td= t("шнолаҥа", "šnolaŋa", :linebreak => true)
+      %td= t("волаҥа", "wolaŋa", :linebreak => true)
+      %td= t("нолаҥа", "nolaŋa", :linebreak => true)
+    %tr
+      %th Obj
+      %td= t("шнолаҥее", "šnolaŋee", :linebreak => true)
+      %td= t("волаҥее", "wolaŋee", :linebreak => true)
+      %td= t("нолаҥее", "nolaŋee", :linebreak => true)
+    %tr
+      %th Ins
+      %td= t("шнолаҥаса", "šnolaŋasa", :linebreak => true)
+      %td= t("волаҥаса", "wolaŋasa", :linebreak => true)
+      %td= t("нолаҥаса", "nolaŋasa", :linebreak => true)
+  %table.noundecl
+    %tr
+      %th
+      %th 1Pl
+      %th 2Pl
+      %th 3Pl
+    %tr
+      %th Nom
+      %td= t("һашнола", "hašnola", :linebreak => true)
+      %td= t("һавола", "hawola", :linebreak => true)
+      %td= t("һанола", "hanola", :linebreak => true)
+    %tr
+      %th Obj
+      %td= t("һашнолее", "hašnolee", :linebreak => true)
+      %td= t("һаволее", "hawolee", :linebreak => true)
+      %td= t("һанолее", "hanolee", :linebreak => true)
+    %tr
+      %th Ins
+      %td= t("һашноласа", "hašnolasa", :linebreak => true)
+      %td= t("һаволаса", "hawolasa", :linebreak => true)
+      %td= t("һаноласа", "hanolasa", :linebreak => true)
+  %p Impersonal reflexives do exist, but they do not use the normal impersonal possessive prefix; rather, they simply have no possessive marking at all. They are always singular and always take the indirective suffix.
+  %p In addition, the reflexive pronoun preserves an independent dative case formed with the suffix #{underlying "*-Àk-"}.
+  %table.noundecl
+    %tr
+      %th
+      %th Singular
+      %th Plural<br>(Regular)
+      %th Plural<br>(Distributive)
+    %tr
+      %th 1st
+      %td= t("шолака", "šolaka", :linebreak => true)
+      %td= t("шнолаҥака", "šnolaŋaka", :linebreak => true)
+      %td= t("һашнолака", "hašnolaka", :linebreak => true)
+    %tr
+      %th 2nd
+      %td= t("колака", "kolaka", :linebreak => true)
+      %td= t("волаҥака", "wolaŋaka", :linebreak => true)
+      %td= t("һаволака", "hawolaka", :linebreak => true)
+    %tr
+      %th 3rd
+      %td= t("ѕолака", "dzolaka", :linebreak => true)
+      %td= t("нолаҥака", "nolaŋaka", :linebreak => true)
+      %td= t("һанолака", "hanolaka", :linebreak => true)
+    %tr
+      %th Imp
+      %td= t("һолака", "holaka", :linebreak => true)
+      %td{:colspan => 2}
+
+= section "Demonstrative Pronouns" do
+  %p Očets distinguishes three types of demonstrative pronouns, two concrete and one abstract. The concrete forms refer only to physical things in the real world, distinguishing proximal (“this, these”) and distal (“that, those”). The abstract (or “anaphoric”) demonstrative is used to refer to previously-mentioned nouns in a particular discourse without regard to physical location.
+  %p The demonstrative pronoun stems are <i>*čii-</i> (proximal), <i>*tou-</i> (distal), and <i>*qaa-</i> (anaphoric). Like personal pronouns, they follow a broadly nominal declension pattern, but with many irregularities. All three have both singular and plural forms, and exist in all nominal cases plus the abessive. The distal <i>tou</i> (and its plural <i>ton</i>) decline identically to the third person inanimate personal pronouns.
+  %table
+    %tr
+      %th{:rowspan => 2}
+      %th{:colspan => 2} Proximal
+      %th{:colspan => 2} Distal
+      %th{:colspan => 2} Anaphoric
+    %tr
+      %th Sg
+      %th Pl
+      %th Sg
+      %th Pl
+      %th Sg
+      %th Pl
+    %tr
+      %th Nom
+      %td= t("чии", "čii", :linebreak => true)
+      %td= t("чен", "čen", :linebreak => true)
+      %td= t("тоу", "tou", :linebreak => true)
+      %td= t("тон", "ton", :linebreak => true)
+      %td= t("қаа", "qaa", :linebreak => true)
+      %td= t("қан", "qan", :linebreak => true)
+    %tr
+      %th Obj
+      %td= t("чис", "čis", :linebreak => true)
+      %td= t("чене", "čene", :linebreak => true)
+      %td= t("тос", "tos", :linebreak => true)
+      %td= t("тоне", "tone", :linebreak => true)
+      %td= t("қас", "qas", :linebreak => true)
+      %td= t("қане", "qane", :linebreak => true)
+    %tr
+      %th Gen
+      %td= t("чиды", "čidy", :linebreak => true)
+      %td= t("ченды", "čendy", :linebreak => true)
+      %td= t("тоды", "tody", :linebreak => true)
+      %td= t("тонды", "tondy", :linebreak => true)
+      %td= t("қады", "qady", :linebreak => true)
+      %td= t("қанды", "qandy", :linebreak => true)
+    %tr
+      %th Ins
+      %td= t("чис", "čis", :linebreak => true)
+      %td= t("ченес", "čenes", :linebreak => true)
+      %td= t("тос", "tos", :linebreak => true)
+      %td= t("тонас", "tonas", :linebreak => true)
+      %td= t("қас", "qas", :linebreak => true)
+      %td= t("қанас", "qanas", :linebreak => true)
+    %tr
+      %th Loc
+      %td= t("чил", "čil", :linebreak => true)
+      %td= t("ченил", "čenil", :linebreak => true)
+      %td= t("тол", "tol", :linebreak => true)
+      %td= t("тоныл", "tonyl", :linebreak => true)
+      %td= t("қал", "qal", :linebreak => true)
+      %td= t("қаныл", "qanyl", :linebreak => true)
+    %tr
+      %th Lat
+      %td= t("чила", "čila", :linebreak => true)
+      %td= t("челлеи", "čellei", :linebreak => true)
+      %td= t("тола", "tola", :linebreak => true)
+      %td= t("толлаи", "tollai", :linebreak => true)
+      %td= t("қала", "qala", :linebreak => true)
+      %td= t("қаллаи", "qallai", :linebreak => true)
+    %tr
+      %th Tra
+      %td= t("чиҥ", "čiŋ", :linebreak => true)
+      %td= t("ченәҥи", "čenəŋi", :linebreak => true)
+      %td= t("тоҥ", "toŋ", :linebreak => true)
+      %td= t("тонәҥи", "tonəŋi", :linebreak => true)
+      %td= t("қаҥ", "qaŋ", :linebreak => true)
+      %td= t("қанәҥи", "qanəŋi", :linebreak => true)
+    %tr
+      %th Abl
+      %td= t("чиич", "čiič", :linebreak => true)
+      %td= t("ченичи", "čeniči", :linebreak => true)
+      %td= t("тоич", "toič", :linebreak => true)
+      %td= t("тоничи", "toniči", :linebreak => true)
+      %td= t("қаич", "qaič", :linebreak => true)
+      %td= t("қаничи", "qaniči", :linebreak => true)
+    %tr
+      %th Abe
+      %td= t("чиифен", "čiifen", :linebreak => true)
+      %td= t("ченфен", "čenfen", :linebreak => true)
+      %td= t("тоуфан", "toufan", :linebreak => true)
+      %td= t("тонфан", "tonfan", :linebreak => true)
+      %td= t("қаафан", "qaafan", :linebreak => true)
+      %td= t("қанфан", "qanfan", :linebreak => true)
+  %p Directive endings are never used.
+  %p The plural forms are all historically derived from the singular with the plural suffix #{underlying "*-n-"}. This is most transparent in the anaphoric demonstratives.
+  %p If the genitive demonstrative pronouns are referring to an animate noun, they can optionally take the suffix -da rather than -dy: #{t "чида", "čida"}, #{t "ченда", "čenda"}, #{t "тода", "toda"}, #{t "тонда", "tonda"}, #{t "қада", "qada"}, #{t "қанда", "qanda"}. However, this is completely optional, and the “inanimate” ending -dy may freely be used with all nouns.
+  %p Demonstrative adjectives do not decline, so only one form exists for each type of demonstrative, which is an allegro variant of the nominative: #{t "чи", "či"} “this/these” (proximal), #{t "ту", "tu"} “that/those” (distal), #{t "қа", "qa"} “this/these/the” (anaphoric).
+  %p The demonstratives pronouns and adjectives may both be emphasized using a proclitic ee-, likely a borrowing from dialectical Russian. Note that unlike most native Očets words, this initial /eː/ does not trigger an epenthetic initial /h/. In the nominative case alone, however, forms with and without ee- appear to exist in free variation, with the emphatic force having completely disappeared, such that forms like #{t "еечи ҕвуу", "eeči ǧwuu"} and #{t "чи ҕвуу", "či ǧwuu"} “this house (#{abbrev 'nom'})” are completely synonomous, while #{t "еечи ҕвууды", "eeči ǧwuudy"} “of <em>this</em> house (#{abbrev 'gen'})” has an emphatic force #{t "чи ҕвууды", "či ǧwuudy"} “of this house (#{abbrev 'gen'})” lacks.
+
+= section "Interrogative Pronouns" do
+  %p There are four types of interrogatives in Očets, based on their function and behavior: pronominal, quantifier, adjectival, and adverbial.
+
+  = section "Pronominal Interrogatives" do
+    %p The pronominal interrogatives are #{t "һасаи", "hasai"} “who?”, used with animate nouns, and #{t "вис", "wis"} “what?”, used with inanimate nouns. They decline for all cases, though only һасаи can mark number. Һасаи, on account of being an animate pronoun, declines in all twelve cases that the personal pronouns are able to, while вис can only decline in nine (the basic eight of all nouns, plus the abessive). Һасаи becomes <i>*haši-</i> in all oblique cases.
+    %p The final -s of вис drops in the genitive case: #{t "виды", "widy"}.
+    %table
+      %tr
+        %th{:rowspan => 2}
+        %th{:colspan => 2} Who?
+        %th What?
+      %tr
+        %th Sg
+        %th Pl
+        %th Sg
+      %tr
+        %th Nom
+        %td= t("һасаи", "hasai", :linebreak => true)
+        %td= t("һашина", "hašina", :linebreak => true)
+        %td= t("вис", "wis", :linebreak => true)
+      %tr
+        %th Obj
+        %td= t("һаше", "haše", :linebreak => true)
+        %td= t("һашине", "hašinee", :linebreak => true)
+        %td= t("висе", "wise", :linebreak => true)
+      %tr
+        %th Gen
+        %td= t("һашида", "hašida", :linebreak => true)
+        %td= t("һашинда", "hašinda", :linebreak => true)
+        %td= t("виды", "widy", :linebreak => true)
+      %tr
+        %th Ins
+        %td= t("һашис", "hašis", :linebreak => true)
+        %td= t("һашинас", "hašinas", :linebreak => true)
+        %td= t("висес", "wises", :linebreak => true)
+      %tr
+        %th Loc
+        %td= t("һашил", "hašil", :linebreak => true)
+        %td= t("һашинал", "hašinal", :linebreak => true)
+        %td= t("висел", "wisel", :linebreak => true)
+      %tr
+        %th Lat
+        %td= t("һашина", "hašina", :linebreak => true)
+        %td= t("һашинна", "hašinna", :linebreak => true)
+        %td= t("висла", "wisla", :linebreak => true)
+      %tr
+        %th Tra
+        %td= t("һашим", "hašim", :linebreak => true)
+        %td= t("һашинем", "hašinem", :linebreak => true)
+        %td= t("висәҥ", "wisəŋ", :linebreak => true)
+      %tr
+        %th Abl
+        %td= t("һашич", "hašič", :linebreak => true)
+        %td= t("һашинич", "hašinič", :linebreak => true)
+        %td= t("висич", "wisič", :linebreak => true)
+      %tr
+        %th Dat
+        %td= t("һашик", "hašik", :linebreak => true)
+        %td= t("һашиҥ", "hašiŋ", :linebreak => true)
+        %td —
+      %tr
+        %th Pos
+        %td= t("һашид", "hašid", :linebreak => true)
+        %td= t("һашинда", "hašinda", :linebreak => true)
+        %td —
+      %tr
+        %th Com
+        %td= t("саашикс", "saašiks", :linebreak => true)
+        %td= t("саашиннакс", "saašinaks", :linebreak => true)
+        %td —
+      %tr
+        %th Abe
+        %td= t("һашифен", "hašifen", :linebreak => true)
+        %td= t("һашинфен", "hašinfen", :linebreak => true)
+        %td= t("висфен", "wisfen", :linebreak => true)
+    %p All three pronominal interrogatives are also capable of taking predicative endings: һасаи takes only animate singular endings, һашина animate plural endings, and вис inanimate third person endings. These can make for some very compact questions:
+    %p
+      #{t "Һасаиак?", "Hasaiak?"} “Who are you?”
+      %br
+      #{t "Һашинан?", "Hašinan?"} “Who are they?”
+      %br
+      #{t "Визди?", "Wizdi?"} “What is it?”
+    %p There is also a specialized, non-declining interrogative #{t "һеи", "hei"} “what?”, referred to as the “quotative what”, which stands in for a possible quotative expression, as in “what did he say?” or “what do you call it?”. The use of quotatives and the “quotative what” will be described later.
+
+  = section "Quantifier Interrogatives" do
+    %p There are two quantifier interrogatives, similarly divided between animate and inanimate: #{t "һаҥос", "haŋos"} “how many? (inanimate)” and #{t "һаҥуд", "haŋud"} “how many? (animate)”. These both follow a standard quantifier declension paradigm, and also have distributive forms #{t "сааҥос", "saaŋos"} “how many each? (inanimate)” and #{t "сааҥуд", "saaŋud"} “how many each? (inanimate)”.
+    %table
+      %tr
+        %th
+        %th һаҥос
+        %th һаҥуд
+      %tr
+        %th Nom
+        %td= t("һаҥос", "haŋos", :linebreak => true)
+        %td= t("һаҥуд", "haŋud", :linebreak => true)
+      %tr
+        %th Obj
+        %td= t("һаҥөси", "haŋösi", :linebreak => true)
+        %td= t("һаҥүди", "haŋüdi", :linebreak => true)
+      %tr
+        %th Gen
+        %td= t("һаҥөсид", "haŋösid", :linebreak => true)
+        %td= t("һаҥүдид", "haŋüdid", :linebreak => true)
+      %tr
+        %th Ins
+        %td= t("һаҥөсис", "haŋösis", :linebreak => true)
+        %td= t("һаҥүдис", "haŋüdis", :linebreak => true)
+      %tr
+        %th Loc
+        %td= t("һаҥосла", "haŋosla", :linebreak => true)
+        %td= t("һаҥулла", "haŋulla", :linebreak => true)
+      %tr
+        %th Lat
+        %td= t("һаҥосла", "haŋosla", :linebreak => true)
+        %td= t("һаҥулла", "haŋulla", :linebreak => true)
+      %tr
+        %th Tra
+        %td= t("һаҥозна", "haŋozna", :linebreak => true)
+        %td= t("һаҥунна", "haŋunna", :linebreak => true)
+      %tr
+        %th Abl
+        %td= t("һаҥөсид", "haŋösid", :linebreak => true)
+        %td= t("һаҥүдид", "haŋüdid", :linebreak => true)
+  
+  = section "Adjectival Interrogatives" do
+    %p Očets uses three adjectival interrogatives: #{t "һаши", "haši"} “which? (animate)”, #{t "виши", "wiši"} “which? (inanimate)”, and #{t "вет", "wet"} “what kind of?”. For the most part they behave as normal adjectives, except that they generally cannot be used nominally (i.e., they must always be directly modifying a noun); the only exception is that they may appear alone when marked with a predicative suffix (e.g., #{t "ведды", "weddy"} “What kind is it?”, #{t "һашинен", "hašinen"} “Which ones [are they]?”.
+
+  = section "Adverbial Interrogatives" do
+    %p Očets has two basic adverbial interrogatives that cannot be subdivided into smaller components in the modern language, as well as a number of derived interrogatives that usually consist of an interrogative base plus case marking.
+    %p The word #{t "һукина", "hukina"}, or more commonly #{t "кина", "kina"}, means “when?”. It has the derived distributive variant #{t "секина", "sekina"}, meaning “when?” in the context of iterative or repeated actions; it often can be translated as “how often?” as well.
+    %p The word #{t "һуҥаныл", "huŋanyl"}<sup>2</sup>, or more commonly #{t "ганы", "gany"}, means “where?”. The lative and ablative forms #{t "ганина", "ganina"} and #{t "ганичис", "ganičis"} mean “to where, whither?” and “from where, whence?” respectively.
+    %p Other adverbials are derived from other previously-mentioned interrogative stems. In particular, the genitive, translative, and ablative forms of вис “what?”—#{t "виды", "widy"}, #{t "висәҥ", "wisəŋ"}, and #{t "висич", "wisič"}—are both frequently used to mean “why?”. The genitive виды asks for the cause of an action, while the translative висәҥ asks for its intended purpose or goal. The ablative висич is similar in meaning to висәҥ, except that it also implies that the one asking feels some sort of disapproval for the action. Meanwhile, the instrumental form of вис—#{t "висес", "wises"}—essentially means “how?”.
+
+= section "Indefinite Pronouns" do
+  %p Očets has three types of indefinite pronouns and other pro-forms, termed the <i>činakox</i>, <i>wys</i>, and <i>quu</i> types. All are phrasal, formed from the interrogative base and one of the three aforementioned particles. The particle <i>činakox</i><sup>3</sup> forms generic, undefined indefinites without any limitations; it is more or less equivalent to the English prefix any- or the Russian suffix -нибудь. The particle <i>wys</i><sup>4</sup> forms standard indefinites of unknown nature, like English some- or Russian -то. The particle <i>quu</i><sup>5</sup>, which has no clear English equivalent, marks something known to the speaker but whose nature is being deliberately left unspecified (as in “I have <em>something</em> to tell you”).
+  %p The interrogative base may undergo some slight modifications in the process. Pronouns and pro-quantifiers in the nominative case add the genitive suffix -dy, dropping any final /s/ or /d/:
+  %ul
+    %li #{t "һасаиды чинакох", "hasaidy činakox"} “anyone (#{abbrev 'nom'})”
+    %li #{t "виды выс", "widy wys"} “something (#{abbrev 'nom'})”
+    %li #{t "һаҥоды қуу", "haŋody quu"} “some amount [that I know] (#{abbrev 'nom'})”
+  %p If the interrogative base is non-declining (an adjective or true adverb), the suffix -dy will similarly be added:
+  %ul
+    %li #{t "ведды чинакох", "weddy činakox"} “any kind of”
+    %li #{t "кина выс", "kina wys"} “at some time”
+    %li #{t "ганы қуу", "gany quu"} “somewhere [that I know]”
+  %p If the interrogative is a declined non-nominative form, the indefinite particles may be used alongside the normal pronouns; no special genitive marker is needed.
+  %ul
+    %li #{t "ганичис чинакох", "ganičis činakox"} “from anywhere”
+    %li #{t "висәҥ выс", "wisəŋ wys"} “for some goal; something (#{abbrev 'tra'})”
+    %li #{t "саашикс қуу", "saašiks quu"} “with someone [whom I know] (#{abbrev 'com'})”
+
+= section "Negative Pronouns" do
+  %p Očets has no native negative pronouns. The same concept is typically expressed using an indefinite pronoun (typically of the wys type) together with a negated verb. This is similar to the use of “any”-type pronouns in English plus a negated verb, although in Očets this construction can be used in ways ungrammatical in English (e.g., “No one came” is literally expressed as “Anyone did not come”).
+  %p However, under the influence of Russian and Novegradian, modern Očets has developed a set of negative pronouns based on the Slavic model. They are formed by prefixing #{t "нии-/ныы-", "nii-/nyy-"} (from Russian/Novegradian ни-): #{t "ниивис", "niiwis"} “nothing”, #{t "ныыһасаи", "nyyhasai"} “no one”, #{t "ниикина", "niikina"} “never”, etc. As in the Slavic languages, these negative pronouns are used in conjunction with negated verbs (i.e., “No one did not come”). If the interrogative has both colloquial and formal variants, negative pronouns can only be formed from the colloquial stem (e.g., #{t "ныыганы", "nyygany"} “nowhere”, never **ныыһуҥаныл).
+  %p Both variants are in common use today.
+
+= section "Pro-Verbs" do
+  %p Očets has a single verbal root, #{underlying "*-has-"}, which is capable of standing in for another verb as a pro-form; it has the basic meaning “to do what?”. It is always intransitive, and conjugates according to the Conjugation Ia pattern (discussed in the following chapter): #{t "шыыгасак?", "šyygasak?"} “What did you do?”<sup>6</sup>.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The long vowel in воо and most of its declined forms is the result of the contraction of early Proto-Ob *wu-ha-, a compound pronoun. In the genitive, however, this second element was replaced by the genitive morpheme: *wu-da.
+%p 2) Dialectal #{t "һуганыл", "huganyl"}, hence the colloquial variant.
+%p 3) In origin a frozen verbal form, meaning “[whoever] may come”.
+%p 4) Literally “word”.
+%p 5) Literally “one”.
+%p 6) Underlyingly #{underlying "šIn{+4}-k{+3}-has{0}-Àk{-1}"}, where #{underlying "*šIn{+4}"} is a marker of the past definite tense, and both #{underlying "*k{+3}"} and #{underlying "*Àk{-1}"} are markers of a second person singular subject.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
