@@ -13,7 +13,8 @@ module Grammars
       {:index => 6,   :doc => 'adjectivalmorphology', :title => 'Adjectival Morphology'},
       {:index => 7,   :doc => 'pronounmorphology', :title => 'Pronoun and Other Pro-Form Morphology'},
       {:index => 8,   :doc => 'verbalmorphology', :title => 'Verbal Morphology'},
-      {:index => 9,   :doc => 'derivationalmorphology', :title => 'Derivational Morphology and Word Creation'}
+      {:index => 9,   :doc => 'derivationalmorphology', :title => 'Derivational Morphology and Word Creation'},
+      {:index => 10,  :doc => 'verbsyntax', :title => 'Verbal Syntax'}
     ]
 
     def index
