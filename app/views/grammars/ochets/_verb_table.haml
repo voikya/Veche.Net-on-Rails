@@ -1,0 +1,96 @@
+- forms ||= {}
+- title ||= ""
+- col_label ||= ""
+
+%table.noundecl
+  %tr
+    %th{:colspan => 3}= title
+  %tr
+    %th= col_label
+    %th Singular
+    %th Plural
+  %tr
+    %th 1st
+    %td
+      - unless forms[:sg1]
+        —
+      - else
+        = t(forms[:sg1][:cyr], forms[:sg1][:lat], :linebreak => true)
+        - if forms[:sg1][:und]
+          %br
+          = underlying(forms[:sg1][:und])
+        - if forms[:sg1][:eng]
+          %br
+          “#{forms[:sg1][:eng]}”
+    %td
+      - unless forms[:pl1]
+        —
+      - else
+        = t(forms[:pl1][:cyr], forms[:pl1][:lat], :linebreak => true)
+        - if forms[:pl1][:und]
+          %br
+          = underlying(forms[:pl1][:und])
+        - if forms[:pl1][:eng]
+          %br
+          “#{forms[:pl1][:eng]}”
+  %tr
+    %th 2nd
+    %td
+      - unless forms[:sg2]
+        —
+      - else
+        = t(forms[:sg2][:cyr], forms[:sg2][:lat], :linebreak => true)
+        - if forms[:sg2][:und]
+          %br
+          = underlying(forms[:sg2][:und])
+        - if forms[:sg2][:eng]
+          %br
+          “#{forms[:sg2][:eng]}”
+    %td
+      - unless forms[:pl2]
+        —
+      - else
+        = t(forms[:pl2][:cyr], forms[:pl2][:lat], :linebreak => true)
+        - if forms[:pl2][:und]
+          %br
+          = underlying(forms[:pl2][:und])
+        - if forms[:pl2][:eng]
+          %br
+          “#{forms[:pl2][:eng]}”
+  %tr
+    %th 3rd (A)
+    %td
+      - unless forms[:sg3a]
+        —
+      - else
+        = t(forms[:sg3a][:cyr], forms[:sg3a][:lat], :linebreak => true)
+        - if forms[:sg3a][:und]
+          %br
+          = underlying(forms[:sg3a][:und])
+        - if forms[:sg3a][:eng]
+          %br
+          “#{forms[:sg3a][:eng]}”
+    %td
+      - unless forms[:pl3a]
+        —
+      - else
+        = t(forms[:pl3a][:cyr], forms[:pl3a][:lat], :linebreak => true)
+        - if forms[:pl3a][:und]
+          %br
+          = underlying(forms[:pl3a][:und])
+        - if forms[:pl3a][:eng]
+          %br
+          “#{forms[:pl3a][:eng]}”
+  %tr
+    %th 3rd (I)
+    %td{:colspan => 2}
+      - unless forms[:sg3i]
+        —
+      - else
+        = t(forms[:sg3i][:cyr], forms[:sg3i][:lat], :linebreak => true)
+        - if forms[:sg3i][:und]
+          %br
+          = underlying(forms[:sg3i][:und])
+        - if forms[:sg3i][:eng]
+          %br
+          “#{forms[:sg3i][:eng]}”

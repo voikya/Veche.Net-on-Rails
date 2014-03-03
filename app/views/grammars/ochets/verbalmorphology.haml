@@ -1,0 +1,2914 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Лывауссыс моорполоогиа"
+
+= render :partial => 'navigation'
+
+= section "Introduction to the Očets Verb" do
+  = section "Verb Structure" do
+    %p The Očets verb, as in other Ob-Yeniseian languages, is the subject of much research and debate. It is strongly agglutinative, with a single verb complex varying from just two morphemes to upwards of ten. Much like the nominal system, however, there is a great divide between underlying structure and surface realization, as different elements interact with one another in often complex ways.
+    %p Ob-Yeniseian verbs in general are typologically unusual for western and central Siberia, which are otherwise dominated by Turkic, Uralic, and Altaic languages, as well as more recently by the Indo-European representatives Russian and Novegradian. Among the oddities of Ob-Yeniseian are a strongly <em>prefixing</em> verbal structure and the use of incorporation of non-verbal elements to varying degrees in different languages, while other local languages are overwhelming suffixial and do not make use of incorporation. However, centuries if not millennia of coexistence with these languages has left a clear impression on all of the Ob-Yeniseian languages. Some, such as Yeniseian Ket and Yugh for example, have switched from prefixial to suffixial verbal morphology by innovating a secondary verb root at the beginning of the verbal complex, followed by subsequent semantic bleaching of the original verb-final root. While the Ob languages such as Očets are still primarily prefixing, they have adopted a number of other areal features not seen in Yeniseian, such as partial vowel harmony (as in nouns), an extensive system of non-finite verbal forms, and the frequent use of coverbs.
+    %p The typical Očets verb is bipartite, consisting a primary verb and an optional coverb, which may provide additional tense, aspect, modality, or semantic coloring to the main verb. A verb minimally consists of a prefix and a root (as the root is not permitted to appear word-initially), though there; this may expand, however, to three or more prefixes, several suffixes, and a coverb that itself may include a number of prefixes and suffixes.
+    %p A typical verb may schematically be described as follows:
+    %table.slottable
+      %tr
+        %th +6
+        %th +5
+        %th +4
+        %th +3
+        %th +2
+        %th +1
+        %th 0
+        %th -1
+      %tr
+        %td Determiner
+        %td 3rd Person Subject + Object Agreement Marker
+        %td TAM Marker
+        %td 1st/2nd Person Subject Agreement Marker
+        %td Iterative
+        %td Imperative<br>or<br>Passive
+        %td Root
+        %td Subject Agreement Markers
+    %p Or, a typical verb that also includes a coverb:
+    %table.slottable
+      %tr
+        %th{:colspan => 3} Coverb
+        %th{:rowspan => 3}
+        %th{:colspan => 8} Main Verb
+      %tr
+        %th C1
+        %th C2
+        %th C3
+        %th +6
+        %th +5
+        %th +4
+        %th +3
+        %th +2
+        %th +1
+        %th 0
+        %th -1
+      %tr
+        %td Negative
+        %td Determiner<br>or<br>Incorporate
+        %td Harmonic Suffix
+        %td
+        %td 3rd Person Subject + Object Agreement Marker
+        %td TAM Marker
+        %td 1st/2nd Person Subject Agreement Marker
+        %td Iterative
+        %td Imperative<br>or<br>Passive
+        %td Root
+        %td Subject Agreement Markers
+
+  = section "Verb Conjugations" do
+    %p Očets verbs can be grouped into six major conjugations, as well as several minor ones. Each of these conjugations has its own template and affixes. While some of them appear to be slight variants, others look nothing like the rest, with a completely different set of agreement and TAM (tense/aspect/modality) markers. Conjugations are inherent  to roots, however, so crossover from one conjugation to another is relatively infrequent, though not impossible. Most of the conjugations, fortunately, have a clear semantic or syntactic commonality.
+    %p Conjugation I is by far the most common and most basic group of verbs. Most native verbal roots fall into this category, as well as most borrowed verbs up until roughly the late 18th century. While still technically an open class, new coinages are far more likely to use Conjugation VI. Conjugation I has three subclasses based on the syntactic behavior of the verb: Ia for intransitive unergative verbs, Ib for transitive verbs, and Ic for intransitive unaccusative verbs. While they all use the same basic structure, the meaning and use of several slots in their paradigms differ.
+    %p Conjugation II verbs are sometimes also known as “verbs of communication”, though in reality a number of other types of verbs follow this same paradigm. Specifically, this is the conjugation of verbs for which indirect objects play an important role, so in addition to “say” or “invite”, it includes verbs such as “give” and “help”. Like Conjugation I, it is a semi-open class, in that it can take new verb roots only if semantically and syntactically they clearly fall within its domain, though this is not especially common anymore.
+    %p Conjugation III is limited to verbs of motion, which have a specialized paradigm that makes extensive use of directional determiners and a few unique agreement affixes.
+    %p Conjugation IV is also known as the possessive paradigm, because it historically consists of former possessive constructions that have been reanalyzed as verbs. There is no clear semantic association common among all Conjugation IV verbs; it is simply a diachronic relationship, and includes a few common verbs such as “want” and “know how to”. This is a closed class.
+    %p Conjugation V is an open and very productive class consisting of stative verbs. In particular, it includes de-adjectival verbs which are frequently used to modify nouns as normal adjectives would be in typical Indo-European languages.
+    %p Conjugation VI consists of verbs with two semantic centers; that is, they have two roots, each of which contribute meaning to the verb as a whole. There are two subclasses. The older of the two is VIa, which consists of verbs containing an incorporate, usually a noun embedded into the verb, typically representing a direct object or instrument of action to clarify or further specify the meaning of the primary root. The newer is VIb, which has become the primary means of introducing new verb roots into the language, consisting of a pseudo-incorporated verb and a semantically-bleached native root, such as “make” or “do”.
+    %p The remaining minor conjugations are irregular patterns that are only used by at most a handful of verb roots, if not just one. For all intents and purposes they may be simply considered irregular verbs.
+
+  = section "Tense" do
+    %p Only two true tenses are explicitly and consistently marked in Očets: the present and past. Other tenses, such as the future, can only be implied through means such as inceptive coverbs.
+    %p However, morphologically Očets’s two tenses are fused with an aspectual category known as “definiteness”, which combines some qualities of perfectiveness/imperfectiveness, telicity/atelicity, and probability/certainty. This results in a four-way TAM contrast traditionally labelled as “tense” in Ob language studies: present indefinite, present definite, past indefinite, and past definite. The use of all of these categories will be discussed later.
+
+  = section "Aspect" do
+    %p Aside from the blended TAM marking described above, most Očets verbs are also able to explicitly mark iterative aspect through a dedicated prefix, although this is no longer fully productive, if it ever was. Other aspects must be marked through the use of coverbs.
+
+  = section "Modality" do
+    %p Očets verbs only mark three distinct moods: indicative, imperative, and interrogative. However, the imperative is rarely used except for strict orders, as it has a strong connotation of rudeness. Other moods, such as the subjunctive and optative, are expressed periphrastically or through specialized particles.
+
+  = section "Voice" do
+    %p Očets has two voices, active and passive. The former is unmarked. Passive voice has extensive use in Očets, since it is often used in requests, verbs of communication, and in marking certain types of intransitive verbs.
+
+  = section "Coverbs" do
+    %p Coverbs are for the most part non-conjugating quasi-verbs that modify the meaning of the main verb. They can serve both derivational and morphological functions, including such things as negation and marking inception/cessation of action.
+    %p While in terms of purpose they are quite similar to auxiliary verbs in other languages, in terms of their usage they are quite different. Whereas auxiliary verbs are finite forms that take a non-finite complement (such as a participle or infinitive), Očets coverbs have no tense or agreement marking, as the main verb continues to mark all such features.
+    %p Coverbs consist of at most three morphemes: a negative marker in slot C1, a determiner or incorporate in C2, and a harmonic suffix in C3.
+    %p The C1 negative marker is, clearly enough, a marker of verbal negation.
+    %p The C2 determiner or incorporate is more complex. Determiners are a small, closed set of very ancient markers that appear to have derivational functions, although time has obscured these to a great extent, such that for some verb the determiner is simply an integral part of the verb with no clear purpose. There are only a handful of determiners in modern Očets. If not a determiner, the C2 slot may instead be occupied by an incorporate with a very clear function; most commonly this is an adverb, but may also be a noun or a morpheme without a clear non-incorporated counterpart (likely meaning it fell out of use). Such coverb incorporates are not unlike verb prefixes seen in many Indo-European languages.
+    %p The C3 harmonic suffix has no semantic load, but is simply a suffix inserted for phonological reasons.
+    %p A coverb may consist of either or both C1 and C2, as well as C3 if either C1 or C2 is present. C3 cannot appear by itself. In addition, determiners must always be accompanied by a harmonic suffix, though incorporates need not be.
+    %p As can be seen in the example verb diagrams earlier in this section, there is some morpheme overlap between coverbs and normal unaccompanied verbs: the determiner. When a coverb is added to a verb with a determiner, the determiner jumps to the coverb.
+
+  = section "Determiners" do
+    %p Modern Očets has a total of ten possible determiners, though some are far more common than others.
+    %table
+      %tr
+        %th Determiner
+        %th Meaning
+        %th Examples
+      %tr
+        %td d-
+        %td along, long shape
+        %td
+          дыдаләҥ ‘bundle, bind’
+          %br
+          дыдоҥ ‘cut a long object’
+          %br
+          һас-дәдеҥ ‘walk along’
+      %tr
+        %td f-
+        %td flat, sheet; vertical position on a flat surface
+        %td
+          форәҥ ‘cover’
+          %br
+          фысах ‘sit’
+          %br
+          фыдоҥ ‘slice’
+      %tr
+        %td k-
+        %td adessive, telic actions, actions with a personal motivation
+        %td
+          кычоҥ ‘hunt’
+          %br
+          касәҥ ‘invite’
+          %br
+          каноҥ ‘describe, tell’
+      %tr
+        %td l-
+        %td instrumental, use of a tool
+        %td
+          лывауҥ ‘make’
+          %br
+          че-лчан ‘go by vehicle’
+          %br
+          лидеуҥ ‘tally’
+      %tr
+        %td n-
+        %td around, near, round shape
+        %td
+          наин ‘see’
+          %br
+          ныбасәҥ ‘avoid’
+          %br
+          ныдоҥ ‘trim’
+      %tr
+        %td p-
+        %td ablative, movement up or down, natural changes outside of human control
+        %td
+          птасыыҥ ‘grow’
+          %br
+          сы-псоиҥ ‘sail downstream’
+          %br
+          птакосаҥ ‘thaw’
+      %tr
+        %td q-
+        %td inessive, causative
+        %td
+          қахом ‘raise, farm’
+          %br
+          қавыҥ ‘convince’
+          %br
+          қөишееҥ ‘feed’
+      %tr
+        %td š-
+        %td mental states, actions involving thought or planning, seeing or hearing
+        %td
+          шазҕаҥ ‘speak’
+          %br
+          штаноҥ ‘remember’
+          %br
+          шаин ‘watch’
+      %tr
+        %td t-
+        %td superessive, contact with a surface, touch, physical sensations
+        %td
+          тиних ‘touch’
+          %br
+          тидеуҥ ‘read’
+          %br
+          тыбасәҥ ‘print’
+      %tr
+        %td w-
+        %td loud sounds
+        %td
+          вытоуҥ ‘make a noise’
+          %br
+          вилеҥ ‘shriek’
+          %br
+          вытук ‘knock’
+    %p Note that the above glosses for each of the determiners are very approximate, and there are numerous examples of each that do not seem to match. They likely originate from incorporated nouns from a very early stage of Ob-Yeniseian, if not even earlier, and have been around long enough to have become fully grammaticized and productive, and subsequently to have lost that productivity and become lexicalized.
+
+  = section "Agreement" do
+    %p Očets verbs display concord for both grammatical subject and either direct or indirect object (which of the two is generally determined by the conjugation). However, agreement marking is not very straightforward, and is usually partially marked by multiple morphemes. For instance, just looking at a Conjugation I verb, there is an ancient marker in position +1 that marks whether the subject is first or second person, a somewhat newer one in +5 that marks whether the subject is third person and, if it is, its animacy (while simultaneously encoding some information about the direct object, if applicable), and the newest marker in position -1, which has full subject number and person agreement.
+    %p Since each of the conjugations mark their arguments in different ways, the details of agreement will be discussed in the relevant sections.
+    %p It may, however, be noted that morphemes that serve as one sort of agreement markers in one conjugation may have a wholly different function in another, often due to a variety of historical reanalyses. Direct object markers in Conjugation Ic, for instance, are subject markers in Ib, and are usually indirect object markers in Conjugation II. An even more curious case is the use of the the passive voice morpheme to indicate lack of a direct object in certain situations.
+    %p In addition, some verbs appear to have what could be considered to be instrument agreement with the help of determiners. Some verbs appear to automatically take the L-type determiner (indicating instrument or tool) whenever an instrument is mentioned in the clause (e.g., “He wrote a letter”, but “He L-wrote a letter with a pencil”).
+
+= section "“To Be”" do
+  %p The verb #{t "шаҥ", "šaŋ"} “to be” is highly irregular, and cannot be properly described using the agglutinative model seen for other Očets verbs. However, it is relatively straightforward, since it only marks subject agreement and does not have extensive variants employing determiners or coverbs. However, it is highly unusual in that it has a synthetic negative form, rather than using a negative coverb.
+  %p The four basic positive tenses appear as follows:
+  %table.invisible
+    %tr
+      %td
+        - forms = { :sg1  => { :cyr => "шин", :lat => "šin" },
+                    :sg2  => { :cyr => "кын", :lat => "kyn" },
+                    :sg3a => { :cyr => "һаан", :lat => "haan" },
+                    :sg3i => { :cyr => "һиин", :lat => "hiin" },
+                    :pl1  => { :cyr => "шииҥ", :lat => "šiiŋ" },
+                    :pl2  => { :cyr => "кыыҥ", :lat => "kyyŋ" },
+                    :pl3a => { :cyr => "һааҥ", :lat => "haaŋ" } }
+        = render 'verb_table', :title => "шаҥ “to be” — Present Indefinite", :forms => forms
+      %td
+        - forms = { :sg1  => { :cyr => "каишин", :lat => "kaišin" },
+                    :sg2  => { :cyr => "каихын", :lat => "kaixyn" },
+                    :sg3a => { :cyr => "һаикан", :lat => "haikan" },
+                    :sg3i => { :cyr => "һикан", :lat => "hikan" },
+                    :pl1  => { :cyr => "канчииҥ", :lat => "kančiiŋ" },
+                    :pl2  => { :cyr => "канныыҥ", :lat => "kannyyŋ" },
+                    :pl3a => { :cyr => "һаннааҥ", :lat => "hannaaŋ" } }
+        = render 'verb_table', :title => "шаҥ “to be” — Present Definite", :forms => forms
+    %tr
+      %td
+        - forms = { :sg1  => { :cyr => "шишин", :lat => "šišin" },
+                    :sg2  => { :cyr => "шихын", :lat => "šixyn" },
+                    :sg3a => { :cyr => "һашлен", :lat => "hašlen" },
+                    :sg3i => { :cyr => "һишлен", :lat => "hišlen" },
+                    :pl1  => { :cyr => "чишииҥ", :lat => "čišiiŋ" },
+                    :pl2  => { :cyr => "чихыыҥ", :lat => "čixyyŋ" },
+                    :pl3a => { :cyr => "чилааҥ", :lat => "čilaaŋ" } }
+        = render 'verb_table', :title => "шаҥ “to be” — Past Indefinite", :forms => forms
+      %td
+        - forms = { :sg1  => { :cyr => "шииша", :lat => "šiiša" },
+                    :sg2  => { :cyr => "шииха", :lat => "šiixa" },
+                    :sg3a => { :cyr => "шиина", :lat => "šiina" },
+                    :sg3i => { :cyr => "һишина", :lat => "hišina" },
+                    :pl1  => { :cyr => "һачишан", :lat => "hačišan" },
+                    :pl2  => { :cyr => "һачихан", :lat => "hačixan" },
+                    :pl3a => { :cyr => "һачинан", :lat => "hačinan" } }
+        = render 'verb_table', :title => "шаҥ “to be” — Past Definite", :forms => forms
+  %p Non-finite forms include the infinitive #{t "шаҥ", "šaŋ"} ‘be’ (infinitive), #{t "да", "da"} ‘be!’ (imperative singular), #{t "даҥ", "daŋ"} ‘be!’ (imperative plural), #{t "һанц", "hants"} ‘being’ (split-transitive present participle), #{t "нанц", "nants"} ‘that was being’ (split-transitive past participle), #{t "чотанц", "čotants"} ‘that is going to be’ (split-transitive near-future participle), and #{t "сымаҥ", "symaŋ"} ‘if [subj] were to be’ (conditional participle).
+  %p There appear to be two different stems in use, #{underlying "*-Vn-"}<sup>1</sup> in the present indefinite, present definite, past indefinite, and participles, and #{underlying "*-a-"} in the past definite and imperative. In the infinitive and conditional participle it could potentially be either one.
+  %p In the negative (#{t "шүҥ", "šüŋ"} “to not be”), the stem is *-wo-:
+  %table.invisible
+    %tr
+      %td
+        - forms = { :sg1  => { :cyr => "кашуо", :lat => "kašuo" },
+                    :sg2  => { :cyr => "һекуо", :lat => "hekuo" },
+                    :sg3a => { :cyr => "һаиво", :lat => "haiwo" },
+                    :sg3i => { :cyr => "кво", :lat => "kwo" },
+                    :pl1  => { :cyr => "кашуоҥ", :lat => "kašuoŋ" },
+                    :pl2  => { :cyr => "һекуоҥ", :lat => "hekuoŋ" },
+                    :pl3a => { :cyr => "һааҕуо", :lat => "haaǧuo" } }
+        = render 'verb_table', :title => "шүҥ “to not be” — Present Indefinite", :forms => forms
+      %td
+        - forms = { :sg1  => { :cyr => "каичо", :lat => "kaičo" },
+                    :sg2  => { :cyr => "каигуо", :lat => "kaiguo" },
+                    :sg3a => { :cyr => "һаино", :lat => "haino" },
+                    :sg3i => { :cyr => "һииҥно", :lat => "hiiŋno" },
+                    :pl1  => { :cyr => "каичоҥ", :lat => "kaičoŋ" },
+                    :pl2  => { :cyr => "канныыҥ", :lat => "kannyyŋ" },
+                    :pl3a => { :cyr => "һааҥно", :lat => "haaŋno" } }
+        = render 'verb_table', :title => "шүҥ “to not be” — Present Definite", :forms => forms
+    %tr
+      %td
+        - forms = { :sg1  => { :cyr => "шишуо", :lat => "šišuo" },
+                    :sg2  => { :cyr => "шикуо", :lat => "šikuo" },
+                    :sg3a => { :cyr => "һачило", :lat => "hačilo" },
+                    :sg3i => { :cyr => "һиишло", :lat => "hiišlo" },
+                    :pl1  => { :cyr => "шишуоҥ", :lat => "šišuoŋ" },
+                    :pl2  => { :cyr => "шикуоҥ", :lat => "šikuoŋ" },
+                    :pl3a => { :cyr => "һаачло", :lat => "haačlo" } }
+        = render 'verb_table', :title => "шүҥ “to not be” — Past Indefinite", :forms => forms
+      %td
+        - forms = { :sg1  => { :cyr => "шиичо", :lat => "šiičo" },
+                    :sg2  => { :cyr => "шиигуо", :lat => "šiiguo" },
+                    :sg3a => { :cyr => "һачино", :lat => "hačino" },
+                    :sg3i => { :cyr => "һиишно", :lat => "hiišno" },
+                    :pl1  => { :cyr => "шиичоҥ", :lat => "šiičoŋ" },
+                    :pl2  => { :cyr => "шиигуоҥ", :lat => "šiiguoŋ" },
+                    :pl3a => { :cyr => "һаачно", :lat => "haačno" } }
+        = render 'verb_table', :title => "шүҥ “to not be” — Past Definite", :forms => forms
+  %p The main non-finite forms include #{t "шүҥ", "šüŋ"} ‘to not be’ (infinitive), #{t "даво", "dawo"} ‘don’t be!’ (imperative singular), #{t "давоҥ", "dawoŋ"} ‘don’t be!’ (imperative plural), #{t "вос", "wos"} ‘not being’ (split-transitive present participle), #{t "нывос", "nywos"} ‘that was not being’ (split-transitive past participle), #{t "чоттос", "čottos"} ‘that is going to be’ (split-transitive near-future participle), and #{t "сымбүҥ", "symbüŋ"} ‘if [subj] were to not be’ (conditional participle).
+
+= section "Conjugation Ia: Unergative Verbs" do
+  %p Unergative verbs are a type of intransitive verb in which the semantic agent is also the syntactic subject. Such verbs, therefore, only agree with their subject. Among these are suchs verbs as #{t "сыһуун", "syhuun"} “cry, weep” (root *-huun-), #{t "сытаацәҥ", "sytaatsəŋ"} “dance” (root *-taats-), #{t "шилеҥ", "šileŋ"} “sing” (root *-il-), and #{t "фысах", "fysax"} “sit, be sitting” (root *-sax-).
+  %p The conjugation diagram for such verbs looks like this:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td Determiner
+      %td 3rd Person Subject Agreement Marker
+      %td TAM Marker
+      %td 1st/2nd Person Subject Agreement Marker
+      %td
+      %td Imperative
+      %td Root
+      %td Subject Agreement Markers (opt.)
+  %p Conjugation Ia will be demonstrated with the verbs шилеҥ “sing” (*-il-) and фысах “sit” (*-sax-). The former has no determiner, while the latter has the f-type determiner.
+
+  = section "Present Indefinite" do
+    %p The root is inserted into slot 0.
+    %p If the subject is first person singular or first person plural, *-š- is inserted into slot +3. If the subject is second person singular or second person plural, *-k- is inserted into this slot. This *-k- will voice to -g- if it is immediately followed by a vowel (i.e., if the root is vowel-initial). If the subject is third person, slot +3 is empty. A schwa may be inserted after these prefixes if an impermissable cluster would otherwise form, though if the first syllable of the root contains /i/ or /iː/, the schwa may raise to /i/.
+    %p A TAM marker is inserted into slot +4. The underlying form is considered to be *-kÀl-, but this undergoes significant reduction in the present indefinite. In the first person, it will appear as ka-/ke- if word-initial, or as -a-/-e- otherwise; the final -l- elides due to the following subject agreement prefix in slot +3. In the second person, it appears as ha-/he- word-initially and -a-/-e- otherwise, with the initial -k- weakening to /h/ in dissimilation with the -k- in slot +3.
+    %p In all of the third person forms, the -l- is preserved due to the lack of any morpheme in slot +3; however, the -k- is heavily influenced by the third person agreement markers in slot +5. In the third person singular animate, the surface realization of the TAM marker is -l(ə)-, with the loss of initial -k- because of the underlying +5 morpheme *-ad-: #{underlying "*-ad{+5}-kal{+4}-"} → -ail-. In the third person plural animate, the TAM marker is -ǧl- (or -ǧal-/-ǧel- when followed by a consonant), which is an expected evolution from the underlying form: #{underlying "*-an{+5}-kal{+4}-"} → Old Očets *aŋl → -aǧl-. The inanimate third person TAM marker is -kl-/-kal-/-kel, with both the initial and final consonants preserved.
+    %p Slot +5 is where third person subject marking occurs. The underlying suffixes are third person singular animate *-ad-, third person plural animate *-an-, and third person inanimate *-iw-. Singular animate *-ad- always reduces to -ai- on the surface, with *d → /j/ due to the following *k- of the TAM morpheme. Plural animate *-an- reduces to -aa-, as the *n merges with the following *k-, and the vowel lengthens in compensation. Inanimate *-iw- always reduces to -ii-, since it is immediately followed by *k and /iw/ an impermissable diphthong.
+    %p The choice of surface forms for slots +4 and +5 may be summarized as follows:
+    %table.surfaceforms
+      %tr
+        %th
+        %th Word-Initial
+        %th Word-Internal
+      %tr
+        %th 1st
+        %td Ø-ka- / Ø-ke-
+        %td -Ø-a- / -Ø-e-
+      %tr
+        %th 2nd
+        %td Ø-ha- / Ø-he-
+        %td -Ø-a- / -Ø-e-
+      %tr
+        %th 3rd Sg A
+        %td hai-l-
+        %td -ai-l-
+      %tr
+        %th 3rd Pl A
+        %td haa-ǧl- / haa-ǧal- / haa-ǧel-
+        %td -aa-ǧl- / -aa-ǧal- / -aa-ǧel-
+      %tr
+        %th 3rd I
+        %td hii-kl- / hii-kal- / hii-kel-
+        %td -ii-kl- / -ii-kal- / -ii-kel-
+    %p Slot +6 is the determiner slot. If the verb has no determiner, it is empty.
+    %p The lone suffixial slot, -1, may take the following subject agreement morphemes: #{underlying "*-Àš"} (#{abbrev '1sg'}), #{underlying "*-Àk"} (#{abbrev '2sg'}), #{underlying "*-šIŋ"} (#{abbrev '1pl'}), #{underlying "*-kÙŋ"} (#{abbrev '2pl'}), or zero in the third person. However, suffixes are only mandatory in the plural. The #{abbrev '1sg'} and #{abbrev '2sg'} suffixes may freely be added or dropped; however, there is a strong tendency to drop them if there is an explicit pronoun in the vicinity of the verb, and to mark them where there is no pronoun, or the pronoun is a long ways from the verb.
+    %p Some verbs, all from the oldest layer of vocabulary, undergo small changes to the root morpheme when the subject is plural. This is known as pluractionality, and is caused by the loss of a former plural suffix immediately following the root, which sometimes caused small alterations before it was lost; this plural morpheme is still seen in Yeniseian as -ŋ-. The verb шилеҥ “sing” does not exhibit pluractionality (it has the root *-il- in all forms), but фысах “sit” does: the singular root is *-sax-, but the plural is *-saǧ-). This can be partially obscured by suffixes in slot -1, however.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "кешил(еш)", :lat => "kešil(eš)", :und => "kÀl{+4}-š{+3}-il{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "һегил(ек)", :lat => "hegil(ek)", :und => "kÀl{+4}-k{+3}-il{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һаилил", :lat => "hailil", :und => "ad{+5}-kÀl{+4}-il{0}" },
+                      :sg3i => { :cyr => "һииклил", :lat => "hiiklil", :und => "iw{+5}-kÀl{+4}-il{0}" },
+                      :pl1  => { :cyr => "кешилшиҥ", :lat => "kešilšiŋ", :und => "kÀl{+4}-š{+3}-il{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "һегилкүҥ", :lat => "hegilküŋ", :und => "kÀl{+4}-k{+3}-il{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "һааҕлил", :lat => "haaǧlil", :und => "an{+5}-kÀl{+4}-il{0}" } }
+          = render 'verb_table', :title => "шилеҥ “to sing” —  Present Indefinite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "фассах(аш)", :lat => "fassax(aš)", :und => "f{+6}-kÀl{+4}-š{+3}-sax{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "факсах(ак)", :lat => "faksax(ak)", :und => "f{+6}-kÀl{+4}-k{+3}-sax{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "фаиләсах", :lat => "failəsax", :und => "f{+6}-ad{+5}-kÀl{+4}-sax{0}" },
+                      :sg3i => { :cyr => "фиикалсах", :lat => "fiikalsax", :und => "f{+6}-iw{+5}-kÀl{+4}-sax{0}" },
+                      :pl1  => { :cyr => "фассахшыҥ", :lat => "fassaxšyŋ", :und => "f{+6}-kÀl{+4}-š{+3}-saǧ{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "факсаххуҥ", :lat => "faksaxxuŋ", :und => "f{+6}-kÀl{+4}-k{+3}-saǧ{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "фааҕалсаҕ", :lat => "faaǧalsaǧ", :und => "f{+6}-an{+5}-kÀl{+4}-saǧ{0}" } }
+          = render 'verb_table', :title => "фысах “to sit, be sitting” — Present Indefinite", :forms => forms
+
+  = section "Present Definite" do
+    %p The root is inserted into slot 0.
+    %p The subject agreement markers in slot +3 underlyingly are still *-š- (first person), *-k- (second person), and *-Ø- (third person), but their surface realizations are different due to the final *-n- the the present definite TAM morpheme in slot +4. The first person marker surfaces as -č- (#{underlying "*-kÀn{+4}-š{+3}-"} → -kač-/-keč-), while the second person marker surfaces as -g- (#{underlying "*-kÀn{+4}-k{+3}"}- → -hag-/-heg-, probably via *nk → *ŋk → *ŋg).
+    %p The present definite TAM morpheme is underlyingly described as *-kÀn-. This -n- clearly had a palatal element at some point, since often it leaves behind /j/ in its place when it is dropped. As before, the -k- is preserved in the first person but lost in the second, while the -n- is lost in both (after affecting the slot +3 agreement marker), so that the surface form in the first person is -kai-/-kei- and in the second person is -hai-/-hei-, unless there is a determiner present, in which case both surface as simply -ai-/-ei-.
+    %p The surface realizations of the TAM prefix in the third person parallel those of the present indefinite forms. In the animate singular, it becomes simply -n(ə)-; in the animate plural, -ŋn- (#{underlying "*an{+5}-kÀn{+4}"} → -aa-kn- → -aa-ŋn-) when followed by a vowel or -ǧan- when followed by a consonant; in the inanimate, -ŋn- (#{underlying "*iw{+5}-kÀn{+4}"} → -ii-kn- → -ii-ŋn-) when followed by a vowel or -kan- when followed by a consonant.
+    %p The slot +5 third person subject agreement markers have the same realizations as in the present indefinite: -ai- in the animate singular, -aa- in the animate plural, and -ii- in the inanimate.
+    %table.surfaceforms
+      %tr
+        %th
+        %th Word-Initial
+        %th Word-Internal
+      %tr
+        %th 1st
+        %td Ø-kai- / Ø-kei-
+        %td -Ø-ai- / -Ø-ei-
+      %tr
+        %th 2nd
+        %td Ø-hai- / Ø-hei-
+        %td -Ø-ai- / -Ø-ei-
+      %tr
+        %th 3rd Sg A
+        %td hai-n-
+        %td -ai-n-
+      %tr
+        %th 3rd Pl A
+        %td haa-ŋn- / haa-ǧan-
+        %td -aa-ŋn- / -aa-ǧan-
+      %tr
+        %th 3rd I
+        %td hii-ŋn- / hii-kan-
+        %td -ii-ŋn- / -ii-kan-
+    %p If a determiner is present, it will occupy slot +6.
+    %p The suffixial agreement markers in slot -1 are used in the same way as in the present indefinite.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "кеичил(еш)", :lat => "keičil(eš)", :und => "kÀn{+4}-š{+3}-il{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "һеигил(ек)", :lat => "heigil(ek)", :und => "kÀn{+4}-k{+3}-il{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һаинил", :lat => "hainil", :und => "ad{+5}-kÀn{+4}-il{0}" },
+                      :sg3i => { :cyr => "һииҥнил", :lat => "hiiŋnil", :und => "iw{+5}-kÀn{+4}-il{0}" },
+                      :pl1  => { :cyr => "кеичилшиҥ", :lat => "keičilšiŋ", :und => "kÀn{+4}-š{+3}-il{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "һеигилкүҥ", :lat => "heigilküŋ", :und => "kÀn{+4}-k{+3}-il{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "һааҥнил", :lat => "haaŋnil", :und => "an{+5}-kÀn{+4}-il{0}" } }
+          = render 'verb_table', :title => "шилеҥ “to sing” —  Present Definite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "фаичах(аш)", :lat => "faičax(aš)", :und => "f{+6}-kÀn{+4}-š{+3}-sax{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "фаиксах(ак)", :lat => "faiksax(ak)", :und => "f{+6}-kÀn{+4}-k{+3}-sax{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "фаинәсах", :lat => "fainəsax", :und => "f{+6}-ad{+5}-kÀn{+4}-sax{0}" },
+                      :sg3i => { :cyr => "фииканцах", :lat => "fiikantsax", :und => "f{+6}-iw{+5}-kÀn{+4}-sax{0}" },
+                      :pl1  => { :cyr => "фаичахшыҥ", :lat => "faičaxšyŋ", :und => "f{+6}-kÀn{+4}-š{+3}-saǧ{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "фаиксаххуҥ", :lat => "faiksaxxuŋ", :und => "f{+6}-kÀn{+4}-k{+3}-saǧ{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "фааҕанцаҕ", :lat => "faaǧantsaǧ", :und => "f{+6}-an{+5}-kÀn{+4}-saǧ{0}" } }
+          = render 'verb_table', :title => "фысах “to sit, be sitting” — Present Definite", :forms => forms
+
+  = section "Past Indefinite" do
+    %p In the past indefinite, most morphemes have multiple allomorphs that are ultimately dependent on whether the verb has a determiner; the presence of a determiner has a cascading effect, where it alters the shape of the following morpheme, which then creates or removes the conditions of other phonological changes, and so on.
+    %p The root is inserted into slot zero.
+    %p The slot +3 agreement markers are -š- for the first person and -k- (never -g-) in the second person, as usual. However, if the morpheme immediately following slot +3 begins with a vowel, the +3 agreement markers will become geminated: -šš-, -kk-. In verbs without a determiner, this is due to assimilation of the preceding *-l of the TAM morpheme (#{underlying "*šIl{+4}-š{+3}-V"} → -šiššV-/šyššV-, #{underlying "*šIl{+4}-k{+3}-V"} → -šikkV-/šykkV-). In verbs with a determiner, this is actually due to analogy, since metathesis of the TAM morpheme means this *-l- never comes in contact with the slot +3 morphemes.
+    %p Slot +4 is the TAM marker, which is underlyingly #{underlying "*-šIl-"}. However, this morpheme has numerous surface realizations.
+    %p In the first and second persons, there are two possible forms: -ši-/-šy- if there is no determiner, or -lši-/-lšy- is there is a determiner. In the former, the final *l is lost to the +3 subject marker. In the latter, metathesis of *š and *l takes place.
+    %p In the third person, the TAM suffix is more typical, and is not impacted by the presence of a determiner. In the singular animate, the TAM prefix is realized as -čil-/-čyl- in all verbs. In the animate plural, it is -čl- if followed by a vowel, or -čil-/-čyl- otherwise. In the inanimate, it is -šl- if followed by a vowel, or -šil-/-šyl- otherwise. The -č- in the animate forms is a trace caused by the animacy marker in slot +5: #{underlying "*-ad{+5}-šIl{+4}-"} → -ačil-/-ačyl-, #{underlying "*-an{+5}-šIl{+4}-"} → -aačil-/-aačyl-).
+    %p The third person agreement marker of slot +5 simply appears as -a- in the animate singular, -aa- in the animate plural, and -ii- in the inanimate. This is as expected, except there is no diphthong in the animate singular; the final *d presumably merged with the TAM marker before it developed to -j- as elsewhere.
+    %table.surfaceforms
+      %tr
+        %th
+        %th Word-Initial
+        %th Word-Internal
+      %tr
+        %th 1st
+        %td Ø-ši- / Ø-šy-
+        %td -Ø-lši- / -Ø-lšy-
+      %tr
+        %th 2nd
+        %td Ø-ši- / Ø-šy-
+        %td -Ø-lši- / -Ø-lšy-
+      %tr
+        %th 3rd Sg A
+        %td ha-čil- / ha-čyl-
+        %td -a-čil- / -a-čyl-
+      %tr
+        %th 3rd Pl A
+        %td haa-čl- / haa-čil- / haa-čyl-
+        %td -aa-čl- / -aa-čil- / -aa-čyl-
+      %tr
+        %th 3rd I
+        %td hii-šl- / hii-šil- / hii-šyl-
+        %td -ii-šl- / -ii-šil- / -ii-šyl-
+    %p If there is a determiner, it is inserted into slot +6 followed by an epenthetic vowel -i-/-y-.
+    %p The subject markers of slot -1 function normally.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "шишшил(еш)", :lat => "šiššil(eš)", :und => "šIl{+4}-š{+3}-il{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "шиккил(ек)", :lat => "šikkil(ek)", :und => "šIl{+4}-k{+3}-il{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һачилил", :lat => "hačilil", :und => "ad{+5}-šIl{+4}-il{0}" },
+                      :sg3i => { :cyr => "һиишлил", :lat => "hiišlil", :und => "iw{+5}-šIl{+4}-il{0}" },
+                      :pl1  => { :cyr => "шишшилшиҥ", :lat => "šiššilšiŋ", :und => "šIl{+4}-š{+3}-il{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "шиккилкүҥ", :lat => "šikkilküŋ", :und => "šIl{+4}-k{+3}-il{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "һаачлил", :lat => "haačlil", :und => "an{+5}-šIl{+4}-il{0}" } }
+          = render 'verb_table', :title => "шилеҥ “to sing” —  Past Indefinite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "фылшыссах(аш)", :lat => "fylšyssax(aš)", :und => "f{+6}-šIl{+4}-š{+3}-sax{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "фылшыксах(ак)", :lat => "fylšyksax(ak)", :und => "f{+6}-šIl{+4}-k{+3}-sax{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "фачылсах", :lat => "fačylsax", :und => "f{+6}-ad{+5}-šIl{+4}-sax{0}" },
+                      :sg3i => { :cyr => "фиишылсах", :lat => "fiišylsax", :und => "f{+6}-iw{+5}-šIl{+4}-sax{0}" },
+                      :pl1  => { :cyr => "фылшыссахшыҥ", :lat => "fylšyssaxšyŋ", :und => "f{+6}-šIl{+4}-š{+3}-saǧ{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "фылшыксаххуҥ", :lat => "fylšyksaxxuŋ", :und => "f{+6}-šIl{+4}-k{+3}-saǧ{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "фаачылсаҕ", :lat => "faačylsaǧ", :und => "f{+6}-an{+5}-šIl{+4}-saǧ{0}" } }
+          = render 'verb_table', :title => "фысах “to sit, be sitting” — Past Indefinite", :forms => forms
+
+  = section "Past Definite" do
+    %p The root is inserted into slot 0.
+    %p The surface forms of the slot +3 agreement markers are consistently -č- (first person), -g- (second person), and -Ø- (third person). The transformations from the underlying *-š- and *-k- is due to the final *n of the TAM prefix, as in the present definite.
+    %p The +4 TAM marker is underlyingly #{underlying "*-šIn-"}, which undergoes transformations similar to the past indefinite #{underlying "*-šIl-"}. In the first and second persons, its realization ultimately depends on whether there is a determiner. If there is none, it surfaces as -šii-; if there is, it becomes -šni-/-šny-. Unlike the past indefinite, no metathesis takes place.
+    %p In the third person, the realization of the TAM morpheme depends on the following sound. The animate singular is -čin-/-čyn- for all verbs; the animate plural is -čin-/-čyn- if the next sound is a consonant and -čn- if it is a vowel; the inanimate is -šin-/-šyn- if a consonant follows, and -šn- otherwise.
+    %p All other morphemes are realizations just as in the past indefinite: the slot +5 agreement markers -a-, -aa-, and -ii-, the determiners, and the suffixial agreement markers.
+    %table.surfaceforms
+      %tr
+        %th
+        %th Word-Initial
+        %th Word-Internal
+      %tr
+        %th 1st
+        %td Ø-šii-
+        %td -Ø-šni- / -Ø-šny-
+      %tr
+        %th 2nd
+        %td Ø-šii-
+        %td -Ø-šni- / -Ø-šny-
+      %tr
+        %th 3rd Sg A
+        %td ha-čin- / ha-čyn-
+        %td -a-čin- / -a-čyn-
+      %tr
+        %th 3rd Pl A
+        %td haa-čn- / haa-čin- / haa-čyn-
+        %td -aa-čn- / -aa-čin- / -aa-čyn-
+      %tr
+        %th 3rd I
+        %td hii-šn- / hii-šin- / hii-šyn-
+        %td -ii-šn- / -ii-šin- / -ii-šyn-
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "шиичил(еш)", :lat => "šiičil(eš)", :und => "šIn{+4}-š{+3}-il{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "шиигил(ек)", :lat => "šiigil(ek)", :und => "šIn{+4}-k{+3}-il{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һачинил", :lat => "hačinil", :und => "ad{+5}-šIn{+4}-il{0}" },
+                      :sg3i => { :cyr => "һиишнил", :lat => "hiišnil", :und => "iw{+5}-šIn{+4}-il{0}" },
+                      :pl1  => { :cyr => "шиичилшиҥ", :lat => "šiičilšiŋ", :und => "šIn{+4}-š{+3}-il{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "шиигилкүҥ", :lat => "šiigilküŋ", :und => "šIl{+4}-k{+3}-il{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "һаачнил", :lat => "haačnil", :und => "an{+5}-šIn{+4}-il{0}" } }
+          = render 'verb_table', :title => "шилеҥ “to sing” —  Past Definite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "фышныссах(аш)", :lat => "fyšnyssax(aš)", :und => "f{+6}-šIn{+4}-š{+3}-sax{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "фышныксах(ак)", :lat => "fyšnyksax(ak)", :und => "f{+6}-šIn{+4}-k{+3}-sax{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "фачынцах", :lat => "fačyntsax", :und => "f{+6}-ad{+5}-šIn{+4}-sax{0}" },
+                      :sg3i => { :cyr => "фиишынцах", :lat => "fiišyntsax", :und => "f{+6}-an{+5}-šIn{+4}-saǧ{0}" },
+                      :pl1  => { :cyr => "фышныссахшыҥ", :lat => "fyšnyssaxšyŋ", :und => "f{+6}-šIn{+4}-š{+3}-saǧ{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "фышныксаххуҥ", :lat => "fyšnyksaxxuŋ", :und => "f{+6}-šIn{+4}-k{+3}-saǧ{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "фаачынцаҕ", :lat => "faačyntsaǧ", :und => "f{+6}-an{+5}-šIn{+4}-saǧ{0}" } }
+          = render 'verb_table', :title => "фысах “to sit, be sitting” — Past Definite", :forms => forms
+
+  = section "Imperative" do
+    %p The imperative mood is a tenseless form used to indicate strong commands. They exist for the second person only, though do not show any sort of subject agreement except for an optional number marker.
+    %p The root is inserted into slot 0.
+    %p The imperative prefix *-d- is placed in slot +1. There is no epenthetic vowel between the imperative marker and the root unless the root begins with a consonant cluster, in which case a schwa is inserted. Otherwise, this *-d- may undergo sandhi alterations with the first consonant of the root. However, if this *-d- ends up being word-initial and the root begins with a consonant, -a- or -e- may be inserted.
+    %p If the verb has a determiner, it is inserted into slot +6. An epenthetic -a-/-e- is inserted immediately afterwards if necessary.
+    %p If the imperative is plural, an optional plural marker -ŋ can be suffixed to the root. It becomes -əŋ if an illegal cluster would otherwise form.
+    %p Pluractionality does not exist in the imperative. If a verb has different roots for the singular and plural, the singular one will always be used, even if the imperative is directed at multiple people.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg2 => { :cyr => "дил", :lat => "dil", :und => "d{+1}-il{0}" },
+                      :pl2 => { :cyr => "дил(ҥ)", :lat => "dil(ŋ)", :und => "d{+1}-il{0}-(ŋ){-1}" } }
+          = render 'imperative_table', :title => "шилеҥ “to sing” — Imperative", :forms => forms
+        %td
+          - forms = { :sg2 => { :cyr => "фассах", :lat => "fassax", :und => "f{+6}-d{+1}-sax{0}" },
+                      :pl2 => { :cyr => "фассах(әҥ)", :lat => "fassax(əŋ)", :und => "f{+6}-d{+1}-sax{0}-(ŋ){-1}" } }
+          = render 'imperative_table', :title => "фысах “to sit, be sitting” — Imperative", :forms => forms
+
+= section "Conjugation Ib: Transitive Verbs" do
+  %p Transitive Conjugation I verbs take both a subject (semantic agent) and direct object (semantic patient), and must agree with both. Such verbs include #{t "лывауҥ", "lywauŋ"} “make, create [something]” (root *-wau-), #{t "сыкволаҥ", "sykwolaŋ"} “wash [something]” (root *-kol-), #{t "шилүбитиҥ", "šilübitiŋ"} “love [something]” (root *-lübit-), #{t "наин", "nain"} “see [something]” (root *-ain-) and #{t "шишитеҥ", "šišiteŋ"} “wake up, arouse [something]” (root *-šit-).
+  %p The conjugation diagram for such verbs looks like this:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td Determiner
+      %td 3rd Person Subject + Object Agreement Marker
+      %td TAM Marker
+      %td 1st/2nd Person Subject Agreement Marker
+      %td
+      %td Imperative
+      %td Root
+      %td Subject Agreement Markers (opt.)
+  %p For the most part the only differences between the transitive Conjugation Ib and the unergative Conjugation Ia is slot +5, although these changes can affect neighboring morphemes.
+  %p Conjugation Ib will be demonstrated with the verbs лывауҥ “make, create [something]” (*-wau-), наин (*-ain-), and шилүбитиҥ “love” (*-lübit-). The first has the l-type determiner, the second the n-type, and the last none.
+
+  = section "Present Indefinite" do
+    %p In the present indefinite of unergative verbs, there were only three possible +5 agreement markers: *-ad- (indicating a third person singular inanimate subject), *-an- (indicating a third person plural animate subject), and *-iw- (indicating a third person inanimate subject of any number). The lack of a +5 marker simply meant the subject was not third person.
+    %p In transitive verbs, there are more possibilities, as the +5 morpheme encodes information about both subject and object.
+    %table
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th{:colspan => 4} Subject
+      %tr
+        %th 1
+        %th 2
+        %th 3 A
+        %th 3 I
+      %tr
+        %th{:rowspan => 7} Object
+        %th 1 Sg
+        %td -d-
+        %td -š-
+        %td -as-
+        %td -iš-
+      %tr
+        %th 1 Pl
+        %td -d-/-n-
+        %td -ux-
+        %td -ax-
+        %td -ix-
+      %tr
+        %th 2 Sg
+        %td -k-
+        %td -d-
+        %td -ak-
+        %td -ik-
+      %tr
+        %th 2 Pl
+        %td -uŋ-
+        %td -d-/-n-
+        %td -aŋ-
+        %td -iŋ-
+      %tr
+        %th 3 Sg A
+        %td -d-
+        %td -d-
+        %td -ai-
+        %td -ie-
+      %tr
+        %th 3 Pl A
+        %td -n-
+        %td -n-
+        %td -aa-
+        %td -in-
+      %tr
+        %th 3 I
+        %td -w-
+        %td -w-
+        %td -uu-
+        %td -ii-
+    %p Although this seems complex at first glance, there is a pattern at work, although it has become slightly obscured by time.
+    %p This +5 morpheme originally began as two separate morphemes. The first was a vowel representing the animacy of the subject: *-a- if it was animate, *-i- if it was inanimate, and *-Ø- if it was not third person (since the animacy distinction is only salient in the third person)<sup>2</sup>. The second was a consonant or consonants representing the person and number of the direct object: *-š- for #{abbrev '1sg'}, *-x- (← *-šŋ-) for #{abbrev '1pl'}, *-k- for #{abbrev '2sg'}, *-ŋ- (← *-kŋ-) for #{abbrev '2pl'}, *-d- for #{abbrev '3sg.anim'}, *-n- (← *-dŋ-) for #{abbrev '3pl.anim'}, and *-w- for #{abbrev '3sg.inan'}. The fusion of these two morphemes and subsequent sound changes yielded the modern +5 agreement markers.
+    %p Four elements in the table clearly are not explained by this, however: first person objects with a first person subject, and second person objects with a second person subject. These are true reflexives, and so instead of taking a first or second person agreement marker, a third person animate agreement marker is used instead, to agree with the reflexive pronoun discussed in section 7.2. #{abbrev '1pl'} and #{abbrev '2pl'} objects have a choice of either #{abbrev '3sg'} or #{abbrev '3pl'} agreement, corresponding to a normal reflexive and a distributive reflexive respectively<sup>3</sup>.
+    %p In the present indefinite, the only significant change this fuller set of +5 prefixes cause is the complete suppression of the initial *k of the TAM morpheme (#{underlying "*-kÀl-"}) if the +5 prefix ends in a consonant; if it ends in a vowel, no suppression need take place. If the subject is third person, the same variants of the TAM morpheme occur as for unergative verbs (e.g., -l- or -lə- in the third person animate singular); this is purely due to analogy, since it is etymologically unexpected.
+    %p Illegal clusters that would otherwise be formed are resolved by inserting -a-/-e-.
+    %p Since transitive verbs take two arguments, the full paradigm is too lengthy to reproduce here. These are a few sample forms; a full example paradigm is available in the appendix.
+    %ul
+      %li
+        = t("кешлүбит(еш)", "kešlübit(eš)", :linebreak => true)
+        %br
+        = underlying("k{+5}-kÀl{+4}-š{+3}-lübit{0}-(Àš){-1}")
+        %br
+        “I love you.”
+      %li
+        = t("накашаин(аш)", "nakašain(aš)", :linebreak => true)
+        %br
+        = underlying("n{+6}-k{+5}-kÀl{+4}-š{+3}-ain{0}-(Àš){-1}")
+        %br
+        “I see you.”
+      %li
+        = t("деклүбит(ек)", "deklübit(ek)", :linebreak => true)
+        %br
+        = underlying("d{+5}-kÀl{+4}-k{+3}-lübit{0}-(Àk){-1}")
+        %br
+        “You love him/her.”
+      %li
+        = t("надагаин(ак)", "nadagain(ak)", :linebreak => true)
+        %br
+        = underlying("n{+6}-d{+5}-kÀl{+4}-k{+3}-ain{0}-(Àk){-1}")
+        %br
+        “You see him/her.”
+      %li
+        = t("навашаинчыҥ", "nawašainčyŋ", :linebreak => true)
+        %br
+        = underlying("n{+6}-w{+5}-kÀl{+4}-š{+3}-ain{0}-šIŋ{-1}")
+        %br
+        “We see it.”
+      %li
+        = t("лавашшаушыҥ", "lawaššaušyŋ", :linebreak => true)
+        %br
+        = underlying("l{+6}-w{+5}-kÀl{+4}-š{+3}-wau{0}-šIŋ{-1}")
+        %br
+        “We are making it.”
+      %li
+        = t("нахлаин", "naxlain", :linebreak => true)
+        %br
+        = underlying("n{+6}-ax{+5}-kÀl{+4}-ain{0}")
+        %br
+        “He/she sees us.”
+      %li
+        = t("волаҥее нанакваиҥкуҥ", "wolaŋee nanakwaiŋkuŋ", :linebreak => true)
+        %br
+        = underlying("n{+6}-n{+5}-kÀl{+4}-k{+3}-ain{0}-kÙŋ{-1}")
+        %br
+        “You all see yourselves [at once].”
+      %li
+        = t("һашнолее надашаинчыҥ", "hašnolee nadašainčyŋ", :linebreak => true)
+        %br
+        = underlying("n{+6}-d{+5}-kÀl{+4}-š{+3}-ain{0}-šIŋ{-1}")
+        %br
+        “We see ourselves [separately].”
+
+  = section "Present Definite" do
+    %p The present definite is formed in the same way as for unergative verbs, except with the full agreement marker in slot +5. The first and second person agreement continue to be expressed as -č- and -g-, and the same rules apply regarding the realization of the TAM morpheme in different forms.
+    %ul
+      %li
+        = t("накаичаин(аш)", "nakaičain(aš)", :linebreak => true)
+        %br
+        = underlying("n{+6}-k{+5}-kÀn{+4}-š{+3}-ain{0}-(Àš){-1}")
+        %br
+        “I will see you.”
+      %li
+        = t("надаигаин(ак)", "nadaigain(ak)", :linebreak => true)
+        %br
+        = underlying("n{+6}-d{+5}-kÀn{+4}-k{+3}-ain{0}-(Àk){-1}")
+        %br
+        “You will see him/her.”
+      %li
+        = t("наваичаинчыҥ", "nawaičainčyŋ", :linebreak => true)
+        %br
+        = underlying("n{+6}-w{+5}-kÀn{+4}-š{+3}-ain{0}-šIŋ{-1}")
+        %br
+        “We will see it.”
+      %li
+        = t("наҕнаин", "naǧnain", :linebreak => true)
+        %br
+        = underlying("n{+6}-ax{+5}-kÀn{+4}-ain{0}")
+        %br
+        “He/she will see us.”
+      %li
+        = t("назҕанаин", "nazǧanain", :linebreak => true)
+        %br
+        = underlying("n{+6}-as{+5}-kÀn{+4}-ain{0}")
+        %br
+        “They will see me.”
+
+  = section "Past Indefinite" do
+    %p The past indefinite actually has a significantly different surface realization for transitive Conjugation I verbs than for unergative verbs. In unergative verbs, the TAM marker #{underlying "*-šIl-"} in the first and second persons can undergo contraction and metathesis, while appearing normally in the third person. In transitive verbs, the TAM marker will always surface as -ši-/-šy- in the first and second persons, and as -čil/-čyl-/-čl-/-šil-/-šyl-/-šl- in the third person according to the same rules as unergative verbs. In the first and second persons, the TAM marker causes gemination of the following +3 subject agreement marker if it in turn is followed by a vowel.
+    %ul
+      %li
+        = t("кешишлүбит(еш)", "kešišlübit(eš)", :linebreak => true)
+        %br
+        = underlying("k{+5}-šIl{+4}-š{+3}-lübit{0}-(Àš){-1}")
+        %br
+        “I loved you.”
+      %li
+        = t("дешиклүбит(ек)", "dešiklübit(ek)", :linebreak => true)
+        %br
+        = underlying("d{+5}-šIl{+4}-k{+3}-lübit{0}-(Àk){-1}")
+        %br
+        “You loved him/her.”
+      %li
+        = t("вешишлүбишшиҥ", "wešišlübiššiŋ", :linebreak => true)
+        %br
+        = underlying("w{+5}-šIl{+4}-š{+3}-lübit{0}-šIŋ{-1}")
+        %br
+        “We loved it.”
+      %li
+        = t("һакшиллүбит", "hakšillübit", :linebreak => true)
+        %br
+        = underlying("ax{+5}-šIl{+4}-lübit{0}")
+        %br
+        “He/she loved us.”
+      %li
+        = t("һашшиллүбит", "haššillübit", :linebreak => true)
+        %br
+        = underlying("as{+5}-šIl{+4}-lübit{0}")
+        %br
+        “They loved me.”
+
+  = section "Past Definite" do
+    %p The past definite of Conjugation I transitive verbs behaves in much the same manner as the past indefinite, in that the TAM marker #{underlying "*-šIn-"} has a generalized surface form -šni-/-šny- in the first and second persons of all verbs, while following the same rules as unergative verbs in the third person due to analogy. If whatever prefix that comes immediately before the TAM marker ends in a consonant, an epenthetic schwa is inserted.
+    %ul
+      %li
+        = t("лакәшнышшау(ш)", "lakəšnyššau(š)", :linebreak => true)
+        %br
+        = underlying("l{+6}-k{+5}-šIn{+4}-š{+3}-wau{0}-(Àš){-1}")
+        %br
+        “I made you.”
+      %li
+        = t("ладәшныквау(к)", "ladəšnykwau(k)", :linebreak => true)
+        %br
+        = underlying("l{+6}-d{+5}-šIn{+4}-k{+3}-wau{0}-(Àk){-1}")
+        %br
+        “You made him/her.”
+      %li
+        = t("лавәшнышшаушыҥ", "lawəšnyššaušyŋ", :linebreak => true)
+        %br
+        = underlying("l{+6}-w{+5}-šIn{+4}-š{+3}-wau{0}-šIŋ{-1}")
+        %br
+        “We made it.”
+      %li
+        = t("лахәчыннау", "laxəčynnau", :linebreak => true)
+        %br
+        = underlying("l{+6}-ax{+5}-šIn{+4}-wau{0}")
+        %br
+        “He/she made us.”
+      %li
+        = t("ласәчыннау", "lasəčynnau", :linebreak => true)
+        %br
+        = underlying("l{+6}-as{+5}-šIn{+4}-wau{0}")
+        %br
+        “They made me.”
+
+  = section "Imperative" do
+    %p The basic formation of the transitive imperative does not differ from the unergative imperative. However, the transitive imperative must be able to mark direct objects, which is done through a reduced set of +5 agreement markers:
+    %table
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th Subject
+      %tr
+        %th 2
+      %tr
+        %th{:rowspan => 7} Object
+        %th 1 Sg
+        %td= underlying("-šI-")
+      %tr
+        %th 1 Pl
+        %td= underlying("-xU-")
+      %tr
+        %th 2 Sg
+        %td= underlying("-dÀ-")
+      %tr
+        %th 2 Pl
+        %td= underlying("-dÀ-/-nA-")
+      %tr
+        %th 3 Sg A
+        %td= underlying("-dÀ-")
+      %tr
+        %th 3 Pl A
+        %td= underlying("-nA-")
+      %tr
+        %th 3 I
+        %td= underlying("-wA-")
+    %p Since the subjects of imperatives are always second person, second person objects must act as reflexives.
+    %table
+      %tr
+        %th{:colspan => 4} наин “to see [something]” — Imperative
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th{:colspan => 2} Subject
+      %tr
+        %th 2 Sg
+        %th 2 Pl
+      %tr
+        %th{:rowspan => 7} Object
+        %th 1 Sg
+        %td
+          = t("нашыдаин", "našydain", :linebreak => true)
+          %br
+          = underlying("n{+6}-šI{+5}-d{+1}-ain{0}")
+        %td
+          = t("нащыдаин(әҥ)", "našydain(əŋ)", :linebreak => true)
+          %br
+          = underlying("n{+6}-šI{+5}-d{+1}-ain{0}-(ŋ){-1}")
+      %tr
+        %th 1 Pl
+        %td
+          = t("нахудаин", "naxudain", :linebreak => true)
+          %br
+          = underlying("n{+6}-xU{+5}-d{+1}-ain{0}")
+        %td
+          = t("нахудаин(әҥ)", "naxudain(əŋ)", :linebreak => true)
+          %br
+          = underlying("n{+6}-xU{+5}-d{+1}-ain{0}-(ŋ){-1}")
+      %tr
+        %th 2 Sg
+        %td = 3 Sg A
+        %td —
+      %tr
+        %th 2 Pl
+        %td —
+        %td = 3 Sg A or 3 Pl A
+      %tr
+        %th 3 Sg A
+        %td
+          = t("нададаин", "nadadain", :linebreak => true)
+          %br
+          = underlying("n{+6}-dÀ{+5}-d{+1}-ain{0}")
+        %td
+          = t("нададаин(әҥ)", "nadadain(əŋ)", :linebreak => true)
+          %br
+          = underlying("n{+6}-dÀ{+5}-d{+1}-ain{0}-(ŋ){-1}")
+      %tr
+        %th 3 Pl A
+        %td
+          = t("нанадаин", "nanadain", :linebreak => true)
+          %br
+          = underlying("n{+6}-nA{+5}-d{+1}-ain{0}")
+        %td
+          = t("нанадаин(әҥ)", "nanadain(əŋ)", :linebreak => true)
+          %br
+          = underlying("n{+6}-nA{+5}-d{+1}-ain{0}-(ŋ){-1}")
+      %tr
+        %th 3 I
+        %td
+          = t("навадаин", "nawadain", :linebreak => true)
+          %br
+          = underlying("n{+6}-wA{+5}-d{+1}-ain{0}")
+        %td
+          = t("навадаин(әҥ)", "nawadain(əŋ)", :linebreak => true)
+          %br
+          = underlying("n{+6}-wA{+5}-d{+1}-ain{0}-(ŋ){-1}")
+
+= section "Conjugation Ic: Unaccusative Verbs" do
+  %p Unaccusative Conjugation I verbs are intransitive, having only a syntactic subject which must be marked morphologically on the verb. However, unlike unergative verbs, the subject of an unaccusative verb is semantically patient-like. In other words, the subject is not a voluntary instigator of an action (unergative), but instead is a generally involuntary experiencer of an action (unaccusative).
+  %p Unaccusative verbs in Očets almost always also have a transitive (Conjugation Ib) counterpart<sup>4</sup>, formed using the exact same root, but a Ib paradigm rather than a Ic. The subject of the unaccusative verb will always correspond to the direct object of the transitive verb. Some examples include:
+  %table.noundecl
+    %tr
+      %th Root
+      %th Unaccusative
+      %th Transitive
+    %tr
+      %td *-kol-
+      %td
+        = t("стакволаҥ", "stakwolaŋ", :linebreak => true)
+        %br
+        “wash oneself”
+      %td
+        = t("сыкволаҥ", "sykwolaŋ", :linebreak => true)
+        %br
+        “wash [something]”
+    %tr
+      %td *-šit-
+      %td
+        = t("сташитеҥ", "stašiteŋ", :linebreak => true)
+        %br
+        “wake up”
+      %td
+        = t("шишитеҥ", "šišiteŋ", :linebreak => true)
+        %br
+        “wake up [something]”
+    %tr
+      %td *-ǰind-
+      %td
+        = t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+        %br
+        “fall”
+      %td
+        = t("шиџиндәҥ", "šiǰindəŋ", :linebreak => true)
+        %br
+        “drop [something]”
+    %tr
+      %td *-čo-
+      %td
+        = t("стачоҥ", "stačoŋ", :linebreak => true)
+        %br
+        “die”
+      %td
+        = t("сычоҥ", "syčoŋ", :linebreak => true)
+        %br
+        “kill [something]”
+    %tr
+      %td *-kos-
+      %td
+        = t("стаквосаҥ", "stakwosaŋ", :linebreak => true)
+        %br
+        “warm up”
+      %td
+        = t("сыквосаҥ", "sykwosaŋ", :linebreak => true)
+        %br
+        “warm [something]”
+  %p The conjugation diagram for such verbs looks like this:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td Determiner
+      %td Subject Agreement Marker
+      %td TAM Marker
+      %td Theme
+      %td
+      %td Imperative
+      %td Root
+      %td Subject Agreement Markers (opt.)
+  %p If this is compared with the diagram for transitive Ib verbs, one remarkable feature should stand out: the direct object markers of slot +5 have been reanalyzed as subject markers, while the normal subject slot +3 has been reduced to little more than a theme, a meaningless morpheme whose only purpose is to mark this verb as belonging to Conjugation Ic. This arrangement strongly suggests that Očets unaccusative verbs emerged from an earlier impersonal construction.
+  %p Conjugation Ib will be demonstrated with the verbs стакволаҥ “wash oneself, wash up” (*-kol-) and сташитеҥ “wake up” (*-šit-). Neither have determiners.
+
+  = section "Present Indefinite" do
+    %p The present indefinite conjugation of unaccusative verbs looks very different from Conjugations Ia and Ib due to the reanalysis of the object marker in slot +5, though it is built out of the very same components used in all Conjugation I verbs. The only morpheme that truly is unique to Conjugation Ic is the theme *-w- in slot +3, which was probably originally an impersonal subject marker.
+    %p The root is inserted into slot 0.
+    %p The unaccusative theme *-w- is inserted into slot +3 in all forms. However, in the present indefinite tense, it is always absorbed into the TAM prefix, forming a diphthong.
+    %p The TAM morpheme #{underlying "*-kÀl-"} is inserted into slot +4. However, both the initial and vowel consonant are lost, and the sole remaining vowel is diphthongized with the theme vowel: #{underlying "*-kÀ{b}>l{+4}-w{+3}"} → -a-w- → -au-, #{underlying "*-kÀ{f}l{+4}-w{+3}"} → -e-w- → -eu-. Since there is always something present in both +3 and +5, unaccusative verbs only have a single realization of the TAM morpheme seen in all persons and numbers, rather than having a split with first and second person on one side and third on the other.
+    %p The +5 subject agreement markers consist of a single consonant, identical to the object agreement markers of transitive verbs. However, in the third person, the third person markers -a- (animate) and -i- (inanimate) are reintroduced as well as the consonant, the result of analogical spread.
+    %table
+      %tr
+        %th 1 Sg
+        %th 1 Pl
+        %th 2 Sg
+        %th 2 Pl
+        %th 3 Sg A
+        %th 3 Pl A
+        %th 3 I
+      %tr
+        %td -š-
+        %td -x-
+        %td -k-
+        %td -ŋ-
+        %td -ad-
+        %td -an-
+        %td -iw-
+    %p If any determiners are present, they are inserted as usual into slot +6, with an epthentic -a-/-e- if needed.
+    %p Unlike in other Conjugation I verbs, the subject agreement markers into slot -1 are all optional for unaccusative verbs. The more complete subject agreement in slot +5 (indicating both person and number) makes the -1 agreement markers entirely redundant, whereas in Conjugation Ia and Ib, prefixial morphology only marked the person of first and second person subjects, and not their number.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "шаукол(аш)", :lat => "šaukol(aš)", :und => "š{+5}-kÀl{+4}-w{+3}-kol{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "каукол(ак)", :lat => "kaukol(ak)", :und => "k{+5}-kÀl{+4}-w{+3}-kol{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һадаукол", :lat => "hadaukol", :und => "ad{+5}-kÀl{+4}-w{+3}-kol{0}" },
+                      :sg3i => { :cyr => "һиваукол", :lat => "hiwaukol", :und => "iw{+5}-kÀl{+4}-w{+3}-kol{0}" },
+                      :pl1  => { :cyr => "хаукол(шыҥ)", :lat => "xaukol(šyŋ)", :und => "x{+5}-kÀl{+4}-w{+3}-kol{0}-(šIŋ){-1}" },
+                      :pl2  => { :cyr => "ҥаукол(куҥ)", :lat => "ŋaukol(kuŋ)", :und => "ŋ{+5}-kÀl{+4}-w{+3}-kol{0}-(kÙŋ){-1}" },
+                      :pl3a => { :cyr => "һанаукол", :lat => "hanaukol", :und => "an{+5}-kÀl{+4}-w{+3}-kol{0}" } }
+          = render 'verb_table', :title => "стакволаҥ “to wash oneself” —  Present Indefinite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "шеушит(еш)", :lat => "šeušit(eš)", :und => "š{+5}-kÀl{+4}-w{+3}-šit{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "кеушит(ек)", :lat => "keušit(ek)", :und => "k{+5}-kÀl{+4}-w{+3}-šit{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һадеушит", :lat => "hadeušit", :und => "ad{+5}-kÀl{+4}-w{+3}-šit{0}" },
+                      :sg3i => { :cyr => "һивеушит", :lat => "hiweušit", :und => "iw{+5}-kÀl{+4}-w{+3}-šit{0}" },
+                      :pl1  => { :cyr => "хеуши(т/шшиҥ)", :lat => "xeuši(t/ššiŋ)", :und => "x{+5}-kÀl{+4}-w{+3}-šit{0}-(šIŋ){-1}" },
+                      :pl2  => { :cyr => "ҥеушит(күҥ)", :lat => "ŋeušit(küŋ)", :und => "ŋ{+5}-kÀl{+4}-w{+3}-šit{0}-(kÙŋ){-1}" },
+                      :pl3a => { :cyr => "һанеушит", :lat => "haneušit", :und => "an{+5}-kÀl{+4}-w{+3}-šit{0}" } }
+          = render 'verb_table', :title => "сташитеҥ “to wake up” —  Present Indefinite", :forms => forms
+
+  = section "Present Definite" do
+    %p The present definite is formed in a similar pattern. The TAM marker #{underlying "*-kÀn-"} is generalized to -ai-/-ei- in all forms, while the theme in +3 appears as -w- when followed by a vowel, or as a vocalized -u- when followed by a consonant.
+    - forms = { :sg1  => { :cyr => "шеиушит(еш)", :lat => "šeiušit(eš)", :und => "š{+5}-kÀn{+4}-w{+3}-šit{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "кеиушит(ек)", :lat => "keiušit(ek)", :und => "k{+5}-kÀn{+4}-w{+3}-šit{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һадеиушит", :lat => "hadeiušit", :und => "ad{+5}-kÀn{+4}-w{+3}-šit{0}" },
+                :sg3i => { :cyr => "һивеиушит", :lat => "hiweiušit", :und => "iw{+5}-kÀn{+4}-w{+3}-šit{0}" },
+                :pl1  => { :cyr => "хеиуши(т/шшиҥ)", :lat => "xeiuši(t/ššiŋ)", :und => "x{+5}-kÀn{+4}-w{+3}-šit{0}-(šIŋ){-1}" },
+                :pl2  => { :cyr => "ҥеиушит(күҥ)", :lat => "ŋeiušit(küŋ)", :und => "ŋ{+5}-kÀn{+4}-w{+3}-šit{0}-(kÙŋ){-1}" },
+                :pl3a => { :cyr => "һанеиушит", :lat => "haneiušit", :und => "an{+5}-kÀn{+4}-w{+3}-šit{0}" } }
+    = render 'verb_table', :title => "сташитеҥ “to wake up” —  Present Definite", :forms => forms
+
+  = section "Past Indefinite" do
+    %p In the past indefinite, the TAM marker #{underlying "*-šIl-"} surfaces as a metathesized -lš- in all forms, while the +3 theme always appears as -uw- when followed by a vowel and -u- when followed by a consonant. An epenthetic -a-/-e- is inserted after the +5 subject markers.
+    - forms = { :sg1  => { :cyr => "шалшукол(аш)", :lat => "šalšukol(aš)", :und => "š{+5}-šIl{+4}-w{+3}-kol{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "калшукол(ак)", :lat => "kalšukol(ak)", :und => "k{+5}-šIl{+4}-w{+3}-kol{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һадалшукол", :lat => "hadalšukol", :und => "ad{+5}-šIl{+4}-w{+3}-kol{0}" },
+                :sg3i => { :cyr => "һиваукол", :lat => "hiwaukol", :und => "iw{+5}-kÀl{+4}-w{+3}-kol{0}" },
+                :pl1  => { :cyr => "халшукол(шыҥ)", :lat => "xalšukol(šyŋ)", :und => "x{+5}-šIl{+4}-w{+3}-kol{0}-(šIŋ){-1}" },
+                :pl2  => { :cyr => "ҥалшукол(куҥ)", :lat => "ŋalšukol(kuŋ)", :und => "ŋ{+5}-šIl{+4}-w{+3}-kol{0}-(kÙŋ){-1}" },
+                :pl3a => { :cyr => "һаналшукол", :lat => "hanalšukol", :und => "an{+5}-šIl{+4}-w{+3}-kol{0}" } }
+    = render 'verb_table', :title => "стакволаҥ “to wash oneself” —  Past Indefinite", :forms => forms
+
+  = section "Past Definite" do
+    %p The past definite is identical in formation to the past indefinite, except the TAM marker #{underlying "*-šIn-"} always surfaces as -šn-.
+    - forms = { :sg1  => { :cyr => "шешнушит(еш)", :lat => "šešnušit(eš)", :und => "š{+5}-šIn{+4}-w{+3}-šit{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "кешнушит(ек)", :lat => "kešnušit(ek)", :und => "k{+5}-šIn{+4}-w{+3}-šit{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һадешнушит", :lat => "hadešnušit", :und => "ad{+5}-šIn{+4}-w{+3}-šit{0}" },
+                :sg3i => { :cyr => "һивешнушит", :lat => "hiwešnušit", :und => "iw{+5}-šIn{+4}-w{+3}-šit{0}" },
+                :pl1  => { :cyr => "хешнуши(т/шшиҥ)", :lat => "xešnuši(t/ššiŋ)", :und => "x{+5}-šIn{+4}-w{+3}-šit{0}-(šIŋ){-1}" },
+                :pl2  => { :cyr => "ҥешнушит(күҥ)", :lat => "ŋešnušit(küŋ)", :und => "ŋ{+5}-šIn{+4}-w{+3}-šit{0}-(kÙŋ){-1}" },
+                :pl3a => { :cyr => "һанешнушит", :lat => "hanešnušit", :und => "an{+5}-šIn{+4}-w{+3}-šit{0}" } }
+    = render 'verb_table', :title => "сташитеҥ “to wake up” —  Past Definite", :forms => forms
+
+  = section "Imperative" do
+    %p The unaccusative imperative has somewhat of a quirky formation, due to its origin as a reanalysis of an impersonal verb.
+    %p The root is inserted into slot 0.
+    %p In slot +1, the imperative prefix #{underlying "*-da-"} (not *-d-!) is inserted. If the root begins with /a/ or /e/, this is realized as -d- + lengthening of that vowel; before /i/ or /u/, it becomes a diphthong -da-i- or -da-u-; before other vowels, it simply becomes -d-. This longer imperative prefix appears to incorporate an old valency-reducing operator *a, which is also seen in Očets passive participles and pseudopassive stative verbs.
+    %p The slot +3 theme #{underlying "*-w-"} may be present as -u-; this is probably not an original feature since imperatives are typically free of +3 markers, but rather is an analogical form based on other unaccusative forms. This is supported by its absence in unaccusative verbs with determiners.
+    %p In slot +5, a subject prefix #{underlying "*-k-"} (singular) or #{underlying "*-ŋ-"} (plural) must be present. This is a carryover from their original role as direct objects, which <em>are</em> typically marked in imperative forms. It also means that unaccusative verbs are the only Conjugation I verbs to require number marking on imperatives.
+    %p Any determiners are present in slot +6.
+    %p The plural marker *-ŋ- in slot -1 is possible, but not especially frequent.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg2 => { :cyr => "кудакол", :lat => "kudakol", :und => "k{+5}-w{+3}-da{+1}-kol{0}" },
+                      :pl2 => { :cyr => "ҥудакол(ҥ)", :lat => "ŋudakol(ŋ)", :und => "ŋ{+5}-w{+3}-da{+1}-kol{0}-(ŋ){-1}" } }
+          = render 'imperative_table', :title => "стакволаҥ “to wash oneself” —  Imperative", :forms => forms
+        %td
+          - forms = { :sg2 => { :cyr => "кудашит", :lat => "kudašit", :und => "k{+5}-w{+3}-da{+1}-šit{0}" },
+                      :pl2 => { :cyr => "ҥудашит(әҥ)", :lat => "ŋudašit(əŋ)", :und => "ŋ{+5}-w{+3}-da{+1}-šit{0}-(ŋ){-1}" } }
+          = render 'imperative_table', :title => "сташитеҥ “to wake up” —  Imperative", :forms => forms
+
+= section "Conjugation I Miscellaneous Forms" do
+  = section "Infinitives" do
+    %p The infinitive (sometimes also known as the gerund) is a verbal noun representing an instance of an action. As a noun, it is able to take the full range of nominal inflections, including case, number, definiteness, and possession. Očets infinitives may be used both as typical nouns and as complements of other verbs such as “want” or “know how to”. The infinitive is also considered the citation form of all Očets verbs.
+    %p Conjugation I infinitives consist of three components: a prefix, root, and suffix.
+    %p If the verb has a determiner, that determiner will become the infinitive prefix. If the root begins with a consonant, an epenthetic -i-/-y- is inserted. If the verb lacks a determiner, the prefix #{underlying "*sI-"} (ši-/sy-) is used; the root is not allowed to appear word-initially.
+    %p The infinitive suffix is #{underlying "*-ŋ"}, or #{underlying "*-Vŋ"} after consonants. The quality of this -V- is not predictable. However, if the verb root ends in a nasal or velar consonant, the infinitive suffix disappears altogether.
+    %p Conjugation Ic verbs, however, have complex prefixes. All Ic infinitives incorporate the impersonal marker #{underlying "*-da-"} into the infinitive, and place any determiners or #{underlying "*sI-"} before. The epenthetic vowel of the determiner is lost if phonologically permissable, often with devoicing of #{underlying "*-da-"} to -ta-: #{underlying "*sI-da"} → sta-, #{underlying "*pI-da"} → pta-, but #{underlying "*lI-da"} → lida-/lyda-.
+    %p The infinitives of all verbs discussed thus far (with a few additions to demonstrate Ic infinitives with determiners):
+    %table.noundecl
+      %tr
+        %th{:colspan => 3} Conjugation Ia
+      %tr
+        %th Root
+        %th Infinitive
+        %th Meaning
+      %tr
+        %td *-huun-
+        %td= t("сыһуун", "syhuun", :linebreak => true)
+        %td “to cry, to weep”<br>“crying, weeping”
+      %tr
+        %td *-taats-
+        %td= t("сытаацәҥ", "sytaatsəŋ", :linebreak => true)
+        %td “to dance”<br>“dancing”
+      %tr
+        %td *-il-
+        %td= t("шилеҥ", "šileŋ", :linebreak => true)
+        %td “to sing”<br>“singing”
+      %tr
+        %td *f-sax-
+        %td= t("фысах", "fysax", :linebreak => true)
+        %td “to sit, be sitting”<br>“sitting”
+    %table.noundecl
+      %tr
+        %th{:colspan => 3} Conjugation Ib
+      %tr
+        %th Root
+        %th Infinitive
+        %th Meaning
+      %tr
+        %td *l-wau-
+        %td= t("лывауҥ", "lywauŋ", :linebreak => true)
+        %td “to make, to create”<br>“making, creation”
+      %tr
+        %td *-kol-
+        %td= t("сыкволаҥ", "sykwolaŋ", :linebreak => true)
+        %td “to wash”<br>“washing”
+      %tr
+        %td *-lübit-
+        %td= t("шилүбитиҥ", "šilübitiŋ", :linebreak => true)
+        %td “to love”<br>“loving”
+      %tr
+        %td *n-ain-
+        %td= t("наин", "nain", :linebreak => true)
+        %td “to see”<br>“seeing”
+      %tr
+        %td *-šit-
+        %td= t("шишитеҥ", "šišiteŋ", :linebreak => true)
+        %td “to wake up, to arouse”<br>“waking up, arousal”
+      %tr
+        %td *-ǰind-
+        %td= t("шиџиндәҥ", "šiǰindəŋ", :linebreak => true)
+        %td “to drop”<br>“dropping”
+      %tr
+        %td *-čo-
+        %td= t("сычоҥ", "syčoŋ", :linebreak => true)
+        %td “to kill”<br>“killing”
+      %tr
+        %td *-kos-
+        %td= t("сыквосаҥ", "sykwosaŋ", :linebreak => true)
+        %td “to warm”<br>“warming”
+    %table.noundecl
+      %tr
+        %th{:colspan => 3} Conjugation Ic
+      %tr
+        %th Root
+        %th Infinitive
+        %th Meaning
+      %tr
+        %td *-kol-
+        %td= t("стакволаҥ", "stakwolaŋ", :linebreak => true)
+        %td “to wash oneself”<br>“washing oneself”
+      %tr
+        %td *-šit-
+        %td= t("сташитеҥ", "stašiteŋ", :linebreak => true)
+        %td “wake up”<br>“waking up”
+      %tr
+        %td *-ǰind-
+        %td= t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+        %td “to fall”<br>“falling, fall”
+      %tr
+        %td *-čo-
+        %td= t("стачоҥ", "stačoŋ", :linebreak => true)
+        %td “to die”<br>“dying, death”
+      %tr
+        %td *-kos-
+        %td= t("стаквосаҥ", "stakwosaŋ", :linebreak => true)
+        %td “to warm up”<br>“warming up”
+      %tr
+        %td *-syy-
+        %td= t("стасыыҥ", "stasyyŋ", :linebreak => true)
+        %td “to increase”<br>“increasing”
+      %tr
+        %td *p-syy-
+        %td= t("птасыыҥ", "ptasyyŋ", :linebreak => true)
+        %td “to grow”<br>“growing, growth”
+
+  = section "Participles" do
+    %p The Očets “participles” are a group of a verbal nouns/adjectives that share some qualities with verbs and others with nominals (nouns and adjectives). Like verbs, they distinguish features such as TAM and voice, and are aware of agents and patients, although they cannot generally take direct agreement marking. Like nominals, they can modify other nominals and, when independent, can take case and number marking.
+    %p Due to the blurring of the distinction between nouns and adjectives in Očets, there is no practical difference in referring to these forms as “participles” or “verbal nouns”, since they may freely fill both roles. The term “participle”, however, is now most commonly used due to influence from Uralic and Slavic studies.
+    %p Note that Očets participles have a split-ergative alignment, centering on the animacy of the noun being modified or the verbal noun.
+    %p It may also be noted that there is no practical difference between Očets infinitives and the various participles; indeed the infinitive is often listed as a special type of participle, whose only unique features are the complete lack of TAM and its frequency in use as a verbal complement. Like other participles, the infinitive may also be used both as a verbal noun and a verbal adjective:
+    %ul
+      %li #{t "шишееҥ шытқоид", "šišeeŋ šytqoid"} “I want to eat.”<sup>5</sup>
+      %li #{t "һиин шишееҥ квоин", "hiin šišeeŋ kwoin"} “It is time to eat.” (lit. “eating time”)<sup>6</sup>
+    %p The following participles are present in standard Očets:
+
+    = section "Split-Transitive Present" do
+      %p The split-transitive present participle is quite simple in formation, but complex in usage. It has the following functions:
+      %ul
+        %li When formed from an intransitive verb (Conjugations Ia and Ic), it acts as a present active participle.
+        %li When formed from a transitive verb (Conjugation Ib) and is either modifying an animate noun or being used as an animate noun, it acts as a present active participle.
+        %li When formed from a transitive verb (Conjugation Ib) and is either modifying an inanimate noun or being used as an inanimate noun, it acts as a present <em>passive</em> participle.
+      %p In other words, a split-transitive present participle such as #{t "лываус", "lywaus"} (← #{t "лывауҥ", "lywauŋ"} “to make”) means “[that is] making” with an animate referant and “[that is] made” with an inanimate one.
+      %p Its formation is very similar to the infinitive. It consists of a determiner (with -i-/-y- as an epenthetic vowel if necessary) followed by the verbal root followed by -s. This -s is preceded by the same vowel as in the infinitive, if any, and is never lost as the infinitive #{underlying "*-ŋ"} can be. However, if the verb has no determiner, the prefix ši-/sy- is <em>not</em> added, unlike the infinitive. Conjugation Ic verbs maintain the same -da-/-ta- prefix as in infinitives.
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Split-Trans. Present
+          %th Meaning
+        %tr
+          %td
+            = t("шилеҥ", "šileŋ", :linebreak => true)
+            %br
+            “sing”
+          %td= t("һилс", "hils", :linebreak => true)
+          %td “singing”
+        %tr
+          %td
+            = t("фысах", "fysax", :linebreak => true)
+            %br
+            “sit, be sitting”
+          %td= t("фысахәс", "fysaxəs", :linebreak => true)
+          %td “sitting”
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лываус", "lywaus", :linebreak => true)
+          %td “making, creating”<br>“being made, being created
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("наинц", "naints", :linebreak => true)
+          %td “seeing”<br>“being seen”
+        %tr
+          %td
+            = t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+            %br
+            “fall”
+          %td= t("даџиндәс", "daǰindəs", :linebreak => true)
+          %td “falling”
+
+    = section "Split-Transitive Past" do
+      %p The split-transitive past participle has identical usage to the split-transitive present, but marks the action as having occurred in the past, or as having otherwise been completed.
+      %p For Conjugation Ia and Ib verbs, it is formed using the determiner (if any), followed by -ni-/-ny- (before a consonant) or -n- (before a vowel), followed by the root and the participial ending -s.
+      %p Conjugation Ic verbs inserted just -n- (with no vowel) immediately before the impersonal -da- prefix. If there is no determiner, -i-/-y- may be added at the very beginning of the word to avoid the illegal initial cluster.
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Split-Trans. Past
+          %th Meaning
+        %tr
+          %td
+            = t("шилеҥ", "šileŋ", :linebreak => true)
+            %br
+            “sing”
+          %td= t("нилс", "nils", :linebreak => true)
+          %td “that sang”
+        %tr
+          %td
+            = t("фысах", "fysax", :linebreak => true)
+            %br
+            “sit, be sitting”
+          %td= t("фынысахәс", "fynysaxəs", :linebreak => true)
+          %td “that sat”
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лынываус", "lynywaus", :linebreak => true)
+          %td “that made, created”<br>“that was made, created”
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("нынаинц", "nynaints", :linebreak => true)
+          %td “that saw”<br>“that was seen”
+        %tr
+          %td
+            = t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+            %br
+            “fall”
+          %td= t("һиндаџиндәс", "hindaǰindəs", :linebreak => true)
+          %td “that fell”
+
+    = section "Split-Transitive Near-Future" do
+      %p The split-transitive near-future participle is another form displaying split-ergativity based on animacy, but this one marks an action that is going to occur in the near future, typically meaning within the day, though often less. It does not have a direct counterpart in the finite verb system. It is formed like the split-transitive past, except instead of -ni-/-ny-/-n-, one of the following prefixes is used:
+      %ul
+        %li -čot-/-čöt- if there is no determiner and the root begins with a consonant or back vowel
+        %li -čos-/-čös- if there is no determiner and the root begins with a front vowel
+        %li -kti-/-kty- if there is a determiner and the root begins with a consonant
+        %li -kt- if there is a determiner and the root begins with a vowel
+        %li -čod- in Conjugation Ic, whatever the determiner or root
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Split-Trans. N. Fut.
+          %th Meaning
+        %tr
+          %td
+            = t("шилеҥ", "šileŋ", :linebreak => true)
+            %br
+            “sing”
+          %td= t("чөсилс", "čösils", :linebreak => true)
+          %td “that is going to sing”
+        %tr
+          %td
+            = t("фысах", "fysax", :linebreak => true)
+            %br
+            “sit, be sitting”
+          %td= t("фыктысахәс", "fyktysaxəs", :linebreak => true)
+          %td “that is going to sit”
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лыктываус", "lyktywaus", :linebreak => true)
+          %td “that is going to make, create”<br>“that is going to be made, created”
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("ныктаинц", "nyktaints", :linebreak => true)
+          %td “that is going to see”<br>“that is going to be seen”
+        %tr
+          %td
+            = t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+            %br
+            “fall”
+          %td= t("чоддаџиндәс", "čoddaǰindəs", :linebreak => true)
+          %td “that is going to fall”
+
+    = section "Present Passive" do
+      %p The present passive participle is, as the name suggests, a passive participle in the present tense. It is <em>only</em> used with animate nouns or as an animate noun; the inanimate passive is formed using split-transitive participles.<sup>7</sup> It can also only be formed from transitive (Conjugation Ib) verbs.
+      %p The present passive is formed with a determiner (if any), followed by -la- (if the root begins with a consonant) or a metathesized -al- (if the root begins with a vowel), followed by the root and the participial ending -d (not -s). However, if the root is monosyllabic, begins with a vowel, and there is no determiner, the participle formant remains -la-, but with an epenthetic -h- to prevent hiatus.
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Present Passive
+          %th Meaning
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лылавауд", "lylawaud", :linebreak => true)
+          %td “that is being made, created”
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("налаинд", "nalaind", :linebreak => true)
+          %td “that is being seen”
+        %tr
+          %td
+            = t("сыкволаҥ", "sykwolaŋ", :linebreak => true)
+            %br
+            “wash”
+          %td= t("лакволд", "lakwold", :linebreak => true)
+          %td “that is being washed”
+        %tr
+          %td
+            = t("тидеуҥ", "tideuŋ", :linebreak => true)
+            %br
+            “read”
+          %td= t("тиладеуд", "tiladeud", :linebreak => true)
+          %td “that is being read”
+        %tr
+          %td
+            = t("сечеҥ", "sečeŋ", :linebreak => true)
+            %br
+            “pour”
+          %td= t("лаһечед", "lahečed", :linebreak => true)
+          %td “that is being poured”
+
+    = section "Past Passive" do
+      %p The past passive participle is formed like the present passive, except using the formant -ia- (before consonants) or -an- (before vowels), and the participial ending is -s. Like the present passive, the formant remains -ia- before monosyllabic roots beginning with a vowel that have no determiner.
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Past Passive
+          %th Meaning
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лыиаваус", "lyiawaus", :linebreak => true)
+          %td “made, created”
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("нанаинц", "nanaints", :linebreak => true)
+          %td “seen”
+        %tr
+          %td
+            = t("сыкволаҥ", "sykwolaŋ", :linebreak => true)
+            %br
+            “wash”
+          %td= t("иакволс", "iakwols", :linebreak => true)
+          %td “washed”
+        %tr
+          %td
+            = t("тидеуҥ", "tideuŋ", :linebreak => true)
+            %br
+            “read”
+          %td= t("тииадеус", "tiiadeus", :linebreak => true)
+          %td “read”
+        %tr
+          %td
+            = t("сечеҥ", "sečeŋ", :linebreak => true)
+            %br
+            “pour”
+          %td= t("иаһечес", "iahečes", :linebreak => true)
+          %td “poured”
+
+    = section "Near-Future Passive" do
+      %p The near-future passive participle is formed like the other passive participles, but with the formant -kta- (before consonants) or -akt- (before vowels), and the participial ending -d (like the present passive). Before monosyllabic determinerless roots beginning with a vowel, the participle formant remains -kta-.
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Present Passive
+          %th Meaning
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лыктавауд", "lyktawaud", :linebreak => true)
+          %td “that is going to be made, created”
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("нактаинд", "naktaind", :linebreak => true)
+          %td “that is going to be seen”
+        %tr
+          %td
+            = t("сыкволаҥ", "sykwolaŋ", :linebreak => true)
+            %br
+            “wash”
+          %td= t("ктакволд", "ktakwold", :linebreak => true)
+          %td “that is going to be washed”
+        %tr
+          %td
+            = t("тидеуҥ", "tideuŋ", :linebreak => true)
+            %br
+            “read”
+          %td= t("тиктадеуд", "tiktadeud", :linebreak => true)
+          %td “that is going to be read”
+        %tr
+          %td
+            = t("сечеҥ", "sečeŋ", :linebreak => true)
+            %br
+            “pour”
+          %td= t("ктаһечед", "ktahečed", :linebreak => true)
+          %td “that is going to be poured”
+
+    = section "Conditional" do
+      %p The conditional participle is a tenseless, split-transitive participle used to mark irrealis actions. As a verbal noun, it is used in counterfactual conditions; as verbal adjective, it is most often used to express doubt that an action occurred or will occur.
+      %p The conditional participle appears to be a derivative of the infinitive. It is formed using the determiner (if any), followed by the conditional #{underlying "*-sIm-"} (-šim-/-sym-), the impersonal marker -da- (in Conjugation Ic verbs), the verb root, and the infinitive ending. The same word-final reductions occur as in the infinitive. Verbs lacking a determiner will <em>not</em> take the #{underlying "*sI-"} prefix seen in the infinitive.
+      %table.noundecl
+        %tr
+          %th Verb
+          %th Conditional
+          %th Meaning
+        %tr
+          %td
+            = t("шилеҥ", "šileŋ", :linebreak => true)
+            %br
+            “sing”
+          %td= t("шимилеҥ", "šimileŋ", :linebreak => true)
+          %td “if [subj] were to sing”
+        %tr
+          %td
+            = t("фысах", "fysax", :linebreak => true)
+            %br
+            “sit, be sitting”
+          %td= t("фысымсах", "fysymsax", :linebreak => true)
+          %td “if [subj] were to sit”
+        %tr
+          %td
+            = t("лывауҥ", "lywauŋ", :linebreak => true)
+            %br
+            “make, create”
+          %td= t("лысымбауҥ", "lysymbauŋ", :linebreak => true)
+          %td “if [subj] were to make, create”<br>“if [subj] were to be made, created”
+        %tr
+          %td
+            = t("наин", "nain", :linebreak => true)
+            %br
+            “see”
+          %td= t("нысымаин", "nysymain", :linebreak => true)
+          %td “if [subj] were to see”<br>“if [subj] were to be seen
+        %tr
+          %td
+            = t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+            %br
+            “fall”
+          %td= t("шиндаџиндәҥ", "šindaǰindəŋ", :linebreak => true)
+          %td “if [subj] were falling”
+
+    = section "Negative" do
+      %p All of the above participles may be negated using the prefix #{t "вен-", "wen-"}, which is always written with a hyphen and does not affect the stress of the participle proper: #{t "вен-фынысахәс", "wen-fynysaxəs"} “that did not sit”, #{t "вен-нанаинц", "wen-nanaints"} “not seen”, #{t "вен-ктакволд", "wen-ktakwold"} “that is not going to be washed”.
+      %p The use of вен prevents the insertion of word-initial epenthetic /h/: #{t "вен-илс", "wen-ils"} “not singing” (cf. #{t "һилс", "hils"} “singing”). If the initial /h/ is actually part of the root, however, it is unaffected: #{t "вен-һуунц", "wen-huunts"} “not crying” (cf. #{t "һуунц", "huunts"} “crying”).
+
+  = section "Negatives" do
+    %p Verbs are negated using a special negative coverb. Two such forms exist for Conjugation I verbs: the prohibitive *oot-/*ta-, used to negate imperatives, and the regular negative *we-/*wen-, used with all other verbs. Negative coverbs have two main structural types: one with determiners, and one without. These determiners are not inherent to the coverbs, however; they are in fact the same determiners used by normal verbs, which “leap” from the verb to the coverb when the verb is negated.
+    %p The basic form of the prohibitive when used with verbs without a determiner is #{t "һоот", "hoot"}, which is used immediately before the verb in question. There is also an extended form #{t "һоота", "hoota"} used when another word, such as an adverb, separates the coverb from the main verb, or when used in isolation (cf. English “Don’t!”).
+    %p When the prohibitive is used with a verb that has a determiner, the root *ta- is used instead. The basic structure of the coverb is *ta- + determiner + harmonic *-a. As above, this harmonic *-a only appears when the coverb is separated from the main verb or used in isolation. The verb that has now lost its determiner will conjugate as though it never had one.
+    %p Any initial epenthetic h- that appears on the main verb will disappear when the coverb comes immediately before, but will remain if any other word separates the coverb from the main verb.
+    %table.noundecl
+      %tr
+        %th Verb
+        %th Meaning
+        %th Imperative
+        %th Prohibitive
+      %tr
+        %td= t("сыһуун", "syhuun", :linebreak => true)
+        %td “cry, weep”
+        %td= t("даһуун", "dahuun", :linebreak => true)
+        %td= t("һоот даһуун", "hoot dahuun", :linebreak => true)
+      %tr
+        %td= t("фысах", "fysax", :linebreak => true)
+        %td “sit”
+        %td= t("фассах", "fassax", :linebreak => true)
+        %td= t("таф дасах", "taf dasax", :linebreak => true)
+      %tr
+        %td= t("лывауҥ", "lywauŋ", :linebreak => true)
+        %td “make, create”
+        %td= t("лаваддау", "lawaddau", :linebreak => true)
+        %td= t("тал ваддау", "tal waddau", :linebreak => true)
+      %tr
+        %td= t("наин", "nain", :linebreak => true)
+        %td “see”
+        %td= t("навадаин", "nawadain", :linebreak => true)
+        %td= t("тан вадаин", "tan wadain", :linebreak => true)
+      %tr
+        %td= t("стаџиндәҥ", "staǰindəŋ", :linebreak => true)
+        %td “fall”
+        %td= t("кудаџинд", "kudaǰind", :linebreak => true)
+        %td= t("һоот кудаџинд", "hoot kudaǰind", :linebreak => true)
+    %p (Note: The two transitive verbs above are shown with a third person inanimate direct object (“[don’t] make it!”, “[don’t] see it!”), since transitive verbs cannot appear without a direct object.)
+    %p The regular negative *we-/wen- behaves in much the same way. When used with verbs without determiners, the basic form is #{t "вен", "wen"}, or #{t "вына", "wyna"} with a harmonic vowel. The stem for use with verbs with determiners is *we-.
+    %p Since some verb forms can display significant allomorphy based on whether a verb has a determiner, this can result in negated verbs that look quite different from their non-negated counterparts. Compare, for instance, the positive and negative past indefinite forms of фысах “to sit, be sitting”:
+    - forms = { :sg1  => { :cyr => "фылшыссах(аш)", :lat => "fylšyssax(aš)" },
+                :sg2  => { :cyr => "фылшыксах(ак)", :lat => "fylšyksax(ak)" },
+                :sg3a => { :cyr => "фачылсах", :lat => "fačylsax" },
+                :sg3i => { :cyr => "фиишылсах", :lat => "fiišylsax" },
+                :pl1  => { :cyr => "фылшыссахшыҥ", :lat => "fylšyssaxšyŋ" },
+                :pl2  => { :cyr => "фылшыксаххуҥ", :lat => "fylšyksaxxuŋ" },
+                :pl3a => { :cyr => "фаачылсаҕ", :lat => "faačylsaǧ" } }
+    = render 'verb_table', :title => "фысах “to sit, be sitting” — Past Indefinite", :forms => forms
+    - forms = { :sg1  => { :cyr => "веф шыссах(аш)", :lat => "wef šyssax(aš)" },
+                :sg2  => { :cyr => "веф шыксах(ак)", :lat => "wef šyksax(ak)" },
+                :sg3a => { :cyr => "веф ачылсах", :lat => "wef ačylsax" },
+                :sg3i => { :cyr => "веф иишылсах", :lat => "wef iišylsax" },
+                :pl1  => { :cyr => "веф шыссахшыҥ", :lat => "wef šyssaxšyŋ" },
+                :pl2  => { :cyr => "веф шыксаххуҥ", :lat => "wef šyksaxxuŋ" },
+                :pl3a => { :cyr => "веф аачылсаҕ", :lat => "wef aačylsaǧ" } }
+    = render 'verb_table', :title => "вен-фысах “to not sit, not be sitting” — Past Indefinite", :forms => forms
+    %p Simple impossibility (“cannot” instead of “not”) can also be expressed morphologically by means of spontaneous subject demotion in combination with normal *we-/wen- negation. The subject of the verb is reduced to an oblique argument, which results in the now subjectless verb taking on the appearance of its third person inanimate form, regardless of the person and number of its original subject. However, if the subject was either first or second person, the matching slot -1 agreement morpheme is mandatorily attached. The result is forms like #{t "веф иишылсахаш", "wef iišylsaxaš"} “I was not able to sit” (literally “it was not sitting [to me]”), with both a third person verb form and a first person singular -1 agreement marker.
+    %p This same technique is employed even with Conjugation Ic verbs, which historically have no subject at all: third person inanimate verb forms with whatever -1 agreement marker is appropriate. This is clearly an analogical phenomenon.
+
+  = section "Interrogatives" do
+    %p Transitive verbs (Conjugation Ib) have a special interrogative form, although it has very specific usage. In all the four indicative tenses, the direct object markers of slot +5 can be replaced by the interrogative incorporate -ai-. The effect of this is to make the direct object of the verb into an interrogative “what?” or “whom?”. This can only be done for transitive Conjugation Ib verbs, and can only form interrogatives based on the direct object (so “What/whom did you see?” can be expressed with a single verb form #{t "наишныкаин(ак)?", "naišnykain(ak)"}, but “Who saw you?” cannot).
+    %p While such interrogative forms conceivably allow direct object interrogative pronouns to be omitted altogether, this is rarely the case. Such interrogative forms usually accompany interrogative pronouns, and do not replace them. Only in a few common expressions can interrogative verbs be seen by themselves. Among such forms is the verb наин “see”, demonstrated below in the present indefinite tense, alongside a third person inanimate direct object for comparison.
+    %table.noundecl
+      %tr
+        %th 3 Sg DO
+        %th Meaning
+        %th Interr DO
+        %th Meaning
+      %tr
+        %td= t("навашаин(аш)", "nawašain(aš)", :linebreak => true)
+        %td “I see it.”
+        %td= t("наиашаин(аш)", "naiašain(aš)", :linebreak => true)
+        %td “What do I see?”
+      %tr
+        %td= t("навакаин(ак)", "nawakain(ak)", :linebreak => true)
+        %td “You see it.”
+        %td= t("наиакаин(ак)", "naiakain(ak)", :linebreak => true)
+        %td “What do you see?”
+      %tr
+        %td= t("нуулаин", "nuulain", :linebreak => true)
+        %td “He/She sees it.”
+        %td= t("наилаин", "nailain", :linebreak => true)
+        %td “What does he/she see?”
+      %tr
+        %td= t("нииҕлаин", "niiǧlain", :linebreak => true)
+        %td “It sees it.”
+        %td= t("наиҕлаин", "naiǧlain", :linebreak => true)
+        %td “What does it see?”
+      %tr
+        %td= t("навашаинчыҥ", "nawašainčyŋ", :linebreak => true)
+        %td “We see it.”
+        %td= t("наиашаинчыҥ", "naiašainčyŋ", :linebreak => true)
+        %td “What do we see?”
+      %tr
+        %td= t("навакаиҥкуҥ", "nawakaiŋkuŋ", :linebreak => true)
+        %td “You all see it.”
+        %td= t("наиакаиҥкуҥ", "naiakaiŋkuŋ", :linebreak => true)
+        %td “What do you all see?”
+      %tr
+        %td= t("нууклаин", "nuuklain", :linebreak => true)
+        %td “They see it.”
+        %td= t("наиклаин", "naiklain", :linebreak => true)
+        %td “What do they see?”
+
+= section "Conjugation II: Verbs of Communication" do
+  %p Conjugation II consists of verbs for which an indirect object plays a prominent role. This class is traditionally known as “verbs of communication”, though by far not all Conjugation II deal with communication. Common examples include #{t "састаҥ", "sastaŋ"} (*-st-) “teach”, #{t "шииҥ", "šiiŋ"} (*-š-ii-) “ask”, #{t "шавыҥ", "šawyŋ"} (*-š-wy-) “say, tell”, #{t "суухләҥ", "suuxləŋ"} (*-uuxl-) “lie”, #{t "сатәҥ", "satəŋ"} (*-t-) “listen”, #{t "сак", "sak"} (*-ak-) “give”, #{t "сафолсәҥ", "safolsəŋ"} (*-fols-) “help”, and #{t "касәҥ", "kasəŋ"} (*-k-as-) “invite”.
+  %p While such verbs frequently take indirect objects, they are in fact marked morphologically as direct objects, while the patient receives no verbal agreement marking whatsoever. Contrast this with the more typical Indo-European style of object marking:
+  %p Indo-European:
+  .glossblock
+    %dl
+      %dt I
+      %dd= abbrev('nom')
+    %dl
+      %dt gave
+      %dd= abbrev('verb')
+    %dl
+      %dt him
+      %dd= abbrev('dat')
+    %dl
+      %dt a book.
+      %dd= abbrev('acc')
+  .clear
+  %p Očets:
+  .glossblock
+    %dl
+      %dt I
+      %dd= abbrev('nom')
+    %dl
+      %dt gave
+      %dd= abbrev('verb')
+    %dl
+      %dt him
+      %dd= abbrev('obj')
+    %dl
+      %dt a book.
+      %dd= abbrev('ins')
+  .clear
+  %p A better way of describing an Očets verb like “give” might be to use a verb like “bestow”; the above sentence more literally means something like “I bestow him with a book” in Očets.
+  %p A typical Conjugation II verb may be diagrammed as such:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td Determiner
+      %td Indirect Object Marker
+      %td TAM Marker
+      %td 1st/2nd Person Subject Agreement Marker
+      %td
+      %td Imperative or Passive
+      %td Root
+      %td Agent Marker
+  %p At first glance this looks quite similar to Conjugation I verbs, the only differences being the lack of explicit third person subject agreement marking in slot +5, the addition of a “passive” in slot +1, and the renaming of the slot -1 morpheme from “subject agreement marker” to “agent marker”. For normal verbs with both a subject and indirect object, it is true that this is not very unusual; however, when the indirect object is not present, the verb undergoes a number of changes.
+  %p Conjugation II will be demonstrated using the verbs сак “give” and шавыҥ “say, tell”, the latter of which has an š-class determiner.
+
+  = section "Present Indefinite" do
+    %p The root is inserted into slot 0.
+    %p The first and second person agreement markers are inserted into slot +3. As with Conjugation I, these are -š- for the first person and -k- for the second person. Since these run up against the verb root, sandhi may take place.
+    %p The TAM marker in slot +4 is actually -Ø- rather than the usual #{underlying "*-kÀl-"}. It is not clear if #{underlying "*-kÀl-"} disappeared in these verbs, or if it simply never existed in the first place.
+    %p Slot +5 consists of the indirect object markers. These resemble the direct object markers of Conjugation Ib, except these also have an augment -a-, which is likely a frozen animate subject marker in origin (since verbs of communication almost always have animate subjects).
+    %table
+      %tr
+        %th 1 Sg
+        %th 1 Pl
+        %th 2 Sg
+        %th 2 Pl
+        %th 3 Sg A
+        %th 3 Pl A
+        %th 3 I
+      %tr
+        %td -ša-
+        %td -xa-
+        %td -ka-
+        %td -ŋa-
+        %td -a-
+        %td -na
+        %td -a-
+    %p However, as with Conjugation Ib verbs, all reflexive verbs require third person animate agreement due to the reflexive pronoun.
+    %p Determiners, if any, go into slot +6 as usual, with the fill vowel -i-/-y- if necessary.
+    %p For Conjugation II verbs in the active voice, the slot -1 agent marker behaves just as in Conjugation I, with optional suffixes in the first and second persons singular and mandatory suffixes in the first and second persons plural, with null marking in the third person.
+    %p No Conjugation II verb has direct object agreement of any kind. There is also no number or animacy distinction in third person subjects.
+    %p Due to the large number of possible forms, the complete paradigm of Conjugation II verbs will not be shown here, though it may be found in the appendix. Here are a few sample forms:
+    %ul
+      %li
+        = t("шкашшы(ш)", "škaššy(š)", :linebreak => true)
+        %br
+        = underlying("š{+6}-ka{+5}-š{+3}-wy{0}-(Àš){-1}</span>")
+        %br
+        “I say to you”
+      %li
+        = t("наак", "naak", :linebreak => true)
+        %br
+        = underlying("na{+5}-ak{0}</span>")
+        %br
+        “He/she gives to them”
+      %li
+        = t("волаҥее шнакыкуҥ", "wolaŋee šnakykuŋ", :linebreak => true)
+        %br
+        = underlying("š{+6}-na{+5}-k{+3}-wy{0}-kÙŋ{-1}")
+        %br
+        “You say to yourselves (as a whole).”
+      %li
+        = t("шакак(ак)", "šakak(ak)", :linebreak => true)
+        %br
+        = underlying("ša{+5}-k{+3}-ak{0}-(Àk){-1}")
+        %br
+        “You give to me.”
+      %li
+        = t("хакаккуҥ", "xakakkuŋ", :linebreak => true)
+        %br
+        = underlying("xa{+5}-k{+3}-ak{0}-kÙŋ{-1}")
+        %br
+        “You all give to us.”
+      %li
+        = t("ҥаак", "ŋaak", :linebreak => true)
+        %br
+        = underlying("ŋa{+5}-ak{0}")
+        %br
+        “They give to you all”
+
+  = section "Present Definite" do
+    %p The present definite is formed identically to the present indefinite, except for the addition of the explicit TAM marker #{underlying "*-kÀn-"} in slot +4, which surfaces as -kai-/-kei- before a consonant and as -kan-/-ken- before a vowel.
+    %ul
+      %li
+        = t("шкакаишшы(ш)", "škakaiššy(š)", :linebreak => true)
+        %br
+        = underlying("š{+6}-ka{+5}-kÀn{+4}-š{+3}-wy{0}-(Àš){-1}")
+        %br
+        “I will say to you.”
+      %li
+        = t("наканак", "nakanak", :linebreak => true)
+        %br
+        = underlying("na{+5}-kÀn{+4}-ak{0}")
+        %br
+        “He/she will give to them”
+      %li
+        = t("волаҥее шнакаикыкуҥ", "wolaŋee šnakaikykuŋ", :linebreak => true)
+        %br
+        = underlying("š{+6}-na{+5}-kÀn{+4}-k{+3}-wy{0}-kÙŋ{-1}")
+        %br
+        “You will say to yourselves (as a whole).”
+      %li
+        = t("шакаикак(ак)", "šakaikak(ak)", :linebreak => true)
+        %br
+        = underlying("ša{+5}-kÀn{+4}-k{+3}-ak{0}-(Àk){-1}")
+        %br
+        “You will give to me.”
+      %li
+        = t("хакаикаккуҥ", "xakaikakkuŋ", :linebreak => true)
+        %br
+        = underlying("xa{+5}-kÀn{+4}-k{+3}-ak{0}-kÙŋ{-1}")
+        %br
+        “You all will give to us.”
+      %li
+        = t("ҥаканак", "ŋakanak", :linebreak => true)
+        %br
+        = underlying("ŋa{+5}-kÀn{+4}-ak{0}")
+        %br
+        “They will give to you all.”
+
+  = section "Past Indefinite" do
+    %p The past indefinite is formed as above, except the slot +4 TAM marker is #{underlying "*-šI-"} before consonants and #{underlying "*-šIl-"} before vowels. This also has the side effect of rounding the /a/ of the indirect object markers to /o/.
+    %ul
+      %li
+        = t("шкошышшы(ш)", "škošyššy(š)", :linebreak => true)
+        %br
+        = underlying("š{+6}-ka{+5}-šIl{+4}-š{+3}-wy{0}-(Àš){-1}")
+        %br
+        “I was saying to you.”
+      %li
+        = t("ношылак", "nošylak", :linebreak => true)
+        %br
+        = underlying("na{+5}-šIl{+4}-ak{0}")
+        %br
+        “He/she was giving to them.”
+      %li
+        = t("волаҥее шношыкыкуҥ", "wolaŋee šnošykykuŋ", :linebreak => true)
+        %br
+        = underlying("š{+6}-na{+5}-šIl{+4}-k{+3}-wy{0}-kÙŋ{-1}")
+        %br
+        “You were saying to yourselves (as a whole).”
+      %li
+        = t("шошыкак(ак)", "šošykak(ak)", :linebreak => true)
+        %br
+        = underlying("ša{+5}-šIl{+4}-k{+3}-ak{0}-(Àk){-1}")
+        %br
+        “You were giving to me.”
+      %li
+        = t("хошыкаккуҥ", "xošykakkuŋ", :linebreak => true)
+        %br
+        = underlying("xa{+5}-šIl{+4}-k{+3}-ak{0}-kÙŋ{-1}")
+        %br
+        “You all were giving to us.”
+      %li
+        = t("ҥошылак", "ŋošylak", :linebreak => true)
+        %br
+        = underlying("ŋa{+5}-šIl{+4}-ak{0}")
+        %br
+        “They were giving to you all.”
+
+  = section "Past Definite" do
+    %p The past definite is formed as above, except the slot +4 TAM marker is #{underlying "*-šIn-"}, which appears as -šni-/-šny- before consonants and as -šn- before vowels.
+    %ul
+      %li
+        = t("шкошнышшы(ш)", "škošnyššy(š)", :linebreak => true)
+        %br
+        = underlying("š{+6}-ka{+5}-šIn{+4}-š{+3}-wy{0}-(Àš){-1}")
+        %br
+        “I said to you.”
+      %li
+        = t("ношнак", "nošnak", :linebreak => true)
+        %br
+        = underlying("na{+5}-šIn{+4}-ak{0}")
+        %br
+        “He/she gave to them.”
+      %li
+        = t("волаҥее шношныкыкуҥ", "wolaŋee šnošnykykuŋ", :linebreak => true)
+        %br
+        = underlying("š{+6}-na{+5}-šIn{+4}-k{+3}-wy{0}-kÙŋ{-1}")
+        %br
+        “You said to yourselves (as a whole).”
+      %li
+        = t("шошныкак(ак)", "šošnykak(ak)", :linebreak => true)
+        %br
+        = underlying("ša{+5}-šIn{+4}-k{+3}-ak{0}-(Àk){-1}")
+        %br
+        “You gave to me.”
+      %li
+        = t("хошныкаккуҥ", "xošnykakkuŋ", :linebreak => true)
+        %br
+        = underlying("xa{+5}-šIn{+4}-k{+3}-ak{0}-kÙŋ{-1}")
+        %br
+        “You all gave to us.”
+      %li
+        = t("ҥошнак", "ŋošnak", :linebreak => true)
+        %br
+        = underlying("ŋa{+5}-šIn{+4}-ak{0}")
+        %br
+        “They gave to you all.”
+
+  = section "Imperative" do
+    %p The Conjugation II imperative is formed much like the Conjugation I imperative, with a somewhat pared-down structure compared to finite verbs, lacking subject agreement and TAM markers.
+    %p The root is placed in slot 0.
+    %p The imperative marker #{underlying "*-d-"} is inserted into slot +1, with no epenthetic vowel. If the root begins with a consonant, sandhi will likely take place between the two.
+    %p The indirect object marker is inserted into slot +5, including the augment -a-.
+    %p Determiners, if any, appear in slot +6.
+    %p Slot -1 can only be occupied by an optional plural subject marker #{underlying "*-ŋ"}.
+    %p The full imperative paradigm of шавыҥ “say, tell” appears as follows:
+    %table
+      %tr
+        %th{:colspan => 4} шавыҥ “to say [to someone]” — Imperative
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th{:colspan => 2} Subject
+      %tr
+        %th 2 Sg
+        %th 2 Pl
+      %tr
+        %th{:rowspan => 7} Indirect<br>Object
+        %th 1 Sg
+        %td
+          = t("шышадды", "šyšaddy", :linebreak => true)
+          %br
+          = underlying("š{+6}-ša{+5}-d{+1}-wy{0}")
+        %td
+          = t("шышадды(ҥ)", "šyšaddy(ŋ)", :linebreak => true)
+          %br
+          = underlying("š{+6}-ša{+5}-d{+1}-wy{0}-(ŋ){-1}")
+      %tr
+        %th 1 Pl
+        %td
+          = t("шыхадды", "šyxaddy", :linebreak => true)
+          %br
+          = underlying("š{+6}-xa{+5}-d{+1}-wy{0}")
+        %td
+          = t("шыхадды(ҥ)", "šyxaddy(ŋ)", :linebreak => true)
+          %br
+          = underlying("š{+6}-xa{+5}-d{+1}-wy{0}-(ŋ){-1}")
+      %tr
+        %th 2 Sg
+        %td = 3 Sg A
+        %td —
+      %tr
+        %th 2 Pl
+        %td —
+        %td = 3 Sg A or 3 Pl A
+      %tr
+        %th 3 Sg A
+        %td
+          = t("шадды", "šaddy", :linebreak => true)
+          %br
+          = underlying("š{+6}-a{+5}-d{+1}-wy{0}")
+        %td
+          = t("шадды(ҥ)", "šaddy(ŋ)", :linebreak => true)
+          %br
+          = underlying("š{+6}-a{+5}-d{+1}-wy{0}-(ŋ){-1}")
+      %tr
+        %th 3 Pl A
+        %td
+          = t("шынадды", "šynaddy", :linebreak => true)
+          %br
+          = underlying("š{+6}-na{+5}-d{+1}-wy{0}")
+        %td
+          = t("шынадды(ҥ)", "šynaddy(ŋ)", :linebreak => true)
+          %br
+          = underlying("š{+6}-na{+5}-d{+1}-wy{0}-(ŋ){-1}")
+      %tr
+        %th 3 I
+        %td
+          = t("шадды", "šaddy", :linebreak => true)
+          %br
+          = underlying("š{+6}-a{+5}-d{+1}-wy{0}")
+        %td
+          = t("шадды(ҥ)", "šaddy(ŋ)", :linebreak => true)
+          %br
+          = underlying("š{+6}-a{+5}-d{+1}-wy{0}-(ŋ){-1}")
+
+  = section "Passive" do
+    %p The Conjugation II “Passive” is not a true passive voice, but is rather a specialized sub-paradigm that is triggered when a verb lacks an indirect object (e.g., “I said X” as opposed to “I said X to him”). It is only possible with trivalent verbs, that is, those that are capable of taking a subject, direct object, and an indirect object.
+    %p The overall effect is to remove indirect object agreement from the verb complex altogether, promote the patient (e.g., what is said) to grammatical subject and thereby introducing it into the verb complex for the first time, while leaving agent marking (e.g., the speaker) behind as a mandatory suffix. Such “passive” forms therefore significantly shuffle up the usual roles of agreement affixes.
+    %p The root is inserted into slot 0.
+    %p In slot +1 is the “passive” marker -a-, which is augmented to -ai- when the root begins with a vowel.
+    %p It is unusual for slot +3 to be occupied in passive Conjugation II verbs, but it is possible. If the patient (subject of the passive verb) is first or second person, the markers -š- or -k- may appear here (e.g., “He gave <em>us</em>”, or, more faithfully representing the passive, “<em>We</em> were given by him”). However, it is not uncommon for native speakers to use null marking here even if the above conditions apply.
+    %p Slot +4 is occupied by a TAM marker, as in the active voice counterparts of these verbs.
+    %p Slot +5 contains a patient (passive subject) agreement marker -i-. While -i- in this possible is normally a sign of inanimate nouns, in passive Conjugation II verbs no other marker is possible here.
+    %p Slot +6 contains determiners, if any.
+    %p Slot -1 contains mandatory <em>agent</em> agreement markers. Even though the grammatical subject of the verb is its patient, the one verbal suffix always agrees with the sentence’s agent, which is otherwise considered to be an oblique argument (that is, neither subject nor object).<sup>8</sup>
+    %p The following table demonstrates the passive forms of шавыҥ in the past definite tense (third person subject only).
+    %table
+      %tr
+        %th{:colspan => 2}
+        %th Očets
+        %th Literal Meaning
+        %th Common Meaning
+      %tr
+        %th{:rowspan => 5} Agent
+        %th 1 Sg
+        %td
+          = t("шишнавыш", "šišnawyš", :linebreak => true)
+          %br
+          = underlying("š<sup>+6</sup>-i<sup>+5</sup>-šIn<sup>+4</sup>-a<sup>+1</sup>-wy<sup>0</sup>-Àš<sup>-1</sup>")
+        %td “X was said by me”
+        %td “I said X”
+      %tr
+        %th 1 Pl
+        %td
+          = t("шишнавышыҥ", "šišnawyšyŋ", :linebreak => true)
+          %br
+          = underlying("š<sup>+6</sup>-i<sup>+5</sup>-šIn<sup>+4</sup>-a<sup>+1</sup>-wy<sup>0</sup>-šIŋ<sup>-1</sup>")
+        %td “X was said by us”
+        %td “We said X”
+      %tr
+        %th 2 Sg
+        %td
+          = t("шишнавык", "šišnawyk", :linebreak => true)
+          %br
+          = underlying("š<sup>+6</sup>-i<sup>+5</sup>-šIn<sup>+4</sup>-a<sup>+1</sup>-wy<sup>0</sup>-Àk<sup>-1</sup>")
+        %td “X was said by you”
+        %td “You said X”
+      %tr
+        %th 2 Pl
+        %td
+          = t("шишнавыкуҥ", "šišnawykuŋ", :linebreak => true)
+          %br
+          = underlying("š<sup>+6</sup>-i<sup>+5</sup>-šIn<sup>+4</sup>-a<sup>+1</sup>-wy<sup>0</sup>-kÙŋ<sup>-1</sup>")
+        %td “X was said by you all”
+        %td “You all said X”
+      %tr
+        %th 3
+        %td
+          = t("шишнавы", "šišnawy", :linebreak => true)
+          %br
+          = underlying("š<sup>+6</sup>-i<sup>+5</sup>-šIn<sup>+4</sup>-a<sup>+1</sup>-wy<sup>0</sup>")
+        %td “X was said by him/her/them”
+        %td “He/she/they said X”
+
+  = section "Infinitive and Participles" do
+    %p The formation of the Conjugation II infinitive and participles closely parallels Conjugation I.
+    %p The infinitive is formed with the prefix sa- (or a determiner + -a-), the root, and the infinitive suffix -ŋ. If the root ends in a velar or nasal consonant, this -ŋ will drop: #{t "шавыҥ", "šawyŋ"} “to say”, #{t "сак", "sak"} “to give”.
+    %p The split-transitive present is formed from a determiner + -a- (if applicable), the root, and the participle suffix -s: #{t "шавыс", "šawys"} “saying, said”, #{t "һакс", "haks"} “giving, given”.
+    %p The split-transitive past is formed from a determiner + -a- (if applicable), the formant -nI- (before a consonant) or -n- (before a vowel), the root, and the suffix -s: #{t "шанывыс", "šanywys"} “that was saying, that was said”, #{t "накс", "naks"} “that was giving, that was given”.
+    %p The split-transitive near-future is formed from a determiner + -a- (if applicable), a formant as described below, the root, and the suffix -s: #{t "шактывыс", "šaktywys"} “that is going to say, that  is going to be said”, #{t "чотакс", "čotaks"} “that is going to give, that is going to be given”. The formant is based on the same rules as for Conjugation I:
+    %ul
+      %li -čot-/-čöt- if there is no determiner and the root begins with a consonant or back vowel
+      %li -čos-/-čös- if there is no determiner and the root begins with a front vowel
+      %li -kti-/-kty- if there is a determiner and the root begins with a consonant
+      %li -kt- if there is a determiner and the root begins with a vowel
+    %p The present passive is formed with a determiner + -a- (if any), followed by -la- (if the root begins with a consonant) or -l- (if the root begins with a vowel), followed by the root and the participial ending -d. However, if the root is monosyllabic, begins with a vowel, and there is no determiner, the participle formant remains -la-, but with an epenthetic -h- to prevent hiatus: #{t "шалавыд", "šalawyd"} “that is being said”, #{t "лаһакәд", "lahakəd"} “that is being given”. Note that like the finite passive, the patient becomes the subject, even though the patient is not morphologically marked on the verb.
+    %p The past passive is formed as above, but with the formant -ia- (before consonants or monosyllabic determinerless vowel-initial roots) or -an- (before vowels), and the participial suffix -s: #{t "шаиавыс", "šaiawys"} “said”, #{t "иаһакс", "iahaks"} “given”.
+    %p The near-future passive participle is formed like the other passive participles, but with the formant -kta- (before consonants) or -akt- (before vowels), and the participial ending -d (like the present passive). Before monosyllabic determinerless roots beginning with a vowel, the participle formant remains -kta-: #{t "шактавыд", "šaktawyd"} “that is going to be said”, #{t "ктаһакәд", "ktahakəd"} “that is going to be given”.
+    %p The conditional participle is formed using the determiner + -a- (if any), followed by the conditional #{underlying "*-sIm-"} (-šim-/-sym-), the verb root, and the infinitive ending. The same word-final reductions occur as in the infinitive: #{t "шасымбыҥ", "šasymbyŋ"} “if [subj] were to say, were to be said”, #{t "сымак", "symak"} “if [subj] were to give, were to be given”.
+
+  = section "Negation" do
+    %p Negation is performed as in Conjugation I, with the clitic wen- for participles, the *t prohibitive for imperatives, and the *w negative for all other finite verbs.
+    %p Simple impossibility is also marked in the same way as in Conjugation I, with subject demotion resulting in a subjectless (third person inanimate) verb with agreement markers in slot -1 marking the demoted agent. This type of negation is only possible in active voice verbs, however; it is not seen in passive verbs.
+
+= section "Conjugation III: Verbs of Motion" do
+  %p Conjugation III consists of so-called “verbs of motion”, that is, verbs describing movement (encoding movement type, direction, iteration, volition, etc.). This is a closed class with only a handful of allowable verb roots; however, the sheer amount of modifiers available in this class allows dozens of different verbs to be generated from a single root.
+  %p The most distinctive feature of this conjugation is that it almost always requires the presence of a special directional coverb, which specifies the direction of the motion expressed by the verb root. These coverbs may be considered derivational, since most speakers consider #{t "вау-деҥ", "wau-deŋ"} “go in” and #{t "каа-деҥ", "kaa-deŋ"} “go out”, for instance, to be separate verbs, though they are both based on the same root *de.
+  %p The following roots can conjugate according to this paradigm: *de “go by foot”, *ax “go and arrive [telic go]”, *čan “go by land vehicle”,  *soi “go by boat”, *korsoi “swim”, and *oŋ “fly”.
+  %p The possible directional coverbs are:
+  %table.noundecl
+    %tr
+      %th Short Form
+      %th Long Form
+      %th Meaning
+    %tr
+      %td če
+      %td čei
+      %td none
+    %tr
+      %td šoi
+      %td šoia
+      %td up
+    %tr
+      %td or
+      %td or
+      %td down
+    %tr
+      %td wau
+      %td wauk
+      %td in, into
+    %tr
+      %td kaa
+      %td kra
+      %td out
+    %tr
+      %td čin
+      %td čina
+      %td hither, to here
+    %tr
+      %td čits
+      %td čits
+      %td hence, from here
+    %tr
+      %td ǧu
+      %td ǧou
+      %td homeward, into a building
+    %tr
+      %td uu
+      %td uuk
+      %td upriver, south
+    %tr
+      %td sy
+      %td syyk
+      %td downriver, north
+    %tr
+      %td eu
+      %td euk
+      %td upriver on the ice
+    %tr
+      %td čik
+      %td čik
+      %td downriver on the ice
+    %tr
+      %td tat
+      %td tata
+      %td across
+    %tr
+      %td suǧ
+      %td sauǧa
+      %td back
+    %tr
+      %td aǧ
+      %td aǧa
+      %td ashore
+    %tr
+      %td kwur
+      %td kora
+      %td into water
+    %tr
+      %td iiǧ
+      %td iiǧa
+      %td out of water
+    %tr
+      %td as
+      %td as
+      %td along
+    %tr
+      %td eit
+      %td eita
+      %td towards
+    %tr
+      %td al
+      %td ala
+      %td away
+    %tr
+      %td wilas
+      %td wilas
+      %td along the riverbank
+    %tr
+      %td wileit
+      %td wileita
+      %td from the river to the forest
+    %tr
+      %td wilal
+      %td wilala
+      %td from the forest to the river
+  %p The short form is the form used when the coverb is located immediately prior to the main verb; the long form is used when the coverb is located anywhere else. The actual use of each of these individual coverbs will be discussed later.
+  %p A typical Conjugation III main verb looks like this:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td Determiner
+      %td 3rd Person Subject Agreement Marker
+      %td TAM Marker
+      %td 1st/2nd Person Subject Agreement Marker
+      %td TAM Marker
+      %td Imperative
+      %td Root
+      %td Subject Agreement Markers (opt.)
+  %p It is fully possible for a verb to have a determiner as well as a directional coverb. In such cases, the determiner is fixed to the main verb, and does not transfer over to the coverb as is usual elsewhere. These determiners are in many cases closely tied to the directional coverbs.
+  %p This conjugation will be demonstrated using the verbs #{t "вау-деҥ", "wau-deŋ"} “go inside” (root *de “go”, coverb *wau “inside”) and #{t "һуу-лсоиҥ", "huu-lsoiŋ"} “sail upstream” (root *soi “go by boat” with l-class determiner, coverb *uu “upriver, north”).
+
+  = section "Present Indefinite" do
+    %p The root is inserted into slot 0.
+    %p Slot +2 is occupied by a TAM marker #{underlying "*-t-"} in all forms. This serves as a marker of the indefinite tenses in Conjugation III verbs, though it appears to have some iterative qualities in other Ob languages. In the first and second persons an epenthetic schwa will be inserted afterwards if the root begins with a consonant.
+    %p The regular first and second person subject markers #{underlying "*-š-"} and #{underlying "*-k-"} appear in slot +3.
+    %p Slot +4 is occupied by the more typical TAM marker, which in this case surfaces as -ko- throughout.
+    %p In the third person only, slot +5 is filled with a third person subject agreement marker: -a- for animate singular nouns, -aŋ- (from #{underlying "*-an-"}) for animate plural nouns, and -i- for inanimate nouns.
+    %p Slot +6 is filled by a determiner, if applicable, with the epenthetic vowel -y-/-i- to prevent an initial cluster. Note, however, that if the coverb is in its “short” form immediately before the verb, it is treated as though it were phonetically part of the verb; this means that if the coverb ends in a vowel, no epenthetic vowel will be needed to support the determiner.
+    %p Slot -1 is occupied by optional subject agreement markers, as in other conjugations.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "вау квоштәде(ш)", :lat => "wau kwoštəde(š)", :und => "wau kÀl{+4}-š{+3}-t{+2}-de{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "вау квоктәде(к)", :lat => "wau kwoktəde(k)", :und => "wau kÀl{+4}-k{+3}-t{+2}-de{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "вау акодде", :lat => "wau akodde", :und => "wau a{+5}-kÀl{+4}-t{+2}-de{0}" },
+                      :sg3i => { :cyr => "вау икодде", :lat => "wau ikodde", :und => "wau i{+5}-kÀl{+4}-t{+2}-de{0}" },
+                      :pl1  => { :cyr => "вау квоштәдешиҥ", :lat => "wau kwoštədešiŋ", :und => "wau kÀl{+4}-š{+3}-t{+2}-de{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "вау квоктәдекүҥ", :lat => "wau kwoktədeküŋ", :und => "wau kÀl{+4}-k{+3}-t{+2}-de{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "вау аҥкодде", :lat => "wau aŋkodde", :und => "wau an{+5}-kÀl{+4}-t{+2}-de{0}" } }
+          = render 'verb_table', :title => "вау-деҥ “to go inside” —  Present Indefinite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "һуу лквоштәсои(ш)", :lat => "huu lkwoštəsoi(š)", :und => "uu l{+6}-kÀl{+4}-š{+3}-t{+2}-soi{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "һуу лквоктәсои(к)", :lat => "huu lkwoktəsoi(k)", :und => "uu l{+6}-kÀl{+4}-k{+3}-t{+2}-soi{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һуу лакотсои", :lat => "huu lakotsoi", :und => "uu l{+6}-a{+5}-kÀl{+4}-t{+2}-soi{0}" },
+                      :sg3i => { :cyr => "һуу ликотсои", :lat => "huu likotsoi", :und => "uu l{+6}-i{+5}-kÀl{+4}-t{+2}-soi{0}" },
+                      :pl1  => { :cyr => "һуу лквоштәсоишыҥ", :lat => "huu lkwoštəsoišyŋ", :und => "uu l{+6}-kÀl{+4}-š{+3}-t{+2}-soi{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "һуу лквоктәсоикуҥ", :lat => "huu lkwoktəsoikuŋ", :und => "uu l{+6}-kÀl{+4}-k{+3}-t{+2}-soi{0}-kuŋ{-1}" },
+                      :pl3a => { :cyr => "һуу лаҥкотсои", :lat => "huu laŋkotsoi", :und => "uu l{+6}-an{+5}-kÀl{+4}-t{+2}-soi{0}" } }
+          = render 'verb_table', :title => "һуу-лсоиҥ “to sail upstream” —  Present Indefinite", :forms => forms
+    %p In addition, there are a total of six possible verbs in the present indefinite that do not require a coverb at all. These are the basic forms of the six verb of motion roots with no additional directional information: #{t "квоштәде(ш)", "kwoštəde(š)"} “I go”, #{t "квоштәсои(ш)", "kwoštəsoi(š)"} “I sail/go by boat”, #{t "лыквоштәчан(аш)", "lykwoštəčan(aš)"} “I go by vehicle” (*l-čan), etc.
+
+  = section "Present Definite" do
+    %p Unusually for Očets verbs, the present definite of Conjugation III is actually morphologically simpler than the present indefinite. For most verbs, it can be formed from the present indefinite simply by removing the TAM marker *-t- in slot +2. The TAM marker in slot +4 remains the same, at least on the surface.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "вау квожде(ш)", :lat => "wau kwožde(š)", :und => "wau kÀn{+4}-š{+3}-de{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "вау квогде(к)", :lat => "wau kwogde(k)", :und => "wau kÀn{+4}-k{+3}-de{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "вау акоде", :lat => "wau akode", :und => "wau a{+5}-kÀn{+4}-de{0}" },
+                      :sg3i => { :cyr => "вау икоде", :lat => "wau ikode", :und => "wau i{+5}-kÀn{+4}-de{0}" },
+                      :pl1  => { :cyr => "вау квождешиҥ", :lat => "wau kwoždešiŋ", :und => "wau kÀn{+4}-š{+3}-de{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "вау квогдекүҥ", :lat => "wau kwogdeküŋ", :und => "wau kÀn{+4}-k{+3}-de{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "вау аҥкоде", :lat => "wau aŋkode", :und => "wau an{+5}-kÀn{+4}-de{0}" } }
+          = render 'verb_table', :title => "вау-деҥ “to go inside” —  Present Definite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "һуу лквоссои(ш)", :lat => "huu lkwossoi(š)", :und => "uu l{+6}-kÀn{+4}-š{+3}-soi{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "һуу лквоксои(к)", :lat => "huu lkwoksoi(k)", :und => "uu l{+6}-kÀn{+4}-k{+3}-soi{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һуу лакосои", :lat => "huu lakosoi", :und => "uu l{+6}-a{+5}-kÀn{+4}-soi{0}" },
+                      :sg3i => { :cyr => "һуу ликосои", :lat => "huu likosoi", :und => "uu l{+6}-i{+5}-kÀn{+4}-soi{0}" },
+                      :pl1  => { :cyr => "һуу лквоссоишыҥ", :lat => "huu lkwossoišyŋ", :und => "uu l{+6}-kÀn{+4}-š{+3}-soi{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "һуу лквоксоикуҥ", :lat => "huu lkwoksoikuŋ", :und => "uu l{+6}-kÀn{+4}-k{+3}-soi{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "һуу лаҥкосои", :lat => "huu laŋkosoi", :und => "uu l{+6}-an{+5}-kÀn{+4}-soi{0}" } }
+          = render 'verb_table', :title => "һуу-лсоиҥ “to sail upstream” —  Present Definite", :forms => forms
+    %p The present definite does <em>not</em> allow verbs of motion without coverbs. The “bare” verbs of the present indefinite must take a semantically void coverb <i>če</i> (short) / <i>čei</i> (long): #{t "че квожде(ш)", "če kwožde(š)"} “I will go”, #{t "че квоссои(ш)", "če kwossoi(š)"} “I will sail/go by boat”, #{t "че лквошшан(аш)", "če lkwoššan(aš)"} “I will go by vehicle”.
+
+  = section "Past Indefinite" do
+    %p The past indefinite resembles the present indefinite in formation, except for the +4 TAM marker realized as -ši-/-šy-. As in the present indefinite, there is an additional TAM marker #{underlying "*-t-"} in slot +2. In the third person animate plural, this *š is realized as č due to the preceding /n/.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "вау шиштәде(ш)", :lat => "wau šištəde(š)", :und => "wau šIl{+4}-š{+3}-t{+2}-de{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "вау шиктәде(к)", :lat => "wau šiktəde(k)", :und => "wau šIl{+4}-k{+3}-t{+2}-de{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "вау ашидде", :lat => "wau ašidde", :und => "wau a{+5}-šIl{+4}-t{+2}-de{0}" },
+                      :sg3i => { :cyr => "вау икодде", :lat => "wau ikodde", :und => "wau i{+5}-šIl{+4}-t{+2}-de{0}" },
+                      :pl1  => { :cyr => "вау шиштәдешиҥ", :lat => "wau šištədešiŋ", :und => "wau šIl{+4}-š{+3}-t{+2}-de{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "вау шиктәдекүҥ", :lat => "wau šiktədeküŋ", :und => "wau šIl{+4}-k{+3}-t{+2}-de{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "вау анчидде", :lat => "wau ančidde", :und => "wau an{+5}-šIl{+4}-t{+2}-de{0}" } }
+          = render 'verb_table', :title => "вау-деҥ “to go inside” —  Past Indefinite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "һуу лшыштәсои(ш)", :lat => "huu lšyštəsoi(š)", :und => "uu l{+6}-šIl{+4}-š{+3}-t{+2}-soi{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "һуу лшыктәсои(к)", :lat => "huu lšyktəsoi(k)", :und => "uu l{+6}-šIl{+4}-k{+3}-t{+2}-soi{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һуу лашытсои", :lat => "huu lašytsoi", :und => "uu l{+6}-a{+5}-šIl{+4}-t{+2}-soi{0}" },
+                      :sg3i => { :cyr => "һуу лишытсои", :lat => "huu lišytsoi", :und => "uu l{+6}-i{+5}-šIl{+4}-t{+2}-soi{0}" },
+                      :pl1  => { :cyr => "һуу лшыштәсоишыҥ", :lat => "huu lšyštəsoišyŋ", :und => "uu l{+6}-šIl{+4}-š{+3}-t{+2}-soi{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "һуу лшыктәсоикуҥ", :lat => "huu lšyktəsoikuŋ", :und => "uu l{+6}-šIl{+4}-k{+3}-t{+2}-soi{0}-kuŋ{-1}" },
+                      :pl3a => { :cyr => "һуу ланчытсои", :lat => "huu lanšytsoi", :und => "uu l{+6}-an{+5}-šIl{+4}-t{+2}-soi{0}" } }
+          = render 'verb_table', :title => "һуу-лсоиҥ “to sail upstream” —  Past Indefinite", :forms => forms
+    %p As in the present indefinite, bare forms with no preverb are allowed: #{t "шиштәде(ш)", "šistəde(š)"} “I was going by foot”, #{t "шыштәсои(ш)", "šyštəsoi(š)"} “I was sailing/going by boat”, #{t "шыштәчан(аш)", "šyštəčan(aš)"} “I was going by vehicle”.
+
+  = section "Past Definite" do
+    %p The past definite is, again, formed like the past indefinite, except the slot +2 TAM marker #{underlying "*-t-"} is absent.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "вау шижде(ш)", :lat => "wau šižde(š)", :und => "wau šIl{+4}-š{+3}-de{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "вау шигде(к)", :lat => "wau šigde(k)", :und => "wau šIl{+4}-k{+3}-de{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "вау ашиде", :lat => "wau ašide", :und => "wau a{+5}-šIl{+4}-de{0}" },
+                      :sg3i => { :cyr => "вау ишиде", :lat => "wau išide", :und => "wau i{+5}-šIl{+4}-de{0}" },
+                      :pl1  => { :cyr => "вау шиждешиҥ", :lat => "wau šiždešiŋ", :und => "wau šIl{+4}-š{+3}-de{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "вау шигдекүҥ", :lat => "wau šigdeküŋ", :und => "wau šIl{+4}-k{+3}-de{0}-kÙŋ{-1}" },
+                      :pl3a => { :cyr => "вау анчиде", :lat => "wau ančide", :und => "wau an{+5}-šIl{+4}-de{0}" } }
+          = render 'verb_table', :title => "вау-деҥ “to go inside” —  Past Definite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "һуу лшыссои(ш)", :lat => "huu lšyssoi(š)", :und => "uu l{+6}-šIl{+4}-š{+3}-soi{0}-(Àš){-1}" },
+                      :sg2  => { :cyr => "һуу лшыксои(к)", :lat => "huu lšyksoi(k)", :und => "uu l{+6}-šIl{+4}-k{+3}-soi{0}-(Àk){-1}" },
+                      :sg3a => { :cyr => "һуу лашысои", :lat => "huu lašysoi", :und => "uu l{+6}-a{+5}-šIl{+4}-soi{0}" },
+                      :sg3i => { :cyr => "һуу лишысои", :lat => "huu lišysoi", :und => "uu l{+6}-i{+5}-šIl{+4}-soi{0}" },
+                      :pl1  => { :cyr => "һуу лшыссоишыҥ", :lat => "huu lšyssoišyŋ", :und => "uu l{+6}-šIl{+4}-š{+3}-soi{0}-šIŋ{-1}" },
+                      :pl2  => { :cyr => "һуу лшыксоикуҥ", :lat => "huu lšyksoikuŋ", :und => "uu l{+6}-šIl{+4}-k{+3}-soi{0}-kuŋ{-1}" },
+                      :pl3a => { :cyr => "һуу ланчысои", :lat => "huu lančysoi", :und => "uu l{+6}-an{+5}-šIl{+4}-soi{0}" } }
+          = render 'verb_table', :title => "һуу-лсоиҥ “to sail upstream” —  Past Definite", :forms => forms
+    %p Bare verbs that lack a coverb in the present and past indefinite tenses must use če/čei as in the present definite tense: #{t "че шижде(ш)", "če šižde(š)"} “I went by foot”, #{t "че лшыссои(ш)", "če lšyssoi(š)"} “I sailed/went by boat”, #{t "че шышшан(аш)", "če šyššan(aš)"} “I went by vehicle”.
+
+  = section "Imperative" do
+    %p The imperative is formed regularly as in other conjugations.
+    %p The root appears in slot 0.
+    %p Slot +1 is filled with the imperative marker #{underlying "*-d-"}, with an epenthetic -a-/-e- if needed.
+    %p Slot +6 is occupied by the determiner, if applicable.
+    %p Slot -1 consists of an optional plural marker #{underlying "*-ŋ"}.
+    %p Coverbs are still present as before. All verbs must have a coverb, so even the basic non-directional verbs must use če/čei.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg2 => { :cyr => "вау даде!", :lat => "wau dade!", :und => "d{+1}-de{0}" },
+                      :pl2 => { :cyr => "вау даде(ҥ)", :lat => "wau dade(ŋ)", :und => "d{+1}-de{0}-(ŋ){-1}" } }
+          = render 'imperative_table', :title => "вау-деҥ “to go inside” —  Imperative", :forms => forms
+        %td
+          - forms = { :sg2 => { :cyr => "һуу лдасои!", :lat => "huu ldasoi!", :und => "l{+6}-d{+1}-soi{0}" },
+                      :pl2 => { :cyr => "һуу лдасои(ҥ)", :lat => "huu ldasoi(ŋ)", :und => "l{+6}-d{+1}-soi{0}-(ŋ){-1}" } }
+          = render 'imperative_table', :title => "һуу-лсоиҥ “to sail upstream” —  Imperative", :forms => forms
+    %p However, in colloquial speech, it is not unusual for the imperative marker #{underlying "*-d-"} to drop entirely, leaving behind a shorter “clipped” form. The above two verbs may therefore appear as #{t "вау де!", "wau de!"} and #{t "һуу лсои!", "huu lsoi!"} respectively.
+
+  = section "Infinitive and Participles" do
+    %p All non-finite verb forms in Conjugation III must contain a coverb, which in this case is joined to the main verb as a single hyphenated word. This coverb is inseparable from the main verb, and so must always appear in its “short” form. Non-directional basic verbs such as “go” appear with the semantically bleached coverb če.
+    %p The infinitive is formed from the coverb, the determiner (if applicable), the root, and the infinitive suffix #{underlying "*-ŋ"} (or zero if the root ends in a velar or nasal consonant): #{t "вау-деҥ", "wau-deŋ"} “to go inside”, #{t "һуу-лсоиҥ", "huu-lsoiŋ"} “to sail upstream”.
+    %p The split-transitive present participle (functionally an active participle, since all Conjugation III verbs are intransitive) is formed from the coverb, determiner, root, and participle suffix #{underlying "*-s"}: #{t "вау-дес", "wau-des"} “going inside”, #{t "һуу-лсоис", "huu-lsois"} “sailing upstream”.
+    %p The split-transitive past is formed from the coverb, determiner, the formant -n-/-ni-/ny-, the root, and the participle suffix #{underlying "*-s"}: #{t "вау-ндес", "wau-ndes"} “that went inside”, #{t "һуу-лынцоис", "huu-lyntsois"} “that sailed upstream”.
+    %p The split-transitive near-future is formed as above, but with a formant as seen in Conjugations I and II: #{t "вау-чоддес", "wau-čoddes"} “that will go inside”, #{t "һуу-лыктысоис", "huu-lyktysois"} “that will sail upstream”.
+    %ul
+      %li -čot-/-čöt- if there is no determiner and the root begins with a consonant or back vowel
+      %li -čos-/-čös- if there is no determiner and the root begins with a front vowel
+      %li -kti-/-kty- if there is a determiner and the root begins with a consonant
+      %li -kt- if there is a determiner and the root begins with a vowel
+    %p The conditional participle is formed from the coverb, determiner, conditional particle #{underlying "*-sIm-"} (-šim-/-sym-), root, and infinitive ending: #{t "вау-шиндеҥ", "wau-šindeŋ"} “if [subj] were to go inside”, #{t "һуу-лсымсоиҥ", "huu-lsymsoiŋ"} “if [subj] were to sail upstream”.
+    %p In all of the above forms, determiners may be augmented with -i-/-y- if necessary to prevent an illegal cluster: #{t "шои-лчан", "šoi-lčan"} “to go up [by vehicle]” (*l-čan), #{t "һор-кычан", "hor-kyčan"} “to go down [by vehicle]” (*k-čan).
+  
+  = section "Negatives" do
+    %p Negation is performed for finite Conjugation III verbs using the same ta- prohibitive and we- negative as in other conjugations. They <em>must</em> always be prefixed to the coverb, and so always appear in their bound ta-/we- forms: #{t "вевау коштәде(ш)", "wewau koštəde(š)"} “I am not going inside”, #{t "туу лдасои!", "tuu ldasoi!"} “Don’t sail upstream!”.
+    %p The independent negatives #{t "һоот/һоота", "hoot/hoota"} and #{t "вен/вына", "wen/wyna"} can only be used with the six verbs which lack directional coverbs, and only in the present indefinite and past indefinite tenses: #{t "вен коштәде(ш)", "wen koštəde(š)"} “I am not going”.
+    %p Negation of participles and other non-finite forms is always done by prefixing wen-, which is always separated orthographically by a hyphen: #{t "вен-вау-дес", "wen-wau-des"} “not going inside”, #{t "вен-уу-лсоис", "wen-uu-lsois"} “not sailing upstream”. The clipped form we- often occurs with infinitives, however; this form is never hyphenated: #{t "вевау-деҥ", "wewau-deŋ"} “to not go inside”.
+    %p Simple impossibility may also be marked as in Conjugations I and II.
+
+= section "Conjugation IV: Possessive Verbs" do
+  %p The “Possessive Verbs” of Conjugation IV behave very differently compared to other Očets verbs; in fact, there is much variation between various Conjugation IV verbs among themselves as well. These are verbs that historically result from the reanalysis of an entire phrase that contained a noun with a possessive affix. Person marking on this new verb thus consists entirely or partially of morphemes that in origin were possessive prefixes, rather than verbal morphemes.
+  %p The possessive verbs are historically predicative constructions, derived from the complements of either an overt or implied verb “to be”), and so will bear the mark of predicative nominal morphology, such as traces of predicate agreement markers. The most common possessive verbs are #{t "нақоиҥ", "naqoiŋ"} “want” (root *qoi, originally “be one’s desire”), #{t "ниддиҥ", "niddiŋ"} “know how to” (*iddi, originally “be of one’s ken”), #{t "нахкыләҥ", "naxkyləŋ"} “follow” (*xkyl, originally “be on one’s tracks”), and #{t "һазәҥ", "hazəŋ"} “belong/pertain to” (*az, originally “be someone’s”).
+  %p Despite their very distinct origins, Očets possessive verbs have been reanalyzed as true verbs which now can be described in terms of a template model similar to that used by other Očets verbs, the result of significant analogical influence; however, there remain a number of significant differences, such as the greater importance given to suffixial (post-root) slots in possessive verbs. A Conjugation IV verb may be diagrammed as such:
+  %table.slottable
+    %tr
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+      %th -2
+    %tr
+      %td TAM Marker
+      %td Subject Agreement Marker
+      %td Imperative
+      %td Root
+      %td Object Plural Marker
+      %td Object Agreement Marker
+
+  = section "Present Indefinite" do
+    %p The root is inserted into slot 0.
+    %p In the present indefinite, there is only a single prefix, the subject agreement marker in +2. They bear a strong resemblence to nominal possessive markers:
+    %table
+      %tr
+        %th 1 Sg
+        %th 1 Pl
+        %th 2 Sg
+        %th 2 Pl
+        %th 3 Sg A
+        %th 3 Pl A
+        %th 3 I
+      %tr
+        %td -šyt-<br>-šit-
+        %td -šan-<br>-šen-
+        %td -kyt-<br>-čit-
+        %td -un-
+        %td -yt-<br>-it-
+        %td -nyt-<br>-nit
+        %td -yt-<br>-it-
+    %p Suffixial slot -1 is occupied by an object number marker: -Ø- if singular or -n- is plural. As elsewhere, there is no number distinction when the object is inanimate.
+    %p Slot -2 is the direct object marker, historically related to predicate agreement markers.
+    %table
+      %tr
+        %th 1 Sg
+        %th 1 Pl
+        %th 2 Sg
+        %th 2 Pl
+        %th 3 Sg A
+        %th 3 Pl A
+        %th 3 I
+      %tr
+        %td -əš-<br>-š-
+        %td -šəŋ-
+        %td -ək-<br>-k-
+        %td -kəŋ-
+        %td -əd-<br>-d-
+        %td -ən-<br>-n-<br>-Ø-
+        %td -dy-<br>-di-<br>-y-<br>-i-<br>-əd-<br>-d-
+    %p The use of these endings are fairly straightforward, except for inanimate third person objects. If the subject is singular or inanimate, the ending -d- is used, or -əd- if an illegal cluster would otherwise be formed. If the subject is plural and animate, the surface realization is either -di- or -dy-, depending on harmony. However, if -di- or -dy- come in immediate contact with the object plural marker #{underlying "*n"}, the #{underlying "*d"} will drop and leave behind the vowel: #{underlying "*n-dI"} → -ni-/-ny-. In a similar vein, the third person plural animate object marker #{underlying "*n"} will drop entirely if preceded by the object plural marker: *n-n → -n-.
+    %p The first table below shows the full object conjugation of “I want...”, while the second shows the full subject conjugation of “... want(s) it”.
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg2  => { :cyr => "шытқоик", :lat => "šytqoik", :und => "šIt{+2}-qoi{0}-k{-2}", :eng => "I want you" },
+                      :sg3a => { :cyr => "шытқоид", :lat => "šytqoid", :und => "šIt{+2}-qoi{0}-dÌ{-2}", :eng => "I want him/her/it" },
+                      :sg3i => { :cyr => "шытқоид", :lat => "šytqoid", :und => "šIt{+2}-qoi{0}-dÌ{-2}", :eng => "I want it/them" },
+                      :pl2  => { :cyr => "шытқоиҥкәҥ", :lat => "šytqoiŋkəŋ", :und => "šIt{+2}-qoi{0}-n{-1}-kəŋ{-2}", :eng => "I want you all" },
+                      :pl3a => { :cyr => "шытқоин", :lat => "šytqoin", :und => "šIt{+2}-qoi{0}-n{-1}-n{-2}", :eng => "I want them" } }
+          = render 'verb_table', :title => "нақоиҥ “to want” —  Present Indefinite", :forms => forms, :col_label => "Object"
+        %td
+          - forms = { :sg1  => { :cyr => "шытқоид", :lat => "šytqoid", :und => "šIt{+2}-qoi{0}-dÌ{-2}", :eng => "I want it" },
+                      :sg2  => { :cyr => "кытқоид", :lat => "kytqoid", :und => "kIt{+2}-qoi{0}-dÌ{-2}", :eng => "you want it" },
+                      :sg3a => { :cyr => "һытқоид", :lat => "hytqoid", :und => "It{+2}-qoi{0}-dÌ{-2}", :eng => "he/she/it wants it" },
+                      :sg3i => { :cyr => "һытқоид", :lat => "hytqoid", :und => "It{+2}-qoi{0}-dÌ{-2}", :eng => "it wants it" },
+                      :pl1  => { :cyr => "шаҥқоиды", :lat => "šaŋqoidy", :und => "šAn{+2}-qoi{0}-dÌ{-2}", :eng => "we want it" },
+                      :pl2  => { :cyr => "һуҥқоиды", :lat => "huŋqoidy", :und => "un{+2}-qoi{0}-dÌ{-2}", :eng => "you all want it" },
+                      :pl3a => { :cyr => "нытқоиды", :lat => "nytqoidy", :und => "nIt{+2}-qoi{0}-dÌ{-2}", :eng => "they want it" } }
+          = render 'verb_table', :title => "нақоиҥ “to want” —  Present Indefinite", :forms => forms, :col_label => "Subject"
+
+  = section "Present Definite" do
+    %p The present definite is formed in much the same way as the present indefinite, except for the addition of an explicit TAM marker in slot +3 (and the side effects of its presence on the +2 subject agreement markers).
+    %p The TAM marker is underlyingly #{underlying "*-kÀn-"}, and so surfaces as -ka(n)- in back-vowel harmony environments and as -ke(n)- in front-vowel harmony environments. However, in the second person plural, the back vowel form is always used, due to the present of a fixed back vowel /u/ in the subject agreement marker in the following syllable.
+    %p The TAM marker interacts with the subject agreement marker in most forms. With first person subjects, the sequences #{underlying "*kÀn-šIt-"} and #{underlying "*kan-šAn-"} become kačyt-/kečit- and kačan-/kečen-. In the second person singular, #{underlying "*kÀn-kIt-"} becomes kaŋyt-/kenčit-. In all other forms the TAM marker remains intact.
+    %p The subject conjugations of “... will want it” (with back vowel harmony) and “... will know how [to do] it” (with front vowel harmony):
+    %table.invisible
+      %tr
+        %td
+          - forms = { :sg1  => { :cyr => "качытқоид", :lat => "kačytqoid", :und => "kAn{+3}-šIt{+2}-qoi{0}-dÌ{-2}" },
+                      :sg2  => { :cyr => "каҥытқоид", :lat => "kaŋytqoid", :und => "kAn{+3}-kIt{+2}-qoi{0}-dÌ{-2}" },
+                      :sg3a => { :cyr => "канытқоид", :lat => "kanytqoid", :und => "kAn{+3}-It{+2}-qoi{0}-dÌ{-2}" },
+                      :sg3i => { :cyr => "канытқоид", :lat => "kanytqoid", :und => "kAn{+3}-It{+2}-qoi{0}-dÌ{-2}" },
+                      :pl1  => { :cyr => "качаҥқоиды", :lat => "kačaŋqoidy", :und => "kAn{+3}-šAn{+2}-qoi{0}-dÌ{-2}" },
+                      :pl2  => { :cyr => "кануҥқоиды", :lat => "kanuŋqoidy", :und => "kAn{+3}-un{+2}-qoi{0}-dÌ{-2}" },
+                      :pl3a => { :cyr => "каннытқоиды", :lat => "kannytqoidy", :und => "kAn{+3}-nIt{+2}-qoi{0}-dÌ{-2}" } }
+          = render 'verb_table', :title => "нақоиҥ “to want” —  Present Definite", :forms => forms
+        %td
+          - forms = { :sg1  => { :cyr => "кечитиддид", :lat => "kečitiddid", :und => "kAn{+3}-šIt{+2}-iddi{0}-dÌ{-2}" },
+                      :sg2  => { :cyr => "кенчитиддид", :lat => "kenčitiddid", :und => "kAn{+3}-kIt{+2}-iddi{0}-dÌ{-2}" },
+                      :sg3a => { :cyr => "кенитиддид", :lat => "kenitiddid", :und => "kAn{+3}-It{+2}-iddi{0}-dÌ{-2}" },
+                      :sg3i => { :cyr => "кенитиддид", :lat => "kenitiddid", :und => "kAn{+3}-It{+2}-iddi{0}-dÌ{-2}" },
+                      :pl1  => { :cyr => "кечениддиди", :lat => "kečeniddidi", :und => "kAn{+3}-šAn{+2}-iddi{0}-dÌ{-2}" },
+                      :pl2  => { :cyr => "кануниддиди", :lat => "kanuniddidi", :und => "kAn{+3}-un{+2}-iddi{0}-dÌ{-2}" },
+                      :pl3a => { :cyr => "каннитиддиди", :lat => "kannitiddidi", :und => "kAn{+3}-nIt{+2}-iddi{0}-dÌ{-2}" } }
+          = render 'verb_table', :title => "ниддиҥ “to know how to” —  Present Definite", :forms => forms
+  
+  = section "Past Indefinite" do
+    %p The TAM marker in the past indefinite is #{underlying "*-šIl-"}. However, in the #{abbrev '1sg'}, #{abbrev '1pl'}, #{abbrev '2sg'}, and #{abbrev '3pl.anim'} forms, the /l/ and the first consonant of the subject agreement marker undergo metathesis (and in the case of the #{abbrev '3pl.anim'}, assimilation as well).
+    - forms = { :sg1  => { :cyr => "шышлытқоид", :lat => "šyšlytqoid", :und => "šIl{+3}-šIt{+2}-qoi{0}-dÌ{-2}" },
+                :sg2  => { :cyr => "шыклытқоид", :lat => "šyklytqoid", :und => "šIl{+3}-kIt{+2}-qoi{0}-dÌ{-2}" },
+                :sg3a => { :cyr => "шылытқоид", :lat => "šylytqoid", :und => "šIl{+3}-It{+2}-qoi{0}-dÌ{-2}" },
+                :sg3i => { :cyr => "шылытқоид", :lat => "šylytqoid", :und => "šIl{+3}-It{+2}-qoi{0}-dÌ{-2}" },
+                :pl1  => { :cyr => "шышлаҥқоиды", :lat => "šyšlaŋqoidy", :und => "šIl{+3}-šAn{+2}-qoi{0}-dÌ{-2}" },
+                :pl2  => { :cyr => "шылуҥқоиды", :lat => "šyluŋqoidy", :und => "šIl{+3}-un{+2}-qoi{0}-dÌ{-2}" },
+                :pl3a => { :cyr => "шыллытқоиды", :lat => "šyllytqoidy", :und => "šIl{+3}-nIt{+2}-qoi{0}-dÌ{-2}" } }
+    = render 'verb_table', :title => "нақоиҥ “to want” —  Past Indefinite", :forms => forms
+
+  = section "Past Definite" do
+    %p The TAM marker in the past definite is traditionally taken to be #{underlying "*-šIn-"}; however, its surface realization is more complicated. When followed by a consonant (in the #{abbrev '1sg'}, #{abbrev '1pl'}, #{abbrev '2sg'}, and #{abbrev '3pl.anim'} forms), the -n- is dropped, the vowel is lengthened, and the followed consonant may undergo some alterations as in the present definite: #{underlying "*šIn-šIt-"} → šyyčyt-/šiičit-, #{underlying "*šIn-šAn-"} → šyyčan-/šiičen-, #{underlying "*šIn-kIt-"} → šyyŋyt-/šinčit- (short vowel!), #{underlying "*šIn-nIt-"} → šyynyt-/šiinit-. In other forms, the TAM marker remains intact as šyn-/šin-.
+    - forms = { :sg1  => { :cyr => "шыычытқоид", :lat => "šyyčytqoid", :und => "šIn{+3}-šIt{+2}-qoi{0}-dÌ{-2}" },
+                :sg2  => { :cyr => "шыыҥытқоид", :lat => "šyyŋytqoid", :und => "šIn{+3}-kIt{+2}-qoi{0}-dÌ{-2}" },
+                :sg3a => { :cyr => "шынытқоид", :lat => "šynytqoid", :und => "šIn{+3}-It{+2}-qoi{0}-dÌ{-2}" },
+                :sg3i => { :cyr => "шынытқоид", :lat => "šynytqoid", :und => "šIn{+3}-It{+2}-qoi{0}-dÌ{-2}" },
+                :pl1  => { :cyr => "шыычаҥқоиды", :lat => "šyyčaŋqoidy", :und => "šIn{+3}-šAn{+2}-qoi{0}-dÌ{-2}" },
+                :pl2  => { :cyr => "шынуҥқоиды", :lat => "šynuŋqoidy", :und => "šIn{+3}-un{+2}-qoi{0}-dÌ{-2}" },
+                :pl3a => { :cyr => "шыынытқоиды", :lat => "šyynytqoidy", :und => "šIn{+3}-nIt{+2}-qoi{0}-dÌ{-2}" } }
+    = render 'verb_table', :title => "нақоиҥ “to want” —  Past Definite", :forms => forms
+
+  = section "Imperative" do
+    %p The Conjugation IV imperative is an analogical formation, based on the imperative construction seem in other conjugations. Subject agreement markers in +2 and TAM markers in +3 disappear, while an imperative marker #{underlying "*-da-"} is inserted into slot +1. If the root begins with a vowel, -h- may be inserted in between, but this can be inconsistent.
+    %p Object agreement in slot -2 functions as normal. However, the object plural marker of slot -1 functions as a <em>subject</em> plural marker in this situation, albeit an optional one. This appears to be by analogy with the optional imperative plural marker -ŋ- seen in other conjugations; in fact, in some dialects it is not unusual for the usual object marker -n- to be replaced by -ŋ- in the imperative.
+    %table
+      %tr
+        %th{:colspan => 4} нақоиҥ “to want” — Imperative
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th{:colspan => 2} Subject
+      %tr
+        %th 2 Sg
+        %th 2 Pl
+      %tr
+        %th{:rowspan => 7} Object
+        %th 1 Sg
+        %td
+          = t("дақоиш", "daqoiš", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-š{-2}")
+        %td
+          = t("дақоинәш", "daqoinəš", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-n{-1}-š{-2}")
+      %tr
+        %th 1 Pl
+        %td
+          = t("дақоишәҥ", "daqoišəŋ", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-šəŋ{-2}")
+        %td
+          = t("дақоинчәҥ", "daqoinčəŋ", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-n{-1}-šəŋ{-2}")
+      %tr
+        %th 2 Sg
+        %td = 3 Sg A
+        %td —
+      %tr
+        %th 2 Pl
+        %td —
+        %td = 3 Sg A or 3 Pl A
+      %tr
+        %th 3 Sg A
+        %td
+          = t("дақоид", "daqoid", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-dÌ{-2}")
+        %td
+          = t("дақоины", "daqoiny", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-n{-1}-dÌ{-2}")
+      %tr
+        %th 3 Pl A
+        %td
+          = t("дақоин", "daqoin", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-n{-2}")
+        %td
+          = t("дақоин", "daqoin", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-n{-1}-n{-2}")
+      %tr
+        %th 3 I
+        %td
+          = t("дақоид", "daqoid", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-dÌ{-2}")
+        %td
+          = t("дақоины", "daqoiny", :linebreak => true)
+          %br
+          = underlying("da{+1}-qoi{0}-n{-1}-dÌ{-2}")
+  
+  = section "Infinitive and Participles" do
+    %p The infinitive is formed somewhat differently than in other conjugations. Whereas other conjugations use the prefix #{underlying "*-sI-"} (or a determiner), Conjugation IV verbs use #{underlying "*-nA-"} (-na-/-ne-), or -n- when followed by a vowel. As elsewhere, this is accompanied by a suffix -ŋ-: #{t "нақоиҥ", "naqoiŋ"} “to want” (*qoi), #{t "ниддиҥ", "niddiŋ"} “to know how to” (*iddi).
+    %p The split-transitive present participle is formed from the root plus the suffix -s-: #{t "қоис", "qois"} “wanting/being wanted”, #{t "һиддис", "hiddis"} “knowing how/being known”.
+    %p The split-transitive past participle is formed from the past formant #{underlying "*-nI-"} (or -n- before a vowel), the root, and the suffix -s-: #{t "нықоис", "nyqois"} “that was wanting/wanted”, #{t "ниддис", "niddis"} “that was knowing how/being known”.
+    %p The split-transitive near future is formed with the future formant -čot- (back harmony), -čöt- (front harmony and stem begins with a consonant), or -čös- (front harmony and stem begins with a vowel), the root, and the participle formant *-s-: #{t "чотқоис", "čotqois"} “that is going to want/be wanted”, #{t "чөсиддис", "čösiddis"} “that is going to know how/be known”.
+    %p The present passive is formed with the prefix la- (before consonants) or l- (before vowels), the root, and the participial formant -d-: #{t "лақоид", "laqoid"} “that is being wanted”, #{t "лиддид", "liddid"} “that is being known”.
+    %p The past passive is formed with the prefix ia- (before consonants) or n- (before vowels), the root, and the participial formant -s-: #{t "иақоис", "iaqois"} “wanted”, #{t "ниддис", "niddis"} “known”.
+    %p The near-future passive is formed with the prefix kta- (before consonants) or kt- (before vowels), the root, and the participial formant -d-: #{t "ктақоид", "ktaqoid"} “that is going to be wanted”, #{t "ктиддид", "ktiddid"} “that is going to be known”.
+    %p The conditional participle is formed with the conditional marker #{underlying "*-sIm-"} (-sym-/-šim-), the augment -a- (if the root begins with a consonant, no matter the harmony), the root, and the infinitive ending: #{t "сымақоиҥ", "symaqoiŋ"} “if [subj] were to want/be wanted”, #{t "шимиддиҥ", "šimiddiŋ"} “if [subj] were to know how/be known”.
+    %p Negative participles are formed with the prefix вен-, as elsewhere.
+
+  = section "Negatives" do
+    %p In contradistinction with the conjugations so far discussed, negation of Conjugation IV verbs is not done with the preverbs вен and һоот. Instead of вен, the negative third person inanimate forms of “to be” must be used, in whatever tense is appropriate. Instead of һоот, the negative imperative forms of “be” are used.
+    %table.noundecl
+      %tr
+        %th Positive
+        %th Negative
+      %tr
+        %td
+          = t("кытәхкылш", "kytəxkylš", :linebreak => true)
+          %br
+          “you are following me”
+        %td
+          = t("кво кытәхкылш", "kwo kytəxkylš", :linebreak => true)
+          %br
+          “you are not following me”
+      %tr
+        %td
+          = t("каҥытәхкылш", "kaŋytəxkylš", :linebreak => true)
+          %br
+          “you will follow me”
+        %td
+          = t("һииҥно каҥытәхкылш", "hiiŋno kaŋytəxkylš", :linebreak => true)
+          %br
+          “you will not follow me”
+      %tr
+        %td
+          = t("шыклытәхкылш", "šyklytəxkylš", :linebreak => true)
+          %br
+          “you were following me”
+        %td
+          = t("һиишло шыклытәхкылш", "hiišlo šyklytəxkylš", :linebreak => true)
+          %br
+          “you were not following me”
+      %tr
+        %td
+          = t("шыыҥытәхкылш", "šyyŋytəxkylš", :linebreak => true)
+          %br
+          “you followed me”
+        %td
+          = t("һиишно шыыҥытәхкылш", "hiišno šyyŋytəxkylš", :linebreak => true)
+          %br
+          “you did not follow me”
+      %tr
+        %td
+          = t("дахкылш!", "daxkylš!", :linebreak => true)
+          %br
+          “follow me!”
+        %td
+          = t("даво дахкылш!", "dawo daxkylš!", :linebreak => true)
+          %br
+          “don’t follow me!”
+      %tr
+        %td
+          = t("дахкылнәш!", "daxkylnəš!", :linebreak => true)
+          %br
+          “follow me (#{abbrev 'pl'})!”
+        %td
+          = t("давоҥ дахкылнәш!", "dawoŋ daxkylnəš!", :linebreak => true)
+          %br
+          “don’t follow me (#{abbrev 'pl'})!”
+
+= section "Conjugation V: Stative Verbs" do
+  %p Conjugation V consists of so-called “stative verbs”, or verb-like adjectives. They have a defective conjugation when compared to other verbs, as they only have two indicative forms: the present indefinite and the past indefinite; they also lack the imperative. In addition to roots that inherently belong to Conjuagtion V, Conjugation I roots can be transferred to Conjugation V with the meaning “be X-able”. Examples include #{t "саһаҥост", "sahaŋost"} “be sad” (*aŋ), #{t "сасоност", "sasonost"} “be green, be in bloom” (*son), #{t "саһустауност", "sahustaunost"} “be tired” (*ustau), #{t "сатеелост", "sateelost"} “be cold, be wintry” (*teel), #{t "саһиижост", "sahiižost"} “be low, be ashamed” (*iiž), and #{t "саһаиност", "sahainost"} (*ain) “be visible”.
+  %p The structure of Conjugation V verbs appears like this:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td
+      %td 3rd Person Subject Agreement Marker
+      %td TAM Marker
+      %td 1st/2nd Person Subject Agreement Marker
+      %td
+      %td Stative Formant
+      %td Root
+      %td Subject Agreement Markers (opt.)
+
+  = section "Present Indefinite" do
+    %p The root is inserted into slot 0.
+    %p Slot +1 is occupied by -a- in all persons and numbers. If the root begins with a vowel, it will typically form a diphthong, even if the vowel was originally long.
+    %p Slot +3 is occupied by the first/second person subject marker; this is -š- in the first person, -k- in the second person, and -Ø- in the third person.
+    %p Slot +4 contains the TAM marker. Note that this TAM marker is very different from that seen in other conjugations. Underlyingly it is considered to be #{underlying "*-in-"}; however, this surfaces as simply -i- outside of the third person.
+    %p Slot +5 is only occupied in the third person, and contains the third person subject agreement markers: -a- for the third person singular animate, -an- for the third person plural animate, and -i- for the third person inanimate.
+    %p The suffixial slot -1 behaves as in most other conjugations, with an enclitic subject agreement marker that is optional in the singular and mandatory in the plural.
+    - forms = { :sg1  => { :cyr => "һишаустау(ш)", :lat => "hišaustau(š)", :und => "in{+4}-š{+3}-a{+1}-ustau{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "һикаустау(к)", :lat => "hikaustau(k)", :und => "in{+4}-k{+3}-a{+1}-ustau{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һаинаустау", :lat => "hainaustau", :und => "a{+5}-in{+4}-a{+1}-ustau{0}" },
+                :sg3i => { :cyr => "һиинаустау", :lat => "hiinaustau", :und => "i{+5}-in{+4}-a{+1}-ustau{0}" },
+                :pl1  => { :cyr => "һишаустаушыҥ", :lat => "hišaustaušyŋ", :und => "in{+4}-š{+3}-a{+1}-ustau{0}-šIŋ{-1}" },
+                :pl2  => { :cyr => "һикаустаукуҥ", :lat => "hikaustaukuŋ", :und => "in{+4}-k{+3}-a{+1}-ustau{0}-kÙŋ{-1}" },
+                :pl3a => { :cyr => "һанинаустау", :lat => "haninaustau", :und => "an{+5}-in{+4}-a{+1}-ustau{0}" } }
+    = render 'verb_table', :title => "саһустауност “to be tired” —  Present Indefinite", :forms => forms
+
+  = section "Past Indefinite" do
+    %p The past indefinite is formed much like the present indefinite, with two major differences: the TAM marker is -t- (surfacing as -ta- in the first and second persons) and the stative formant is -da- rather than -a-. The latter feature, however, triggers a number of other changes. In the first and second persons, contact with this /d/ causes the first and second person subject markers #{underlying "*š"} and #{underlying "*k"} to voice to -ž- and -g-. In the third person, the TAM marker/stative formant sequence #{underlying "*t-da"} always surfaces as simply -da-.
+    - forms = { :sg1  => { :cyr => "таждаустау(ш)", :lat => "taždaustau(š)", :und => "t{+4}-š{+3}-da{+1}-ustau{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "тагдаустау(к)", :lat => "tagdaustau(k)", :und => "t{+4}-k{+3}-da{+1}-ustau{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һадаустау", :lat => "hadaustau", :und => "a{+5}-t{+4}-da{+1}-ustau{0}" },
+                :sg3i => { :cyr => "һидаустау", :lat => "hidaustau", :und => "i{+5}-t{+4}-da{+1}-ustau{0}" },
+                :pl1  => { :cyr => "таждаустаушыҥ", :lat => "taždaustaušyŋ", :und => "t{+4}-š{+3}-da{+1}-ustau{0}-šIŋ{-1}" },
+                :pl2  => { :cyr => "тагдаустаукуҥ", :lat => "tagdaustaukuŋ", :und => "t{+4}-k{+3}-da{+1}-ustau{0}-kÙŋ{-1}" },
+                :pl3a => { :cyr => "һандаустау", :lat => "handaustau", :und => "an{+5}-t{+4}-da{+1}-ustau{0}" } }
+    = render 'verb_table', :title => "саһустауност “to be tired” —  Past Indefinite", :forms => forms
+
+  = section "Infinitive and Participles" do
+    %p The Conjugation IV infinitive has a somewhat unusual form, having borrowed the ending from a Slavic derivational suffix forming abstract nouns from adjectives. The standard infinitive prefix #{underlying "*sa-"} is prefixed to the root (with an additional -h- to prevent hiatus, if necessary), and the borrowed infinitive suffix #{underlying "*-ost"} (-nost after a vowel) is added afterwards: #{t "саһустауност", "sahustaunost"} “to be tired” (*ustau), #{t "саһаиност", "sahainost"} “to be visible” (*ain).
+    %p The split-transitive present participle is formed with the prefix #{underlying "*a-"} (before a consonant or short vowel, with *ao → au and *ae → ee) or *ah- (before a long vowel or diphthong) and the suffix #{underlying "*-s"}: #{t "һаустаус", "haustaus"} “that is tired”, #{t "һаһаинц", "hahaints"} “that is visible”.
+    %p The split-transitive past participle is formed by tacking either #{underlying "*t-"} or #{underlying "*n-"} to the split-transitive present participle. Both forms are valid, with distribution being largely dialectical. In dialects where both are present, forms with #{underlying "*t-"} tend to imply a very specific time frame: #{t "наустаус", "naustaus"} “that was tired” vs. #{t "таутаус", "taustaus"} “that was tired [when something happened]”, #{t "наһаинц", "nahaints"} “that was visible” vs. #{t "таһаинц", "tahaints"} “that was visible [when something happened]”.
+    %p The split-transitive near-future is formed by adding the prefix #{underlying "*kt-"} to the present participle: #{t "ктаустаус", "ktaustaus"} “that will be tired”, #{t "ктаһаинц", "ktahaints"} “that will be visible”.
+    %p The conditional participle is formed with the prefix syma-, the root, and the suffix -(ə)ŋ; the latter follows all the same rules of the typical infinitive suffix -ŋ, even though Conjugation V verbs use -ost to mark infinitives: #{t "сымаустауҥ", "symaustauŋ"} “if [subj] were to be tired”, #{t "сымаһаин", "symahain"} “if [subj] were to be visible”.
+    %p Negative participles are formed with the prefix #{t "вен(ә)-", "wen(ə)-"}.
+
+  = section "Negatives" do
+    %p Negation is performed using the typical negative coverb #{t "вен", "wen"}, or #{t "вына", "wyna"} with a harmonic vowel.
+
+= section "Conjugation VI: Incorporative Verbs" do
+  %p Incorporation is the process by which an argument of a verb (most often a noun) is embedded within the verb itself. This “incorporate” is most often a noun, but can at times be another verb.
+  %p Nominal incorporation comes in two forms: object incorporation and instrument incorporation. Očets has a limited capacity for direct object incorporation, wherein the direct object of a transitive verb is embedded within the verb itself, while the verbal complex itself becomes intransitive. Instrument incorporation is far more common, and can result in both transitive or intransitive verbs.
+  %p Virtually any noun is capable of being incorporated, and any verb capable of incorporating a noun; the limitations are mostly semantic, not lexical. Direct objects can only be incorporated when they are <em>indefinite</em> and typically <em>generic</em>, so that incorporation is not an option when referring to specific nouns or specific instances of action taking place on that noun. This is most common when a noun is being brought into existence by an action (“bake bread”, “spin thread”, etc). Permissable examples include:
+  %ul
+    %li #{t "нанцачоҥ", "nantsačoŋ"} “hunt small animals” ← #{t "ненц", "nents"} “small animal” (*nents) + #{t "кычоҥ", "kyčoŋ"} “hunt” (*čoŋ)
+    %li #{t "һокадоҥ", "hokadoŋ"} “chop wood” ← #{t "һок", "hok"} “tree” (*ok) + #{t "дыдоҥ", "dydoŋ"} “cut a long object” (*do)
+    %li #{t "ианавауҥ", "ianawauŋ"} “bake bread” ← #{t "иен", "ien"} “bread” (*ien) + #{t "лывауҥ", "lywauŋ"} “make” (*wau)
+  %p Impermissible examples include the following, due to references to specific instances of actions:
+  %ul
+    %li #{t "*ниигекуупыҥ", "niigekuupiŋ"} “buy a book” ← #{t "нииге", "niige"} “book” (*niige) + #{t "сыкуупыҥ", "sykuupyŋ"} “buy” (*kuup)
+    %li #{t "*наскохажуләҥ", "naskoxažuləŋ"} “break a window” ← #{t "наскох", "naskox"} “window” (*naskox) + #{t "выжуләҥ", "wyžuləŋ"} “break, shatter” (*žul)
+  %p Much more common (and less restrictive) is the incorporation of instrumental nouns:
+  %ul
+    %li #{t "дондоҥ", "dondoŋ"} “cut with a knife” ← #{t "дон", "don"} “knife” (*don) + #{t "доҥ", "doŋ"} “cut” (*do)
+    %li #{t "вытквосаҥ", "wytkwosaŋ"} “fry” ← #{t "выд", "wyd"} “butter, oil” (*wyd) + #{t "сыквосаҥ", "sykwosaŋ"} “warm up” (*kos)
+  %p It can be ambiguous whether a particular nominal incorporate is an object or an instrument; #{t "донавауҥ", "donawauŋ"} can mean both “make knives” or “make with a knife”, depending on context.
+  %p Note that when the incorporated noun is a single syllable, it will often adjust to match the harmony of the main verb root. This is not true of longer incororates. Often an epenthetic -a- or -e- will be inserted after the incorporate to ease pronunciation.
+  %p Incorporation of verbs is much less productive, but common with a small set of base verbs such as *qan “begin, start” and *ton “(iterative marker)”. Typically only the verbal root is incorporated: #{t "шилеҥ", "šileŋ"} “sing” (*il) → #{t "һылқан", "hylqan"} “start to sing”, #{t "һылтон", "hylton"} “sing often”. Incorporation of entire infinitives is also possible; however, when this happens, initial sy-/ši- prefixes are always lost: #{t "һилеҥқан", "hileŋqan"}, #{t "һилентон", "hilenton"}. This latter method is becoming increasingly commonplace, perhaps because it more closely mimics non-incorporative two-verb constructs, and because it allows incorporation with no concern for vowel harmony.
+  %p A third type of incorporation is sometimes distinguished, identical to object incorporation in form but not in meaning. A small set of so-called “auto-instrumental” verbs contain a mandatory incorporative element, typically -ol- (cf. the reflexive pronoun), -men-, or -du-. Auto-instrumental verbs all describe simple atelic actions performed solely with one’s own body, such as “laugh”, “yawn”, or “smile”, which are intransitive in meaning: #{t "дулак", "dulak"} “laugh”, #{t "һолқон", "holqon"} “yawn”, #{t "меллон", "mellon"} “smile” Not all verbs matching this description conjugate as auto-instrumentals, however.
+  %p The structure of incorporative verbs appears as follows:
+  %table.slottable
+    %tr
+      %th +6
+      %th +5
+      %th +4
+      %th +3
+      %th +2
+      %th +1
+      %th 0
+      %th -1
+    %tr
+      %td Incorporate
+      %td 3rd Person Subject + Object Agreement Marker
+      %td TAM Marker
+      %td 1st/2nd Person Subject Agreement Marker
+      %td Intransitive Marker
+      %td
+      %td Root
+      %td Subject Agreement Markers (opt.)
+
+  = section "Present Indefinite" do
+    %p For intransitive verbs:
+    %p The root is inserted into slot 0.
+    %p Slot +2 is occupied by an intransitive marker #{underlying "*aa"}, which surfaces as -aa- in the first and second persons and as a reduced -a- in the third person.
+    %p Slot +3 is the subject agreement marker: -š- in the first person, -k- in the second person, and -Ø- in the third person.
+    %p Slot +4 is the present indefinite TAM marker #{underlying "*kÀl"}, which appears only in the third person. It surfaces as -al- in the third person singular animate, -ǧl- in the third person plural animate, and -kl- in the third person inanimate.
+    %p In intransitive verbs, slot +5 contains the third person subject agreement markers, which are -a- for the animate singular, -a- for the animate plural (underlyingly #{underlying "*-an-"}, hence the ǧ in the TAM marker<sup>9</sup>). The inanimate marker is -ii-.
+    %p The incorporate is placed into slot +6. Every now and then a variable epenthetic vowel may be inserted, but speakers tend to be rather inconsistent.
+    %p Slot -1 subject agreement markers work as elsewhere.
+    - forms = { :sg1  => { :cyr => "һокшаадо(ш)", :lat => "hokšaado(š)", :und => "ok{+6}-š{+3}-aa{+2}-do{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "һоккаадо(к)", :lat => "hokkaado(k)", :und => "ok{+6}-k{+3}-aa{+2}-do{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һокааладо", :lat => "hokaalado", :und => "ok{+6}-a{+5}-kÀl{+4}-aa{+2}-do{0}" },
+                :sg3i => { :cyr => "һокиикладо", :lat => "hokiiklado", :und => "ok{+6}-i{+5}-kÀl{+4}-aa{+2}-do{0}" },
+                :pl1  => { :cyr => "һокшаадошыҥ", :lat => "hokšaadošyŋ", :und => "ok{+6}-š{+3}-aa{+2}-do{0}-šIŋ{-1}" },
+                :pl2  => { :cyr => "һоккаадокуҥ", :lat => "hokkaadokuŋ", :und => "ok{+6}-k{+3}-aa{+2}-do{0}-kÙŋ{-1}" },
+                :pl3a => { :cyr => "һокаҕладо", :lat => "hokaǧlado", :und => "ok{+6}-an{+5}-kÀl{+4}-aa{+2}-do{0}" } }
+    = render 'verb_table', :title => "һокадоҥ “to chop wood” —  Present Indefinite", :forms => forms
+    %p Transitive verbs are quite similar, with the only major differences being in slots +2, +4, and +5.
+    %p Where intransitive verbs have an intransitive marker in slot +2, transitive verbs have nothing.
+    %p The slot +4 TAM marker always surfaces as -a-/-e- with third person subjects (or -Ø- with non-third person subjects).
+    %p Slot +5 is occupied by a specialized series of object agreement markers, the same ones as are used in Conjugation I. As in Conjugation I, they vary in realization depending on the subject of the verb as well:
+    %table
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th{:colspan => 4} Subject
+      %tr
+        %th 1
+        %th 2
+        %th 3 A
+        %th 3 I
+      %tr
+        %th{:rowspan => 7} Object
+        %th 1 Sg
+        %td -d-
+        %td -š-
+        %td -as-
+        %td -iš-
+      %tr
+        %th 1 Pl
+        %td -d-/-n-
+        %td -ux-
+        %td -ax
+        %td -ix-
+      %tr
+        %th 2 Sg
+        %td -k-
+        %td -d-
+        %td -ak-
+        %td -ik-
+      %tr
+        %th 2 Pl
+        %td -uŋ-
+        %td -d-/-n-
+        %td -aŋ-
+        %td -iŋ-
+      %tr
+        %th 3 Sg A
+        %td -d-
+        %td -d-
+        %td -ai-
+        %td -ie-
+      %tr
+        %th 3 Pl A
+        %td -n-
+        %td -n-
+        %td -aa-
+        %td -in-
+      %tr
+        %th 3 I
+        %td -w-
+        %td -w-
+        %td -uu-
+        %td -ii-
+    %p An epenthetic schwa may be inserted after the +5 agreement markers if needed.
+    %ul
+      %li
+        = t("лүбиткәшқан(аш)", "lübitkəšqan(aš)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-k{+5}-š{+3}-qan{0}-(Àš){-1}")
+        %br
+        “I am falling in love with you.”
+      %li
+        = t("лүбиддәққан(ак)", "lübiddəqqan(ak)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-d{+5}-k{+3}-qan{0}-(Àk){-1}")
+        %br
+        “You are falling in love with him/her.”
+      %li
+        = t("лүбиттәшқан(чыҥ)", "lübittəšqan(čyŋ)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-w{+5}-š{+3}-qan{0}-šIŋ{-1}")
+        %br
+        “We are falling in love with it.”
+      %li
+        = t("лүбитахақан", "lübitaxaqan", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-ax{+5}-kÀl{+4}-qan{0}")
+        %br
+        “He/she is falling in love with us.”
+
+  = section "Present Definite" do
+    %p The present definite is conjugated much like the present indefinite, except the TAM marker is underlyingly #{underlying "*kÀn"}, and it appears in all persons and numbers. In intransitive verbs, it surfaces as -ai- in the first and second persons, -an- in the third person singular animate and as -ŋn- in other third person forms. The presence of this marker in the first and second persons causes the slot +3 agreement markers to surface as -č- and -g-, as in Conjugation I.
+    %p In transitive verbs, the TAM marker surfaces as -ai-/-ei- throughout the paradigm.
+    - forms = { :sg1  => { :cyr => "һокаичаадо(ш)", :lat => "hokaičaado(š)", :und => "ok{+6}-kÀn{+4}-š{+3}-aa{+2}-do{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "һокаигаадо(к)", :lat => "hokaigaado(k)", :und => "ok{+6}-kÀn{+4}-k{+3}-aa{+2}-do{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һокаанадо", :lat => "hokaanado", :und => "ok{+6}-a{+5}-kÀn{+4}-aa{+2}-do{0}" },
+                :sg3i => { :cyr => "һокииҥнадо", :lat => "hokiiŋnado", :und => "ok{+6}-i{+5}-kÀn{+4}-aa{+2}-do{0}" },
+                :pl1  => { :cyr => "һокаичаадошыҥ", :lat => "hokaičaadošyŋ", :und => "ok{+6}-kÀn{+4}-š{+3}-aa{+2}-do{0}-šIŋ{-1}" },
+                :pl2  => { :cyr => "һокаигаадокуҥ", :lat => "hokaigaadokuŋ", :und => "ok{+6}-kÀn{+4}-k{+3}-aa{+2}-do{0}-kÙŋ{-1}" },
+                :pl3a => { :cyr => "һокаҥнадо", :lat => "hokaŋnado", :und => "ok{+6}-an{+5}-kÀn{+4}-aa{+2}-do{0}" } }
+    = render 'verb_table', :title => "һокадоҥ “to chop wood” —  Present Definite", :forms => forms
+    %ul
+      %li
+        = t("лүбиткаичқан(аш)", "lübitkaičqan(aš)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-k{+5}-kÀn{+4}-š{+3}-qan{0}-(Àš){-1}")
+        %br
+        “I will fall in love with you.”
+      %li
+        = t("лүбиддаиққан(ак)", "lübiddaiqqan(ak)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-d{+5}-kÀn{+4}-k{+3}-qan{0}-(Àk){-1}")
+        %br
+        “You will fall in love with him/her.”
+      %li
+        = t("лүбиттаичқан(чыҥ)", "lübittaičqan(čyŋ)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-w{+5}-kÀn{+4}-š{+3}-qan{0}-šIŋ{-1}")
+        %br
+        “We will fall in love with it.”
+      %li
+        = t("лүбитахаиқан", "lübitaxaiqan", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-ax{+5}-kÀn{+4}-qan{0}")
+        %br
+        “He/she will fall in love with us.”
+
+  = section "Past Indefinite" do
+    %p The TAM marker of the past indefinite is #{underlying "*šIl"}. In intransitive verbs, it surfaces as -šy- in the first and second persons, with gemination of the following consonant (the subject agreement marker). The full form -šyl- is seen in the third person animate singular and third person inanimate, while the n-assimilated form -čyl- is seen in the third person animate plural.
+    %p In transitive verbs, the TAM marker surfaces as -(y)šly-/-(i)šli- throughout the paradigm.
+    - forms = { :sg1  => { :cyr => "һокшышшаадо(ш)", :lat => "hokšyššaado(š)", :und => "ok{+6}-šIl{+4}-š{+3}-aa{+2}-do{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "һокшыккаадо(к)", :lat => "hokšykkaado(k)", :und => "ok{+6}-šIl{+4}-k{+3}-aa{+2}-do{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һокашыладо", :lat => "hokašylado", :und => "ok{+6}-a{+5}-šIl{+4}-aa{+2}-do{0}" },
+                :sg3i => { :cyr => "һокишыладо", :lat => "hokišylado", :und => "ok{+6}-i{+5}-šIl{+4}-aa{+2}-do{0}" },
+                :pl1  => { :cyr => "һокшышшаадошыҥ", :lat => "hokšyššaadošyŋ", :und => "ok{+6}-šIl{+4}-š{+3}-aa{+2}-do{0}-šyŋ{-1}" },
+                :pl2  => { :cyr => "һокшыккаадокуҥ", :lat => "hokšykkaadokuŋ", :und => "ok{+6}-šIl{+4}-k{+3}-aa{+2}-do{0}-kÙŋ{-1}" },
+                :pl3a => { :cyr => "һокачыладо", :lat => "hokačylado", :und => "ok{+6}-an{+5}-šIl{+4}-aa{+2}-do{0}" } }
+    = render 'verb_table', :title => "һокадоҥ “to chop wood” —  Past Indefinite", :forms => forms
+    %ul
+      %li
+        = t("лүбиткышлышқан(аш)", "lübitkyšlyšqan(aš)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-k{+5}-šIl{+4}-š{+3}-qan{0}-(Àš){-1}")
+        %br
+        “I was falling in love with you.”
+      %li
+        = t("лүбиддышлыққан(ак)", "lübiddyšlyqqan(ak)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-d{+5}-šIl{+4}-k{+3}-qan{0}-(Àk){-1}")
+        %br
+        “You were falling in love with him/her.”
+      %li
+        = t("лүбиттышлышқан(чыҥ)", "lübittyšlyšqan(čyŋ)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-w{+5}-šIl{+4}-š{+3}-qan{0}-šIŋ{-1}")
+        %br
+        “We were falling in love with it.”
+      %li
+        = t("лүбитахышлықан", "lübitaxyšlyqan", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-ax{+5}-šIl{+4}-qan{0}")
+        %br
+        “He/she was falling in love with us.”
+
+  = section "Past Definite" do
+    %p The past definite has generalized the TAM marker #{underlying "*-šIn-"} as -yšny-/-išni- for all transitive and intransitive verbs.
+    - forms = { :sg1  => { :cyr => "һокышнышаадо(ш)", :lat => "hokyšnyšaado(š)", :und => "ok{+6}-šIn{+4}-š{+3}-aa{+2}-do{0}-(Àš){-1}" },
+                :sg2  => { :cyr => "һокышныкаадо(к)", :lat => "hokyšnykaado(k)", :und => "ok{+6}-šIn{+4}-k{+3}-aa{+2}-do{0}-(Àk){-1}" },
+                :sg3a => { :cyr => "һокашынадо", :lat => "hokašynado", :und => "ok{+6}-a{+5}-šIn{+4}-aa{+2}-do{0}" },
+                :sg3i => { :cyr => "һокишынадо", :lat => "hokišynado", :und => "ok{+6}-i{+5}-šIn{+4}-aa{+2}-do{0}" },
+                :pl1  => { :cyr => "һокышнышаадошыҥ", :lat => "hokyšnyšaadošyŋ", :und => "ok{+6}-šIn{+4}-š{+3}-aa{+2}-do{0}-šyŋ{-1}" },
+                :pl2  => { :cyr => "һокышныкаадокуҥ", :lat => "hokyšnykaadokuŋ", :und => "ok{+6}-šIn{+4}-k{+3}-aa{+2}-do{0}-kÙŋ{-1}" },
+                :pl3a => { :cyr => "һокачынадо", :lat => "hokačynado", :und => "ok{+6}-an{+5}-šIn{+4}-aa{+2}-do{0}" } }
+    = render 'verb_table', :title => "һокадоҥ “to chop wood” —  Past Definite", :forms => forms
+    %ul
+      %li
+        = t("лүбиткышнышқан(аш)", "lübitkyšnyšqan(aš)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-k{+5}-šIn{+4}-š{+3}-qan{0}-(Àš){-1}")
+        %br
+        “I fell in love with you.”
+      %li
+        = t("лүбиддышныққан(ак)", "lübiddyšnyqqan(ak)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-d{+5}-šIn{+4}-k{+3}-qan{0}-(Àk){-1}")
+        %br
+        “You fell in love with him/her.”
+      %li
+        = t("лүбиттышнышқан(чыҥ)", "lübittyšnyšqan(čyŋ)", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-w{+5}-šIn{+4}-š{+3}-qan{0}-šIŋ{-1}")
+        %br
+        “We fell in love with it.”
+      %li
+        = t("лүбитахышнықан", "lübitaxyšnyqan", :linebreak => true)
+        %br
+        = underlying("lübit{+6}-ax{+5}-šIn{+4}-qan{0}")
+        %br
+        “He/she fell in love with us.”
+
+  = section "Imperative" do
+    %p The imperative form does not exist for incorporative verbs of any sort. In the case of nominal incorporates, the reason is fairly clear: they typically represent generic actions rather than specific instances, and imperatives with generic objects are quite rare. Apparently this has tendency has extended to incorporated verb roots as well.
+
+  = section "Infinitive and Participles" do
+    %p The infinitive is formed from the incorporate, root, and normal infinitive suffix -ŋ (with the same assimilation rules that typically apply to the infinitive suffix). Epenthetic vowels may occasionally be inserted between the incorporate and root, though this terms to be inconsistent. Coverbs are never present: #{t "һокадоҥ", "hokadoŋ"} “to chop wood”, #{t "лүбитқан", "lübitqan"} “to fall in love (with)”.
+    %p The split-transitive present is formed as above, but with the formant -s rather than -ŋ: #{t "һокадос", "hokados"} “chopping wood”, #{t "лүбитқанц", "lübitqants"} “falling in love, being fallen in love with”.
+    %p The split-transitive past consists of the incorporate, a past tense marker -n(y/i)-, the verb root, and the formant -s. The harmony of the past tense marker (if applicable) is derived from the verb root: #{t "һоҥныдос", "hoŋnydos"} “that was chopping wood”, #{t "лүбиннықанц", "lübinnyqants"} “that was falling in love, that was being fallen in love with”.
+    %p The split-transitive near-future has a more complex tense marker, as in Conjugation I. If the incorporate ends in a consonant, the marker is -čot-/-čöt- (if the root begins with a consonant or back vowel) or -čös- (if the root begins with a front vowel). The form -kty-/-kti- is used if the incorporate ends in a vowel, which elides to -kt- if the root also begins in a vowel. The formant remains -s: #{t "һокчоддос", "hokčoddos"} “that is going to chop wood”, #{t "лүбичотқанц", "lübičotqants"} “that is going to fall in love, that is going to be fallen in love with”.
+    %p The present passive is formed slightly differently than in other conjugations. The usual passive present marker -la-/-al- is augmented with what appears to be a former genitive marker, yielding the merged marker -tal-. The formant is -d: #{t "лүбитталқанд", "lübittalqand"} “being fallen in love with”.
+    %p The past passive uses the marker -ia- (before consonants) or -an- (before vowels), and the formant -s. There is no genitive augment as in the present passive: #{t "лүбиcақанц", "lübisaqants"} “that was fallen in love with”.
+    %p The near-future passive participle uses the augmented tense marker -takt- and the formant -d: #{t "лүбиттактәқанд", "lübittaktəqand"} “that is going to be fallen in love with”.
+    %p The conditional participle is formed using the conditional particle -sym-/-šim- and the infinitive ending -ŋ: #{t "һоксындоҥ", "hoksyndoŋ"} “if [subj] were to be chopping wood”, #{t "лүбицыҥқан", "lübitsyŋqan"} “if [subj] were to fall in love, be fallen in love with”.
+    %p All participles may be negated with the prefix #{t "вен-", "wen-"}: #{t "вен-һокадоҥ", "wen-hokadoŋ"} “to not chop wood”, #{t "вен-лүбиcақанц", "wen-lübisaqants"} “that was not fallen in love with”.
+
+  = section "Negation" do
+    %p Negation of incorporative verbs is somewhat complicated. The negative particle is always #{t "вен", "wen"}. However, when it is used, it cleaves apart the incorporate and the rest of the verb, and is placed in between the two components. Any epenthetic vowels inserted after the incorporate disappear. Although these negated verbal complexes are written as three separate words, the word order is fixed, and no additional elements may be inserted in between them.
+    %p Even though the incorporate is separated from the rest of the verbal complex, these forms are still considered to be incorporated to some degree due to their limited syntactic flexibility and the total lack of case marking.
+    %table
+      %tr
+        %td
+          = t("лүбиткышнышқан(аш)", "lübitkyšnyšqan(aš)", :linebreak => true)
+          %br
+          “I fell in love with you”
+        %td →
+        %td
+          = t("лүбит вен кышнышқан(аш)", "lübit wen kyšnyšqan(aš)", :linebreak => true)
+          %br
+          “I did not fall in love with you”
+      %tr
+        %td
+          = t("һокашыладо", "hokašylado", :linebreak => true)
+          %br
+          “he was chopping wood”
+        %td →
+        %td
+          = t("һок вен һашыладо", "hok wen hašylado", :linebreak => true)
+          %br
+          “he was not chopping wood”
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The irregularity makes the vowel unrecoverable, though etymologically this would likely be /e/, as this root appears to be cognate to #{t "фиһеин", "fihein"} “stand” (root *-hein-).
+%p 2) The second person subject + first person plural object marker -ux- is historically monomorphemic, despite its appearance; the u is not an original element, but is excrescent, coming from an older *xʷ.
+%p 3) In general, Očets does not permit verbs to have subjects and direct objects of the same person, regardless of number, except in the third person. These are considered reflexives, so must use reflexive pronouns. In the third person, the expected endings and the endings that agree with reflexive pronouns are one and the same, so at least as far as verbal morphology is concerned, this is a non-issue.
+%p 4) Though not all transitive Ib verbs have an unaccusative Ic counterpart.
+%p 5) #{abbrev 'inf_prefix'}-eat-#{abbrev 'inf'}-#{abbrev 'nom'} #{abbrev '1sg.subject'}-want-#{abbrev '3sg.inan.object'} (‘want’ is a Conjugation IV verb)
+%p 6) be.#{abbrev '3sg.inan.pres'} #{abbrev 'inf_prefix'}-eat-#{abbrev 'inf'} time-#{abbrev 'nom'}
+%p 7) Očets has no means of forming active participles from transitive verbs that can be used with inanimate nouns. Animate nouns use the split-transitive for active participles and the passive for passive participles, while inanimate nouns use the split-transitive for passive participles exclusively.
+%p 8) This unexpected agreement is echoed in the case marking of nouns serving as arguments to the verb. In a sentence such as “Ivan said X” (literally “X was said by Ivan”, the agent (Ivan) is marked with the instrumental case, yet it still takes verbal agreement.
+%p 9) *an-kal-a → *aŋ-kal-a → *aŋ-al-a → *aŋ-l-aa → *a-ǧl-aa
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
