@@ -1,0 +1,526 @@
+- content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Выслываус моорполоогиа"
+
+= render :partial => 'navigation'
+
+= section "Introduction" do
+  %p Derivational morphology describes the means by which new lexemes can be created from more primitive roots. Očets inherited a derivational system that was very unbalanced, with an extensive system of verbal formation, but a rather limited set of nominal formants; creation of new nominals was limited almost entirely to compounding and genitive constructs. However, likely under the influence of nearby Uralic languages, Očets has innovated sizeable set of pseudo-affixes, emerging from compounds where one element has been bleached of its original lexical meaning.
+
+= section "Formation of Nouns" do
+  = section "Compounding" do
+    %p Compounding is by far the most common means of creating new nominal lexemes from other nouns. Two types of nominal compounds exist in Očets: linked and unlinked.
+    %p Unlinked compounds consist of the direct juxtaposition of two nouns, with the head coming last. The first (modifying) noun is never inflected except occasionally for number, while the head takes all case endings. They may be written as either one word or two, depending on whether the new meaning is different from the sum (compare, say, English “black bird” and “blackbird”, keeping in mind that the noun/adjective distinction is weak in Očets).
+    %ul
+      %li
+        = t("ношшаиву", "noššaiwu")
+        “gun”
+        %br
+        ← #{t("нош", "noš")} “fire” + #{t("иаиву", "iaiwu")} “bow”
+      %li
+        = t("вызнииге", "wyzniige")
+        “dictionary”
+        %br
+        ← #{t("выс", "wys")} “word” + #{t("нииге", "niige")} “book”
+      %li
+        = t("һус дот", "hus dot")
+        “bedroom”
+        %br
+        ← #{t("һусыҥ", "husyŋ")} “to sleep” + #{t("дот", "dot")} “room”
+      %li
+        = t("һелланәл", "hellanəl")
+        “spider web”
+        %br
+        ← #{t("һел", "hel")} “spider” + #{t("ванәл", "wanəl")} “net, snare”
+      %li
+        = t("деһеи", "dehei")
+        “mother tongue”
+        %br
+        ← #{t("де", "de")} “people, nation” + #{t("һеи", "hei")} “tongue, language”
+    %p With unlinked compounds, it is often unclear whether the first element is more like a “noun” or an “adjective” in more traditional terminology. A phrase such as #{t "нец қаи", "nets qai"} “winter day” could be interpreted as a noun-noun compound of “winter” and “day”, or an adjective-noun sequence of “wintry” and “day”.
+    %p Linked compounds have an additional element inserted between the two components: *-d-/*-də-/*-əd- if the modifying element has back vowel harmony, or *-z-/*-zə-/*-əz- if it has front vowel harmony. These are clearly related to the genitive case ending. Linked compounds tend to be much older; this is no longer a productive method of derivation. Among the oldest layers of Očets compounds, linked ones tend to have a stronger degree of physical cohesion than unlinked ones, such as when the compound describes a component of the first noun:
+    %ul
+      %li
+        = t("дондәианча", "dondəianča")
+        “knife blade”
+        %br
+        ← #{t("дон", "don")} “knife” + #{t("ианча", "ianča")} “sharpness”
+      %li
+        = t("көрзәчии", "körzəčii")
+        “mountain peak”
+        %br
+        ← #{t("көр", "kör")} “[rocky] mountain” + #{t("чии", "čii")} “head”
+      %li
+        = t("һоктәчицеҥ", "hoktəčitseŋ")
+        “tree roots”
+        %br
+        ← #{t("һок", "hok")} “tree” + #{t("чиц", "čits")} “root”
+      %li
+        = t("чиегзие", "čiegzie")
+        “sleigh runner”
+        %br
+        ← #{t("чиеҕ(әл)", "čieǧ(əl)")} “sleigh” + #{t("һие", "hie")} “runner”
+      %li
+        = t("квоиссәк", "kwoissək")
+        “toe”
+        %br
+        ← #{t("квои", "kwoi")} “foot” + #{t("сак", "sak")} “finger”
+    %p However, if the first noun is a material, unlinked compounds are always used.
+    %ul
+      %li
+        = t("һеққаут", "heqqaut")
+        “railroad”
+        %br
+        ← #{t("һеҕ", "heǧ")} “iron” + #{t("қаут", "qaut")} “road”
+      %li
+        = t("саарио сееҥк", "saario seeŋk")
+        “gold coin”
+        %br
+        ← #{t("саарио", "saario")} “gold” + #{t("сееҥк", "seeŋk")} “coin”
+      %li
+        = t("чеетеи", "čeetei")
+        “sidewalk”
+        %br
+        ← #{t("чее", "čee")} “stone” + #{t("теи", "tei")} “cleared path”
+    %p In older compounds, the first element may undergo phonetic reduction and may undergo vowel changes so as to match the harmony pattern of the head. This is unpredictable. Such compounds are always written as a single word.
+    %ul
+      %li
+        = t("шоршууд", "šoršuud")
+        “fish soup”
+        %br
+        ← #{t("сор", "sor")} “fish” + #{t("шууд", "šuud")} “soup”
+      %li
+        = t("доосквоо", "dooskwoo")
+        “river ice”
+        %br
+        ← #{t("деш", "deš")} “river” + #{t("квоо", "kwoo")} “ice”
+      %li
+        = t("хыкаил", "xykail")
+        “aurora”
+        %br
+        ← #{t("хее", "xee")} “night” + #{t("каил", "kail")} “dawn”
+
+  = section "Pseudo-Prefixes" do
+    %p Pseudo-prefixes are modifying elements in compound structures that have lost their original sense and now serve as productive derivational formants. Pseudo-affixes differ from true affixes in that they retain a clear noun-noun compound structure and often the relation between the pseudo-affix and the noun from which it is derived remains quite clear.
+    %p Pseudo-prefixes are relatively uncommon. The most common ones are *yyk-/*iik- “male” and *xaa-/*xee- “female”, which can be added to many different human and animal bases.
+    %ul
+      %li
+        #{t "һиикчиб", "hiikčib"} “male dog”, #{t "хеечиб", "xeečib"} “bitch”
+        %br
+        ← #{t "чиб", "čib"} “dog”
+      %li
+        #{t "һыыккоса", "hyykkosa"} “tomcat”, #{t "хаакоса", "xaakosa"} “female cat”
+        %br
+        ← #{t "коса", "kosa"} “cat”
+      %li
+        #{t "һыыккои", "hyykkoi"} “male bear”, #{t "хаакои", "xaakwoi"} “female bear”
+        %br
+        ← #{t "квои", "kwoi"} “bear”
+      %li
+        #{t "һиикчием", "hiikčiem"} “male duck”, #{t "хеечием", "xeečiem"} “female duck”
+        %br
+        ← #{t "чием", "čiem"} “duck”
+      %li
+        #{t "һыыҥналс", "hyyŋnals"} “male doctor”, #{t "хааналс", "xaanals"} “female doctor”
+        %br
+        ← #{t "налс", "nals"} “doctor”
+    %p The pseudo-prefix *kyn-/*čin- is equivalent to English step-, attaching to kinship terms to describe a relationship resulting from remarriage or adoption. It is derived from the ordinal #{t "кын", "kyn"} “second”. Note that if the head has separate base and possessive stems, the possessive stem is used.
+    %ul
+      %li #{t("кыноб", "kynob")} “stepfather” ← #{t("баба", "baba")} “father” (*ob)
+      %li #{t("кынам", "kynam")} “stepmother” ← #{t("меме", "meme")} “mother” (*am)
+      %li #{t("кыннал", "kynnal")} “stepson” ← #{t("вал", "wal")} “son”
+      %li #{t("чинчил", "činčil")} “stepdaughter” ← #{t("чил", "čil")} “daughter”
+
+    %p The pseudo-prefix *myn-/*min- is sometimes used to form dimunitives, but only from bases representing humans. Although there is some debate, it is believed to be related to #{t "пан", "pan"} “young”. Note that this pseudo-prefix has since spawned the true prefixes *n-/*mI-, described in section 9.1.4 below.
+    %ul
+      %li #{t("мыннал", "mynnal")} “[dear] son” ← #{t("вал", "wal")} “son”
+      %li #{t("минчил", "minčil")} “[dear] daughter” ← #{t("чил", "čil")} “daughter”
+      %li #{t("мыннуул", "mynnuul")} “[dear] friend” ← #{t("иуул", "iuul")} “friend”
+      %li #{t("мыҥкыыс", "myŋkyys")} “little baby” ← #{t("кыыс", "kyys")} “baby”
+
+  = section "Pseudo-Suffixes" do
+    %p Pseudo-suffixes are very common in Očets. They have their origins in nouns that became generalized as the head of a compound, but over time lost their original meaning and speakers no longer percieve a connection between them and their parent nouns. Time has often resulted in these pseudo-suffixes taking on reduced forms, or occasionally even displaying vowel harmony with their pseudo-modifier.
+
+    = section "*-(h)ast ‘place’" do
+      %p The aharmonic pseudosuffix <i>-ast</i> (or <i>-hast</i> after a vowel) marks a place associated with a given noun or adjective, or where a given verb takes place. It typically applies only to open or outdoor areas, or to large buildings containing many people. It is derived from the word #{t "һест", "hest"} “place”.
+      %ul
+        %li #{t("наласт", "nalast")} “hospital” ← #{t("саналаҥ", "sanalaŋ")} “heal”
+        %li #{t("һаичиһаст", "haičihast")} “hotel” ← #{t("һаичи", "haiči")} “guest”
+        %li #{t("хомаст", "xomast")} “farm” ← #{t("қахом", "qaxom")} “grow [plants]”
+        %li #{t("қоиаст", "qoiast")} “neighborhood” ← #{t("қои", "qoi")} “near”
+        %li #{t("торгаст", "torgast")} “marketplace” ← #{t("саторг", "satorg")} “trade”
+        %li #{t("лаадаст", "laadast")} “city square” ← #{t("лаад", "laad")} “city”
+        %li #{t("һокаст", "hokast")} “lumber mill” ← #{t("һок", "hok")} “wood”
+
+    = section "*-ča/-če ‘substantive’" do
+      %p The pseudo-suffix <i>-ča</i>/<i>-če</i>, which harmonizes with the previous word, derives abstract substantives. These substantives may often be used non-abstractly as well (as was seen earlier with #{t "ианча", "ianča"} “sharpness, knife blade”). It is related to the word #{t "чее", "čee"} “stone”.
+      %ul
+        %li #{t("ианча", "ianča")} “sharpness, blade” ← #{t("иан", "ian")} “sharp”
+        %li #{t("ваҥқаунча", "waŋqaunča")} “courage” ← #{t("ваҥқаун", "waŋqaun")} “fearless”
+        %li #{t("нанча", "nanča")} “truth” ← #{t("нант", "nant")} “real, genuine”
+        %li #{t("пача", "pača")} “darkness, shadow” ← #{t("пац", "pats")} “dark, dim”
+        %li #{t("секше", "sekše")} “difficulty, burden” ← #{t("сеҕ", "seǧ")} “difficult”
+      %p Derivation can also occur from stems not commonly used adjectively. With verbs, for instance, it commonly represents an abstract noun describing the result of an action; this sort of derivation is often quite opaque from an English perspective.
+      %ul
+        %li #{t("һүлче", "hülče")} “length (distance)” ← #{t("сүлчеҥ", "sülčeŋ")} “measure”
+        %li #{t("шынча", "šynča")} “length (time)” ← #{t("кышын", "kyšyn")} “continue”
+        %li #{t("сыыча", "syyča")} “height” ← #{t("пысыыҥ", "pysyyŋ")} “raise, lift”
+        %li #{t("шеече", "šeeče")} “edibility” ← #{t(" шишееҥ", "šišeeŋ")} “eat”
+        %li #{t("закша", "zakša")} “loudness (speech)” ← #{t("шазҕаҥ", "šazǧaŋ")} “speak”
+        %li #{t("тоуча", "touča")} “loudness (sound)” ← #{t("вытоуҥ", "wytouŋ")} “make noise”
+
+    = section "*-doom ‘building’" do
+      %p The aharmonic pseudo-suffix <i>-doom</i> marks buildings associated with a given substantive or verb. These are typically smaller buildings than those resulting from <i>-(h)ast</i>, often representing businesses that could be run by a single person (compare <i>nalast</i> “hospital” and <i>naldoom</i> “clinic, pharmacy”). It is a loan from Novegradian or Russian дом “house”.
+      %ul
+        %li #{t("ниигедоом", "niigedoom")} “bookstore” ← #{t("нииге", "niige")} “book”
+        %li #{t("иендоом", "iendoom")} “bakery” ← #{t("иен", "ien")} “bread”
+        %li #{t("шеедоом", "šeedoom")} “restaurant” ← #{t("шишееҥ", "šišeeŋ")} “eat”
+        %li #{t("һаксәдоом", "haksədoom")} “grocery” ← #{t("һакс", "haks")} “food”
+        %li #{t("сордоом", "sordoom")} “fishmarket” ← #{t("сор", "sor")} “fish”
+        %li #{t("һааздоом", "haazdoom")} “church” ← #{t("Һаас", "Haas")} “God”
+
+    = section "*-dər ‘singulative of fabrics/hides’" do
+      %p The pseudosuffix <i>-dər</i> is added to mass nouns denoting fabrics to creative singulatives. It can also be added directly to animal terms in order to indicate singulative hides and skins. It is related to #{t "доор", "door"} “outside”, which originally referred to outerwear or insulating materials.
+      %ul
+        %li #{t("буурнадәр", "buurnadər")} “wool cloth” ← #{t("буурн", "buurn")} “wool”
+        %li #{t("иаидәр", "iaidər")} “leather” ← #{t("иаи", "iai")} “deer”
+        %li #{t("ладдәр", "laddər")} “beaver pelt” ← #{t("лат", "lat")} “beaver”
+
+    = section "*-(h)iil ‘role’" do
+      %p The pseudosuffix <i>-iil</i> (or <i>-hiil</i> after vowels) creates abstract nouns describing occupations, stages in life, and other similar roles that a person can have throughout his or her life. It is similar to the English suffixes -hood, -dom, and -ship, or the Slavic suffixes -stvo/-stvi, and is related to the word #{t "һил", "hil"} “life” (originally “breath”). If the modifier ends in /l/, it may undergo dissimilation to /r/.
+      %ul
+        %li #{t("пачиил", "pačiil")} “childhood” ← #{t("пач", "pač")} “child”
+        %li #{t("қаниил", "qaniil")} “kingdom” ← #{t("қан", "qan")} “king”
+        %li #{t("студентиил", "studentiil")} “studenthood” ← #{t("студент", "student")} “student”
+        %li #{t("мемеһиил", "memehiil")} “motherhood” ← #{t("меме", "meme")} “mother”
+        %li #{t("иууриил", "iuuriil")} “friendship” ← #{t("иуул", "iuul")} “friend”
+
+    = section "*-kt ‘end, rest’" do
+      %p The pseudosuffix <i>-kt</i> (or <i>-əkt</i> after consonants) broadly indicates the remainder of something already partially quantified. It derives from #{t "қут", "qut"} “end”.
+      %ul
+        %li #{t("ваанакт", "waanakt")} “rest of the way” ← #{t("ваан", "waan")} “way, path”
+        %li #{t("филмәкт", "filməkt")} “rest of the film” ← #{t("филм", "film")} “film”
+        %li #{t("дект", "dekt")} “rest of the people” ← #{t("де", "de")} “people, nation”
+
+    = section "*-lab/*-leb/*-lb ‘partitive-diminutive’" do
+      %p The pseudo-suffixes <i>-lab</i>/<i>-leb</i> serve as a partitive, especially common with food and drink terms (though not limited to them). It is often used as a diminutive with no partitive sense as well, but only with inanimate nouns. The reduced forms <i>-lb</i> (after vowels) and <i>-əlb</i> (after consonants) exist in free variation. It is related to the word #{t "лап", "lap"} “piece”.
+      %ul
+        %li
+          #{t "иеллеб", "ielleb"}, #{t "иенәлб", "ienəlb"} “piece of bread”
+          %br
+          ← #{t "иен", "ien"} “bread”
+        %li
+          #{t "коллаб", "kollab"}, #{t "кворәлб", "kworəlb"} “some water”
+          %br
+          ← #{t "квор", "kwor"} “water”
+        %li
+          #{t "каллаб", "kallab"} “little cup” (**<i>karəlb</i> not used)
+          %br
+          ← #{t "кар", "kar"} “cup”
+        %li
+          #{t "һолмалаб", "holmalab"}, #{t "һолмалб", "holmalb"} “little apple, piece of apple”
+          %br
+          ← #{t "һолма", "holma"} “apple”
+      %p This pseudo-suffix can be doubled up as <i>-labəlb</i> or <i>-lebəlb</i> (or even the more curious blended forms <i>-lalb</i> and <i>-lelb</i>) to combine the partitive and diminutive senses.
+      %ul
+        %li #{t "иеллебәлб", "iellebəlb"} “little piece of bread”
+        %li #{t "иеллелб", "iellelb"} “little piece of bread”
+
+    = section "*-ləm ‘singulative of flat objects’" do
+      %p The pseudo-suffix <i>-ləm</i> creates singulative forms from mass nouns referring to flat objects; or, alternatively, flat count nouns from mass nouns of indeterminate shape. It is related to the word #{t "лием", "liem"} “table”, originally meaning something like “board”.
+      %ul
+        %li #{t("һокләм", "hokləm")} “wood plank” ← #{t("һок", "hok")} “wood”
+        %li #{t("һиилм", "hiilm")} “sheet of paper” ← #{t("һии", "hii")} “paper”
+        %li #{t("чеелм", "čeelm")} “tile” ← #{t("чее", "čee")} “stone”
+        %li #{t("һажләм", "hažləm")} “shingle” ← #{t("һаж", "haž")} “roof”
+        %li #{t("вокнолм", "woknolm")} “pane” ← #{t("вокно", "wokno")} “glass [panel]”
+        %li #{t("кеилләм", "keilləm")} “piece of birch bark” ← #{t("кеин", "kein")} “birch bark”
+
+    = section "*-nəs ‘singulative of small objects’" do
+      %p The pseudo-suffix <i>-nəs</i> creates singulatives of small or round things. One of the most common usages is with grains and berries. It is related to #{t "нас", "nas"} “eye”.
+      %ul
+        %li #{t("квоорнәс", "kwoornəs")} “raindrop” ← #{t("квор", "kwor")} “rain”
+        %li #{t("шыындәнц", "šyyndənts")} “wheat grain” ← #{t("шыынд", "šyynd")} “wheat”
+        %li #{t("клоонц", "kloonts")} “bead, marble” ← #{t("клоо", "kloo")} “glass”
+        %li #{t("чеенц", "čeents")} “pebble, gravel” ← #{t("чее", "čee")} “stone”
+        %li #{t("боршанц", "boršants")} “pea” ← #{t("борш", "borš")} “peas”
+      %p Its usage has been extended to other types of singulatives as well, particularly when the mass noun refers to an extremely large number of the singulative noun:
+      %ul
+        %li #{t("шкааннәс", "škaannəs")} “[single] hair” ← #{t("шкаан", "škaan")} “hair”
+        %li #{t("һоҕнәс", "hoǧnəs")} “blade of grass” ← #{t("һоҕ", "hoǧ")} “grass”
+        %li #{t("һоҥнәс", "hoŋnəs")} “splinter” ← #{t("һок", "hok")} “wood”
+        %li #{t("ношнәс", "nošnəs")} “ember” ← #{t("нош", "noš")} “fire”
+
+    = section "*-pəs ‘quality’" do
+      %p The pseudo-suffix <i>-pəs</i> creates abstract nouns denoting qualities, similarly to <i>-ča</i>/<i>-če</i>. The distinction between these two is often not entirely clear; however, <i>-pəs</i> may never be used in a physical sense, and so often indicates a general concept while <i>-ča</i>/<i>-če</i> implies a more specific instance: #{t "ваҥқаумпәс", "waŋqaumpəs"} “courage (in general)” vs #{t "ваҥқаунча", "waŋqaunča"} “(an act of) courage”. It is derived from #{t "пас", "pas"} “manner, quality”, originally “life”.
+      %ul
+        %li #{t("иампәс", "iampəs")} “sharpness, acuity” ← #{t("иан", "ian")} “sharp”
+        %li #{t("пацпәс", "patspəs")} “darkness, ignorance” ← #{t("пац", "pats")} “dark”
+        %li #{t("ворпәс", "worpəs")} “equality” ← #{t("вор", "wor")} “equal”
+        %li #{t("һааспәс", "haaspəs")} “health” ← #{t("һаас", "haas")} “healthy”
+        %li #{t("номпәс", "nompəs")} “death” ← #{t("нон", "non")} “dead”
+
+    = section "*-(h)ur/*-(h)ür ‘container’" do
+      %p The harmonizing pseudo-suffix <i>-ur</i>/<i>-ür</i> (or <i>-hur</i>/<i>-hür</i> after vowels) marks containers, albeit in a very loose sense. In addition to typical containers such as boxes and jars, it appears in various natural containers such as birds’ nests and animal dens, as well as to any sort of cover, such as different types of clothing. It is cognate to #{t "һоор", "hoor"} “nest (of birds, wasps, squirrels, etc)”, though it has long since lost its association.
+      %ul
+        %li #{t("соколатур", "sokolatur")} “chocolate box” ← #{t("соколат", "sokolat")} “chocolate”
+        %li #{t("данур", "danur")} “milk bottle” ← #{t("дан", "dan")} “milk”
+        %li #{t("доиһур", "doihur")} “bird nest” ← #{t("дои", "doi")} “songbird”
+        %li #{t("лаупсур", "laupsur")} “fox hole” ← #{t("лаупс", "laups")} “fox”
+        %li #{t("һуусур", "huusur")} “bladder” ← #{t("һуус", "huus")} “urine”
+        %li #{t("квоиһур", "kwoihur")} “sock” ← #{t("квои", "kwoi")} “foot”
+        %li #{t("леуһүр", "leuhür")} “grave” ← #{t("леу", "leu")} “earth”
+        %li #{t("шикүр", "šikür")} “bed blanket” ← #{t("шик", "šik")} “bed”
+
+    = section "*-wok ‘material’" do
+      %p The suffix <i>-wok</i> marks materials for making something. When used with nouns denoting humans, it typically indicates a potential or future filler of that role. Note that it always requires the modifying noun to be pluralized, unusual for pseudocompounds. It is related to #{t "һок", "hok"} “wood”.
+      %ul
+        %li
+          #{t "ҕвууннок", "ǧwuunnok"} “material for building a house”
+          %br
+          ← #{t "ҕвуун", "ǧwuun"} ← #{t "ҕвуу", "ǧwuu"} “house”
+        %li
+          #{t "шееннок", "šeennok"} “rations”
+          %br
+          ← #{t "шеен", "šeen"} ← #{t "шишееҥ", "šišeeŋ"} “eat”<sup>1</sup>
+        %li
+          #{t "ношәннок", "nošənnok"} “kindling”
+          %br
+          ← #{t "ношән", "nošən"} ← #{t "нош", "noš"} “fire”
+        %li
+          #{t "квоимоҥгок", "kwoimoŋgok"} “fiancée”
+          %br
+          ← #{t "квоимоҥ", "kwoimoŋ"} ← #{t "квоим", "kwoim"} “wife”
+        %li
+          #{t "президентәҥгок", "prezidentəŋgok"} “presidential candidate”
+          %br
+          ← #{t "президентәҥ", "prezidentəŋ"} ← #{t "президент", "prezident"} “president”
+      %p It may also be used with singular modifiers to represent objects made out of wood; this is much closer to the original meaning of the compound:
+      %ul
+        %li #{t("ношшок", "noššok")} “torch” ← #{t("нош", "noš")} “fire”
+        %li #{t("бассок", "bassok")} “threshold” ← #{t("сыбасәҥ", "sybasəŋ")} “take a step”
+        %li #{t("шеевок", "šeewok")} “fork” ← #{t("шишееҥ", "šišeeŋ")} “eat”
+
+    = section "Pluralization of Pseudo-Compounds" do
+      %p It is pluralization that ultimately distinguishes pseudo-affixes from true affixes. Pseudo-compounds, much like regular compounds, can be pluralized in two different ways: either the second (head) element is pluralized according to normal noun pluralization rules, or both the head and modifier are pluralized. Therefore a noun such as #{t "торгаст", "torgast"} “marketplace” can be pluralized either as #{t "торгастун", "torgastun"} or as #{t "торгонастун", "torgonastun"}. If <i>-(h)ast</i> were a true suffix, this second form would not be allowed.
+
+  = section "Prefixes" do
+    %p Očets only has three true nominal prefixes. This is surprising given how prefix-heavy the oldest layers of the language's morphology appear to be, suggesting that either Proto-Ob-Yeniseian had very little as far as nominal morphology was concerned, or else whatever was once there has been so thoroughly ravaged by time that most of it is no longer detectable.
+    %p One prefix, which was previously mentioned, is the prenominal affix <i>ho-/hö-</i>, which forms collectives and associative plurals. Examples of its usage may be found in section 4.6. There is, however, one usage of the collective prefix not yet mentioned: the so-called “associative dual”, which is used to convert a kinship term into a dual referring both to the person in question plus someone closely associated with them, but in a lower social position. Whereas normal collectives are grammatically singular nouns with the structure <span class="pattern">collective + article + stem + indirective marker</span>, associative duals are grammatically plural, and include the dual marker -ǧiin-/-ǧyyn- (or, in two cases, the plural marker -ŋ-):
+    %ul
+      %li #{t("һотобҕыына", "hotobǧyyna")} “father and son” ← #{t("-об-", "-ob-")} “father (possessive stem)”
+      %li #{t("һотамҕиине", "hotamǧiine")} “mother and child” ← #{t("-ам-", "-am-")} “mother (possessive stem)”
+      %li #{t("һотхааҕҕыына", "hotxaaǧǧyyna")} “husband and wife” ← #{t("хаак", "xaak")} “man”
+      %li #{t("һөнмемеиҥе", "hönmemeiŋe")} “mother and children” ← #{t("меме", "meme")} “mother” (with plural suffix)
+      %li #{t("һотобаҥа", "hotobaŋa")} “family” (originally “tribe”) ← #{t("-об-", "-ob-")} “father (possessive stem)” (with plural suffix)
+    %p There is also the agentive prefix <i>ai-</i>, which always forms descriptions of people or occupations. It may be added to either verbal or nominal stems.
+    %ul
+      %li #{t("һаивы", "haiwy")} “prophet” ← #{t("шавыҥ", "šawyŋ")} “to say”
+      %li #{t("һаинал", "hainal")} “traditional healer” ← #{t("сыналаҥ", "synalaŋ")} “to heal”
+      %li #{t("һаилоод", "hailood")} “herdsman” ← #{t("лоод", "lood")} “herd”
+      %li #{t("һаичен", "haičen")} “merchant” ← #{t("чен", "čen")} “silver”
+      %li #{t("һаичи", "haiči")} “guest” ← ?
+    %p The prefix <i>mi-/my-</i> (before consonants) or <i>n-</i> (before vowels) has a diminutive/affective function.
+    %ul
+      %li #{t("мыдои", "mydoi")} “little bird” ← #{t("дои", "doi")} “songbird”
+      %li #{t("мыквоса", "mykwosa")} “kitty” ← #{t("коса", "kosa")} “cat”
+      %li #{t("наичи", "naiči")} “guest (affective)” ← #{t("һаичи", "haiči")} “guest”
+
+  = section "Suffixes" do
+    %p There are no true suffixes used to form nouns from other nouns.
+
+  = section "Deadjectival" do
+    %p Adjectives can only be converted into nouns by two methods: pseudo-suffixation (as previously described) and zero-derivation. The latter means that any adjective may be turned into a noun (meaning “one that is X”) simply by using it as a noun.
+    %table
+      %tr
+        %th Očets
+        %th Adjectival Meaning
+        %th Nominal Meaning
+      %tr
+        %td= t("ҕоом", "ǧoom")
+        %td “black”
+        %td “black one”
+      %tr
+        %td= t("зас", "zas")
+        %td “stupid”
+        %td “stupid one, fool”
+      %tr
+        %td= t("пиир", "piir")
+        %td “first”
+        %td “first one”
+      %tr
+        %td= t("бих", "bix")
+        %td “other”
+        %td “other one, another”
+      %tr
+        %td= t("нон", "non")
+        %td “dead”
+        %td “one who is dead”
+
+  = section "Deverbal" do
+    %p Očets has a number of common deverbal derivational suffixes.
+    %p The suffix -s (clearly related to the participial suffix) serves as an agentive (much like English -er) when animate and as a resultative when inanimate. In practice usually one or the other meaning predominates; relatively few nouns maintain this animacy dichotomy.
+    %ul
+      %li #{t("налс", "nals")} “doctor” ← #{t("сыналаҥ", "synalaŋ")} “heal”
+      %li #{t("лүбиц", "lübits")} “lover, boyfriend/girlfriend” ← #{t("шилүбитиҥ", "šilübitiŋ")} “word”
+      %li #{t("һеинц", "heints")} “guard, sentinel” ← #{t("фиһеин", "fihein")} “stand”
+      %li #{t("выс", "wys")} “word” ← #{t("шавыҥ", "šawyŋ")} “say, tell”
+      %li #{t("сыыс", "syys")} “increase” ← #{t("стасыыҥ", "stasyyŋ")} “increase”
+      %li #{t("тукс", "tuks")} “knock” ← #{t("вытук", "wytuk")} “knock”
+    %p The suffix -t, on the other hand, is purely resultative. The original distribution of -t and inanimate -s is unclear, but -t is becoming increasingly common for resultative derivation.
+    %ul
+      %li #{t("шеет", "šeet")} “meal” ← #{t("шееҥ", "šeeŋ")} “eat”
+      %li #{t("һусыҥ", "husyŋ")} “sleep” ← #{t("һусыт", "husyt")} “sleep”
+      %li #{t("һүлчет", "hülčet")} “measurement” ← #{t("сүлчеҥ", "sülčeŋ")} “measure”
+      %li #{t("чоҥәт", "čoŋət")} “hunt, catch” ← #{t("кычоҥ", "kyčoŋ")} “hunt”
+    %p The suffix -l forms instrumentals and tools.
+    %ul
+      %li #{t("ванәл", "wanəl")} “net” ← #{t("сыван", "sywan")} “catch fish”
+      %li #{t("куучал", "kuučal")} “pencil” ← #{t("сыкуучаҥ", "sykuučaŋ")} “write”
+      %li #{t("һаутәл", "hautəl")} “hammer, mallet” ← #{t("тыһаутәҥ", "tyhautəŋ")} “hammer, pound”
+      %li #{t("һечел", "hečel")} “pitcher” ← #{t("сечеҥ", "sečeŋ")} “pour”
+    %p The infinitive itself may also be used as a gerund, a reference to the performance of an action itself:
+    %ul
+      %li #{t("шавыҥ", "šawyŋ")} “speech, saying, telling” ← #{t("шавыҥ", "šawyŋ")} “say, tell”
+      %li #{t("шилеҥ", "šileŋ")} “singing” ← #{t("шилеҥ", "šileŋ")} “sing”
+      %li #{t("шииҥ", "šiiŋ")} “asking, interview” ← #{t("шииҥ", "šiiŋ")} “ask, question”
+      %li #{t("састаҥ", "sastaŋ")} “teaching” ← #{t("састаҥ", "sastaŋ")} “teach”
+
+  = section "Dequantifier" do
+    %p Most natural quantifiers can be converted into nominals without the use of an overt affix simply by declining the stem with nominal endings (either animate or inanimate, as appropriate). Any vowel changes that occur in the quantifier are lost, with the root of the nominative case form generalized throughout the paradigm.
+    %table
+      %tr
+        %th Quantifier<br>(Nom. Sg.)
+        %th Quantifier<br>(Obj. Sg.)
+        %th Quantifier<br>Meaning
+        %th Nominal<br>(Nom. Sg. Anim.)
+        %th Nominal<br>(Obj. Sg. Anim.)
+        %th Nominal<br>Meaning
+      %tr
+        %td= t("кан", "kan")
+        %td= t("чени", "čeni")
+        %td many
+        %td= t("кан", "kan")
+        %td= t("кане", "kane")
+        %td many [people]
+      %tr
+        %td= t("һас", "has")
+        %td= t("һеси", "hesi")
+        %td all
+        %td= t("һас", "has")
+        %td= t("һасе", "hase")
+        %td everyone
+      %tr
+        %td= t("вен", "wen")
+        %td= t("вени", "weni")
+        %td none, no
+        %td= t("вен", "wen")
+        %td= t("вене", "wene")
+        %td nobody
+    %p The nominal forms of numerals, however, are not always formed this way, but as discussed in section 5.7.3. The quantifier numerals #{t "қуус", "quus"} “one” and #{t "кын", "kyn"} “two” become #{t "һеден", "heden"} and #{t "ҕыын", "ǧyyn"}, respectively.
+
+  = section "Other Formants" do
+    %p Očets has a number of what appear to be non-productive formants whose original functions are no longer clear; the only way we know that they may once have been formants is that they appear on a large number of nouns with similar semantics, or at least more than can be ascribed to coincidence. One example is *-m, which appears in many different terms for insects, only a handful of which can be clearly linked to other nouns or verbs still in use in modern Očets.
+    %p Although not fully predictable, Očets does seem to have a semi-productive system of vowel symbolism in onomatopoeic terms, where movement towards the vowel /i/ indicates smallness and movement away largeness. For example, the noun #{t "тукс", "tuks"} “knock, pound” can become #{t "тыкс", "tyks"} “soft knock”, while #{t "плис", "plis"} “small splash” can become #{t "плес", "ples"} “large splash”. There is a tendency to keep the vowel harmony of the original word.
+
+= section "Formation of Quantifiers" do
+  %p Quantifiers can generally be formed from nouns by zero-derivation, simply by declining the nominal stem using quantifier endings. These sorts of quantifiers rarely undergo the vowel mutations that true historical quantifiers do. Examples of such quantifiers were previously given in sections 5.2 and 5.6.
+
+= section "Formation of Adjectives" do
+  %p The single most productive means of forming adjectives from nouns is zero-derivation; for all intents and purposes Očets makes no distinction between <span class="pattern">adjective + noun</span> and <span class="pattern">noun + noun</span>. As a result words like #{t "чиб", "čib"} mean both “dog” and “pertaining to dogs, canine”, #{t "нош", "noš"} both “fire” and “pertaining to fire, fiery”, #{t "чен", "čen"} both “silver” and “made of silver”, and so on.
+  %p Aside from this, however, there are a number of true derivational suffixes used to form adjectives.
+  %p The suffix -u/-ü (or -tu/-tü after vowels) forms possessive-type adjectives from nouns, i.e., adjectives meaning “possessing X”. This is used with both concrete and abstract nouns.
+  %ul
+    %li #{t("күлү", "külü")} “bearded” ← #{t("күл", "kül")} “beard”
+    %li #{t("һилетү", "hiletü")} “vital, energetic” ← #{t("һил", "hil")} “life”
+    %li #{t("коsыту", "kodzytu")} “valuable, expensive” ← #{t("квоs", "kwodz")} “value”
+    %li #{t("ваху", "waxu")} “strong” ← #{t("вах", "wax")} “strength”
+    %li #{t("каату", "kaatu")} “mountainous, rugged [terrain]” ← #{t("каа", "kaa")} “wooded mountain”
+  %p The suffix -n, an abessive, serves the opposite function: marking the absence of something. The addition of -n often results in the deletion in stem-final dental consonants. The abessive suffix may sometimes be accompanied by the negative prefix wan-/wen- for added emphasis.
+  %ul
+    %li #{t("ваҥқаун", "waŋqaun")} “fearless” ← #{t("қаун", "qaun")} “fear”
+    %li #{t("ваннан", "wannan")} “blind” ← #{t("нас", "nas")} “eye”
+    %li #{t("вамбабан", "wambaban")} “orphaned” ← #{t("баба", "baba")} “father”
+    %li #{t("ноҥун", "noŋun")} “stubborn” ← #{t("ноҥ", "noŋ")} “mind”
+  %p The suffix -li/-ly is added to verbal stems to say that the action designated by the verb is characteristic of whatever the adjective modifies.
+  %ul
+    %li #{t("фолсәлы", "folsəly")} “helpful” ← #{t("сафолсәҥ", "safolsəŋ")} “help”
+    %li #{t("қоилы", "qoily")} “capricious” ← #{t("нақоиҥ", "naqoiŋ")} “want”
+    %li #{t("торгәлы", "torgəly")} “cunning” ← #{t("саторг", "satorg")} “trade”
+    %li #{t("шазҕалы", "šazǧaly")} “talkative” ← #{t("шазҕаҥ", "šazǧaŋ")} “talk”
+    %li #{t("һаклы", "hakly")} “generous, giving” ← #{t("сак", "sak")} “give”
+    %li #{t("һилели", "hileli")} “who enjoys singing” ← #{t("шилеҥ", "šileŋ")} “sing”
+  %p The formant -am/-em/-m forms adjectives describing abstract notions (particularly those related to the five senses) from concrete nouns. In other words, it forms adjectives describing appearances, sounds, tastes, textures, smells, and the like.
+  %ul
+    %li #{t("ченем", "čenem")} “silver-colored” ← #{t("чен", "čen")} “silver”
+    %li #{t("һаинам", "hainam")} “egg-like [taste, color, texture, smell]” ← #{t("һаин", "hain")} “egg”
+    %li #{t("вином", "winom")} “wine-like [taste, color, smell]” ← #{t("вино", "wino")} “wine”
+    %li #{t("месем", "mesem")} “sweet [taste]” ← #{t("мес", "mes")} “honey”
+
+= section "Formation of Adverbs" do
+  %p Očets has a very rich system of adverbs, many of which are unanalyzable or phrasal in origin. The formation, structure, and organization of this fixed set of adverbs will be discussed more extensively later in this grammar, when discussing the usage of adverbs.
+  %p To derive simple adverbs from nouns and adjectives, however, the most common method is simply to use normal inanimate case endings. In particular, the locative case is most commonly used to form adverbs of time, and the translative case for adverbs of manner.
+  %ul
+    %li #{t("несил", "nesil")} “in the evening” ← #{t("нес", "nes")} “evening”
+    %li #{t("сииџенил", "siiǰenil")} “every spring” ← #{t("сииџен", "siiǰ")} “spring”
+  %ul
+    %li #{t("ҕырәҥ", "ǧyrəŋ")} “quickly” ← #{t("ҕыр", "ǧyr")} “quick, fast”
+    %li #{t("саҕәҥ", "saǧəŋ")} “poorly” ← #{t("саҕ", "saǧ")} “bad”
+    %li #{t("ноҥуҥ", "noŋuŋ")} “cleverly” ← #{t("ноҥу", "noŋu")} “clever”
+
+= section "Formation of Verbs" do
+  = section "Verbal Formants" do
+    %p As elsewhere in the language, the single most common means of creating new verbs in Očets is through zero-derivation: simply inserting a root from another part of speech into the appropriate verbal paradigm, with most stative verbs going into Conjugation V, ditransitive verbs into Conjugation II, and most other verbs into Conjugation I. Quite a few verbs can be traced to other parts of speech this way:
+    %ul
+      %li #{t("шилеҥ", "šileŋ")} “to sing” ← #{t("һил", "hil")} “song”
+      %li #{t("стазлуҥ", "stazluŋ")} “to bleed” ← #{t("зал", "zal")} “blood”
+      %li #{t("саһаасост", "sahaasost")} “to be healthy” ← #{t("һаас", "haas")} “healthy”
+    %p Nouns may also be incorporated into an already-existing verb, always with an indefinite sense. Verb roots can also be incorporated into other verb roots.
+    %ul
+      %li #{t("саинан", "sainan")} “to have tea” ← #{t("саи", "sai")} “tea” + #{t("кынан", "kynan")} “to drink”
+      %li #{t("вытквосаҥ", "wytkwosaŋ")} “to fry” ← #{t("выд", "wyd")} “butter, oil” + #{t("сыквосаҥ", "sykwosaŋ")} “to warm up”
+      %li #{t("һаинүүшиҥ", "hainüüšiŋ")} “to catch sight of” ← #{t("наин", "nain")} “to see” + #{t("сүүшиҥ", "süüšiŋ")} “to hold”
+    %p A verb root may be reduplicated in whole to express some sort of totality of action:
+    %ul
+      %li #{t("фыдодоҥ", "fydodoŋ")} “cut to pieces” ← #{t("фыдоҥ", "fydoŋ")} “cut”
+      %li #{t("шишеешееҥ", "šišeešeeŋ")} “eat up” ← #{t("шишееҥ", "šišeeŋ")} “eat”
+      %li #{t("стачочоҥ", "stačočoŋ")} “perish [violently]” ← #{t("стачоҥ", "stačoŋ")} “die”
+    %p Partial reduplication is used to create a more emphatic sense. This is usually achieved by copying the first consonant and vowel of the root and lengthening the duplicated vowel or, if the root begins with a vowel, by copying that vowel, lengthening it, and inserting an /h/ to prevent hiatus.
+    %ul
+      %li #{t("сыһууһуун", "syhuuhuun")} “bawl” ← #{t("сыһуун", "syhuun")} “cry”
+      %li #{t("дулаалак", "dulaalak")} “laugh uncontrollably” ← #{t("дулак", "dulak")} “laugh”
+      %li #{t("вытуутук", "wytuutuk")} “knock loudly” ← #{t("вытук", "wytuk")} “knock”
+      %li #{t("саһууһустауност", "sahuuhustaunost")} “be very tired” ← #{t("саһустауност", "sahustaunost")} “be tired”
+
+  = section "Derivation through Determiners" do
+    %p Determiners are an extremely widespread mechanic to derive new verbs from already-existing ones. Not all determiners have a derivational function; many times their appearance is more or less automatic, dictated by the semantics of the verb in question. For instance, the 'mental state' determiner *š- tends to automatically attach itself to any verbs describing perception, and the 'instrument' determiner *l- often just appears whenever an instrument is referenced in the same clause.
+    %p However, determiners can be used to actually derive new verbs with clear semantics. An example is the root *do 'cut', which as can be seen below has a large number of variants with different determiners:
+    %ul
+      %li #{t("дыдоҥ", "dydoŋ")} “cut a long object” (D-type determiner = long shape)
+      %li #{t("фыдоҥ", "fydoŋ")} “cut, slice” (F-type determiner = flat surface)
+      %li #{t("кыдоҥ", "kydoŋ")} “attack with a knife or sword” (K-type determiner = adessive, motivated action)
+      %li #{t("лыдоҥ", "lydoŋ")} “cut [with something]” (L-type determiner = instrumental)
+      %li #{t("ныдоҥ", "nydoŋ")} “trim, cut around the edges of” (N-type determiner = around)
+      %li #{t("птадоҥ", "ptadoŋ")} “be separated, come to be separated, be distinct” (P-type determiner = ablative or natural changes + switch to Conjugation Ic)
+      %li #{t("тыдоҥ", "tydoŋ")} “shave off, peel” (T-type determiner = superessive)
+      %li #{t("выдоҥ", "wydoŋ")} “chop, slice with large sweeping strokes, harvest grain [as with a sickle]” (W-type determiner = loud sounds)
+    %p In particular the Q-type determiner has widespread usage as a causative marker, making intransitive verbs transitive (switch to Conjugation Ib) and transitive verbs ditransitive (switch to Conjugation II):
+    %p The use of the various determiners will be described in greater detail later in this grammar, due to their many grammatical functions as well as lexical ones.
+
+  = section "Loan Verbs" do
+    %p While for centuries Očets had no problems incorporating loan verbs as new verb roots with full access to all Očets verbal morphology, this is no longer the case with the many new verbs entering the language from Slavic sources, primarily Russian and Novegradian. Instead, a new periphrastic construction has become quite prevalent.
+    %p Novegradian active-voice verbs are borrowed in their infinitive form, except the usual Novegradian/Russian infinitive endings -ти/-ть are replaced with the similar-sounding #{t "-те", "-te"} which, conveniently, happens to look like the objective case of an inanimate noun.
+    %p If the original verb was intransitive, it is then used in conjunction with the Conjugation Ib verb #{t "сывауҥ", "sywauŋ"} “to do”, which always takes a third person inanimate direct object (i.e., the infinitive): #{t "гласовате вешшау(ш)", "glasovate weššau(š)"} “I am voting” (lit. “I am doing a [to vote]” or “I am doing a voting”).
+    %p If the original verb was transitive, it is put in the instrumental case (i.e., -s is added) and used with the Conjugation II verb #{t "савауҥ", "sawauŋ"}, which is ditransitive; the original object of the loaned verb then takes the objective case and becomes the indirect object of савауҥ: #{t "ҕуус строитес һашшау(ш)", "ǧuus stroites haššau(š)"} “I am building a house” (lit. “I am doing a building to a house”).
+    %p Novegradian middle-voice verbs can also be borrowed. The middle-voice infinitive ending -тиш becomes Očets #{t "-тис", "-tis"}, with the final -s also interpreted as an inanimate objective case ending. Since these verbs are always intransitive, the same technique is used as intransitive active-voice verbs: #{t "бритис вешшау(ш)", "britis weššau(š)"} “I am shaving” (lit. “I am doing a shaving”).
+    %p These two support verbs in periphrastic loan constructions, сывауҥ and савауҥ, are not used elsewhere in the language, although they are clearly related to #{t "лывауҥ", "lywauŋ"} “make, create”.
+
+%p &nbsp;
+
+%hr.footnote
+
+%p 1) The word шеен itself is meaningless. It is simply a “pluralized” form of the root of the verb “to eat”.
+
+%p &nbsp;
+%p &nbsp;
+
+= render :partial => 'navigation'
