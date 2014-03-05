@@ -12,7 +12,6 @@ module ApplicationHelper
   alias_method :t, :transliterate
 
   def section(title, &block)
-    @chapter = @current_page[:index]
     case @section_context
       when :chapter
         @section_context = :section
@@ -49,6 +48,15 @@ module ApplicationHelper
           yield
         end
         @section_context = :subsubsection
+      else
+        @section_context = :chapter
+        @chapter += 1
+        html = capture_haml do
+          haml_tag :h2, "#{@chapter}. #{title}"
+          yield
+        end
+        @section = @subsection = @subsubsection = @subsubsubsection = 0
+        @section_context = nil
     end
     return html.html_safe
   end
