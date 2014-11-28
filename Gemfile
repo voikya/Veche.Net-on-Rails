@@ -19,12 +19,7 @@ gem 'jquery-rails'
 # Templating
 gem 'haml'
 
-# Environment
-gem 'jazz_hands'
-
 group :development do
-  gem 'bullet'
   gem 'better_errors'
   gem 'capistrano'
-  gem 'debugger'
 end
