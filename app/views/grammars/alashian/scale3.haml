@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Αθθωλιτεί: <i>ακτήβ</i> υε<i>εννυκτώβ</i>".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αμμίθκαλ Αθθωλιτεί: <i>ακτήβ</i> υε<i>εννυκτώβ</i>".html_safe
 
 = section "Introduction to 'aktēb Verbs" do
   %p <i>'Aktēb</i> (Active Scale III) is commonly known as the “causative” stem. Its most common function, not surprisingly, is causative, and it typically converts transitive <i>katab</i> verbs into ditransitive ones: #{t "ακτήβ", "'aktēb"} “dictate [something to someone]” (lit. 'cause to write'), #{t "αηακήλ", "'ahakēl"} “feed [something to someone]” (lit. 'cause to eat'). It can have a causative meaning on verbs whose base form is intransitive, but this is less common: #{t "ασκήβ", "'askēb"} “lay down” (lit. 'cause to lie down'). For some verbs, it may also have a factitive meaning (“to have something done by somone”), as in #{t "ου αμήτετ", "'ū 'amētet"} “I had him killed” (from *mūt “die”), or an assistive meaning, as in #{t "ασλήτ", "'aslēt"} “help someone win” (from *slāth “win, prevail over”).
@@ -383,15 +381,8 @@
                 :participle  => "munnaǧrək" }
     = render 'full_conjugation_table', :title => "Scale III Conjugation", :verb => { :ala => "'ennuǧrāk", :eng => "be immersed" }, :alashian => alashian, :latin => latin
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This -ū- is the reflex of an historical Semitic *ā stative marker, seen in some other Semitic languages but largely lost in Alashian.
 %p 2) The semantic progression from 'cause to ask' to 'lend' is not entirely clear. There was presumably an intermediate stage something along the lines of “offer”.
 %p 3) The semantic connection between between the <i>katab</i> meaning “gather” and the <i>'aktēb</i> meaning “insert” is not clear, yet this pair is seen in several Semitic languages. The semantic divergence is either very old, or else these two forms represent entirely unrelated roots that happened to merge phonetically in Semitic.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

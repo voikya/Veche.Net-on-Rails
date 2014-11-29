@@ -68,5 +68,15 @@ module Grammars
     def template(string)
       string.gsub(/(\d|x)/, '<sub>\1</sub>').html_safe
     end
+
+    def nav_entry(title, ref, current)
+      capture_haml do
+        if current == ref
+          haml_tag "li.current", title.html_safe
+        else
+          haml_tag :li, link_to(title.html_safe, alashian_grammar_page_path(ref))
+        end
+      end
+    end
   end
 end

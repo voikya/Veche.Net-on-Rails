@@ -1,0 +1,45 @@
+.global-controls
+  - if @previous_page
+    = link_to icon('arrow-left'), alashian_grammar_page_path(@previous_page[:doc].to_sym), :class => 'back'
+  - else
+    %span.back.disabled= icon('arrow-left')
+  = link_to icon('arrow-up'), alashian_index_path, :class => 'up'
+  = link_to icon('home'), root_path, :class => 'home'
+  - if @next_page
+    = link_to icon('arrow-right'), alashian_grammar_page_path(@next_page[:doc].to_sym), :class => 'forward'
+  - else
+    %span.forward.disabled= icon('arrow-right')
+
+.nav-title Alashian Grammar
+%ul.index
+  - current = @current_page ? @current_page[:doc].to_sym : nil
+  = nav_entry "Foreword", :foreword, current
+  = nav_entry "Abbreviations", :abbreviations, current
+  = nav_entry "Background", :background, current
+  = nav_entry "Phonology", :phonology, current
+  = nav_entry "Writing", :writing, current
+  = nav_entry "Introduction to the Verbal System", :verbintro, current
+  = nav_entry "Verb Scale I: <i>katab</i> and <i>nuktāb</i>", :scale1, current
+  = nav_entry "Verb Scale II: <i>kəthēb</i> and <i>kəthāb</i>", :scale2, current
+  = nav_entry "Verb Scale III: <i>'aktēb</i> and <i>'ennuktāb</i>", :scale3, current
+  = nav_entry "Verb Scale IV: <i>taktēb</i>", :scale4, current
+  = nav_entry "Verb Scale V: <i>nitkatab</i>", :scale5, current
+  = nav_entry "Verb Scale VI: <i>staktab</i> and <i>nistuktāb</i>", :scale6, current
+  = nav_entry "Other Verbal Forms", :otherverbal, current
+  = nav_entry "Comparative Verb Tables and Common Irregular Roots", :irregular, current
+  = nav_entry "European Loan Verbs", :european, current
+  = nav_entry "The Nominal System", :nouns, current
+  = nav_entry "Adjectives", :adjectives, current
+  = nav_entry "Pronouns", :pronouns, current
+  = nav_entry "Prepositions", :prepositions, current
+  = nav_entry "Derivation", :derivation, current
+  = nav_entry "Verb Phrases", :verbphrases, current
+  = nav_entry "Noun Phrases", :nounphrases, current
+  = nav_entry "Clauses", :clauses, current
+  = nav_entry "Spoken Alashian", :spoken, current
+  = nav_entry "Historical Phonology and Morphology", :history, current
+  = nav_entry "Appendices", :appendix, current
+
+.nav-title Alashian Lexicon
+%ul.resources
+  %li= link_to "Lexicon", lexicon_path(:language => :alashian)

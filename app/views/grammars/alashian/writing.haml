@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Κατούβ"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Κατούβ"
 
 = section "History of Written Alashian" do
   %p Throughout its attested history, Alashian has been written in quite a few different scripts.
@@ -249,8 +247,3 @@
   = section "Miscellaneous Irregularities" do
     %p The Alashian definite article is marked with a prefix which can take various forms. One of the most common ones is <i>ha-</i>. However, here and here only, the /h/ is never indicated, and the prefix is spelled α-. Initial /h/ elsewhere in Alashian is always explicitly marked with η.
     %p Another common clitic prefix is the conjunction “and”, <i>ve-</i> (as well as several other variants). It is always spelled with as υε-, with the letter for /w/, never as в̄ε-.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

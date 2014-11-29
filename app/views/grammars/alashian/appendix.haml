@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πάραρτιμ".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Πάραρτιμ".html_safe
 
 = section "Semitic vs Non-Semitic Forms" do
   %p The prevalence of words of Greek/European origin and words of native Semitic origin depends heavily on the register and context. Semitic vocabulary tends to dominate most informal spoken registers and is widely heard in most day-to-day speech. Vocabulary of Turkish origin fills a similar niche. Greek and 'international' vocabulary, however, is more typical of a higher register; the use of Greek words where native Alashian close-equivalents already exist is a common feature of formal usage. The situation is by and large comparable to the use of Germanic and Latinate vocabulary in English where, should a pair such as Germanic 'hound' and Latinate 'canine' coexist, the Latinate form almost always belongs to a higher register.
@@ -1142,8 +1140,3 @@
     %dt Akkadian
     %dd "The Pennsylvania Sumerian Dictionary," University of Pennsylvania Museum of Anthropology and Archaeology, #{link_to "http://psd.museum.upenn.edu/epsd/index.html"}.
     %dd Roth, Martha T. et al., ed., <i>The Assyrian Dictionary of the Oriental Institute of the University of Chicago</i> (Chicago: The Oriental Institute, 1956-2010).
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

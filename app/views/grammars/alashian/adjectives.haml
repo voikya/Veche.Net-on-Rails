@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πειθετιήν".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Πειθετιήν".html_safe
 
 = section "Introduction" do
   %p Alashian adjectives (including deverbal participles) morphologically form a subset of the nominal system. Like nouns, they inflect for gender, number, and (in a reduced sense) state. Unlike nouns, however, adjectives are also capable of marking degree, of which Alashian has three levels: absolute, comparative, and superlative.
@@ -584,8 +582,3 @@
         %th decuple
         %td= t("δεκαπλεί", "dekaplī", :linebreak => true)
     %p Distributives are formed by simply reduplicating the counting form of a number: #{t "άρ̄αδ-άρ̄αδ", "'ařad-'ařad"} “one by one”, #{t "θινείν-θινείν", "ṯinīn-ṯinīn"} “two by two”, etc.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

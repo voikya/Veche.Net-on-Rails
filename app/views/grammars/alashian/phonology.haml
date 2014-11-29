@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Φυνυλυιώ"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Φυνυλυιώ"
 
 = section "Vowels" do
   = section "Phonemes" do
@@ -223,8 +221,3 @@
       %ul
         %li a, e, i, o, u ~ ə
   %p Morphophonemic alternations have a somewhat limited range of effect due to the huge analogical pressure of the triconsonantal root system. There is a natural tendency to either suppress phonological irregularities, or else generalize the irregularity to all forms (i.e., redefine the root). For instance, Alashian had an historical change that converted all final *m to /n/; this resulted in verb and noun paradigms that had /m/ in some forms (when not word-final) and /n/ in others (when final), after which either *M or *N was generalized to all parts of the paradigm.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

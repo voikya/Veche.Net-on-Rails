@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Ριητρούς̄".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Ριητρούς̄".html_safe
 
 = section "Simple Sentences and Independent Clauses" do
   %p The unmarked word order in a simple sentence in Alashian is SVO. Adverbs, including expressions of time and place as well as indirect objects, typically go between the verb and direct object, though clause-final position is possible for emphasis or when the adverbial phrase is too heavy (i.e., any more complicated than a preposition + noun).
@@ -433,14 +431,7 @@
                        "{det}-Ammaryā {3sg.fem.nom.clitic} ask-{3sg.fem.pret} of-{1sg}, what_kind type-{const} man be-{3sg.masc.pres}",
                        "Ammaryā asked me what kind of a man he was."
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) <i>Če</i> does, however, have a few distinct non-coordinating functions that <i>ve-</i> does not; for instance, it will occasionally intervene between the main and secondary verb in two-verb constructions with no apparent change in overall meaning, much like <i>lik</i>: #{t "Τζ' αχσείρ τζε в̄ήδρικ", "Č 'axsīr če vēdrik"} “I want him to go” in place of <i>Č 'axsīr [lik] vēdrik</i>.
 %p 2) Etymologically speaking, ιλλώ is unrelated to μίρ, but instead traces back to an older, now-defunct conjunction #{t "ιν/ιεν", "'in/yen"}.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

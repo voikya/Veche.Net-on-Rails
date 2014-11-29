@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σουρή Αδρείμ Χαριήν".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Σουρή Αδρείμ Χαριήν".html_safe
 
 = section "Derived Tenses" do
   %p Standard Alashian also has three <i>derived</i> tenses. These can be formed from any verb in any case, whether regular or irregular, by adding regular affixes to one of the basic forms.
@@ -235,8 +233,3 @@
     - alashian = ["υή λιη в̄άκταβ", "υή λακ в̄άτακταβ", "υή λατζ в̄άτακταβ", "υή λου в̄ήκταβ", "υή λων в̄ήκταβ", "υή λαν в̄άνακταβ", "υή λακαν в̄άτακταβ", "υή λατζεν в̄άτακταβ", "υή λων в̄ήκταβ", "υή λων в̄ήκταβ"]
     - latin = ["wē lie vaktab", "wē lak vataktab", "wē lač vataktab", "wē lū vēktab", "wē lān vēktab", "wē lan vanaktab", "wē lakan vataktab", "wē lačen vataktab", "wē lān vēktab", "wē lān vēktab"]
     = render 'verb_table', :title => "Scale I Pluperfect Tense", :verb => { :ala => "katab", :eng => "write" }, :alashian => alashian, :latin => latin
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

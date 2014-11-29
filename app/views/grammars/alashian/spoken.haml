@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αλλασούν Ναλασκιώ Αμμακκαυυαλώ".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αλλασούν Ναλασκιώ Αμμακκαυυαλώ".html_safe
 
 = section "Alashian Dialectology" do
   %p Alashian falls into two geographically-separated dialect groups: the northern group along the northern coastline of Cyprus, and the southern group in along the southeast coastline centered at Larnaka. Although the northern dialects span a significantly larger territory than the southern dialects, the populations speaking each are close in number, due to much denser settlement in the south.
@@ -378,13 +376,6 @@
       %td= t("σιγ κυδβεί/κυδβής", "sig kudbī/kudbēs", :linebreak => true)
       %td= t("ιγ κυδβεί/κυδβής", "'ig kudbī/kudbēs", :linebreak => true)
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) More accurately, the plural <i>-yā</i> is not used when the singular is in fact a singulative derived with the suffix <i>-ā</i>, and the 'plural' form is originally a mass noun, such as <i>šarrā</i> “strand of hair” → <i>šār</i> “hair”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

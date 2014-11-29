@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Αχχωφισεί: <i>νίτκαταβ</i>".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αμμίθκαλ Αχχωφισεί: <i>νίτκαταβ</i>".html_safe
 
 = section "Introduction to nitkatab Verbs" do
   %p <i>Nitkatab</i> (Scale V) is somewhat of a mixed grab-bag scale, combing a number of different intransitive meanings. It is sometimes called the reflexive stem for historical reasons, though true reflexives only account for a portion of the verbs in this scale. The main functions of <i>nitkatab</i> are:
@@ -214,8 +212,3 @@
     %p When #{template "C1"} is *T or *D, the prefix will assimilate completely in these forms, resulting in a geminated (never aspirated!) consonant: *drīk “go” → #{t "νίδδαρακ", "niddarak"} “accompany, go with, go together” (not *nitdarak).
     %p When #{template "C1"} is *B or *G, the prefix will voice to *d and then lenite to *ḏ: *gann “hide” → #{t "νίδ̄γαναν", "niḏganan"} “hide oneself” (not **nitganan).
     %p When #{template "C1"} is a voiced fricative *V/*Ḏ/*Z/*Ǧ, the prefixed *t will first voice to *d and then undergo the usual fricative metathesis: *zmāy “thirsty” → #{t "νίζδαμη", "nizdamē"} “work up a thirst, become dehydrated” (not **nitzamay).
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

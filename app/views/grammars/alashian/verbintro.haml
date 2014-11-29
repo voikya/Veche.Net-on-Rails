@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Μασαδδυρρώ Είρυ Σίστιμ Αδρείμ"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Μασαδδυρρώ Είρυ Σίστιμ Αδρείμ"
 
 = section "The Semitic Root" do
   %p Semitic verbs are traditionally described in terms of a <i>triconsonantal root system</i>; that is, a discontinuous system of conjugation where a verb root consists of an abstract pattern of three consonants (e.g., *K-T-B “write”), with actual verb forms created by inserting various vowel patterns between these consonants and by adding various prefixes and suffixes. For instance, given roots like *K-T-B “write”, *D-K-R “remember”, or *'-H-B “love” and a pattern such as the third person singular masculine preterite pattern #{template "*C1aC2aC3"}, it is easy to derive the forms <i>katab</i> “he wrote”, <i>dakar</i> “he remembered”, and <i>'ahab</i> “he loved”.
@@ -96,13 +94,6 @@
   %p Section 12 provides some comparative tables for reference purposes, as well as the conjugation of a number of irregular verbs.
   %p For an historical account of the Alashian verbal system and its development from that of Proto-Semitic, refer to section 23.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This is done for a number of reasons. For one, quadriconsonantal roots, unlike the other three types, always by default conjugate using Scale II patterns (see section 4.3), and the citation form for Scale II includes the vowels -a- and -ē-. This vowel pattern also helps to emphasize that #{template "C2"} and #{template "C3"} have a special affinity in quadriconsonantal roots, and are never separated by a vowel in any form.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

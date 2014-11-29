@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πρυωθεσιήν".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Πρυωθεσιήν".html_safe
 
 = section "Preposition Classes" do
   %p Alashian has three classes of prepositions, based on their declensional and syntactic peculiarities.
@@ -382,13 +380,6 @@
         %td opposite, across from
         %td lit. 'faced towards'
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The form <i>'unəč</i> rather than <i>nəč</i> for the definite singular state of <i>həč</i> contains a prosthetic vowel common in nominal constructs. Its appearance will be explained in the discussion of nominal syntax.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

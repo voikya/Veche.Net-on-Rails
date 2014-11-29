@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σειν-Φραζυώμεν"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Σειν-Φραζυώμεν"
 
 = section "Introduction" do
   %p Alashian (known natively as <i>Hallasūn Nalaskyā</i> or just <i>Nalaskyā</i>) is one of the two official languages of the Republic of Cyprus, alongside Greek. It is spoken by about 340,000 people, or about 30% of the island's total population.
@@ -42,13 +40,6 @@
   %p Once more of the morphology has been introduced and usage is being examined more in depth, interlinear glosses will be used alongside transcriptions and translations. These provide a morpheme-by-morpheme breakdown of a given Alashian word or phrase. Multiple morphemes are separated by hyphens, while a morpheme conveying multiple meanings at once will have those meanings separated by a period. Non-lexical morphemes appear in <abbr title="smallcaps">smallcaps</abbr>. For instance, Alashian uses distinct plural endings for nouns that vary by gender, so the plural of the word “dog” would be indicated <i>dog-#{abbrev 'masc.pl'}</i>. Null morphemes are indicated with Ø; however, this is usually only done to draw attention to the fact that a particular morpheme has zero surface realization.
   %p Hypothetical word forms, in particular reconstructed forms of a proto-language, will be preceded by a single *asterisk. Non-existent forms, used for instance to indicate an exception to a pattern, will be preceded by **two asterisks.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This is, however, highly speculative. There is no uncontested evidence of Alashian presence in Syria at all, but archeological evidence seems to suggest this was the most likely situation.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

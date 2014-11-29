@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Νάγδαν: <i>κάταβ</i> υε<i>νυκτώβ</i>".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αμμίθκαλ Νάγδαν: <i>κάταβ</i> υε<i>νυκτώβ</i>".html_safe
 
 = section "Introduction to katab Verbs" do
   %p <i>Katab</i> (Active Scale I) is the most basic verb conjugation in Alashian, containing no performative affixes such as those that form the other scales. It has no particular semantic function associated with it, and so it includes a wide variety of verbs, including transitive (#{t "κάταβ", "katab"} “write”), intransitive (#{t "в̄άτζα", "vača"} “go out, leave”), stative (#{t "βακή", "bakē"} “cry”), and inchoative (#{t "σάκαβ", "sakab"} “lie down”). In comparative Semitic literature this form is known as the B-Stem (for “basic”) or G-Stem (for “Grundstamm”, in German).
@@ -659,8 +657,6 @@
     %p Non-triconsonantal roots, while not immune to these weak-root alterations, are resistant to them. Given that the discontiguous root structure of triconsonantal roots is absent in biconsonantal roots, there appears to be a greater pressure to keep the root intact and prevent unusual vowel or consonant changes. For instance, the root *'ūn “be tired” gives the preterite form #{t "ούντα", "'ūnta"} “you (m) grew tired”, with no assimilation, rather than the expected **'ūtha based on the pattern of triconsonantal #{template "C3"} = *N roots. Generally speaking, as long as a perfectly regular form does not violate the language's phonological constraints, it is the preferred form with biconsonantal roots. However, internally-extended biconsonantal roots are fully prone to such changes, as they behave as any other triconsonantal verb.
     %p Geminate roots once again form a sort of middle ground, with more irregularities in the forms with triconsonantal structure and fewer irregularities in the forms with biconsonantal structure.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The form #{t "**μασβούβ", "masbūb"} is nonexistent, since the verb <i>sabab</i> is intransitive in Scale I, and so cannot have a passive form. A real passive form is <i>magnūn</i> “hidden” from *gann “hide”.
@@ -668,8 +664,3 @@
 %p 3) This loss remains unexplained, since it occurs in a position where the *h should have been preserved. Older Alashian texts do suggest the *H assimilated into the neighboring consonant (with forms such as <i>sammū</i> “hear! (pl)” found in earlier Alashian translations of the Bible), but Alashian does not typically lose gemination with no apparent reason.
 %p 4) While the gemination of *W and *Y in this form is expected morphologically, it seems questionable historically—the changes *nw → ww and *ny → yy seem unlikely given general trends in Alashian. These geminated glides are most likely the result of analogy.
 %p 5) The origin of this /ə/ is a combination of reanalysis and analogy. In most of the non-third person forms, the original *n assimilated into the follow consonant, resulting in *nn in the first person plural and *tt → *tʰ in all of the other forms. Since short vowels are neutralized to schwa before aspirates, the *e became ə. This later spread to the 1Pl form as well, where there is no phonological reason for /e/ to have shifted to /ə/.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

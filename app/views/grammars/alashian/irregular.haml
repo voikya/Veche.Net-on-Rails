@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Πινακσή Σουρή Αδρειμιήν υεΣιχνιώ Μαθβυρρώ Σ̄υλώς̄".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Πινακσή Σουρή Αδρειμιήν υεΣιχνιώ Μαθβυρρώ Σ̄υλώς̄".html_safe
 
 = section "Comparative Verb Tables" do
   %p The following tables show the regular forms of each scale side-by-side using the root *ktāb “write” (although in reality not all of these forms exist for this particular root). This is provided for easy reference.
@@ -791,13 +789,6 @@
                 :participle  => "'ūmir" }
     = render 'full_conjugation_table', :title => "Scale I Conjugation", :verb => { :ala => "'amar/mār", :eng => "say" }, :alashian => alashian, :latin => latin
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) These two Scale III forms are historically derived from the root *wčā' by replacing the final radical *' with a reduplicated *č. This sort of reduplication-cum-augmentation was once a common means for dealing with weak root consonants that had a tendency to drop, but is now not productive at all, surviving only in a number of frozen forms such as these. Most references at present list these as belonging to a separate root *wčāč, which from a synchronic perspective makes the most sense.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

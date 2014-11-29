@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Φερασσιήν Ηυνε Ρειμιήν".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Φερασσιήν Ηυνε Ρειμιήν".html_safe
 
 = section "The Structure of the Verb Phrase" do
   %p The Alashian verb phrase has the following overall structure:
@@ -979,13 +977,6 @@
                      "{3sg.masc.nom.clitic} {fut}-{3sg.masc} recover-{3sg.subj.pf} recover-{inf}",
                      "He will certainly recover.” (lit. 'recover a recovering'"
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) See section 19.8 for when to use an infinitive with such verbs and when to use a purpositive clause.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

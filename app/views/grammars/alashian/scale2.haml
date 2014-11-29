@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Αθθαννεί: <i>καττήβ</i> υε<i>καττώβ</i>".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αμμίθκαλ Αθθαννεί: <i>καττήβ</i> υε<i>καττώβ</i>".html_safe
 
 = section "Introduction to kəthēb Verbs" do
   %p <i>Kəthēb</i> (Active Scale II) is commonly known as the “intensive” or “transitive” stem. In other Semitic languages it is responsible for a large variety of meanings, ranging from a strengthening of the action (the intensive proper) to an iterative, declarative, or causative. In Alashian, however, it has a much more restricted usage: it creates the base form of quadriconsonantal roots (which cannot conjugate in <i>katab</i>), and it forms transitive verbs from stative (adjectival) roots, typically with a causative or inceptive meaning. Examples of the former include #{t "καλκήλ", "kalkēl"} “ring”, #{t "βαλβήλ", "balbēl"} “confuse”, and #{t "ταργήν", "targēn"} “translate”, while the latter group includes #{t "λαττήφ", "ləthēf"} “shrink, reduce, make small” (*lthīf “be small”), #{t "в̄ασσήν", "vəssēn"} “put [a child] to sleep, say good night” (*wsīn “sleep”), and #{t "в̄ακκήδ", "vəkhēd"} “set alight” (*wkhād “burn”).
@@ -472,14 +470,7 @@
                        { :name => "Passive Part.", :ala => "μύραμματζ", :lat => "murəmməč", :meaning => "reflected" } ]
         %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :forms => alashian
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The prefix vowel /e/ in <i>neřəwenū</i> is due to the initial *Ř, and is present to all #{template "C1"} = Ř roots.
 %p 2) Unusually for triconsonantal roots, *hlāk has a Scale II form but no Scale I form. The original Scale I sense, as evidenced by its cognates in other Semitic languages, was “walk”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

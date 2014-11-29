@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αχλήφ".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αχλήφ".html_safe
 
 = section "Introduction" do
   %p Derivational morphology refers to the processes by which new lexical items can be generated from other lexical items or from roots, as opposed to inflectional morphology which creates different grammatical forms from a single lexical item.
@@ -367,16 +365,9 @@
         %li #{t "ει-τώτ", "'ī-tāt"} “abyss”
   %p When a triconsonantal verb root takes on a prefix, it is no longer able to behave triconsonantally. Forms such as μεταιάραχ (*meta + *y-r-x) above conjugate as contiguous, European-style verbs.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This combination of Semitic verb roots with non-Semitic morphology is highly unusual within the Semitic languages and is testament to the amount of influence Indo-European languages have had on Alashian.
 %p 2) Such mixing occasionally results in some cross-linguistic puns, such as the Alashian word #{t "τζειλήρ", "čīlēr"} “air conditioner”, which can be interpretted both as the Semitic stem *čīl “cold” + the agentive -ēr (i.e., “thing that makes it cold”) and as the pseudo-English word “chiller”. Similar coinages can be seen in other Semitic languages as well, such as Hebrew #{t "אווירון", "'aviron"} “airplane” (lit. “air-machine”), a play on French <i>avion</i>.
 %p 3) In southern Alashian dialects, the /t/ is lost with compensatory lengthening, resulting in the suffixes *-ā and *-ī. This results in the curious situation of adverbs being identical to the feminine singular of adjectives without the nisba and the masculine singular of adjectives with the nisba.
 %p 4) The addition of *ʔ, however, does seem to have been a common means of converting inherited verb roots with only two consonants into triconsonantal roots more typical of Semitic, as can be seen in Proto-Semitic *(ʔ)kl “eat” or *(ʔ)ḥd “one”. In fact, in modern Alashian roots with initial *ʔ lose it in the imperative, which is the only verb form of Proto-Afro-Asiatic origin (pre-Semitic) origin to survive into the modern language.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Φερασσιήν Ηυνε Υωνυμιήν".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Φερασσιήν Ηυνε Υωνυμιήν".html_safe
 
 = section "The Structure of the Noun Phrase" do
   %p The Alashian verb phrase has the following overall structure:
@@ -815,16 +813,9 @@
         %span.eng “outside a new house”
   %p Prepositions do not allow personal pronouns as their objects without some modification. As previously discussed, clitic and primitive prepositions may decline (a remnant of an older clitic pronoun that fused to the preposition), while the construct prepositions incorporate themselves into possessive formations, either with genitive pronouns or with possessive suffixes. For emphasis, clitic prepositions may take their special emphatic/extended forms and primitive prepositions may be followed by disjunctive pronouns; construct pronouns have no form marked as emphatic, although possessive suffixes are markedly non-emphatic.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This cliticization has occurred in some of the Canaanite languages as well, cf. Modern Hebrew #{t "מבית", "mi-bayit"} “from a house”, #{t "מהבית", "me-ha-bayit"} “from the house”. This usage remains fully prepositional, however, since it can be combined with different states and cannot be preceded by another preposition.
 %p 2) The directional suffix *-a, as in <i>bēta</i> “homeward”, has sometimes been argued to be a survival of the Proto-Semitic accusative, although it is now typically considered to have different origins.
 %p 3) The exact origins of the Alashian accusative pronouns are not entirely clear, since independent accusative pronouns are very poorly attested across the Semitic family. In most Semitic languages, any independent pronouns appear to consist of a prepositional or nominal base with a possessive marker; of the modern Semitic languages, Alashian is unique in having pronouns that appear to be related to the nominative series.
 %p 4) The older Alashian numeral system, which more closely resembles the system seen in other Semitic languages, does have full gender agreement. Their apparent reverse gender marking and atypical endings preclude them from being analyzed as constructs as clearly as modern Alashian numerals can be.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αμμίθκαλ Αδρωβιτεί: <i>τακτήβ</i>".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αμμίθκαλ Αδρωβιτεί: <i>τακτήβ</i>".html_safe
 
 = section "Introduction to taktēb Verbs" do
   %p <i>Taktēb</i> (Scale IV) is the reciprocal stem, whose primary purpose is to make transitive stems intransitive by adding an implication of reciprocity: #{t "τακτήβ", "taktēb"} “write one another, exchange letters, correspond” (from *ktāb “write”). A great many verbs denoting social interaction are found in this scale due to its reciprocal nature and, in this sense at least, Scale IV verbs are very rarely seen with singular subject agreement. Stative roots may also appear in <i>taktēb</i>, where they indicate transformation: #{t "ταλβήν", "talbēn"} “become/turn white” (*lbīn “white”), #{t "τασδήρ", "tasdēr"} “get ready” (*sdīr “ready”).
@@ -282,13 +280,6 @@
     %p When #{template "C1"} is a voiced fricative *V/*Ḏ/*Z/*Ǧ, the prefixed *t will first voice to *d and <em>then</em> undergo the usual fricative metathesis: *zmāy “thirsty” → #{t "ταζμή", "tazmē"} “become thirsty” → #{t "νιζδαμαιού", "nizdamayū"} “we are becoming thirsty” (not **nitzamayū).
     %p These assimilation rules apply to both triconsonantal and biconsonantal roots.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Etymologically-speaking, Barth's Law has no business being here, since this *ta- is not a personal prefix, but a derivational one. However, it seems that it has spread to the <i>taktēb</i> imperative by virtue of the phonetic similarity of the *ta- prefix to the *tV- prefix of the present tense, and the semantic similarity between imperatives (which always have a second person subject) and the fact that *tV- is a marker of the second person in the present tense.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

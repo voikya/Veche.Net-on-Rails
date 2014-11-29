@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σινδυμυγ̄ραφκιούς̄"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Σινδυμυγ̄ραφκιούς̄"
 
 %table
   %thead
@@ -129,8 +127,3 @@
     %tr
       %td= abbrev 'vol'
       %td Volitive Mood
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

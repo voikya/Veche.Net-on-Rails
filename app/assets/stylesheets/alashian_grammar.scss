@@ -1,34 +1,21 @@
 $background_color: #D7C87D;
 $header_color: #7D5A46;
-$divider_color: #990033;
-$footer_color: #4D300D;
 $link_color: #7D5A46;
 $table_border_bottom_right: #C7B86D;
 $table_border_top_left: #B7A85D;
 
 body.grammar.alashian {
-  background-color: $background_color;
-  background-image: image-url('alashian/bg.png');
 
-  #footer {
-    color: $footer_color;
-  }
+  header {
+    background-color: $background_color;
 
-  h1 {
-    color: $header_color;
+    h1, p {
+      color: $header_color;
+    }
   }
 
   a {
     color: $link_color;
-  }
-
-  hr {
-    border-top: 3px solid $divider_color;
-    border-bottom: 1px solid $divider_color;
-
-    &.footnote {
-      border: solid 1px $divider_color;
-    }
   }
 
   td.label, td.arrow, th {
@@ -58,5 +45,9 @@ body.grammar.alashian {
 
   .adj-form {
     border: solid 2px #990;
+  }
+
+  .highlight {
+    color: red;
   }
 }

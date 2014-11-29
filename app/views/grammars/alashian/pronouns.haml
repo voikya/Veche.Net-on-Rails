@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αντει-Υωμενιήν".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αντει-Υωμενιήν".html_safe
 
 = section "Personal Pronouns" do
   %p The Alashian pronominal system stands in stark contrast to the pronominal systems of its closely-related Semitic cousins. Centuries of close contact has resulted in Alashian undergoing a significant degree of metatypy with respect to Cypriot Greek, meaning Alashian's pronominal system has been restructured so that it has a nearly one-to-one structural and syntactic correspondence to the Cypriot Greek model.
@@ -581,7 +579,7 @@
 
   = section "Indeterminate Forms" do
     %p The indeterminate forms have the basic meaning of “any”. They are completely identical to the negative forms; the two are distinguished only by the polarity of the main verb, with positive verbs giving indeterminate meaning and negative verbs giving negative meaning.
-  
+
   = section "Alternative Forms" do
     %p The alternative correlatives mean “other” or “else”. There are two main stems at work: the native Semitic #{t "χάρ", "xar"} “other” and the Greek prefixial #{t "αλλι-", "'alli-"}, from Greek #{t "άλλος", "allós"} “other”.
     %p The alternative determiner is simply the adjective #{t "χάρ", "xar"} “other, another”. The qualitative alternative is the loaned Greek adjective #{t "αλλούν", "'allun"} “another kind of”.
@@ -589,8 +587,3 @@
     %p All other forms are phrasal: #{t "ηαλ χάρ μακκούν", "hal xar məkhūn"} “somewhere else”, #{t "χάρ μακκούνα", "xar məkhūna"} “to somewhere else”, #{t "βνε χάρ μακκούν", "bne xar məkhūn"} “from somewhere else”, #{t "χάρ πυώς", "xar puos"} “some other amount”, #{t "βιχάρ λούχ", "bixar lūx"} “for some other reason”. The adverb of alternative method, #{t "βιχαρείς", "bixarīs"} “another way, differently” is also technically phrasal, but is formed from the noun #{t "χαρείς", "xarīs"} “otherness, difference”, a nominalized form of #{t "χάρ", "xar"}.
 
 %div{:style => "clear: both;"}
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

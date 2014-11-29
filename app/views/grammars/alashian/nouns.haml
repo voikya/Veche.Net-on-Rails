@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Σίστιμ Υνούνυμ".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Σίστιμ Υνούνυμ".html_safe
 
 = section "Introduction" do
   %p The Alashian noun, unlike the verb, forms a much more unified subsystem within the language, treating both native Semitic nouns and more recent non-Semitic loanwords in a more or less identical fashion. Nouns inflect for three qualities: number, state, and occasionally gender (though this is not always explicit).
@@ -266,14 +264,7 @@
       %td= t("μιв̄в̄αλδούς̄", "mivvaldūš", :linebreak => true)
       %td= t("в̄αλδούτ", "valdūt", :linebreak => true)
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This description is synchronic. Historically, these 'masculine' and 'feminine' patterns are two completely different phenomena. The 'masculine' patterns are historically collectives derived from the singular forms, while most of the 'feminine' patterns are originally mass nouns that then developed singulatives in *-ā.
 %p 2) Historically only #{t "ιθθώ", "'iṯṯā"} has a true suppletive plural, with its singular going back to Proto-Semitic *'inṯ- and its plural to *niš(w)-. The plurals of #{t "είς", "'īs"} and #{t "βείτ", "bīt"} come from the same root in Proto-Semitic as their respective singulars (*'inš- and *bin-t-), but time has obscured the connection.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

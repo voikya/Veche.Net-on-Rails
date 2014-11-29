@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Alashian Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Αφφυνυλυιώ υεΑμμυρφυλυιώ Νιστυριτζκιούς̄".html_safe
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Αφφυνυλυιώ υεΑμμυρφυλυιώ Νιστυριτζκιούς̄".html_safe
 
 %p Proto-Semitic is the reconstructed ancestor of the Semitic language family, including Alashian as well as such languages as Arabic, Hebrew, Amharic, Phoenician, and Assyrian. It is believed to have been spoken around the fourth milennium BC somewhere in the modern-day Middle East, with most theories placing it in Arabia, the Levant, or in Northern Mesopotamia. Proto-Semitic itself is a member of the much larger Afro-Asiatic family, spanning much of northern Africa and the Middle East; Proto-Semitic's closest siblings include Ancient Egyptian and the Berber languages of the Sahara and Maghreb.
 %p Since the Semitic languages are so well-attested historically (as many of the earliest written languages were Semitic), we are able to reconstruct the Proto-Semitic phonology with a fairly high degree of certainty. The morphology and syntax, however, are considerably more complex issues. While certain features—such as the famous triconsonantal roots—are present in all of the modern Semitic languages and thus were certainly part of Proto-Semitic, the modern languages show quite a bit of variety in the structure and function of various morphological forms. To make matters worse, much of Semitic morphology is highly dependent on vowel quality, and the historical Semitic scripts were generally very poor when it came to marking vowel quality consistently. While significant progress in this area has certainly been made, there remain many unanswered questions about features that we only see trace evidence of in attested languages.
@@ -11,7 +9,7 @@
   %p The following chart shows the phonemic inventory of Proto-Semitic, showing both the traditional Semiticist transcription and their phonetic values as currently understood. Notice in particular that the coronal fricatives and affricates' notation does not correspond very logically with their phonetic values; this is the result of revisions in our understanding of Proto-Semitic in the years since the common adoption of this notation.
   %table
     %tr
-      %th{:colspan => 2, :rowspan => 2} 
+      %th{:colspan => 2, :rowspan => 2}
       %th{:rowspan => 2} Labial
       %th{:rowspan => 2} Interdental
       %th{:colspan => 2} Alveolar
@@ -828,8 +826,6 @@
     %p The prefix vowels in Proto-Semitic prefixial conjugations were originally distributed based on transitivity, with *a for intransitive verbs with singular subjects, *i for intransitive verbs with plural subjects, and *u for transitive verbs, corresponding to Proto-Afro-Asiatic case markers. As the transitivity contrast began to break down in Proto-Semitic, these prefix vowels were redistributed on a phonological basis known as Barth's Law, a dissimilatory principle which states that the prefix vowel should be /i/ if the following vowel is /a/ or /u/, or /a/ if the following vowel is /i/. Barth's Law continues to operate in the present tense of the <i>katab</i> conjugation, while elsewhere a single vowel has usually been generalized.
     %p The Alashian preterite continues the original Proto-Semitic suffixial conjugation largely intact. The imperfect also continues the suffixial conjugation, but a historical change in stress has resulted in the erosion of many of the endings. It appears likely that many of the imperfect endings were once asyllabic (having completely lost their original vowels) before an epenthetic vowel was later reinserted; the historical evolution of a form like <i>kieteveš</i> “you (f) were writing” was likely something along the lines of *kuttubti → *kattabti → *kātabti → *kētabši → *kietebši → *kietevš → <i>kieteveš</i>. A similar erosion of endings took place in the perfective subjunctive, where the original feminine ending *ī and plural ending *ū dropped due to the fusion of the *vV- morpheme to the verb.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The preservation of long *ā in the stative adjective pattern #{template "*C1āC2eC3"}, with no sign of the Canaanite Vowel Shift, is unexplained. Etymologically this form is identical to the <i>katab</i> present participle (modern #{template "*C1ūC2iC3"}), which shows the shift, which at some point must have undergone a lexical split.
@@ -837,8 +833,3 @@
 %p 3) The /s/ in the modern forms results from palatalization of the original *t by the former oblique case marker *-i. That is, the suffixes <i>-īs</i> and <i>-ūs</i> come from Proto-Semitic <i>*-it-i</i> and <i>*-ut-i</i>.
 %p 4) The distinctive vowel pattern of the Alashian imperfect, #{template "*C1ieC2eC3"}, clearly shows the reflex of this original long vowel from an earlier form #{template "**C1āC2aC3"}. The passive pattern #{template "*C1uoC2aC3"} is an analogous formation. The more 'front-heavy' imperfect stem, in contrast to the more balanced short vowels of the preterite #{template "*C1aC2aC3"} stem, contributed to the reduction and/or loss of many of the original personal endings, hence the discrepancy between modern Alashian preterite and imperfect endings.
 %p 5) Two of these forms survive into modern Alashian. #{t "Μαρτιρώ", "martirā"}, a slightly adapted form of μαρτείρ, now means “bear witness, testify” within religious contexts, while #{t "ράταρ", "ratar"}, a reanalyzed form where the prefix <i>ma-</i> was interpreted as a derivational prefix, now means “lay claim to”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'
