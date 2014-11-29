@@ -51,6 +51,8 @@ GEM
     colorize (0.7.3)
     erubis (2.7.0)
     execjs (2.2.2)
+    font-awesome-sass (4.2.2)
+      sass (~> 3.2)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -126,6 +128,7 @@ DEPENDENCIES
   better_errors
   capistrano
   coffee-rails (~> 3.2.1)
+  font-awesome-sass (~> 4.2.0)
   haml
   jquery-rails
   mysql2
