@@ -20,53 +20,68 @@ body.vechenet {
   #title {
     position: relative;
     margin: 0 auto;
-    top: 20px;
+    top: 100px;
+    transition: top 0.5s;
+    cursor: pointer;
+
+    &.shifted {
+      top: 20px;
+    }
   }
 
-  #buttonframe {
+  #articleset {
+    margin-top: 50px;
+  }
+
+  article {
+    background-color: #EFEFEF;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 700px;
+    text-align: left;
+    font-size: small;
+    color: #666;
+
+    img.header {
+      width: 700px;
+      height: 200px;
+      box-shadow: 0px 3px 4px #333;
+    }
+
+    .content {
+      margin: 20px;
+      margin-top: -40px;
+      padding-bottom: 20px;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .buttonframe {
     position: relative;
     margin: 0 auto;
     top: 150px;
-    width: 675px;
-    text-align: left;
+    width: 800px;
+    text-align: center;
     overflow: hidden;
-    opacity: 0;
   }
 
-  .button {
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    margin-bottom: 10px;
-    display: inline-block;
-    z-index: 1;
-    overflow: hidden;
-    box-shadow: 3px 3px 4px #333;
-  }
-
-  .col1 {
-    float: left;
-  }
-
-  .col2 {
-    float: right;
-  }
-
-  #textdiv {
+  .button-wrapper {
+    width: 350px;
     position: relative;
-    top: 30px;
-    margin: 0 8%;
-    padding: 60px 15px 15px 15px;
-    background-color: rgb(204, 204, 255);
-    background-color: rgba(204, 204, 255, 0.5);
-    border-radius: 15px;
-    box-shadow: 3px 3px 4px #333;
-    z-index: 10;
-  }
+    display: inline-block;
+    margin: 10px;
 
-  #textdivcontents {
-    text-align: left;
-    font-size: small;
+    .button {
+      width: 300px;
+      height: 100px;
+      overflow: hidden;
+      box-shadow: 3px 3px 4px #333;
+      cursor: pointer;
+    }
   }
 
   #footer {
@@ -77,19 +92,19 @@ body.vechenet {
     color: white;
   }
 
-  #hidden {
-    position: absolute;
-    height: 1px;
-    visibility: hidden;
-    overflow: hidden;
+  h1 {
+    font-size: large;
+    color: #EFEFEF;
+    background-color: black;
+    position: relative;
+    padding: 5px 20px;
+    top: -80px;
+    opacity: 0.75;
+    font-size: x-large;
+    font-family: Trebuchet MS, sans;
   }
 
   h2 {
-    font-size: large;
-    color: #03C;
-  }
-
-  h3 {
     font-size: medium;
     color: #03C;
     font-style: italic;
@@ -97,13 +112,27 @@ body.vechenet {
 
   a {
     &:link, &:visited {
-      color: #03C;
+      color: #4F7CA3;
+      border-bottom: dashed 1px;
       text-decoration: none;
     }
 
     &:hover, &:active {
       color: #900;
-      text-decoration: underline;
+      border-bottom: solid 1px;
+      text-decoration: none;
+    }
+
+    &.contact {
+      &:link, &:visited {
+        color: #69B1FF;
+        border: none;
+      }
+
+      &:hover, &:active {
+        color: #900;
+        text-decoration: underline;
+      }
     }
   }
 

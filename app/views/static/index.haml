@@ -2,20 +2,15 @@
 
 #container
   #title= image_tag 'title.png', :alt => "veche.net"
-  #buttonframe
-    .button.col1.row1= image_tag 'tab_government.jpg', :id => 'btn_gov', :title => "government", :alt => "Government"
-    .button.col2.row1= image_tag 'tab_novegradian.jpg', :id => 'btn_nov', :title => "novegradian", :alt => "Novegradian"
-    .button.col1.row2= image_tag 'tab_ochets.jpg', :id => 'btn_och', :title => "očets", :alt => "Očets"
-    .button.col2.row2= image_tag 'tab_alashian.jpg', :id => 'btn_ala', :title => "alashian", :alt => "Alashian"
-    .button.col1.row3= image_tag 'tab_linguistics.jpg', :id => 'btn_lng', :title => "linguistics", :alt => "Linguistics"
-    .button.col2.row3= image_tag 'tab_programming.jpg', :id => 'btn_pro', :title => "programming", :alt => "Programming"
-    .button.col1.row4= image_tag 'tab_about.jpg', :id => 'btn_q', :title => "about", :alt => "About"
-  #textdiv
-    #textdivcontents
-      %section{:title => "government"}
-        %h2 Government of the Republic of Novegrad
+  %nav.buttonframe
+
+  #articleset
+    %article{:id => "government", :data => {:title => "Government", :nav_button => image_path("tab_government.jpg")}}
+      = image_tag 'header_government.png', :class => 'header'
+      %h1 Government of the Republic of Novegrad
+      .content
         %p The Republic of Novegrad is an alternative history ("althist")/fictional nation ("concountry") project, based on the premise that the medieval northern European Feudal Republic of Novegrad survived to the present day; in reality it was a merchant empire inhabited by Slavic and Finnic peoples up until it was annexed by an expanding Muscovy in the 15th century.
-        %h3 Links
+        %h2 Links
         %ul
           %li
             = link_to "Government of the Republic of Novegrad", government_index_path(:lang => :en)
@@ -26,15 +21,18 @@
           %li
             = link_to "Novegrad FAQ", government_about_path(:lang => :en)
             — a brief description of the nature and goals for this project and website
-        %h3 External Links
+        %h2 External Links
         %ul
           %li
             = link_to "Novgorod Republic (Wikipedia)", 'http://en.wikipedia.org/wiki/Novgorod_Republic'
             — for some background on the real nation that inspired this all
-      %section{:title => "novegradian"}
-        %h2 The Novegradian Language
+
+    %article{:id => "novegradian", :data => {:title => "Novegradian", :nav_button => image_path("tab_novegradian.jpg")}}
+      = image_tag 'header_novegradian.png', :class => 'header'
+      %h1 The Novegradian Language
+      .content
         %p Novegradian (#{t "новеградескей лизике", "novegrádeskei lizíke"}) is a finctional language ("conlang"), designed to be as realistic as possible. It is a Slavic language, derived from the reconstructed language known as Proto-Slavic, the ancestor of all of the other Slavic languages, including Russian, Polish, Serbian, and Bulgarian. It was inspired by and is partially based on the fragmentary documents surviving from the 11th–15th centuries containing what is now known as the Old Novgorodian Dialect, a highly divergent Slavic vernacular.
-        %h3 Links
+        %h2 Links
         %ul
           %li
             = link_to "Grammar of the Novegradian Language", novegradian_index_path
@@ -45,7 +43,7 @@
           %li
             = link_to "Novegradian Lexicon", lexicon_path(:language => :novegradian)
             — a searchable online dictionary of Novegradian, including declension charts and word etymologies
-        %h3 External Links
+        %h2 External Links
         %ul
           %li
             = link_to "Old Novgorod dialect (Wikipedia)", 'http://en.wikipedia.org/wiki/Old_Novgorod_dialect'
@@ -53,25 +51,31 @@
           %li
             = link_to "Birchbark Letter Photographs (University of Chicago)", 'http://slavic.uchicago.edu/archived/bblphotos.shtml'
             — photographs of some of the real birchbark letters written in the Old Novgorodian dialect, as well as some other artifacts from the region
-      %section{:title => "očets"}
-        %h2 The Očets Language
+
+    %article{:id => "ochets", :data => {:title => "Očets", :nav_button => image_path("tab_ochets.jpg")}}
+      = image_tag 'header_ochets.png', :class => 'header'
+      %h1 The Očets Language
+      .content
         %p Očets (#{t "һочец сеие", "hočets seie"}) is a fictional language ("conlang") related to the Yeniseian language family, a nearly-extinct group of languages spoken in central Siberia that have recently gained some widespread attention in the linguistics community as possibly being the first demonstrated link between Old and New World languages, with strong evidence of a relationship with the Tlingit-Eyak-Athabaskan (or Na-Dené) family of western North America. Očets itself is intended to be a cousin of the Yeniseian languages, sharing a common ancestor but many centuries removed.
         %p Očets exists in the same alternative timeline as Novegradian, and has been undergone extensive influence from the Novegradian language, as well as a number of Uralic, Turkic, and Iranian languages spoken or once spoken in the Ob River valley. It is an exercise in language contact and to some extent language death as well as general historical linguistics.
         %p At present Očets is still undergoing development, and information will be added as it becomes available.
-        %h3 Links
+        %h2 Links
         %ul
           %li
             = link_to "Grammar of the Očets Language", ochets_index_path
             — the main index page to the online version of the grammar
-        %h3 External Links
+        %h2 External Links
         %ul
           %li
             = link_to "Yeniseian Languages (Wikipedia)", 'http://en.wikipedia.org/wiki/Yeniseian_languages'
             — for some background on the Yeniseian family
-      %section{:title => "alashian"}
-        %h2 The Alashian Language
+
+    %article{:id => "alashian", :data => {:title => "Alashian", :nav_button => image_path("tab_alashian.jpg")}}
+      = image_tag 'header_alashian.png', :class => 'header'
+      %h1 The Alashian Language
+      .content
         %p Alashian (#{t "Αλλασούν Ναλασκιώ", "Hallasūn Nalaskyā"}) is a fictional language ("conlang") in the Semitic language family, closely related to such languages as Arabic and Hebrew. It is supposed to be spoken on part of the island of Cyprus, where over the centuries it has been significantly influenced by (in turn) Aramaic, Greek, Arabic, and Turkish.
-        %h3 Links
+        %h2 Links
         %ul
           %li
             = link_to "Grammar of the Alashian Language", alashian_index_path
@@ -82,16 +86,22 @@
           %li
             = link_to "Alashian Lexicon", lexicon_path(:language => :alashian)
             — a searchable online dictionary of Alashian, including listings by root and word etymologies
-      %section{:title => "linguistics"}
-        %h2 Linguistics
+
+    %article{:id => "linguistics", :data => {:title => "Linguistics", :nav_button => image_path("tab_linguistics.jpg")}}
+      = image_tag 'header_linguistics.png', :class => 'header'
+      %h1 Linguistics
+      .content
         %p This section contains various articles and other information related to real-world linguistics written by myself. For the most part my primary interests lie in the Slavic and Semitic languages, but I may at times write about other groups as well.
-        %h3 Links
+        %h2 Links
         %ul
           %li= link_to "Language Contact in the Medieval East Baltic", linguistics_baltic_sprachbund_path
           %li= link_to "The Development of Slavic Numeral Agreement", linguistics_slavic_numerals_path
           %li= link_to "Verbs of Motion in the Russian Aspectual System", linguistics_verbs_of_motion_path
-      %section{:title => "programming"}
-        %h2 Programming and Computer Science
+
+    %article{:id => "programming", :data => {:title => "Programming", :nav_button => image_path("tab_programming.jpg")}}
+      = image_tag 'header_programming.png', :class => 'header'
+      %h1 Programming and Computer Science
+      .content
         %p In addition to languages and linguistics, programming and web design have both been interests of mine for a long time. While I started out on the web, I've since gained quite a bit of experience in application and mobile application development as well.
         %p On the web side of things, I am familiar with (X)HTML, Ruby on Rails, CSS, JavaScript + jQuery, XML + XSLT, and PHP, while on the desktop and mobile side of things, I have worked with C, C++, Objective-C, Java, Python, and Haskell, plus the Unix CLI.
         %p Here are a few projects of various sorts I'm offering up as open-source.
@@ -105,11 +115,14 @@
           %li
             = link_to "C Durak", programming_cdurak_path
             — a simple version of the popular Eastern European card game Durak using terminal graphics
-      %section{:title => "about"}
-        %h2 About
+
+    %article{:id => "about", :data => {:title => "About", :nav_button => image_path("tab_about.jpg")}}
+      = image_tag 'header_about.png', :class => 'header'
+      %h1 About
+      .content
         %p I am a web and software developer living in Maryland. I studied Slavic Linguistics and Computer Science at the University of Chicago. Languages and linguistics have long been a passion of mine, as can be seen in the materials here on this site. I speak English and Russian, have extensively studied Spanish, Modern Hebrew, and Serbo-Croatian, and have also had some formal training in Georgian. From a more linguistics-oriented perspective, my main interests lie in Slavic, Semitic, Uralic, and Paleo-Siberian languages.
         %p Veche.net is my personal site, first launched (albeit at a different domain) back in 2006. It is named for the historical Novgorod #{link_to "Veche", 'http://en.wikipedia.org/wiki/Veche'}, a quirky, unique, and quasi-democratic legislative body that governed the entirety of the Novgorodian Lands during their independence in the Middle Ages.
-        %h3 Links
+        %h2 Links
         %ul
           %li
             = link_to "Recent Updates", updates_path

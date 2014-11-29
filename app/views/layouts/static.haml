@@ -11,5 +11,4 @@
     #footer
       © 2006-#{Time.now.year} Martin Posthumus
       = surround "(", ")" do
-        = link_to "Contact", contact_path
-    #hidden
+        = link_to "Contact", contact_path, :class => 'contact'
