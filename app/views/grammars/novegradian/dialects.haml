@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Мовли"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Мовли"
 
 = section "Major Novegradian Dialects" do
   %p Novegradian has five major dialect zones, as shown in the map on the following page. These groups are typically identified as “Central” (including standard Novegradian), “Southern”, “Zavolotian”, “Northern”, and “Siberian”. Each of these can then in turn be divided into a number of subdialects.
@@ -831,13 +829,6 @@
     = section "Other Parts of Speech" do
       %p These aspects remain largely the same as in Northern speech. However, the standard #{t "но", "no"} “but” has retaken its role from #{t "да", "da"}, though да is still used to link multiple nouns.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Derived from the preposition ко “to, towards”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

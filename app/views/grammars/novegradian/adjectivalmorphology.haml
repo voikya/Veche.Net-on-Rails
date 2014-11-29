@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Морпољогя прилежим ймѣн"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Морпољогя прилежим ймѣн"
 
 = section "Definitions and Features" do
   %p The Novegradian adjective is quite similar to the noun, and historically is closely related. Like nouns, they decline for gender and number, though unlike nouns they do so in order to agree with their head. They also decline for agreement in gender in the singular, though not in the plural (and adjectives do not inflect for the dual). Adjective endings are very similar, though not identical, to the endings of various nominal declensions—masculine singular like the masculine fourth declension singular, neuter singular like the neuter third declension singular, feminine singular like the first declension singular, and plural like the fourth declension plural.
@@ -228,13 +226,6 @@
   %p There is one other adjective degree known as the “trial superlative”, formed by the prefix #{t "тре-", "tre-"}. It is frequently and productively used in literature and storytelling, but has very limited functionality elsewhere.
   %p In literature and liturgical contexts, it is used to indicate a superlative, though it also has connotations of great importance: #{t "тресуете", "tresuéte"} “thrice-holy, most holy”. It is also used hyperbolically, as in the common folkloric opening #{t "На Тредевитиех Жемлах, на Тредежитѣѣм Царестўѣ", "Na Tredevítijeh Źemláh, na Tredeźítěiěm Cárestuě"} “In the Thrice-Nine Lands, in the Thrice-Ten Tsardom”, used to refer to a far away land.
 
-  %p &nbsp;
+%hr.footnote
 
-  %hr.footnote
-
-  %p 1) Dual nouns take plural adjective agreement, with one exception: adjectives modifying a noun in the dative/instrumental dual take the ending #{t "-ама", "-ama"}, rather than the plural -ами. This is generally not considered to be a true dual declension, but rather simply a case of “ending spreading”, as is also occasionally seen in the dative/instrumental of personal names. Both of these phenomena are discussed more in depth later in this grammar.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'
+%p 1) Dual nouns take plural adjective agreement, with one exception: adjectives modifying a noun in the dative/instrumental dual take the ending #{t "-ама", "-ama"}, rather than the plural -ами. This is generally not considered to be a true dual declension, but rather simply a case of “ending spreading”, as is also occasionally seen in the dative/instrumental of personal names. Both of these phenomena are discussed more in depth later in this grammar.

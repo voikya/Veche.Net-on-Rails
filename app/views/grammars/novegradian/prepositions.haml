@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Предлажки"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Предлажки"
 
 = section "Morphology of Prepositions" do
   %p Novegradian prepositions exhibit a number of sandhi-related phenomena, changes to the form of the preposition or its object as a result of the phonological shape of the object. This is to be distinguished from case governance, described in detail starting with section 16.2, which is the phenomenon of prepositions forcing certain cases onto their objects. One example has already been discussed, the stress shift seen sometimes with the locative prepositions #{t "во", "vo"} “in” and #{t "на", "na"} “on”<sup>1</sup>.
@@ -871,16 +869,9 @@
       %td= abbrev('datins')
       %td Temporal sense only.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Section 5.12
 %p 2) See Section 16.1.4
 %p 3) The prepositions #{t "над", "nad"} “over”, #{t "под", "pod"} “under”, #{t "пред", "pred"} “in front of”, and #{t "зад", "zad"} “behind” are sometimes considered primary and sometimes secondary. They can be made directional by switching to the lative case like other primary prepositions, but they can never take the locative case. Ultimately, however, this is little more than a matter of classification and bears little real significance.
-%p 4) See section 10.3.2.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'
+%p 4) See Section 10.3.2.

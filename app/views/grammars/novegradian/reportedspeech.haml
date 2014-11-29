@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Косе рѣѕенье"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Косе рѣѕенье"
 
 = section "Statements" do
   %p The main clause and the reported statement must be connected by то-це. The tense of the reported statement should be the same as it would have been when it was said.
@@ -28,8 +26,3 @@
                      "Oná sopuidála mené, hókjun li ís son iéi na góroden.",
                      "she.{nom} ask.{pf}-{past}-{fem} I.{acc}, want-{1sg} whether go.{det}-{sup} with-{n*} she.{datins} on downtown-{lat.sg}",
                      "She asked me if I wanted to go with her downtown."
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Грамота"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Грамота"
 
 = section "The Alphabet" do
   %p Novegradian uses a modified form of the Cyrillic alphabet with 35 letters, as shown in the following table. Due to many centuries of contact, the letters and spelling used are somewhat similar to Russian. Alongside each character are the letter’s standard transliteration (as used in this document), primary phonetic value, and name.
@@ -313,8 +311,3 @@
   %p The Modern period began in 1918 with a proclamation of orthographic reform by the unofficial Bolshevik government, but was not fully implemented for over a decade. The foundations of the Russified orthography remained intact, the system having by then become firmly established. Several changes brought about by this reform parallel the reforms of Russian happening at the same time: the complete abandonment of Greek letters and silent yers. However, Ѣ remained, as unlike in Russian it still represented a distinct sound. The Russian letter Ё was adopted for /jo/, which under the Russian system could only be represented with the awkward sequence йо. The letter Ғ was introduced, for the first time distinguishing /γ/ from /g/ orthographically.
   %p A few examples of various words in each spelling system are shown in the table below. The leftmost column is Slavonic-era spelling, followed by Early, then Russified, and finally Modern on the right.
   %p= image_tag "novegradian/orthography_evolution.png", :alt => "Evolution of Novegradian orthography"
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

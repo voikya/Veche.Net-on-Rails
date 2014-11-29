@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Синтаксе истекь ймѣн"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Синтаксе истекь ймѣн"
 
 = section "The Nominative Case" do
   %p The nominative case marks the subject of a sentence, as well as all adjectives modifying the subject, whether directly or across a copula. It has also served as a vocative since the original vocative was lost, calling out to or identifying specific persons or things.
@@ -632,13 +630,6 @@
                      "I.{nom} research-{1sg} great-{acc.sg.masc.def} prince-{acc.sg} Yaroslav-{gen} (Yaroslav-{gen} great-{nom.sg.masc.def} prince-{nom.sg})",
                      "I am researching Grand Prince Yaroslav (Yaroslav the Grand Prince)."
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Traditionally, it is regarded as the latter. This issue is examined further in the section on adjectival syntax.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

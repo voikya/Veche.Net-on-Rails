@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Оказанье тем"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Оказанье тем"
 
 = section "Topics" do
   %p The topic of a sentence refers to what the sentence is about, which is not always necessarily the subject. In conversation, one topic may be used over many sentences, or just one. All languages have some way of marking the topic, often by fronting it to the beginning of the clause. Novegradian, on the other hand, has developed a distinct topic marker, #{t "то", "to"}, which was originally a demonstrative. This older usage can be seen reflected in the formation of the subordinating conjunction #{t "то-це", "tó-ce"}. As a clitic, it may attach itself to any noun or pronoun, although never to any other parts of speech<sup>1</sup>. A topicalized noun will generally (although not necessarily) move toward the front of the clause as well, dragging prepositions and some adverbs along with it. The definite form of adjectives used with topicalized nouns derives from the Proto-Slavic anaphoric pronoun *-j-, which was also the source of the oblique forms of the third-person pronouns.
@@ -1205,15 +1203,8 @@
           premírij”.
           %br
           of truce
-    %p.translationsblock “Yesterday, September 24th, a small group consisting of five United Nations diplomats was dispatched to Cairo for a week-long stay in the war-torn city. Including highly-trained specialists from the Republic of Novegrad, England, the United States, Germany, and the League of Arab Nations, the diplomatic dispatch will meet with rebel leaders in southern Cairo to try to organize a cease fire. Cairo, as well as a significant portion of western Egypt, has been in rebel control for the last three months since the civil war started. The city has been the scene of intense fighting as Republican strongholds scattered throughout the city have launched sporadic raids on occupied compounds. In the meantime, the acting Republican government has been relocated to the port of Al-Iskindireya (Alexandria). While many are not optimistic about the success of this mission, English diplomat and mission leader Richard Allen has stated that ‘we are hopeful that this is a step in the positive direction toward finally bringing about a truce.’” 
-
-%p &nbsp;
+    %p.translationsblock “Yesterday, September 24th, a small group consisting of five United Nations diplomats was dispatched to Cairo for a week-long stay in the war-torn city. Including highly-trained specialists from the Republic of Novegrad, England, the United States, Germany, and the League of Arab Nations, the diplomatic dispatch will meet with rebel leaders in southern Cairo to try to organize a cease fire. Cairo, as well as a significant portion of western Egypt, has been in rebel control for the last three months since the civil war started. The city has been the scene of intense fighting as Republican strongholds scattered throughout the city have launched sporadic raids on occupied compounds. In the meantime, the acting Republican government has been relocated to the port of Al-Iskindireya (Alexandria). While many are not optimistic about the success of this mission, English diplomat and mission leader Richard Allen has stated that ‘we are hopeful that this is a step in the positive direction toward finally bringing about a truce.’”
 
 %hr.footnote
 
 %p 1) The -то clitic that can appear with adverbs is not a topicalization marker, although it has the same form and origin; in this particular case it serves as an emphatic particle.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Синтаксе окағьакь ймѣн"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Синтаксе окағьакь ймѣн"
 
 = section "Personal Pronouns" do
   %p Nominative case personal pronouns are frequently omitted if the verb makes it clear what the subject is. They are more frequently used with past tense verbs (which do not encode person) and non-declining verbal forms, such as adverbial participles. The third person nominative pronouns are avoided whenever possible, even in the past, and are generally only found for emphasis or contrast (and even when used for those reasons, they will often be replaced by the topical pronoun то). Pronouns in any other case are not optional unless they have been topicalized.
@@ -352,13 +350,6 @@
                      :comment => "(not nearly as rude-sounding as in English)"
   %p The definite adjective #{t "видорей/видорая/видорие", "vidórei/vidóraia/vidórije"} “[the] other[s]” cannot be substituted without a change in meaning. Еноке and its variants refer to a closed group of people, while видорей refer to an open, indefinite set. If видорих were substituted in example sentence 51 above, it would mean “We are waiting for two more people”, that is, any two people rather than two specific people. If видорие were substituted in sentence 52, it would mean “We agree with you, but other people do not”—again with a more indefinite sense. Видорая in sentence 53 would be nonsensical, perhaps like asking “Where is someone?”.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Though note the possessive forms described in section 22.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

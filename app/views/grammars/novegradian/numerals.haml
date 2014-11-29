@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Цедакьи ймѣни"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Цедакьи ймѣни"
 
 = section "Definitions and Features" do
   %p Numerals form a separate class in Novegradian, demonstrating behavior somewhere in between nouns/pronouns and adjectives. Like adjectives, they are modifiers of nouns; however, agreement is limited to the digits one through four, and that agreement is limited to gender (1-4) and number (1 only), animacy for all numbers, and case for all numerals but only in a few specific circumstances. They also lack many other typical adjectival features, such as the definite/indefinite distinction, grades of comparison, and the ability to be used as a predicate.
@@ -579,14 +577,7 @@
       %td ҂в҃з
       %td 2007
       %td (1000×2)+7
-        
-%p &nbsp;
 
 %hr.footnote
 
 %p 1) Alternatively, “half of a boot” may also be expressed using the preposition #{t "зе", "ze"} “from” plus the genitive case: #{t "пољ зе сабога", "pół ze sabóga"}.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

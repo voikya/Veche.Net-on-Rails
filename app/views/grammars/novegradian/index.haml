@@ -1,8 +1,6 @@
 - content_for :title, "Grammar of the Novegradian Language"
-- content_for :section_title do
-  Grammar of the Novegradian Language
-  %br
-  Граматика Лизика Новеградескаево
+- content_for :section_title, "Grammar of the Novegradian Language"
+- content_for :section_subtitle, "Граматика Лизика Новеградескаево"
 
 = image_tag 'novegradian/cover.png', :id => 'coverart', :alt => "A Reference Grammar of the Novegradian Language"
 
@@ -50,8 +48,3 @@
 %p
   = link_to "Novegradian Lexicon and Dictionary", lexicon_path(:language => :novegradian)
   (online)
-
-%p &nbsp;
-%p &nbsp;
-%p= link_to "Return to Government Page", government_index_path(:lang => :en)
-%p= link_to "Return to Main Veche.Net Page", root_path

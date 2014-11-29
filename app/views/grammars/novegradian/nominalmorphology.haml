@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Морпољогя истекь ймѣн"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Морпољогя истекь ймѣн"
 
 = section "Definitions and Features" do
   %p The basic structure of the Novegradian noun is similar to the verb. A noun consists of a stem made up of a root and zero or more derivational affixes, plus declensional affixes.
@@ -855,15 +853,8 @@
   %p Indeclinable nouns always take the suffix -то, no matter what vowel they end in: #{t "метро-то", "metró-to"} “metro”, #{t "кавѐ-то", "kavé-to"} “café”. The same applies to all morphological duals.
   %p There is one exception to the regular rules above, although it is limited to poetry and older texts (largely from the 18th century). Although the dative/instrumental plural ending ends is -ам today, in the 17th century and earlier it was #{t "-ами", "-ami"}. Also in the 17th century vowel harmony started to appear. As a result, -те was always used after the instrumental plural since it ended with a front vowel at this point, and this continued to be standard long after the vowel disappeared. At no point was it “officially” changed to -то -to (which is used after oblique consonantal endings), but -те had almost completely fallen out of use in this position by the early 19th century in most writing in favor of the more regular -то.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The standard written language also includes three vocatives, though they would better be described as loaned idioms from Old Church Slavonic rather than native retensions of the original Slavic vocative. See section 5.10.
 %p 2) Due to the fact that historians will often have this entire class at their disposal, while in modern usage feudal terms like “lord” and “posadnik” simply have very limited use.
 %p 3) The initial й in ймѣно is generally not pronounced except when the previous word ends in a vowel. In isolation ймѣно is pronounced /ˈmæ.no/ with no trace of the /j/, although some speakers do exhibit a slight lengthening of the /m/ as though in compensation: [ˈm:æ.no].
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

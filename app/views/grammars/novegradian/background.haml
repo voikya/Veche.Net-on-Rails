@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Востубленье"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Востубленье"
 
 = section "Introduction" do
   %p Novegradian (also called Novgorodian, from its name in Russian) is the official language of the Republic of Novegrad. With approximately 52 million native speakers, mostly in Novegrad and Russia, it ranks as the 23rd most widely-spoken language on Earth. It is the second most geographically widespread language of Europe, behind Russian, although it has very limited pickup as a second language outside of the Republic of Novegrad.
@@ -56,8 +54,3 @@
   %p Phonetic transcriptions will appear in [square brackets], while phonemic transcription appear in /forward slashes/, as per linguistic convention. All phonological transcriptions use the International Phonetic Alphabet (IPA).
   %p Once more of the morphology has been introduced and usage is being examined more in depth, interlinear glosses will be used alongside transcriptions and translations. These provide a morpheme-by-morpheme breakdown of a given Novegradian word or phrase. Multiple morphemes are separated by hyphens, while a morpheme conveying multiple meanings at once will have those meanings separated by a period. Non-lexical morphemes appear in <abbr title="smallcaps">smallcaps</abbr>. For instance, Novegradian uses a single morpheme to mark a noun as being in the accusative case and singular in number, so the accusative singular of the word “book” would be indicated <span class="gloss">book-#{abbrev 'acc.sg'}</span>. Null morphemes are indicated with Ø; however, this is usually only done to draw attention to the fact that a particular morpheme has zero surface realization.
   %p Hypothetical word forms, in particular reconstructed forms of a proto-language, will be preceded by a single *asterisk. Non-existent forms, used for instance to indicate an exception to a pattern, will be preceded by **two asterisks.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

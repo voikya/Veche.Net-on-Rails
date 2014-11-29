@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Розговорней новеградескей лизике"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Розговорней новеградескей лизике"
 
 = section "Introduction" do
   %p Novegradian in its standard written form is quite clearly a Slavic language with numerous Slavic features. Even innovative formations in the Novegradian standard almost always have direct analogues in other Slavic languages. This was further reinforced over the many centuries of Russian domination and influence in the region; even after Novegradian was universally recognized as a distinct language, Russian was still viewed as prestigious, and the formal standard was developed to be more similar to Russian.
@@ -1039,8 +1037,6 @@
   = section "Distributive По" do
     %p The distributive particle #{t "по", "po"} in the colloquial language has completely broken with its origin as a preposition. It no longer forces its “object” to take any case, and is now invariable (i.e., it lacks the form #{t "пов", "pov"} before words beginning with vowels). It simply acts as a modifying particle that always appears before the noun it modifies. If the distributive noun is the subject of a sentence, then the verb can show proper gender and number agreement as well.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Compare the standard infinitive or present/future forms #{t "войсти", "vóisti"} “to enter”, #{t "войдун", "voidún"} “I will enter”, and so on. This /j/ has always been present in these tenses in the standard; now it is spreading to the past as well.
@@ -1049,8 +1045,3 @@
 %p 4) Standard #{t "оне мнѣ авиле", "óne mně́ ávile"}.
 %p 5) Standard #{t "оне не мнѣ авиле", "óne ne mně́ ávile"}.
 %p 6) Standard #{t "буила рѣга", "builá rěgá"}.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

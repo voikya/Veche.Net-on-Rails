@@ -127,5 +127,15 @@ module Grammars
         end
       end
     end
+
+    def nav_entry(title, ref, current)
+      capture_haml do
+        if current == ref
+          haml_tag "li.current", title
+        else
+          haml_tag :li, link_to(title, novegradian_grammar_page_path(ref))
+        end
+      end
+    end
   end
 end

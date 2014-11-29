@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Пуити"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Пуити"
 
 = section "Interrogative Pronouns" do
   %p Interrogative pronouns are specifically discussed in section 15.6.
@@ -69,8 +67,3 @@
                      "Kólkě lúdeu Ieváne dúmast tó-ce oní prijdút?",
                      "how_many people-{part.pl} Ieváne-{nom} think {rel.acc.sg}-that.{nom} they.{nom} come.{pf}-{3pl}",
                      "How many people does Ieváne think will come?"
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

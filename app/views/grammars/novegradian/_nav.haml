@@ -1,0 +1,46 @@
+.global-controls
+  - if @previous_page
+    = link_to icon('arrow-left'), novegradian_grammar_page_path(@previous_page[:doc].to_sym), :class => 'back'
+  - else
+    %span.back.disabled= icon('arrow-left')
+  = link_to icon('arrow-up'), novegradian_index_path, :class => 'up'
+  = link_to icon('home'), root_path, :class => 'home'
+  - if @next_page
+    = link_to icon('arrow-right'), novegradian_grammar_page_path(@next_page[:doc].to_sym), :class => 'forward'
+  - else
+    %span.forward.disabled= icon('arrow-right')
+
+.nav-title Novegradian Grammar
+%ul.index
+  - current = @current_page ? @current_page[:doc].to_sym : nil
+  = nav_entry "Foreword", :foreword, current
+  = nav_entry "Abbreviations", :abbreviations, current
+  = nav_entry "Background", :background, current
+  = nav_entry "Phonology", :phonology, current
+  = nav_entry "Writing", :writing, current
+  = nav_entry "Verbal Morphology", :verbalmorphology, current
+  = nav_entry "Nominal Morphology", :nominalmorphology, current
+  = nav_entry "Adjectival Morphology", :adjectivalmorphology, current
+  = nav_entry "Numerals", :numerals, current
+  = nav_entry "Pronouns", :pronouns, current
+  = nav_entry "Names", :names, current
+  = nav_entry "Derivational Morphology", :derivation, current
+  = nav_entry "Verbal Syntax", :verbsyntax, current
+  = nav_entry "Nominal Syntax", :nounsyntax, current
+  = nav_entry "Adjectival and Adverbial Syntax", :adjectivesyntax, current
+  = nav_entry "Topicalization", :topicalization, current
+  = nav_entry "Pronominal Syntax", :pronominalsyntax, current
+  = nav_entry "Prepositions", :prepositions, current
+  = nav_entry "Clauses and Conjunctions", :conjunctions, current
+  = nav_entry "Questions", :questions, current
+  = nav_entry "Reported Speech", :reportedspeech, current
+  = nav_entry "Discourse Markers", :discoursemarkers, current
+  = nav_entry "Emphasis and Word Order", :emphasis, current
+  = nav_entry "Spoken Novegradian", :spoken, current
+  = nav_entry "Dialects", :dialects, current
+  = nav_entry "Historical Phonology and Morphology", :history, current
+  = nav_entry "Appendices", :appendices, current
+
+.nav-title Novegradian Lexicon
+%ul.resources
+  %li= link_to "Lexicon", lexicon_path(:language => :novegradian)

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Сократеньи"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Сократеньи"
 
 %table
   %thead
@@ -249,8 +247,3 @@
     %tr
       %td= abbrev 'voc'
       %td Vocative
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

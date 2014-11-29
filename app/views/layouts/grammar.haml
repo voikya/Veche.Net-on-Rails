@@ -6,13 +6,20 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body.grammar{:class => @context}
-    %h1= yield :section_title
-    %hr
+    %nav
+      = render 'nav'
+    #content<
+      %header
+        .wrapper
+          - if content_for?(:section_title)
+            %h1= yield :section_title
+          - else
+            %h1= @current_page[:title]
+          %p= yield :section_subtitle
 
-    #content
-      = yield
+      %article= yield
 
-    #footer
-      © 2006-#{Time.now.year} Martin Posthumus
-      = surround "(", ")" do
-        = link_to "Contact", contact_path
+      #footer
+        © 2006-#{Time.now.year} Martin Posthumus
+        = surround "(", ")" do
+          = link_to "Contact", contact_path, :class => 'contact'

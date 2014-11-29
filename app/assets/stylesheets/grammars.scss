@@ -1,64 +1,141 @@
 body.grammar {
-  background-repeat: repeat-x;
-  margin: 4% 5% 6% 5%;
-  padding-bottom: 25px;
-  font-family: "Arial Unicode MS", "Lucida Sans Unicode", "Helvetica", sans;
+  font-size: small;
+  color: #333333;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
 
-  #content {
+  nav {
+    height: 100%;
+    width: 250px;
+    background-color: #EAEAEA;
+    overflow: scroll;
     position: relative;
-    color: #000000;
-    background: #FFFFFF;
-    padding: 10px;
-    border: solid 1px #444;
-    box-shadow: 3px 3px 4px #333;
-    margin-bottom: 10px;
-  }
+    float: left;
 
-  #footer {
-    color: #000000;
-    font-size: 12px;
-    font-style: italic;
-  }
-
-  p {
-    color: #000000;
-    font-size: 12px;
-
-    &.nav {
+    .global-controls {
       text-align: center;
+      font-size: x-large;
+
+      .home, .back, .up, .forward {
+        color: #666666;
+        margin: 0px 10px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #3159C5;
+        }
+
+        &.disabled, &.disabled:hover {
+          color: #CCCCCC;
+        }
+      }
+    }
+
+    .nav-title {
+      font-weight: 500;
+      padding: 20px 10px 0px 10px;
+    }
+
+    ul.index, ul.resources {
+      width: 100%;
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        font-size: normal;
+        padding: 10px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #CACACA;
+        }
+
+        &.current {
+          background-color: #555555;
+          color: #EFEFEF;
+        }
+
+        a {
+          color: #666666;
+        }
+      }
+    }
+
+    a {
+      border: none !important;
     }
   }
 
+  #content {
+    height: 100%;
+    overflow: scroll;
+    margin: 0;
+    background-color: #F6F6F6;
+
+    header {
+      width: 100%;
+      height: 200px;
+      position: relative;
+
+      .wrapper {
+        position: absolute;
+        left: 50px;
+        bottom: 10px;
+      }
+
+      p {
+        font-weight: 100;
+        font-size: 18px;
+      }
+    }
+
+    article {
+      padding: 20px 30px 50px 30px;
+    }
+  }
+
+  #footer {
+    color: #999999;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 30px;
+  }
+
   h1 {
-    font-weight: bold;
-    font-size: 28px;
+    font-weight: 300;
+    font-size: 36px;
+    margin: 0;
   }
 
   h2 {
     color: #000000;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   h3 {
     color: #000000;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   h4 {
     color: #000000;
     font-style: italic;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   a {
     &:link, &:visited {
       text-decoration: none;
+      border-bottom: dashed 1px;
     }
 
     &:hover, &:active {
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: solid 1px;
     }
   }
 
@@ -67,22 +144,20 @@ body.grammar {
     border-right: 0px;
     color: #FFFFFF;
     height: 6px;
-    margin-top: -15px;
 
     &.footnote {
       height: 1px;
+      margin-top: 30px;
     }
   }
 
   td {
-    font-size: 12px;
     padding-left: 3px;
     padding-right: 3px;
     text-align: center;
   }
 
   td.label, td.arrow, th {
-    font-size: 12px;
     font-weight: bold;
     padding-left: 4px;
     padding-right: 4px;
@@ -168,7 +243,6 @@ body.grammar {
 
   li {
     color: #000000;
-    font-size: 12px;
   }
 
   ul {
@@ -191,8 +265,6 @@ body.grammar {
   }
 
   dl {
-    font-size: 12px;
-
     dt {
       font-weight: bold;
       margin-top: 5px;
@@ -242,7 +314,6 @@ body.grammar {
 
   .glossblock {
     clear: both;
-    font-size: 12px;
     padding-top: 5px;
     padding-bottom: 5px;
 

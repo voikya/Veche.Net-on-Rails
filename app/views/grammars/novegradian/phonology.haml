@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Вонољогя"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Вонољогя"
 
 = section "Vowels" do
   = section "Phonemes" do
@@ -479,8 +477,3 @@
         %br
         \/ˈn<span style="text-decoration: underline;">u</span>.sit/ “he/she carries”
     %p One additional change that developed during this stage complicates most of the others: a voicing of unclustered voiceless consonants before an historical stressed vowel. As a result, nearly every one of the alternations above that lists an unvoiced consonant could also involve its voiced equivalent. For example, the /s ~ ç/ change can also appear as /z ~ ç/, as in /pi.ˈ<span style="text-decoration: underline;">z</span>a.ti/ “to write” ~ /ˈpi.<span style="text-decoration: underline;">ç</span>un/ “I write”, where <i>pizáti</i> comes from an earlier <i>pisáti</i>.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

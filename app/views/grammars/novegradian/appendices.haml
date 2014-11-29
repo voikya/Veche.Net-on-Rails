@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Додание"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Додание"
 
 = section "Colors" do
   %p Novegradian has nine basic color terms, compared to the eleven of English. A basic color term is the highest level of color terminology in a language, a term that cannot be encompassed by another larger term. For example, in English “crimson” is not a basic color term because the term “red” includes “crimson” as well as many other shades.
@@ -2912,8 +2910,6 @@
       %td= t("име", "ime", :linebreak => true)
       %td Common Slavic *jьmę "name"
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) A less formal variant of мати
@@ -2923,8 +2919,3 @@
 %p 5) Informal
 %p 6) Informal
 %p 7) The adjective mirrors the gender of the sibling. Therefore, братеве син means the son of a brother, and шестрин син is the son of a sister, while братева докьи means the daughter of a brother and шестрина докьи is the daughter of a sister.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Суезанье предложень"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Суезанье предложень"
 
 = section "Coordinating Conjunctions" do
   %p Novegradian has four coordinating conjunctions: #{t "и", "i"}, #{t "или", "íli"}, #{t "а", "a"}, and #{t "но", "no"}.
@@ -155,8 +153,3 @@
                      "who.{nom} beer-{acc.sg} love-{3sg}, who.{nom} Ø wine-{acc.sg}",
                      "Some love beer, some love wine."
   %p Though not a reduplicated conjunction, the complex expression #{t "не толкѣ... шенаким...", "ne tólkě... śenákim..."} “not only... but also...” uses the same format.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

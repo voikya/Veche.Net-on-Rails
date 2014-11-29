@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Емваза со поредиям словес"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Емваза со поредиям словес"
 
 = section "The Particle же" do
   %p The particle #{t "же", "źe"} has two functions: simple emphasis and contrastive emphasis.
@@ -47,8 +45,3 @@
   %p VOS: Strong emphasis on the quality of the verb and the object’s relation to the subject: Лублун тебе яс “I <em>definitely</em> love you”
   %p OVS: Strong emphasis on the identity of the object and its relation to the subject: Тебе лублун яс “<em>You</em> I truly love”
   %p Note, however, that the presence of any additional elements complicates the meanings. When a topical marker is present, there is a tendency for it to go on the most strongly emphasized word, but by no means an absolute one. This is highly context-dependent.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

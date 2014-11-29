@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Ймѣни"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Ймѣни"
 
 %p As in other Slavic cultures, an individual’s name consists of three parts: a given name, a patronymic, and a family name.
 
@@ -253,8 +251,3 @@
   %p By analogy with this pattern, foreign names must do the same, even though non-Novegradian last names are usually not adjectives: #{t "Яс повастале Ўинстона Чурчила", "Iás povástale Wínstona Čúrčila"} “I met Winston Churchill”. This only applies when the end of the name conforms to Novegradian morphology; otherwise it is indeclinable.
   %p Masculine names will always decline according to whatever declension seems the most appropriate given the structure of the name; thus names ending in a consonant will usually take the fourth declension, names ending in /a/ will take the first, and so on. This applies even when the two parts of the name belong to two completely different declensions; for instance, #{t "Бараке Обама", "Bárake Obáma"} has the accusative form #{t "Барака Обамѣ", "Báraka Obámě"}, with the first name declining like a fourth declension noun and the surname as a first declension noun.
   %p With feminine names, the situation is more complicated. If the name ends in /a/ or /i/ (i.e., it clearly belongs to either the first, second, or fifth declensions), then it is fully capable of declining. If it ends in anything else, it is undeclinable; a name like “Elizabeth” becomes #{t "’Елизабет", "Elízabet"} in all cases. Notice that non-declining names like “Elizabeth” do not need to take any case endings at all, while declining masculine names like “Michael” must take fourth declension endings: #{t "Майкле", "Máikle"}. Feminine surnames ending in a consonant will generally decline normally, however: the accusative of #{t "’Елизабет Коллинсе", "Elízabet Kóllinse"} is thus #{t "’Елизабет Коллинса", "Elízabet Kóllinsa"}, with a non-declining first name and a declining surname.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

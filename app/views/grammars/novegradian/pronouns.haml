@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Окағьакьи ймѣни"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Окағьакьи ймѣни"
 
 = section "Definitions and Features" do
   %p Pronouns are a diverse class of wordforms that syntactically fill the same role as nouns (hence the term “pronoun”). They serve as standins for other nouns or noun phrases, known as antecedents, that have been previously mentioned or that can otherwise be determined from context.
@@ -532,46 +530,46 @@
         “no one”
     %tr
       %th Nom.
-      %th= t("цеш", "céś", :linebreak => true)
-      %th= t("кош", "kóś", :linebreak => true)
-      %th= t("нецой", "nécoi", :linebreak => true)
-      %th= t("нехой", "néhoi", :linebreak => true)
+      %td= t("цеш", "céś", :linebreak => true)
+      %td= t("кош", "kóś", :linebreak => true)
+      %td= t("нецой", "nécoi", :linebreak => true)
+      %td= t("нехой", "néhoi", :linebreak => true)
     %tr
       %th Gen.
-      %th= t("цевош", "cevóś", :linebreak => true)
-      %th= t("ковош", "kovóś", :linebreak => true)
-      %th= t("нецево", "necevó", :linebreak => true)
-      %th= t("неково", "nekovó", :linebreak => true)
+      %td= t("цевош", "cevóś", :linebreak => true)
+      %td= t("ковош", "kovóś", :linebreak => true)
+      %td= t("нецево", "necevó", :linebreak => true)
+      %td= t("неково", "nekovó", :linebreak => true)
     %tr
       %th Acc.
-      %th= t("цеш", "céś", :linebreak => true)
-      %th= t("ковош", "kovóś", :linebreak => true)
-      %th= t("нецево", "necevó", :linebreak => true)
-      %th= t("неково", "nekovó", :linebreak => true)
+      %td= t("цеш", "céś", :linebreak => true)
+      %td= t("ковош", "kovóś", :linebreak => true)
+      %td= t("нецево", "necevó", :linebreak => true)
+      %td= t("неково", "nekovó", :linebreak => true)
     %tr
       %th D/I
-      %th= t("цемуш", "cemúś", :linebreak => true)
-      %th= t("комуш", "komúś", :linebreak => true)
-      %th= t("нецему", "necemú", :linebreak => true)
-      %th= t("некому", "nekomú", :linebreak => true)
+      %td= t("цемуш", "cemúś", :linebreak => true)
+      %td= t("комуш", "komúś", :linebreak => true)
+      %td= t("нецему", "necemú", :linebreak => true)
+      %td= t("некому", "nekomú", :linebreak => true)
     %tr
       %th Par.
-      %th= t("цевош", "cevóś", :linebreak => true)
-      %th= t("ковош", "kovóś", :linebreak => true)
-      %th= t("нецево", "necevó", :linebreak => true)
-      %th= t("неково", "nekovó", :linebreak => true)
+      %td= t("цевош", "cevóś", :linebreak => true)
+      %td= t("ковош", "kovóś", :linebreak => true)
+      %td= t("нецево", "necevó", :linebreak => true)
+      %td= t("неково", "nekovó", :linebreak => true)
     %tr
       %th Loc.
-      %th= t("цемеш", "cémeś", :linebreak => true)
-      %th= t("кемеш", "kémeś", :linebreak => true)
-      %th= t("нецем", "nécem", :linebreak => true)
-      %th= t("некем", "nékem", :linebreak => true)
+      %td= t("цемеш", "cémeś", :linebreak => true)
+      %td= t("кемеш", "kémeś", :linebreak => true)
+      %td= t("нецем", "nécem", :linebreak => true)
+      %td= t("некем", "nékem", :linebreak => true)
     %tr
       %th Lat.
-      %th= t("цеш", "céś", :linebreak => true)
-      %th= t("кош", "kóś", :linebreak => true)
-      %th= t("нецой", "nécoi", :linebreak => true)
-      %th= t("нехой", "néhoi", :linebreak => true)
+      %td= t("цеш", "céś", :linebreak => true)
+      %td= t("кош", "kóś", :linebreak => true)
+      %td= t("нецой", "nécoi", :linebreak => true)
+      %td= t("нехой", "néhoi", :linebreak => true)
   %p The indefinite and negative adverbs are formed the same way, but do not decline.
   %table
     %tr
@@ -908,8 +906,6 @@
       %td= t("ти", "tí", :linebreak => true)
   %p These are then followed immediately by a form of цой/хой. Note that if these pronouns are supposed to appear in the nominative (which they most frequently are), they appear as #{t "це", "ce"} or #{t "ко", "ko"}, respectively, because the (historical) <i>-to-</i> element in them drops. The two halves of the relativizer are written as one word, hyphenated: #{t "тѣх-ко", "tě́h-ko"} “those.#{abbrev 'gen'}-who.#{abbrev 'nom'}”.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The distinct neuter singular form #{t "оно", "onó"} is sometimes seen in older texts, but is now considered archaic.
@@ -919,8 +915,3 @@
 %p 5) For instance, the word #{t "суде", "sudé"} “here” is a Novegradian innovation based on #{t "куде", "kudé"} “where?”, the K/S/T pattern, and influence from other words such as #{t "оцуда", "ocúda"} “hence/from here”. Had this word developed regularly from Common Slavic *sьde, it would have appeared in Novegradian as #{t "**шиде", "śidé"} (cf. Russian где “where?”, здесь “here”).
 %p 6) In the case of цой “what?” and хой “who?”, no *-to element was added in Common Slavic; the interrogative stems descend from CS *čьto, *kъto, while the indefinite stems descend from CS *čь-, *kъ- more directly. The yod in койда “when?” results from the lenition of ON *коғда, and was lost in the indefinite form for prosodic reasons.
 %p 7) Due to the pronunciation, in informal writing imitating speech this construction is usually written as a single word and with the letter А: #{t "наша дужа", "naśá duźá"}. This is little risk of confusion with the possessive adjective наш because the possessive adjectives in general are very rarely used in speech. Therefore, in the written standard, “no person” is не ша дужа while “our person” is наша дужа, while colloquially “no person” is наша дужа and “our person” is дужа о нас (semiformal) or дужа онас (informal).
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

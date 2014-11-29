@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Морпољогя деянь"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Морпољогя деянь"
 
 = section "Features" do
   %p Novegradian is a highly fusional inflecting language, meaning information tends to be densely packed in a relatively small set of affixes. A single suffix #{t "-м", "-m"}, for instance, may mark a verb as being in the present tense and as having a subject that is both first person and singular.
@@ -1419,8 +1417,6 @@
     %li e → ě: #{t "остейкьи", "ostéikji"} “be supplied (#{abbrev 'pf'})” → #{t "остѣгати", "ostěgáti"} “be supplied (#{abbrev 'impf'})”
   %p -зуати → -зивати falls into the first category, though it has been obscured by subsequent sound changes in Novegradian. The source of this change is more obvious in Medieval Novegradian, where the perfective base was #{t "-звати", "-zvati"}.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) There is also a secondary aspect distinction of determinate/indeterminate only see among verbs of motion, as well as various tertiary distinctions seen across various individual verbs; this latter group is more typically considered derivational or lexical, due its isolated, non-systemic presence.
@@ -1429,8 +1425,3 @@
 %p 4) Originally, “redden (#{abbrev 'intr'})”
 %p 5) Originally, “redden (#{abbrev 'tr'})”
 %p 6) Смиятиш is a middle voice verb which takes the suffix <i>-ś</i>. The middle voice will be discussed later on. It is listed here because of the unpredictable alternation between и and ѣ.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

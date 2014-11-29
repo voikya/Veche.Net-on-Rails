@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Словотуорекьая морпољогя"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Словотуорекьая морпољогя"
 
 %p Derivational morphology is a very important class of word-formation dealing with the actual process of creating new lexical items. Whereas most of the morphology thus far discussed concerns taking existing words and modifying them by adding affixes to a stem, derivational morphology describes where these stems come from in the first place.
 %p Throughout this section, affixes and other processes will be described as being either productive or unproductive. Productive processes are those which are still actively at work in the language, that could potentially be applied to many new roots and all speakers would immediately understand the novel meaning of the result. One of the most productive derivational affixes in modern English is -ness, which serves to nominalize an adjective. An unproductive process was likely once able to generate new words, but no longer can; it merely appears as a relic on a number of words, often with a somewhat unclear distribution across words and function. An English example might be -end, seen in words such as “reverend” and “dividend”, but which is virtually useless in terms of coining new expressions.
@@ -1785,8 +1783,6 @@
                   "#{t "винолубе", "vinolúbe"}<br>“wine connoisseur”" ] ]
     = render 'derivation_table', :headers => headers, :words => words
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Вуисопанти, in turn, is increasingly giving way to the fully native #{t "далница", "dálnica"}.
@@ -1797,8 +1793,3 @@
 %p 6) This compound includes the now-defunct stem *lět- for “year”.
 %p 7) The Baltic Sea itself is known in Novegradian as #{t "Варижеское море", "Variźeskóie móre"} “Varangian Sea”, but the adjective балтицеске has been loaned for most other purposes.
 %p 8) Compare, for instance, #{t "ойсти", "óisti"} “leave” and #{t "отѣйсти", "ótěisti"} “walk away”, both from #{t "исти", "ísti"} “go, walk”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

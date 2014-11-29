@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Синтаксе прилежимих со придѣйѕам"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Синтаксе прилежимих со придѣйѕам"
 
 = section "Types of Adjectives" do
   %p Adjectives are any words that directly modify a noun and decline in agreement with it in gender, number, and case. This includes qualitative adjectives (describing a comparable quality—1), relative adjectives (describing non-comparable qualities—2), ordinals (describing location in a sequence—3), possessives (indicating possession, much like the genitive—4), and participles (adjectivalized verbs—5).
@@ -702,15 +700,8 @@
                        "he.{nom} arrive.{pf}-{past}-{masc} in end-{loc.sg} {q}?",
                        "He finally showed up?"
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) In Old Novegradian, these possessive adjectives were always indefinite. However, as they began to lose their productivity, their declension was brought more in line with other adjectives, and since most surviving possessive adjectives were found in place names, they naturally became definite. Modern Novegradian dialects that still have productive possessive adjectives vary in their usage; some maintain the older pattern of always declining as indefinite adjectives, while others may freely switch between definite and indefinite just as any other adjective would.
 %p 2) This ending is typically considered to be a case of “ending spreading” rather than a true dual adjective declension, where the dual ending -ама spreads from the noun to the adjective, replacing the very similar adjectival plural -ами. However, it is never used when the noun lacks a distinct dual (and there is therefore nowhere for the ending to “spread” from).
 %p 3) It is actually the same ending that the fourth declension dative/instrumental ending for humans, #{t "-ой", "-oi"}, is derived from, although думове underwent a different phonetic development due to its reanalysis as an adverb. The form #{t "думой", "dumói"} is seen in some dialects as well, but is nonstandard.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Novegradian Language — #{@current_page[:title]}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Дискурсни цестици"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Дискурсни цестици"
 
 = section "Introduction" do
   %p Discourse markers include a wide variety of particles that operate at or above the sentence level, and are responsible for expressing numerous qualities regarding the course of the discussion and the speaker’s attitude and assumptions about what is being said. Their meaning is therefore highly dependent on context, so all of the definitions given below are approximate.
@@ -319,8 +317,3 @@
       Example: Ну-ти иди! “C’mon, get moving already!”
       %br
       Example: Затули-ти дуери! Кладно! “Close the door, will you? It’s cold!”
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'
