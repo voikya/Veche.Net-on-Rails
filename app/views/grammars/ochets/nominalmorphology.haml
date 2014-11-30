@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Һанцәвыс моорполоогиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Һанцәвыс моорполоогиа"
 
 = section "Structure of the Noun" do
   %p Očets is a predominantly agglutinating language with a high morpheme-to-word ratio. That being said, the exact lines between morphemes can at times be hard to identify due to various forms of inter-morpheme interactions.
@@ -2380,8 +2378,6 @@
   %p The positive forms show harmony agreement, while the negative forms lack it entirely. However, the front vowel form of the positive contrastive #{underlying "*-qA"} is -ǧe, not the expected **qa (← *qe).
   %p These clitics are added as-is to a word ending in a vowel; if the word ends in a consonant, an epenthetic schwa is always inserted. Compare #{t "шииуулакаи", "šiiuulakai"} “my friend as well” and #{t "иуулəкаи", "iuuləkai"} “a friend as well”.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) This very complex behavior has to do with the fact that in origin, the Očets ablative case is both a compound case built upon an older case (i.e., the genitive), and was at one time phrasal. It is believed to have come from pre-Proto-Ob *qaut-Vs, the instrumental form of *qaut- “way, path, road”, which was preceded by a noun in the genitive case with the sense “by way of X”. In Proto-Ob, the ablative suffix was something like *da-t-as (← *da-qt-as) for animate nouns and *tsi-s-es (← *di-qt-es) for inanimate nouns, with the different vowel patterns emerging from the two different inherited forms of the genitive suffix.
@@ -2392,8 +2388,3 @@
 %p 6) Sometimes also known as “persistent”.
 %p 7) Sometimes also known as “non-persistant” or as “minor cases”.
 %p 8) This is the reason why many Novegradianized Očets surnames begin with /o/. For instance, the surname #{t "Отазатоу", "Otázatou"} derives from Očets #{t "һотазата", "hotazata"} “descendents/clan of Azat”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Форсәвыс моорполоогиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Форсәвыс моорполоогиа"
 
 = section "Personal Pronouns" do
   = section "Basic Personal Pronouns" do
@@ -499,8 +497,6 @@
 = section "Pro-Verbs" do
   %p Očets has a single verbal root, #{underlying "*-has-"}, which is capable of standing in for another verb as a pro-form; it has the basic meaning “to do what?”. It is always intransitive, and conjugates according to the Conjugation Ia pattern (discussed in the following chapter): #{t "шыыгасак?", "šyygasak?"} “What did you do?”<sup>6</sup>.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The long vowel in воо and most of its declined forms is the result of the contraction of early Proto-Ob *wu-ha-, a compound pronoun. In the genitive, however, this second element was replaced by the genitive morpheme: *wu-da.
@@ -509,8 +505,3 @@
 %p 4) Literally “word”.
 %p 5) Literally “one”.
 %p 6) Underlyingly #{underlying "šIn{+4}-k{+3}-has{0}-Àk{-1}"}, where #{underlying "*šIn{+4}"} is a marker of the past definite tense, and both #{underlying "*k{+3}"} and #{underlying "*Àk{-1}"} are markers of a second person singular subject.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

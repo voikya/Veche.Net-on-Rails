@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Куучат"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Куучат"
 
 = section "The Alphabet" do
   %p Očets uses a modified form of the Cyrillic alphabet with 34 letters, as shown in the following table. The orthography bears many similarities to other languages of Siberia. Alongside each character are the letter’s standard transliteration (as used in this document), primary phonetic value, and name.
@@ -221,8 +219,3 @@
   %p Očets spelling is quite regular, with a close to one-to-one correspondence between letters and phonemes. The most common exception is и, which can represent both the vowel /i/ and the semivowels /j/. When acting as a semivowel, it may be written as й, although this is nonstandard and often seen as a Novegradianism. The other semivowel, /w/, coopts the Cyrillic letter normally used to represent /v/. Long vowels and geminate consonants are indicated by doubling the letter (дд /dd/, аа /a:/). Labialized velars are indicated with a normal velar followed by в: кво /k(ʷ)o/ (cf. the diphthong in куо /kuo/).
   %p The spelling system fairly strictly follows the phonetic principle; words are spelled as they are pronounced, ignoring their etymology or the structure of the root. Word-internal sandhi, ablaut, and other types of alterations are always reflected in spelling. Sandhi occurring between multiple words, however, usually is not marked except in certain specific circumstances, which will be described later.
   %p Novegradian words that have been fully nativized usually occur with a native spelling. More recent loans, however, may retain their Novegradian spelling, even if it uses letters not normally used in Očets. The extent to which individuals use nativized spellings or preserve Novegradian conventions varies significantly. However, non-nativized words do not show any sort of sandhi orthographically, even if it appears in speech.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

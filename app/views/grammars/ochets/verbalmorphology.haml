@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Лывауссыс моорполоогиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Лывауссыс моорполоогиа"
 
 = section "Introduction to the Očets Verb" do
   = section "Verb Structure" do
@@ -2894,8 +2892,6 @@
           %br
           “he was not chopping wood”
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The irregularity makes the vowel unrecoverable, though etymologically this would likely be /e/, as this root appears to be cognate to #{t "фиһеин", "fihein"} “stand” (root *-hein-).
@@ -2907,8 +2903,3 @@
 %p 7) Očets has no means of forming active participles from transitive verbs that can be used with inanimate nouns. Animate nouns use the split-transitive for active participles and the passive for passive participles, while inanimate nouns use the split-transitive for passive participles exclusively.
 %p 8) This unexpected agreement is echoed in the case marking of nouns serving as arguments to the verb. In a sentence such as “Ivan said X” (literally “X was said by Ivan”, the agent (Ivan) is marked with the instrumental case, yet it still takes verbal agreement.
 %p 9) *an-kal-a → *aŋ-kal-a → *aŋ-al-a → *aŋ-l-aa → *a-ǧl-aa
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

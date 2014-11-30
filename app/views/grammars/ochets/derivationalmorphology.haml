@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Выслываус моорполоогиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Выслываус моорполоогиа"
 
 = section "Introduction" do
   %p Derivational morphology describes the means by which new lexemes can be created from more primitive roots. Očets inherited a derivational system that was very unbalanced, with an extensive system of verbal formation, but a rather limited set of nominal formants; creation of new nominals was limited almost entirely to compounding and genitive constructs. However, likely under the influence of nearby Uralic languages, Očets has innovated sizeable set of pseudo-affixes, emerging from compounds where one element has been bleached of its original lexical meaning.
@@ -514,13 +512,6 @@
     %p Novegradian middle-voice verbs can also be borrowed. The middle-voice infinitive ending -тиш becomes Očets #{t "-тис", "-tis"}, with the final -s also interpreted as an inanimate objective case ending. Since these verbs are always intransitive, the same technique is used as intransitive active-voice verbs: #{t "бритис вешшау(ш)", "britis weššau(š)"} “I am shaving” (lit. “I am doing a shaving”).
     %p These two support verbs in periphrastic loan constructions, сывауҥ and савауҥ, are not used elsewhere in the language, although they are clearly related to #{t "лывауҥ", "lywauŋ"} “make, create”.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) The word шеен itself is meaningless. It is simply a “pluralized” form of the root of the verb “to eat”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

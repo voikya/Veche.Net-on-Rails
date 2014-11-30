@@ -1,38 +1,25 @@
-$background_color: #9999CC;
-$header_color: #333366;
-$divider_color: #333366;
-$footer_color: #DBC9FF;
+$background_color: #333366;
+$header_color: #FFFFFF;
 $link_color: #666699;
 $table_border_bottom_right: #8989BC;
 $table_border_top_left: #7979AC;
+$table_background_color: #9999CC;
 
 body.grammar.ochets {
-  background-color: $background_color;
-  background-image: image-url('ochets/bg.png');
+  header {
+    background-color: $background_color;
 
-  #footer {
-    color: $footer_color;
-  }
-
-  h1 {
-    color: $header_color;
+    h1, p {
+      color: $header_color;
+    }
   }
 
   a {
     color: $link_color;
   }
 
-  hr {
-    border-top: 3px solid $divider_color;
-    border-bottom: 1px solid $divider_color;
-
-    &.footnote {
-      border: solid 1px $divider_color;
-    }
-  }
-
   td.label, td.arrow, th {
-    background-color: $background-color;
+    background-color: $table_background_color;
   }
 
   td.assimilated {

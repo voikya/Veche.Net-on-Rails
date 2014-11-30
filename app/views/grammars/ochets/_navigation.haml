@@ -1,8 +1,0 @@
-%p.nav
-  - if @previous_page
-    = link_to "Back to #{@previous_page[:title]}".html_safe, ochets_grammar_page_path(@previous_page[:doc])
-    —
-  = link_to "Return to Index", ochets_index_path
-  - if @next_page
-    —
-    = link_to "Continue to #{@next_page[:title]}".html_safe, ochets_grammar_page_path(@next_page[:doc])

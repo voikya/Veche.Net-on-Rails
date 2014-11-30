@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Каноҥус моорполоогиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Каноҥус моорполоогиа"
 
 = section "Očets Adjective Classes" do
   %p Adjectives are words which modify nouns and provide additional information about the nouns they modify. They can describe both physical qualities (“long”, “heavy”, “white”, “young”, etc.) and abstract qualities (“smart”, “happy”, etc.).
@@ -183,15 +181,8 @@
         “the tallest [wooded] mountain”
       %p The former contains the anaphoric demonstrative қан, and so is a normal superlative with no physical restrictions, only contextual ones: the tallest mountian on Earth, the tallest mountain I’ve seen, the tallest mountain I’ve been on, etc. The latter contains the distal demonstrative тон, and so is limited in scope to what can be seen or pointed at from the location of the speaker: the tallest mountain in sight, that tallest mountain in sight that I’ve been on, etc.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) However, this agreement can be complex. This will be discussed later.
 %p 2) Literally “iron road”, from һеҕ “iron” + қаут “road”.
 %p 3) Literally “the road is [made] from iron”.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

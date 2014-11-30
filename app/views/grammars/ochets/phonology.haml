@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Воонологиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Воонологиа"
 
 = section "Vowels" do
   = section "Phonemes" do
@@ -547,13 +545,6 @@
   = section "Foreign Loans" do
     %p For the last several hundred years, Očets has been not been a socially pretigious language. First Komi, then Russian, and now Novegradian have served the lingua franca among the people of northwest Siberia. Novegradian influence has been especially strong over the last century, and a significant amount of borrowings from Novegradian over that period have not been fully integrated. They defy principles of vowel harmony, contain clusters not found in native words, and sometimes these loans may even be pronounced with a Novegradian accent and with Novegradian phonemes (especially among younger urban speakers who use Novegradian frequently in their daily lives).
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Since the Yeniseian languages show no signs of vowel harmony, this is likely an Ob family innovation. Its development was probably influenced by the many nearby Uralic and Turkic languages with productive harmony.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Деуссыс моорполоогиа"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Деуссыс моорполоогиа"
 
 = section "Structure of the Quantifier" do
   %p Quantifiers are words that define the scope or quantity of a noun. They include basic determiners such as “all”, “some”, “many”; cardinal numerals; units of solid and liquid measurement as well as weight, such as “liter (of)”, “gram (of)”, “gallon (of)”; and ad-hoc units of measurement, such as “cups (of)”, “bottles (of)”, “barrels (of)”. Other types of measurement, such as length, cannot act as quantifiers in Očets unless modified by another noun (e.g., “five miles of road”).
@@ -1143,15 +1141,8 @@
     %p For the most part the distributive numerals are formed with the expected distributive prefix sa-/se-. However, there are a few exceptional forms. The most obvious is the additional of a non-palatalizing suffix #{underlying "*-Aŋ"} to all of the animate forms, which would appear to be a plural marker.
     %p These forms serve as animate and inanimate quantifiers, while the inanimate forms alone can also serve as nouns (taking either animate or inanimate endings as appropriate). The only exceptions are of course the use of #{t "сееден", "seeden"} and #{t "саҕыын", "saǧyyn"} as nouns rather than <i>saŋquus</i> and <i>saŋkyn</i>.
 
-%p &nbsp;
-
 %hr.footnote
 
 %p 1) Literally “palm”.
 %p 2) From Novegradian #{t "болише", "bóliśe"} ‘more’.
 %p 3) From Novegradian #{t "менише", "méniśe"} ‘less’.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'

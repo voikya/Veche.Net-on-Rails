@@ -1,7 +1,5 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Чиичеи"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Чиичеи"
 
 = section "Introduction" do
   %p Očets (also known as <i>Hočets Seie</i> “Očets Tongue” or <i>Šteie</i> “Our Language”, or in Novegradian #{t "очецескей лизике", "očéceskei lizíke"}) is the language of the Očets people of northwestern Siberia, primarily in the Oraltouskáia Óblosti of the Republic of Novegrad. In older texts they are sometimes know as Očaks (Novegradian #{t "очаке", "óčake"}, plural #{t "очаци", "óčaci"}). There are approximately 40,000 speakers, mostly in the countryside, but there are a number of sizable cities with large Očets minorities.
@@ -21,7 +19,7 @@
   %p Parentheses indicate forms not descended from the corresponding Proto-Ob-Yeniseian root. This generally indicates either borrowing from another language, or a complex form based on native structures (e.g., Ket “two from ten”, Kott “five and three”, both meaning “eight”).
   %table
     %tr
-      %th 
+      %th
       %th Očets
       %th Khused
       %th Ket
@@ -97,7 +95,7 @@
       %td qō
       %td hāga
       %td *gau-
-  
+
 = section "History" do
   %p Due to the paucity of written records, it is difficult to trace the prehistory of the Očets people. Most current models of population movements are based on archeological and linguistic evidence (the latter mostly being in the form of toponyms and hydronyms containing Ob-Yeniseian elements). Other techniques, such as genetic analysis and comparative mythology, are still in their infancy when it comes to this region.
   %p It is generally held that the ancestors of the Ob and Yeniseian peoples, arrived in central Siberia from further east (which appears to be reflected in some traditional stories of the Očets people as well).
@@ -123,8 +121,3 @@
   %p Phonetic transcriptions will appear in [square brackets], while phonemic transcription appear in /forward slashes/, as per linguistic convention. All phonological transcriptions use the International Phonetic Alphabet (IPA).
   %p Once more of the morphology has been introduced and usage is being examined more in depth, interlinear glosses will be used alongside transcriptions and translations. These provide a morpheme-by-morpheme breakdown of a given Očets word or phrase. Multiple morphemes are separated by hyphens, while a morpheme conveying multiple meanings at once will have those meanings separated by a period. Non-lexical morphemes appear in <abbr title="Example">smallcaps</abbr>. For instance, the objective plural of the word “book” would be indicated <i>book</i>-#{abbrev 'pl'}-#{abbrev 'obj'}. Null morphemes are indicated with Ø; however, this is usually only done to draw attention to the fact that a particular morpheme has zero surface realization.
   %p Hypothetical word forms, in particular reconstructed forms of a proto-language, will be preceded by a single *asterisk. Non-existent forms, used for instance to indicate an exception to a pattern, will be preceded by **two asterisks.
-
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'
