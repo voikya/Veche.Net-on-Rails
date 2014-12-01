@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RubySunrise (0.3)
+      tzinfo
     actionmailer (3.2.16)
       actionpack (= 3.2.16)
       mail (~> 2.5.4)
@@ -56,6 +58,8 @@ GEM
     haml (4.0.5)
       tilt
     hike (1.2.3)
+    hoe (3.13.0)
+      rake (>= 0.8, < 11.0)
     i18n (0.6.11)
     journey (1.0.4)
     jquery-rails (3.1.2)
@@ -97,6 +101,8 @@ GEM
     rake (10.4.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    rubystats (0.2.3)
+      hoe (>= 1.7.0)
     sass (3.4.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -125,6 +131,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RubySunrise
   better_errors
   capistrano
   coffee-rails (~> 3.2.1)
@@ -133,5 +140,6 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 3.2.16)
+  rubystats
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

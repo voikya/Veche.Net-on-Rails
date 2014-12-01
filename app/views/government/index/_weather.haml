@@ -1,0 +1,20 @@
+- data = @weather.for(location)
+- img = "weather_#{data[:weather]}#{"_night" if @weather.nighttime?(location)}.png"
+.weather
+  %h2
+    - case @language
+      - when :en
+        = case location
+          - when :novegrade then "Novegráde Velíkei"
+          - when :neugrade  then "Néugrade"
+      - when :nv
+        = case location
+          - when :novegrade then "Новеграде Великей"
+          - when :neugrade  then "Неуграде"
+  = image_tag "government/#{img}", :alt => data[:weather].to_s.titleize
+  %table
+    %tr
+      %td.current-temp{:rowspan => 2}= "#{data[:current]}°C"
+      %td.high-temp= "#{data[:high]}°C"
+    %tr
+      %td.low-temp= "#{data[:low]}°C"

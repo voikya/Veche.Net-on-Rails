@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %title= yield :title
+    = stylesheet_link_tag 'application', :media => 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body.government{:class => @language.to_s}
+    #content
+      %header
+        #banner-left
+        #banner-right
+        #languages
+          - if @translation_available
+            - if @language == :en
+              %a{:href => request.env['PATH_INFO'].sub(/\/en/, '/nv')}
+                Новеградеская верся
+                %br
+                Novegradian version
+            - elsif @language == :nv
+              %a{:href => request.env['PATH_INFO'].sub(/\/nv/, '/en')}
+                English version
+                %br
+                Английская верся
+      %nav.top
+        = render "layouts/government_top_nav"
+      #inner-container
+        #left-column
+          - if @language == :en
+            = render "government_left_nav"
+          - elsif @language == :nv
+            = render "government_left_nav_nov"
+          #language-banner
+            = link_to novegradian_index_path do
+              = image_tag "government/languagebanner.png", :alt => (@language == :en ? "Introduction to the Novegradian Language" : "Востебленье во новеградескуюн лизикен")
+
+        %article= yield
+
+      #footer
+        © 2006-#{Time.now.year} Martin Posthumus
+        = surround "(", ")" do
+          = link_to (@language == :en ? "Contact" : "Приявитиш"), contact_path
+        \/
+        = link_to (@language == :en ? "Recent Updates" : "Недамни Оноуленьи"), updates_path
+        \/
+        = link_to (@language == :en ? "What is the Republic of Novegrad?" : "Цой ест Республика-та Новеградеская?"), government_about_path
+        \/
+        = link_to (@language == :en ? "Main Veche.Net Page" : "Глауная Страница Veche.Net"), root_path

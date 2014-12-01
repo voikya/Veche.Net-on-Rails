@@ -1,0 +1,6 @@
+- article.set_language(@language)
+- read_more_text = (@language == :en ? "More..." : "Егье по дробем...")
+%section
+  %h2= article.headline
+  %p= article.summary
+  %p.read-more= link_to read_more_text, government_news_path(:article => article.id)

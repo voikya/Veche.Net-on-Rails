@@ -1,0 +1,328 @@
+$government_header_color: #003366;
+$link_color: #1171A4;
+$ref_color: #3399CC;
+
+body.government {
+  margin: 8px;
+  font: normal 13px Arial, sans;
+  color: black;
+  background-color: #EEEEEE;
+  text-align: center;
+  min-height: 100%;
+
+  #content {
+    background-color: #B0D0EB;
+    margin: 0 auto;
+
+    header {
+      width: 100%;
+      height: 276px;
+
+      #banner-left {
+        position: absolute;
+        height: 276px;
+        width: 900px;
+        background-image: image-url('government/banner_left.png');
+        cursor: pointer;
+      }
+
+      #banner-right {
+        float: right;
+        height: 276px;
+        width: 785px;
+        background-image: image-url('government/banner_right.png');
+      }
+
+      #languages {
+        position: absolute;
+        top: 225px;
+        right: 35px;
+        z-index: 10;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-style: italic;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    nav.top {
+      position: absolute;
+      top: 265px;
+      right: 20px;
+      z-index: 10;
+
+      a {
+        display: inline-block;
+        width: 128px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: $government_header_color;
+        text-decoration: none;
+        font-size: large;
+        padding: 5px 0px;
+
+        &:link, &:visited {
+          background: #75a5de; /* Old browsers */
+          background: -moz-linear-gradient(-45deg, #75a5de 0%, #1c63c5 50%, #2a6eca 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#75a5de), color-stop(50%,#1c63c5), color-stop(100%,#2a6eca)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(-45deg, #75a5de 0%,#1c63c5 50%,#2a6eca 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(-45deg, #75a5de 0%,#1c63c5 50%,#2a6eca 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(-45deg, #75a5de 0%,#1c63c5 50%,#2a6eca 100%); /* IE10+ */
+          background: linear-gradient(135deg, #75a5de 0%,#1c63c5 50%,#2a6eca 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75a5de', endColorstr='#2a6eca',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+
+        &:hover {
+          background: #3f81d4; /* Old browsers */
+          background: -moz-linear-gradient(-45deg,  #3f81d4 0%, #77a6e1 50%, #d4e4f6 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3f81d4), color-stop(50%,#77a6e1), color-stop(100%,#d4e4f6)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(-45deg,  #3f81d4 0%,#77a6e1 50%,#d4e4f6 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(-45deg,  #3f81d4 0%,#77a6e1 50%,#d4e4f6 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(-45deg,  #3f81d4 0%,#77a6e1 50%,#d4e4f6 100%); /* IE10+ */
+          background: linear-gradient(135deg,  #3f81d4 0%,#77a6e1 50%,#d4e4f6 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f81d4', endColorstr='#d4e4f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+
+        &.current:link, &.current:visited {
+          background: #3f7fd4; /* Old browsers */
+          background: -moz-linear-gradient(-45deg,  #3f7fd4 0%, #061948 50%, #162f61 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3f7fd4), color-stop(50%,#061948), color-stop(100%,#162f61)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(-45deg,  #3f7fd4 0%,#061948 50%,#162f61 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(-45deg,  #3f7fd4 0%,#061948 50%,#162f61 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(-45deg,  #3f7fd4 0%,#061948 50%,#162f61 100%); /* IE10+ */
+          background: linear-gradient(135deg,  #3f7fd4 0%,#061948 50%,#162f61 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f7fd4', endColorstr='#162f61',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+          color: white;
+        }
+      }
+    }
+  }
+
+  #inner-container {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  #left-column {
+    float: left;
+    width: 210px;
+    margin-left: 10px;
+
+    nav.left {
+      border-top-right-radius: 10px;
+      border: solid 1px #1C7DB4;
+      overflow: hidden;
+      background-color: #EFEFEF;
+      box-shadow: 5px 5px 5px #666666;
+
+      h1 {
+        background-color: #5BBDF6;
+        background-image: image-url('government/titlebar_nav.png');
+        background-repeat: no-repeat;
+        height: 31px;
+        width: 221px;
+        margin: 0;
+        padding: 10px 0 0 60px;
+        position: relative;
+        top: -1px;
+        left: -1px;
+        color: $government_header_color;
+        font-weight: normal;
+      }
+
+      ul {
+        list-style-image: image-url('government/dblarrow.png');
+        position: relative;
+        width: 209px;
+        top: -5px;
+        left: -12px;
+
+        a {
+          font: normal 14px Helvetica, Arial, sans;
+          text-decoration: none;
+
+          &:link, &:visited {
+            color: $link_color;
+          }
+
+          &:hover, &:active {
+            color: maroon;
+          }
+        }
+      }
+
+      hr {
+        height: 0px;
+        width: 200px;
+        margin-left: -25px;
+        border: solid 1px $link_color;
+      }
+    }
+  }
+
+  #language-banner {
+    margin-top: 30px;
+
+    img {
+      border: solid 1px #1C7DB4;
+      box-shadow: 5px 5px 5px #666666;
+    }
+  }
+
+  #history-banner {
+    border: solid 1px #1C7DB4;
+    height: 114px;
+    margin: 0px 10px 20px 10px;
+    background-color: #F1EDCF;
+    box-shadow: 5px 5px 5px #666666;
+
+    .left {
+      position: relative;
+      float: left;
+      height: 114px;
+      width: 100%;
+      background-image: image-url('government/historybanner_left.png');
+      background-repeat: no-repeat;
+    }
+
+    .right {
+      position: relative;
+      float: right;
+      height: 114px;
+      width: 224px;
+      background-image: image-url('government/historybanner_right.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  article {
+    margin-left: 240px;
+
+    .half-width-column {
+      float: left;
+      width: 45%;
+    }
+
+    .content-block {
+      border-top-right-radius: 10px;
+      border: solid 1px #1C7DB4;
+      overflow: hidden;
+      background-color: #EFEFEF;
+      margin: 0px 10px 20px 10px;
+      box-shadow: 5px 5px 5px #666666;
+
+      h1 {
+        background-color: #5BBDF6;
+        background-image: image-url('government/titlebar_arrow.png');
+        background-repeat: no-repeat;
+        height: 31px;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0 0 60px;
+        position: relative;
+        top: -1px;
+        left: -1px;
+        color: $government_header_color;
+        font-weight: normal;
+      }
+
+      h2 {
+        color: #1171A4;
+        font: bold 16px Helvetica, Arial, sans;
+        margin-top: 0;
+      }
+
+      .content-block-content {
+        padding: 10px;
+      }
+
+      p.read-more {
+        text-align: right;
+
+        a {
+          text-decoration: none;
+          color: #3399CC;
+
+          &:hover {
+            color: maroon;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    clear: both;
+    margin: 0px 50px 0px 50px;
+    padding: 20px 0px 30px 30px;
+    border-top: solid 2px $link_color;
+    text-align: left;
+    font: italic 13px Arial, sans;
+    color: #1171A4;
+
+    a {
+      text-decoration: none;
+
+      &:link, &:visited {
+        color: #3399CC;
+      }
+
+      &:hover, &:active {
+        color: maroon;
+      }
+    }
+  }
+
+  .weather {
+    display: block;
+    width: 45%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+
+    table {
+      margin: 0 auto;
+
+      td.current-temp {
+        font: bold 16px Arial, sans;
+        color: #1171A4;
+      }
+
+      td.high-temp {
+        font: normal 13px Arial, sans;
+        color: #990000;
+      }
+
+      td.low-temp {
+        font: normal 13px Arial, sans;
+        color: #3366FF;
+      }
+    }
+  }
+
+  .weather-description {
+    font-size: smaller;
+    clear: both;
+    margin: 10px;
+  }
+}
+
+/* Language overrides */
+body.government.nv {
+  #content header #banner-left {
+    background-image: image-url('government/banner_left_nov.png');
+  }
+
+  #content header #banner-right {
+    background-image: image-url('government/banner_right_nov.png');
+  }
+}

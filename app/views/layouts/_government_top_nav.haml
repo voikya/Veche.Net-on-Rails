@@ -1,0 +1,20 @@
+%span<>
+  = link_to (@language == :en ? "Home" : "Глауная"),                    |
+            government_index_path(:lang => @language),                  |
+            :class => ("current" if controller_name == 'index')         |
+%span<>
+  = link_to (@language == :en ? "State" : "Сударестуо"),                |
+            government_state_index_path(:lang => @language),            |
+            :class => ("current" if controller_name == 'state')         |
+%span<>
+  = link_to (@language == :en ? "Society" : "Обекьина"),                |
+            government_society_index_path(:lang => @language),          |
+            :class => ("current" if controller_name == 'society')       |
+%span<>
+  = link_to (@language == :en ? "Economy" : "Економика"),               |
+            government_economy_index_path(:lang => @language),          |
+            :class => ("current" if controller_name == 'economy')       |
+%span<>
+  = link_to (@language == :en ? "Publications" : "Публикацѣ"),          |
+            government_publications_index_path(:lang => @language),     |
+            :class => ("current" if controller_name == 'publications')  |

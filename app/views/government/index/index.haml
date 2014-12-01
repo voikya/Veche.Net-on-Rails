@@ -1,0 +1,35 @@
+.half-width-column
+  .content-block
+    - case @language
+      - when :en
+        %h1 News
+      - when :nv
+        %h1 Совѣшкьи
+    .content-block-content
+      - @news.each do |article|
+        = render :partial => 'article_summary', :locals => {article: article}
+
+.half-width-column
+  .content-block
+    - case @language
+      - when :en
+        %h1 Upcoming Events
+      - when :nv
+        %h1 Наступни Пробуикьи
+    .content-block-content
+      - @events.each do |article|
+        = render :partial => 'article_summary', :locals => {article: article}
+  #history-banner
+    = link_to government_society_history_path do
+      %span.left
+        %span.right
+  .content-block
+    - case @language
+      - when :en
+        %h1 Weather
+      - when :nv
+        %h1 Поврѣме
+
+    = render :partial => 'weather', :locals => {location: :novegrade}
+    = render :partial => 'weather', :locals => {location: :neugrade}
+    = render :partial => 'weather_display_time'

@@ -1,0 +1,34 @@
+.weather-description
+  - case @language
+    - when :en
+      - time = @weather.date.strftime('%H:00')
+      - zone = @weather.dst ? "Novegráde Velíkei Daylight Savings Time (UTC+4)" : "Novegráde Velíkei Standard Time (UTC+3)"
+      - date = @weather.date.strftime('%d %B %Y')
+      - diff = "#{@weather.date.minute} #{@weather.date.minute == 1 ? "minute" : "minutes"} ago"
+      %p Data last updated at #{time} #{zone} on #{date} (#{diff})
+    - when :nv
+      - time = @weather.date.strftime('%H:00')
+      - zone = @weather.dst ? "по лѣтеннѣѣм великоновегралескѣѣм врѣмене (UTC+4)" : "по великоновеградескѣѣм врѣмене (UTC+3)"
+      - date = @weather.date.strftime('%d ')
+      - date += case @weather.date.month |
+          when 1 then "леданѣ"           |
+          when 2 then "лутанѣ"           |
+          when 3 then "соканѣ"           |
+          when 4 then "траванѣ"          |
+          when 5 then "куѣтанѣ"          |
+          when 6 then "цервенѣ"          |
+          when 7 then "липенѣ"           |
+          when 8 then "шерпанѣ"          |
+          when 9 then "врѣсанѣ"          |
+          when 10 then "румѣнѣ"          |
+          when 11 then "листопада"       |
+          when 12 then "снѣженѣ"         |
+        end                              |
+      - date += " #{@weather.date.year}"
+      - diff = @weather.date.minute
+      - diff = "#{diff} " + case diff    |
+          when 1, 21, 31, 41, 51 then "минута" |
+          when (2..4), (22..24), (32..34), (42..44), (52..54) then "минутѣ" |
+          else "минут"                   |
+        end                              |
+      %p Кранейше раз оноулено во #{time} #{zone} на #{date} (#{diff} созада)
