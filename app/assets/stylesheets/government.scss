@@ -271,6 +271,18 @@ body.government {
           text-align: center;
         }
       }
+
+      a {
+        text-decoration: none;
+
+        &:link, &:visited {
+          color: #3399CC;
+        }
+
+        &:hover, &:active {
+          color: maroon;
+        }
+      }
     }
   }
 
