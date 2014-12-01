@@ -4,6 +4,70 @@ VecheNet::Application.routes.draw do
     scope ':lang' do
       get '/' => 'index#index', :as => 'government_index'
       get '/whatisthis' => 'index#about', :as => 'government_about'
+      get '/news' => 'index#news', :as => 'government_news'
+
+      scope '/state' do
+        get '/' => 'state#index', :as => 'government_state_index'
+        get '/president' => 'state#president', :as => 'government_state_president'
+        get '/ministers' => 'state#ministers', :as => 'government_state_ministers'
+        get '/veche' => 'state#veche', :as => 'government_state_veche'
+        get '/council_nations' => 'state#council_nations', :as => 'government_state_council_nations'
+        get '/judiciary' => 'state#judiciary', :as => 'government_state_judiciary'
+        get '/local' => 'state#local', :as => 'government_state_local'
+        scope '/capital' do
+          get '/' => 'capital#index', :as => 'government_capital_index'
+          get '/divisions' => 'capital#divisions', :as => 'government_capital_divisions'
+          get '/places_of_interest' => 'capital#places_of_interest', :as => 'government_capital_places_of_interest'
+          get '/transportation' => 'capital#transportation', :as => 'government_capital_transportation'
+          get '/history' => 'capital#history', :as => 'government_capital_history'
+        end
+        get '/divisions' => 'state#divisions', :as => 'government_state_divisions'
+        get '/republics' => 'state#republics', :as => 'government_state_republics'
+        get '/cities' => 'state#cities', :as => 'government_state_cities'
+        get '/city_map' => 'state#city_map', :as => 'government_state_city_map'
+        get '/symbols' => 'state#symbols', :as => 'government_state_symbols'
+        get '/geography' => 'state#geography', :as => 'government_state_geography'
+        get '/travel' => 'state#travel', :as => 'government_state_travel'
+        get '/holidays' => 'state#holidays', :as => 'government_state_holidays'
+        get '/foreign_relations' => 'state#foreign_relations', :as => 'government_state_foreign_relations'
+        get '/military' => 'state#military', :as => 'government_state_military'
+        get '/elections' => 'state#elections', :as => 'government_state_elections'
+      end
+
+      scope '/society' do
+        get '/' => 'society#index', :as => 'government_society_index'
+        get '/history' => 'society#history', :as => 'government_society_history'
+        get '/population' => 'society#population', :as => 'government_society_population'
+        get '/healthcare' => 'socety#healthcare', :as => 'government_society_healthcare'
+        get '/law_enforcement' => 'society#law_enforcement', :as => 'government_society_law_enforcement'
+        get '/education' => 'society#education', :as => 'government_society_education'
+        get '/culture' => 'society#culture', :as => 'government_society_culture'
+        get '/religion' => 'society#religion', :as => 'government_society_religion'
+        get '/language' => 'society#language', :as => 'government_society_language'
+        get '/finland' => 'society#finland', :as => 'government_society_finland'
+        get '/estonia' => 'society#estonia', :as => 'government_society_estonia'
+        get '/latvia' => 'society#latvia', :as => 'government_society_latvia'
+        get '/karelia' => 'society#karelia', :as => 'government_society_karelia'
+        get '/komi' => 'society#komi', :as => 'government_society_komi'
+      end
+
+      scope '/economy' do
+        get '/' => 'economy#index', :as => 'government_economy_index'
+        get '/currency' => 'economy#currency', :as => 'government_economy_currency'
+        get '/resources' => 'economy#resources', :as => 'government_economy_resources'
+        get '/industries' => 'economy#industries', :as => 'government_economy_industries'
+        get '/transportation' => 'economy#transportation', :as => 'government_economy_transportation'
+        get '/highway_overview' => 'economy#highway_overflow', :as => 'government_economy_highway_overview'
+        get '/employment' => 'economy#employment', :as => 'government_economy_employment'
+        get '/local_business' => 'economy#local_business', :as => 'government_economy_local_business'
+        get '/foreign_business' => 'economy#foreign_business', :as => 'government_economy_foreign_business'
+        get '/business_abroad' => 'economy#business_abroad', :as => 'government_economy_business_abroad'
+      end
+
+      scope '/publications' do
+        get '/' => 'publications#index', :as => 'government_publications_index'
+        get '/anthem' => 'publications#anthem', :as => 'government_publications_anthem'
+      end
     end
   end
 
