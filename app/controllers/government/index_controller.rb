@@ -6,7 +6,7 @@ module Government
     TRANSLATED = {
       :index => true,
       :about => false,
-      :news => true
+      :news => false
     }
 
     def index
@@ -19,6 +19,8 @@ module Government
     end
 
     def news
+      @article = Government::NewsArticle.find(params[:article])
+      @article.set_language(@language)
     end
 
     private
