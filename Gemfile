@@ -17,6 +17,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-rails'
   gem 'font-awesome-sass', '~> 4.2.0'
+  gem 'magnific-popup-rails'
 end
 
 # Templating
