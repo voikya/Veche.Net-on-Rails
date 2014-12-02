@@ -108,5 +108,5 @@ class NavigationElement
                .animate(left: 0, 500)
     )
 
-$(document).ready ->
-  window.vechenet_homepage = new VechenetHomepage()
+window.classes ?= {}
+window.classes.VechenetHomepage = VechenetHomepage

@@ -1,5 +1,10 @@
 - content_for :title, "veche.net — Home"
 
+- content_for :javascript_initializers do
+  :coffeescript
+    $(document).ready ->
+      new window.classes.VechenetHomepage()
+
 #container
   #title= image_tag 'title.png', :alt => "veche.net"
   %nav.buttonframe
