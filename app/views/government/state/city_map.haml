@@ -1,0 +1,1018 @@
+- content_for :title, "Veche.Net — The Republic of Novegrad — City Map"
+
+- content_for :javascript_initializers do
+  :coffeescript
+    $(document).ready ->
+      new window.classes.GovernmentCityMap()
+
+.content-block.citymap
+  %h1 City Map
+
+  .content-block-content
+    #cityInfobox
+      #cityInfoboxRegion
+    #help
+      %p Hover over a city to see its name. Click a city to show an infobox. Click anywhere on the map to close the infobox. Click and drag the infobox to move it.
+    #mapBackground
+      = image_tag "government/cities.png", :name => "citiesmap", :border => 0, :usemap => "#citiesmapMap", :id => "citiesmap"
+      %map{:name => "citiesmapMap"}
+        %area{:shape => "circle", :coords => "177,483,7", :id => "Stáraia Rússa", :href => "staraiarussa"}
+        %area{:shape => "circle", :coords => "185,467,7", :id => "Novegráde Velíkei", :href => "novegradevelikei"}
+        %area{:shape => "circle", :coords => "196,457,7", :id => "Vołhóve", :href => "volhove"}
+        %area{:shape => "circle", :coords => "206,467,7", :id => "Víśera", :href => "visera"}
+        %area{:shape => "circle", :coords => "198,483,7", :id => "Kréscou", :href => "krescou"}
+        %area{:shape => "circle", :coords => "190,421,7", :id => "Néugrade", :href => "neugrade"}
+        %area{:shape => "circle", :coords => "199,432,7", :id => "Petróuske", :href => "petrouske"}
+        %area{:shape => "circle", :coords => "114,394,7", :id => "Revéle", :href => "revele"}
+        %area{:shape => "circle", :coords => "95,419,7", :id => "Pernáu", :href => "pernau"}
+        %area{:shape => "circle", :coords => "120,437,7", :id => "Iúrieve", :href => "iurieve"}
+        %area{:shape => "circle", :coords => "67,453,7", :id => "Ríga", :href => "riga"}
+        %area{:shape => "circle", :coords => "19,437,7", :id => "Libáva", :href => "libava"}
+        %area{:shape => "circle", :coords => "42,466,7", :id => "Śáuli", :href => "sauli"}
+        %area{:shape => "circle", :coords => "52,484,7", :id => "Panevéźe", :href => "paneveze"}
+        %area{:shape => "circle", :coords => "88,496,7", :id => "Daugáva", :href => "daugava"}
+        %area{:shape => "circle", :coords => "80,521,7", :id => "Ieváneske", :href => "ievaneske"}
+        %area{:shape => "circle", :coords => "103,514,7", :id => "Novopolóta", :href => "novopolota"}
+        %area{:shape => "circle", :coords => "137,461,7", :id => "Pleskóve", :href => "pleskove"}
+        %area{:shape => "circle", :coords => "120,503,7", :id => "Śebéźe", :href => "sebeze"}
+        %area{:shape => "circle", :coords => "146,491,7", :id => "Novorostóve", :href => "novorostove"}
+        %area{:shape => "circle", :coords => "144,519,7", :id => "Velíkije Lúki", :href => "velikijeluki"}
+        %area{:shape => "circle", :coords => "115,527,7", :id => "Pláteske", :href => "plateske"}
+        %area{:shape => "circle", :coords => "128,542,7", :id => "Vítebeske", :href => "vitebeske"}
+        %area{:shape => "circle", :coords => "202,537,7", :id => "Reźéve", :href => "rezeve"}
+        %area{:shape => "circle", :coords => "220,500,7", :id => "Mostegráde", :href => "mostegrade"}
+        %area{:shape => "circle", :coords => "228,449,7", :id => "Tihuíne", :href => "tihuine"}
+        %area{:shape => "circle", :coords => "265,457,7", :id => "Śěvérnaia Súda", :href => "severnaiasuda"}
+        %area{:shape => "circle", :coords => "276,492,7", :id => "Mołóga", :href => "mologa"}
+        %area{:shape => "circle", :coords => "292,480,7", :id => "Cerepóvese", :href => "cerepovese"}
+        %area{:shape => "circle", :coords => "295,460,7", :id => "Bělóźero", :href => "belozero"}
+        %area{:shape => "circle", :coords => "321,488,7", :id => "Vóloğda", :href => "vologda"}
+        %area{:shape => "circle", :coords => "280,425,7", :id => "Onéźeske", :href => "onezeske"}
+        %area{:shape => "circle", :coords => "316,411,7", :id => "Kárğopole", :href => "kargopole"}
+        %area{:shape => "circle", :coords => "350,450,7", :id => "Vélseke", :href => "velseke"}
+        %area{:shape => "circle", :coords => "412,471,7", :id => "Ostiúge", :href => "ostiuge"}
+        %area{:shape => "circle", :coords => "385,400,7", :id => "Brězevo", :href => "brezevo"}
+        %area{:shape => "circle", :coords => "370,345,7", :id => "Arhánjeiske", :href => "arhanjeiske"}
+        %area{:shape => "circle", :coords => "356,342,7", :id => "Śěveromorijá", :href => "severomorija"}
+        %area{:shape => "circle", :coords => "179,387,7", :id => "Víborge", :href => "viborge"}
+        %area{:shape => "circle", :coords => "169,357,7", :id => "Míkkeli", :href => "mikkeli"}
+        %area{:shape => "circle", :coords => "157,368,7", :id => "Héinola", :href => "heinola"}
+        %area{:shape => "circle", :coords => "129,373,7", :id => "Iélsinki", :href => "ielsinki"}
+        %area{:shape => "circle", :coords => "98,354,7", :id => "Tórge", :href => "torge"}
+        %area{:shape => "circle", :coords => "123,328,7", :id => "Něsijáreske", :href => "nesijareske"}
+        %area{:shape => "circle", :coords => "204,282,7", :id => "Ouluiěrvi", :href => "ouluiervi"}
+        %area{:shape => "circle", :coords => "237,422,7", :id => "Sóvirica", :href => "sovirica"}
+        %area{:shape => "circle", :coords => "299,322,7", :id => "Soróka", :href => "soroka"}
+        %area{:shape => "circle", :coords => "301,306,7", :id => "Kénje", :href => "kenje"}
+        %area{:shape => "circle", :coords => "240,401,7", :id => "Olonéce", :href => "olonece"}
+        %area{:shape => "circle", :coords => "262,390,7", :id => "Iěneslína", :href => "ieneslina"}
+        %area{:shape => "circle", :coords => "270,378,7", :id => "Kondopóğa", :href => "kondopoga"}
+        %area{:shape => "circle", :coords => "297,240,7", :id => "Kananlákśi", :href => "kananlaksi"}
+        %area{:shape => "circle", :coords => "315,218,7", :id => "Poliánei", :href => "polianei"}
+        %area{:shape => "circle", :coords => "326,192,7", :id => "Kóla", :href => "kola"}
+        %area{:shape => "circle", :coords => "339,187,7", :id => "Murmáne", :href => "murmane"}
+        %area{:shape => "circle", :coords => "483,453,7", :id => "Síhtikare", :href => "sihtikare"}
+        %area{:shape => "circle", :coords => "576,361,7", :id => "Pečára", :href => "pecara"}
+        %area{:shape => "circle", :coords => "688,319,7", :id => "Óuske", :href => "ouske"}
+        %area{:shape => "circle", :coords => "630,498,7", :id => "Cernográde", :href => "cernograde"}
+        %area{:shape => "circle", :coords => "619,532,7", :id => "Turaúle", :href => "turaule"}
+        %area{:shape => "circle", :coords => "743,509,7", :id => "Śibíreske", :href => "sibireske"}
+        %area{:shape => "circle", :coords => "783,455,7", :id => "Súrgute", :href => "surgute"}
+        %area{:shape => "circle", :coords => "896,185,7", :id => "Suetlogóreske", :href => "suetlogoreske"}
+      #cityLabel
+        #labelText
+          %p
+        #cityMetadata
+
+    .citydata{:"data-ref" => "arhanjeiske"}
+      %p.cityname Arhánjeiske
+      %p
+        <b>Novegradian:</b> Арханьейске
+        %br
+        <b>Population:</b> 417,000 (2007)
+        %br
+        <b>Oblost:</b> Śěverno-Duineskáia (capital)
+        %br
+        <b>Location:</b> Near the mouth of the Northern Duiná River, about 40km from open sea on the Arctic Ocean
+        %br
+        <b>Major Industries:</b> Business and Trade, Timber, Fishing, Machinery, Energy, Food Processing, Entertainment, Services
+        %br
+        <b>Brief History:</b> Arhánjeiske was founded in 1530, and was named after the nearby Archangel Michael monastery. The city quickly became Novegrad's primary port, despite it only being open for part of the year, since the wars with Sweden caused Baltic ports to frequently change hands, and even when they were open, Sweden limited movement of Novegradian ships. Although it experienced a decline after the Baltic coastline came under permanent Novegradian control, modern icebreakers have allowed the port to grow and remain open all year.
+    .citydata{:"data-ref" => "belozero"}
+      %p.cityname Bělóźero
+      %p
+        <b>Novegradian:</b> Бѣложеро
+        %br
+        <b>Population:</b> 97,000 (2007)
+        %br
+        <b>Oblost:</b> Běloźereskáia (capital)
+        %br
+        <b>Location:</b> On the southern coast of Lake Běloie, along the Volga-Baltic waterway
+        %br
+        <b>Major Industries:</b> Agriculture, Food Processing, Services
+        %br
+        <b>Brief History:</b> Bělóźero is one of the oldest Novegradian cities, dating to at least 862. It once was the dominant city in the area, but as other cities began to appear in the area, its importance as a center of trade began to decrease. Today much of its economy is focused around agriculture and fishing, and the processing of such foods.
+    .citydata{:"data-ref" => "brezevo"}
+      %p.cityname Brězevo
+      %p
+        <b>Novegradian:</b> Брѣзево
+        %br
+        <b>Population:</b> 38,000 (2007)
+        %br
+        <b>Oblost:</b> Brezéuskaia (capital)
+        %br
+        <b>Location:</b> On the Northern Duiná River, 7km upriver from the confluence with the Vága River, 300km upriver from Arhánjeiske (220km direct)
+        %br
+        <b>Major Industries:</b> Timber, Military, Services
+        %br
+        <b>Brief History:</b> Brězevo was founded in 1744, primarily as an outpost for fur and timber. In 1957 an air base was opened nearby, adding to the population a number of military residents.
+    .citydata{:"data-ref" => "cerepovese"}
+      %p.cityname Cerepóvese
+      %p
+        <b>Novegradian:</b> Цереповесе
+        %br
+        <b>Population:</b> 387,000 (2007)
+        %br
+        <b>Oblost:</b> Mołoźeskáia
+        %br
+        <b>Location:</b> On the Śéhna River, 120km upriver from Mołóga (100km direct) and 185km downriver from Bělóźero (100km direct)
+        %br
+        <b>Major Industries:</b> Metallurgy, Chemical, Energy, Food Processing, Plastics, Textiles, Services
+        %br
+        <b>Brief History:</b> Cerepóvese was founded in 1360 as Čerepóvece, a monastery on the Śéhna River. As time went on, it became a major center for trade, where the Volga-Baltic waterway meets major east-west railroads and oil and gas pipelines. Due to its central location, it is the destination of many raw materials from around the country and has become a major manufacturing center.
+    .citydata{:"data-ref" => "cernograde"}
+      %p.cityname Cernográde
+      %p
+        <b>Novegradian:</b> Цернограде
+        %br
+        <b>Population:</b> 116,000 (2007)
+        %br
+        <b>Oblost:</b> Oraltouskáia (capital)
+        %br
+        <b>Location:</b> On the Sósiva River, a tributary of the Táuda, 1550km upriver from Śibíreske (495km direct)
+        %br
+        <b>Major Industries:</b> Mining, Metallurgy, Energy, Machinery, Military, Timber, Services
+        %br
+        <b>Brief History:</b> Cernográde was founded in 1892 along a recently-constructed railroad as an iron foundry. During the Second World War numerous facilities from the west, especially arms factories, were moved to Cernográde and remain there to this day.
+    .citydata{:"data-pref" => "daugava"}
+      %p.cityname Daugáva
+      %p
+        <b>Novegradian:</b> Даугава
+        %br
+        <b>Latvian:</b> Даугавпилс
+        %br
+        <b>Population:</b> 134,000 (2007)
+        %br
+        <b>Oblost:</b> Lasgaleskáia (capital), Latvian Republic
+        %br
+        <b>Location:</b> On both sides of the Western Duiná River, 240km upriver from Ríga (190km direct)
+        %br
+        <b>Major Industries:</b> Electronics, Machinery, Plastics, Chemicals, Food Processing, Services
+        %br
+        <b>Brief History:</b> Daugáva was founded in 1275 as Dinaburg when a stone castle was constructed by the Livonian order. The region had been under the control of the Teutonic Order, Poland-Lithuania, and Sweden before being ceded to Novegrad in the First Northern War.
+    .citydata{:"data-ref" => "heinola"}
+      %p.cityname Héinola
+      %p
+        <b>Novegradian:</b> Хейнола
+        %br
+        <b>Finnish:</b> Хеинола
+        %br
+        <b>Population:</b> 97,000 (2007)
+        %br
+        <b>Oblost:</b> Ieźernoźémnaia, Finnish Republic
+        %br
+        <b>Location:</b> Southern Finland, 85km southwest of Mikkeli
+        %br
+        <b>Major Industries:</b> Business and Trade, Timber, Services
+        %br
+        <b>Brief History:</b> Héinola was a small settlement in the south of Finland until it was made a regional capital in 1770. Although it no longer holds this position, the city had become a significant industrial center.
+    .citydata{:"data-ref" => "ielsinki"}
+      %p.cityname Iélsinki
+      %p
+        <b>Novegradian:</b> Елсинки
+        %br
+        <b>Finnish:</b> Хелсинки
+        %br
+        <b>Population:</b> 175,000 (2007)
+        %br
+        <b>Oblost:</b> Novoźémnaia, Finnish Republic
+        %br
+        <b>Location:</b> On the Baltic coastline, 150km east southeast of Tórge
+        %br
+        <b>Major Industries:</b> Machinery, Shipbuilding, Paper, Textiles, Services
+        %br
+        <b>Brief History:</b> Iélsinki was founded in 1550 by the king of Sweden to counter the power of Revéle, on the opposite side of the Gulf of Finland. Although the town struggled at first, it began to grow after it was annexed by Novegrad. Its port was rebuilt and it was linked to the rest of Finland and Novegrad by railroad.
+    .citydata{:"data-ref" => "ieneslina"}
+      %p.cityname Iěneslína
+      %p
+        <b>Novegradian:</b> ѣнеслина
+        %br
+        <b>Karelian:</b> Ѣѣнеслинна
+        %br
+        <b>Population:</b> 128,000 (2007)
+        %br
+        <b>Oblost:</b> Ladoźeskáia, Karelian Republic (capital)
+        %br
+        <b>Location:</b> On the coast of Lake Onéga, 4km southeast of the mouth of the Śúia (Suojogi) River
+        %br
+        <b>Major Industries:</b> Government, Metallurgy, Machinery, Energy, Timber, Services
+        %br
+        <b>Brief History:</b> Iěneslína was founded in 1688. Through the early 18th century a number of foundries, the largest being the Néuskei Ironworks, were established in and around the city. It soon saw significant growth, eclipsing the former regional center at Olonéce. It is now the business and industrial center of Karelia.
+    .citydata{:"data-ref" => "ievaneske"}
+      %p.cityname Ieváneske
+      %p
+        <b>Novegradian:</b> Еванеске
+        %br
+        <b>Latvian:</b> Ива&#772;нска
+        %br
+        <b>Population:</b> 58,000 (2007)
+        %br
+        <b>Oblost:</b> Poloteskáia, Latvian Republic
+        %br
+        <b>Location:</b> Approximately 95km southwest of Novopolóta
+        %br
+        <b>Major Industries:</b> Agriculture, Food Processing, Textiles, Machinery, Services
+        %br
+        <b>Brief History:</b> Ieváneske was founded in 1787 as a small farming village. In the mid 19th century it became a regional center for textile manufacturing.
+    .citydata{:"data-ref" => "iurieve"}
+      %p.cityname Iúrieve
+      %p
+        <b>Novegradian:</b> Юриеве
+        %br
+        <b>Estonian:</b> Тарту
+        %br
+        <b>Population:</b> 140,000 (2007)
+        %br
+        <b>Oblost:</b> Iuriéuskaia (capital), Estonian Republic
+        %br
+        <b>Location:</b> On the Iémajigi River, 40km upriver from Estonian Lake (30km direct), 145km from Pleskóve by sea route
+        %br
+        <b>Major Industries:</b> Entertainment, Food Processing, Services
+        %br
+        <b>Brief History:</b> First mention of the city comes from 1030. In the 1280s it joined the Hanseatic League. It came under Novegradian rule after the First Northern War. In 1919 the University of Tartu was established, which soon became one of Estonia's (and Novegrad's) leading universities.
+    .citydata{:"data-ref" => "kananlaksi"}
+      %p.cityname Kananlákśi
+      %p
+        <b>Novegradian:</b> Кананлакши
+        %br
+        <b>Karelian:</b> Каннанлакши
+        %br
+        <b>Population:</b> 50,000 (2007)
+        %br
+        <b>Oblost:</b> Vienokarialeskáia (capital), Karelian Republic
+        %br
+        <b>Location:</b> At the mouth of the Nívo River
+        %br
+        <b>Major Industries:</b> Metallurgy, Machinery, Services
+        %br
+        <b>Brief History:</b> The settlement at Kananlákśi has existed since the 11th century, although it only became part of Novegrad in the 13th. It has grown in the 20th century due to its connections with the cities of the Kóla peninsula, particularly the mining settlements, both by river and railroad. Many raw materials pass through the city on their way to the rest of Novegrad.
+    .citydata{:"data-ref" => "kargopole"}
+      %p.cityname Kárğopole
+      %p
+        <b>Novegradian:</b> Карғополе
+        %br
+        <b>Population:</b> 73,000 (2007)
+        %br
+        <b>Oblost:</b> Karğopoleskáia (capital)
+        %br
+        <b>Location:</b> On the Onéga River, 8km from its source in Lake Láce
+        %br
+        <b>Major Industries:</b> Timber, Construction, Services
+        %br
+        <b>Brief History:</b> Kárğopole was one of the earliest northernly Novegradian cities, its first mention being from 1146. It grew significantly after the founding of the major Arctic ports of Arhánjeiske and Śěveromorijá due to its position along the primary routes towards Novegráde Velíkei.
+    .citydata{:"data-ref" => "kenje"}
+      %p.cityname Kénje
+      %p
+        <b>Novegradian:</b> Кенье
+        %br
+        <b>Karelian:</b> Кеми
+        %br
+        <b>Population:</b> 41,000 (2007)
+        %br
+        <b>Oblost:</b> Bělokareleskáia, Karelian Republic
+        %br
+        <b>Location:</b> At the mouth of the Kémi River
+        %br
+        <b>Major Industries:</b> Machinery, Timber, Services
+        %br
+        <b>Brief History:</b> Kénje is first mentioned in 1450. It became a small port city, its growth largely thanks to its favorable position on the Kénje River, the main waterway leading to the northern Karelian interior.
+    .citydata{:"data-ref" => "kola"}
+      %p.cityname Kóla
+      %p
+        <b>Novegradian:</b> Кола
+        %br
+        <b>Population:</b> 42,000 (2007)
+        %br
+        <b>Oblost:</b> Koleskáia
+        %br
+        <b>Location:</b> At the confluence of the Kóla and Tułóma Rivers, 9km upriver from Murmáne
+        %br
+        <b>Major Industries:</b> Metallurgy, Services
+        %br
+        <b>Brief History:</b> Kóla is the first Novegradian city established on the Kóla peninsula. The original fort was completed in 1565, although there may have been settlement from as early as the 13th century. It has been the launching point of a number of early Novegradian naval expeditions, such as those to the Arctic islands of Spitsbergen (Grumánte) and Nóvaia Źémia. It has since lost its regional dominance to Murmáne.
+    .citydata{:"data-ref" => "kondopoga"}
+      %p.cityname Kondopóğa
+      %p
+        <b>Novegradian:</b> Кондопоға
+        %br
+        <b>Karelian:</b> Контупохиу
+        %br
+        <b>Population:</b> 54,000 (2007)
+        %br
+        <b>Oblost:</b> Vmestevódnaia (capital), Karelian Republic
+        %br
+        <b>Location:</b> On the Kondopóźeskei Gulf of Lake Onéga
+        %br
+        <b>Major Industries:</b> Timber, Paper, Services
+        %br
+        <b>Brief History:</b> Kondopóğa was first recorded in 1495. The city remained small until the 19th and early 20th centuries, when it became a major stop along the new north-south railway running through Karelia. The modern city is home to large paper mills and Karelia's largest medical college.
+    .citydata{:"data-ref" => "krescou"}
+      %p.cityname Kréscou
+      %p
+        <b>Novegradian:</b> Кресцоу
+        %br
+        <b>Population:</b> 0 (2007)
+        %br
+        <b>Oblost:</b> Novegradeskáia
+        %br
+        <b>Location:</b> XXX
+        %br
+        <b>Major Industries:</b> XXX
+        %br
+        <b>Brief History:</b> XXX
+    .citydata{:"data-ref" => "libava"}
+      %p.cityname Libáva
+      %p
+        <b>Novegradian:</b> Либава
+        %br
+        <b>Latvian:</b> Лийпа&#772;ја
+        %br
+        <b>Population:</b> 78,000 (2007)
+        %br
+        <b>Oblost:</b> Kurlandeskáia (capital), Latvian Republic
+        %br
+        <b>Location:</b> On the Baltic Sea, between the coast of the Baltic Sea and Lake Libava
+        %br
+        <b>Major Industries:</b> Business and Trade, Metallurgy, Textiles, Food Processing, Services
+        %br
+        <b>Brief History:</b> Libáva was founded as Lyva in 1253 by Curonian fishermen, and in 1263 it became the town of Libau under the Livonian Order. As Teutonic rule in the region weakened, Libava came under the control of Poland-Lithuania, until it was annexed by Novegrad during the Partition of Poland. The city grew rapidly in the 19th century as its port was expanded, a naval base was established, and a new railroad was built through the city.
+    .citydata{:"data-ref" => "mikkeli"}
+      %p.cityname Míkkeli
+      %p
+        <b>Novegradian:</b> Миккели
+        %br
+        <b>Finnish:</b> Миккели
+        %br
+        <b>Population:</b> 132,000 (2007)
+        %br
+        <b>Oblost:</b> Ieźernoźémnaia (capital), Finnish Republic
+        %br
+        <b>Location:</b> On a bay off of Lake Sáima
+        %br
+        <b>Major Industries:</b> Electronics, Metallurgy, Textiles, Services
+        %br
+        <b>Brief History:</b> First mention of a settlement in the area of modern Míkkeli dates from 1323, when the first borders between Novegrad and Sweden were set, where it was referred to as Sávilahti. It received the name Míkkeli (after the Archangel Michael) in the 1500s. The town remained relatively small until it was first made an oblost capital in 1866. Finland's largest polytechnic opened in Míkkeli in 1976.
+    .citydata{:"data-ref" => "mologa"}
+      %p.cityname Mołóga
+      %p
+        <b>Novegradian:</b> Мољога
+        %br
+        <b>Population:</b> 500,000 (2007)
+        %br
+        <b>Oblost:</b> Mołoźeskáia (capital)
+        %br
+        <b>Location:</b> At the confluence of the Volga and Mołóga Rivers.
+        %br
+        <b>Major Industries:</b> Business and Trade, Electronics, Computers, Plastics, Services
+        %br
+        <b>Brief History:</b> Mołóga was probably founded sometime in the 1100s, and was frequently exchanged between a number of principalities up until the 1321, when it became independent. From the late 1400s, it was a major center of trade with Asian civilizations, and was later absorbed into Novegrad. At the end of the 19th century it became a major staging area for ships travelling along the Volga-Baltic Canal (as it is located at the southern terminus), and experienced dramatic growth in the 20th century.
+    .citydata{:"data-ref" => "mostegrade"}
+      %p.cityname Mostegráde
+      %p
+        <b>Novegradian:</b> Мостеграде
+        %br
+        <b>Population:</b> 402,000 (2007)
+        %br
+        <b>Oblost:</b> Mostegradeskáia (capital)
+        %br
+        <b>Location:</b> On the Mostá River by Móstino Lake, 455km upriver from Lake Ielméri and Novegrad (215km direct), 195km downriver from Tver' (115km direct)
+        %br
+        <b>Major Industries:</b> Textiles, Machinery, Electronics, Services
+        %br
+        <b>Brief History:</b> Mostegráde is believed to have been founded sometime in the 16th century. It occupied a very important location on the boundary between the Baltic watershed (via the Mostá River) and the Volga watershed (via the Tehuěrica River), although its importance declined after the construction of the Volga-Baltic canal. It has since become a major center of industry and for goods passing between Novegrad and Russia.
+    .citydata{:"data-ref" => "murmane"}
+      %p.cityname Murmáne
+      %p
+        <b>Novegradian:</b> Мурмане
+        %br
+        <b>Population:</b> 330,000 (2007)
+        %br
+        <b>Oblost:</b> Koleskáia (capital)
+        %br
+        <b>Location:</b> On the western shore of Kóla Bay, 50km from the open sea
+        %br
+        <b>Major Industries:</b> Military, Energy, Food Processing, Metallurgy, Plastics, Services
+        %br
+        <b>Brief History:</b> Murmáne was founded in 1926 on the Kóla Bay as a naval military base. The harbor, despite its latitude, is ice-free year round due to warm Atlantic currents.
+    .citydata{:"data-ref" => "nesijareske"}
+      %p.cityname Něsijáreske
+      %p
+        <b>Novegradian:</b> Нѣсияреске
+        %br
+        <b>Finnish:</b> Нѣсийѣрви
+        %br
+        <b>Population:</b> 184,000 (2007)
+        %br
+        <b>Oblost:</b> Iestrobótnaia (capital), Finnish Republic
+        %br
+        <b>Location:</b> Along Lake Něsijěrvi, 195km from the Baltic Sea via the Kokeměienioki (Kokemäenjoki) River (125km direct)
+        %br
+        <b>Major Industries:</b> Computers, Textiles, Metallurgy, Services
+        %br
+        <b>Brief History:</b> In the First Northern War, a small Swedish town in the same region was burnt down by Novegradian soldiers. When the entire region was ceded to Novegrad after the Great Northern War, Novegradian merchants founded Něsijáreske a few kilometers south of the original settlement. In the 19th century it grew as a major market and industrial center. In the 1980s these industries began giving way to services and telecommunications as the primary industries.
+    .citydata{:"data-ref" => "neugrade"}
+      %p.cityname Néugrade
+      %p
+        <b>Novegradian:</b> Неуграде
+        %br
+        <b>Population:</b> 1,694,000 (2007)
+        %br
+        <b>Oblost:</b> Neugradeskáia (capital)
+        %br
+        <b>Location:</b> At the mouth of the Néva River, where it flows into the Gulf of Finland
+        %br
+        <b>Major Industries:</b> Business and Trade, Automotive, Metallurgy, Electronics, Plastics, Services, Textiles, Tourism
+        %br
+        <b>Brief History:</b> After Ingria was captured from Sweden in the First Northern War, a fortress was established near the Swedish border in this new territory. The fortress was expanded several times and was the scene of much fighting through the Great Northern War, when Finland was ceded to Novegrad. Now far from the frontier, a settlement began to grow just to the south, soon becoming a major port town and modern Neugráde.
+    .citydata{:"data-ref" => "novegradevelikei"}
+      %p.cityname Novegráde Velíkei
+      %p
+        <b>Novegradian:</b> Новеграде Великей
+        %br
+        <b>Population:</b> 4,821,000 (2007)
+        %br
+        <b>Oblost:</b> Novegráde Velíkei (capital)
+        %br
+        <b>Location:</b> Both sides of the Vołhóve River, near where it flows out of Lake Ielméri
+        %br
+        <b>Major Industries:</b> Government, Business and Trade, Machinery, Textiles, Services, Entertainment, Tourism, Metallurgy, Electronics
+        %br
+        <b>Brief History:</b> One of the earliest Slavic cities in the area, Novegráde Velíkei was founded sometime in the 9th century as Holmgard. The region escaped the Mongol invasions and became the center of the thriving Feudal Republic of Novegrad. After fighting off Moscow's expansionism, it became the capital of an independent Kingdom of Novegrad. It also served as the capital of the Socialist Republic of Novegrad and the modern Republic.
+    .citydata{:"data-ref" => "novopolota"}
+      %p.cityname Novopólota
+      %p
+        <b>Novegradian:</b> Новополота
+        %br
+        <b>Latvian:</b> Новополота
+        %br
+        <b>Population:</b> 214,000 (2007)
+        %br
+        <b>Oblost:</b> Poloteskáia (capital), Latvian Republic
+        %br
+        <b>Location:</b> On the Western Duiná, 75km downriver from Pláteske (62km direct)
+        %br
+        <b>Major Industries:</b> Machinery, Military, Food Processing, Services
+        %br
+        <b>Brief History:</b> Novopolóta was founded in 1823 as a center for military and arms production, and remained such until 1991. During the Soviet period the city was completely closed off to all those not authorized to enter, although the river remained open to traffic passing by.
+    .citydata{:"data-ref" => "novorostove"}
+      %p.cityname Novorostóve
+      %p
+        <b>Novegradian:</b> Новоростове
+        %br
+        <b>Population:</b> 114,000 (2007)
+        %br
+        <b>Oblost:</b> Novorostoveskáia (capital)
+        %br
+        <b>Location:</b> In the hills of western Novorostoveskáia
+        %br
+        <b>Major Industries:</b> Agriculture, Food Processing, Services
+        %br
+        <b>Brief History:</b> Novorostóve was founded in 1589, originally as a military outpost. The site later became a trading outpost. As the first city in the immediate agricultural region to be linked to the rest of the country by railroad (in 1864), it grew as a major food processing center as farmers would bring their products to the city to be sold and transported.
+    .citydata{:"data-ref" => "olonece"}
+      %p.cityname Olonéce
+      %p
+        <b>Novegradian:</b> Олонеце
+        %br
+        <b>Karelian:</b> Аунус
+        %br
+        <b>Population:</b> 62,000 (2007)
+        %br
+        <b>Oblost:</b> Ladoźeskáia (capital), Karelian Republic
+        %br
+        <b>Location:</b> On the Olónka River, 30km upriver from Lake Ládoga (22km direct)
+        %br
+        <b>Major Industries:</b> Metallurgy, Agriculture, Food Processing, Timber, Services
+        %br
+        <b>Brief History:</b> Olonéce is the oldest documented settlement in Karelia, first documented in 1137. It is believed to have developed as a regional marketplace, although information is relatively scarce before the 17th century. In the 19th century it began to be industrialized, primarily for providing iron and steel to a number of nearby cities. In recent years the economy has been beginning to diversify, perhaps under the influence of the Néugrade economy.
+    .citydata{:"data-ref" => "onezeske"}
+      %p.cityname Onéźeske
+      %p
+        <b>Novegradian:</b> Онежеске
+        %br
+        <b>Population:</b> 147,000 (2007)
+        %br
+        <b>Oblost:</b> Oneźeskáia (capital)
+        %br
+        <b>Location:</b> On the southern coast of Lake Onéga
+        %br
+        <b>Major Industries:</b> Timber, Shipbuilding, Fishing, Services
+        %br
+        <b>Brief History:</b> Onéźeske was founded in 1723 as a fishing village, but quickly became an interior port for sending products from the interior to Néugrade and the Baltic Sea. In 1874 a major shipyard was opened and it became a major manufacturing center for commercial, private, and military ships, most notably those of the Baltic Fleet (1875-present) and Northern Fleet (1935-present).
+    .citydata{:"data-ref" => "ostiuge"}
+      %p.cityname Ostiúge
+      %p
+        <b>Novegradian:</b> Остюге
+        %br
+        <b>Population:</b> 111,000 (2007)
+        %br
+        <b>Oblost:</b> Suğoneskáia (capital)
+        %br
+        <b>Location:</b> At the confluence of the Suğóna and Iúge Rivers, 515km downriver from Vółoğda (400km direct), 660km upriver from Arhánjeiske (510km direct)
+        %br
+        <b>Major Industries:</b> Timber, Chemicals, Services
+        %br
+        <b>Brief History:</b> The settlement is first recorded in 1207 as a town that developed near an older monastery. It gained a degree of regional importance as a major point along the routes heading eastward toward Siberia and ultimately China. Once railroads began to be built throughout the region, Ostiúge's importance as a trading center rapidly declined, becoming more of a staging area.
+    .citydata{:"data-ref" => "ouluiervi"}
+      %p.cityname Ouluiěrvi
+      %p
+        <b>Novegradian:</b> Оулуѣрви
+        %br
+        <b>Finnish:</b> Оулуйѣрви
+        %br
+        <b>Population:</b> 94,000 (2007)
+        %br
+        <b>Oblost:</b> Śěverosumeskáia (capital), Finnish Republic
+        %br
+        <b>Location:</b> On the northwest coast of Lake Ouluiěrvi, near the beginning of the Óulu River; 105km from the Baltic Sea via the Óulu (85km direct)
+        %br
+        <b>Major Industries:</b> Chemicals, Metallurgy, Timber, Services
+        %br
+        <b>Brief History:</b> A fort was established in 1665 to protect the Óulu River, which crosses over Finland into Novegradian-controlled Karelia. When Finland came under Novegradian rule, the fort lost its significance but the settlement around the fort survived. With the threat of war eliminated, the region was opened up and the population grew.
+    .citydata{:"data-ref" => "ouske"}
+      %p.cityname Óuske
+      %p
+        <b>Novegradian:</b> Оуске
+        %br
+        <b>Komi:</b> Обвакар
+        %br
+        <b>Population:</b> 43,000 (2007)
+        %br
+        <b>Oblost:</b> Ob-Ieneśéiskaia (capital), Komi Republic
+        %br
+        <b>Location:</b> On the right bank of the Óbua River, 202km upriver from the Óbua Gulf, 1050km from the Arctic Ocean
+        %br
+        <b>Major Industries:</b> Energy, Oil and Gas, Services
+        %br
+        <b>Brief History:</b> Óuske was founded in 1595 as a small seasonal fort for early Siberian explorers and traders, inhabited only during the summer. To protect the fort from attacks by indigenous groups, a small permanent army was stationed there starting in 1614. Although the permanent population didn't reach 1000 until 1905, in the 20th century the city grew dramatically as the northernmost port on the Óbua. Even today many products produced in central Siberia are routed northwards through Óuske before being sent west by rail or sea.
+    .citydata{:"data-ref" => "paneveze"}
+      %p.cityname Panevéźe
+      %p
+        <b>Novegradian:</b> Паневеже
+        %br
+        <b>Latvian:</b> Паневе&#772;жа
+        %br
+        <b>Population:</b> XXX (2007)
+        %br
+        <b>Oblost:</b> Kurlandeskáia, Latvian Republic
+        %br
+        <b>Location:</b> XXX
+        %br
+        <b>Major Industries:</b> XXX
+        %br
+        <b>Brief History:</b> XXX
+    .citydata{:"data-ref" => "pecara"}
+      %p.cityname Pečára
+      %p
+        <b>Novegradian:</b> Печара
+        %br
+        <b>Komi:</b> Печӧра
+        %br
+        <b>Population:</b> 47,000 (2007)
+        %br
+        <b>Oblost:</b> Pečarouskáia (capital), Komi Republic
+        %br
+        <b>Location:</b> On the right bank of the Pečára River, 865km upriver from the Arctic Ocean (375km direct)
+        %br
+        <b>Major Industries:</b> Oil and Gas, Mining, Energy, Timber, Services
+        %br
+        <b>Brief History:</b> Pečára was founded in 1855, primarily to mine the large Pečára coal deposit, Novegrad's largest. The oil and natural gas industries later entered the city after large gas fields were discovered in the same area. From Pečára, most oil and gas is sent by pipeline to Sihtikáre or Arhánjeiske before being sent to their final destination. The Pečára River is rarely used for transportation because parts of it are frozen for much of the year and it passes through protected forest.
+    .citydata{:"data-ref" => "pernau"}
+      %p.cityname Pernáu
+      %p
+        <b>Novegradian:</b> Пернау
+        %br
+        <b>Estonian:</b> Пѣрну
+        %br
+        <b>Population:</b> 101,000 (2007)
+        %br
+        <b>Oblost:</b> Pernáuskaia (capital), Estonian Republic
+        %br
+        <b>Location:</b> At the mouth of the Pernáu River on the Pernáu Bay.
+        %br
+        <b>Major Industries:</b> Business and Trade, Tourism, Military, Entertainment, Services
+        %br
+        <b>Brief History:</b> Pernáu was founded by the Teutonic Knights in 1251, and became a Hanseatic League city. The territory later fell under Swedish control with the rest of Estonia until lost to Novegrad in the Great Northern War. Since the early 19th Century, it has been a major resort city known for its beaches, spas, and baths. In the 1950s a large naval port was constructed to the north of the city.
+    .citydata{:"data-ref" => "petrouske"}
+      %p.cityname Petróuske
+      %p
+        <b>Novegradian:</b> Петроуске
+        %br
+        <b>Population:</b> 306,000 (2007)
+        %br
+        <b>Oblost:</b> Neugradeskáia
+        %br
+        <b>Location:</b> On both sides of the Íźera River, a tributary of the Néva
+        %br
+        <b>Major Industries:</b> Metallurgy, Chemicals, Services
+        %br
+        <b>Brief History:</b> Petróuske was founded in 1763 as a settlement around the Petróuske Ironworks. The ironworks is still in operation, and several foundries have opened up in the area. Petróuske is Novegrad's largest iron processing center.
+    .citydata{:"data-ref" => "plateske"}
+      %p.cityname Pláteske
+      %p
+        <b>Novegradian:</b> Платеске
+        %br
+        <b>Population:</b> 366,000 (2007)
+        %br
+        <b>Oblost:</b> Videbeskáia
+        %br
+        <b>Location:</b> On the Western Duiná, 145km downriver from Vítebeske (95km direct)
+        %br
+        <b>Major Industries:</b> Machinery, Trade and Business, Energy, Automotive, Food Processing, Services
+        %br
+        <b>Brief History:</b> The first mention of Pláteske dates from 862. It was the dominant city in the region until conquered by Lithuania in 1307, where it remained a major center of trade. It came under Novegradian control after the First Partition of Poland.
+    .citydata{:"data-ref" => "pleskove"}
+      %p.cityname Pleskóve
+      %p
+        <b>Novegradian:</b> Плескове
+        %br
+        <b>Population:</b> 511,000 (2007)
+        %br
+        <b>Oblost:</b> Pleskoveskáia (capital)
+        %br
+        <b>Location:</b> On both sides of the Velíkaia River, 15km upstream from where it drains into Lake Pleskóve (12km direct)
+        %br
+        <b>Major Industries:</b> Business and Trade, Aerospace, Electronics, Food Processing, Film, Tourism
+        %br
+        <b>Brief History:</b> Pleskóve is believed to have been founded around 903. It was part of the Novegradian Feudal Republic until the 1300s, when it gained de facto independence. It grew as part of the Hanseatic League, and became a major trade center and a bridge to Europe. The city at one point had five walls surrounding it, the result of the many attacks it has suffered. It was reincorporated into Novegrad in the 16th century.
+    .citydata{:"data-ref" => "polianei"}
+      %p.cityname Poliánei
+      %p
+        <b>Novegradian:</b> Поляней
+        %br
+        <b>Population:</b> 82,000 (2007)
+        %br
+        <b>Oblost:</b> Koleskáia
+        %br
+        <b>Location:</b> On the western coast of Lake Imándra, 95km upriver from Kananlákśi (65km direct)
+        %br
+        <b>Major Industries:</b> Mining, Fishing, Services
+        %br
+        <b>Brief History:</b> Poliánei was founded in 1922 primarily to mine the rich nickel and copper deposits in the region. It has also become a large fishing center due to the rich variety of fish found in Lake Imándra. It is also the regional hub for materials mined in other nearby mining towns, before being sent south through Kananlákśi or north through Murmáne.
+    .citydata{:"data-ref" => "revele"}
+      %p.cityname Revéle
+      %p
+        <b>Novegradian:</b> Ревеле
+        %br
+        <b>Estonian:</b> Таллинн
+        %br
+        <b>Population:</b> 502,000 (2007)
+        %br
+        <b>Oblost:</b> Iestoneskáia (capital), Estonian Republic (capital)
+        %br
+        <b>Location:</b> On the northern coastline of Estonia, on the Gulf of Finland
+        %br
+        <b>Major Industries:</b> Government, Business and Trade, Automotive, Computers, Textiles, Tourism, Services
+        %br
+        <b>Brief History:</b> Tallinn first appears on maps in 1154. It occupied an optimal location along trade routes between Rus and Scandinavia, and in 1285 joined the Hanseatic League. Estonia changed hands between Sweden and Novegrad a number of times before finally being taken by Novegrad over the course of the First Northern and Great Northern Wars. It has since become a major port city, and in more recent years a center of the computer industry.
+    .citydata{:"data-ref" => "rezeve"}
+      %p.cityname Reźéve
+      %p
+        <b>Novegradian:</b> Режеве
+        %br
+        <b>Population:</b> 287,000 (2007)
+        %br
+        <b>Oblost:</b> Reźeveskáia (capital)
+        %br
+        <b>Location:</b> On the Volga River, 180km upriver from the Russian city of Tver' (115km direct)
+        %br
+        <b>Major Industries:</b> Business and Trade, Machinery, Electronics, Services
+        %br
+        <b>Brief History:</b> First mention of Reźéve comes from 1019. For much of its early history the city was bitterly contested for by Novegrad, Smolensk, and Vladimir-Suzdal', before finally falling to Vladimir-Suzdal' in the 14th century. It was captured by Novegrad 90 years later during infighting between Tver' and Smolensk. It has since become a major border city for trade between Novegrad and Russia.
+    .citydata{:"data-ref" => "riga"}
+      %p.cityname Ríga
+      %p
+        <b>Novegradian:</b> Рига
+        %br
+        <b>Latvian:</b> Ри&#772;га
+        %br
+        <b>Population:</b> 929,000 (2007)
+        %br
+        <b>Oblost:</b> Liwlandeskáia (capital), Latvian Republic (capital)
+        %br
+        <b>Location:</b> On both sides of the Western Duiná River, 15km upriver from its mouth
+        %br
+        <b>Major Industries:</b> Government, Business and Trade, Food Processing, Computers, Electronics, Chemicals, Textiles
+        %br
+        <b>Brief History:</b> Riga is believed to have been founded in the latter half of the 12th century by German merchants and missionaries. It came under the control of the Teutonic Knights and in 1282 joined the Hanseatic League. As Teutonic power waned Riga became an independent principality, and soon afterwards was annexed by Poland-Lithuania and then Sweden. Novegrad gained control of the city after the First Northern War, where it soon became one of the country's largest ports.
+    .citydata{:"data-ref" => "sauli"}
+      %p.cityname Śáuli
+      %p
+        <b>Novegradian:</b> Шаули
+        %br
+        <b>Latvian:</b> Шаулі
+        %br
+        <b>Population:</b> XXX (2007)
+        %br
+        <b>Oblost:</b> Kurlandeskáia, Latvian Republic
+        %br
+        <b>Location:</b> XXX
+        %br
+        <b>Major Industries:</b> XXX
+        %br
+        <b>Brief History:</b> XXX
+    .citydata{:"data-ref" => "sebeze"}
+      %p.cityname Śebéźe
+      %p
+        <b>Novegradian:</b> Шебеже
+        %br
+        <b>Population:</b> 197,000 (2007)
+        %br
+        <b>Oblost:</b> Śebeźeskáia (capital)
+        %br
+        <b>Location:</b> Along Lakes Śebeźeskóie and Oróno, approximately 175km south of Pleskóve
+        %br
+        <b>Major Industries:</b> Agriculture, Food Processing, Services
+        %br
+        <b>Brief History:</b> Earliest mention of Śebéźe comes from 1414. The city has changed hands between Poland, Novegrad, and Lithuania several times, but came under permanent Novegradian control in the Great Northern War.
+    .citydata{:"data-ref" => "severnaiasuda"}
+      %p.cityname Śěvérnaia Súda
+      %p
+        <b>Novegradian:</b> Шѣверная Суда
+        %br
+        <b>Population:</b> 311,000 (2007)
+        %br
+        <b>Oblost:</b> Sudeskáia (capital)
+        %br
+        <b>Location:</b> On both sides of the Súda River, 175km upriver from Cerepóvese (140km direct)
+        %br
+        <b>Major Industries:</b> Machinery, Military, Metallurgy, Timber, Services
+        %br
+        <b>Brief History:</b> Śěvérnaia Súda was founded in 1598. It later became an industrial center for metallurgy and machinery, and under the communist government, became a major center for the production of military arms.
+    .citydata{:"data-ref" => "severomorija"}
+      %p.cityname Śěveromorijá
+      %p
+        <b>Novegradian:</b> Шѣверомория
+        %br
+        <b>Population:</b> 339,000 (2007)
+        %br
+        <b>Oblost:</b> Śěverno-Duineskáia
+        %br
+        <b>Location:</b> At the mouth of the westernmost distributary of the Northern Duiná delta, 45km downriver from Arhánjeiske
+        %br
+        <b>Major Industries:</b> Military, Shipbuilding, Energy, Electronics, Services
+        %br
+        <b>Brief History:</b> The first mention of a settlement at this site was of the Níkolo-Koréleskei Monastery, burnt down by the Swedes in 1419. The monastery was rebuilt 50 years later, and a small fishing village soon followed. The city experienced a population boom after the founding of Arhánjeiske, as many people began moving to the region. In the 1740s it became a major shipbuilding center, and in 1870 a major naval base.
+    .citydata{:"data-ref" => "sibireske"}
+      %p.cityname Śibíreske
+      %p
+        <b>Novegradian:</b> Шибиреске
+        %br
+        <b>Population:</b> 102,000 (2007)
+        %br
+        <b>Oblost:</b> Oraltouskáia
+        %br
+        <b>Location:</b> On the Tobóle River, 1150km upriver from Óuske (770km direct)
+        %br
+        <b>Major Industries:</b> Oil and Gas, Chemicals, Metallurgy, Timber, Services
+        %br
+        <b>Brief History:</b> Śibíreske was founded as a fort in 1768, one of many along the Russo-Novegradian frontier. Śibíreske was later made into the administrative center of the Siberian territories, during which the city grew significantly beyond the original walls. After the discovery of oil throughout the region, &#346;ibíreske became one of Novegrad's two largest oil cities. The modern city is more diversified, dealing with chemical processing and metallurgy (especially steel production), although oil still forms the largest sector of the economy.
+    .citydata{:"data-ref" => "sihtikare"}
+      %p.cityname Síhtikare
+      %p
+        <b>Novegradian:</b> Сихтикаре
+        %br
+        <b>Komi:</b> Сыктывкар
+        %br
+        <b>Population:</b> 258,000 (2007)
+        %br
+        <b>Oblost:</b> Iúźnei Kómi (capital), Komi Republic (capital)
+        %br
+        <b>Location:</b> At the confluence of the Syzóla and Výčegda Rivers, 680km upriver from Brězevo (425km direct)
+        %br
+        <b>Major Industries:</b> Government, Energy, Timber, Machinery, Plastics, Food Processing, Aerospace, Services
+        %br
+        <b>Brief History:</b> There is believed to have been a settlement in the location of modern Síhtikare since at least the 16th century, known as Óstie-Syzóleske. Largely inhabited by peasants and merchants, the town began to grow in the 18th century, and soon became a regional capital. Industry has traditionally focused around local resources (energy and timber), but more recently machinery and aviation have seen growth in Síhtikare.
+    .citydata{:"data-ref" => "soroka"}
+      %p.cityname Soróka
+      %p
+        <b>Novegradian:</b> Сорока
+        %br
+        <b>Karelian:</b> Шуомуа
+        %br
+        <b>Population:</b> 52,000 (2007)
+        %br
+        <b>Oblost:</b> Bělokareleskáia (capital), Karelian Republic
+        %br
+        <b>Location:</b> On the Sorokeskáia inlet of the White Sea, at the northern end of the Baltic-White Sea canal
+        %br
+        <b>Major Industries:</b> Chemicals, Machinery, Services
+        %br
+        <b>Brief History:</b> The early history of Soróka is obscure, although it remained small for many centuries and was a small local port. The town only grew when the Baltic-White Sea waterway was routed through the city, turning it into a major terminus.
+    .citydata{:"data-ref" => "sovirica"}
+      %p.cityname Sóvirica
+      %p
+        <b>Novegradian:</b> Совирица
+        %br
+        <b>Population:</b> 94,000 (2007)
+        %br
+        <b>Oblost:</b> Sovireskáia (capital)
+        %br
+        <b>Location:</b> On the left bank of the Sóvire River, 65km upriver from Lake Ládoga (35km direct)
+        %br
+        <b>Major Industries:</b> Energy, Timber, Paper, Services
+        %br
+        <b>Brief History:</b> Sóvirica was founded in 1759 as a loading and unloading depot as well as a stopping point along the Baltic-White Sea waterway. With the advent of larger, more modern ships, however, this function declined as it was no longer able to dock these vessels. The West Sóvire Hydroelectric Dam built nearby helped to revive industry in the city.
+    .citydata{:"data-ref" => "staraiarussa"}
+      %p.cityname Stáraia Rússa
+      %p
+        <b>Novegradian:</b> Старая Русса
+        %br
+        <b>Population:</b> 460,000
+        %br
+        <b>Oblost:</b> Ielmereskáia (capital)
+        %br
+        <b>Location:</b> On both sides of the Políste River, which flows into Lake Ielméri (35km away downstream, 15km away direct)
+        %br
+        <b>Major Industries:</b> Chemicals, Food Processing, Agriculture, Services
+        %br
+        <b>Brief History:</b> Founded sometime in the 10th Century, Rússa (later Stáraia Rússa) was one of Novegrad's largest cities from the beginning. It has since been surpassed by a number of newer cities. The city has survived through a number of fires and invasions to become a modern industrial city.
+    .citydata{:"data-ref" => "suetlogoreske"}
+      %p.cityname Suětlogóreske
+      %p
+        <b>Novegradian:</b> Суѣтлогореске
+        %br
+        <b>Population:</b> 171,000 (2007)
+        %br
+        <b>Oblost:</b> Ieniśéiskaia (capital)
+        %br
+        <b>Location:</b> On the edge of the Siberian Plateau, 85km due east of the Ieniśéie River
+        %br
+        <b>Major Industries:</b> Mining, Metallurgy, Services
+        %br
+        <b>Brief History:</b> Suětlogóreske was founded in 1916 near the base of the Siberian Plateau, a land very rich with metals and other valuable minerals. The economy is based around the large-scale mining of nickel, copper, platinum, cobalt, palladium, and a number of other metals.
+    .citydata{:"data-ref" => "surgute"}
+      %p.cityname Súrgute
+      %p
+        <b>Novegradian:</b> Сургуте
+        %br
+        <b>Population:</b> 237,000 (2007)
+        %br
+        <b>Oblost:</b> Śibireskáia (capital)
+        %br
+        <b>Location:</b> On the left bank of the Óbua River, 1150km upriver from Óuske (680km direct)
+        %br
+        <b>Major Industries:</b> Oil and Gas, Energy, Plastics, Fishing, Services
+        %br
+        <b>Brief History:</b> Súrgute is one of the oldest settlements in Siberia, founded in 1603. Originally the economy was dependent mostly on fishing, but since the 1960s it has been developed around oil production in the vast Siberian oil deposits. It is Novegrad's largest oil-based city.
+    .citydata{:"data-ref" => "tihuine"}
+      %p.cityname Tihuíne
+      %p
+        <b>Novegradian:</b> Тихуине
+        %br
+        <b>Population:</b> 187,000 (2007)
+        %br
+        <b>Oblost:</b> Tihuineskáia (capital)
+        %br
+        <b>Location:</b> In west-central Novegrad, 80km southeast of Lake Ládoga, 180km east of Neugráde
+        %br
+        <b>Major Industries:</b> Machinery, Timber, Services, Tourism
+        %br
+        <b>Brief History:</b> First mention of the city dates to 1383, and throughout its history it has been known as a center of skilled craftsmen. The city remained rather small up until the 1960s, when the Tihuíne School of Engineering and Architectural College both opened, quickly turning the town into a center of the fields. Actual industry within the town is only starting to grow with recent investment. Even today most factories are located far outside the city to preserve the reputation of cleanliness.
+    .citydata{:"data-ref" => "torge"}
+      %p.cityname Tórge
+      %p
+        <b>Novegradian:</b> Торге
+        %br
+        <b>Finnish:</b> Турку
+        %br
+        <b>Population:</b> 1,012,000 (2007)
+        %br
+        <b>Oblost:</b> Novoźémnaia (capital), Finnish Republic (capital)
+        %br
+        <b>Location:</b> At the mouth of the Áura River, where it flows into the Baltic Sea
+        %br
+        <b>Major Industries:</b> Government, Business and Trade, Aerospace, Computers, Electronics, Machinery, Energy, Textiles, Tourism, Services
+        %br
+        <b>Brief History:</b> Tórge became a major trade center in Finland in the late 1200s, and soon became the effective capital of Finland and its largest city. Finland's first university, the Academy of Aabo (now University of Torge) was founded in 1640. The territory of Finland was annexed by Novegrad from Sweden after the Great Northern War. In the 19th century the city grew dramatically, becoming Novegrad's second largest port city. It is now a center of trade, industry, learning, and transportation.
+    .citydata{:"data-ref" => "turaule"}
+      %p.cityname Turaúle
+      %p
+        <b>Novegradian:</b> Турауле
+        %br
+        <b>Population:</b> 409,000 (2007)
+        %br
+        <b>Oblost:</b> Oraltouskáia
+        %br
+        <b>Location:</b> In the Ural foothills, on Túra Lake on the Túra River, 1550km upriver from Śibíreske (570km direct)
+        %br
+        <b>Major Industries:</b> Energy, Oil and Gas, Mining, Metallurgy, Services
+        %br
+        <b>Brief History:</b> The settlement of Turaúle began in 1699 with the establishment of an iron ore quarry and foundry. The city was largely self-sustained, depending on the rich surrounding environment. As one of the first Novegradian Siberian cities, it grew rapidly, and in the late 1800s, a large oil field was discovered.
+    .citydata{:"data-ref" => "velikijeluki"}
+      %p.cityname Velíkije Lúki
+      %p
+        <b>Novegradian:</b> Великие Луки
+        %br
+        <b>Population:</b> 416,000 (2007)
+        %br
+        <b>Oblost:</b> Łovoteskáia (capital)
+        %br
+        <b>Location:</b> On the Łovóti River, about 330km upriver from Lake Ielméri (approx. 200km direct)
+        %br
+        <b>Major Industries:</b> Agriculture, Textiles, Furniture, Services, Food Processing
+        %br
+        <b>Brief History:</b> The first mention of Velíkije Lúki is from 1166. The town became a fortified settlement guarding major routes toward Pleskóve and Novegráde Velíkei in the 13th century. In the 19th century it became a major railway hub, encouraging the city's rapid growth.
+    .citydata{:"data-ref" => "velseke"}
+      %p.cityname Vélseke
+      %p
+        <b>Novegradian:</b> Велсеке
+        %br
+        <b>Population:</b> 43,000 (2007)
+        %br
+        <b>Oblost:</b> Vélskaia (capital)
+        %br
+        <b>Location:</b> At the confluence of the Véle and Vága Rivers, 635km upriver from Arhánjeiske (390km direct)
+        %br
+        <b>Major Industries:</b> Timber, Paper, Services
+        %br
+        <b>Brief History:</b> Founded as Véleske, the city was first attested in 1137. The economy is mainly focused around logging and related industries, such as paper and furniture, as well as oblost administration.
+    .citydata{:"data-ref" => "viborge"}
+      %p.cityname Víborge
+      %p
+        <b>Novegradian:</b> Виборге
+        %br
+        <b>Population:</b> 98,000 (2007)
+        %br
+        <b>Oblost:</b> Neugradeskáia
+        %br
+        <b>Location:</b> Near the head of the Finnish Bay off the Gulf of Finland
+        %br
+        <b>Major Industries:</b> Machinery, Paper, Services
+        %br
+        <b>Brief History:</b> The first castle at Víborge was built in 1293 by Sweden. The region was fought over by Sweden and Novegrad until the Treaty of Oréśeke was signed, establishing the border between Sweden and Novegrad. Víborge remained under Swedish rule until taken by Novegrad in the Great Northern War.
+    .citydata{:"data-ref" => "visera"}
+      %p.cityname Víśera
+      %p
+        <b>Novegradian:</b> Вишера
+        %br
+        <b>Population:</b> 311,000 (2007)
+        %br
+        <b>Oblost:</b> Novegradeskáia
+        %br
+        <b>Location:</b> The right bank of the Víśera River
+        %br
+        <b>Major Industries:</b> Textiles, Services
+        %br
+        <b>Brief History:</b> Víśera was founded in 1851 along the Novegráde Velíkei-Vóloğda railroad, which opened that same year.
+    .citydata{:"data-ref" => "vitebeske"}
+      %p.cityname Vítebeske
+      %p
+        <b>Novegradian:</b> Витебеске
+        %br
+        <b>Population:</b> 553,000 (2007)
+        %br
+        <b>Oblost:</b> Videbeskáia (capital)
+        %br
+        <b>Location:</b> At the confluence of the Western Duiná and Víteba Rivers
+        %br
+        <b>Major Industries:</b> Machinery, Energy, Chemicals, Food Processing, Services
+        %br
+        <b>Brief History:</b> Vítebeske was founded in 974. It was the seat of a minor principality until captured by Lithuania in 1320. There it thrived as center of trade until the First Partition of Poland, when it came under Novegradian rule. In the 19th and 20th centuries the city became a major industrial center.
+    .citydata{:"data-ref" => "volhove"}
+      %p.cityname Vołhóve
+      %p
+        <b>Novegradian:</b> Вољхове
+        %br
+        <b>Population:</b> 558,000 (2007)
+        %br
+        <b>Oblost:</b> Novegradeskáia (capital)
+        %br
+        <b>Location:</b> Both sides of the Vołhóve River, approx. 50 km downstream from Novegráde Velíkei
+        %br
+        <b>Major Industries:</b> Chemicals, Food Processing, Services
+        %br
+        <b>Brief History:</b> First mention of Vołhóve comes from 1567, where it was described as a small fishing village. The city grew significantly in the beginning of the 20th century.
+    .citydata{:"data-ref" => "vologda"}
+      %p.cityname Vółoğda
+      %p
+        <b>Novegradian:</b> Вољоғда
+        %br
+        <b>Population:</b> 1,203,000 (2007)
+        %br
+        <b>Oblost:</b> Vołoğdeskáia (capital)
+        %br
+        <b>Location:</b> On the Vółoğda River, 210km upriver from the confluence with the Śéhna River (100km direct)
+        %br
+        <b>Major Industries:</b> Business and Trade, Aerospace, Automotive, Machinery, Military, Computers, Film, Textiles, Tourism, Services
+        %br
+        <b>Brief History:</b> Vółoğda is first mentioned in 1147 as a small Novegradian outpost. In the 1500s it became the administrative center for all of the eastern expanses, and grew as an administrative, and later industrial, city. Although the eastern territories have long since been divided into new oblosts, Vółoğda remains a center of industry, communications, and transportation, and one of the nation's largest cities.

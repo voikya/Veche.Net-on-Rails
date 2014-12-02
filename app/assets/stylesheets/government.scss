@@ -242,6 +242,7 @@ body.government {
       }
 
       .content-block-content {
+        position: relative;
         padding: 10px;
       }
 
@@ -351,6 +352,81 @@ body.government {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
+  }
+
+  .citymap {
+    #mapBackground {
+      position: relative;
+    }
+
+    #cityLabel {
+      display: none;
+      position: absolute;
+      width: 188px;
+      height: 37px;
+      background-image: image-url('government/cities_label.png');
+      z-index: 10;
+    }
+
+    #labelText {
+      position: relative;
+
+      p {
+        position: relative;
+        top: -7px;
+        left: 15px;
+        font: normal 16px Arial, Helvetica, sans-serif;
+        color: white;
+      }
+    }
+
+    #cityInfobox {
+      width: 353px;
+      height: 261px;
+      position: absolute;
+      background-image: image-url('government/cities_infobox.png');
+      top: 5px;
+      left: 5px;
+      z-index: 5;
+      text-align: left;
+
+      p {
+        position: relative;
+        top: -12px;
+        color: white;
+        width: 325px;
+      }
+    }
+
+    #cityInfoboxRegion {
+      position: relative;
+      left: 5px;
+      top: 7px;
+      width: 340px;
+      height: 245px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .cityname {
+      font: italic 13px Helvetica, Arial, sans;
+      font-weight: bold;
+    }
+
+    #cityMetadata, .citydata {
+      display: none;
+    }
+
+    #help {
+      width: 300px;
+      text-align: left;
+      left: 15px;
+      top: 10px;
+    }
   }
 }
 
