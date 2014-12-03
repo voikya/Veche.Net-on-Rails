@@ -1,0 +1,91 @@
+- content_for :title, "Veche.Net — The Republic of Novegrad — Visitation and Immigration"
+
+.content-block
+  %h1 Visitation and Immigration
+
+  .content-block-content
+    %section
+      %h2 Tourist Visas
+      %p To obtain a tourist visa (valid for a maximum of one month), the following documents must be submitted to your nearest Novegradian embassy or consulate.
+      %ol
+        %li
+          A <b>completed visa application form</b>, one for each person who will be travelling. Other language versions may be found at your local embassy.
+          %ul
+            %li= link_to "English application for visa (download)", asset_path("government/6780_en.pdf", :type => :pdf)
+            %li= link_to "Novegradian application for visa (download)", asset_path("government/6780_nv.pdf", :type => :pdf)
+        %li A <b>valid passport</b> for each person who will be travelling. It should have at least two clear visa pages.
+        %li A <b>passport-sized photograph</b> for each traveller, stapled to their respective application form in the designated area.
+        %li A copy of your <b>hotel reservation</b>.
+        %li A <b>cover letter</b> including the names of all those travelling with you, your itinerary in Novegrad, and your points of arrival and departure to and from Novegrad.
+        %li The appropriate <b>processing fee</b>. The exact fee depends on country of origin and should be obtained from your local embassy. Processing may be expedited for an increased fee.
+
+    %section
+      %h2 Homestay Visas
+      %p Homestay (or visitation) visas are to be used to stay at a private residence after being invited to enter the country. Students studying in Novegrad should apply for a homestay visa. There is no strict time limit.
+      %p To obtain a homestay visa (valid for a maximum of one year), the following documents must be submitted to your nearest Novegradian embassy or consulate.
+      %ol
+        %li
+          A <b>completed visa application form</b>, one for each person who will be travelling. Other language versions may be found at your local embassy.
+          %ul
+            %li= link_to "English application for visa (download)", asset_path("government/6780_en.pdf", :type => :pdf)
+            %li= link_to "Novegradian application for visa (download)", asset_path("government/6780_nv.pdf", :type => :pdf)
+        %li A <b>valid passport</b> for each person who will be travelling. It should have at least two clear visa pages.
+        %li A <b>passport-sized photograph</b> for each traveller, stapled to their respective application form in the designated area.
+        %li
+          A notarized <b>letter of invitation</b> or <b>Form</b> 6780A
+          = succeed '.' do
+            = surround '(', ')' do
+              = link_to "Eng", asset_path("government/6780a_en.pdf", :type => :pdf)
+              \/
+              = link_to "Nov", asset_path("government/6780a_nv.pdf", :type => :pdf)
+              \/
+              = link_to "Fin", asset_path("government/6780a_fi.pdf", :type => :pdf)
+              \/
+              = link_to "Est", asset_path("government/6780a_ee.pdf", :type => :pdf)
+              \/
+              = link_to "Lat", asset_path("government/6780a_lv.pdf", :type => :pdf)
+              \/
+              = link_to "Kom", asset_path("government/6780a_km.pdf", :type => :pdf)
+            If studying in Novegrad, request a <b>Certificate of Invitation</b> from the educational institution.
+        %li A <b>cover letter</b> including the names of all those travelling with you, your itinerary in Novegrad, and your points of arrival and departure to and from Novegrad.
+        %li The appropriate <b>processing fee</b>. The exact fee depends on country of origin and should be obtained from your local embassy. Processing may be expedited for an increased fee.
+
+    %section
+      %h2 Business Visas
+      %p To obtain a business visa, the following documents must be submitted to your nearest Novegradian embassy or consulate.
+      %ol
+        %li
+          A <b>completed visa application form</b>, one for each person who will be travelling. Other language versions may be found at your local embassy.
+          %ul
+            %li= link_to "English application for visa (download)", asset_path("government/6780_en.pdf", :type => :pdf)
+            %li= link_to "Novegradian application for visa (download)", asset_path("government/6780_nv.pdf", :type => :pdf)
+        %li A <b>valid passport</b> for each person who will be travelling. It should have at least two clear visa pages.
+        %li A <b>passport-sized photograph</b> for each traveller, stapled to their respective application form in the designated area.
+        %li A notarized <b>letter of invitation</b> from the business or other host in Novegrad.
+        %li A <b>cover letter</b> including the names of all those travelling, your itinerary in Novegrad, and your points of arrival and departure to and from Novegrad. Information should be included regarding the purpose of the trip.
+        %li The appropriate <b>processing fee</b>. The exact fee depends on country of origin and should be obtained from your local embassy. Processing may be expedited for an increased fee.
+
+    %section
+      %h2 Transit Visas
+      %p To obtain a transit visa (valid for a maximum of one month), the following documents must be submitted to your nearest Novegradian embassy or consulate.
+      %ol
+        %li
+          A <b>completed visa application form</b>, one for each person who will be travelling. Other language versions may be found at your local embassy.
+          %ul
+            %li= link_to "English application for visa (download)", asset_path("government/6780_en.pdf", :type => :pdf)
+            %li= link_to "Novegradian application for visa (download)", asset_path("government/6780_nv.pdf", :type => :pdf)
+        %li A <b>valid passport</b> for each person who will be travelling. It should have at least two clear visa pages.
+        %li A <b>passport-sized photograph</b> for each traveller, stapled to their respective application form in the designated area.
+        %li A valid <b>visa</b> from the country you will be entering, if needed.
+        %li A <b>cover letter</b> including your itinerary in Novegrad and your points of arrival and departure to and from Novegrad.
+        %li The appropriate <b>processing fee</b>. The exact fee depends on country of origin and should be obtained from your local embassy. Processing may be expedited for an increased fee.
+
+    %section
+      %h2 Schengen Tourist Visas
+      %p The Republic of Novegrad has an associate relationship with the Schengen Agreement Nations. Those with Schengen tourist visas may use them to enter Novegrad from another nation under the Schengen Agreement. However, entering Novegrad from a non-Schengen nation, such as the United States, requires a Novegradian visa. Those intending to enter first Novegrad and then a Schengen nation must have both a Novegradian and Schengen visa. If entering a Schengen nation first and the Novegrad, only a Schengen visa is needed.
+      %p Those carrying passports from a nation under the Schengen Agreement or from Russia may freely cross the Novegradian border at most border crossings, only needing to show their passport to the guard. They may, however, be subject to random checks.
+
+    %section
+      %h2 Immigration
+      %p Those seeking immigration must first acquire a residency permit, allowing them permanent residence within the Novegradian Republic. Priority falls to those who have relatives already living in Novegrad or those seeking refugee status or asylum.
+      %p Citizenship may be applied for after having lived in Novegrad for five straight years without criminal charges. This is reduced to four years for those who sought asylum or are stateless, and three years if they are married to a Novegradian citizen.
