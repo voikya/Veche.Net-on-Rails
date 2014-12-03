@@ -1,0 +1,215 @@
+- content_for :title, "Veche.Net — The Republic of Novegrad — Places of Interest"
+
+- content_for :javascript_initializers do
+  :coffeescript
+    $(document).ready ->
+      $('.mapview .maptab').click -> $(@).closest('.mapview').removeClass 'flipped'
+      $('.mapview .imagetab').click -> $(@).closest('.mapview').addClass 'flipped'
+
+.content-block
+  %h1 Places of Interest
+
+  .content-block-content.places-of-interest
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [102, 110], :image => "kremenewalls.png"}
+      %h2 The Krémene
+      %p The Krémene is the medieval citadel located in the center of Novegráde Velíkei, on the left bank of the Vółhove River. The original structure probably predates the city, though this original citadel had wooden walls. The stone fortress was likely installed in the 13th century. This defensive fortification was originally known as the <i>Detínke</i> or <i>Detínce</i>, though this name is no longer used for the building, but for the Office and Staff of the President.
+      %p In the early 17th century the tsar had the original fortress torn down and rebuilt even larger. The southern half was completely cleared and a new palace designed; from this point on the Krémene would be the official residence of the leaders of Novegrad.
+      %p The modern Krémene walls average about 18 meters in height. Several of the walkways atop the walls are open to the public. All are covered by a dark black roof to protect them from the elements; this design, black roofs on red brick walls, gives the Novegradian Krémene a very distinctive appearance. There are nine towers along the walls, each with a slightly different design. The walls also have three gates still in use: one opening onto the Park of Remembrance to the west, one onto the riverbank to the east, and one Ólika Velíkaia ("Great Street") to the north. The West Gate is used for most official purposes, while the North Gate is used almost exclusively to access the churches and other religious buildings in the northern half of the Krémene (see "Cathedral of Saint Sophia").
+      %p Both the East and West Gates lead directly into a large open area in the center of the Krémene, Detíncevei Square. To the south the most prominent sight is the Imperial Palace, once the tsar's palace, but now used for many government functions. It also houses the official offices of the President and Prime Minister. Other government offices are located in the Central Administration and New Chancery buildings in the southern end of the Krémene.
+      %p In front of the Imperial Palace is the Veche Bell, which is over 800 years old, though it now stands on pedestal. It has long been a symbol of Novegradian sovereignty and of its democratic government (at least when a democratic government was in power). In the Middle Ages it was used to call the Veche into assembly. In theory anyone could ring the bell to call the Veche, though many doubt this was actually the case in practice. When Novegrad became part of the Russian Empire in 1852, the tsar had the bell removed and sent to Moscow. It was returned from the Soviet Union in 1955.
+      %p East of the Imperial Palace is the Presidential Palace, the official residence of the President of the Republic of Novegrad and his family. The Palace was originally built in the 19th century. Between the two Palaces is the Krémene Bell Tower originally built in the 17th century, to be rung when an enemy is near the city. It is now only rung on special occasions, such as on the New Year.
+      %p The southern end of the Krémene includes a few old buildings that have been converted into public museums. The Great Gallery houses many of the Novegradian tsars' private collections, including many gifts and tributes from leaders of other nations. The small Treasury building now houses some of the tsars' treasures, including the ceremonial crown. The Arsenal has on display arms and weaponry used throughout the centuries in defense of the city.
+      %p All buildings, including the many churches on the Krémene grounds, are open to the public except for the Presidential Palace and the Guards' Hall. However, tickets for scheduled guided tours are required for all buildings still in use by the government, as well as for the Cathedral of Saint Nikoláie and the Church of the Intercession located behind the Imperial Palace. These two churches are only open to the public at certain times of the day due to their proximity to the government offices. However, government officials may enter at any time. Many Novegradians joke that this is so that they can go and confess their sins.
+      %p Only authorized government vehicles are allowed in the Krémene, for security reasons. They park in a large subterranean lot underneath the Krémene. A network of secure underground tunnels connect most government buildings as well as the Presidential Palace so that visitors may freely move around on the service without coming into contact with state personnel.
+      %p
+        See also:
+        = link_to "Map of the Krémene of Novegráde Velíkei", image_path("government/kremenemap.png"), :class => 'lightbox'
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [105, 105], :image => "stsophia.png"}
+      %h2 The Cathedral of Saint Sophia
+      %p The Cathedral of Saint Sophia (or Cathedral of the Holy Wisdom of God), located in the northern half of the Krémene, is in many ways considered the heart of Novegrad. It is the oldest building in the Republic of Novegrad, having been built in the 11th century. The building was completed in 1052 by Grand Prince Vladímire Iaroslávice, replacing a wooden church built 989. It was the seat of the Novegradian archbishops in the Middle Ages, and today remains the seat of Novegradian Patriarch.
+      %p The church has been a symbol of Novegrad since the 12th century, and became in many ways synonymous with the nation. In a nation with very strong regionalism in the medieval period, the church served as an extremely powerful unifying symbol, common to all Novegradians. During the Middle Ages, the republic's official name in diplomatic representation was the Republic of Saint Sophia. Many Novegradians have said, and still do say, "So long as Saint Sophia stands, Novegrad shall never fall".
+      %p There are many legends associated with the Cathedral along these same lines. In 1045, for example, during the construction of the church, several painters came from Constantinople to paint an image of Christ Pantokrator in the dome. The bishop came in to examine the image, and saw that Christ's hand was clenched. He told the painters to repaint his hand open, giving a blessing, and the painters did so. But when the painters returned the following morning, the hand was clenched again. They repainted it three times, but on the fourth day they all heard a voice from the heavens, saying "Do not paint me with an open hand, paint me with a clenched hand, as in this hand I hold my Great Novegrad. When my hand opens, this city will meet its end."
+      %p A similar legend focuses on a mysterious lead dove perched atop one of the crosses on the cathedral's roof. No one knows where this dove came from. It is said that the dove perched on the cross in 1471, the year Muscovy invaded Novegrad intent on bringing the city under its control. The dove saw the armies fighting and turned to lead from fright. The next day the Theotokos appeared to a monk at the cathedral, telling him that so long as the dove sits upon the cross, the city will be protected by it. The cross has only fallen once, during a storm on August 29th, 1852—the day Tsar Ieváne II of Novegrad died and control of Novegrad passed to the Russian tsar.
+      %p The Cathedral also emerged from the Siege of Novegrad after many months during the Second World War miraculously nearly unscathed, despite heavy damage taken by most of the Krémene.
+      %p It is unique in that it represented the first departure from the Byzantine architectural model in Kievan Rus', and was a model for many future churches in Novegrad. It has five domes; inside the tower under the largest is an old library which once housed many rare, medieval manuscripts and books; these have since been moved to the Novegradian National Library for preservation. The Novegradian treasury may have been kept here as well during the Middle Ages.
+      %p Saint Sophia is always open to the public, although everyone must pass through security when entering the Krémene. Services are still regularly held there. During certain celebrations, however, and Pascha in particular, special precautions must be made to accomodate the thousands of people who may gather around the church. On such occasions, security at the North Gate is laxed and a high-security barrier is instead set up in the center of the Krémene, separating the government complexes from the church in the north. Due to the small size of the cathedral and the sensitivity of its location, during major celebrations the Patriarch will only be present at Saint Sophia before the main service, and will then lead a procession to the much larger Holy Trinity Cathedral a kilometer and a half to the northwest.
+      %p Near Saint Sophia there is a small, partially walled-off section of the Krémene once home to the Novegradian Archbishop up until the Red Revolution. His Vladíkinei Palace and a nearby monastery are now museums.
+      %p
+        See also:
+        = link_to "Map of the Krémene of Novegráde Velíkei", image_path("government/kremenemap.png"), :class => 'lightbox'
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [88, 101], :image => "remembrancepark.png"}
+      %h2 Remembrance Park
+      %p Remembrace Park (or <i>Párke Pomidí</i>) is a large public park located in front of the West Gate of the Krémene. It was created in 1945 on land cleared as part of the postwar reconstruction of Novegráde Velíkei to honor all those who have fought and died in defense of Novegrad throughout its history.
+      %p The Park is a large green area criss-crossed by a network of broad sidewalks. In the center are three large fountains. One of the most distinct features is the network of shallow rivulets flowing out from the fountains all across the park, ending in small pools that then drain back into the fountains.
+      %p It is used for many different purposes, from official celebrations to large cultural events to personal recreation. When the park is not being used for a scheduled event, it is not uncommon to see people eating lunch or children playing games on the grass.
+      %p At the far end of the park are two statues. The southern one is of a farmer, and the northern one of a Novegradian World War II soldier. The former is dedicated to all Novegradian civilians who formed part of the Resistance during the German occupation of Novegrad, the latter to the soldiers who served in the Novegradian Army.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [89, 75], :image => "holytrinity.png"}
+      %h2 The Great Square and Holy Trinity Cathedral
+      %p The Holy Trinity Cathedral is Novegrad's second most famous Orthodox church and largest in the entire country. It was commissioned in 1718 by Tsar Mécislau II to celebrate victory over Sweden in the Great Northern War. Construction began two years later, though the church was not completed until 1737.
+      %p The cathedral is located in the Great Square (<i>Velíkei Duóre</i>). During major celebrations such as Pascha, it is common for the entire church to fill up completely and for many who cannot get into the church to crowd around the square.
+      %p A number of major state events are traditionally held here as well. When major public figures pass away, they generally lie in state in the cathedral. Many famous individuals are entombed underneath the cathedral.
+      %p During the Soviet era, the cathedral was used as a warehouse, and the interior went into disrepair. However, many of the more precious ikons and relics were saved and transferred to a monastery near the city of Ostáśkou, about 180km southeast of Novegráde Velíkei. The cathedral was returned to the Novegradian Orthodox Church in 1976, and after renovations, the relics were returned in 1980.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [102, 38], :image => "cerebici.png"}
+      %h2 Cerébici
+      %p Cerébici is a large business district and part of the "old town" of Novegráde Velíkei. It is known in particular for its many old buildings and the huge variety of shops and restaurants lining its streets.
+      %p During the daytime the streets fill up with people shopping, dining, or just looking around. In the evening the restaurants of the riverside district are a popular, if somewhat expensive, destination. The periphery of Cerébici, including the riverside, tends to be more modern, with a number of larger department stores on the west end and new restaurants with large outdoor balconies facing the river.
+      %p Aside from these, there are also a number of churches, offices, and small businesses in Cerébici, as well as a large number of private rowhouses.
+      %p Private traffic is not allowed in parts of Cerébici due to the many pedestrians and to preserve the look of the neighborhood. Underground parking garages are thus available at several points just outside of this zone. However, business vehicles (such as delivery trucks) are permitted. People are encouraged to take the city buses and trams to and around Cerébici.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [84, 45], :image => "unioncenter.png"}
+      %h2 The Union Center
+      %p The Union Center (<i>Soiúsevei Céntare</i>) is recognized as one of the best examples of Sovietist Monumentalism in the Republic of Novegrad. It is the largest office building in Europe, and is considered by many to be one of the most attractive office buildings. Completed in 1966 and renovated in 1999, it currently houses five government ministries: The Ministry of Energy, the Ministry of Trade, the Ministry of Education, the Ministry of Transportation, and the Ministry of Internal Affairs. Each is located in a separate building.
+      %p The Center consists of five buildings arranged in a "U"-like shape. Each is 11 storeys tall and houses a separate ministry. The 8th and 9th floors of each are linked by enclosed walkways, and the 10th (top) floor by exposed walkways atop the enclosed ones.
+      %p In the center of the complex is a large, elevated plaza, itself located about 9 meters off the ground; the ground floors of each of the individual buildings are on this level as well. In the center of the plaza is a large obelisk dedicated to progress, as well as fountains, benches, and trees for a slightly more natural feel. Numerous vendors gather here around meal times to sell food to employees and visitors.
+      %p The plaza itself may be entered from several points. The main entryway, at the opening of the "U", includes a large staircase (60 steps total) that leads up to three grand arches, each 27 meters in height. Between each of the buildings are smaller entrances as well. Elevators for the elderly, disabled, tired, and lazy are available around the complex.
+      %p Parking, as is common with many government buildings, is primarily located underneath the building, and may be accessed from two tunnels located on the front side of the building and one on the back that are actually incorporated into the building's design, so as not to be obtrusive.
+      %p The plaza is open to the public. To go inside, however, everyone must have an ID, pass through security, and have a stated purpose. Tours are available. The parking area, however, is unavailable to the public without permission from an employee at the Union Center.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [[89, 122], [66, 139], [46, 162], [27, 185]], :image => "prussianstreet.png"}
+      %h2 Prussian Street
+      %p Prussian Street (<i>Ólika Prússkaia</i>) is one of Novegráde Velíkei's main thoroughfares, beginning at the Krémene and extending southwest all the way to the NKD. It is thus considered one of the city's "radial roads".
+      %p It is also one of the city's oldest roads. Even in the medieval city is was one of the main routes in and out of the city, ultimately linking it to Pleskóve and Ríga. This early road was paved in wood; excavations done under the road during repairs or construction have revealed numerous layers of wooden boards. The medieval Prussian Street was home to some of the city's wealthiest residents and was lined by numerous manors.
+      %p In 1815 the tsar returned from a visit to Paris, where he was impressed by the wide avenues and boulevards that had recently been constructed. He ordered several streets in Novegráde Velíkei to be rebuilt similarly, among them Prussian Street, which was widened and had numerous trees planted along it to give it a greener appearance. It quickly became one of the city's most famous and beautiful roads.
+      %p Prussian Street has never lost its reputation for wealth and extravagance. Its northern sections are lined by numerous shops and clubs, while its more southern sections are lined with expensive housing.
+      %p It is no longer a major road in and out of the city as it once was, having lost this role to the nearby Rubínine Thoroughfare (<i>Rubínineskei Próiezde</i>). This has, however, opened up the street for use in major parades, such as the annual Victory Day parade.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [73, 131], :image => "stateassembly.png"}
+      %h2 The State Assembly and the Supreme Court of Justice
+      %p The State Assembly Building, the highest legislative authority in the country, and the Supreme Court of Justice, the highest judicial authority in the country, are both located on Prussian Street, just opposite one another.
+      %p The State Assembly Building is located on the Zagródeskei side of the street, and houses both the Veche and Council of Nations. The original medieval veche was an informal assembly that would meet either in front of the Cathedral of Saint Sophia or in the Iaroslávou Court. With the rise of the tsardom the veche disappeared until 1925, with the establishment of the Novegradian Soviet Socialist Republic. In 1926 a large plot of land was acquired on Prussian Street across from the courthouse for the new State Assembly Building that would house the Soviet Novegradian Veche and later the Council of Nations.
+      %p In addition to the two houses of parliament, the building has a number of office spaces for senior officials and their staff. Additional office spaces are located in a number of smaller buildings separate from the State Assembly but still on its grounds. There is also a cafeteria, reception hall, and several galleries. The largest and most famous gallery is the Hall of the Republic, which has on display gifts from the governors of each of Novegrad's oblosts on behalf of their people, and thus is a showcase of the great variety of cultures and history throughout the nation. It has been a tradition since about 1975 for every new governor to send a new gift to the State Assembly.
+      %p The Supreme Court of Justice is located across the street from the State Assembly Building. However, it is older, dating originally to the late 19th century, established as the highest court of Novegrad but still under the jurisdiction of Moscow and enforcing the Russian legal system. In 1929 it was expanded since with Novegrad's independence it became the highest national court. The first floor houses the main courtroom and several smaller clerical offices. The second floor houses the judges' offices. The third floor once held the library, but it has since been converted into a museum. The library has been moved into a much newer and larger hall in the basement.
+      %p Public tours are available for both facilities. However, their availability may vary depending on whether any official meetings are in session and on their sensitivity.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [46, 57], :image => "academy_sciences.png"}
+      %h2 The Novegradian Academy of Sciences
+      %p The Academy of Sciences is the name for a campus that consists of several independent scientific institutes. The largest of these is the Institute of the Medical Sciences. Others include the Institute of the Physical Sciences, Institute of Organic Chemistry, Institute of Nuclear Physics, Institute of Linguistics, Institute of Archaeology, Botantical Institute, and the Ielínou Astronomical Observatory.
+      %p The original Academy was founded in 1799 as a research and teaching institution. In 1926 all research divisions came under state control, much as in the Soviet Union. Since the early 1980s, state controls over the Academy has lessened, but not entirely disappeared. Research conducted for the Observatory, for example, is still by and large guided by the Aviation and Space Agency.
+      %p The Akadémia neighborhood is built up around the Academy, including a large number of student apartments.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [31, 86], :image => "botanical.png"}
+      %h2 The Botanical Garden
+      %p The Botanical Garden is a large facility in the Suburban End growing a large variety of both local and imported plants. It is owned and operated by the Botanical Institute of the Novegradian Academy of Sciences for plant cultivation and research. The Garden is open to the general public most days of the year.
+      %p The several buildings on site house seed stores, a library and database, and a public educational center. Certain seeds and seedlings are available for purchase as well.
+      %p The Botanical Institute also owns a second, much larger facility to the southwest of Novegráde Velíkei known as the Ielméri Agricultural Research Facility, cooperated by the Ministry of Agriculture.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [93, 144], :image => "oldludinei.png"}
+      %h2 Old Ludínei
+      %p The southern portion of the Staroludínei (or Old Ludínei) neighborhood is often considered the center of Novegráde Velíkei's nightlife.
+      %p The neighborhood had long been a historical district. However, in the early twentieth century much of the northern portion of Old Ludínei was redeveloped with office and government buildings. To serve the many Soviet Novegradian government employees in the area, a number of upscale restaurants began to appear in the southern part of the district, several of which still operate today. Come the Great Thaw and looser private business ownership restrictions, a number of artificially supported businesses in the area closed down and were replaced by newer restaurants, small hotels, bars, and clubs, capitalizing on the district's reputation for high-quality restaurants.
+      %p Old Ludínei has a wide array of ethnic restaurants and various themes of bars and nightclubs (to the point that restrictions had to be placed in the neighborhood on the sale of certain types of alcohol). Most hotels in the area are relatively small, the majority having fewer than 12 rooms, but offer a wide range of prices.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [89, 113], :image => "palacetheatre.png"}
+      %h2 The Palace Theatre
+      %p The Palace Theatre is the Republic of Novegrad's national theatre. Built in 1851, it originally only performed opera and ballet, the so-called 'greater theatre'. In 1935 a much larger building, the Velíkei Theatre, was built in Právaia Straná, and since then both theatres have been performing opera, ballet, and drama, with different groups alternating between the two theatres.
+      %p The Palace Theatre is located on Theatrical Square (<i>Teiatráłnaia Duóre</i>), a large paved square frequently used for public events. Public concerts, for example, are commonly held here.
+      %p Since the Palace Theatre is the more historical of the two theatres, and also has a great deal less seating capacity, tickets to performances there tend to be significantly more expensive than at the Velíkei Theatre.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [117, 159], :image => "theisland.png"}
+      %h2 The Island
+      %p The Island (or <i>Óstrou</i>) is Novegráde Velíkei's primary international business district, located on a long island extending off Sophia Side northward into the middle of the Vółhove River.
+      %p The Island is known for its many skyscrapers, housing the headquarters of several major Novegradian corporations and offices for many foreign businesses operating in Novegrad.
+      %p The Arctic Tower, at 262 meters and 55 storeys, is the tallest building in the entire Republic of Novegrad. It is located on the eastern shore of the island. The observation deck near its top allows a clear view of most of Novegráde Velíkei.
+      %p The nation's largest hotel, the Hotel Baltica, is located at the northern end of the Island. It has 1200 rooms (including 150 suites), several assembly halls, restaurants, a spa, and an indoor/outdoor swimming pool. The hotel offers an excellent view over the historical heart of the city, including the Krémene and Iaroslávou Court.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [121, 120], :image => "iaroslavou.png"}
+      %h2 Iaroslávou Court
+      %p The Iaroslávou Court, also known as Iároslau's Court or Yaroslav's Court, is a large public space on Market Side, just opposite the Krémene. The modern Court is largely green parkland, though dominated by the four churches spread throughout the grounds. These churches were built over several centuries: the oldest was built in 1483, the newest in 1827. Near the center of the Court is a belltower originally built in 1788. There is also a museum of Novegradian history in the northern end of the Court, located in the incomplete Merchant Yard building built in the mid-19th century by the Russian tsar.
+      %p Probably the most distinctive feature of the Court is the Arcade, a long series of stone arches stretching along the western side. Built in the 17th century, it originally had little actual purpose beyond "framing" the view of the Court from Sophia Side, or of the Krémene from the Court. However, it has since become a very popular place for merchants to gather to sell their wares. This is true even today, as many craftsmen, gardeners, or small-scale farmers may gather to sell their products, though they are now accompanied by people catering towards tourists and representatives from local stores and restaurants with sample dishes and products on display or for sale in order to advertise. Such people gather near the Arcade every day of the year so long as the weather permits.
+      %p The earlier history of the Court is not clear. It was originally known as the "Prince's Courtyard", later renamed for Grand Prince Iároslau the Wise who may have made his residence here, though the details are uncertain. There do not appear to be any physical remains of a residence on the site that have been found thus far. The use of the Court as a public market seems to be very old. The two oldest European warehouses and markets, the Hanseatic Peterhof and the Scandinavian Gotland Yard, were located just to the northeast of the modern Court. The original medieval Veche is also believed to have frequently been convened in the Iaroslávou Court. Until the 19th century little changed aside from the construction of new churches and the Arcade. In the mid-19th century, however, soon after Novegrad had come under Russian rule, the tsar ordered the construction of a Merchant Yard (Gostínei Duóre) in the Court, a large shopping center similar to those seen in many Russian cities. However, the Novegradian people did not approve of the plans for the radical reconstruction of the center of their city, and eventually the plans were abandoned and the Merchant Yard built further northeast on vacant land. One wing of this original Merchant Yard in the Court was nevertheless completed; it now houses a museum of Novegradian history.
+      %p The 20th century saw some minor reconstruction to make the Court more accessable, including many new paved sidewalks. A fountain and commemorative statue were also installed in the 1980s.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [115, 111], :image => "grodiskje.png"}
+      %h2 Gródiśkje
+      %p Gródiśkje, formerly called <i>Riuríkovo Gródiśkje</i>, is believed to have been the original Scandinavian fort serving as the seat of the first prince of Rus', Riúrike. It was a strategic location where the Vółhove River flows out of Lake Ielméri, and was likely closely involved the early development of the city of Novegráde Velíkei. After Novegrad's independence from Kiev, the Novegradian prince continued to keep his residence at Gródiśkje rather than in Novegráde Velíkei proper, and once the Veche gained control over Novegráde Velíkei the prince was forbidden from owning land in the city. His retinue also resided in Gródiśkje. With the rise of the Novegradian tsardom, the tsar moved his official residence to a much newer and larger palace on Sophia Side, and later into the Krémene itself. Gródiśkje, in the meantime, fell into disrepair.
+      %p Since the mid-20th century archaeological excavations began to conducted on the site to try to uncover as much of the original complex as possible. There is a visitor center on site as well as reconstructions of various parts of the original palace.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [129, 50], :image => "sunv.png"}
+      %h2 Novegráde Velíkei State University
+      %p Novegráde Velíkei State University (or <i>SUNV</i>) is the leading educational institution in the Republic of Novegrad, as well as the oldest and largest.
+      %p The University was founded in 1695 as a school of law. In 1735 Tsar Ieváne I brought it under state jurisdiction and moved the school to its current location in Právaia Straná. In 1960 the university was upgraded and rebuilt in a Sovietist style much like that of MGU in Moscow.
+      %p The modern SUNV campus has a grand view over the Vółhove River. The facility consists of nine buildings, the largest being the central building at 167 meters. There are also five student residential buildings on the south side of the campus. The entire SUNV facility is somewhat isolated from the rest of the city, as the majority of the land owned by the university is forested; all roads leading to the university pass through forest.
+      %p Since its foundation as a law school SUNV's faculties have broadened significantly. It currently has 17 faculties, including History, Economics, Philology, Philosophy, Engineering, Mathematics, and Political Analysis. It also has branch campuses in several other Novegradian cities.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [119, 52], :image => "kolizeie.png"}
+      %h2 The Colosseum and Órlovei Park
+      %p Órlovei Park is a large public park along the riverbank in Právaia Straná. The southern portion is largely undeveloped forest except along the beach. The northern half, however, is home to the Kolizéie or "Colosseum", Novegráde Velíkei's largest professional sports stadium. It is a multi-use stadium, though is used primarily for football matches. It can be used throughout the year, as it has a retractable canopy.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [160, 52], :image => "rsmuseum.png"}
+      %h2 Right Side Museums
+      %p Právaia Straná is known as Novegráde Velíkei's cultural heart. Part of this reputation stems from the great number of museums in Právaia Straná, all within walking distance of each other. Among these are:
+      %p The Tiğánou Art Gallery, a large collection of most contemporary art from around the world.
+      %p The Kalárine Art Gallery, a collection of artwork from mostly Novegradian and Russian artists from the past several centuries.
+      %p The Kómnarou Historical Library, housing many historical documents that are also available for study in electronic facsimile format.
+      %p The Novegradian Museum of the Great Patriotic War, which has on display numerous items from the Second World War, focusing primarily on the war in Novegrad and on the later occupation of Berlin.
+      %p The Museum of Local Lore, which focuses mostly on the history and nature of the area around the city of Novegráde Velíkei.
+      %p The Novegradian Military Museum, including many military artefacts from as early as the 10th century AD.
+
+    %section
+      = render :partial => 'mapview', :locals => {:map => :center, :coords => [176, 60], :image => "circus.png"}
+      %h2 The Circus
+      %p The Novegradian State Circus is a professional company that has operated in Novegráde Velíkei for over a hundred years. It remains a very popular attraction for adults and children alike.
+      %p The current building was built in 1974, with expansions made in 1996 and 2007. It has two separate auditoriums, one standard and one designed specifically for water or ice shows.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [137, 65], :image => "wharf.png"}
+      %h2 The Wharf
+      %p The Wharf (or <i>Lódniśa</i>), though primarily industrial, has several attractions for visitors as well. Many private and commercial boaters dock their boats here. There are several companies as well as private individuals in the area who will rent out their boats, especially popular for fishing or simply touring Lake Ielméri. Several commercial passenger boats also dock outside the Wharf, which can be reserved for parties and may travel to several beaches or towns in the vicinity of Novegráde Velíkei.
+      %p The Wharf also functions as the city's primary riverport. Boats may transport people between Novegráde Velíkei, Vółhove, and Stáraia Rússa regularly, with occasional longer trips to Néugrade, Tórge, Brávico, Mostegráde, Tver', and Moscow.
+      %p Many Novegradian natives also like to pay regular visits to the fish market at the southern end of the Wharf, where many local fishermen will sell their most recent catches.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [144, 97], :image => "kirilovo.png"}
+      %h2 Kirílovo Sports Complex
+      %p The Kirílovo Sports Complex ia a large public sports facility located in Slavéneskei Kónce. For a small entrance fee or with a seasonal pass, patrons may use any of the facilities on the grounds. These include three football fields, six tennis courts, two indoor and four outdoor basketball courts, two hockey rinks, an ice skating rink, a gymnasium, several indoor and outdoor swimming pools, and a sauna.
+      %p Groups, especially amateur sports teams, may reserve use of most of the facilities. Such schedules are also published well in advance to minimize conflicts.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [140, 78], :image => "goldengates.png"}
+      %h2 The Golden Gates
+      %p The Golden Gates are a triumphal arch located on Prospéhte Rogática (Rogática Avenue), one of the main roads in and out of the city, erected in commemoration of Novegrad's victory in the Great Northern War. The modern arch was built in 1818, replacing the actual gates in an old city wall that no longer stands. The original "golden gates" have been moved to the Krémene.
+      %p The arch currently stands on a wide median in between the eastbound and westbound lanes of Rogática. It can be accessed via an underground pedestrian tunnel from either side.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [154, 50], :image => "rudzaie.png"}
+      %h2 Źelénaia Rudzáie
+      %p Źelénaia Rudzáie is the name of a large park in Plotníceskei Kónce, which has given its name to the neighborhood around it as well. The meaning of the name is no longer transparent, but likely originally meant "Green Branch [of the river]". It is a popular location for outdoor parties and gatherings, as it includes many grills and tables, a small amphitheatre, and outdoor football and volleyball courts.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [166, 38], :image => "hutini.png"}
+      %h2 Hútini
+      %p Hútini was one of many small towns to emerge around Novegráde Velíkei during the Middle Ages. However, it was far enough away that it was never completely swallowed by its much larger neighbor, and so managed to develop its own dense downtown and suburbs. It was only annexed by Novegráde Velíkei in the early 20th century, so it is notable for having retained a very strong "old European town" feel with low buildings and narrow streets. Even Novegráde Velíkei proper has lost much of this feel, as most of its old downtown has been reconstructed at some point during the 20th century. Hútini has thus become a fashionable place to live, work, and visit amongst people who desire this sort of atmosphere, and also displays a stunning example of how old Novegradian towns look while being located in a thoroughly modern city.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [162, 28], :image => "volhovegardens.png"}
+      %h2 The Vółhove Gardens
+      %p The Vółhove Gardens are a large English-style garden in the far northern portion of Novegráde Velíkei, straddling both sides of the Vółhove River. Their beauty is said to be unmatched, and are a popular destination for those seeking a romantic evening.
+
+    %section
+      = render :partial => 'mapview', :locals => {:coords => [178, 44], :image => "boulevard.png"}
+      %h2 The Boulevard
+      %p The Boulevard (or <i>Bulváre</i>) is the common name for a stretch of Riverside Boulevard (<i>Priberéźnei Bulváre</i>), located in northeastern Novegráde Velíkei. This wide road is famous as a shopping district, lined on either side by countless individual and corporate stores, including many famous names from Europe and the United States as well. One must be careful, however: it is often said that it is very easy to spend all of one's money there in a single afternoon.
+
+    %p{:style => "clear: left;"}

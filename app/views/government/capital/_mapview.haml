@@ -1,0 +1,14 @@
+- map ||= nil
+- coords = [coords] unless coords[0].is_a?(Array)
+- image_url = (map && map == :center) ? "government/novegrad_minimap_center.png" : "government/novegrad_minimap.png"
+.mapview
+  .tabs
+    = image_tag "government/maptab.png", :alt => "Map", :class => "maptab"
+    = image_tag "government/imagetab.png", :alt => "Image", :class => "imagetab"
+  .views
+    .map
+      = image_tag image_url, :class => "map"
+      - coords.each do |coord_pair|
+        = image_tag "government/pog.png", :class => "pog", :style => "left: #{coord_pair[0]}px; top: #{coord_pair[1]}px"
+    .img
+      = image_tag "government/#{image}"

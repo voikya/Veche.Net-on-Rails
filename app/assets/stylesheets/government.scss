@@ -241,6 +241,12 @@ body.government {
         margin-top: 0;
       }
 
+      h3 {
+        font: italic 13px Helvetica, Arial, sans;
+        font-weight: bold;
+        color: #1171A4;
+      }
+
       .content-block-content {
         position: relative;
         padding: 10px;
@@ -434,6 +440,37 @@ body.government {
     height: 180px;
     width: 240px;
     margin-bottom: 10px;
+  }
+
+  .places-of-interest {
+    section {
+      clear: left;
+    }
+
+    h2 {
+      padding-top: 30px;
+    }
+  }
+
+  .mapview {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+
+    .tabs img { cursor: pointer; }
+
+    .map { display: block; position: relative; }
+    .img { display: none; }
+
+    .pog {
+      position: absolute;
+      padding-top: 5px;
+    }
+
+    &.flipped {
+      .map { display: none; }
+      .img { display: block; }
+    }
   }
 }
 
