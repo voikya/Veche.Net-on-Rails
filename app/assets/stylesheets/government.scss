@@ -486,6 +486,21 @@ body.government {
       display: block;
     }
   }
+
+  img.republic-map {
+    margin: 0 auto;
+    display: block;
+  }
+
+  table.infotable {
+    margin-bottom: 20px;
+
+    th {
+      vertical-align: top;
+      text-align: right;
+      width: 200px;
+    }
+  }
 }
 
 /* Language overrides */
