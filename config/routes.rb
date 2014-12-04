@@ -57,7 +57,7 @@ VecheNet::Application.routes.draw do
         get '/resources' => 'economy#resources', :as => 'government_economy_resources'
         get '/industries' => 'economy#industries', :as => 'government_economy_industries'
         get '/transportation' => 'economy#transportation', :as => 'government_economy_transportation'
-        get '/highway_overview' => 'economy#highway_overflow', :as => 'government_economy_highway_overview'
+        get '/highway_overview' => 'economy#highway_overview', :as => 'government_economy_highway_overview'
         get '/employment' => 'economy#employment', :as => 'government_economy_employment'
         get '/local_business' => 'economy#local_business', :as => 'government_economy_local_business'
         get '/foreign_business' => 'economy#foreign_business', :as => 'government_economy_foreign_business'
