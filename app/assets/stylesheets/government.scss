@@ -268,6 +268,7 @@ body.government {
       table.datatable {
         border: solid 1px black;
         border-collapse: collapse;
+        margin-bottom: 10px;
 
         td, th {
           padding: 2px;
@@ -499,6 +500,12 @@ body.government {
       vertical-align: top;
       text-align: right;
       width: 200px;
+    }
+  }
+
+  section.banknotes, section.coins {
+    img {
+      margin-right: 30px;
     }
   }
 }

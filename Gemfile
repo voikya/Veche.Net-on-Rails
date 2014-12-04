@@ -9,6 +9,7 @@ gem 'mysql2'
 # Misc
 gem 'rubystats'
 gem 'RubySunrise'
+gem 'nokogiri'
 
 # Assets
 group :assets do

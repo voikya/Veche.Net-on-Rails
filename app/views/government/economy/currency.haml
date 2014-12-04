@@ -1,0 +1,228 @@
+- content_for :title, "Veche.Net — The Republic of Novegrad — Currency"
+
+.content-block
+  %h1 Currency
+
+  .content-block-content
+    %p The official currency of the Republic of Novegrad is the mark, which is divided into 100 téngi. Its ISO symbol is NVM.
+
+    %section
+      %h2 Conversion
+      - if @error
+        %p Could not load conversion information. Please try again later.
+      - else
+        %p As of #{@date.strftime "%B #{@date.day.ordinalize}, %Y"}:
+        %table.datatable
+          %thead
+            %tr
+              %th Currency
+              %th Units per NVM
+              %th NVM per Unit
+          %tbody
+            %tr
+              %td EUR Euro €
+              %td EUR #{@conversions[:eur_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_eur].round(3)}
+            %tr
+              %td USD Dollar $
+              %td USD #{@conversions[:usd_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_usd].round(3)}
+            %tr
+              %td GBP Pound £
+              %td GBP #{@conversions[:gbp_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_gbp].round(3)}
+            %tr
+              %td RUB Ruble ₽
+              %td RUB #{@conversions[:rub_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_rub].round(3)}
+            %tr
+              %td JPY Yen ¥
+              %td JPY #{@conversions[:jpy_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_jpy].round(3)}
+            %tr
+              %td CHF Franc CHF
+              %td CHF #{@conversions[:chf_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_chf].round(3)}
+            %tr
+              %td SEK Krona kr
+              %td SEK #{@conversions[:sek_per_nvm].round(3)}
+              %td NVM #{@conversions[:nvm_per_sek].round(3)}
+
+    %section
+      %h2 History
+      %p Early Novegrad used precious metals as currency in trades, and had developed a complex system of weights and measures for valuing them. The value of a given amount of a precious metal was determined by its weight. As a member of the medieval Hanseatic League, however, Novegrad also imported a number of weights from Western Europe, among them the gold mark and the silver mark. In Novegrad the mark came to be defined as equaling one and a half <i>gríuni</i> (singular: <i>gríuna</i>), approximately 307 grams.
+      %p Novegrad soon started producing stamped coins made out of such precious metals, containing the same amount of precious metal that its face value shows. For example, a golden <i>gríuna</i> would contain exactly one <i>gríuna</i> of gold. By the 16th century, only three to five units remained in common use (depending on the location). In the mid 17th century, the mark was established as the single official currency. This mark was divided into 50 <i>téngi</i> (singular: <i>ténga</i>), which in turn were each divided into 10 <i>gríuni</i>. When Novegrad was unified with Russia, this system was completely abolished in favor of the Russian system, with one ruble equalling 100 kopeks. Gold-backed banknotes began to be issued in this period, as well as coins whose face value not equal to the value of the metals (modern representative currency). In 1934 the old names were restored, albeit in a new decimal system where one mark equals 100 téngi.
+
+    %section
+      %h2 Denominations
+      %p Coins are minted in 1, 5, 10, and 50 tenga denominations, as well as 1, 2, and 5 mark denominations.
+      %p Banknotes appear in 10, 20, 50, 100, 500, 1000, and 2000 mark denominations.
+
+    %section.banknotes
+      %h2 Banknotes
+      %p Click to enlarge.
+
+      %section
+        = link_to image_path("government/10mark.png"), :class => 'lightbox' do
+          = image_tag "government/10mark_sm.png", :alt => "10 Marks, Front"
+        = link_to image_path("government/10mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/10mark_rev_sm.png", :alt => "10 Marks, Back"
+        %p
+          %b 10 Marks
+        %p
+          %b Front:
+          Śergéie Rubínine, Premier of the Socialist Republic of Novegrad from 1975 to 1984, initiator of the Great Thaw. The quotation reads "We Novegradians are prepared to fight to the end against those who seek to oppress us".
+        %p
+          %b Back:
+          A view over the old city of Revéle (Tallinn) in the Estonian Republic.
+
+      %section
+        = link_to image_path("government/20mark.png"), :class => 'lightbox' do
+          = image_tag "government/20mark_sm.png", :alt => "20 Marks, Front"
+        = link_to image_path("government/20mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/20mark_rev_sm.png", :alt => "20 Marks, Back"
+        %p
+          %b 20 Marks
+        %p
+          %b Front
+          Tsar Mécislau II "The Great", tsar of Novegrad from 1694 to 1734 and commander during the Great Northern War. The quotation reads "Lord Novegrad will be a shining beacon when the gloom of winter storms settles over Europe".
+        %p
+          %b Back:
+          Turku Castle in Tórge (Turku) in the Finnish Republic.
+
+      %section
+        = link_to image_path("government/50mark.png"), :class => 'lightbox' do
+          = image_tag "government/50mark_sm.png", :alt => "50 Marks, Front"
+        = link_to image_path("government/50mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/50mark_rev_sm.png", :alt => "50 Marks, Back"
+        %p
+          %b 50 Marks
+        %p
+          %b Front:
+          Grand Prince Aleksándre Néuskei, prince of Novegrad during the 12th century and patron saint of the Republic. The quotation reads "He who comes to us with the sword shall perish by the sword".
+        %p
+          %b Back:
+          St. Sophia Cathedral in Novegráde Velíkei.
+
+      %section
+        = link_to image_path("government/100mark.png"), :class => 'lightbox' do
+          = image_tag "government/100mark_sm.png", :alt => "100 Marks, Front"
+        = link_to image_path("government/100mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/100mark_rev_sm.png", :alt => "100 Marks, Back"
+        %p
+          %b 100 Marks
+        %p
+          %b Front:
+          Lioníde Makáieu, Premier of the Socialist Republic of Novegrad from 1925 to 1928, the first premier since Novegrad's independence. The quotation reads "Hope may be lost, but our dreams hold out; this is why we continue onward".
+        %p
+          %b Back:
+          Riga Castle in Ríga (Rīga) in the Latvian Republic.
+
+      %section
+        = link_to image_path("government/500mark.png"), :class => 'lightbox' do
+          = image_tag "government/500mark_sm.png", :alt => "500 Marks, Front"
+        = link_to image_path("government/500mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/500mark_rev_sm.png", :alt => "500 Marks, Back"
+        %p
+          %b 500 Marks
+        %p
+          %b Front:
+          Aleksándre Karéline, a famous Novegradian author. The quotation reads "Our nation is the soul of the people, the spirit of the land, the whisper of history, and the faith of all".
+        %p
+          %b Back:
+          The Northern Palace in Néugrade.
+
+      %section
+        = link_to image_path("government/1000mark.png"), :class => 'lightbox' do
+          = image_tag "government/1000mark_sm.png", :alt => "1000 Marks, Front"
+        = link_to image_path("government/1000mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/1000mark_rev_sm.png", :alt => "1000 Marks, Back"
+        %p
+          %b 1000 Marks
+        %p
+          %b Front:
+          Nikoláie Prusiánou, Field Marshall of the Novegradian Armed Forces during the Second World War. The quotation reads "People praise the commanders and leaders, though we are not the ones making the sacrifice".
+        %p
+          %b Back:
+          A view over the krémene in Pleskóve.
+
+      %section
+        = link_to image_path("government/2000mark.png"), :class => 'lightbox' do
+          = image_tag "government/2000mark_sm.png", :alt => "2000 Marks, Front"
+        = link_to image_path("government/2000mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/2000mark_rev_sm.png", :alt => "2000 Marks, Back"
+        %p
+          %b 2000 Marks
+        %p
+          %b Front:
+          Grand Prince Iároslau the Wise, ruler of the united kingdom of Rus', which would later give rise to Novegrad, Russia, Ukraine, and Belarus. The quotation reads "If you live in hatred, you will destroy the land of your fathers and children".
+        %p
+          %b Back:
+          St. John's Cathedral in downtown Vóloğda.
+
+    %section.coins
+      %h2 Coins
+      %p Click to enlarge.
+
+      %section
+        = link_to image_path("government/5mark.png"), :class => 'lightbox' do
+          = image_tag "government/5mark_sm.png", :alt => "5 Marks, Front"
+        = link_to image_path("government/5mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/5mark_rev_sm.png", :alt => "5 Marks, Back"
+        %p
+          %b 5 Marks:
+          St. Sophia Cathedral in Novegráde Velíkei. The caption reads "St. Sophia Cathedral".
+
+      %section
+        = link_to image_path("government/2mark.png"), :class => 'lightbox' do
+          = image_tag "government/2mark_sm.png", :alt => "2 Marks, Front"
+        = link_to image_path("government/2mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/2mark_rev_sm.png", :alt => "2 Marks, Back"
+        %p
+          %b 2 Marks:
+          A Siberian kóce, a ship used by the Novegradian kodzári in their exploration of the Arctic coastline and the first settlements in Siberia. The captions read "Siberian Kóce" and "The Opening of the East".
+
+      %section
+        = link_to image_path("government/1mark.png"), :class => 'lightbox' do
+          = image_tag "government/1mark_sm.png", :alt => "1 Mark, Front"
+        = link_to image_path("government/1mark_rev.png"), :class => 'lightbox' do
+          = image_tag "government/1mark_rev_sm.png", :alt => "1 Mark, Back"
+        %p
+          %b 1 Mark:
+          The veche bell and the St. Sophia bell tower. The captions read "Ancient Veche" and "Ancient Democracy".
+
+      %section
+        = link_to image_path("government/50tenga.png"), :class => 'lightbox' do
+          = image_tag "government/50tenga_sm.png", :alt => "50 Tengi, Front"
+        = link_to image_path("government/50tenga_rev.png"), :class => 'lightbox' do
+          = image_tag "government/50tenga_rev_sm.png", :alt => "50 Tengi, Back"
+        %p
+          %b 50 Tengi:
+          The flag of Novegrad against a backdrop of the Ural mountains, simbolizing the Great Thaw. A radio tower representing the first attempted revolt against Soviet authority. A banner bearing a Great Thaw slogan "Under the Plavoběle [Novegradian flag] we fight, Under the Plavoběle we will find freedom". The caption reads "The Great Thaw".
+
+      %section
+        = link_to image_path("government/10tenga.png"), :class => 'lightbox' do
+          = image_tag "government/10tenga_sm.png", :alt => "10 Tengi, Front"
+        = link_to image_path("government/10tenga_rev.png"), :class => 'lightbox' do
+          = image_tag "government/10tenga_rev_sm.png", :alt => "10 Tengi, Back"
+        %p
+          %b 10 Tengi:
+          The badge issued to soldiers who fought in defense of Novegrad during the Second World War. The caption reads "Victory over Fascism, 1945".
+
+      %section
+        = link_to image_path("government/5tenga.png"), :class => 'lightbox' do
+          = image_tag "government/5tenga_sm.png", :alt => "5 Tengi, Front"
+        = link_to image_path("government/5tenga_rev.png"), :class => 'lightbox' do
+          = image_tag "government/5tenga_rev_sm.png", :alt => "5 Tengi, Back"
+        %p
+          %b 5 Tengi:
+          A depiction of Aléksandre Néuskei during the Battle on the Ice from an early Novegradian manuscript. The captions read "Battle on the Ice, 1242" and "Grand Prince St. Aleksándre Néuskei".
+
+      %section
+        = link_to image_path("government/1tenga.png"), :class => 'lightbox' do
+          = image_tag "government/1tenga_sm.png", :alt => "1 Tengi, Front"
+        = link_to image_path("government/1tenga_rev.png"), :class => 'lightbox' do
+          = image_tag "government/1tenga_rev_sm.png", :alt => "1 Tengi, Back"
+        %p
+          %b 1 Tenga:
+          The Novegradian coat of arms.
