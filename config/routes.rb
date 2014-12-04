@@ -38,7 +38,7 @@ VecheNet::Application.routes.draw do
         get '/' => 'society#index', :as => 'government_society_index'
         get '/history' => 'society#history', :as => 'government_society_history'
         get '/population' => 'society#population', :as => 'government_society_population'
-        get '/healthcare' => 'socety#healthcare', :as => 'government_society_healthcare'
+        get '/healthcare' => 'society#healthcare', :as => 'government_society_healthcare'
         get '/law_enforcement' => 'society#law_enforcement', :as => 'government_society_law_enforcement'
         get '/education' => 'society#education', :as => 'government_society_education'
         get '/culture' => 'society#culture', :as => 'government_society_culture'
