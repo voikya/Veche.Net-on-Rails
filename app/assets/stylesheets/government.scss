@@ -472,6 +472,20 @@ body.government {
       .img { display: block; }
     }
   }
+
+  nav.history {
+    background-color: #E0E0E0;
+    padding: 10px;
+
+    .col {
+      width: 33%;
+      float: left;
+    }
+
+    a {
+      display: block;
+    }
+  }
 }
 
 /* Language overrides */
