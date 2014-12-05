@@ -1,0 +1,56 @@
+- content_for :title, "Veche.Net — The Republic of Novegrad — Transportation"
+
+.content-block
+  %h1 Transportation
+
+  .content-block-content
+    %p Novegrad has an extensive transportation network. Although lagging behind much of Western Europe, the country is making great strides in modernizing all forms of long-distance transportation.
+
+    %section.transportation
+      = image_tag "government/transport_rivers_sm.png", :alt => "Rivers and Waterways"
+      %h2 Rivers and Waterways
+      %p Novegrad has an extensive system of rivers that have formed a vital part of its economy from the very beginning. The city of Novegráde Velíkei itself is located on the Vółhove River, which is a part of the much larger Nevá River system covering much of far western Novegrad and draining into the Gulf of Finland. The Western Duiná flows flows through Latvia and parts of southern Novegrad. The Nárova drains much of Estonia and Pleskoveskáia and Śebeźeskáia oblosts. The Volga River system connects southern Novegrad to much of western Russia and ultimately to the Black and Mediterranean Seas. Further east are a number of very large rivers flowing from Russia into the Arctic Ocean, such as the Northern Duiná, Moźíne, Pečára, Óbua, and Ieniśéie. Together these rivers have provided easy access to the rest of the world from almost any part of Novegrad.
+      %p In the 19th and early 20th centuries the network was enlarged through the construction of a number of canals linking several important river systems. Five major canals are worthy of note: The Volga-Baltic Waterway linking the Kóźva (which drains into the Baltic Sea) and Vítega (which drains into the Volga) Rivers, the White Sea-Baltic Waterway linking Lake Onéga (which ultimately drains into the Baltic Sea) and the White Sea, the Staroveréteskei Canal linking the Cóna (which eventually drains into Lake Ielméri and the Vółhove River) and the Tihuérca (which drains into the Volga) Rivers, the Vóloğda Canal linking the Śéhna (which drains into the Volga) and Ískla (which drains into the Northern Duiná) rivers, and the Sáimaa Canal linking much of the Finnish interior to the Baltic Sea.
+      %p Many rivers that once had vital functions are no longer major shipping channels. Many old canals still exist, but are no longer maintained and are now overgrown. Over the last century the river ports have been in steady decline in favor of the seaports due to the greater efficiency of roads and railroads, though many of the major rivers still see a fair amount of commercial traffic.
+      %p
+        Larger Maps:
+        = succeed ',' do
+          = link_to "Western Novegradian Rivers", image_path("government/transport_rivers_west.png")
+        = succeed '.' do
+          = link_to "Eastern Novegradian Rivers", image_path("government/transport_rivers_east.png")
+
+    %section.transportation
+      = image_tag "government/transport_roads_sm.png", :alt => "Roads and Highways"
+      %h2 Roads and Highways
+      %p The Novegradian long-distance highway network is relatively new. In the 19th century and continuing through the Soviet period, the primary means of long-distance travel was by rail. Roads were built, but they did not have the importance that railroads did.
+      %p Since the 1980s, however, the road network has expanded rapidly. Many new limited-access highways were built connecting major cities, as well as "long-distance roads" which are not limited access, but keep stops to a minimum outside of cities.
+      %p In the Novegradian frontier regions in the far north and in the east, fewer roads are well maintained and reaching many towns may require travelling long distances along dirt roads. Such towns may be linked to other nearby towns by paved roads, but they are otherwise fairly isolated from the rest of the country's road network. In such cases travel by air is the most common means of going to and from these towns.
+      %p
+        Larger Maps:
+        = succeed '.' do
+          = link_to "Highway Overview and Maps", government_economy_highway_overview_path
+
+    %section.transportation
+      = image_tag "government/transport_railroads_sm.png", :alt => "Railroads"
+      %h2 Railroads
+      %p Novegrad's rail network is very extensive, and until fairly recently was the easiest way to travel long distances except for by air. They remain the primary means of transporting raw materials such as coal, nickel, and lumber from their production sites to processing facilities.
+      %p Standard gauge is 1520mm, allowing for easy rail integration with neighboring Russia and Belarus. However, trains must change carriages when crossing the Prussian or Swedish borders, as both countries use 1435mm gauge rails.
+      %p
+        Larger Maps:
+        = succeed ',' do
+          = link_to "West", image_path("government/transport_railroads_west.png")
+        = succeed ',' do
+          = link_to "Central", image_path("government/transport_railroads_central.png")
+        = succeed '.' do
+          = link_to "East", image_path("government/transport_railroads_east.png")
+
+    %section.transportation
+      = image_tag "government/transport_highspeed_sm.png", :alt => "High Speed Rails"
+      %h2 High Speed Rails
+      %p Novegrad's first high speed railway is scheduled to be opened within a month. Known as the ŹPNS or "Źapenése", it currently links Ríga, Novegráde Velíkei, and Néugrade, and plans have already been made to expand it.
+      %p
+        Larger Map:
+        = succeed ',' do
+          = link_to "West", image_path("government/transport_highspeed.png")
+        = succeed '.' do
+          = link_to "Key", image_path("government/transport_highspeed_key.png")

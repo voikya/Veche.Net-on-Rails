@@ -508,6 +508,23 @@ body.government {
       margin-right: 30px;
     }
   }
+
+  section.transportation {
+    clear: left;
+
+    h2, p {
+      margin-left: 260px;
+    }
+
+    img {
+      float: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  ul.key {
+    list-style-type: none;
+  }
 }
 
 /* Language overrides */
