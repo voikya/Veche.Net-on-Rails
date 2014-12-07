@@ -11,16 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141130052857) do
+ActiveRecord::Schema.define(:version => 20141206231236) do
+
+  create_table "lexicons", :force => true do |t|
+    t.string "name"
+    t.string "lexicon_table"
+    t.text   "alphabet"
+  end
 
   create_table "news", :force => true do |t|
-    t.string "type"
+    t.string "group"
     t.string "en_headline"
     t.text   "en_summary"
     t.text   "en_article"
     t.string "nv_headline"
     t.text   "nv_summary"
     t.text   "nv_article"
+  end
+
+  create_table "novegradian", :force => true do |t|
+    t.string   "word"
+    t.string   "transliteration"
+    t.string   "pronunciation"
+    t.string   "part_of_speech"
+    t.string   "root"
+    t.text     "definition"
+    t.text     "important_forms"
+    t.text     "idioms"
+    t.text     "notes"
+    t.text     "etymology"
+    t.text     "cognates"
+    t.text     "inflection_structure"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
 end
