@@ -1,0 +1,5 @@
+- if @lexicon.scoped?
+  %p #{pluralize @lexicon.entries.count, "match"} returned.
+  %ul
+    - @lexicon.entries.each do |entry|
+      %li= link_to entry.word, lexicon_entry_path(@search_params.merge(:lexeme => entry.word))

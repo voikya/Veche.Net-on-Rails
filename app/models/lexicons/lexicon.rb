@@ -16,6 +16,8 @@ module Lexicons
 
     # Apply search parameters/filters to the lexicon result set.
     def scope_entries(opts = {})
+      # Clone opts (this method is destructive)
+      opts = opts.dup
       # Split search terms and search flags.
       operations = opts.slice!(:exact, :whole_word)
       # For all flags, apply a filter to the ResultSet.

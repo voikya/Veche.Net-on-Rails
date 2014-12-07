@@ -1,0 +1,4 @@
+- content_for :title, "#{@lexicon.name} Lexicon — #{@entry.word}"
+
+- @entry.formatters.each do |formatter|
+  = formatter.to_html.html_safe

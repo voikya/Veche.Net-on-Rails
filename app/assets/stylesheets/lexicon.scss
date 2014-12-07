@@ -134,10 +134,23 @@ body.lexicon {
 
       li {
         padding: 3px 8px;
+        background-color: transparent;
+        transition: background-color 0.3s;
+
         &:hover {
           background-color: #DDDDDD;
         }
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      font-style: italic;
+      padding: 10px;
     }
   }
 
@@ -151,5 +164,72 @@ body.lexicon {
     background-color: white;
     z-index: 0;
     overflow-y: scroll;
+    font-size: medium;
+
+    span.comment, span.transliteration {
+      font-style: italic;
+    }
+
+    span.label {
+      font-weight: bold;
+    }
+
+    div.word {
+      font-size: xx-large;
+      display: inline-block;
+    }
+
+    div.transliteration {
+      font-size: large;
+      font-style: italic;
+      padding-left: 5px;
+      display: inline-block;
+    }
+
+    div.pronunciation {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      display: block;
+    }
+
+    div.part-of-speech {
+      display: block;
+    }
+
+    div.definition {
+      display: block;
+    }
+
+    div.important-forms {
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    div.notes {
+      display: block;
+
+      fieldset {
+        border: solid 1px #999999;
+        margin-right: 50px;
+        font-style: italic;
+      }
+    }
+
+    .cognates {
+      font-style: italic;
+      display: block;
+
+      > p:first-child:before {
+        content: "cf. ";
+      }
+    }
+
+    div.etymology {
+      font-style: italic;
+      display: block;
+
+      > p:first-child:before {
+        content: "Etym: ";
+      }
+    }
   }
 }

@@ -13,8 +13,8 @@
           %button{:type => 'submit'}
             = icon('search')
           %a.advanced Advanced
-          #advanced-search= yield :advanced
-      = yield :nav
+          #advanced-search= render :partial => 'advanced_search'
+      = render :partial => 'nav'
     %main
-      #search-results= yield :search_results
+      #search-results= render :partial => 'search_results'
       #entry-view= yield

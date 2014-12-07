@@ -1,23 +1,4 @@
 - content_for :title, "#{@lexicon.name} Lexicon"
 
-- content_for :advanced do
-  %p Advanced Search
-
-- content_for :nav do
-  %h1 #{@lexicon.name} Lexicon
-  %nav
-    %table.alphabet
-      %tbody
-        %tr
-          - @lexicon.alphabet.split(' ').each do |letter|
-            %td
-              = link_to letter, lexicon_path(:word => "#{letter}*")
-
-- content_for :search_results do
-  - if @lexicon.scoped?
-    %ul
-      - @lexicon.entries.each do |entry|
-        %li= entry.word
-
 %p.introtext Enter a search term in the box above, or select a letter to browse.
 %p.introtext The #{@lexicon.name} lexicon currently contains #{@lexicon.record_count} entries.

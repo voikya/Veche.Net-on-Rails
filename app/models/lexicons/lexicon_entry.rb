@@ -34,6 +34,13 @@ module Lexicons
       end
     end
 
+    # Return array of instantiated formatters
+    def formatters
+      self.class.formatters.map do |k, _|
+        formatter(k)
+      end.compact
+    end
+
     # Mark up the instance with ephemeral annotations for display purposes.
     # For now this is used to indicate where search terms found a match.
     def annotate(scopes)
@@ -71,7 +78,12 @@ module Lexicons
 
     # Create an initialized formatter for a given field.
     def formatter(field)
-      self.class.formatters[field].new(field, send(field))
+      text = send(field)
+      if text && text.present?
+        self.class.formatters[field].new(field, send(field))
+      else
+        nil
+      end
     end
   end
 end
