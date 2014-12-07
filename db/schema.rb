@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141206231236) do
+ActiveRecord::Schema.define(:version => 20141207033933) do
 
   create_table "lexicons", :force => true do |t|
     t.string "name"
     t.string "lexicon_table"
     t.text   "alphabet"
+    t.string "slug"
   end
 
   create_table "news", :force => true do |t|

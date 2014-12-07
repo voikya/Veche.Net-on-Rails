@@ -3,6 +3,10 @@ module Lexicons
     attr_accessible :name, :lexicon_table, :alphabet
     after_initialize :load_entries_table
 
+    def self.find_by_language(language)
+      find_by_slug(language)
+    end
+
     # Retrieve the result set for the given lexicon as an ActiveRecord::Relation.
     # By default this will be the entire lexicon (i.e., [LexiconClass].all).
     # If the lexicon has been scoped by search queries, so will the result set.
@@ -27,6 +31,21 @@ module Lexicons
     # Look up a specific entry by its canonical native form.
     def entry(word)
       @lexicon_class.find_by_word(word)
+    end
+
+    # True if any scoping/filters have been applied.
+    def scoped?
+      @entries.scoped?
+    end
+
+    # Reset the lexicon object and clear any scopes
+    def reset
+      load_entries_table
+    end
+
+    # Total number of records in the lexicon
+    def record_count
+      @lexicon_class.count
     end
 
     private

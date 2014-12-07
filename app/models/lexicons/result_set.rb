@@ -34,6 +34,11 @@ module Lexicons
       @results.count
     end
 
+    # True if any scoping/filters have been applied
+    def scoped?
+      !(@scopes.keys.length.zero? && @filters.length.zero?)
+    end
+
     private
 
     # Apply filters. Returns true if the record passes all filter tests,

@@ -1,0 +1,155 @@
+body.lexicon {
+  font-size: large;
+  color: #212121;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+  header {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 5em;
+    color: white;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", sans;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    z-index: 2;
+
+    h1 {
+      position: absolute;
+      font-weight: 300;
+      top: 0;
+      left: 0;
+      margin: 10px;
+    }
+  }
+
+  #search {
+    float: right;
+    padding: 10px 10px 0 0;
+    text-align: right;
+
+    #searchbox {
+      border: none;
+      border-bottom: solid 3px white;
+      color: #333;
+      height: 20px;
+      width: 250px;
+      padding: 2px 5px;
+      font-weight: 600;
+      transition: border-bottom-color 0.3s;
+
+      &:focus {
+        border-bottom: solid 3px #2196F3;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    button {
+      height: 27px;
+      font-size: larger;
+      border: none;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      line-height: 20px;
+      position: relative;
+      top: 4px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #2196F3;
+      }
+    }
+
+    a.advanced {
+      display: block;
+      font-size: x-small;
+      text-decoration: none;
+      position: relative;
+      margin-top: 5px;
+      left: -40px;
+      cursor: pointer;
+      font-weight: 200;
+    }
+
+    #advanced-search {
+      display: none;
+    }
+  }
+
+  nav {
+    table.alphabet {
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+      table-layout: fixed;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 200;
+        transition: color 0.3s;
+
+        &:hover, &:active {
+          color: #2196F3;
+        }
+      }
+    }
+  }
+
+  main {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #search-results {
+    position: absolute;
+    top: 5em;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    border-right: solid 1px #333333;
+    width: 25%;
+    z-index: 0;
+    padding-bottom: 5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    ul {
+      list-style-type: none;
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      li {
+        padding: 3px 8px;
+        &:hover {
+          background-color: #DDDDDD;
+        }
+      }
+    }
+  }
+
+  #entry-view {
+    position: absolute;
+    width: 70%;
+    top: 6em;
+    right: 0px;
+    bottom: 0px;
+    padding: 5px 5px 5em 5px;
+    background-color: white;
+    z-index: 0;
+    overflow-y: scroll;
+  }
+}

@@ -11,7 +11,7 @@ module Lexicons
       :definition,
       :part_of_speech,
       :root,
-      :any
+      :any,
 
       # Boolean parameters
       :exact,
@@ -22,7 +22,7 @@ module Lexicons
     ]
 
     def index
-      search_params = params.keep_if {|k, v| SEARCH_PARAM_WHITELIST.include?(k)}
+      search_params = params.keep_if {|k, v| SEARCH_PARAM_WHITELIST.include?(k.to_sym)}
       @entries = @lexicon.scope_entries(search_params)
     end
 
