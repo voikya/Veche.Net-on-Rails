@@ -9,7 +9,7 @@
     %header
       #search
         %form#searchform{:method => :get, :action => lexicon_path}
-          %input#searchbox{:type => 'text', :placeholder => "Search..."}
+          %input#searchbox{:type => 'text', :placeholder => "Search...", :name => 'search'}
           %button{:type => 'submit'}
             = icon('search')
           %a.advanced Advanced

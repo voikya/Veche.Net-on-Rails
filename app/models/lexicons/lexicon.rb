@@ -67,6 +67,15 @@ module Lexicons
       @entries.add_scope(fields, value)
     end
 
+    # Scope by matching a string against the primary fields, as defined
+    # by the lexicon entry class. This is used for the generic,
+    # non-advanced search option.
+    def scope_search(value)
+      fields = @lexicon_class.primary_fields
+      @entries.add_scope(fields, value)
+      @entries.add_filter(:whole_word, true)
+    end
+
     # Scope by matching a string against the canonical form.
     def scope_word(value)
       @entries.add_scope(:word, value)

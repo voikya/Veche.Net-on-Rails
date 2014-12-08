@@ -19,13 +19,22 @@ module Lexicons
     field :cognates, :formatter => CognateFormatter
 
     # Array of fields that are included when doing a search over "any" field.
-    def scopable_fields
+    def self.scopable_fields
       [
         :word,
         :transliteration,
         :definition,
         :idioms,
         :notes
+      ]
+    end
+
+    # Array of fields that are included when doing a generic (non-advanced) search.
+    def self.primary_fields
+      [
+        :word,
+        :transliteration,
+        :definition
       ]
     end
   end

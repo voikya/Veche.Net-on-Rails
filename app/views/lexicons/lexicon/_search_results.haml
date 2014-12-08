@@ -3,3 +3,8 @@
   %ul
     - @lexicon.entries.each do |entry|
       %li= link_to entry.word, lexicon_entry_path(@search_params.merge(:lexeme => entry.word))
+  - if @show_partial_matches && @lexicon.entries.excluded.length
+    %p In addition, the following #{pluralize @lexicon.entries.excluded.length, "record"} partially matched your search:
+    %ul
+      - @lexicon.entries.excluded.each do |entry|
+        %li= link_to entry.word, lexicon_entry_path(@search_params.merge(:lexeme => entry.word))
