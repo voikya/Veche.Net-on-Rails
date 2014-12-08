@@ -1,1 +1,31 @@
-%p Advanced Search
+- select_opts = options_for_select([["contains", "contains"], ["begins with", "begins_with"], ["ends with", "ends_with"]])
+%table
+  %tr
+    %th Word
+    %td= select_tag :word_opts, select_opts
+    %td= text_field_tag :word
+    %th Part of Speech
+    %td= select_tag :part_of_speech_opts, select_opts
+    %td= text_field_tag :part_of_speech
+  %tr
+    %th Transliteration
+    %td= select_tag :transliteration_opts, select_opts
+    %td= text_field_tag :transliteration
+    %th Root
+    %td= select_tag :root_opts, select_opts
+    %td= text_field_tag :root
+  %tr
+    %th Definition
+    %td= select_tag :definition_opts, select_opts
+    %td= text_field_tag :definition
+    %th Any
+    %td= select_tag :any_opts, select_opts
+    %td= text_field_tag :any
+  %tr
+    %td{:colspan => 6}
+      .checkbox-group
+        = check_box_tag :whole_word
+        %label{:for => :whole_word} Whole Word Matches Only
+      .checkbox-group
+        = check_box_tag :exact
+        %label{:for => :exact} Exact Matches Only

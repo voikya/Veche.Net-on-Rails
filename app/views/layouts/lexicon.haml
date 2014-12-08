@@ -4,6 +4,8 @@
     %title= yield :title
     = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
+    :coffeescript
+      $(document).ready -> new window.classes.Lexicon()
     = csrf_meta_tags
   %body.lexicon
     %header
@@ -12,7 +14,7 @@
           %input#searchbox{:type => 'text', :placeholder => "Search...", :name => 'search'}
           %button{:type => 'submit'}
             = icon('search')
-          %a.advanced Advanced
+          %a.advanced Advanced Options
           #advanced-search= render :partial => 'advanced_search'
       = render :partial => 'nav'
     %main

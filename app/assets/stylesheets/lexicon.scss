@@ -19,6 +19,7 @@ body.lexicon {
     font-family: "Roboto", "Helvetica Neue", "Helvetica", sans;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     z-index: 2;
+    transition: height 0.3s;
 
     h1 {
       position: absolute;
@@ -42,7 +43,7 @@ body.lexicon {
       width: 250px;
       padding: 2px 5px;
       font-weight: 600;
-      transition: border-bottom-color 0.3s;
+      transition: border-bottom-color 0.3s, background-color 0.3s;
 
       &:focus {
         border-bottom: solid 3px #2196F3;
@@ -77,10 +78,41 @@ body.lexicon {
       left: -40px;
       cursor: pointer;
       font-weight: 200;
+
+      &:before {
+        content: "Show ";
+      }
     }
 
     #advanced-search {
       display: none;
+      font-size: small;
+
+      input {
+        border: none;
+        border-bottom: solid 3px white;
+        outline: 0;
+        box-shadow: none;
+        transition: border-bottom-color 0.3s;
+
+        &:focus {
+          border-bottom: solid 3px #2196F3;
+        }
+      }
+
+      table {
+        margin-right: 33px;
+      }
+
+      th {
+        padding-left: 20px;
+        font-weight: 300;
+      }
+
+      .checkbox-group {
+        display: inline-block;
+        margin-left: 30px;
+      }
     }
   }
 
@@ -124,6 +156,7 @@ body.lexicon {
     padding-bottom: 5em;
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: top 0.3s;
 
     ul {
       list-style-type: none;
@@ -165,6 +198,7 @@ body.lexicon {
     z-index: 0;
     overflow-y: scroll;
     font-size: medium;
+    transition: top 0.3s;
 
     span.comment, span.transliteration {
       font-style: italic;
@@ -231,5 +265,36 @@ body.lexicon {
         content: "Etym: ";
       }
     }
+  }
+}
+
+body.lexicon.advanced-search-open {
+  header {
+    height: 10em;
+  }
+
+  #search {
+    #searchbox {
+      background-color: #333333;
+      border-bottom-color: #333333;
+      pointer-events: none;
+      tab-index: -1;
+    }
+
+    #advanced-search {
+      display: block;
+    }
+
+    a.advanced:before {
+      content: "Hide ";
+    }
+  }
+
+  #search-results {
+    top: 10em;
+  }
+
+  #entry-view {
+    top: 11em;
   }
 }
