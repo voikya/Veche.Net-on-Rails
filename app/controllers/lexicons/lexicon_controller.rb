@@ -12,12 +12,22 @@ module Lexicons
     SEARCH_PARAM_WHITELIST = [SEARCH_STRING_PARAMS, SEARCH_BOOLEAN_PARAMS, SEARCH_REFERENTIAL_PARAMS, :search].flatten
 
     def index
-      @entries = @lexicon.scope_entries(search_params)
+      @lexicon.scope_entries(search_params)
+
+      respond_to do |format|
+        format.html
+        format.json { render :json => @lexicon.entries }
+      end
     end
 
     def show
       @entry = @lexicon.entry(params[:lexeme])
-      @entries = @lexicon.scope_entries(search_params)
+      @lexicon.scope_entries(search_params)
+
+      respond_to do |format|
+        format.html
+        format.json { render :json => @entry }
+      end
     end
 
     private

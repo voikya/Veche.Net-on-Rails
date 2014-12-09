@@ -45,6 +45,16 @@ module Lexicons
       !(@scopes.keys.length.zero? && @filters.length.zero?)
     end
 
+    def to_json(opts={})
+      apply_filters!
+      {
+        :total_matches => count,
+        :partial_matches => @excluded.count,
+        :results => @results.map(&:word),
+        :partial_results => @excluded.map(&:word)
+      }.to_json
+    end
+
     private
 
     def apply_filters!

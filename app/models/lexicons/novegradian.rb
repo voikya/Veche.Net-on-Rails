@@ -37,5 +37,12 @@ module Lexicons
         :definition
       ]
     end
+
+    def to_json(opts={})
+      formatters.reduce({}) do |hash, formatter|
+        hash[formatter.name] = formatter.to_html
+        hash
+      end.to_json
+    end
   end
 end

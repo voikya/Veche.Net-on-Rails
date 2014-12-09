@@ -1,5 +1,6 @@
 module Lexicons
   class Formatter
+    attr_reader :text, :name
     def initialize(name, text)
       @text = text
       @name = name

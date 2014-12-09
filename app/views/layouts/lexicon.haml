@@ -5,9 +5,9 @@
     = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
     :coffeescript
-      $(document).ready -> new window.classes.Lexicon()
+      $(document).ready -> new window.classes.Lexicon($('body').attr('data-language'))
     = csrf_meta_tags
-  %body.lexicon
+  %body.lexicon{:data => {:language => @language}}
     %header
       #search
         %form#searchform{:method => :get, :action => lexicon_path}

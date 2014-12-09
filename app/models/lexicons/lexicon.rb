@@ -28,6 +28,7 @@ module Lexicons
       operations.each do |k, v|
         send "scope_#{k}".to_sym, v
       end
+      self
     end
 
     # Look up a specific entry by its canonical native form.
