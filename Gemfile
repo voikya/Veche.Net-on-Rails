@@ -28,4 +28,5 @@ gem 'haml'
 group :development do
   gem 'better_errors'
   gem 'capistrano'
+  gem 'binding_of_caller'
 end
