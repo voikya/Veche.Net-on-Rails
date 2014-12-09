@@ -4,7 +4,7 @@ module Lexicons
 
     def initialize(base_class)
       @base_class = base_class
-      @results = base_class
+      @results = base_class.order(:word)
       @filters = []
       @scopes = {}
     end

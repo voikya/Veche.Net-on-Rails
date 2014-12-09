@@ -158,11 +158,24 @@ module Lexicons
       #   {Transliteration}
       #   "Meaning"
       #   ...
-      @text.split(/\r?\n/).map{|l| l.gsub(/^[{"]([^"}]*)[}"]?$/, '\1')}
+      @text.split(/\r?\n/).map{|l| l.gsub(/^[{"]([^"}]*)[}"]?$/, '\1')}.select(&:present?).compact
     end
 
     def to_html
-      "<div class='#{class_name}'>#{@text}</div>"
+      "<div class='#{class_name}'>#{contents}</div>"
+    end
+
+    private
+
+    def contents
+      tokenize.map.with_index do |l, idx|
+        case idx % 3
+          when 0, 2 then l
+          when 1 then "<i>#{l}</i>"
+        end
+      end.each_slice(3).map do |example|
+        "<p>#{example.join('<br>')}</p>"
+      end.join
     end
   end
 end
