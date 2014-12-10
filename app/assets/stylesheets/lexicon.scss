@@ -265,6 +265,31 @@ body.lexicon {
         content: "Etym: ";
       }
     }
+
+    div.cross-references {
+      font-style: italic;
+      display: block;
+
+      &:before {
+        content: "See Also: ";
+      }
+
+      ul {
+        list-style-type: none;
+        margin-top: 0px;
+        padding-left: 0px;
+      }
+
+      a {
+        color: #0066FF;
+        text-decoration: none;
+        font-style: normal;
+
+        &:hover, &:active {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 

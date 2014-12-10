@@ -99,6 +99,10 @@ module Lexicons
       base.split(/[\[\]]/).select(&:present?).map {|f| f.split(',').map(&:strip)}
     end
 
+    def summary
+      clean_text.split(/[\[\]]/).select(&:present?).first
+    end
+
     def to_html
       "<div class='#{class_name}'>#{contents}</div>"
     end
@@ -176,6 +180,28 @@ module Lexicons
       end.each_slice(3).map do |example|
         "<p>#{example.join('<br>')}</p>"
       end.join
+    end
+  end
+
+  class CrossReferenceFormatter < Formatter
+    def to_html
+      if @text.length > 0
+        "<div class='#{class_name}'>#{contents}</div>"
+      else
+        ""
+      end
+    end
+
+    private
+
+    def contents
+      [
+        "<ul>",
+        @text.map do |xref|
+          %Q(<li><a href="#{xref.word}">#{xref.word}</a> "#{xref.definition_summary}"</li>)
+        end,
+        "</ul>"
+      ].flatten.join
     end
   end
 end

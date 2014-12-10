@@ -23,6 +23,7 @@ module Lexicons
     def show
       @entry = @lexicon.entry(params[:lexeme])
       @lexicon.scope_entries(search_params)
+      @cross_refs = @entry.cross_references
 
       respond_to do |format|
         format.html

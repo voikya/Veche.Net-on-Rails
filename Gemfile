@@ -5,6 +5,7 @@ gem 'rails', '3.2.16'
 
 # Database
 gem 'mysql2'
+gem 'foreigner'
 
 # Misc
 gem 'rubystats'

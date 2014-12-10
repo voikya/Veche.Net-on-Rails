@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141207033933) do
+ActiveRecord::Schema.define(:version => 20141209041156) do
 
   create_table "lexicons", :force => true do |t|
     t.string "name"
@@ -46,5 +46,18 @@ ActiveRecord::Schema.define(:version => 20141207033933) do
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
   end
+
+  create_table "novegradian_crossrefs", :id => false, :force => true do |t|
+    t.integer  "from"
+    t.integer  "to"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "novegradian_crossrefs", ["from"], :name => "novegradian_crossrefs_from_fk"
+  add_index "novegradian_crossrefs", ["to"], :name => "novegradian_crossrefs_to_fk"
+
+  add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_from_fk", column: "from"
+  add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_to_fk", column: "to"
 
 end

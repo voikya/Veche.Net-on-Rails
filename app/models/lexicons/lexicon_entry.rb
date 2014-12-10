@@ -27,11 +27,18 @@ module Lexicons
 
       # Register a field and assign it a formatter class. Creates attribute
       # accessors as a side-effect. Call this method for all presentable fields.
+      # Pass in custom:true if the field does not correspond to a DB column and
+      # should not have accessors created.
       def field(name, opts)
         @formatters ||= {}
         @formatters[name] = opts[:formatter]
-        attr_accessible name
+        attr_accessible(name) unless opts[:custom]
       end
+    end
+
+    # Return a summary (equivalent to the first line of the definition)
+    def definition_summary
+      formatter(:definition).summary
     end
 
     # Return array of instantiated formatters

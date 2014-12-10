@@ -6,6 +6,9 @@ module Lexicons
 
     self.table_name = 'novegradian'
 
+    has_many :cross_reference_links, :foreign_key => :from, :class_name => NovegradianCrossReference
+    has_many :cross_references, :through => :cross_reference_links, :source => :novegradian
+
     field :word, :formatter => CanonicalFormFormatter
     field :transliteration, :formatter => TransliterationFormatter
     field :pronunciation, :formatter => PronunciationFormatter
@@ -17,6 +20,8 @@ module Lexicons
     field :notes, :formatter => NoteFormatter
     field :etymology, :formatter => EtymologyFormatter
     field :cognates, :formatter => CognateFormatter
+
+    field :cross_references, :formatter => CrossReferenceFormatter, :custom => true
 
     # Array of fields that are included when doing a search over "any" field.
     def self.scopable_fields
@@ -36,6 +41,10 @@ module Lexicons
         :transliteration,
         :definition
       ]
+    end
+
+    def cross_references
+      super.order(:word)
     end
 
     def to_json(opts={})
