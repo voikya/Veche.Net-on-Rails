@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141209041156) do
+ActiveRecord::Schema.define(:version => 20141210023251) do
+
+  create_table "alashian", :force => true do |t|
+    t.string   "word"
+    t.string   "transliteration"
+    t.string   "pronunciation"
+    t.string   "part_of_speech"
+    t.string   "root"
+    t.text     "definition"
+    t.text     "idioms"
+    t.text     "notes"
+    t.text     "etymology"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "alashian_crossrefs", :id => false, :force => true do |t|
+    t.integer  "from"
+    t.integer  "to"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "alashian_crossrefs", ["from"], :name => "alashian_crossrefs_from_fk"
+  add_index "alashian_crossrefs", ["to"], :name => "alashian_crossrefs_to_fk"
 
   create_table "lexicons", :force => true do |t|
     t.string "name"
@@ -56,6 +80,14 @@ ActiveRecord::Schema.define(:version => 20141209041156) do
 
   add_index "novegradian_crossrefs", ["from"], :name => "novegradian_crossrefs_from_fk"
   add_index "novegradian_crossrefs", ["to"], :name => "novegradian_crossrefs_to_fk"
+
+  create_table "temp", :primary_key => "Index_ID", :force => true do |t|
+    t.string "Novegradian", :null => false
+    t.text   "Additional",  :null => false
+  end
+
+  add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_from_fk", column: "from"
+  add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_to_fk", column: "to"
 
   add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_from_fk", column: "from"
   add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_to_fk", column: "to"

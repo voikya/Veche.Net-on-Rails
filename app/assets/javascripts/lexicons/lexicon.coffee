@@ -56,7 +56,7 @@ class Lexicon
 
   # Attach Ajax bindings to links to individual entries
   initEntryLinks: ->
-    $('main').on 'click', 'a', (evt) =>
+    $('main').on 'click', 'a:not(.root)', (evt) =>
       evt.preventDefault()
       word = $(evt.target).text()
       endpoint = @entryEndpoint.replace("{word}", word)
@@ -71,6 +71,10 @@ class Lexicon
         for key, content of res
           $entryView.append content
       )
+    $('main').on 'click', 'a.root', (evt) =>
+      evt.preventDefault()
+      root = $(evt.target).text()
+      @search(root: root)
 
   # Perform a search request
   search: (data) ->

@@ -48,6 +48,15 @@ module Lexicons
   end
 
   class RootFormatter < PlainTextFormatter
+    def to_html
+      "<div class='#{class_name}'>#{contents}</div>"
+    end
+
+    private
+
+    def contents
+      %Q(<a class="root" href=".?root=#{@text}">#{@text}</a>)
+    end
   end
 
   class RichTextFormatter < Formatter
