@@ -223,11 +223,55 @@ body.lexicon {
       display: inline-block;
     }
 
-    div.transliteration {
+    div.root-word {
+      font-size: xx-large;
+      display: inline-block;
+
+      &:before {
+        content: "*";
+      }
+    }
+
+    div.ext-root {
+      font-size: x-large;
+      display: inline-block;
+      margin-left: 10px;
+
+      &:before {
+        content: "(*";
+      }
+
+      &:after {
+        content: "-)";
+      }
+    }
+
+    div.transliteration, div.root-transliteration {
       font-size: large;
       font-style: italic;
       padding-left: 5px;
       display: inline-block;
+    }
+
+    div.root-transliteration {
+      font-size: large;
+      font-style: italic;
+      margin-left: 10px;
+      display: inline-block;
+
+      &:before {
+        content: "*";
+      }
+    }
+
+    div.ext-root-transliteration {
+      font-size: large;
+      font-style: italic;
+      display: inline-block;
+
+      &:before {
+        content: "/*";
+      }
     }
 
     div.pronunciation {
@@ -296,6 +340,48 @@ body.lexicon {
         list-style-type: none;
         margin-top: 0px;
         padding-left: 0px;
+      }
+    }
+
+    div.derivatives {
+      fieldset {
+        border: solid 1px #CCCCCC;
+      }
+
+      legend {
+        color: #666666;
+      }
+
+      div.derivative-word {
+        margin: 5px;
+        background-color: #EFEFEF;
+        padding: 10px;
+
+        .word {
+          font-size: large;
+        }
+
+        .transliteration {
+          font-size: medium;
+        }
+
+        .pronunciation {
+          font-size: small;
+
+          &:before {content: "[";}
+          &:after {content: "]";}
+        }
+
+        .definition {
+          margin-left: 15px;
+
+          &:before {content: "\"";}
+          &:after {content: "\"";}
+        }
+
+        .notes {
+          font-style: italic;
+        }
       }
     }
   }

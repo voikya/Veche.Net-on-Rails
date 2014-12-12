@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141210023251) do
+ActiveRecord::Schema.define(:version => 20141210031351) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -81,15 +81,36 @@ ActiveRecord::Schema.define(:version => 20141210023251) do
   add_index "novegradian_crossrefs", ["from"], :name => "novegradian_crossrefs_from_fk"
   add_index "novegradian_crossrefs", ["to"], :name => "novegradian_crossrefs_to_fk"
 
-  create_table "temp", :primary_key => "Index_ID", :force => true do |t|
-    t.string "Novegradian", :null => false
-    t.text   "Additional",  :null => false
+  create_table "ochets", :force => true do |t|
+    t.string   "root_word"
+    t.string   "root_transliteration"
+    t.string   "ext_root"
+    t.string   "ext_root_transliteration"
+    t.text     "definition"
+    t.text     "derivatives"
+    t.text     "idioms"
+    t.text     "etymology"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
+
+  create_table "ochets_crossrefs", :id => false, :force => true do |t|
+    t.integer  "from"
+    t.integer  "to"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "ochets_crossrefs", ["from"], :name => "ochets_crossrefs_from_fk"
+  add_index "ochets_crossrefs", ["to"], :name => "ochets_crossrefs_to_fk"
 
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_from_fk", column: "from"
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_to_fk", column: "to"
 
   add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_from_fk", column: "from"
   add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_to_fk", column: "to"
+
+  add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_from_fk", column: "from"
+  add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_to_fk", column: "to"
 
 end

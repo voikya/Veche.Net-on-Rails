@@ -4,7 +4,7 @@ module Lexicons
 
     def initialize(base_class)
       @base_class = base_class
-      @results = base_class.order(:word)
+      @results = base_class.order(base_class.indexed_column)
       @filters = []
       @scopes = {}
     end
@@ -50,8 +50,8 @@ module Lexicons
       {
         :total_matches => count,
         :partial_matches => @excluded.count,
-        :results => @results.map(&:word),
-        :partial_results => @excluded.map(&:word)
+        :results => @results.map(&@base_class.indexed_column),
+        :partial_results => @excluded.map(&@base_class.indexed_column)
       }.to_json
     end
 

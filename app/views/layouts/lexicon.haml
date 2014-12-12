@@ -5,9 +5,11 @@
     = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
     :coffeescript
-      $(document).ready -> new window.classes.Lexicon($('body').attr('data-language'))
+      $(document).ready -> new window.classes.Lexicon
+        language: $('body').attr('data-language')
+        lexemeField: $('body').attr('data-lexeme-field')
     = csrf_meta_tags
-  %body.lexicon{:data => {:language => @language}}
+  %body.lexicon{:data => {:language => @language, :lexeme_field => @lexicon.lexicon_class.indexed_column}}
     %header
       #search
         %form#searchform{:method => :get, :action => lexicon_path}

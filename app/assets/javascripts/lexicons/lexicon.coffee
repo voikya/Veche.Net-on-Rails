@@ -2,9 +2,11 @@ class Lexicon
   searchEndpoint: "/lexicon/{language}.json"
   entryEndpoint: "/lexicon/{language}/{word}.json"
 
-  constructor: (@language) ->
+  constructor: (opts) ->
+    @language = opts.language
     @searchEndpoint = @searchEndpoint.replace "{language}", @language
     @entryEndpoint = @entryEndpoint.replace "{language}", @language
+    @lexemeField = opts.lexemeField
     @initAdvancedSearch()
     @initSearchSubmit()
     @initEntryLinks()
@@ -52,7 +54,9 @@ class Lexicon
     $('nav .alphabet a').click (evt) =>
       evt.preventDefault()
       letter = $(evt.target).text()
-      @search(word: "#{letter}*")
+      params = {}
+      params[@lexemeField] = "#{letter}*"
+      @search(params)
 
   # Attach Ajax bindings to links to individual entries
   initEntryLinks: ->

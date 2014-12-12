@@ -1,6 +1,7 @@
 module Lexicons
   class Lexicon < ActiveRecord::Base
     attr_accessible :name, :lexicon_table, :alphabet
+    attr_accessor :lexicon_class
     after_initialize :load_entries_table
 
     def self.find_by_language(language)
@@ -33,7 +34,8 @@ module Lexicons
 
     # Look up a specific entry by its canonical native form.
     def entry(word)
-      @lexicon_class.find_by_word(word)
+      index = @lexicon_class.indexed_column
+      @lexicon_class.send "find_by_#{index}".to_sym, word
     end
 
     # True if any scoping/filters have been applied.
@@ -65,7 +67,7 @@ module Lexicons
     # by the lexicon entry class.
     def scope_any(value)
       fields = @lexicon_class.scopable_fields
-      @entries.add_scope(fields, value)
+      @entries.add_scopes(fields, value)
     end
 
     # Scope by matching a string against the primary fields, as defined
@@ -77,34 +79,17 @@ module Lexicons
       @entries.add_filter(:whole_word, true)
     end
 
-    # Scope by matching a string against the canonical form.
-    def scope_word(value)
-      @entries.add_scope(:word, value)
-    end
-
-    # Scope by matching a string against the transliteration.
-    def scope_transliteration(value)
-      @entries.add_scope(:transliteration, value)
-    end
-
-    # Scope by matching a string against the definition.
-    def scope_definition(value)
-      @entries.add_scope(:definition, value)
-    end
-
-    # Scope by matching a string against the part of speech.
-    def scope_part_of_speech(value)
-      @entries.add_scope(:part_of_speech, value)
-    end
-
-    # Scope by matching a string against the root (exact matching only).
-    def scope_root(value)
-      @entries.add_scope(:root, value)
-    end
-
     # Scope by following links to create a network of all related terms.
     def scope_related_to(value)
 
+    end
+
+    # Generic scoper for other fields
+    def method_missing(method, *args, &block)
+      if method.to_s =~ /^scope_(.*)$/
+        scopes = @lexicon_class.map_search_params($1.to_sym)
+        @entries.add_scope(scopes, *args)
+      end
     end
   end
 end

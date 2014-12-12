@@ -213,4 +213,44 @@ module Lexicons
       ].flatten.join
     end
   end
+
+  class DerivativeFormatter < Formatter
+    def tokenize
+      # Legacy Format:
+      #   [[word | transliteration | pronunciation | part of speech | definition | notes]]
+      #   'notes' is '*' if no content
+      @text.split(/\r?\n/).map do |line|
+        line_values = line.split('|').values_at(0,1,4).map(&:strip)
+        line_values[2] = line_values[2].split(',').map(&:strip)
+        line_values
+      end
+    end
+
+    def to_html
+      "<div class='#{class_name}'>#{contents}</div>"
+    end
+
+    private
+
+    def contents
+      [
+        "<fieldset>",
+        "<legend>Derived Words</legend>",
+        @text.split(/\r?\n/).map do |line|
+          split_line = line.gsub(/(\[\[|\]\])/, '').split('|').map(&:strip)
+          %Q(
+            <div class="derivative-word">
+              <div class="word">#{split_line[0]}</div>
+              <div class="transliteration">#{split_line[1]}</div>
+              <div class="pronunciation">#{split_line[2]}</div>
+              <div class="part-of-speech">#{split_line[3]}</div>
+              <div class="definition">#{split_line[4]}</div>
+              #{split_line[5] != '*' ? "<div class=\"notes\">#{split_line[5].gsub(/[{}]/, '')}</div>" : ""}
+            </div>
+          )
+        end,
+        "</fieldset>"
+      ].flatten.join
+    end
+  end
 end

@@ -6,7 +6,17 @@ module Lexicons
     before_filter :set_display_options
 
     # See Lexicon model for detailed descriptions
-    SEARCH_STRING_PARAMS = [:word, :transliteration, :definition, :part_of_speech, :root, :any]
+    SEARCH_STRING_PARAMS = [
+      :word,
+      :transliteration,
+      :definition,
+      :part_of_speech,
+      :root,
+      :root_word,
+      :root_transliteration,
+      :derivatives,
+      :any
+    ]
     SEARCH_BOOLEAN_PARAMS = [:exact, :whole_word]
     SEARCH_REFERENTIAL_PARAMS = [:related_to]
     SEARCH_PARAM_WHITELIST = [SEARCH_STRING_PARAMS, SEARCH_BOOLEAN_PARAMS, SEARCH_REFERENTIAL_PARAMS, :search].flatten

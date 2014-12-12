@@ -5,4 +5,4 @@
       %tr
         - @lexicon.alphabet.split(' ').each do |letter|
           %td
-            = link_to letter, lexicon_path(:word => "#{letter}*")
+            = link_to letter, lexicon_path(@lexicon.lexicon_class.indexed_column => "#{letter}*")

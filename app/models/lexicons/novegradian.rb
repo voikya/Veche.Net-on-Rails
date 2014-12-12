@@ -43,6 +43,23 @@ module Lexicons
       ]
     end
 
+    # The name of the column that lexicon entries are listed under
+    def self.indexed_column
+      :word
+    end
+
+    # Convert a search parameter into one or more corresponding columns
+    # in this table to search through
+    def self.map_search_params(field)
+      {
+        :word => :word,
+        :part_of_speech => :part_of_speech,
+        :transliteration => :transliteration,
+        :root => :root,
+        :definition => :definition
+      }[field]
+    end
+
     def cross_references
       super.order(:word)
     end
