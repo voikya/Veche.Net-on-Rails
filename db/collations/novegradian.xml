@@ -1,0 +1,140 @@
+<!-- Novegradian Collation for MySQL 5.6 -->
+<!--
+  To install:
+  1. Locate Index.xml in the MySQL character sets directory by running
+     `SHOW VARIABLES LIKE 'character_sets_dir';`
+  2. Verify the collation ID defined by the <collation> tag here is
+     not already in use by running
+     `SELECT * FROM INFORMATION_SCHEMA.COLLATIONS WHERE ID={ID}`
+  3. Add the following XML into Index.xml inside the
+     <charset name="utf8">...</charset> block.
+  4. Save, exit, and restart MySQL.
+-->
+<collation name="utf8_novegradian_ci" id="1200">
+  <rules>
+    <!-- Sort ГЬ as a separate letter after Г -->
+    <reset>Г</reset>
+    <p>ГЬ</p>
+
+    <!-- Define lowercase variants of ГЬ -->
+    <reset>ГЬ</reset>
+    <t>Гь</t>
+    <t>гь</t>
+
+    <!-- Sort Ғ after ГЬ -->
+    <reset>ГЬ</reset>
+    <p>Ғ</p>
+
+    <!-- Define lowercase variants of Ғ -->
+    <reset>Ғ</reset>
+    <t>ғ</t>
+
+    <!-- Sort ҒЬ as a separate letter after Ғ -->
+    <reset>Ғ</reset>
+    <p>ҒЬ</p>
+
+    <!-- Define lowercase variants of ҒЬ -->
+    <reset>ҒЬ</reset>
+    <t>Ғь</t>
+    <t>ғь</t>
+
+    <!-- Sort Д after ҒЬ -->
+    <reset>ҒЬ</reset>
+    <p>Д</p>
+
+    <!-- Define Ѐ as an accented variant of Е -->
+    <reset>Е</reset>
+    <s>Ѐ</s>
+
+    <!-- Define lowercase variants of Ѐ -->
+    <reset>Ѐ</reset>
+    <t>ѐ</t>
+
+    <!-- Sort Ё as a separate letter after Е -->
+    <reset>Е</reset>
+    <p>Ё</p>
+
+    <!-- Sort Ѕ after З -->
+    <reset>З</reset>
+    <p>Ѕ</p>
+
+    <!-- Define lowercase variants of Ѕ -->
+    <reset>Ѕ</reset>
+    <t>ѕ</t>
+
+    <!-- Sort КЬ as a separate letter after К -->
+    <reset>К</reset>
+    <p>КЬ</p>
+
+    <!-- Define lowercase variants of КЬ -->
+    <reset>КЬ</reset>
+    <t>Кь</t>
+    <t>кь</t>
+
+    <!-- Sort Л after КЬ -->
+    <reset>КЬ</reset>
+    <p>Л</p>
+
+    <!-- Sort Љ after Л -->
+    <reset>Л</reset>
+    <p>Љ</p>
+
+    <!-- Define lowercase variants of Љ -->
+    <reset>Љ</reset>
+    <t>љ</t>
+
+    <!-- Sort М after Љ -->
+    <reset>Љ</reset>
+    <p>М</p>
+
+    <!-- Sort НЬ as a separate letter after Н -->
+    <reset>Н</reset>
+    <p>НЬ</p>
+
+    <!-- Define lowercase variants of НЬ -->
+    <reset>НЬ</reset>
+    <t>Нь</t>
+    <t>нь</t>
+
+    <!-- Sort О after НЬ -->
+    <reset>НЬ</reset>
+    <p>О</p>
+
+    <!-- Define Ў as an accented variant of У -->
+    <reset>У</reset>
+    <s>Ў</s>
+
+    <!-- Define lowercase variants of Ў -->
+    <reset>Ў</reset>
+    <t>ў</t>
+
+    <!-- Sort ХЬ as a separate letter after Х -->
+    <reset>Х</reset>
+    <p>ХЬ</p>
+
+    <!-- Define lowercase variants of ХЬ -->
+    <reset>ХЬ</reset>
+    <t>Хь</t>
+    <t>хь</t>
+
+    <!-- Sort Ц after ХЬ -->
+    <reset>ХЬ</reset>
+    <p>Ц</p>
+
+    <!-- Sort Ѣ after Ш -->
+    <reset>Ш</reset>
+    <p>Ѣ</p>
+
+    <!-- Define lowercase variants of Ѣ -->
+    <reset>Ѣ</reset>
+    <t>ѣ</t>
+
+    <!-- Sort Ч after Я -->
+    <reset>Я</reset>
+    <p>Ч</p>
+
+    <!-- Sort Ы after Ч -->
+    <reset>Ч</reset>
+    <p>Ы</p>
+  </rules>
+</collation>

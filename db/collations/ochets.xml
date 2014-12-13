@@ -1,0 +1,123 @@
+<!-- Ochets Collation for MySQL 5.6 -->
+<!--
+  To install:
+  1. Locate Index.xml in the MySQL character sets directory by running
+     `SHOW VARIABLES LIKE 'character_sets_dir';`
+  2. Verify the collation ID defined by the <collation> tag here is
+     not already in use by running
+     `SELECT * FROM INFORMATION_SCHEMA.COLLATIONS WHERE ID={ID}`
+  3. Add the following XML into Index.xml inside the
+     <charset name="utf8">...</charset> block.
+  4. Save, exit, and restart MySQL.
+-->
+<collation name="utf8_ochets_ci" id="1202">
+  <rules>
+    <!-- Sort Ә after А -->
+    <reset>А</reset>
+    <p>Ә</p>
+
+    <!-- Define lowercase variants of Ә -->
+    <reset>Ә</reset>
+    <t>ә</t>
+
+    <!-- Sort Б after Ә -->
+    <reset>Ә</reset>
+    <p>Б</p>
+
+    <!-- Sort Ҕ after Г -->
+    <reset>Г</reset>
+    <p>Ҕ</p>
+
+    <!-- Define lowercase variants of Ҕ -->
+    <reset>Ҕ</reset>
+    <t>ҕ</t>
+
+    <!-- Sort Д after Ҕ -->
+    <reset>Ҕ</reset>
+    <p>Д</p>
+
+    <!-- Sort Ѕ after З -->
+    <reset>З</reset>
+    <p>Ѕ</p>
+
+    <!-- Define lowercase variants of Ѕ -->
+    <reset>Ѕ</reset>
+    <t>ѕ</t>
+
+    <!-- Sort И after Ѕ -->
+    <reset>Ѕ</reset>
+    <p>И</p>
+
+    <!-- Sort Қ after К -->
+    <reset>К</reset>
+    <p>Қ</p>
+
+    <!-- Define lowercase variants of Қ -->
+    <reset>Қ</reset>
+    <t>қ</t>
+
+    <!-- Sort Л after Қ -->
+    <reset>Қ</reset>
+    <p>Л</p>
+
+    <!-- Sort Ҥ after Н -->
+    <reset>Н</reset>
+    <p>Ҥ</p>
+
+    <!-- Define lowercase variants of Ҥ -->
+    <reset>Ҥ</reset>
+    <t>ҥ</t>
+
+    <!-- Sort О after Ҥ -->
+    <reset>Ҥ</reset>
+    <p>О</p>
+
+    <!-- Sort Ө after О -->
+    <reset>О</reset>
+    <p>Ө</p>
+
+    <!-- Define lowercase variants of Ө -->
+    <reset>Ө</reset>
+    <t>ө</t>
+
+    <!-- Sort П after Ө -->
+    <reset>Ө</reset>
+    <p>П</p>
+
+    <!-- Sort Һ after С -->
+    <reset>С</reset>
+    <p>Һ</p>
+
+    <!-- Define lowercase variants of Һ -->
+    <reset>Һ</reset>
+    <t>һ</t>
+
+    <!-- Sort Т after Һ -->
+    <reset>Һ</reset>
+    <p>Т</p>
+
+    <!-- Sort Ү after У -->
+    <reset>У</reset>
+    <p>Ү</p>
+
+    <!-- Define lowercase variants of Ү -->
+    <reset>Ү</reset>
+    <t>ү</t>
+
+    <!-- Sort Ф after Ү -->
+    <reset>Ү</reset>
+    <p>Ф</p>
+
+    <!-- Sort Џ after Ч -->
+    <reset>Ч</reset>
+    <p>Џ</p>
+
+    <!-- Define lowercase variants of Џ -->
+    <reset>Џ</reset>
+    <t>џ</t>
+
+    <!-- Sort Ш after Џ -->
+    <reset>Џ</reset>
+    <p>Ш</p>
+  </rules>
+</collation>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141210031351) do
+ActiveRecord::Schema.define(:version => 20141213213831) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"

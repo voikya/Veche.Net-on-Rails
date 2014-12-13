@@ -1,0 +1,115 @@
+<!-- Alashian Collation for MySQL 5.6 -->
+<!--
+  To install:
+  1. Locate Index.xml in the MySQL character sets directory by running
+     `SHOW VARIABLES LIKE 'character_sets_dir';`
+  2. Verify the collation ID defined by the <collation> tag here is
+     not already in use by running
+     `SELECT * FROM INFORMATION_SCHEMA.COLLATIONS WHERE ID={ID}`
+  3. Add the following XML into Index.xml inside the
+     <charset name="utf8">...</charset> block.
+  4. Save, exit, and restart MySQL.
+-->
+<collation name="utf8_alashian_ci" id="1201">
+  <rules>
+    <!-- Sort Β̄ as a separate letter after Β -->
+    <reset>Β</reset>
+    <p>Β̄</p>
+
+    <!-- Define lowercase variants of Β̄ -->
+    <reset>Β̄</reset>
+    <t>в̄</t>
+
+    <!-- Sort Γ after Β̄ -->
+    <reset>Β̄</reset>
+    <p>Γ</p>
+
+    <!-- Sort Γ̄ as a separate letter after Γ -->
+    <reset>Γ</reset>
+    <p>Γ̄</p>
+
+    <!-- Define lowercase variants of Γ̄ -->
+    <reset>Γ̄</reset>
+    <t>γ̄</t>
+
+    <!-- Sort Δ after Γ̄ -->
+    <reset>Γ̄</reset>
+    <p>Δ</p>
+
+    <!-- Sort Δ̄ as a separate letter after Δ -->
+    <reset>Δ</reset>
+    <p>Δ̄</p>
+
+    <!-- Define lowercase variants of Δ̄ -->
+    <reset>Δ̄</reset>
+    <t>δ̄</t>
+
+    <!-- Sort Ε after Δ̄ -->
+    <reset>Δ̄</reset>
+    <p>Ε</p>
+
+    <!-- Sort ΕΙ as a separate letter after Ε -->
+    <reset>Ε</reset>
+    <p>ΕΙ</p>
+
+    <!-- Define lowercase variants of ΕΙ -->
+    <reset>ΕΙ</reset>
+    <t>Ει</t>
+    <t>ει</t>
+
+    <!-- Sort Ζ after ΕΙ -->
+    <reset>ΕΙ</reset>
+    <p>Ζ</p>
+
+    <!-- Define ΟΥ as a distinct letter to be sorted after Ν -->
+    <reset>Ν</reset>
+    <p>ΟΥ</p>
+
+    <!-- Define lowercase variants of ΟΥ -->
+    <reset>ΟΥ</reset>
+    <t>Ου</t>
+    <t>ου</t>
+
+    <!-- Sort Π after ΟΥ -->
+    <reset>ΟΥ</reset>
+    <p>Π</p>
+
+    <!-- Sort Ρ̄ as a separate letter after Ρ -->
+    <reset>Ρ</reset>
+    <p>Ρ̄</p>
+
+    <!-- Define lowercase variants of Ρ̄ -->
+    <reset>Ρ̄</reset>
+    <t>ρ̄</t>
+
+    <!-- Sort Σ after Ρ̄ -->
+    <reset>Ρ̄</reset>
+    <p>Σ</p>
+
+    <!-- Sort Σ̄ as a separate letter after Σ -->
+    <reset>Σ</reset>
+    <p>Σ̄</p>
+
+    <!-- Define lowercase variants of Σ̄ -->
+    <reset>Σ̄</reset>
+    <t>σ̄</t>
+    <t>ς̄</t>
+
+    <!-- Sort Τ after Σ̄ -->
+    <reset>Σ̄</reset>
+    <p>Τ</p>
+
+    <!-- Sort ΤΖ as a separate letter after Τ -->
+    <reset>Τ</reset>
+    <p>ΤΖ</p>
+
+    <!-- Define lowercase variants of ΤΖ -->
+    <reset>ΤΖ</reset>
+    <t>Τζ</t>
+    <t>τζ</t>
+
+    <!-- Sort Υ after ΤΖ -->
+    <reset>ΤΖ</reset>
+    <p>Υ</p>
+  </rules>
+</collation>
