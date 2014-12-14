@@ -54,6 +54,10 @@
     <reset>Е</reset>
     <p>Ё</p>
 
+    <!-- Define lowercase variants of Ё -->
+    <reset>Ё</reset>
+    <t>ё</t>
+
     <!-- Sort Ѕ after З -->
     <reset>З</reset>
     <p>Ѕ</p>
