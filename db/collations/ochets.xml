@@ -13,111 +13,138 @@
 <collation name="utf8_ochets_ci" id="1202">
   <rules>
     <!-- Sort Ә after А -->
-    <reset>А</reset>
-    <p>Ә</p>
+    <reset>а</reset>
+    <p>ә</p>
 
-    <!-- Define lowercase variants of Ә -->
-    <reset>Ә</reset>
-    <t>ә</t>
+    <!-- Define case variants of Ә -->
+    <reset>ә</reset>
+    <t>Ә</t>
 
     <!-- Sort Б after Ә -->
-    <reset>Ә</reset>
-    <p>Б</p>
+    <reset>ә</reset>
+    <p>б</p>
 
     <!-- Sort Ҕ after Г -->
-    <reset>Г</reset>
-    <p>Ҕ</p>
+    <reset>г</reset>
+    <p>ҕ</p>
 
-    <!-- Define lowercase variants of Ҕ -->
-    <reset>Ҕ</reset>
-    <t>ҕ</t>
+    <!-- Define case variants of Ҕ -->
+    <reset>ҕ</reset>
+    <t>Ҕ</t>
 
     <!-- Sort Д after Ҕ -->
-    <reset>Ҕ</reset>
-    <p>Д</p>
+    <reset>ҕ</reset>
+    <p>д</p>
 
     <!-- Sort Ѕ after З -->
-    <reset>З</reset>
-    <p>Ѕ</p>
+    <reset>з</reset>
+    <p>ѕ</p>
 
-    <!-- Define lowercase variants of Ѕ -->
-    <reset>Ѕ</reset>
-    <t>ѕ</t>
+    <!-- Define case variants of Ѕ -->
+    <reset>ѕ</reset>
+    <t>Ѕ</t>
 
     <!-- Sort И after Ѕ -->
-    <reset>Ѕ</reset>
-    <p>И</p>
+    <reset>ѕ</reset>
+    <p>и</p>
 
     <!-- Sort Қ after К -->
-    <reset>К</reset>
-    <p>Қ</p>
+    <reset>к</reset>
+    <p>қ</p>
 
-    <!-- Define lowercase variants of Қ -->
-    <reset>Қ</reset>
-    <t>қ</t>
+    <!-- Define case variants of Қ -->
+    <reset>қ</reset>
+    <t>Қ</t>
 
     <!-- Sort Л after Қ -->
-    <reset>Қ</reset>
-    <p>Л</p>
+    <reset>қ</reset>
+    <p>л</p>
 
     <!-- Sort Ҥ after Н -->
-    <reset>Н</reset>
-    <p>Ҥ</p>
+    <reset>н</reset>
+    <p>ҥ</p>
 
-    <!-- Define lowercase variants of Ҥ -->
-    <reset>Ҥ</reset>
-    <t>ҥ</t>
+    <!-- Define case variants of Ҥ -->
+    <reset>ҥ</reset>
+    <t>Ҥ</t>
 
     <!-- Sort О after Ҥ -->
-    <reset>Ҥ</reset>
-    <p>О</p>
+    <reset>ҥ</reset>
+    <p>о</p>
 
     <!-- Sort Ө after О -->
-    <reset>О</reset>
-    <p>Ө</p>
+    <reset>о</reset>
+    <p>ө</p>
 
-    <!-- Define lowercase variants of Ө -->
-    <reset>Ө</reset>
-    <t>ө</t>
+    <!-- Define case variants of Ө -->
+    <reset>ө</reset>
+    <t>Ө</t>
 
     <!-- Sort П after Ө -->
-    <reset>Ө</reset>
-    <p>П</p>
+    <reset>ө</reset>
+    <p>п</p>
 
     <!-- Sort Һ after С -->
-    <reset>С</reset>
-    <p>Һ</p>
+    <reset>с</reset>
+    <p>һ</p>
 
-    <!-- Define lowercase variants of Һ -->
-    <reset>Һ</reset>
-    <t>һ</t>
+    <!-- Define case variants of Һ -->
+    <reset>һ</reset>
+    <t>Һ</t>
 
     <!-- Sort Т after Һ -->
-    <reset>Һ</reset>
-    <p>Т</p>
+    <reset>һ</reset>
+    <p>т</p>
 
     <!-- Sort Ү after У -->
-    <reset>У</reset>
-    <p>Ү</p>
+    <reset>у</reset>
+    <p>ү</p>
 
-    <!-- Define lowercase variants of Ү -->
-    <reset>Ү</reset>
-    <t>ү</t>
+    <!-- Define case variants of Ү -->
+    <reset>ү</reset>
+    <t>Ү</t>
 
     <!-- Sort Ф after Ү -->
-    <reset>Ү</reset>
-    <p>Ф</p>
+    <reset>ү</reset>
+    <p>ф</p>
 
     <!-- Sort Џ after Ч -->
-    <reset>Ч</reset>
-    <p>Џ</p>
+    <reset>ч</reset>
+    <p>џ</p>
 
     <!-- Define lowercase variants of Џ -->
-    <reset>Џ</reset>
-    <t>џ</t>
+    <reset>џ</reset>
+    <t>Џ</t>
 
     <!-- Sort Ш after Џ -->
-    <reset>Џ</reset>
-    <p>Ш</p>
+    <reset>џ</reset>
+    <p>ш</p>
+
+    <!-- Base case variants and ordering -->
+    <reset>а</reset><t>А</t>
+    <reset>б</reset><t>Б</t><p>в</p>
+    <reset>в</reset><t>В</t><p>г</p>
+    <reset>г</reset><t>Г</t>
+    <reset>д</reset><t>Д</t><p>е</p>
+    <reset>е</reset><t>Е</t><p>ж</p>
+    <reset>ж</reset><t>Ж</t><p>з</p>
+    <reset>з</reset><t>З</t>
+    <reset>и</reset><t>И</t><p>к</p>
+    <reset>к</reset><t>К</t>
+    <reset>л</reset><t>Л</t><p>м</p>
+    <reset>м</reset><t>М</t><p>н</p>
+    <reset>н</reset><t>Н</t>
+    <reset>о</reset><t>О</t>
+    <reset>п</reset><t>П</t><p>р</p>
+    <reset>р</reset><t>Р</t><p>с</p>
+    <reset>с</reset><t>С</t>
+    <reset>т</reset><t>Т</t><p>у</p>
+    <reset>у</reset><t>У</t>
+    <reset>ф</reset><t>Ф</t><p>х</p>
+    <reset>х</reset><t>Х</t><p>ц</p>
+    <reset>ц</reset><t>Ц</t><p>ч</p>
+    <reset>ч</reset><t>Ч</t>
+    <reset>ш</reset><t>Ш</t><p>ы</p>
+    <reset>ы</reset><t>Ы</t>
   </rules>
 </collation>

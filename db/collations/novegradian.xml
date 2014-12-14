@@ -13,132 +13,162 @@
 <collation name="utf8_novegradian_ci" id="1200">
   <rules>
     <!-- Sort ГЬ as a separate letter after Г -->
-    <reset>Г</reset>
-    <p>ГЬ</p>
+    <reset>г</reset>
+    <p>гь</p>
 
-    <!-- Define lowercase variants of ГЬ -->
-    <reset>ГЬ</reset>
+    <!-- Define case variants of ГЬ -->
+    <reset>гь</reset>
+    <t>ГЬ</t>
     <t>Гь</t>
-    <t>гь</t>
 
     <!-- Sort Ғ after ГЬ -->
-    <reset>ГЬ</reset>
-    <p>Ғ</p>
+    <reset>гь</reset>
+    <p>ғ</p>
 
-    <!-- Define lowercase variants of Ғ -->
-    <reset>Ғ</reset>
-    <t>ғ</t>
+    <!-- Define case variants of Ғ -->
+    <reset>ғ</reset>
+    <t>Ғ</t>
 
     <!-- Sort ҒЬ as a separate letter after Ғ -->
-    <reset>Ғ</reset>
-    <p>ҒЬ</p>
+    <reset>ғ</reset>
+    <p>ғь</p>
 
-    <!-- Define lowercase variants of ҒЬ -->
-    <reset>ҒЬ</reset>
+    <!-- Define case variants of ҒЬ -->
+    <reset>ғь</reset>
+    <t>ҒЬ</t>
     <t>Ғь</t>
-    <t>ғь</t>
 
     <!-- Sort Д after ҒЬ -->
-    <reset>ҒЬ</reset>
-    <p>Д</p>
+    <reset>ғь</reset>
+    <p>д</p>
 
     <!-- Define Ѐ as an accented variant of Е -->
-    <reset>Е</reset>
-    <s>Ѐ</s>
+    <reset>е</reset>
+    <s>ѐ</s>
 
-    <!-- Define lowercase variants of Ѐ -->
-    <reset>Ѐ</reset>
-    <t>ѐ</t>
+    <!-- Define case variants of Ѐ -->
+    <reset>ѐ</reset>
+    <t>Ѐ</t>
 
     <!-- Sort Ё as a separate letter after Е -->
-    <reset>Е</reset>
-    <p>Ё</p>
-
-    <!-- Define lowercase variants of Ё -->
-    <reset>Ё</reset>
-    <t>ё</t>
+    <reset>е</reset>
+    <p>ё</p>
 
     <!-- Sort Ѕ after З -->
-    <reset>З</reset>
-    <p>Ѕ</p>
+    <reset>з</reset>
+    <p>ѕ</p>
 
-    <!-- Define lowercase variants of Ѕ -->
-    <reset>Ѕ</reset>
-    <t>ѕ</t>
+    <!-- Define case variants of Ѕ -->
+    <reset>ѕ</reset>
+    <t>Ѕ</t>
 
     <!-- Sort КЬ as a separate letter after К -->
-    <reset>К</reset>
-    <p>КЬ</p>
+    <reset>к</reset>
+    <p>кь</p>
 
-    <!-- Define lowercase variants of КЬ -->
-    <reset>КЬ</reset>
+    <!-- Define case variants of КЬ -->
+    <reset>кь</reset>
+    <t>КЬ</t>
     <t>Кь</t>
-    <t>кь</t>
 
     <!-- Sort Л after КЬ -->
-    <reset>КЬ</reset>
-    <p>Л</p>
+    <reset>кь</reset>
+    <p>л</p>
 
     <!-- Sort Љ after Л -->
-    <reset>Л</reset>
-    <p>Љ</p>
+    <reset>л</reset>
+    <p>љ</p>
 
-    <!-- Define lowercase variants of Љ -->
-    <reset>Љ</reset>
-    <t>љ</t>
+    <!-- Define case variants of Љ -->
+    <reset>љ</reset>
+    <t>Љ</t>
 
     <!-- Sort М after Љ -->
-    <reset>Љ</reset>
-    <p>М</p>
+    <reset>љ</reset>
+    <p>м</p>
 
     <!-- Sort НЬ as a separate letter after Н -->
-    <reset>Н</reset>
-    <p>НЬ</p>
+    <reset>н</reset>
+    <p>нь</p>
 
-    <!-- Define lowercase variants of НЬ -->
-    <reset>НЬ</reset>
+    <!-- Define case variants of НЬ -->
+    <reset>нь</reset>
+    <t>НЬ</t>
     <t>Нь</t>
-    <t>нь</t>
 
     <!-- Sort О after НЬ -->
-    <reset>НЬ</reset>
-    <p>О</p>
+    <reset>нь</reset>
+    <p>о</p>
 
     <!-- Define Ў as an accented variant of У -->
-    <reset>У</reset>
-    <s>Ў</s>
+    <reset>у</reset>
+    <s>ў</s>
 
-    <!-- Define lowercase variants of Ў -->
-    <reset>Ў</reset>
-    <t>ў</t>
+    <!-- Define case variants of Ў -->
+    <reset>ў</reset>
+    <t>Ў</t>
 
     <!-- Sort ХЬ as a separate letter after Х -->
-    <reset>Х</reset>
-    <p>ХЬ</p>
+    <reset>х</reset>
+    <p>хь</p>
 
-    <!-- Define lowercase variants of ХЬ -->
-    <reset>ХЬ</reset>
+    <!-- Define case variants of ХЬ -->
+    <reset>хь</reset>
+    <t>ХЬ</t>
     <t>Хь</t>
-    <t>хь</t>
 
     <!-- Sort Ц after ХЬ -->
-    <reset>ХЬ</reset>
-    <p>Ц</p>
+    <reset>хь</reset>
+    <p>ц</p>
 
     <!-- Sort Ѣ after Ш -->
-    <reset>Ш</reset>
-    <p>Ѣ</p>
+    <reset>ш</reset>
+    <p>ѣ</p>
 
-    <!-- Define lowercase variants of Ѣ -->
-    <reset>Ѣ</reset>
-    <t>ѣ</t>
+    <!-- Define case variants of Ѣ -->
+    <reset>ѣ</reset>
+    <t>Ѣ</t>
+
+    <!-- Sort Ю after Ѣ -->
+    <reset>ѣ</reset>
+    <p>ю</p>
 
     <!-- Sort Ч after Я -->
-    <reset>Я</reset>
-    <p>Ч</p>
+    <reset>я</reset>
+    <p>ч</p>
 
     <!-- Sort Ы after Ч -->
-    <reset>Ч</reset>
-    <p>Ы</p>
+    <reset>ч</reset>
+    <p>ы</p>
+
+    <!-- Base case variants and ordering -->
+    <reset>а</reset><t>А</t><p>б</p>
+    <reset>б</reset><t>Б</t><p>в</p>
+    <reset>в</reset><t>В</t><p>г</p>
+    <reset>г</reset><t>Г</t>
+    <reset>д</reset><t>Д</t><p>е</p>
+    <reset>е</reset><t>Е</t>
+    <reset>ё</reset><t>Ё</t><p>ж</p>
+    <reset>ж</reset><t>Ж</t><p>з</p>
+    <reset>з</reset><t>З</t><p>и</p>
+    <reset>и</reset><t>И</t><p>й</p>
+    <reset>й</reset><t>Й</t><p>к</p>
+    <reset>к</reset><t>К</t>
+    <reset>л</reset><t>Л</t>
+    <reset>м</reset><t>М</t><p>н</p>
+    <reset>н</reset><t>Н</t>
+    <reset>о</reset><t>О</t><p>п</p>
+    <reset>п</reset><t>П</t><p>р</p>
+    <reset>р</reset><t>Р</t><p>с</p>
+    <reset>с</reset><t>С</t><p>т</p>
+    <reset>т</reset><t>Т</t><p>у</p>
+    <reset>у</reset><t>У</t><p>х</p>
+    <reset>х</reset><t>Х</t>
+    <reset>ц</reset><t>Ц</t>
+    <reset>ч</reset><t>Ч</t><p>ш</p>
+    <reset>ш</reset><t>Ш</t>
+    <reset>ы</reset><t>Ы</t>
+    <reset>ю</reset><t>Ю</t><p>я</p>
+    <reset>я</reset><t>я</t>
   </rules>
 </collation>
