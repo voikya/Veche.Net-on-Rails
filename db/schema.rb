@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141213213831) do
+ActiveRecord::Schema.define(:version => 20141214011751) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -23,9 +23,12 @@ ActiveRecord::Schema.define(:version => 20141213213831) do
     t.text     "idioms"
     t.text     "notes"
     t.text     "etymology"
+    t.string   "slug"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
+
+  add_index "alashian", ["slug"], :name => "index_alashian_on_slug", :unique => true
 
   create_table "alashian_crossrefs", :id => false, :force => true do |t|
     t.integer  "from"
@@ -67,9 +70,12 @@ ActiveRecord::Schema.define(:version => 20141213213831) do
     t.text     "etymology"
     t.text     "cognates"
     t.text     "inflection_structure"
+    t.string   "slug"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
   end
+
+  add_index "novegradian", ["slug"], :name => "index_novegradian_on_slug", :unique => true
 
   create_table "novegradian_crossrefs", :id => false, :force => true do |t|
     t.integer  "from"
@@ -90,9 +96,12 @@ ActiveRecord::Schema.define(:version => 20141213213831) do
     t.text     "derivatives"
     t.text     "idioms"
     t.text     "etymology"
+    t.string   "slug"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end
+
+  add_index "ochets", ["slug"], :name => "index_ochets_on_slug", :unique => true
 
   create_table "ochets_crossrefs", :id => false, :force => true do |t|
     t.integer  "from"

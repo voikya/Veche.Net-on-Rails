@@ -50,8 +50,8 @@ module Lexicons
       {
         :total_matches => count,
         :partial_matches => @excluded.count,
-        :results => @results.map(&@base_class.indexed_column),
-        :partial_results => @excluded.map(&@base_class.indexed_column)
+        :results => @results.map(&:slug),
+        :partial_results => @excluded.map(&:slug)
       }.to_json
     end
 

@@ -207,7 +207,8 @@ module Lexicons
       [
         "<ul>",
         @text.map do |xref|
-          %Q(<li><a href="#{xref.word}">#{xref.word}</a> "#{xref.definition_summary}"</li>)
+          formatted_slug = xref.slug.gsub(/^([^0-9]*)([0-9]*)$/, '\1<sup>\2</sup>')
+          %Q(<li><a href="#{xref.slug}">#{formatted_slug}</a> "#{xref.definition_summary}"</li>)
         end,
         "</ul>"
       ].flatten.join

@@ -32,10 +32,9 @@ module Lexicons
       self
     end
 
-    # Look up a specific entry by its canonical native form.
-    def entry(word)
-      index = @lexicon_class.indexed_column
-      @lexicon_class.send "find_by_#{index}".to_sym, word
+    # Look up a specific entry by its slug
+    def entry(slug)
+      @lexicon_class.where("slug COLLATE utf8_novegradian_ci = ?", slug).first
     end
 
     # True if any scoping/filters have been applied.

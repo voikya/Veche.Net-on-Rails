@@ -31,7 +31,7 @@ module Lexicons
     end
 
     def show
-      @entry = @lexicon.entry(params[:lexeme])
+      @entry = @lexicon.entry(params[:slug])
       @lexicon.scope_entries(search_params)
       @cross_refs = @entry.cross_references
 

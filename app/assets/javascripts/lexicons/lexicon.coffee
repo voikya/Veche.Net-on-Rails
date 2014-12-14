@@ -97,7 +97,8 @@ class Lexicon
       # List the matches
       $results = $("<ul></ul>")
       for r in res.results
-        $results.append $("<li><a href=\"/lexicon/#{@language}/#{r}\">#{r}</a></li>")
+        formatted = r.replace /^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>'
+        $results.append $("<li><a href=\"/lexicon/#{@language}/#{r}\">#{formatted}</a></li>")
       $searchResults.append $results
       # If a basic search was performed, also display partial matches
       if "search" of data and res.partial_matches > 0
@@ -106,7 +107,8 @@ class Lexicon
 
         $results = $("<ul></ul>")
         for r in res.partial_results
-          $results.append $("<li><a href=\"/lexicon/#{@language}/#{r}\">#{r}</a></li>")
+          formatted = r.replace /^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>'
+          $results.append $("<li><a href=\"/lexicon/#{@language}/#{r}\">#{formatted}</a></li>")
         $searchResults.append $results
     )
 
