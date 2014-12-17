@@ -133,7 +133,7 @@ module Lexicons
     end
   end
 
-  class MorphologyFormatter < Formatter
+  class ImportantFormsFormatter < Formatter
     def tokenize
       # Legacy Format:
       #   [[Type| Metadata]]
@@ -252,6 +252,16 @@ module Lexicons
         end,
         "</fieldset>"
       ].flatten.join
+    end
+  end
+
+  class MorphologyFormatter < Formatter
+    def to_html
+      if @text
+        "<div class='#{class_name}'>#{@text}</div>"
+      else
+        ""
+      end
     end
   end
 end

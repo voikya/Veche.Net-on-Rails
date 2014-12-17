@@ -34,6 +34,13 @@ module Lexicons
       @entry = @lexicon.entry(params[:slug])
       @lexicon.scope_entries(search_params)
       @cross_refs = @entry.cross_references
+      if @entry.morphology
+        partial = "lexicons/lexicon/morphology/" +
+                  @language.downcase.to_s +
+                  "_" +
+                  @entry.morphology.category.to_s.pluralize
+        @entry.morphology_table = render_to_string :partial => partial, :locals => {:m => @entry.morphology.generate!}
+      end
 
       respond_to do |format|
         format.html

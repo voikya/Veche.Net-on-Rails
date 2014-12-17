@@ -384,6 +384,29 @@ body.lexicon {
         }
       }
     }
+
+    div.morphology-table {
+      table {
+        border-collapse: collapse;
+      }
+
+      colgroup.primary {
+        border: solid 1px #DDDDDD;
+      }
+
+      th {
+        background-color: #DDDDDD;
+        padding: 3px 5px;
+
+        &.morphology-info {
+          font-weight: 200;
+        }
+      }
+
+      td {
+        padding: 2px 5px;
+      }
+    }
   }
 }
 

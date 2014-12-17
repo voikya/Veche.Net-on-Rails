@@ -8,6 +8,7 @@ module Lexicons
 
     has_many :cross_reference_links, :foreign_key => :from, :class_name => NovegradianCrossReference
     has_many :cross_references, :through => :cross_reference_links, :source => :novegradian
+    has_one :morphology, :foreign_key => :entry_id, :class_name => NovegradianMorphology
 
     field :word, :formatter => CanonicalFormFormatter
     field :transliteration, :formatter => TransliterationFormatter
@@ -15,13 +16,16 @@ module Lexicons
     field :part_of_speech, :formatter => PartOfSpeechFormatter
     field :root, :formatter => RootFormatter
     field :definition, :formatter => DefinitionFormatter
-    field :important_forms, :formatter => MorphologyFormatter
+    field :important_forms, :formatter => ImportantFormsFormatter
     field :idioms, :formatter => IdiomFormatter
     field :notes, :formatter => NoteFormatter
     field :etymology, :formatter => EtymologyFormatter
     field :cognates, :formatter => CognateFormatter
 
     field :cross_references, :formatter => CrossReferenceFormatter, :custom => true
+    field :morphology_table, :formatter => MorphologyFormatter, :custom => true
+
+    attr_accessor :morphology_table
 
     # Array of fields that are included when doing a search over "any" field.
     def self.scopable_fields

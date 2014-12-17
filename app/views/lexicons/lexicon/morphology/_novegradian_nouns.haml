@@ -1,0 +1,40 @@
+- numbers = [:singular, :dual, :plural]
+- numbers.delete(:singular) if m.pl_tantum?
+- numbers.delete(:plural) if m.sg_tantum?
+- numbers.delete(:dual) unless m.has_dual?
+- cases = [:nominative, :genitive, :accusative, :dative,
+           :partitive, :locative, :lative]
+%table
+  %colgroup
+    %col
+  %colgroup.primary
+    - numbers.length.times do
+      %col
+  %colgroup.primary
+    - numbers.length.times do
+      %col
+  %thead
+    %tr
+      %th.morphology-info{:colspan => (numbers.length * 2 + 1)}
+        #{m.declension} (Subtype #{m.subtype})
+    %tr
+      %th{:rowspan => 2}
+      %th{:colspan => numbers.length} Non-Topicalized
+      %th{:colspan => numbers.length} Topicalized
+    %tr
+      - 2.times do
+        - numbers.each do |number|
+          %th= number.to_s.titleize
+    - cases.each do |case_name|
+      %tr
+        %th{:scope => :row}= (case_name == :dative ? "Dative/Instrumental" : case_name).to_s.titleize
+        - numbers.each do |number|
+          %td
+            = form = m.send "#{case_name}_#{number}".to_sym
+            %br
+            %span.transliteration= form.transliteration
+        - numbers.each do |number|
+          %td
+            = form = m.topicalize(m.send("#{case_name}_#{number}".to_sym), case_name, number)
+            %br
+            %span.transliteration= form.transliteration
