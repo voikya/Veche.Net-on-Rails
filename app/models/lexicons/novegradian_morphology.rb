@@ -36,8 +36,8 @@ module Lexicons
                 suffix_tra = "-ta"
               when *%w(е)
                 suffix_nov = "-те"
-                suffix_tra = "-та"
-              when *%w(о ё и ы у ю ѣ)
+                suffix_tra = "-te"
+              when *%w(о ё и ы у ю ѣ ѐ)
                 suffix_nov = "-то"
                 suffix_tra = "-to"
               else
