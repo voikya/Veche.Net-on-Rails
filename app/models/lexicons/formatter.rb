@@ -75,7 +75,7 @@ module Lexicons
     end
 
     def format(text)
-      text.gsub! /{.*?}/, '<i>\1</i>'
+      text.gsub! /{(.*?)}/, '<i>\1</i>'
       text.split(/\r?\n/).map {|line| "<p>#{line}</p>"}.join
     end
   end
