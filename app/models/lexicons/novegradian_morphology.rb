@@ -72,7 +72,7 @@ module Lexicons
 
     def method_missing(method, *args, &block)
       if method.to_s[-1] == '?'
-        @flags ||= (flags || "").split(',').map(&:strip).map(&:to_sym)
+        @flags ||= (flags || "").split(' ').map(&:strip).map(&:to_sym)
         @flags.include? method[0..-2].to_sym
       else
         method = "_#{method}".to_sym
