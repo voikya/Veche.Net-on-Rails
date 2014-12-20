@@ -15,6 +15,10 @@ module Morphology
             [stem + "ев", stem_transliterated + "év"]
           end
 
+          def _nominative_singular_topicalized
+            [stem + "ев-от", stem_transliterated + "ev-ót"]
+          end
+
           def _nominative_dual
             [stem + "еве", stem_transliterated + "éve"]
           end
@@ -37,6 +41,14 @@ module Morphology
 
           def _accusative_singular
             animate? ? _genitive_singular : _nominative_singular
+          end
+
+          def _accusative_singular_topicalized
+            if animate?
+              [stem + "ева-то", stem_transliterated + "éva-to"]
+            else
+              _nominative_singular_topicalized
+            end
           end
 
           def _accusative_dual
