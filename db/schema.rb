@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141214222139) do
+ActiveRecord::Schema.define(:version => 20141221051313) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(:version => 20141214222139) do
 
   create_table "novegradian_morphology", :force => true do |t|
     t.integer  "entry_id"
+    t.integer  "base_id"
     t.string   "category"
     t.string   "stem"
     t.string   "stem_transliterated"
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(:version => 20141214222139) do
     t.datetime "updated_at",               :null => false
   end
 
+  add_index "novegradian_morphology", ["base_id"], :name => "novegradian_morphology_base_id_fk"
   add_index "novegradian_morphology", ["entry_id"], :name => "novegradian_morphology_entry_id_fk"
 
   create_table "ochets", :force => true do |t|
@@ -138,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20141214222139) do
   add_foreign_key "novegradian_crossrefs", "novegradian", name: "novegradian_crossrefs_to_fk", column: "to"
 
   add_foreign_key "novegradian_morphology", "novegradian", name: "novegradian_morphology_entry_id_fk", column: "entry_id"
+  add_foreign_key "novegradian_morphology", "novegradian_morphology", name: "novegradian_morphology_base_id_fk", column: "base_id"
 
   add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_from_fk", column: "from"
   add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_to_fk", column: "to"
