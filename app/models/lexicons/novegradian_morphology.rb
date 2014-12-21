@@ -5,10 +5,12 @@ module Lexicons
     self.table_name = 'novegradian_morphology'
 
     belongs_to :novegradian, :foreign_key => :entry_id
+    has_many :extensions, :foreign_key => :base_id, :class_name => NovegradianMorphology
+    belongs_to :novegradian_morphology, :foreign_key => :base_id
 
-    attr_accessible :entry_id, :category, :stem, :stem_transliterated, :desinence,
-                    :desinence_transliterated, :tertiary, :tertiary_transliterated,
-                    :group, :subgroup, :flags
+    attr_accessible :entry_id, :base_id, :category, :stem, :stem_transliterated,
+                    :desinence, :desinence_transliterated, :tertiary,
+                    :tertiary_transliterated, :group, :subgroup, :flags
 
     def generate!
       module_name = [

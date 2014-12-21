@@ -1,0 +1,91 @@
+- degrees = ([m] + m.extensions).flatten
+%table.adjectives
+  %colgroup
+    %col
+  %colgroup.primary
+    %col
+    %col
+    %col
+    %col
+  %colgroup.primary
+    %col
+    %col
+    %col
+    %col
+  - degrees.each do |degree|
+    %thead
+      %tr
+        %th{:rowspan => 3}
+        %th{:colspan => 8} #{degree.group.titleize} Degree
+      %tr
+        %th{:colspan => 4} Indefinite
+        %th{:colspan => 4} Definite
+      %tr
+        - 2.times do
+          %th Masc
+          %th Neut
+          %th Fem
+          %th Plur
+    %tbody
+      %tr
+        %th Nom
+        %td= form(degree, :indefinite_nominative_masculine)
+        %td= form(degree, :indefinite_nominative_neuter)
+        %td= form(degree, :indefinite_nominative_feminine)
+        %td= form(degree, :indefinite_nominative_plural)
+        %td= form(degree, :definite_nominative_masculine)
+        %td= form(degree, :definite_nominative_neuter)
+        %td= form(degree, :definite_nominative_feminine)
+        %td= form(degree, :definite_nominative_plural)
+      %tr
+        %th Gen
+        %td{:colspan => 2}= form(degree, :indefinite_genitive_masculine)
+        %td= form(degree, :indefinite_genitive_feminine)
+        %td= form(degree, :indefinite_genitive_plural)
+        %td{:colspan => 2}= form(degree, :definite_genitive_masculine)
+        %td= form(degree, :definite_genitive_feminine)
+        %td= form(degree, :definite_genitive_plural)
+      %tr
+        %th Acc<br>(Inanimate)
+        %td= form(degree, :indefinite_accusative_masculine)
+        %td= form(degree, :indefinite_accusative_neuter)
+        %td= form(degree, :indefinite_accusative_feminine)
+        %td= form(degree, :indefinite_accusative_plural)
+        %td= form(degree, :definite_accusative_masculine)
+        %td= form(degree, :definite_accusative_neuter)
+        %td= form(degree, :definite_accusative_feminine)
+        %td= form(degree, :definite_accusative_plural)
+      %tr
+        %th Acc<br>(Animate)
+        %td{:colspan => 2}= form(degree, :indefinite_genitive_masculine)
+        %td= form(degree, :indefinite_genitive_feminine)
+        %td= form(degree, :indefinite_genitive_plural)
+        %td{:colspan => 2}= form(degree, :definite_genitive_masculine)
+        %td= form(degree, :definite_genitive_feminine)
+        %td= form(degree, :definite_genitive_plural)
+      %tr
+        %th Dat/Ins
+        %td{:colspan => 2}= form(degree, :indefinite_dative_masculine)
+        %td= form(degree, :indefinite_dative_feminine)
+        %td= form(degree, :indefinite_dative_plural)
+        %td{:colspan => 2}= form(degree, :definite_dative_masculine)
+        %td= form(degree, :definite_dative_feminine)
+        %td= form(degree, :definite_dative_plural)
+      %tr
+        %th Part
+        %td{:colspan => 3}= form(degree, :indefinite_partitive_singular)
+        %td= form(degree, :indefinite_partitive_plural)
+        %td{:colspan => 3}= form(degree, :definite_partitive_singular)
+        %td= form(degree, :definite_partitive_plural)
+      %tr
+        %th Loc
+        %td{:colspan => 3}= form(degree, :indefinite_locative_singular)
+        %td= form(degree, :indefinite_locative_plural)
+        %td{:colspan => 3}= form(degree, :definite_locative_singular)
+        %td= form(degree, :definite_locative_plural)
+      %tr
+        %th Lat
+        %td{:colspan => 3}= form(degree, :indefinite_lative_singular)
+        %td= form(degree, :indefinite_lative_plural)
+        %td{:colspan => 3}= form(degree, :definite_lative_singular)
+        %td= form(degree, :definite_lative_plural)
