@@ -104,6 +104,7 @@ module Morphology
               when vowels
                 return word
               when "й"
+                word = word.dup
                 if epenthetic_vowel == "о"
                   word[-2] = "ё"
                 else

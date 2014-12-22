@@ -1,4 +1,4 @@
-- degrees = ([m] + m.extensions).flatten
+- degrees = ([m] + m.extensions.map(&:generate!)).flatten
 %table.adjectives
   %colgroup
     %col

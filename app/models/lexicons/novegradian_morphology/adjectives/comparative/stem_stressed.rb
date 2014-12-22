@@ -1,7 +1,7 @@
 module Morphology
   module Novegradian
     module Adjectives
-      module Absolute
+      module Comparative
         module StemStressed
           def subtype
             "Stem-Stressed"
@@ -12,7 +12,7 @@ module Morphology
           end
 
           def _indefinite_nominative_neuter
-            [stem + "о", stem_transliterated + "o"]
+            [stem + "е", stem_transliterated + "e"]
           end
 
           def _indefinite_nominative_feminine
@@ -32,7 +32,7 @@ module Morphology
           end
 
           def _indefinite_genitive_plural
-            [gen_pl_stem(stem, "о"), gen_pl_stem_transliterated(stem_transliterated, "o")]
+            [gen_pl_stem(stem, "е"), gen_pl_stem_transliterated(stem_transliterated, "e")]
           end
 
           def _indefinite_accusative_masculine
@@ -46,7 +46,7 @@ module Morphology
           end
 
           def _indefinite_accusative_neuter
-            [stem + "о", stem_transliterated + "o"]
+            [stem + "е", stem_transliterated + "e"]
           end
 
           def _indefinite_accusative_feminine
@@ -58,11 +58,11 @@ module Morphology
           end
 
           def _indefinite_dative_masculine
-            [stem + "ом", stem_transliterated + "om"]
+            [stem + "ем", stem_transliterated + "em"]
           end
 
           def _indefinite_dative_feminine
-            [stem + "ой", stem_transliterated + "oi"]
+            [stem + "ей", stem_transliterated + "ei"]
           end
 
           def _indefinite_dative_plural
@@ -74,7 +74,7 @@ module Morphology
           end
 
           def _indefinite_partitive_plural
-            [stem + "оу", stem_transliterated + "ou"]
+            [stem + "еу", stem_transliterated + "eu"]
           end
 
           def _indefinite_locative_singular
@@ -98,27 +98,27 @@ module Morphology
           end
 
           def _definite_nominative_neuter
-            [desinence + "ое", desinence_transliterated + "oie"]
+            [stem + "ее", stem_transliterated + "eie"]
           end
 
           def _definite_nominative_feminine
-            [desinence + "ая", desinence_transliterated + "aia"]
+            [stem + "ая", stem_transliterated + "aia"]
           end
 
           def _definite_nominative_plural
-            [desinence + "ие", desinence_transliterated + "ije"]
+            [stem + "ие", stem_transliterated + "ije"]
           end
 
           def _definite_genitive_masculine
-            [tertiary + "аево", tertiary_transliterated + "áievo"]
+            [desinence + "аево", desinence_transliterated + "áievo"]
           end
 
           def _definite_genitive_feminine
-            [desinence + "ѣе", desinence_transliterated + "ěie"]
+            [stem + "ѣе", stem_transliterated + "ěie"]
           end
 
           def _definite_genitive_plural
-            [desinence + "их", desinence_transliterated + "ih"]
+            [stem + "их", stem_transliterated + "ih"]
           end
 
           def _definite_accusative_masculine
@@ -126,51 +126,51 @@ module Morphology
           end
 
           def _definite_accusative_neuter
-            [desinence + "ое", desinence_transliterated + "oie"]
+            [stem + "ее", stem_transliterated + "eie"]
           end
 
           def _definite_accusative_feminine
-            [desinence + "аю", desinence_transliterated + "aiu"]
+            [stem + "аю", stem_transliterated + "aiu"]
           end
 
           def _definite_accusative_plural
-            [desinence + "ие", desinence_transliterated + "ije"]
+            [stem + "ие", stem_transliterated + "ije"]
           end
 
           def _definite_dative_masculine
-            [desinence + "ием", desinence_transliterated + "ijem"]
+            [stem + "ием", stem_transliterated + "ijem"]
           end
 
           def _definite_dative_feminine
-            [desinence + "оюн", desinence_transliterated + "oiun"]
+            [stem + "еюн", stem_transliterated + "eiun"]
           end
 
           def _definite_dative_plural
-            [tertiary + "иеми", tertiary_transliterated + "íjemi"]
+            [desinence + "иеми", desinence_transliterated + "íjemi"]
           end
 
           def _definite_partitive_singular
-            [tertiary + "аево", tertiary_transliterated + "áievo"]
+            [desinence + "аево", desinence_transliterated + "áievo"]
           end
 
           def _definite_partitive_plural
-            [tertiary + "овево", tertiary_transliterated + "óvevo"]
+            [desinence + "евево", desinence_transliterated + "évevo"]
           end
 
           def _definite_locative_singular
-            [desinence + "ѣѣм", desinence_transliterated + "ěiěm"]
+            [stem + "ѣѣм", stem_transliterated + "ěiěm"]
           end
 
           def _definite_locative_plural
-            [desinence + "иех", desinence_transliterated + "ijeh"]
+            [stem + "иех", stem_transliterated + "ijeh"]
           end
 
           def _definite_lative_singular
-            [desinence + "уюн", desinence_transliterated + "uiun"]
+            [stem + "уюн", stem_transliterated + "uiun"]
           end
 
           def _definite_lative_plural
-            [desinence + "ѣѣ", desinence_transliterated + "ěiě"]
+            [stem + "ѣѣ", stem_transliterated + "ěiě"]
           end
 
           def gen_pl_stem(word, epenthetic_vowel)
@@ -200,7 +200,7 @@ module Morphology
 
           def gen_pl_stem_transliterated(word, epenthetic_vowel)
             vowels = %w(a e i o u y ě á é í ó ú ý ě́)
-            if vowels.include?(word[-2]) || (word[-1] == "j" && vowels.include?(word[-3]))
+            if (vowels.include?(word[-2]) && !vowels.include?(word[-3])) || (word[-1] == "j" && vowels.include?(word[-3]))
               return word
             elsif word[-1] == "j"
               return word[0..-3] + epenthetic_vowel + word[-2..-1]
