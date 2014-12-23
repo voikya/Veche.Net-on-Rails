@@ -38,3 +38,17 @@
             = form = m.topicalize(m.send("#{case_name}_#{number}".to_sym), case_name, number)
             %br
             %span.transliteration= form.transliteration
+    - if m.has_vocative?
+      %tr
+        %th{:scope => :row} Vocative
+        %td
+          = m.vocative.stem
+          %br
+          %span.transliteration= m.vocative.stem_transliterated
+        - unless m.sg_tantum?
+          %td
+            = form = m.nominative_plural
+            %br
+            %span.transliteration= form.transliteration
+        - numbers.length.times do
+          %td

@@ -70,6 +70,12 @@ module Lexicons
       end
     end
 
+    def vocative
+      if has_vocative?
+        extensions.where(:group => 'vocative').first
+      end
+    end
+
     private
 
     def method_missing(method, *args, &block)
