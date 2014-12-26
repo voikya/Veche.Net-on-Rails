@@ -1,27 +1,28 @@
-mysql: &mysql
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  pool: 5
-  timeout: 5000
-
 development:
-  <<: *mysql
+  adapter: postgresql
+  encoding: unicode
   database: veche
-  username: veche-net
+  pool: 5
+  username: veche
   password:
-  host: localhost
+  host: 10.0.0.2
+  port: 5432
 
 test:
-  <<: *mysql
+  adapter: postgresql
+  encoding: unicode
   database: veche-test
-  username: veche-net
+  pool: 5
+  username: veche
   password:
-  host: localhost
+  host: 10.0.0.2
+  port: 5432
 
 production:
-  <<: *mysql
+  adapter: postgresql
+  encoding: unicode
   database: veche
-  username: veche-net
+  pool: 5
+  username:
   password:
-  host: localhost
+  host:

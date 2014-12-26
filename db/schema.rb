@@ -37,9 +37,6 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "alashian_crossrefs", ["from"], :name => "alashian_crossrefs_from_fk"
-  add_index "alashian_crossrefs", ["to"], :name => "alashian_crossrefs_to_fk"
-
   create_table "lexicons", :force => true do |t|
     t.string "name"
     t.string "lexicon_table"
@@ -48,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
   end
 
   create_table "news", :force => true do |t|
-    t.string "group"
+    t.string "type"
     t.string "en_headline"
     t.text   "en_summary"
     t.text   "en_article"
@@ -84,9 +81,6 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "novegradian_crossrefs", ["from"], :name => "novegradian_crossrefs_from_fk"
-  add_index "novegradian_crossrefs", ["to"], :name => "novegradian_crossrefs_to_fk"
-
   create_table "novegradian_morphology", :force => true do |t|
     t.integer  "entry_id"
     t.integer  "base_id"
@@ -103,9 +97,6 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end
-
-  add_index "novegradian_morphology", ["base_id"], :name => "novegradian_morphology_base_id_fk"
-  add_index "novegradian_morphology", ["entry_id"], :name => "novegradian_morphology_entry_id_fk"
 
   create_table "ochets", :force => true do |t|
     t.string   "root_word"
@@ -129,9 +120,6 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  add_index "ochets_crossrefs", ["from"], :name => "ochets_crossrefs_from_fk"
-  add_index "ochets_crossrefs", ["to"], :name => "ochets_crossrefs_to_fk"
 
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_from_fk", column: "from"
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_to_fk", column: "to"
