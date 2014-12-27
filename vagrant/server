@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Utility script to pass an argument to the apache service
+# within the VM:
+#
+# ./server start    =>  sudo service apache2 start
+# ./server stop     =>  sudo service apache2 stop
+# ./server restart  =>  sudo service apache2 restart
+
+if ! vagrant status | grep "running" >/dev/null; then
+  vagrant up
+fi
+
+vagrant ssh -c "sudo service apache $1" >/dev/null

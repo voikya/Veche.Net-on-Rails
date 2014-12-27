@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vim:ft=ruby
+
+Vagrant.configure('2') do |config|
+  config.ssh.forward_agent = true
+  config.vm.box = 'ubuntu/trusty64'
+  config.vm.host_name = 'veche-net'
+  config.vm.network 'forwarded_port', guest: 22, host: 2200     # SSH
+  config.vm.network 'forwarded_port', guest: 80, host: 8080     # HTTP
+  config.vm.synced_folder '..', '/veche'
+  config.vm.provision :shell, :path => './provision.sh'
+  config.vm.provider 'virtualbox' do |v|
+    v.name = 'veche-net'
+  end
+end
