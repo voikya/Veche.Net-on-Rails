@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+def encode(string):
+    newstring = u""
+    for ch in unicode(string, "UTF-8"):
+        newstring += "<U%04X>" % ord(ch)
+    return newstring
+
+if __name__ == '__main__':
+    import sys
+    print encode(sys.argv[1])

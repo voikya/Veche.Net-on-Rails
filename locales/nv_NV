@@ -1,0 +1,293 @@
+comment_char %
+escape_char /
+% Charset: UTF-8
+
+LC_IDENTIFICATION
+title     "Novegradian locale"
+source    "Veche.Net"
+address   ""
+contact   "Martin Posthumus"
+email     "martin.posthumus@gmail.com"
+tel       ""
+fax       ""
+language  "Novegradian"
+territory "Novegrad"
+revision  "1.0"
+date      "2014-12-24"
+%
+category  "nv_NV:2000";LC_IDENTIFICATION
+category  "nv_NV:2000";LC_CTYPE
+category  "nv_NV:2000";LC_COLLATE
+category  "nv_NV:2000";LC_TIME
+category  "nv_NV:2000";LC_NUMERIC
+category  "nv_NV:2000";LC_MONETARY
+category  "nv_NV:2000";LC_MESSAGES
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "i18n"
+END LC_CTYPE
+
+LC_COLLATE
+collating-symbol <LOW>
+collating-symbol <HIGH>
+collating-symbol <CYR_A>
+collating-symbol <CYR_B>
+collating-symbol <CYR_V>
+collating-symbol <CYR_G>
+collating-symbol <CYR_GH>
+collating-symbol <CYR_D>
+collating-symbol <CYR_E>
+collating-symbol <CYR_IO>
+collating-symbol <CYR_ZH>
+collating-symbol <CYR_Z>
+collating-symbol <CYR_DZ>
+collating-symbol <CYR_I>
+collating-symbol <CYR_SHORT_I>
+collating-symbol <CYR_K>
+collating-symbol <CYR_L>
+collating-symbol <CYR_BACK_L>
+collating-symbol <CYR_M>
+collating-symbol <CYR_N>
+collating-symbol <CYR_O>
+collating-symbol <CYR_P>
+collating-symbol <CYR_R>
+collating-symbol <CYR_S>
+collating-symbol <CYR_T>
+collating-symbol <CYR_U>
+collating-symbol <CYR_KH>
+collating-symbol <CYR_TS>
+collating-symbol <CYR_SH>
+collating-symbol <CYR_YAT>
+collating-symbol <CYR_IU>
+collating-symbol <CYR_IA>
+collating-symbol <CYR_CH>
+collating-symbol <CYR_Y>
+collating-element <CYR_GJ> from "<U0413><U042C>"
+collating-element <CYR_Gj> from "<U0413><U044C>"
+collating-element <CYR_gj> from "<U0433><U044C>"
+collating-element <CYR_GHJ> from "<U0492><U042C>"
+collating-element <CYR_GHj> from "<U0492><U044C>"
+collating-element <CYR_ghj> from "<U0493><U044C>"
+collating-element <CYR_KJ> from "<U041A><U042C>"
+collating-element <CYR_Kj> from "<U041A><U044C>"
+collating-element <CYR_kj> from "<U043A><U044C>"
+collating-element <CYR_NJ> from "<U041D><U042C>"
+collating-element <CYR_Nj> from "<U041D><U044C>"
+collating-element <CYR_nj> from "<U043D><U044C>"
+collating-element <CYR_KHJ> from "<U0425><U042C>"
+collating-element <CYR_KHj> from "<U0425><U044C>"
+collating-element <CYR_khj> from "<U0445><U044C>"
+
+<CYR_A>
+<CYR_B>
+<CYR_V>
+<CYR_G>
+<CYR_GH>
+<CYR_D>
+<CYR_E>
+<CYR_IO>
+<CYR_ZH>
+<CYR_Z>
+<CYR_DZ>
+<CYR_I>
+<CYR_SHORT_I>
+<CYR_K>
+<CYR_L>
+<CYR_BACK_L>
+<CYR_M>
+<CYR_N>
+<CYR_O>
+<CYR_P>
+<CYR_R>
+<CYR_S>
+<CYR_T>
+<CYR_U>
+<CYR_KH>
+<CYR_TS>
+<CYR_SH>
+<CYR_YAT>
+<CYR_IU>
+<CYR_IA>
+<CYR_CH>
+<CYR_Y>
+
+order_start forward;forward
+UNDEFINED  IGNORE;IGNORE
+<LOW>      IGNORE;IGNORE
+...        <LOW>;...
+<U0410>    <CYR_A>;<U0410>        % А
+<U0430>    <CYR_A>;<U0430>        % а
+<U0411>    <CYR_B>;<U0411>        % Б
+<U0431>    <CYR_B>;<U0431>        % б
+<U0412>    <CYR_V>;<U0412>        % В
+<U0432>    <CYR_V>;<U0432>        % в
+<U0413>    <CYR_G>;<U0413>        % Г
+<U0433>    <CYR_G>;<U0433>        % г
+<CYR_GJ>   <CYR_GJ>;<CYR_GJ>      % ГЬ
+<CYR_Gj>   <CYR_GJ>;<CYR_Gj>      % Гь
+<CYR_gj>   <CYR_GJ>;<CYR_gj>      % гь
+<U0492>    <CYR_GH>;<U0492>       % Ғ
+<U0493>    <CYR_GH>;<U0493>       % ғ
+<CYR_GHJ>  <CYR_GHJ>;<CYR_GHJ>    % ҒЬ
+<CYR_GHj>  <CYR_GHJ>;<CYR_GHj>    % Ғь
+<CYR_ghj>  <CYR_GHJ>;<CYR_ghj>    % ғь
+<U0414>    <CYR_D>;<U0414>        % Д
+<U0434>    <CYR_D>;<U0434>        % д
+<U0415>    <CYR_E>;<U0415>        % Е
+<U0435>    <CYR_E>;<U0435>        % е
+<U0400>    <CYR_E>;<U0415>        % Ѐ
+<U0450>    <CYR_E>;<U0435>        % ѐ
+<U0401>    <CYR_IO>;<U0401>       % Ё
+<U0451>    <CYR_IO>;<U0451>       % ё
+<U0416>    <CYR_ZH>;<U0416>       % Ж
+<U0436>    <CYR_ZH>;<U0436>       % ж
+<U0417>    <CYR_Z>;<U0417>        % З
+<U0437>    <CYR_Z>;<U0437>        % з
+<U0405>    <CYR_DZ>;<U0405>       % Ѕ
+<U0455>    <CYR_DZ>;<U0455>       % ѕ
+<U0418>    <CYR_I>;<U0418>        % И
+<U0438>    <CYR_I>;<U0438>        % и
+<U0419>    <CYR_SHORT_I>;<U0419>  % Й
+<U0439>    <CYR_SHORT_I>;<U0439>  % й
+<U041A>    <CYR_K>;<U041A>        % К
+<U043A>    <CYR_K>;<U043A>        % к
+<CYR_KJ>   <CYR_KJ>;<CYR_KJ>      % КЬ
+<CYR_Kj>   <CYR_KJ>;<CYR_Kj>      % Кь
+<CYR_kj>   <CYR_KJ>;<CYR_kj>      % кь
+<U041B>    <CYR_L>;<U041B>        % Л
+<U043B>    <CYR_L>;<U043B>        % л
+<U0409>    <CYR_BACK_L>;<U0409>   % Љ
+<U0459>    <CYR_BACK_L>;<U0459>   % љ
+<U041C>    <CYR_M>;<U041C>        % М
+<U043C>    <CYR_M>;<U043C>        % м
+<U041D>    <CYR_N>;<U041D>        % Н
+<U043D>    <CYR_N>;<U043D>        % н
+<CYR_NJ>   <CYR_NJ>;<CYR_NJ>      % НЬ
+<CYR_Nj>   <CYR_NJ>;<CYR_Nj>      % Нь
+<CYR_nj>   <CYR_NJ>;<CYR_nj>      % нь
+<U041E>    <CYR_O>;<U041E>        % О
+<U043E>    <CYR_O>;<U043E>        % о
+<U041F>    <CYR_P>;<U041F>        % П
+<U043F>    <CYR_P>;<U043F>        % п
+<U0420>    <CYR_R>;<U0420>        % Р
+<U0440>    <CYR_R>;<U0440>        % р
+<U0421>    <CYR_S>;<U0421>        % С
+<U0441>    <CYR_S>;<U0441>        % с
+<U0422>    <CYR_T>;<U0422>        % Т
+<U0442>    <CYR_T>;<U0442>        % т
+<U0423>    <CYR_U>;<U0423>        % У
+<U0443>    <CYR_U>;<U0443>        % у
+<U040E>    <CYR_U>;<U0423>        % Ў
+<U045E>    <CYR_U>;<U045E>        % ў
+<U0425>    <CYR_KH>;<U0425>       % Х
+<U0445>    <CYR_KH>;<U0445>       % х
+<CYR_KHJ>  <CYR_KHJ>;<CYR_KHJ>    % ХЬ
+<CYR_KHj>  <CYR_KHJ>;<CYR_KHj>    % Хь
+<CYR_khj>  <CYR_KHJ>;<CYR_khj>    % хь
+<U0426>    <CYR_TS>;<U0426>       % Ц
+<U0446>    <CYR_TS>;<U0446>       % ц
+<U0428>    <CYR_SH>;<U0428>       % Ш
+<U0448>    <CYR_SH>;<U0448>       % ш
+<U0462>    <CYR_YAT>;<U0462>      % Ѣ
+<U0463>    <CYR_YAT>;<U0463>      % ѣ
+<U042E>    <CYR_IU>;<U042E>       % Ю
+<U044E>    <CYR_IU>;<U044E>       % ю
+<U042F>    <CYR_IA>;<U042F>       % Я
+<U044F>    <CYR_IA>;<U044F>       % я
+<U0427>    <CYR_CH>;<U0427>       % Ч
+<U0447>    <CYR_CH>;<U0447>       % ч
+<U042B>    <CYR_Y>;<U042B>        % Ы
+<U044B>    <CYR_Y>;<U044B>        % ы
+...        <HIGH>;...
+<HIGH>
+order_end
+END LC_COLLATE
+
+LC_MESSAGES
+yesexpr "^[ДдYy].*"
+noexpr  "^[НнNn].*"
+yesstr  "Д:д:да:Y:y:yes"
+nostr   "Н:н:нет:N:n:no"
+END LC_MESSAGES
+
+LC_MONETARY
+currency_symbol    "<U043C><U043A>"         % мк
+int_curr_symbol    "<U004E><U0056><U004D><U0020>"  % NVM + space separator
+mon_decimal_point  "<U002C>"                % comma
+mon_thousands_sep  "<U0020>"                % space
+mon_grouping       3
+positive_sign      ""
+negative_sign      "<U2013>"                % en-dash
+frac_digits        2
+int_frac_digits    2
+p_cs_precedes      0
+p_sep_by_space     1
+n_cs_precedes      0
+n_sep_by_space     1
+p_sign_posn        1
+n_sign_posn        1
+END LC_MONETARY
+
+LC_NUMERIC
+decimal_point    "<U002C>"   % comma
+thousands_sep    "<U002E>"   % period
+grouping         3
+END LC_NUMERIC
+
+LC_TIME
+% Full month names (%B)
+% Ледана, Лутана, Сокана, Травана, Куѣтана, Цервена, Липена, Шерпана, Врѣсана, Румѣна, Листопаде, Снѣжена
+mon      "<U041B><U0435><U0434><U0430><U043D><U0430>";/
+         "<U041B><U0443><U0442><U0430><U043D><U0430>";/
+         "<U0421><U043E><U043A><U0430><U043D><U0430>";/
+         "<U0422><U0440><U0430><U0432><U0430><U043D><U0430>";/
+         "<U041A><U0443><U0463><U0442><U0430><U043D><U0430>";/
+         "<U0426><U0435><U0440><U0432><U0435><U043D><U0430>";/
+         "<U041B><U0438><U043F><U0435><U043D><U0430>";/
+         "<U0428><U0435><U0440><U043F><U0430><U043D><U0430>";/
+         "<U0412><U0440><U0463><U0441><U0430><U043D><U0430>";/
+         "<U0420><U0443><U043C><U0463><U043D><U0430>";/
+         "<U041B><U0438><U0441><U0442><U043E><U043F><U0430><U0434><U0435>";/
+         "<U0421><U043D><U0463><U0436><U0435><U043D><U0430>"
+% Abbreviated month names (%b)
+% лед, лут, сок, тра, куѣ, цер, лип, шер, врѣ, рум, лис, снѣ
+abmon   "<U043B><U0435><U0434>";/
+        "<U043B><U0443><U0442>";/
+        "<U0441><U043E><U043A>";/
+        "<U0442><U0440><U0430>";/
+        "<U043A><U0443><U0463>";/
+        "<U0446><U0435><U0440>";/
+        "<U043B><U0438><U043F>";/
+        "<U0448><U0435><U0440>";/
+        "<U0432><U0440><U0463>";/
+        "<U0440><U0443><U043C>";/
+        "<U043B><U0438><U0441>";/
+        "<U0441><U043D><U0463>"
+% Full weekday names (%A)
+% Недѣла, Понедѣлнике, Торнике, Срѣда, Цетуерге, Петеке, Собота
+day     "<U041D><U0435><U0434><U0463><U043B><U0430>";/
+        "<U041F><U043E><U043D><U0435><U0434><U0463><U043B><U043D><U0438><U043A><U0435>";/
+        "<U0422><U043E><U0440><U043D><U0438><U043A><U0435>";/
+        "<U0421><U0440><U0463><U0434><U0430>";/
+        "<U0426><U0435><U0442><U0443><U0435><U0440><U0433><U0435>";/
+        "<U041F><U0435><U0442><U0435><U043A><U0435>";/
+        "<U0421><U043E><U0431><U043E><U0442><U0430>"
+% Abbreviated weekday names (%a)
+% Нд, Пн, Тр, Ср, Цт, Пт, Сб
+abday   "<U041D><U0434>";/
+        "<U041F><U043D>";/
+        "<U0422><U0440>";/
+        "<U0421><U0440>";/
+        "<U0426><U0442>";/
+        "<U041F><U0442>";/
+        "<U0421><U0431>"
+% Date and time format (%c)
+d_t_fmt "%a %d %b %Y %T"
+% Date format (%x)
+d_fmt "%d.%m.%Y"
+% Time format (%X)
+t_fmt "%T"
+% AM/PM format
+am_pm "";""
+END LC_TIME
