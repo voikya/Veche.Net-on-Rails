@@ -103,7 +103,7 @@ VecheNet::Application.routes.draw do
     get '/cdurak' => 'programming#cdurak', :as => 'programming_cdurak'
   end
 
-  get '/updates' => 'static#updates', :as => 'updates'
   get '/contact' => 'static#contact', :as => 'contact'
+  post '/contact' => 'static#sendmail'
   root :to => 'static#index'
 end

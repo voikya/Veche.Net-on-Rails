@@ -1,0 +1,24 @@
+- content_for :title, "veche.net — Contact"
+
+#container
+  #title.shifted= image_tag 'title.png', :alt => "veche.net"
+  %nav.buttonframe
+
+  #articleset
+    %article
+      = image_tag 'header_contact.png', :class => 'header'
+      %h1 Contact
+      .content
+        %p I'd love to hear from you! Feel free to email me at <span class="mail1"></span>@<span class="mail2"></span> or fill out the following form.
+        %form{:action => contact_path, :method => :post}
+          .field
+            %label{:for => "email"} Your Email Address
+            = text_field_tag :email, @email
+          .field
+            %label{:for => "subject"} Subject
+            = text_field_tag :subject, @subject
+          .field
+            %label{:for => "message"} Message
+            = text_area_tag :message, @message
+          .field
+            = submit_tag "Send"

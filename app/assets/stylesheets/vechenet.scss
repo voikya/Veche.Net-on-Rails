@@ -141,3 +141,45 @@ body.vechenet {
     font-weight: bold;
   }
 }
+
+span.mail1:before {
+  content: "republicofnovegrad";
+}
+
+span.mail2:before {
+  content: "gmail.com";
+}
+
+.field {
+  display: block;
+  margin-bottom: 5px;
+
+  label {
+    display: block;
+    font-size: 80%;
+  }
+
+  input[type=text], textarea {
+    width: 75%;
+    color: #666;
+    background-color: #FFFFFF;
+    border: solid 1px #CCCCCC;
+    padding: 5px;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  input[type=submit] {
+    border: solid 1px #CCCCCC;
+    background-color: #EFEFEF;
+    padding: 5px 10px;
+    color: #666;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #E0E0E0;
+    }
+  }
+}
