@@ -22,7 +22,7 @@ module Lexicons
       # search and add wildcards to both ends.
       value = "*#{value}*" unless value.index('*')
       fields.each {|f| @scopes[f] = value}
-      query_string = fields.map {|f| "#{f} LIKE ?"}.join(" OR ")
+      query_string = fields.map {|f| "#{f} ~~* ?"}.join(" OR ")
       value_set = [value.gsub('*', '%')] * fields.length
       @results = @results.where(query_string, *value_set)
     end

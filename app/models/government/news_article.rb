@@ -5,7 +5,7 @@ module Government
                     :nv_headline, :nv_summary, :nv_article
 
     def self.random(count, type)
-      where(:group => type).order("RAND()").first(count)
+      where(:group => type).order("RANDOM()").first(count)
     end
 
     def headline

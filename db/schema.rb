@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141221051313) do
+ActiveRecord::Schema.define(:version => 20141228023309) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.text     "idioms"
     t.text     "notes"
     t.text     "etymology"
-    t.string   "slug"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "slug"
   end
 
   add_index "alashian", ["slug"], :name => "index_alashian_on_slug", :unique => true
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
   end
 
   create_table "news", :force => true do |t|
-    t.string "type"
+    t.string "group"
     t.string "en_headline"
     t.text   "en_summary"
     t.text   "en_article"
@@ -67,9 +67,9 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.text     "etymology"
     t.text     "cognates"
     t.text     "inflection_structure"
-    t.string   "slug"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.string   "slug"
   end
 
   add_index "novegradian", ["slug"], :name => "index_novegradian_on_slug", :unique => true
@@ -83,7 +83,6 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
 
   create_table "novegradian_morphology", :force => true do |t|
     t.integer  "entry_id"
-    t.integer  "base_id"
     t.string   "category"
     t.string   "stem"
     t.string   "stem_transliterated"
@@ -96,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.string   "flags"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+    t.integer  "base_id"
   end
 
   create_table "ochets", :force => true do |t|
@@ -107,9 +107,9 @@ ActiveRecord::Schema.define(:version => 20141221051313) do
     t.text     "derivatives"
     t.text     "idioms"
     t.text     "etymology"
-    t.string   "slug"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+    t.string   "slug"
   end
 
   add_index "ochets", ["slug"], :name => "index_ochets_on_slug", :unique => true

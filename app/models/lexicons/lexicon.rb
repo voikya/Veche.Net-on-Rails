@@ -34,7 +34,7 @@ module Lexicons
 
     # Look up a specific entry by its slug
     def entry(slug)
-      @lexicon_class.where("slug COLLATE utf8_novegradian_ci = ?", slug).first
+      @lexicon_class.where(:slug => slug).first
     end
 
     # True if any scoping/filters have been applied.

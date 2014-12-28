@@ -34,7 +34,7 @@ module Lexicons
       @entry = @lexicon.entry(params[:slug])
       @lexicon.scope_entries(search_params)
       @cross_refs = @entry.cross_references
-      if @entry.morphology
+      if @entry.respond_to?(:morphology) && @entry.morphology
         partial = "lexicons/lexicon/morphology/" +
                   @language.downcase.to_s +
                   "_" +

@@ -21,6 +21,9 @@ sudo localedef -c -f UTF-8 -i /veche/locales/nv_NV nv_NV
 sudo localedef -c -f UTF-8 -i /veche/locales/al_CY al_CY
 sudo localedef -c -f UTF-8 -i /veche/locales/och_NV och_NV
 
+# Set up PostgreSQL
+sudo apt-get install postgresql-client
+
 # Set up Apache
 sudo rm /etc/apache2/sites-available/000-default.conf
 sudo rm /etc/apache2/sites-enabled/000-default.conf
