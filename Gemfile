@@ -28,6 +28,10 @@ gem 'haml'
 
 group :development do
   gem 'better_errors'
-  gem 'capistrano'
   gem 'binding_of_caller'
+  gem 'capistrano', '~> 3.3.0'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end

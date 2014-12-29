@@ -21,3 +21,5 @@ config/database.yml
 *.swp
 /utils
 /vagrant/.vagrant
+.capistrano
+/config/deploy/production.rb

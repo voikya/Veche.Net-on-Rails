@@ -22,7 +22,7 @@ sudo localedef -c -f UTF-8 -i /veche/locales/al_CY al_CY
 sudo localedef -c -f UTF-8 -i /veche/locales/och_NV och_NV
 
 # Set up PostgreSQL
-sudo apt-get install postgresql-client
+sudo apt-get install -y postgresql-client
 
 # Set up Apache
 sudo rm /etc/apache2/sites-available/000-default.conf
@@ -46,7 +46,7 @@ sudo ln -s /etc/apache2/sites-available/000-veche.conf /etc/apache2/sites-enable
 
 # Set up Passenger
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
-sudo apt-get install apt-transport-https ca-certificates
+sudo apt-get install -y apt-transport-https ca-certificates
 sudo cat >/etc/apt/sources.list.d/passenger.list <<EOF
 deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main
 EOF
