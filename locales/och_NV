@@ -66,113 +66,112 @@ collating-symbol <CYR_DZH>
 collating-symbol <CYR_SH>
 collating-symbol <CYR_Y>
 
-<CYR_A>
-<CYR_SCHWA>
-<CYR_B>
-<CYR_V>
-<CYR_G>
-<CYR_GH>
-<CYR_D>
-<CYR_E>
-<CYR_ZH>
-<CYR_Z>
-<CYR_DZ>
-<CYR_I>
-<CYR_K>
-<CYR_Q>
-<CYR_L>
-<CYR_M>
-<CYR_N>
-<CYR_NG>
-<CYR_O>
-<CYR_OE>
-<CYR_P>
-<CYR_R>
-<CYR_S>
-<CYR_H>
-<CYR_T>
-<CYR_U>
-<CYR_UE>
-<CYR_F>
-<CYR_KH>
-<CYR_TS>
-<CYR_CH>
-<CYR_DZH>
-<CYR_SH>
-<CYR_Y>
-
 order_start forward;forward
 UNDEFINED  IGNORE;IGNORE
 <LOW>      IGNORE;IGNORE
 ...        <LOW>;...
 <U0410>    <CYR_A>;<U0410>        % А
 <U0430>    <CYR_A>;<U0430>        % а
+<CYR_A>
 <U04D8>    <CYR_SCHWA>;<CYR_SCHWA>% Ә
 <U04D9>    <CYR_SCHWA>;<U04D9>    % ә
+<CYR_SCHWA>
 <U0411>    <CYR_B>;<U0411>        % Б
 <U0431>    <CYR_B>;<U0431>        % б
+<CYR_B>
 <U0412>    <CYR_V>;<U0412>        % В
 <U0432>    <CYR_V>;<U0432>        % в
+<CYR_V>
 <U0413>    <CYR_G>;<U0413>        % Г
 <U0433>    <CYR_G>;<U0433>        % г
+<CYR_G>
 <U0494>    <CYR_GH>;<U0494>       % Ҕ
 <U0495>    <CYR_GH>;<U0495>       % ҕ
+<CYR_GH>
 <U0414>    <CYR_D>;<U0414>        % Д
 <U0434>    <CYR_D>;<U0434>        % д
+<CYR_D>
 <U0415>    <CYR_E>;<U0415>        % Е
 <U0435>    <CYR_E>;<U0435>        % е
+<CYR_E>
 <U0416>    <CYR_ZH>;<U0416>       % Ж
 <U0436>    <CYR_ZH>;<U0436>       % ж
+<CYR_ZH>
 <U0417>    <CYR_Z>;<U0417>        % З
 <U0437>    <CYR_Z>;<U0437>        % з
+<CYR_Z>
 <U0405>    <CYR_DZ>;<U0405>       % Ѕ
 <U0455>    <CYR_DZ>;<U0455>       % ѕ
+<CYR_DZ>
 <U0418>    <CYR_I>;<U0418>        % И
 <U0438>    <CYR_I>;<U0438>        % и
+<CYR_I>
 <U041A>    <CYR_K>;<U041A>        % К
 <U043A>    <CYR_K>;<U043A>        % к
+<CYR_K>
 <U049A>    <CYR_Q>;<U049A>        % Қ
 <U049B>    <CYR_Q>;<U049B>        % қ
+<CYR_Q>
 <U041B>    <CYR_L>;<U041B>        % Л
 <U043B>    <CYR_L>;<U043B>        % л
+<CYR_L>
 <U041C>    <CYR_M>;<U041C>        % М
 <U043C>    <CYR_M>;<U043C>        % м
+<CYR_M>
 <U041D>    <CYR_N>;<U041D>        % Н
 <U043D>    <CYR_N>;<U043D>        % н
+<CYR_N>
 <U04A4>    <CYR_NG>;<U04A4>       % Ҥ
 <U04A5>    <CYR_NG>;<U04A5>       % ҥ
+<CYR_NG>
 <U041E>    <CYR_O>;<U041E>        % О
 <U043E>    <CYR_O>;<U043E>        % о
+<CYR_O>
 <U04E8>    <CYR_OE>;<U04E8>       % Ө
 <U04E9>    <CYR_OE>;<U04E9>       % ө
+<CYR_OE>
 <U041F>    <CYR_P>;<U041F>        % П
 <U043F>    <CYR_P>;<U043F>        % п
+<CYR_P>
 <U0420>    <CYR_R>;<U0420>        % Р
 <U0440>    <CYR_R>;<U0440>        % р
+<CYR_R>
 <U0421>    <CYR_S>;<U0421>        % С
 <U0441>    <CYR_S>;<U0441>        % с
+<CYR_S>
 <U04BA>    <CYR_H>;<U04BA>        % Һ
 <U04BB>    <CYR_H>;<U04BB>        % һ
+<CYR_H>
 <U0422>    <CYR_T>;<U0422>        % Т
 <U0442>    <CYR_T>;<U0442>        % т
+<CYR_T>
 <U0423>    <CYR_U>;<U0423>        % У
 <U0443>    <CYR_U>;<U0443>        % у
+<CYR_U>
 <U04AE>    <CYR_UE>;<U04AE>       % Ү
 <U04AF>    <CYR_UE>;<U04AF>       % ү
+<CYR_UE>
 <U0424>    <CYR_F>;<U0424>        % Ф
 <U0444>    <CYR_F>;<U0444>        % ф
+<CYR_F>
 <U0425>    <CYR_KH>;<U0425>       % Х
 <U0445>    <CYR_KH>;<U0445>       % х
+<CYR_KH>
 <U0426>    <CYR_TS>;<U0426>       % Ц
 <U0446>    <CYR_TS>;<U0446>       % ц
+<CYR_TS>
 <U0427>    <CYR_CH>;<U0427>       % Ч
 <U0447>    <CYR_CH>;<U0447>       % ч
+<CYR_CH>
 <U040F>    <CYR_DZH>;<U040F>      % Џ
 <U045F>    <CYR_DZH>;<U045F>      % џ
+<CYR_DZH>
 <U0428>    <CYR_SH>;<U0428>       % Ш
 <U0448>    <CYR_SH>;<U0448>       % ш
+<CYR_SH>
 <U042B>    <CYR_Y>;<U042B>        % Ы
 <U044B>    <CYR_Y>;<U044B>        % ы
+<CYR_Y>
 ...        <HIGH>;...
 <HIGH>
 order_end

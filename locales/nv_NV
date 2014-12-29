@@ -79,126 +79,125 @@ collating-element <CYR_KHJ> from "<U0425><U042C>"
 collating-element <CYR_KHj> from "<U0425><U044C>"
 collating-element <CYR_khj> from "<U0445><U044C>"
 
-<CYR_A>
-<CYR_B>
-<CYR_V>
-<CYR_G>
-<CYR_GH>
-<CYR_D>
-<CYR_E>
-<CYR_IO>
-<CYR_ZH>
-<CYR_Z>
-<CYR_DZ>
-<CYR_I>
-<CYR_SHORT_I>
-<CYR_K>
-<CYR_L>
-<CYR_BACK_L>
-<CYR_M>
-<CYR_N>
-<CYR_O>
-<CYR_P>
-<CYR_R>
-<CYR_S>
-<CYR_T>
-<CYR_U>
-<CYR_KH>
-<CYR_TS>
-<CYR_SH>
-<CYR_YAT>
-<CYR_IU>
-<CYR_IA>
-<CYR_CH>
-<CYR_Y>
-
 order_start forward;forward
 UNDEFINED  IGNORE;IGNORE
 <LOW>      IGNORE;IGNORE
 ...        <LOW>;...
 <U0410>    <CYR_A>;<U0410>        % А
 <U0430>    <CYR_A>;<U0430>        % а
+<CYR_A>
 <U0411>    <CYR_B>;<U0411>        % Б
 <U0431>    <CYR_B>;<U0431>        % б
+<CYR_B>
 <U0412>    <CYR_V>;<U0412>        % В
 <U0432>    <CYR_V>;<U0432>        % в
+<CYR_V>
 <U0413>    <CYR_G>;<U0413>        % Г
 <U0433>    <CYR_G>;<U0433>        % г
+<CYR_G>
 <CYR_GJ>   <CYR_GJ>;<CYR_GJ>      % ГЬ
 <CYR_Gj>   <CYR_GJ>;<CYR_Gj>      % Гь
 <CYR_gj>   <CYR_GJ>;<CYR_gj>      % гь
 <U0492>    <CYR_GH>;<U0492>       % Ғ
 <U0493>    <CYR_GH>;<U0493>       % ғ
+<CYR_GH>
 <CYR_GHJ>  <CYR_GHJ>;<CYR_GHJ>    % ҒЬ
 <CYR_GHj>  <CYR_GHJ>;<CYR_GHj>    % Ғь
 <CYR_ghj>  <CYR_GHJ>;<CYR_ghj>    % ғь
 <U0414>    <CYR_D>;<U0414>        % Д
 <U0434>    <CYR_D>;<U0434>        % д
+<CYR_D>
 <U0415>    <CYR_E>;<U0415>        % Е
 <U0435>    <CYR_E>;<U0435>        % е
 <U0400>    <CYR_E>;<U0415>        % Ѐ
 <U0450>    <CYR_E>;<U0435>        % ѐ
+<CYR_E>
 <U0401>    <CYR_IO>;<U0401>       % Ё
 <U0451>    <CYR_IO>;<U0451>       % ё
+<CYR_IO>
 <U0416>    <CYR_ZH>;<U0416>       % Ж
 <U0436>    <CYR_ZH>;<U0436>       % ж
+<CYR_ZH>
 <U0417>    <CYR_Z>;<U0417>        % З
 <U0437>    <CYR_Z>;<U0437>        % з
+<CYR_Z>
 <U0405>    <CYR_DZ>;<U0405>       % Ѕ
 <U0455>    <CYR_DZ>;<U0455>       % ѕ
+<CYR_DZ>
 <U0418>    <CYR_I>;<U0418>        % И
 <U0438>    <CYR_I>;<U0438>        % и
+<CYR_I>
 <U0419>    <CYR_SHORT_I>;<U0419>  % Й
 <U0439>    <CYR_SHORT_I>;<U0439>  % й
+<CYR_SHORT_I>
 <U041A>    <CYR_K>;<U041A>        % К
 <U043A>    <CYR_K>;<U043A>        % к
+<CYR_K>
 <CYR_KJ>   <CYR_KJ>;<CYR_KJ>      % КЬ
 <CYR_Kj>   <CYR_KJ>;<CYR_Kj>      % Кь
 <CYR_kj>   <CYR_KJ>;<CYR_kj>      % кь
 <U041B>    <CYR_L>;<U041B>        % Л
 <U043B>    <CYR_L>;<U043B>        % л
+<CYR_L>
 <U0409>    <CYR_BACK_L>;<U0409>   % Љ
 <U0459>    <CYR_BACK_L>;<U0459>   % љ
+<CYR_BACK_L>
 <U041C>    <CYR_M>;<U041C>        % М
 <U043C>    <CYR_M>;<U043C>        % м
+<CYR_M>
 <U041D>    <CYR_N>;<U041D>        % Н
 <U043D>    <CYR_N>;<U043D>        % н
+<CYR_N>
 <CYR_NJ>   <CYR_NJ>;<CYR_NJ>      % НЬ
 <CYR_Nj>   <CYR_NJ>;<CYR_Nj>      % Нь
 <CYR_nj>   <CYR_NJ>;<CYR_nj>      % нь
 <U041E>    <CYR_O>;<U041E>        % О
 <U043E>    <CYR_O>;<U043E>        % о
+<CYR_O>
 <U041F>    <CYR_P>;<U041F>        % П
 <U043F>    <CYR_P>;<U043F>        % п
+<CYR_P>
 <U0420>    <CYR_R>;<U0420>        % Р
 <U0440>    <CYR_R>;<U0440>        % р
+<CYR_R>
 <U0421>    <CYR_S>;<U0421>        % С
 <U0441>    <CYR_S>;<U0441>        % с
+<CYR_S>
 <U0422>    <CYR_T>;<U0422>        % Т
 <U0442>    <CYR_T>;<U0442>        % т
+<CYR_T>
 <U0423>    <CYR_U>;<U0423>        % У
 <U0443>    <CYR_U>;<U0443>        % у
 <U040E>    <CYR_U>;<U0423>        % Ў
 <U045E>    <CYR_U>;<U045E>        % ў
+<CYR_U>
 <U0425>    <CYR_KH>;<U0425>       % Х
 <U0445>    <CYR_KH>;<U0445>       % х
+<CYR_KH>
 <CYR_KHJ>  <CYR_KHJ>;<CYR_KHJ>    % ХЬ
 <CYR_KHj>  <CYR_KHJ>;<CYR_KHj>    % Хь
 <CYR_khj>  <CYR_KHJ>;<CYR_khj>    % хь
 <U0426>    <CYR_TS>;<U0426>       % Ц
 <U0446>    <CYR_TS>;<U0446>       % ц
+<CYR_TS>
 <U0428>    <CYR_SH>;<U0428>       % Ш
 <U0448>    <CYR_SH>;<U0448>       % ш
+<CYR_SH>
 <U0462>    <CYR_YAT>;<U0462>      % Ѣ
 <U0463>    <CYR_YAT>;<U0463>      % ѣ
+<CYR_YAT>
 <U042E>    <CYR_IU>;<U042E>       % Ю
 <U044E>    <CYR_IU>;<U044E>       % ю
+<CYR_IU>
 <U042F>    <CYR_IA>;<U042F>       % Я
 <U044F>    <CYR_IA>;<U044F>       % я
+<CYR_IA>
 <U0427>    <CYR_CH>;<U0427>       % Ч
 <U0447>    <CYR_CH>;<U0447>       % ч
+<CYR_CH>
 <U042B>    <CYR_Y>;<U042B>        % Ы
 <U044B>    <CYR_Y>;<U044B>        % ы
+<CYR_Y>
 ...        <HIGH>;...
 <HIGH>
 order_end

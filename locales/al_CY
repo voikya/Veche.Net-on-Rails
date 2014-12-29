@@ -77,28 +77,6 @@ collating-element <TZ> from "<U03A4><U0396>"
 collating-element <Tz> from "<U03A4><U03B6>"
 collating-element <tz> from "<U03C4><U03B6>"
 
-<ALPHA>
-<BETA>
-<GAMMA>
-<DELTA>
-<EPSILON>
-<ZETA>
-<ETA>
-<THETA>
-<IOTA>
-<KAPPA>
-<LAMBDA>
-<MU>
-<NU>
-<PI>
-<RHO>
-<SIGMA>
-<TAU>
-<UPSILON>
-<PHI>
-<CHI>
-<OMEGA>
-
 order_start forward;forward
 UNDEFINED  IGNORE;IGNORE
 <LOW>      IGNORE;IGNORE
@@ -107,22 +85,27 @@ UNDEFINED  IGNORE;IGNORE
 <U03B1>    <ALPHA>;<U03B1>        % α
 <U0386>    <ALPHA>;<U0391>        % Ά
 <U03AC>    <ALPHA>;<U03B1>        % ά
+<ALPHA>
 <U0392>    <BETA>;<U0392>         % Β
 <U03B2>    <BETA>;<U03B2>         % β
+<BETA>
 <VETA>     <VETA>;<VETA>          % Β̄
 <veta>     <VETA>;<veta>          % в̄
 <U0393>    <GAMMA>;<U0393>        % Γ
 <U03B3>    <GAMMA>;<U03B3>        % γ
+<GAMMA>
 <GHAMMA>   <GHAMMA>;<GHAMMA>      % Γ̄
 <ghamma>   <GHAMMA>;<ghamma>      % γ̄
 <U0394>    <DELTA>;<U0394>        % Δ
 <U03B4>    <DELTA>;<U03B4>        % δ
+<DELTA>
 <DHELTA>   <DHELTA>;<DHELTA>      % Δ̄
 <dhelta>   <DHELTA>;<dhelta>      % δ̄
 <U0395>    <EPSILON>;<U0395>      % Ε
 <U03B5>    <EPSILON>;<U03B5>      % ε
 <U0388>    <EPSILON>;<U0395>      % Έ
 <U03AD>    <EPSILON>;<U03B5>      % έ
+<EPSILON>
 <EMEGA>    <EMEGA>;<EMEGA>        % ΕΙ
 <Emega>    <EMEGA>;<Emega>        % Ει
 <emega>    <EMEGA>;<emega>        % ει
@@ -130,24 +113,32 @@ UNDEFINED  IGNORE;IGNORE
 <emega_stressed> <EMEGA>;<emega>  % εί
 <U0396>    <ZETA>;<U0396>         % Ζ
 <U03B6>    <ZETA>;<U03B6>         % ζ
+<ZETA>
 <U0397>    <ETA>;<U0397>          % Η
 <U03B7>    <ETA>;<U03B7>          % η
 <U0389>    <ETA>;<U0397>          % Ή
 <U03AE>    <ETA>;<U03B7>          % ή
+<ETA>
 <U0398>    <THETA>;<U0398>        % Θ
 <U03B8>    <THETA>;<U03B8>        % θ
+<THETA>
 <U0399>    <IOTA>;<U0399>         % Ι
 <U03B9>    <IOTA>;<U03B9>         % ι
 <U038A>    <IOTA>;<U0399>         % Ί
 <U03AF>    <IOTA>;<U03B9>         % ί
+<IOTA>
 <U039A>    <KAPPA>;<U039A>        % Κ
 <U03BA>    <KAPPA>;<U03BA>        % κ
+<KAPPA>
 <U039B>    <LAMBDA>;<U039B>       % Λ
 <U03BB>    <LAMBDA>;<U03BB>       % λ
+<LAMBDA>
 <U039C>    <MU>;<U039C>           % Μ
 <U03BC>    <MU>;<U03BC>           % μ
+<MU>
 <U039D>    <NU>;<U039D>           % Ν
 <U03BD>    <NU>;<U03BD>           % ν
+<NU>
 <UMEGA>    <UMEGA>;<UMEGA>        % ΟΥ
 <Umega>    <UMEGA>;<Umega>        % Ου
 <umega>    <UMEGA>;<umega>        % ου
@@ -155,18 +146,22 @@ UNDEFINED  IGNORE;IGNORE
 <umega_stressed> <UMEGA>;<umega>  % ού
 <U03A0>    <PI>;<U03A0>           % Π
 <U03C0>    <PI>;<U03C0>           % π
+<PI>
 <U03A1>    <RHO>;<U03A1>          % Ρ
 <U03C1>    <RHO>;<U03C1>          % ρ
+<RHO>
 <RRO>      <RRO>;<RRO>            % Ρ̄
 <rro>      <RRO>;<rro>            % ρ̄
 <U03A3>    <SIGMA>;<U03A3>        % Σ
 <U03C3>    <SIGMA>;<U03C3>        % σ
 <U03C2>    <SIGMA>;<U03C3>        % ς
+<SIGMA>
 <SHIGMA>   <SHIGMA>;<SHIGMA>      % Σ̄
 <shigma>   <SHIGMA>;<shigma>      % σ̄
 <final_shigma> <SHIGMA>;<shigma>  % ς̄
 <U03A4>    <TAU>;<U03A4>          % Τ
 <U03C4>    <TAU>;<U03C4>          % τ
+<TAU>
 <TZ>       <TZ>;<TZ>              % ΤΖ
 <Tz>       <TZ>;<Tz>              % Τζ
 <tz>       <TZ>;<tz>              % τζ
@@ -174,14 +169,18 @@ UNDEFINED  IGNORE;IGNORE
 <U03C5>    <UPSILON>;<U03C5>      % υ
 <U038E>    <UPSILON>;<U03A5>      % Ύ
 <U03CD>    <UPSILON>;<U03C5>      % ύ
+<UPSILON>
 <U03A6>    <PHI>;<U03A6>          % Φ
 <U03C6>    <PHI>;<U03C6>          % φ
+<PHI>
 <U03A7>    <CHI>;<U03A7>          % Χ
 <U03C7>    <CHI>;<U03C7>          % χ
+<CHI>
 <U03A9>    <OMEGA>;<U03A9>        % Ω
 <U03C9>    <OMEGA>;<U03C9>        % ω
 <U038F>    <OMEGA>;<U03A9>        % Ώ
 <U03CE>    <OMEGA>;<U03C9>        % ώ
+<OMEGA>
 ...        <HIGH>;...
 <HIGH>
 order_end
