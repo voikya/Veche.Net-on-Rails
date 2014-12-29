@@ -4,9 +4,16 @@ html {
 }
 
 a.contact {
+  background-color: #EFEFEF;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: smaller;
+  margin-left: 10px;
+  background-color: #EFEFEF;
+  border: none !important;
+
   &:link, &:visited {
     color: #69B1FF;
-    border: none !important;
   }
 
   &:hover, &:active {
