@@ -23,3 +23,4 @@ config/database.yml
 /vagrant/.vagrant
 .capistrano
 /config/deploy/production.rb
+.env

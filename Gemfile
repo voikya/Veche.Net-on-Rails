@@ -7,16 +7,21 @@ gem 'rails', '3.2.16'
 gem 'pg'
 gem 'foreigner'
 
-# Misc
-gem 'rubystats'
-gem 'RubySunrise'
-gem 'nokogiri'
-
 # Libraries
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'magnific-popup-rails'
+
+# Configuration
+gem 'dotenv'
+
+# Misc
+gem 'rubystats'
+gem 'RubySunrise'
+gem 'nokogiri'
+gem 'dropbox-sdk'
+gem 'whenever'
 
 # Assets
 group :assets do

@@ -38,7 +38,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
-    capistrano (3.3.3)
+    capistrano (3.3.5)
       capistrano-stats (~> 1.0.3)
       i18n
       rake (>= 10.0.0)
@@ -55,6 +55,7 @@ GEM
       capistrano (~> 3.0)
       sshkit (~> 1.2)
     capistrano-stats (1.0.3)
+    chronic (0.10.2)
     coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -65,6 +66,9 @@ GEM
     coffee-script-source (1.8.0)
     colorize (0.7.3)
     debug_inspector (0.0.2)
+    dotenv (1.0.2)
+    dropbox-sdk (1.6.4)
+      json
     erubis (2.7.0)
     execjs (2.2.2)
     font-awesome-sass (4.2.2)
@@ -148,6 +152,8 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -162,6 +168,8 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rvm
   coffee-rails (~> 3.2.1)
+  dotenv
+  dropbox-sdk
   font-awesome-sass (~> 4.2.0)
   foreigner
   haml
@@ -174,3 +182,4 @@ DEPENDENCIES
   rubystats
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  whenever
