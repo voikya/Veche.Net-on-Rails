@@ -1,0 +1,10 @@
+- icon ||= nil
+
+.programming-icon
+  .logo
+    - if icon
+      = image_tag "programming/#{icon}", :class => 'regular-icon'
+      = image_tag "programming/#{transparent_icon}", :class => 'transparent-icon'
+    - else
+      .letter-icon= title[0].upcase
+  = title

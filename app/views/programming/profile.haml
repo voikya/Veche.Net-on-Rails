@@ -1,0 +1,101 @@
+- content_for :title do
+  = "veche.net — Martin Posthumus"
+
+.content-wrapper
+  %h1 Martin Posthumus
+  .portrait
+  %p I'm a web developer based out of Washington, DC. I do full-stack work, and am comfortable with front-end and back-end application design. I've worked with a number of different langauges, though recently I've been primarily using Ruby.
+  %p Below is a brief outline of some of the programming languages and frameworks I've used, as well as an overview of some past and present projects. The tables below describe my general familiarity with a number of different technologies, grouped into the following categories:
+  %ul
+    %li "Very Strong" — Things I know inside and out, have worked on for major projects, have formed and can argue for various opinions on design and implementations, and am familiar with both the strengths and weaknesses when it comes to building complex applications.
+    %li "Strong" — Things I am quite comfortable working with, but which I have not used in major projects and for which am less familiar with the greater ecosystem. I can code in these, but might need to look up some documentation and libraries every now and then.
+    %li "Moderate" — Things I have worked with primarily in the context of maintaining or editing existing code bases, or for smaller personal projects. I know my way around them, but am a little rusty and may need to look things up more often.
+  %p Of course, this is just a list of what I've done so far. I believe in lifelong learning, and many of the techniques involved in using one technology are transferrable to new ones as well.
+
+  %h2 Programming and Scripting Languages
+  %table
+    %thead
+      %tr
+        %th Very Strong
+        %th Strong
+        %th Moderate
+    %tbody
+      %tr
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Ruby", :icon => "ruby.svg", :transparent_icon => "ruby_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "JavaScript"}
+          = render :partial => "programming_icon", :locals => {:title => "C"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Python", :icon => "python.svg", :transparent_icon => "python_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "PHP", :icon => "php.svg", :transparent_icon => "php_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "Shell"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Java", :icon => "java.svg", :transparent_icon => "java_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "Objective-C"}
+          = render :partial => "programming_icon", :locals => {:title => "Haskell", :icon => "haskell.svg", :transparent_icon => "haskell_transparent.svg"}
+
+  %h2 Ruby Frameworks
+  %table
+    %thead
+      %tr
+        %th Very Strong
+        %th Strong
+        %th Moderate
+    %tbody
+      %tr
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Rails", :icon => "rails.svg", :transparent_icon => "rails_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "Hobbit"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Sinatra", :icon => "sinatra.svg", :transparent_icon => "sinatra_transparent.svg"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Cuba", :icon => "cuba.svg", :transparent_icon => "cuba_transparent.svg"}
+
+  %h2 JavaScript Frameworks and Libraries
+  %table
+    %thead
+      %tr
+        %th Very Strong
+        %th Strong
+        %th Moderate
+    %tbody
+      %tr
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "jQuery", :icon => "jquery.svg", :transparent_icon => "jquery_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "d3", :icon => "d3.svg", :transparent_icon => "d3_transparent.svg"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Backbone", :icon => "backbone.svg", :transparent_icon => "backbone_transparent.svg"}
+        %td
+
+  %h2 Other Web Technologies
+  %table
+    %thead
+      %tr
+        %th Very Strong
+        %th Strong
+        %th Moderate
+    %tbody
+      %tr
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "HTML", :icon => "html5.svg", :transparent_icon => "html5_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "CSS", :icon => "css3.svg", :transparent_icon => "css3_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "XML/XPath", :icon => "xml.svg", :transparent_icon => "xml_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "JSON/Ajax", :icon => "json.svg", :transparent_icon => "json_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "MySQL", :icon => "mysql.svg", :transparent_icon => "mysql_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "REST/HATEOAS"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "MongoDB", :icon => "mongodb.svg", :transparent_icon => "mongodb_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "SVG", :icon => "svg.svg", :transparent_icon => "svg_transparent.svg"}
+        %td
+          = render :partial => "programming_icon", :locals => {:title => "Apache", :icon => "apache.svg", :transparent_icon => "apache_transparent.svg"}
+          = render :partial => "programming_icon", :locals => {:title => "Nginx", :icon => "nginx.svg", :transparent_icon => "nginx_transparent.svg"}
+
+  %h2 Personal Projects
+  %p My GitHub account is #{link_to "#{icon 'github'}voikya".html_safe, "https://github.com/voikya"}. Recent personal projects include:
+  %ul
+    %li
+      = link_to "Veche.net", "https://github.com/voikya/Veche.Net-on-Rails"
+      — This site, a simple Ruby-on-Rails application
+    %li
+      = link_to "Swordfish", "https://github.com/voikya/swordfish"
+      — A Ruby gem for converting Microsoft Word docx files into semantic HTML

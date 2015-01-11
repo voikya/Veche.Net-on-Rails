@@ -98,9 +98,7 @@ VecheNet::Application.routes.draw do
   end
 
   scope 'programming' do
-    get '/lexmanager' => 'programming#lexmanager', :as => 'programming_lexmanager'
-    get '/weatherdesktop' => 'programming#weatherdesktop', :as => 'programming_weatherdesktop'
-    get '/cdurak' => 'programming#cdurak', :as => 'programming_cdurak'
+    get '/profile' => 'programming#profile', :as => 'programming_profile'
   end
 
   get '/contact' => 'static#contact', :as => 'contact'

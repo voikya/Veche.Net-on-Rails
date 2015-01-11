@@ -107,19 +107,11 @@
       = image_tag 'header_programming.png', :class => 'header'
       %h1 Programming and Computer Science
       .content
-        %p In addition to languages and linguistics, programming and web design have both been interests of mine for a long time. While I started out on the web, I've since gained quite a bit of experience in application and mobile application development as well.
-        %p On the web side of things, I am familiar with (X)HTML, Ruby on Rails, CSS, JavaScript + jQuery, XML + XSLT, and PHP, while on the desktop and mobile side of things, I have worked with C, C++, Objective-C, Java, Python, and Haskell, plus the Unix CLI.
-        %p Here are a few projects of various sorts I'm offering up as open-source.
+        %p In addition to languages and linguistics, programming and web development have both been interests of mine for a long time. Recently I've been doing most of my work in Ruby (with a variety of frameworks, including Rails, Sinatra, and Hobbit) and JavaScript/CoffeeScript, but I also consider myself proficient in PHP, Python, and C, and have done some work in Java, Objective-C, and Haskell. Web development is my main interest, but I have done some tinkering in offline programs and mobile (particularly Android) development in my spare time as well.
+        %h2 Links
         %ul
           %li
-            = link_to "LexManager", programming_lexmanager_path
-            — an open-source customizable PHP-based web dictionary, fully-functional but still in its early stages of development
-          %li
-            = link_to "WeatherDesktop", programming_weatherdesktop_path
-            — a relatively simple script written in Objective-C to plug into GeekTool on Mac OS X that will change your desktop background based on the time of day and weather at your current location
-          %li
-            = link_to "C Durak", programming_cdurak_path
-            — a simple version of the popular Eastern European card game Durak using terminal graphics
+            = link_to "Profile", programming_profile_path
 
     %article{:id => "about", :data => {:title => "About", :nav_button => image_path("tab_about.jpg")}}
       = image_tag 'header_about.png', :class => 'header'
