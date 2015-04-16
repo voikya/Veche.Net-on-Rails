@@ -218,9 +218,23 @@ body.lexicon {
       }
     }
 
+    div.editable {
+      cursor: pointer;
+      &:hover {
+        background-color: #ECF6FF;
+      }
+      &:empty {
+        background-color: #FFF1AD;
+      }
+      &:empty:before {
+        color: #FFCC66;
+      }
+    }
+
     div.word {
       font-size: xx-large;
       display: inline-block;
+      &:empty:before { content: "Word"; }
     }
 
     div.root-word {
@@ -251,6 +265,7 @@ body.lexicon {
       font-style: italic;
       padding-left: 5px;
       display: inline-block;
+      &:empty:before { content: "Transliteration"; }
     }
 
     div.root-transliteration {
@@ -262,6 +277,8 @@ body.lexicon {
       &:before {
         content: "*";
       }
+
+      &:empty:before { content: "Root Transliteration"; }
     }
 
     div.ext-root-transliteration {
@@ -277,10 +294,14 @@ body.lexicon {
     div.pronunciation {
       font-family: Verdana, Arial, Helvetica, sans-serif;
       display: block;
+
+      &:empty:before { content: "Pronunciation"; }
     }
 
     div.part-of-speech {
       display: block;
+
+      &:empty:before { content: "Part of Speech"; }
     }
 
     div.root {
@@ -289,15 +310,25 @@ body.lexicon {
       &:before {
         content: "Root: *";
       }
+
+      &:empty:before { content: "Root"; }
     }
 
     div.definition {
       display: block;
+
+      &:empty:before { content: "Definition"; }
     }
 
     div.important-forms {
       margin-bottom: 15px;
       display: block;
+
+      &:empty:before { content: "Important Forms"; }
+    }
+
+    div.idioms {
+      &:empty:before { content: "Idioms"; }
     }
 
     div.notes {
@@ -308,6 +339,8 @@ body.lexicon {
         margin-right: 50px;
         font-style: italic;
       }
+
+      &:empty:before { content: "Notes"; }
     }
 
     div.cognates {
@@ -317,6 +350,8 @@ body.lexicon {
       > p:first-child:before {
         content: "cf. ";
       }
+
+      &:empty:before { content: "Cognates"; }
     }
 
     div.etymology {
@@ -326,6 +361,8 @@ body.lexicon {
       > p:first-child:before {
         content: "Etym: ";
       }
+
+      &:empty:before { content: "Etymology"; }
     }
 
     div.cross-references {
@@ -341,6 +378,8 @@ body.lexicon {
         margin-top: 0px;
         padding-left: 0px;
       }
+
+      &:empty:before { content: "Cross-References"; }
     }
 
     div.derivatives {
@@ -410,6 +449,49 @@ body.lexicon {
       table.adjectives {
         text-align: center;
       }
+
+      &:empty:before { content: "Morphology"; }
+
+      &.editable {
+        font-size: smaller;
+        font-family: monospace;
+        text-align: left;
+
+        table {
+          border: solid 1px #CCC;
+        }
+
+        th {
+          font-variant: small-caps;
+        }
+
+        td {
+          background-color: #EFEFEF;
+          cursor: text;
+
+          &:hover {
+            background-color: #ECF6FF;
+          }
+        }
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+
+  button.submit {
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #2196F3;
     }
   }
 }

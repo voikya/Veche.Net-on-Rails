@@ -30,6 +30,17 @@ module Lexicons
       end
     end
 
+    def new
+      @entry = @lexicon.lexicon_class.new
+      @entry.morphology_table = @entry.morphology_hash
+      render :edit
+    end
+
+    def create
+      entry = @lexicon.lexicon_class.create_entry(params)
+      redirect_to lexicon_entry_path(:language => @language, :slug => entry.slug)
+    end
+
     def show
       @entry = @lexicon.entry(params[:slug])
       @lexicon.scope_entries(search_params)
@@ -46,6 +57,21 @@ module Lexicons
         format.html
         format.json { render :json => @entry }
       end
+    end
+
+    def edit
+      @entry = @lexicon.entry(params[:slug])
+      @lexicon.scope_entries(search_params)
+      @cross_refs = @entry.cross_references
+      if @entry.respond_to?(:morphology)
+        @entry.morphology_table = @entry.morphology_hash
+      end
+    end
+
+    def update
+      @entry = @lexicon.entry(params[:slug])
+      @entry.update_entry(params)
+      render :show
     end
 
     private

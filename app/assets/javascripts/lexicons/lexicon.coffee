@@ -1,16 +1,21 @@
 class Lexicon
   searchEndpoint: "/lexicon/{language}.json"
   entryEndpoint: "/lexicon/{language}/{word}.json"
+  updateEndpoint: "/lexicon/{language}/{word}"
+  createEndpoint: "/lexicon/{language}"
 
   constructor: (opts) ->
     @language = opts.language
     @searchEndpoint = @searchEndpoint.replace "{language}", @language
     @entryEndpoint = @entryEndpoint.replace "{language}", @language
+    @updateEndpoint = @updateEndpoint.replace "{language}", @language
+    @createEndpoint = @createEndpoint.replace "{language}", @language
     @lexemeField = opts.lexemeField
     @initAdvancedSearch()
     @initSearchSubmit()
     @initEntryLinks()
     @initAlphabetLinks()
+    @initEdit()
 
   # Attach toggles associated with 'Advanced Search' link
   initAdvancedSearch: ->
@@ -118,6 +123,94 @@ class Lexicon
     for own key, value of object
       query.push "#{encodeURIComponent key}=#{encodeURIComponent value}"
     query.join "&"
+
+  # Initialize edit behaviors
+  initEdit: ->
+    $("#entry-view .submit").click =>
+      data = @getFormData()
+      word = data.slug
+      if word
+        endpoint = @updateEndpoint.replace("{word}", word)
+        method = "PUT"
+      else
+        endpoint = @createEndpoint
+        method = "POST"
+      $.ajax(
+        url: endpoint
+        data: data
+        method: method
+      ).done((res) =>
+        window.location.href = endpoint
+      )
+
+  # Get form data in edit mode
+  getFormData: ->
+    data = {}
+    formatter = @format
+    $("#entry-view .editable").each ->
+      klass = $(@).attr('class').replace(/\s?editable\s?/, '')
+                                .replace(/-/g, '_')
+      switch klass
+        when 'word', 'transliteration', 'root', 'pronunciation', 'part_of_speech', 'etymology', 'cognates'
+          data[klass] = $(@).text()
+        when 'definition'
+          data[klass] = $(@).find('li')
+                            .toArray()
+                            .reduce((memo, cur) ->
+                              memo.push("[[#{formatter(cur.innerHTML)}]]")
+                              memo
+                            , [])
+                            .join("\n")
+        when 'important_forms'
+          data[klass] = $(@).html()
+                            .split("<br>")
+                            .reduce((memo, cur) ->
+                              memo.push("[[#{formatter(cur)}]]")
+                              memo
+                            , [])
+                            .join("\n")
+        when 'idioms'
+          data[klass] = $(@).find('p')
+                            .toArray()
+                            .reduce((memo, cur) ->
+                              memo.push(formatter(cur.innerHTML))
+                              memo
+                            , [])
+                            .join("\n")
+        when 'notes'
+          $(@).find('legend').remove()
+          data[klass] = formatter $(@).find('fieldset').html()
+        when 'cross_references'
+          data[klass] = $(@).find('li')
+                            .toArray()
+                            .reduce((memo, cur) ->
+                              memo.push $(cur).text()
+                              memo
+                            , [])
+                              .join(",")
+        when 'morphology_table'
+          mt = {}
+          $(@).find('tr').each ->
+            key = $(@).find('th').text()
+            val = $(@).find('td').text()
+            mt[key] = val if val
+          data[klass] = mt if Object.keys(mt).length > 0
+        else
+          alert("Unhandled #{klass}")
+    data.slug = $("input#slug").val()
+    for k, v of data
+      delete data[k] unless v
+      delete data[k] if data[k] == "[[]]"
+    data
+
+  # Format data
+  format: (str) ->
+    return unless str?
+    str.replace(/<i>/g, "{{")
+       .replace(/<\/i>/g, "}}")
+       .replace(/<br>/g, "\n")
+       .replace(/<span class="label">([^:]+):<\/span>\s*/g, "$1|")
+       .replace(/\s*<span class="transliteration">([^<]+)<\/span>\s*/g, " {{$1}}")
 
 window.classes ?= {}
 window.classes.Lexicon = Lexicon

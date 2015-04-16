@@ -42,9 +42,9 @@ module Lexicons
     end
 
     # Return array of instantiated formatters
-    def formatters
+    def formatters(opts = {})
       self.class.formatters.map do |k, _|
-        formatter(k)
+        formatter(k, opts)
       end.compact
     end
 
@@ -84,12 +84,28 @@ module Lexicons
     private
 
     # Create an initialized formatter for a given field.
-    def formatter(field)
+    def formatter(field, opts={})
       text = send(field)
-      if text && text.present?
+      if (text && text.present?) || opts[:include_empty]
         self.class.formatters[field].new(field, send(field))
       else
         nil
+      end
+    end
+
+    # Generate a new slug
+    def generate_slug
+      unless self.slug.present?
+        if self.class.where(:slug => self.word).length.zero?
+          self.slug = self.word
+        else
+          idx = 2
+          loop do
+            break if self.class.where(:slug => "#{self.word}#{idx}").length.zero?
+            idx += 1
+          end
+          self.slug = "#{self.word}#{idx}"
+        end
       end
     end
   end

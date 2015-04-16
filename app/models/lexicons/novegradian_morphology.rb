@@ -12,6 +12,21 @@ module Lexicons
                     :desinence, :desinence_transliterated, :tertiary,
                     :tertiary_transliterated, :group, :subgroup, :flags
 
+    def as_json(options={})
+      {
+        :category => category,
+        :group => group,
+        :subgroup => subgroup,
+        :stem => stem,
+        :stem_transliterated => stem_transliterated,
+        :desinence => desinence,
+        :desinence_transliterated => desinence_transliterated,
+        :tertiary => tertiary,
+        :tertiary_transliterated => tertiary_transliterated,
+        :flags => flags
+      }
+    end
+
     def generate!
       module_name = [
         "Morphology",

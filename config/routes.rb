@@ -88,7 +88,11 @@ VecheNet::Application.routes.draw do
 
   scope 'lexicon', :module => :lexicons do
     get '/:language' => 'lexicon#index', :as => 'lexicon'
+    get '/:language/new' => 'lexicon#new', :as => 'new_lexicon_entry'
     get '/:language/:slug' => 'lexicon#show', :as => 'lexicon_entry'
+    get '/:language/:slug/edit' => 'lexicon#edit', :as => 'edit_lexicon_entry'
+    post '/:language' => 'lexicon#create'
+    put '/:language/:slug' => 'lexicon#update'
   end
 
   scope 'linguistics' do

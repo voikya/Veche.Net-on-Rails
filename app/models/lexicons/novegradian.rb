@@ -27,6 +27,8 @@ module Lexicons
 
     attr_accessor :morphology_table
 
+    before_create :generate_slug
+
     # Array of fields that are included when doing a search over "any" field.
     def self.scopable_fields
       [
@@ -68,11 +70,79 @@ module Lexicons
       super.order(:word)
     end
 
+    def morphology_hash
+      if morphology
+        morphology.as_json
+      else
+        NovegradianMorphology.new.as_json
+      end
+    end
+
     def to_json(opts={})
       formatters.reduce({}) do |hash, formatter|
         hash[formatter.name] = formatter.to_html
         hash
       end.to_json
+    end
+
+    def self.create_entry(params)
+      record = new(
+        word: params[:word],
+        transliteration: params[:transliteration],
+        pronunciation: params[:pronunciation],
+        part_of_speech: params[:part_of_speech],
+        root: params[:root],
+        definition: params[:definition],
+        important_forms: params[:important_forms],
+        idioms: params[:idioms],
+        notes: params[:notes],
+        etymology: params[:etymology],
+        cognates: params[:cognates]
+      )
+      if params[:morphology_table]
+        record.morphology = NovegradianMorphology.new(params[:morphology_table])
+      end
+      if params[:cross_references]
+        params[:cross_references].split(',').each do |xref|
+          record.cross_references << where(:slug => xref).first
+        end
+      end
+
+      record.save!
+      record
+    end
+
+    def update_entry(params)
+      update_attributes(
+        word: params[:word],
+        transliteration: params[:transliteration],
+        pronunciation: params[:pronunciation],
+        part_of_speech: params[:part_of_speech],
+        root: params[:root],
+        definition: params[:definition],
+        important_forms: params[:important_forms],
+        idioms: params[:idioms],
+        notes: params[:notes],
+        etymology: params[:etymology],
+        cognates: params[:cognates]
+      )
+      if morphology
+        morphology.update_attributes(params[:morphology_table])
+      else
+        self.morphology = NovegradianMorphology.new(params[:morphology_table])
+      end
+      xrefs = params[:cross_references].split(',')
+      cross_references.each do |xref|
+        if !xrefs.include?(xref.slug)
+          cross_references.delete(xref)
+        end
+      end
+      xrefs.each do |xref|
+        if !cross_references.map(&:slug).include?(xref)
+          cross_references << where(:slug => xref).first
+        end
+      end
+      save!
     end
   end
 end

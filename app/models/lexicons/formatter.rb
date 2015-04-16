@@ -14,6 +14,10 @@ module Lexicons
       raise NotImplementedError
     end
 
+    def to_editable
+      raise NotImplementedError
+    end
+
     def class_name
       @name.to_s.dasherize
     end
@@ -32,6 +36,10 @@ module Lexicons
 
     def to_html
       "<div class='#{class_name}'>#{@text}</div>"
+    end
+
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{@text}</div>"
     end
   end
 
@@ -68,6 +76,10 @@ module Lexicons
       "<div class='#{class_name}'>#{contents}</div>"
     end
 
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
+    end
+
     private
 
     def contents
@@ -75,6 +87,7 @@ module Lexicons
     end
 
     def format(text)
+      text ||= ""
       text.gsub! /{(.*?)}/, '<i>\1</i>'
       text.split(/\r?\n/).map {|line| "<p>#{line}</p>"}.join
     end
@@ -95,6 +108,10 @@ module Lexicons
         "</fieldset>"
       ].join
     end
+
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{format(@text)}</div>"
+    end
   end
 
   class DefinitionFormatter < Formatter
@@ -114,6 +131,10 @@ module Lexicons
 
     def to_html
       "<div class='#{class_name}'>#{contents}</div>"
+    end
+
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{@text ? contents : ''}</div>"
     end
 
     private
@@ -151,9 +172,14 @@ module Lexicons
       "<div class='#{class_name}'>#{contents}</div>"
     end
 
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
+    end
+
     private
 
     def contents
+      return "" unless @text
       tokenize_with_labels.map do |line|
         [
           "<span class='label'>#{line[0]}:</span>",
@@ -171,11 +197,19 @@ module Lexicons
       #   {Transliteration}
       #   "Meaning"
       #   ...
-      @text.split(/\r?\n/).map{|l| l.gsub(/^[{"]([^"}]*)[}"]?$/, '\1')}.select(&:present?).compact
+      if @text
+        @text.split(/\r?\n/).map{|l| l.gsub(/^[{"]([^"}]*)[}"]?$/, '\1')}.select(&:present?).compact
+      else
+        [""]
+      end
     end
 
     def to_html
       "<div class='#{class_name}'>#{contents}</div>"
+    end
+
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
     end
 
     private
@@ -201,6 +235,10 @@ module Lexicons
       end
     end
 
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{@text.length > 0 ? editable_contents : ""}</div>"
+    end
+
     private
 
     def contents
@@ -210,6 +248,14 @@ module Lexicons
           formatted_slug = xref.slug.gsub(/^([^0-9]*)([0-9]*)$/, '\1<sup>\2</sup>')
           %Q(<li><a href="#{xref.slug}">#{formatted_slug}</a> "#{xref.definition_summary}"</li>)
         end,
+        "</ul>"
+      ].flatten.join
+    end
+
+    def editable_contents
+      [
+        "<ul>",
+        @text.map {|xref| "<li>#{xref.slug}</li>"},
         "</ul>"
       ].flatten.join
     end
@@ -229,6 +275,10 @@ module Lexicons
 
     def to_html
       "<div class='#{class_name}'>#{contents}</div>"
+    end
+
+    def to_editable
+      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
     end
 
     private
@@ -262,6 +312,23 @@ module Lexicons
       else
         ""
       end
+    end
+
+    def to_editable
+      [
+        "<div class='editable #{class_name}'>",
+        "<table>",
+        @text.map do |k, v|
+          [
+            "<tr>",
+            "<th>#{k}</th>",
+            "<td contenteditable>#{v}</td>",
+            "</tr>",
+          ]
+        end,
+        "</table>",
+        "</div>"
+      ].flatten.join
     end
   end
 end
