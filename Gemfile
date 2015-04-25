@@ -15,6 +15,7 @@ gem 'magnific-popup-rails'
 
 # Configuration
 gem 'dotenv'
+gem 'dotenv-rails'
 
 # Misc
 gem 'rubystats'

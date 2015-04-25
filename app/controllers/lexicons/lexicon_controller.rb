@@ -1,6 +1,7 @@
 module Lexicons
   class LexiconController < ApplicationController
     layout 'lexicon'
+    before_filter :require_authorization!, only: [:new, :create, :edit, :update]
     before_filter :set_language
     before_filter :preprocess_search_params
     before_filter :set_display_options

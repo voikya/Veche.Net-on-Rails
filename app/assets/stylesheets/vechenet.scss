@@ -194,3 +194,38 @@ span.mail2:before {
     }
   }
 }
+
+form#sign-in {
+  display: block;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+
+  input[type=password] {
+    display: block;
+    margin: 0 auto;
+    border: solid 3px rgba(53, 108, 167, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    font-size: x-large;
+    color: steelblue;
+    text-align: center;
+    padding: 5px 20px;
+  }
+
+  input[type=submit] {
+    display: block;
+    margin: 30px auto;
+    padding: 5px 20px;
+    border: none;
+    font-size: large;
+    background: rgba(53, 108, 167, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgba(53, 108, 167, 1.0);
+    }
+  }
+}

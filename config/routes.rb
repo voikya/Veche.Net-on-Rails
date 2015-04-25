@@ -107,5 +107,7 @@ VecheNet::Application.routes.draw do
 
   get '/contact' => 'static#contact', :as => 'contact'
   post '/contact' => 'static#sendmail'
+  get '/login' => 'static#login_form', :as => 'login'
+  post '/login' => 'static#login'
   root :to => 'static#index'
 end

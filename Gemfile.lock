@@ -67,6 +67,8 @@ GEM
     colorize (0.7.3)
     debug_inspector (0.0.2)
     dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     dropbox-sdk (1.6.4)
       json
     erubis (2.7.0)
@@ -169,6 +171,7 @@ DEPENDENCIES
   capistrano-rvm
   coffee-rails (~> 3.2.1)
   dotenv
+  dotenv-rails
   dropbox-sdk
   font-awesome-sass (~> 4.2.0)
   foreigner

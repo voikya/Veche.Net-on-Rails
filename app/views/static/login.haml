@@ -1,0 +1,12 @@
+- content_for :title, "veche.net — Sign In"
+
+#container
+  #title.shifted
+    = link_to root_path do
+      = image_tag 'title.png', :alt => "veche.net"
+    %nav.buttonframe
+
+  %form{:id => 'sign-in', :action => login_path, :method => :post}
+    = hidden_field_tag :redirect, @redirect_path
+    = password_field_tag :password
+    = submit_tag "Sign In"

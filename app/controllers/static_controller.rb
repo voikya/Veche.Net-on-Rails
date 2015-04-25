@@ -20,4 +20,14 @@ class StaticController < ApplicationController
       ContactMailer.contact(@subject, @message, @email).deliver
     end
   end
+
+  def login_form
+    @redirect_path = params[:redirect_to]
+    render :login
+  end
+
+  def login
+    session[:authorization] = params[:password]
+    redirect_to params[:redirect]
+  end
 end
