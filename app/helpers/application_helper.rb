@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def is_admin?
+    session[:authorization] == ENV['ADMIN_PASSWORD']
+  end
+
   def transliterate(word, transliteration, options = {})
     if options[:linebreak]
       "#{word}<br><i class='transliteration'>#{transliteration}</i>".html_safe

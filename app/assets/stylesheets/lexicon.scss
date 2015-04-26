@@ -200,6 +200,22 @@ body.lexicon {
     font-size: medium;
     transition: top 0.3s;
 
+    #admin-controls {
+      float: right;
+
+      a {
+        display: inline-block;
+        color: #EFEFEF;
+        font-size: x-large;
+        margin: 0px 10px 0px 0px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #2196F3;
+        }
+      }
+    }
+
     span.comment, span.transliteration {
       font-style: italic;
     }

@@ -66,20 +66,21 @@ class Lexicon
   # Attach Ajax bindings to links to individual entries
   initEntryLinks: ->
     $('main').on 'click', 'a:not(.root)', (evt) =>
-      evt.preventDefault()
-      word = $(evt.target).text()
-      endpoint = @entryEndpoint.replace("{word}", word)
-      $.ajax(
-        url: endpoint
-      ).done((res) =>
-        # Update the history/URL state
-        window.history.pushState null, null, endpoint.replace(".json", "")
-        # Load the entry
-        $entryView = $('#entry-view')
-        $entryView.empty()
-        for key, content of res
-          $entryView.append content
-      )
+      unless $('#admin-controls').has($(@))
+        evt.preventDefault()
+        word = $(evt.target).text()
+        endpoint = @entryEndpoint.replace("{word}", word)
+        $.ajax(
+          url: endpoint
+        ).done((res) =>
+          # Update the history/URL state
+          window.history.pushState null, null, endpoint.replace(".json", "")
+          # Load the entry
+          $entryView = $('#entry-view')
+          $entryView.empty()
+          for key, content of res
+            $entryView.append content
+        )
     $('main').on 'click', 'a.root', (evt) =>
       evt.preventDefault()
       root = $(evt.target).text()
