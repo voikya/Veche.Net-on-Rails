@@ -142,6 +142,9 @@ class Lexicon
       ).done((res) =>
         window.location.href = endpoint
       )
+    $("#entry-view .editable.definition, #entry-view .editable.cross-references").focus ->
+      if $(@).html() == ""
+        $(@).html "<ol><li></li></ol>"
 
   # Get form data in edit mode
   getFormData: ->
