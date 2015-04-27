@@ -128,10 +128,10 @@ module Lexicons
       )
       if morphology
         morphology.update_attributes(params[:morphology_table])
-      else
+      elsif params[:morphology_table]
         self.morphology = NovegradianMorphology.new(params[:morphology_table])
       end
-      xrefs = params[:cross_references].split(',')
+      xrefs = (params[:cross_references] || "").split(',')
       cross_references.each do |xref|
         if !xrefs.include?(xref.slug)
           cross_references.delete(xref)
