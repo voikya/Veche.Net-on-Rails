@@ -8,6 +8,6 @@ namespace :sql do
     token = ENV['DROPBOX_API_TOKEN']
     client = DropboxClient.new(token)
     sql = open(ENV['SQL_DUMP'])
-    client.put_file "/sql/veche.sql", file, true
+    client.put_file "/sql/veche.sql", sql, true
   end
 end
