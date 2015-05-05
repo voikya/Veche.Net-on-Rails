@@ -56,6 +56,10 @@ module Lexicons
   end
 
   class RootFormatter < PlainTextFormatter
+    def tokenize
+      @text.split(',')
+    end
+
     def to_html
       "<div class='#{class_name}'>#{contents}</div>"
     end
@@ -63,8 +67,8 @@ module Lexicons
     private
 
     def contents
-      @text.split(',').map do |r|
-        %Q(<a class="root" href=".?root=#{r}">#{r}</a>)
+      tokenize.map do |r|
+        %Q(<a class="root" href=".?root=#{r}&exact=1">#{r}</a>)
       end.join(" + ")
     end
   end

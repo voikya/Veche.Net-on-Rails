@@ -25,6 +25,15 @@ class Lexicon
       # Enable/disable basic search field
       $('#search input, #search select').each ->
         $(@).prop 'disabled', !$(@).prop('disabled')
+    # Toggle dropdown fields based on state of 'Exact' checkbox
+    $('#advanced-search input#exact').click (evt) ->
+      if $(evt.target).is(':checked')
+        $('#advanced-search select').each ->
+          $(@).data('original', $(@).html())
+          $(@).html "<option value='contains'>is</option>"
+      else
+        $('#advanced-search select').each ->
+          $(@).html $(@).data('original')
 
   # Attach Ajax bindings to search submit
   initSearchSubmit: ->
@@ -84,7 +93,7 @@ class Lexicon
     $('main').on 'click', 'a.root', (evt) =>
       evt.preventDefault()
       root = $(evt.target).text()
-      @search(root: root)
+      @search(root: root, exact: true)
 
   # Perform a search request
   search: (data) ->
