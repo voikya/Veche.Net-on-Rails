@@ -63,7 +63,9 @@ module Lexicons
     private
 
     def contents
-      %Q(<a class="root" href=".?root=#{@text}">#{@text}</a>)
+      @text.split(',').map do |r|
+        %Q(<a class="root" href=".?root=#{r}">#{r}</a>)
+      end.join(" + ")
     end
   end
 

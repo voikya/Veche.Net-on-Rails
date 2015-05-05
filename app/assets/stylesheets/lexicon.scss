@@ -325,10 +325,18 @@ body.lexicon {
       font-size: 90%;
 
       &:before {
-        content: "Root: *";
+        content: "Root: ";
       }
 
       &:empty:before { content: "Root"; }
+
+      a.root {
+        &:before {
+          content: "*";
+          color: black;
+          text-decoration: none;
+        }
+      }
     }
 
     div.definition {
