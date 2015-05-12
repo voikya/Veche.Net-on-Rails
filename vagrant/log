@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Utility script to tail development logs
+
+if ! vagrant status | grep "running" >/dev/null; then
+  vagrant up
+fi
+
+vagrant ssh -c "tail -f /veche/log/development.log"
