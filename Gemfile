@@ -7,6 +7,9 @@ gem 'rails', '3.2.16'
 gem 'pg'
 gem 'foreigner'
 
+# Frameworks
+gem 'react-rails'
+
 # Libraries
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

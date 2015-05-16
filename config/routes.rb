@@ -95,6 +95,12 @@ VecheNet::Application.routes.draw do
     put '/:language/:slug' => 'lexicon#update'
   end
 
+  scope 'lexicon2', :module => :lexicons do
+    get '/:language' => 'lexicon2#init', :as => 'lexicon2'
+    get '/:language/entries' => 'lexicon2#index', :as => 'lexicon2_entries'
+    get '/:language/entries/:slug' => 'lexicon2#show', :as => 'lexicon2_entry'
+  end
+
   scope 'linguistics' do
     get '/baltic_sprachbund' => 'linguistics#baltic_sprachbund', :as => 'linguistics_baltic_sprachbund'
     get '/slavic_numerals' => 'linguistics#slavic_numerals', :as => 'linguistics_slavic_numerals'
