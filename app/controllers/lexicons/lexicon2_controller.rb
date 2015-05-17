@@ -3,7 +3,6 @@ module Lexicons
     layout 'lexicon2'
     before_filter :set_language
     before_filter :preprocess_search_params
-    before_filter :set_display_options
 
     # See Lexicon model for detailed descriptions
     SEARCH_STRING_PARAMS = [
@@ -51,10 +50,6 @@ module Lexicons
     def set_language
       @language = params[:language].to_sym
       @lexicon = Lexicon.find_by_language(@language)
-    end
-
-    def set_display_options
-      @show_partial_matches = search_params.include? :search
     end
 
     def preprocess_search_params

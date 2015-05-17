@@ -1,12 +1,14 @@
 module Lexicons
   class ResultSet
     attr_reader :results, :excluded
+    attr_accessor :include_partial_matches
 
     def initialize(base_class)
       @base_class = base_class
       @results = base_class.order(base_class.indexed_column)
       @filters = []
       @scopes = {}
+      @include_partial_matches = false
     end
 
     # Define a new filter for the result set. It is not applied until
@@ -49,9 +51,9 @@ module Lexicons
       apply_filters!
       {
         :total_matches => count,
-        :partial_matches => @excluded.count,
+        :partial_matches => (@include_partial_matches ? @excluded.count : 0),
         :results => @results.map(&:slug),
-        :partial_results => @excluded.map(&:slug)
+        :partial_results => (@include_partial_matches ? @excluded.map(&:slug) : 0)
       }.to_json
     end
 

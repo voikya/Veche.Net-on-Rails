@@ -76,6 +76,7 @@ module Lexicons
       fields = @lexicon_class.primary_fields
       @entries.add_scope(fields, value)
       @entries.add_filter(:whole_word, true)
+      @entries.include_partial_matches = true
     end
 
     # Scope by following links to create a network of all related terms.

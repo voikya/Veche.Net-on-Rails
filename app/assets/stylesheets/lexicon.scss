@@ -253,6 +253,10 @@ body.lexicon {
       }
     }
 
+    div.missing-formatter {
+      background-color: red;
+    }
+
     div.word {
       font-size: xx-large;
       display: inline-block;
@@ -354,6 +358,11 @@ body.lexicon {
     div.important-forms {
       margin-bottom: 15px;
       display: block;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
 
       &:empty:before { content: "Important Forms"; }
     }

@@ -1,25 +1,22 @@
 module Lexicons
   class Formatter
     attr_reader :text, :name
+
     def initialize(name, text)
+      @name = name.to_s.dasherize
       @text = text
-      @name = name
     end
 
     def tokenize
-      raise NotImplementedError
+      [clean_text]
     end
 
-    def to_html
-      raise NotImplementedError
-    end
-
-    def to_editable
-      raise NotImplementedError
-    end
-
-    def class_name
-      @name.to_s.dasherize
+    def to_json
+      {
+        :name => @name,
+        :value => format(@text),
+        :type => formatter_type
+      }
     end
 
     private
@@ -27,140 +24,69 @@ module Lexicons
     def clean_text
       @text.gsub(/{.*?}/, '')
     end
+
+    def format(str)
+      str
+    end
+
+    def formatter_type
+      self.class.name.split('::').last.gsub('Formatter', '')
+    end
   end
 
   class PlainTextFormatter < Formatter
+  end
+
+  class RootFormatter < Formatter
     def tokenize
-      [clean_text]
-    end
-
-    def to_html
-      "<div class='#{class_name}'>#{@text}</div>"
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{@text}</div>"
-    end
-  end
-
-  class CanonicalFormFormatter < PlainTextFormatter
-  end
-
-  class TransliterationFormatter < PlainTextFormatter
-  end
-
-  class PronunciationFormatter < PlainTextFormatter
-  end
-
-  class PartOfSpeechFormatter < PlainTextFormatter
-  end
-
-  class RootFormatter < PlainTextFormatter
-    def tokenize
-      @text.split(',')
-    end
-
-    def to_html
-      "<div class='#{class_name}'>#{contents}</div>"
+      clean_text.split(',')
     end
 
     private
 
-    def contents
-      tokenize.map do |r|
-        %Q(<a class="root" href=".?root=#{r}&exact=1">#{r}</a>)
-      end.join(" + ")
+    def format(str)
+      str.split(',')
     end
   end
 
   class RichTextFormatter < Formatter
     def tokenize
-      [clean_text]
-    end
-
-    def to_html
-      "<div class='#{class_name}'>#{contents}</div>"
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
+      clean_text.split(/\r?\n/).reject(&:blank?)
     end
 
     private
 
-    def contents
-      format(@text)
+    def format(str)
+      str.gsub! /{{(.*?)}}/, '<span class="comment">\1</span>'
+      str.gsub! /{(.*?)}/, '<span class="transliteration">\1</span>'
+      str.split(/\r?\n/).reject(&:blank?)
     end
-
-    def format(text)
-      text ||= ""
-      text.gsub! /{(.*?)}/, '<i>\1</i>'
-      text.split(/\r?\n/).map {|line| "<p>#{line}</p>"}.join
-    end
-  end
-
-  class EtymologyFormatter < RichTextFormatter
-  end
-
-  class CognateFormatter < RichTextFormatter
   end
 
   class NoteFormatter < RichTextFormatter
-    def contents
-      [
-        "<fieldset>",
-        "<legend>Notes</legend>",
-        super,
-        "</fieldset>"
-      ].join
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{format(@text)}</div>"
-    end
   end
 
-  class DefinitionFormatter < Formatter
-    def tokenize(opts = {})
-      # Legacy Format:
-      #   [[def1.1, def1.2]]
-      #   [[def2]]
-      #   [[def3.1, def3.2, def3.3]]
-      #   ...
-      base = opts[:formatted] ? @text : clean_text
-      base.split(/[\[\]]/).select(&:present?).map {|f| f.split(',').map(&:strip)}
+  class DefinitionFormatter < RichTextFormatter
+    def tokenize
+      super.gsub(/[\[\]]/, '').map{|t| t.split(',')}.flatten
     end
 
     def summary
-      clean_text.split(/[\[\]]/).select(&:present?).first
-    end
-
-    def to_html
-      "<div class='#{class_name}'>#{contents}</div>"
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{@text ? contents : ''}</div>"
+      clean_text.split(/\r?\n/).first
     end
 
     private
 
-    def contents
-      [
-        "<ol>",
-        tokenize(:formatted => true).map do |line|
-          "<li>#{format line.join(', ')}</li>"
-        end,
-        "</ol>"
-      ].join
+    def clean_text
+      super.gsub(/[\[\]]/, '')
     end
 
-    def format(text)
-      text.gsub /{(.*?)}/, '<span class="comment">\1</span>'
+    def format(str)
+      super str.gsub(/[\[\]]/, '')
     end
   end
 
-  class ImportantFormsFormatter < Formatter
+  class ImportantFormsFormatter < RichTextFormatter
     def tokenize
       # Legacy Format:
       #   [[Type| Metadata]]
@@ -170,33 +96,18 @@ module Lexicons
       @text.split(/\r?\n/)[1..-1].map{|a| a.split('|')[1].split(/\p{^Word}/).select(&:present?)}
     end
 
-    def tokenize_with_labels
-      @text.split(/\r?\n/).map{|a| a.split(/[\|{}\[\]]/).select(&:present?)}
-    end
-
-    def to_html
-      "<div class='#{class_name}'>#{contents}</div>"
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
-    end
-
     private
 
-    def contents
-      return "" unless @text
-      tokenize_with_labels.map do |line|
-        [
-          "<span class='label'>#{line[0]}:</span>",
-          line[1],
-          ("<span class='transliteration'>#{line[2]}</span>" if line[2])
-        ].compact.join(' ')
-      end.join("<br/>")
+    def format(str)
+      super.reduce({}) do |memo, current|
+        label, value = current.gsub(/[\[\]]/, '').split('|').map(&:strip)
+        memo[label] = value
+        memo
+      end
     end
   end
 
-  class IdiomFormatter < Formatter
+  class ExampleFormatter < RichTextFormatter
     def tokenize
       # Legacy Format:
       #   Example Sentence
@@ -210,60 +121,29 @@ module Lexicons
       end
     end
 
-    def to_html
-      "<div class='#{class_name}'>#{contents}</div>"
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
-    end
-
     private
 
-    def contents
-      tokenize.map.with_index do |l, idx|
-        case idx % 3
-          when 0, 2 then l
-          when 1 then "<i>#{l}</i>"
-        end
-      end.each_slice(3).map do |example|
-        "<p>#{example.join('<br>')}</p>"
-      end.join
+    def format(str)
+      tokenize.each_slice(3).map do |example|
+        {
+          :example => example[0],
+          :transliteration => example[1],
+          :translation => example[2]
+        }
+      end
     end
   end
 
   class CrossReferenceFormatter < Formatter
-    def to_html
-      if @text.length > 0
-        "<div class='#{class_name}'>#{contents}</div>"
-      else
-        ""
-      end
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{@text.length > 0 ? editable_contents : ""}</div>"
-    end
-
     private
 
-    def contents
-      [
-        "<ul>",
-        @text.map do |xref|
-          formatted_slug = xref.slug.gsub(/^([^0-9]*)([0-9]*)$/, '\1<sup>\2</sup>')
-          %Q(<li><a href="#{xref.slug}">#{formatted_slug}</a> "#{xref.definition_summary}"</li>)
-        end,
-        "</ul>"
-      ].flatten.join
-    end
-
-    def editable_contents
-      [
-        "<ul>",
-        @text.map {|xref| "<li>#{xref.slug}</li>"},
-        "</ul>"
-      ].flatten.join
+    def format(str)
+      @text.map do |xref|
+        {
+          :slug => xref.slug,
+          :summary => xref.definition_summary
+        }
+      end
     end
   end
 
@@ -279,62 +159,23 @@ module Lexicons
       end
     end
 
-    def to_html
-      "<div class='#{class_name}'>#{contents}</div>"
-    end
-
-    def to_editable
-      "<div class='editable #{class_name}' contenteditable>#{contents}</div>"
-    end
-
     private
 
-    def contents
-      [
-        "<fieldset>",
-        "<legend>Derived Words</legend>",
-        @text.split(/\r?\n/).map do |line|
-          split_line = line.gsub(/(\[\[|\]\])/, '').split('|').map(&:strip)
-          %Q(
-            <div class="derivative-word">
-              <div class="word">#{split_line[0]}</div>
-              <div class="transliteration">#{split_line[1]}</div>
-              <div class="pronunciation">#{split_line[2]}</div>
-              <div class="part-of-speech">#{split_line[3]}</div>
-              <div class="definition">#{split_line[4]}</div>
-              #{split_line[5] != '*' ? "<div class=\"notes\">#{split_line[5].gsub(/[{}]/, '')}</div>" : ""}
-            </div>
-          )
-        end,
-        "</fieldset>"
-      ].flatten.join
+    def format(str)
+      @text.split(/\r?\n/).map do |line|
+        split_line = line.gsub(/(\[\[|\]\])/, '').split('|').map(&:strip)
+        {
+          :word => split_line[0],
+          :transliteration => split_line[1],
+          :pronunciation => split_line[2],
+          :partOfSpeech => split_line[3],
+          :definition => split_line[4],
+          :notes => (split_line[5] != '*' ? split_line[5].gsub(/[{}]/, '') : nil)
+        }
+      end
     end
   end
 
   class MorphologyFormatter < Formatter
-    def to_html
-      if @text
-        "<div class='#{class_name}'>#{@text}</div>"
-      else
-        ""
-      end
-    end
-
-    def to_editable
-      [
-        "<div class='editable #{class_name}'>",
-        "<table>",
-        @text.map do |k, v|
-          [
-            "<tr>",
-            "<th>#{k}</th>",
-            "<td contenteditable>#{v}</td>",
-            "</tr>",
-          ]
-        end,
-        "</table>",
-        "</div>"
-      ].flatten.join
-    end
   end
 end

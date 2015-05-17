@@ -10,17 +10,17 @@ module Lexicons
     has_many :cross_references, :through => :cross_reference_links, :source => :novegradian
     has_one :morphology, :foreign_key => :entry_id, :class_name => NovegradianMorphology
 
-    field :word, :formatter => CanonicalFormFormatter
-    field :transliteration, :formatter => TransliterationFormatter
-    field :pronunciation, :formatter => PronunciationFormatter
-    field :part_of_speech, :formatter => PartOfSpeechFormatter
+    field :word, :formatter => PlainTextFormatter
+    field :transliteration, :formatter => PlainTextFormatter
+    field :pronunciation, :formatter => PlainTextFormatter
+    field :part_of_speech, :formatter => PlainTextFormatter
     field :root, :formatter => RootFormatter
     field :definition, :formatter => DefinitionFormatter
     field :important_forms, :formatter => ImportantFormsFormatter
-    field :idioms, :formatter => IdiomFormatter
+    field :idioms, :formatter => ExampleFormatter
     field :notes, :formatter => NoteFormatter
-    field :etymology, :formatter => EtymologyFormatter
-    field :cognates, :formatter => CognateFormatter
+    field :etymology, :formatter => RichTextFormatter
+    field :cognates, :formatter => RichTextFormatter
 
     field :cross_references, :formatter => CrossReferenceFormatter, :custom => true
     field :morphology_table, :formatter => MorphologyFormatter, :custom => true
@@ -79,10 +79,7 @@ module Lexicons
     end
 
     def to_json(opts={})
-      formatters.reduce({}) do |hash, formatter|
-        hash[formatter.name] = formatter.to_html
-        hash
-      end.to_json
+      formatters.map(&:to_json).to_json
     end
 
     def self.create_entry(params)

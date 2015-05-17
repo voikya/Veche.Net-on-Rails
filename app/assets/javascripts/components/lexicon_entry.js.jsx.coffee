@@ -2,20 +2,22 @@
 
 @Lexicon.Entry = React.createClass
   getInitialState: ->
-    entry: {}
+    entry: []
 
   componentWillMount: ->
     # Set up event listeners
     Lexicon.Event.register 'api:entry:response', @receiveEntry
 
   render: ->
-    `<div id="entry-view" dangerouslySetInnerHTML={this.renderEntries()}>
+    `<div id="entry-view">
+      {this.renderEntries()}
      </div>
     `
 
   renderEntries: ->
-    entry = @state.entry
-    {__html: (entry[field] for field of entry).join('')}
+    @state.entry.map (field) =>
+      component = Lexicon.Formatters[field.type] || Lexicon.Formatters.MissingFormatter
+      React.createElement component, data: field
 
   receiveEntry: (data) ->
     @setState(entry: data)
