@@ -15,9 +15,13 @@
     `
 
   getLetterNodes: ->
-    callback = @handleClick
     @props.alphabet.split(' ').map (l) =>
-      `<td><a onClick={callback.bind(this, l)}>{l}</a></td>`
+      callback = @handleClick.bind(@, l)
+      path = "/entries?word=#{l}*"
+      `<td>
+         <Lexicon.Link path={path} handler={callback} content={l} />
+       </td>
+      `
 
   handleClick: (letter) ->
     queryOpts = {}

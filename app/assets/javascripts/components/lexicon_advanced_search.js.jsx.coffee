@@ -94,4 +94,4 @@
     data = {}
     data[name] = evt.target.checked
     @setState(data)
-    @props.updateCallback(name, data)
+    @props.updateCallback(name, evt.target.checked)

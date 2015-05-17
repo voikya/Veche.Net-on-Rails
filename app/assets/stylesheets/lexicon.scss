@@ -143,6 +143,29 @@ body.lexicon {
     }
   }
 
+  div.loading {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 86px;
+    overflow: hidden;
+    background-color: black;
+    z-index: 3;
+    transition: top 0.3s;
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      left: -200px;
+      width: 200px;
+      height: 4px;
+      background-color: #2980b9;
+      -webkit-animation: loading 2s linear infinite;
+      animation: loading 2s linear infinite;
+    }
+  }
+
   main {
     position: relative;
     height: 100%;
@@ -558,6 +581,10 @@ body.lexicon.advanced-search-open {
     }
   }
 
+  div.loading {
+    top: 176px;
+  }
+
   #search-results {
     top: 10em;
   }
@@ -565,4 +592,13 @@ body.lexicon.advanced-search-open {
   #entry-view {
     top: 11em;
   }
+}
+
+@-webkit-keyframes loading {
+  from {left: -200px; width: 30%;}
+  50%  {width: 30%;}
+  70%  {width: 70%;}
+  80%  {left: 50%;}
+  95%  {left: 120%;}
+  to   {left: 100%;}
 }

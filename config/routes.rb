@@ -87,9 +87,11 @@ VecheNet::Application.routes.draw do
   end
 
   scope 'lexicon', :module => :lexicons do
-    get '/:language' => 'lexicon#init', :as => 'lexicon'
-    get '/:language/entries' => 'lexicon#index', :as => 'lexicon_entries'
-    get '/:language/entries/:slug' => 'lexicon#show', :as => 'lexicon_entry'
+    scope :constraints => lambda {|request| request.headers['Accept'] == 'application/json'} do
+      get '/:language/entries' => 'lexicon#index', :as => 'lexicon_entries'
+      get '/:language/entries/:slug' => 'lexicon#show', :as => 'lexicon_entry'
+    end
+    get '/:language(/*subpath)' => 'lexicon#init', :as => 'lexicon'
   end
 
   scope 'linguistics' do

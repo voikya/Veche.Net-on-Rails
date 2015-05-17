@@ -25,7 +25,8 @@ module Lexicons
         language: @lexicon,
         lexemeField: @lexicon.lexicon_class.indexed_column,
         entryCount: @lexicon.record_count,
-        endpoint: lexicon_entries_path
+        endpoint: lexicon_entries_path,
+        basePath: lexicon_path(:language => @language)
       }
     end
 

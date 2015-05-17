@@ -30,9 +30,12 @@
   performSearch: (evt) ->
     evt.preventDefault()
     if @state.advancedSearchIsOpen
+      Lexicon.Router.transition "/entries?#{Utils.serialize(@state.advancedSearch)}"
       Lexicon.API.advancedSearch(@state.advancedSearch)
     else
-      Lexicon.API.search(@state.search) if @state.search
+      if @state.search
+        Lexicon.Router.transition "/entries?search=#{encodeURIComponent(@state.search)}"
+        Lexicon.API.search(@state.search)
 
   render: ->
     `<div id="search">

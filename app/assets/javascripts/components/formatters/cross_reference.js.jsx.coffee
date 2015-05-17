@@ -13,10 +13,11 @@
 
   renderCrossReferences: ->
     @props.data.value.map (xref) =>
-      slug = __html: xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
+      slug = xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
       clickCallback = @fetchEntry.bind(@, xref.slug)
+      path = "/entries/#{xref.slug}"
       `<li>
-         <a onClick={clickCallback} dangerouslySetInnerHTML={slug}></a>
+         <Lexicon.Link path={path} handler={clickCallback} content={slug} />
          &nbsp;
          "{xref.summary}"
        </li>
