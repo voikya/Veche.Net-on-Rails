@@ -9,14 +9,14 @@ module Lexicons
     has_many :cross_reference_links, :foreign_key => :from, :class_name => OchetsCrossReference
     has_many :cross_references, :through => :cross_reference_links, :source => :ochets
 
-    field :root_word, :formatter => CanonicalFormFormatter
-    field :ext_root, :formatter => CanonicalFormFormatter
-    field :root_transliteration, :formatter => TransliterationFormatter
-    field :ext_root_transliteration, :formatter => TransliterationFormatter
+    field :root_word, :formatter => PlainTextFormatter
+    field :ext_root, :formatter => PlainTextFormatter
+    field :root_transliteration, :formatter => PlainTextFormatter
+    field :ext_root_transliteration, :formatter => PlainTextFormatter
     field :definition, :formatter => DefinitionFormatter
     field :derivatives, :formatter => DerivativeFormatter
-    field :idioms, :formatter => IdiomFormatter
-    field :etymology, :formatter => EtymologyFormatter
+    field :idioms, :formatter => ExampleFormatter
+    field :etymology, :formatter => RichTextFormatter
 
     alias_attribute :word, :root_word
 
@@ -63,10 +63,7 @@ module Lexicons
     end
 
     def to_json(opts={})
-      formatters.reduce({}) do |hash, formatter|
-        hash[formatter.name] = formatter.to_html
-        hash
-      end.to_json
+      formatters.map(&:to_json).to_json
     end
   end
 end
