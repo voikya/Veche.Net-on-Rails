@@ -17,7 +17,7 @@
        <Lexicon.LexiconHeader language={this.props.language} lexemeField={this.props.lexemeField} />
        <main>
          <Lexicon.SearchResults />
-         <Lexicon.Entry />
+         <Lexicon.Entry language={this.props.language.name} entryCount={this.props.entryCount} />
        </main>
      </div>
     `

@@ -4,21 +4,4 @@
     %title= yield :title
     = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
-    :coffeescript
-      $(document).ready -> new window.classes.Lexicon
-        language: $('body').attr('data-language')
-        lexemeField: $('body').attr('data-lexeme-field')
-    = csrf_meta_tags
-  %body.lexicon{:data => {:language => @language, :lexeme_field => @lexicon.lexicon_class.indexed_column}}
-    %header
-      #search
-        %form#searchform{:method => :get, :action => lexicon_path}
-          %input#searchbox{:type => 'text', :placeholder => "Search...", :name => 'search'}
-          %button{:type => 'submit'}
-            = icon('search')
-          %a.advanced Advanced Options
-          #advanced-search= render :partial => 'advanced_search'
-      = render :partial => 'nav'
-    %main
-      #search-results= render :partial => 'search_results'
-      #entry-view= yield
+  = yield

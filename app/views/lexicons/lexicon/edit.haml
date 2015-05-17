@@ -1,8 +1,0 @@
-- content_for :title, "#{@lexicon.name} Lexicon — Editing #{@entry.word}"
-
-- @entry.formatters(:include_empty => true).each do |formatter|
-  = formatter.to_editable.html_safe
-
-%input{:type => "hidden", :name => "slug", :id => "slug", :value => @entry.slug}
-
-%button.submit Update

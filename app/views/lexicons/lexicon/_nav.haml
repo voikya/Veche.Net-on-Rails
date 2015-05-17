@@ -1,8 +1,0 @@
-%h1 #{@lexicon.name} Lexicon
-%nav
-  %table.alphabet
-    %tbody
-      %tr
-        - @lexicon.alphabet.split(' ').each do |letter|
-          %td
-            = link_to letter, lexicon_path(@lexicon.lexicon_class.indexed_column => "#{letter}*")

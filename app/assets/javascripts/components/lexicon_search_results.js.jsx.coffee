@@ -2,19 +2,22 @@
 
 @Lexicon.SearchResults = React.createClass
   getInitialState: ->
-    searchResults: []
-    partialResults: []
+    searchResults: null
+    partialResults: null
 
   componentWillMount: ->
     # Set up event listeners
     Lexicon.Event.register 'api:search:response', @receiveSearchResults
 
   render: ->
-    `<div id="search-results">
-      {this.renderResults()}
-      {this.renderPartialResults()}
-     </div>
-    `
+    if @state.searchResults?
+      `<div id="search-results">
+        {this.renderResults()}
+        {this.renderPartialResults()}
+       </div>
+      `
+    else
+      `<div id="search-results" />`
 
   renderResults: ->
     length = @state.searchResults.length

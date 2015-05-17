@@ -1,10 +1,8 @@
 module Lexicons
   class LexiconController < ApplicationController
     layout 'lexicon'
-    before_filter :require_authorization!, only: [:new, :create, :edit, :update]
     before_filter :set_language
     before_filter :preprocess_search_params
-    before_filter :set_display_options
 
     # See Lexicon model for detailed descriptions
     SEARCH_STRING_PARAMS = [
@@ -22,30 +20,22 @@ module Lexicons
     SEARCH_REFERENTIAL_PARAMS = [:related_to]
     SEARCH_PARAM_WHITELIST = [SEARCH_STRING_PARAMS, SEARCH_BOOLEAN_PARAMS, SEARCH_REFERENTIAL_PARAMS, :search].flatten
 
+    def init
+      @data = {
+        language: @lexicon,
+        lexemeField: @lexicon.lexicon_class.indexed_column,
+        entryCount: @lexicon.record_count,
+        endpoint: lexicon_entries_path
+      }
+    end
+
     def index
       @lexicon.scope_entries(search_params)
-
-      respond_to do |format|
-        format.html
-        format.json { render :json => @lexicon.entries }
-      end
-    end
-
-    def new
-      @entry = @lexicon.lexicon_class.new
-      @entry.morphology_table = @entry.morphology_hash
-      render :edit
-    end
-
-    def create
-      entry = @lexicon.lexicon_class.create_entry(params)
-      redirect_to lexicon_entry_path(:language => @language, :slug => entry.slug)
+      render :json => @lexicon.entries
     end
 
     def show
       @entry = @lexicon.entry(params[:slug])
-      @lexicon.scope_entries(search_params)
-      @cross_refs = @entry.cross_references
       if @entry.respond_to?(:morphology) && @entry.morphology
         partial = "lexicons/lexicon/morphology/" +
                   @language.downcase.to_s +
@@ -53,26 +43,7 @@ module Lexicons
                   @entry.morphology.category.to_s.pluralize
         @entry.morphology_table = render_to_string :partial => partial, :locals => {:m => @entry.morphology.generate!}
       end
-
-      respond_to do |format|
-        format.html
-        format.json { render :json => @entry }
-      end
-    end
-
-    def edit
-      @entry = @lexicon.entry(params[:slug])
-      @lexicon.scope_entries(search_params)
-      @cross_refs = @entry.cross_references
-      if @entry.respond_to?(:morphology)
-        @entry.morphology_table = @entry.morphology_hash
-      end
-    end
-
-    def update
-      @entry = @lexicon.entry(params[:slug])
-      @entry.update_entry(params)
-      render :show
+      render :json => @entry
     end
 
     private
@@ -80,10 +51,6 @@ module Lexicons
     def set_language
       @language = params[:language].to_sym
       @lexicon = Lexicon.find_by_language(@language)
-    end
-
-    def set_display_options
-      @show_partial_matches = search_params.include? :search
     end
 
     def preprocess_search_params
