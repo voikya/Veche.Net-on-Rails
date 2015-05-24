@@ -78,10 +78,6 @@ module Lexicons
       end
     end
 
-    def to_json(opts={})
-      formatters.map(&:to_json).to_json
-    end
-
     def self.create_entry(params)
       record = new(
         word: params[:word],

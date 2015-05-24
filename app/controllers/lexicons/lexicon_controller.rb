@@ -25,8 +25,8 @@ module Lexicons
         language: @lexicon,
         lexemeField: @lexicon.lexicon_class.indexed_column,
         entryCount: @lexicon.record_count,
-        endpoint: lexicon_entries_path,
-        basePath: lexicon_path(:language => @language)
+        basePath: lexicon_path(:language => @language),
+        admin: is_admin?
       }
     end
 
@@ -45,6 +45,16 @@ module Lexicons
         @entry.morphology_table = render_to_string :partial => partial, :locals => {:m => @entry.morphology.generate!}
       end
       render :json => @entry
+    end
+
+    def edit
+      @entry = @lexicon.entry(params[:slug])
+      render :json => @entry.to_json(include_empty: true)
+    end
+
+    def new
+      require_authorization! or return
+      render :json => @lexicon.lexicon_class.new
     end
 
     private

@@ -14,7 +14,7 @@ module Lexicons
     def to_json
       {
         :name => @name,
-        :value => format(@text),
+        :value => (@text.present? ? format(@text) : nil),
         :type => formatter_type
       }
     end

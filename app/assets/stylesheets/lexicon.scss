@@ -229,6 +229,12 @@ body.lexicon {
     font-size: medium;
     transition: top 0.3s;
 
+    div {
+      border: solid 1px transparent;
+      margin: 2px;
+      transition: border 0.7s;
+    }
+
     #admin-controls {
       float: right;
 
@@ -264,6 +270,9 @@ body.lexicon {
     }
 
     div.editable {
+      border: solid 1px #EFEFEF;
+      border-radius: 3px;
+      margin: 2px;
       cursor: pointer;
       &:hover {
         background-color: #ECF6FF;
@@ -555,6 +564,28 @@ body.lexicon {
 
     &:hover {
       background-color: #2196F3;
+    }
+  }
+
+  table.editable-table {
+    text-align: left;
+    border: solid 1px #CCCCCC;
+    margin: 3px;
+    border-collapse: collapse;
+
+    tr {
+      border: dotted 1px #aaa;
+    }
+
+    th {
+      background-color: #ccc;
+      font-variant: small-caps;
+      font-size: smaller;
+      padding: 2px 20px 2px 10px;
+    }
+
+    td {
+      padding: 2px 20px;
     }
   }
 }

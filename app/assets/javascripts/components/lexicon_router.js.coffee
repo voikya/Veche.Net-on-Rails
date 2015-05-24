@@ -12,6 +12,11 @@ class @Lexicon.Router
         Lexicon.API.getEntry(slug)
       @route '/entries', (params) ->
         Lexicon.API.advancedSearch(params)
+      @route '/new', (params) ->
+        Lexicon.API.newEntry()
+      @route '/entries/{slug}/edit', (slug, params) ->
+        Lexicon.Event.trigger 'edit:on'
+        Lexicon.API.editEntry(slug)
       false
     catch e
       if e == "route-found"
@@ -32,7 +37,7 @@ class @Lexicon.Router
 
   @route: (path, callback) ->
     argumentList = [@params]
-    pathMatcher = new RegExp(path.replace(/{.*?}/, '[^\/]?'), 'i')
+    pathMatcher = new RegExp('^' + path.replace(/{.*?}/, '[^\/]+') + '$', 'i')
     if @routablePath.match(pathMatcher)
       actualComponents = @routablePath.split('/')
       templateComponents = path.split('/')

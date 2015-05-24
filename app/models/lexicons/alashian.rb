@@ -55,9 +55,5 @@ module Lexicons
         :definition => :definition
       }[field]
     end
-
-    def to_json(opts={})
-      formatters.map(&:to_json).to_json
-    end
   end
 end

@@ -81,6 +81,14 @@ module Lexicons
       @matches
     end
 
+    # JSON representation
+    def to_json(opts={})
+      {
+        :slug => self.slug,
+        :fields => formatters(opts).map(&:to_json)
+      }.to_json
+    end
+
     private
 
     # Create an initialized formatter for a given field.

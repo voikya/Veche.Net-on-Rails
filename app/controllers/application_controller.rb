@@ -10,9 +10,18 @@ class ApplicationController < ActionController::Base
       session[:auth_attempts] = (session[:auth_attempts] || 0) + 1
     end
     if session[:authorization] != ENV['ADMIN_PASSWORD']
-      redirect_to login_path(redirect_to: request.fullpath)
+      if request.headers['Accept'] == 'application/json'
+        response.headers['Location'] = login_path(redirect_to: request.fullpath)
+        render :nothing => true, :status => :unauthorized and return false
+      else
+        redirect_to(login_path(redirect_to: request.fullpath)) and return false
+      end
     end
     session[:auth_attempts] = 0
     true
+  end
+
+  def is_admin?
+    session[:authorization] == ENV['ADMIN_PASSWORD']
   end
 end
