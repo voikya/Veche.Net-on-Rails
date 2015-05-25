@@ -19,5 +19,5 @@
     `
 
   update: (evt) ->
-    newContent = React.findDOMNode(@).textContent.trim()
+    newContent = React.findDOMNode(@).textContent.trim() or null
     @setState(content: newContent)

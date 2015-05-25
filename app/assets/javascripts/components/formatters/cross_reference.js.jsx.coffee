@@ -11,17 +11,19 @@
   render: ->
     editable = @props.isEditing
     className = Utils.classSet(@props.data.name, 'editable' if editable)
-    `<div className={className}>
-     <ul>
-       {this.renderCrossReferences()}
-     </ul>
+    init = @initializeWithEmptyData.bind(@)
+    `<div className={className} onClick={init}>
+       {this.renderCrossReferenceList()}
      </div>
     `
 
+  renderCrossReferenceList: ->
+    if @state.content
+      `<ul>{this.renderCrossReferences()}</ul>`
+
   renderCrossReferences: ->
-    editable = @props.isEditing
     @state.content.map (xref, idx) =>
-      if editable
+      if @props.isEditing
         update = @update.bind(@, idx)
         keydown = @handleKeydown.bind(@, idx)
         `<li onKeyDown={keydown} onBlur={update} contentEditable={true}>{xref.slug}</li>`
@@ -48,7 +50,12 @@
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
+          content = null unless content.length
           @setState(content: content)
+
+  initializeWithEmptyData: ->
+    unless @state.content
+      @setState(content: [{slug: "new_xref", summary: "[reload to fetch definition]"}])
 
   update: (idx, evt) ->
     newXref = React.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
@@ -57,6 +64,7 @@
       newContent[idx] = {slug: newXref, summary: "[reload to fetch definition]"}
     else
       newContent.splice(idx, 1)
+    newContent = null unless newContent.length
     @setState(content: newContent)
 
   fetchEntry: (slug) ->

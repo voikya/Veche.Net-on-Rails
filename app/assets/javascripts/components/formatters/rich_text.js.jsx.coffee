@@ -11,22 +11,24 @@
   render: ->
     editable = @props.isEditing
     className = Utils.classSet(@props.data.name, 'editable' if editable)
-    `<div className={className}>
+    init = @initializeWithEmptyData.bind(@)
+    `<div className={className} onClick={init}>
        {this.renderParagraphs()}
      </div>
     `
 
   renderParagraphs: ->
-    editable = @props.isEditing
-    @state.content.map (p, idx) =>
-      update = @update.bind(@, idx) if editable
-      keydown = @handleKeydown.bind(@, idx) if editable
-      p = __html: p
-      `<p contentEditable={editable}
-          onKeyDown={keydown}
-          onBlur={update}
-          dangerouslySetInnerHTML={p} />
-      `
+    if @state.content
+      editable = @props.isEditing
+      @state.content.map (p, idx) =>
+        update = @update.bind(@, idx) if editable
+        keydown = @handleKeydown.bind(@, idx) if editable
+        p = __html: p
+        `<p contentEditable={editable}
+            onKeyDown={keydown}
+            onBlur={update}
+            dangerouslySetInnerHTML={p} />
+        `
 
   handleKeydown: (idx, evt) ->
     switch evt.which
@@ -40,7 +42,12 @@
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
+          content = null unless content.length
           @setState(content: content)
+
+  initializeWithEmptyData: ->
+    unless @state.content
+      @setState(content: ["New paragraph"])
 
   update: (idx, evt) ->
     newParagraph = React.findDOMNode(@).childNodes[idx].innerHTML.trim()
@@ -49,4 +56,5 @@
       newContent[idx] = newParagraph
     else
       newContent.splice(idx, 1)
+    newContent = null unless newContent.length
     @setState(content: newContent)

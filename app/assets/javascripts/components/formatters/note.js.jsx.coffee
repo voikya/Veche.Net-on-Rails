@@ -3,21 +3,27 @@
 
 @Lexicon.Formatters.Note = React.createClass
   componentWillMount: ->
-    @setState(content: @props.data.value ? [])
+    @setState(content: @props.data.value)
 
   componentWillReceiveProps: (nextProps) ->
-    @setState(content: nextProps.data.value ? [])
+    @setState(content: nextProps.data.value)
 
   render: ->
     editable = @props.isEditing
     className = Utils.classSet(@props.data.name, 'editable' if editable)
-    `<div className={className}>
-       <fieldset>
+    init = @initializeWithEmptyData.bind(@)
+    `<div className={className} onClick={init}>
+       {this.renderNoteFieldset()}
+     </div>
+    `
+
+  renderNoteFieldset: ->
+    if @state.content
+      `<fieldset>
          <legend>Notes</legend>
          {this.renderParagraphs()}
        </fieldset>
-     </div>
-    `
+      `
 
   renderParagraphs: ->
     editable = @props.isEditing
@@ -43,7 +49,12 @@
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
+          content = null unless content.length
           @setState(content: content)
+
+  initializeWithEmptyData: ->
+    unless @state.content
+      @setState(content: ["New Note"])
 
   update: (idx, evt) ->
     newParagraph = React.findDOMNode(@).querySelectorAll('p')[idx].innerHTML.trim()
@@ -52,4 +63,5 @@
       newContent[idx] = newParagraph
     else
       newContent.splice(idx, 1)
+    newContent = null unless newContent.length
     @setState(content: newContent)
