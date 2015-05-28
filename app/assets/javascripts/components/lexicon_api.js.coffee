@@ -56,8 +56,20 @@ class @Lexicon.API
     Lexicon.Event.trigger 'api:start'
     request.send()
 
+  @updateEntry: (slug, data) ->
+    request = @_newRequest('PUT', "#{@endpoint}/entries/#{slug}")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        Lexicon.Event.trigger 'api:update:response', data
+        Lexicon.Event.trigger 'api:finish'
+    Lexicon.Event.trigger 'api:start'
+    request.send JSON.stringify(data)
+
   @_newRequest: (method, uri) ->
     request = new XMLHttpRequest()
     request.open(method, uri, true)
     request.setRequestHeader 'Accept', 'application/json'
+    request.setRequestHeader 'Content-Type', 'application/json; charset=UTF-8'
+    request.setRequestHeader 'X-CSRF-Token', document.getElementsByName("csrf-token")[0]?.getAttribute("content")
     request

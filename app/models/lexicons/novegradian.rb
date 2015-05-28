@@ -104,38 +104,5 @@ module Lexicons
       record.save!
       record
     end
-
-    def update_entry(params)
-      update_attributes(
-        word: params[:word],
-        transliteration: params[:transliteration],
-        pronunciation: params[:pronunciation],
-        part_of_speech: params[:part_of_speech],
-        root: params[:root],
-        definition: params[:definition],
-        important_forms: params[:important_forms],
-        idioms: params[:idioms],
-        notes: params[:notes],
-        etymology: params[:etymology],
-        cognates: params[:cognates]
-      )
-      if morphology
-        morphology.update_attributes(params[:morphology_table])
-      elsif params[:morphology_table]
-        self.morphology = NovegradianMorphology.new(params[:morphology_table])
-      end
-      xrefs = (params[:cross_references] || "").split(',')
-      cross_references.each do |xref|
-        if !xrefs.include?(xref.slug)
-          cross_references.delete(xref)
-        end
-      end
-      xrefs.each do |xref|
-        if !cross_references.map(&:slug).include?(xref)
-          cross_references << where(:slug => xref).first
-        end
-      end
-      save!
-    end
   end
 end

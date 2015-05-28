@@ -8,6 +8,7 @@
     # Set up event listeners
     Lexicon.Event.register 'api:entry:response', @receiveEntry
     Lexicon.Event.register 'api:edit:response', @receiveEdit
+    Lexicon.Event.register 'api:update:response', @receiveUpdate
 
   render: ->
     if @state.entry?
@@ -29,13 +30,21 @@
   renderFields: ->
     @state.entry.fields.map (field) =>
       component = Lexicon.Formatters[field.type] || Lexicon.Formatters.MissingFormatter
-      React.createElement component, {data: field, isEditing: @props.isEditing}
+      React.createElement component, {data: field, isEditing: @props.isEditing, ref: field.name}
 
   renderAdminControls: ->
     if @props.isAdmin
       slug = @state.entry?.slug
       isEditing = @props.isEditing
-      `<Lexicon.AdminControls slug={slug} isEditing={isEditing} />`
+      saveHandler = @saveEntry.bind(@)
+      `<Lexicon.AdminControls slug={slug} isEditing={isEditing} saveHandler={saveHandler} />`
+
+  saveEntry: ->
+    if @props.isAdmin and @props.isEditing
+      data = {}
+      for field of @refs
+        data[field] = @refs[field].state.content
+      Lexicon.API.updateEntry(@state.entry.slug, data)
 
   receiveEntry: (data) ->
     @setState(entry: data)
@@ -47,3 +56,7 @@
     # unexpected data.
     Lexicon.Event.trigger 'edit:on'
     @setState(entry: data)
+
+  receiveUpdate: (data) ->
+    @setState(entry: data)
+    Lexicon.Event.trigger 'edit:off'

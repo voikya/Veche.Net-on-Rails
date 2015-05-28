@@ -89,6 +89,42 @@ module Lexicons
       }.to_json
     end
 
+    def update_from_json(params)
+      fields = params.reduce({}) do |memo, (k, v)|
+        memo[k.gsub('-', '_').to_sym] = v
+        memo
+      end
+      fields.reject{|k,v| [:cross_references, :morphology].include?(k)}.each do |field, value|
+        if respond_to?(field) && self.class.formatters[field]
+          format = formatter(field, include_empty: true)
+          send("#{field}=".to_sym, format.update(value))
+        end
+      end
+
+      xrefs = (fields[:cross_references] || []).map {|ref| ref[:slug]}
+      cross_references.each do |xref|
+        if !xrefs.include?(xref.slug)
+          cross_references.delete(xref)
+        end
+      end
+      xrefs.each do |xref|
+        if !cross_references.map(&:slug).include?(xref)
+          cross_references << where(:slug => xref).first
+        end
+      end
+    end
+
+    def update_from_json!(params)
+      update_from_json(params)
+      save!
+    end
+
+    def cross_references=(val)
+    end
+
+    def morphology_table=(val)
+    end
+
     private
 
     # Create an initialized formatter for a given field.

@@ -90,6 +90,7 @@ VecheNet::Application.routes.draw do
     scope :constraints => lambda {|request| request.headers['Accept'] == 'application/json'} do
       get '/:language/entries' => 'lexicon#index', :as => 'lexicon_entries'
       get '/:language/entries/:slug' => 'lexicon#show', :as => 'lexicon_entry'
+      put '/:language/entries/:slug' => 'lexicon#update'
       get '/:language/entries/:slug/edit' => 'lexicon#edit', :as => 'lexicon_edit_entry'
       get '/:language/new' => 'lexicon#new', :as => 'lexicon_new_entry'
     end

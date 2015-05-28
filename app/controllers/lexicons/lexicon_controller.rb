@@ -48,6 +48,7 @@ module Lexicons
     end
 
     def edit
+      require_authorization! or return
       @entry = @lexicon.entry(params[:slug])
       render :json => @entry.to_json(include_empty: true)
     end
@@ -55,6 +56,20 @@ module Lexicons
     def new
       require_authorization! or return
       render :json => @lexicon.lexicon_class.new
+    end
+
+    def update
+      require_authorization! or return
+      @entry = @lexicon.entry(params[:slug])
+      @entry.update_from_json! params
+      if @entry.respond_to?(:morphology) && @entry.morphology
+        partial = "lexicons/lexicon/morphology/" +
+                  @language.downcase.to_s +
+                  "_" +
+                  @entry.morphology.category.to_s.pluralize
+        @entry.morphology_table = render_to_string :partial => partial, :locals => {:m => @entry.morphology.generate!}
+      end
+      render :json => @entry
     end
 
     private

@@ -4,11 +4,13 @@
   render: ->
     edit = @renderEditControl()
     add = @renderAddControl()
-    exit = @renderExitControl()
+    save = @renderSaveControl()
+    cancel = @renderCancelControl()
     `<div id="admin-controls">
        {edit}
        {add}
-       {exit}
+       {save}
+       {cancel}
      </div>
     `
 
@@ -26,7 +28,14 @@
       handler = @transitionToAdd.bind(@)
       `<Lexicon.Link path={path} handler={handler} content={content} />`
 
-  renderExitControl: ->
+  renderSaveControl: ->
+    if @props.isEditing
+      path = if @props.slug then "/entries/#{@props.slug}" else "/entries"
+      content = "<i class='fa fa-check'></i>"
+      handler = @props.saveHandler
+      `<Lexicon.Link path={path} handler={handler} content={content} />`
+
+  renderCancelControl: ->
     if @props.isEditing
       path = if @props.slug then "/entries/#{@props.slug}" else "/"
       content = "<i class='fa fa-times'></i>"

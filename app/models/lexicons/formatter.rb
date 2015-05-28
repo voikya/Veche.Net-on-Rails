@@ -19,6 +19,11 @@ module Lexicons
       }
     end
 
+    # Should return newly-set value
+    def update(value)
+      @text = value
+    end
+
     private
 
     def clean_text
@@ -42,6 +47,14 @@ module Lexicons
       clean_text.split(',')
     end
 
+    def update(value)
+      if value
+        @text = value.join(',')
+      else
+        @text = nil
+      end
+    end
+
     private
 
     def format(str)
@@ -52,6 +65,18 @@ module Lexicons
   class RichTextFormatter < Formatter
     def tokenize
       clean_text.split(/\r?\n/).reject(&:blank?)
+    end
+
+    def update(value)
+      if value
+        @text = value.join("\n\n")
+        @text.gsub! /<span class="comment">(.*?)<\/span>/, '{{\1}}'
+        @text.gsub! /<span class="transliteration">(.*?)<\/span>/, '{\1}'
+        @text.gsub! /<i>(.*?)<\/i>/, '{{\1}}'
+      else
+        @text = nil
+      end
+      @text
     end
 
     private
@@ -75,6 +100,15 @@ module Lexicons
       clean_text.split(/\r?\n/).first
     end
 
+    def update(value)
+      if value
+        @text = value.map{|v| "[[#{v}]]"}.join("\n")
+        super [@text]
+      else
+        @text = nil
+      end
+    end
+
     private
 
     def clean_text
@@ -94,6 +128,15 @@ module Lexicons
       #   [[Type| form4, form5, form6 {translit4, translit5, translit6}]]
       #   ...
       @text.split(/\r?\n/)[1..-1].map{|a| a.split('|')[1].split(/\p{^Word}/).select(&:present?)}
+    end
+
+    def update(value)
+      if value
+        @text = value.map{|k, v| "[[#{k}| #{v}]]"}.join("\n")
+        super [@text]
+      else
+        @text = nil
+      end
     end
 
     private
@@ -118,6 +161,16 @@ module Lexicons
         @text.split(/\r?\n/).map{|l| l.gsub(/^[{"]([^"}]*)[}"]?$/, '\1')}.select(&:present?).compact
       else
         [""]
+      end
+    end
+
+    def update(value)
+      if value
+        @text = value.map do |ex|
+          "#{ex[:example]}\n{#{ex[:transliteration]}}\n\"#{ex[:translation]}\""
+        end.join("\n\n")
+      else
+        @text = nil
       end
     end
 
