@@ -77,32 +77,5 @@ module Lexicons
         NovegradianMorphology.new.as_json
       end
     end
-
-    def self.create_entry(params)
-      record = new(
-        word: params[:word],
-        transliteration: params[:transliteration],
-        pronunciation: params[:pronunciation],
-        part_of_speech: params[:part_of_speech],
-        root: params[:root],
-        definition: params[:definition],
-        important_forms: params[:important_forms],
-        idioms: params[:idioms],
-        notes: params[:notes],
-        etymology: params[:etymology],
-        cognates: params[:cognates]
-      )
-      if params[:morphology_table]
-        record.morphology = NovegradianMorphology.new(params[:morphology_table])
-      end
-      if params[:cross_references]
-        params[:cross_references].split(',').each do |xref|
-          record.cross_references << where(:slug => xref).first
-        end
-      end
-
-      record.save!
-      record
-    end
   end
 end

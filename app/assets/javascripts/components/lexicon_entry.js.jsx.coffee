@@ -9,6 +9,8 @@
     Lexicon.Event.register 'api:entry:response', @receiveEntry
     Lexicon.Event.register 'api:edit:response', @receiveEdit
     Lexicon.Event.register 'api:update:response', @receiveUpdate
+    Lexicon.Event.register 'api:new:response', @receiveEdit
+    Lexicon.Event.register 'api:create:response', @receiveEntry
 
   render: ->
     if @state.entry?
@@ -44,7 +46,10 @@
       data = {}
       for field of @refs
         data[field] = @refs[field].state.content
-      Lexicon.API.updateEntry(@state.entry.slug, data)
+      if @state.entry.slug
+        Lexicon.API.updateEntry(@state.entry.slug, data)
+      else
+        Lexicon.API.createEntry(data)
 
   receiveEntry: (data) ->
     @setState(entry: data)

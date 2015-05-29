@@ -34,16 +34,6 @@ class @Lexicon.API
     Lexicon.Event.trigger 'api:start'
     request.send()
 
-  @editEntry: (slug) ->
-    request = @_newRequest('GET', "#{@endpoint}/entries/#{slug}/edit")
-    request.onload = ->
-      if request.status == 200
-        data = JSON.parse(request.responseText)
-        Lexicon.Event.trigger 'api:edit:response', data
-        Lexicon.Event.trigger 'api:finish'
-    Lexicon.Event.trigger 'api:start'
-    request.send()
-
   @newEntry: ->
     request = @_newRequest('GET', "#{@endpoint}/new")
     request.onload = ->
@@ -55,6 +45,26 @@ class @Lexicon.API
         window.location.replace request.getResponseHeader('Location')
     Lexicon.Event.trigger 'api:start'
     request.send()
+
+  @editEntry: (slug) ->
+    request = @_newRequest('GET', "#{@endpoint}/entries/#{slug}/edit")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        Lexicon.Event.trigger 'api:edit:response', data
+        Lexicon.Event.trigger 'api:finish'
+    Lexicon.Event.trigger 'api:start'
+    request.send()
+
+  @createEntry: (data) ->
+    request = @_newRequest('POST', "#{@endpoint}/entries")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        Lexicon.Event.trigger 'api:create:response', data
+        Lexicon.Event.trigger 'api:finish'
+    Lexicon.Event.trigger 'api:start'
+    request.send JSON.stringify(data)
 
   @updateEntry: (slug, data) ->
     request = @_newRequest('PUT', "#{@endpoint}/entries/#{slug}")

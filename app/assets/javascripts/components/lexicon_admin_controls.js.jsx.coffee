@@ -46,7 +46,10 @@
     Lexicon.API.editEntry(@props.slug)
 
   transitionOutOfEdit: ->
-    Lexicon.API.getEntry(@props.slug)
+    if @props.slug
+      Lexicon.API.getEntry(@props.slug)
+    else
+      Lexicon.Router.transition '/'
 
   transitionToAdd: ->
     Lexicon.API.newEntry()

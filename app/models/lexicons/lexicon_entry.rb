@@ -23,6 +23,33 @@ module Lexicons
         ]
       end
 
+      def create_from_json(params)
+        data = {}
+        fields = params.reduce({}) do |memo, (k, v)|
+          memo[k.gsub('-', '_').to_sym] = v
+          memo
+        end
+        fields.reject{|k,v| [:cross_references, :morphology_table].include?(k)}.each do |field, value|
+          if attribute_method?(field) && @formatters[field]
+            data[field] = @formatters[field].new(field, nil).update(value)
+          end
+        end
+
+        record = new(data)
+
+        (fields[:cross_references] || []).each do |xref|
+          record.cross_references << where(:slug => xref[:slug]).first
+        end
+
+        record
+      end
+
+      def create_from_json!(params)
+        record = create_from_json(params)
+        record.save!
+        record
+      end
+
       private
 
       # Register a field and assign it a formatter class. Creates attribute
@@ -94,7 +121,7 @@ module Lexicons
         memo[k.gsub('-', '_').to_sym] = v
         memo
       end
-      fields.reject{|k,v| [:cross_references, :morphology].include?(k)}.each do |field, value|
+      fields.reject{|k,v| [:cross_references, :morphology_table].include?(k)}.each do |field, value|
         if respond_to?(field) && self.class.formatters[field]
           format = formatter(field, include_empty: true)
           send("#{field}=".to_sym, format.update(value))

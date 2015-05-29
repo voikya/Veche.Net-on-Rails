@@ -47,15 +47,21 @@ module Lexicons
       render :json => @entry
     end
 
+    def new
+      require_authorization! or return
+      render :json => @lexicon.lexicon_class.new.to_json(include_empty: true)
+    end
+
     def edit
       require_authorization! or return
       @entry = @lexicon.entry(params[:slug])
       render :json => @entry.to_json(include_empty: true)
     end
 
-    def new
+    def create
       require_authorization! or return
-      render :json => @lexicon.lexicon_class.new
+      @entry = @lexicon.lexicon_class.create_from_json! params
+      render :json => @entry
     end
 
     def update
