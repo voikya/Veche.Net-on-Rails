@@ -5,6 +5,7 @@ module Lexicons
     include LexiconEntry
 
     self.table_name = 'novegradian'
+    @@morphology_class = NovegradianMorphology
 
     has_many :cross_reference_links, :foreign_key => :from, :class_name => NovegradianCrossReference
     has_many :cross_references, :through => :cross_reference_links, :source => :novegradian

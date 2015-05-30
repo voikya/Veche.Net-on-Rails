@@ -41,6 +41,10 @@ module Lexicons
           record.cross_references << where(:slug => xref[:slug]).first
         end
 
+        if fields[:morphology_table].any? {|k,v| v.present?}
+          record.morphology = @@morphology_class.new(fields[:morphology_table])
+        end
+
         record
       end
 
@@ -137,6 +141,14 @@ module Lexicons
       xrefs.each do |xref|
         if !cross_references.map(&:slug).include?(xref)
           cross_references << where(:slug => xref).first
+        end
+      end
+
+      if fields[:morphology_table].any? {|k,v| v.present?}
+        if morphology
+          morphology.update_attributes(fields[:morphology_table])
+        else
+          self.morphology = @@morphology_class.new(fields[:morphology_table])
         end
       end
     end

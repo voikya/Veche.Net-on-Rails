@@ -49,12 +49,19 @@ module Lexicons
 
     def new
       require_authorization! or return
-      render :json => @lexicon.lexicon_class.new.to_json(include_empty: true)
+      @entry = @lexicon.lexicon_class.new
+      if @entry.respond_to?(:morphology)
+        @entry.morphology_table = @entry.morphology_hash
+      end
+      render :json => @entry.to_json(include_empty: true)
     end
 
     def edit
       require_authorization! or return
       @entry = @lexicon.entry(params[:slug])
+      if @entry.respond_to?(:morphology)
+        @entry.morphology_table = @entry.morphology_hash
+      end
       render :json => @entry.to_json(include_empty: true)
     end
 
