@@ -5,7 +5,7 @@
   componentWillMount: ->
     @setState(content: @props.data.value)
 
-  componentWilLReceiveProps: (nextProps) ->
+  componentWillReceiveProps: (nextProps) ->
     @setState(content: nextProps.data.value)
 
   render: ->

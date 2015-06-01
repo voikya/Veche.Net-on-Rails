@@ -68,7 +68,7 @@
     callback = @handleCheckboxChange.bind(@, key)
     `<div className="checkbox-group">
        <input type="checkbox" value="1" name={key} onChange={callback} />
-       <label for={key}>{label}</label>
+       <label htmlFor={key}>{label}</label>
      </div>
     `
 

@@ -5,7 +5,8 @@ class @Lexicon.Router
   @routablePath: ""
   @basePath: ""
 
-  @init: (@basePath = "")->
+  @init: (@basePath = "") ->
+    window.onpopstate = @init.bind(@, @basePath)
     @parseCurrentPath()
     try
       @route '/entries/{slug}', (slug, params) ->

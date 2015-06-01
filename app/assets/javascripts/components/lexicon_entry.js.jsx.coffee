@@ -11,6 +11,7 @@
     Lexicon.Event.register 'api:update:response', @receiveUpdate
     Lexicon.Event.register 'api:new:response', @receiveEdit
     Lexicon.Event.register 'api:create:response', @receiveEntry
+    Lexicon.Event.register 'edit:off', @clearEntry
 
   render: ->
     if @state.entry?
@@ -32,13 +33,13 @@
   renderFields: ->
     @state.entry.fields.map (field) =>
       component = Lexicon.Formatters[field.type] || Lexicon.Formatters.MissingFormatter
-      React.createElement component, {data: field, isEditing: @props.isEditing, ref: field.name}
+      React.createElement component, {data: field, isEditing: @props.isEditing, ref: field.name, key: field.name}
 
   renderAdminControls: ->
     if @props.isAdmin
       slug = @state.entry?.slug
       isEditing = @props.isEditing
-      saveHandler = @saveEntry.bind(@)
+      saveHandler = @saveEntry
       `<Lexicon.AdminControls slug={slug} isEditing={isEditing} saveHandler={saveHandler} />`
 
   saveEntry: ->
@@ -65,3 +66,7 @@
   receiveUpdate: (data) ->
     @setState(entry: data)
     Lexicon.Event.trigger 'edit:off'
+
+  clearEntry: ->
+    unless @state.entry.slug
+      @setState(entry: null)

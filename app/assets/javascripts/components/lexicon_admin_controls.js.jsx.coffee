@@ -18,14 +18,14 @@
     if @props.slug and not @props.isEditing
       path = "/entries/#{@props.slug}/edit"
       content = "<i class='fa fa-edit'></i>"
-      handler = @transitionToEdit.bind(@)
+      handler = @transitionToEdit
       `<Lexicon.Link path={path} handler={handler} content={content} />`
 
   renderAddControl: ->
     unless @props.isEditing
       path = "/new"
       content = "<i class='fa fa-plus-square'></i>"
-      handler = @transitionToAdd.bind(@)
+      handler = @transitionToAdd
       `<Lexicon.Link path={path} handler={handler} content={content} />`
 
   renderSaveControl: ->
@@ -39,7 +39,7 @@
     if @props.isEditing
       path = if @props.slug then "/entries/#{@props.slug}" else "/"
       content = "<i class='fa fa-times'></i>"
-      handler = @transitionOutOfEdit.bind(@)
+      handler = @transitionOutOfEdit
       `<Lexicon.Link path={path} handler={handler} content={content} />`
 
   transitionToEdit: ->
@@ -50,6 +50,7 @@
       Lexicon.API.getEntry(@props.slug)
     else
       Lexicon.Router.transition '/'
+      Lexicon.Event.trigger 'edit:off'
 
   transitionToAdd: ->
     Lexicon.API.newEntry()

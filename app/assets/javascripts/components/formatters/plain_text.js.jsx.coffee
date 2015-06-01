@@ -12,7 +12,7 @@
     content = @state.content
     editable = @props.isEditing
     className = Utils.classSet(@props.data.name, 'editable' if editable)
-    update = @update.bind(@) if editable
+    update = @update if editable
     `<div className={className} onBlur={update} contentEditable={editable}>
        {content}
      </div>

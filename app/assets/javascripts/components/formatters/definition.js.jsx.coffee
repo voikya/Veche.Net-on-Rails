@@ -11,7 +11,7 @@
   render: ->
     editable = @props.isEditing
     className = Utils.classSet(@props.data.name, 'editable' if editable)
-    init = @initializeWithEmptyData.bind(@)
+    init = @initializeWithEmptyData
     `<div className={className} onClick={init}>
        {this.renderDefinitionList()}
      </div>

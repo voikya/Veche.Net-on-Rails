@@ -18,7 +18,7 @@
     @props.alphabet.split(' ').map (l) =>
       callback = @handleClick.bind(@, l)
       path = "/entries?word=#{l}*"
-      `<td>
+      `<td key={l}>
          <Lexicon.Link path={path} handler={callback} content={l} />
        </td>
       `
