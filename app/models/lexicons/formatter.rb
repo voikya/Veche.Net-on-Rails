@@ -212,6 +212,23 @@ module Lexicons
       end
     end
 
+    def update(value)
+      if value
+        @text = value.map do |v|
+          "[[" + [
+            v[:word],
+            v[:transliteration],
+            v[:pronunciation],
+            v[:partOfSpeech],
+            v[:definition],
+            v[:notes] || '*'
+          ].join(" | ") + "]]"
+        end.join("\n")
+      else
+        @text = nil
+      end
+    end
+
     private
 
     def format(str)

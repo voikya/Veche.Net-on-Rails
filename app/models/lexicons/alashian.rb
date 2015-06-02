@@ -5,6 +5,7 @@ module Lexicons
     include LexiconEntry
 
     self.table_name = 'alashian'
+    @@morphology_class = nil
 
     has_many :cross_reference_links, :foreign_key => :from, :class_name => AlashianCrossReference
     has_many :cross_references, :through => :cross_reference_links, :source => :alashian
@@ -18,6 +19,8 @@ module Lexicons
     field :idioms, :formatter => ExampleFormatter
     field :notes, :formatter => NoteFormatter
     field :etymology, :formatter => RichTextFormatter
+
+    before_create :generate_slug
 
     # Array of fields that are included when doing a search over "any" field.
     def self.scopable_fields

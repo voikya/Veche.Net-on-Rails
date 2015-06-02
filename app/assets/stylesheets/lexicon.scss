@@ -302,6 +302,8 @@ body.lexicon {
       &:before {
         content: "*";
       }
+
+      &:empty:before { content: "Root"; }
     }
 
     div.ext-root {
@@ -315,6 +317,11 @@ body.lexicon {
 
       &:after {
         content: "-)";
+      }
+
+      &:empty {
+        &:before { content: "Ext. Root"; }
+        &:after { content: ""; }
       }
     }
 
@@ -347,6 +354,8 @@ body.lexicon {
       &:before {
         content: "/*";
       }
+
+      &:empty:before { content: "Ext. Root Transliteration"; }
     }
 
     div.pronunciation {
@@ -494,6 +503,8 @@ body.lexicon {
           font-style: italic;
         }
       }
+
+      &:empty:before { content: "Derivatives"; }
     }
 
     div.morphology-table {
