@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Utility script to restart Passenger server
+
+if ! vagrant status | grep "running" >/dev/null; then
+  vagrant up
+fi
+
+vagrant ssh -c "touch /veche/tmp/restart.txt"
