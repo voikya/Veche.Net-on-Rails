@@ -100,8 +100,9 @@ module Lexicons
       else
         method = "_#{method}".to_sym
         if respond_to? method
-          res = send method
-          MultilingualString.new(res[0], :transliteration => res[1])
+          if res = send(method)
+            MultilingualString.new(res[0], :transliteration => res[1])
+          end
         end
       end
     end

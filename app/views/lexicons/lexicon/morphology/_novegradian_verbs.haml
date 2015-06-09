@@ -1,0 +1,152 @@
+%table.verbs
+  %thead
+    %tr
+      %th.morphology-info{:colspan => 8}
+        = m.conjugation
+        .subtype Subtype #{m.subtype}
+  %tbody
+    %tr
+      %th Infinitive
+      %td= form(m, :infinitive)
+      %th Supine
+      %td= form(m, :supine)
+      - if m.perfective?
+        %th Imperfective
+        %td= form(m, :imperfective)
+      - else
+        %th Perfective
+        %td= form(m, :perfective)
+    %tr
+      %th
+      %th{:colspan => 3} Present
+      %th
+      %th{:colspan => 3} Past
+    %tr
+      %th
+      %th Sg
+      %th Dl
+      %th Pl
+      %th
+      %th Sg
+      %th Dl
+      %th Pl
+    %tr
+      %th 1
+      %td= form(m, :present_first_singular)
+      %td= form(m, :present_first_dual)
+      %td= form(m, :present_first_plural)
+      %th M
+      %td= form(m, :past_singular_masculine)
+      %td{:rowspan => 3}= form(m, :past_dual)
+      %td{:rowspan => 3}= form(m, :past_plural)
+    %tr
+      %th 2
+      %td= form(m, :present_second_singular)
+      %td= form(m, :present_second_dual)
+      %td= form(m, :present_second_plural)
+      %th N
+      %td= form(m, :past_singular_neuter)
+    %tr
+      %th 3
+      %td= form(m, :present_third_singular)
+      %td= form(m, :present_third_dual)
+      %td= form(m, :present_third_plural)
+      %th F
+      %td= form(m, :past_singular_feminine)
+    %tr
+      %th
+      %th{:colspan => 3} Future
+      %th
+      %th{:colspan => 3} Subjunctive
+    %tr
+      %th
+      %th Sg
+      %th Dl
+      %th Pl
+      %th
+      %th Sg
+      %th Dl
+      %th Pl
+    %tr
+      %th 1
+      %td= form(m, :future_first_singular)
+      %td= form(m, :future_first_dual)
+      %td= form(m, :future_first_plural)
+      %th M
+      %td= form(m, :subjunctive_singular_masculine)
+      %td{:rowspan => 3}= form(m, :subjunctive_dual)
+      %td{:rowspan => 3}= form(m, :subjunctive_plural)
+    %tr
+      %th 2
+      %td= form(m, :future_second_singular)
+      %td= form(m, :future_second_dual)
+      %td= form(m, :future_second_plural)
+      %th N
+      %td= form(m, :subjunctive_singular_neuter)
+    %tr
+      %th 3
+      %td= form(m, :future_third_singular)
+      %td= form(m, :future_third_dual)
+      %td= form(m, :future_third_plural)
+      %th F
+      %td= form(m, :subjunctive_singular_feminine)
+    %tr
+      %th
+      %th{:colspan => 3} Future Hypothetical
+      %th
+      %th{:colspan => 3} Imperative
+    %tr
+      %th
+      %th Sg
+      %th Dl
+      %th Pl
+      %th
+      %th Sg
+      %th Dl
+      %th Pl
+    %tr
+      %th 1
+      %td= form(m, :future_hyp_first_singular)
+      %td= form(m, :future_hyp_first_dual)
+      %td= form(m, :future_hyp_first_plural)
+      %th 1
+      %td
+      %td= form(m, :imperative_first_dual)
+      %td= form(m, :imperative_first_plural)
+    %tr
+      %th 2
+      %td= form(m, :future_hyp_second_singular)
+      %td= form(m, :future_hyp_second_dual)
+      %td= form(m, :future_hyp_second_plural)
+      %th 2
+      %td= form(m, :imperative_second_singular)
+      %td= form(m, :imperative_second_dual)
+      %td= form(m, :imperative_second_plural)
+    %tr
+      %th 3
+      %td= form(m, :future_hyp_third_singular)
+      %td= form(m, :future_hyp_third_dual)
+      %td= form(m, :future_hyp_third_plural)
+      %th
+      %td{:colspan => 3}
+    %tr
+      %th
+      %th{:colspan => 3} Participles
+      %th{:colspan => 4}
+    %tr
+      %th
+      %th Active
+      %th Passive
+      %th Adverbial
+      %th{:colspan => 4}
+    %tr
+      %th Imperfective
+      %td= form(m, :participle_active_imperfective)
+      %td= form(m, :participle_passive_imperfective)
+      %td= form(m, :adv_participle_imperfective)
+      %td{:colspan => 4, :rowspan => 2}
+    %tr
+      %th Perfective
+      %td
+      %td= form(m, :participle_passive_perfective)
+      %td= form(m, :adv_participle_perfective)

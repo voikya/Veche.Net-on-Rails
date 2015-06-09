@@ -5,7 +5,6 @@ module Lexicons
     include LexiconEntry
 
     self.table_name = 'ochets'
-    @@morphology_class = nil
 
     has_many :cross_reference_links, :foreign_key => :from, :class_name => OchetsCrossReference
     has_many :cross_references, :through => :cross_reference_links, :source => :ochets

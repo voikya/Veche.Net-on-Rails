@@ -55,6 +55,11 @@ module Lexicons
       :word
     end
 
+    # The class of the morphology object
+    def self.morphology_class
+      NovegradianMorphology
+    end
+
     # Convert a search parameter into one or more corresponding columns
     # in this table to search through
     def self.map_search_params(field)

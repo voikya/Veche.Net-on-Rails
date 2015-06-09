@@ -42,7 +42,7 @@ module Lexicons
         end
 
         if fields[:morphology_table] && fields[:morphology_table].any? {|k,v| v.present?}
-          record.morphology = @@morphology_class.new(fields[:morphology_table])
+          record.morphology = morphology_class.new(fields[:morphology_table])
         end
 
         record
@@ -148,7 +148,7 @@ module Lexicons
         if morphology
           morphology.update_attributes(fields[:morphology_table])
         else
-          self.morphology = @@morphology_class.new(fields[:morphology_table])
+          self.morphology = self.class.morphology_class.new(fields[:morphology_table])
         end
       end
     end

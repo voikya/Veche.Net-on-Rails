@@ -519,9 +519,16 @@ body.lexicon {
       th {
         background-color: #DDDDDD;
         padding: 3px 5px;
+        font-size: smaller;
 
         &.morphology-info {
+          font-weight: 400;
+          font-size: medium;
+        }
+
+        .subtype {
           font-weight: 200;
+          font-size: smaller;
         }
       }
 
