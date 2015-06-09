@@ -28,14 +28,12 @@
   renderParagraphs: ->
     editable = @props.isEditing
     @state.content.map (p, idx) =>
-      update = @update.bind(@, idx) if editable
-      keydown = @handleKeydown.bind(@, idx) if editable
-      p = __html: p
-      `<p contentEditable={editable}
-          onKeyDown={keydown}
-          onBlur={update}
-          dangerouslySetInnerHTML={p} />
-      `
+      if editable
+        update = @update.bind(@, idx)
+        keydown = @handleKeydown.bind(@, idx)
+      else
+        p = Utils.markupToHtml(p)
+      `<p contentEditable={editable} onKeyDown={keydown} onBlur={update}>{p}</p>`
 
   handleKeydown: (idx, evt) ->
     switch evt.which

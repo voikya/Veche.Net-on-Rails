@@ -26,10 +26,10 @@
         `
       else
         Object.keys(@state.content).map (f) =>
-          content = __html: @props.data.value[f]
+          content = Utils.markupToHtml(@props.data.value[f])
           `<p>
              <span className="label">{f}:</span>
-             <span dangerouslySetInnerHTML={content} />
+             <span>{content}</span>
            </p>
           `
 

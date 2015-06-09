@@ -24,14 +24,12 @@
   renderDefinitions: ->
     editable = @props.isEditing
     @state.content.map (def, idx) =>
-      update = @update.bind(@, idx) if editable
-      keydown = @handleKeydown.bind(@, idx) if editable
-      def = __html: def
-      `<li contentEditable={editable}
-           onKeyDown={keydown}
-           onBlur={update}
-           dangerouslySetInnerHTML={def} />
-      `
+      if editable
+        update = @update.bind(@, idx)
+        keydown = @handleKeydown.bind(@, idx)
+      else
+        def = Utils.markupToHtml(def)
+      `<li contentEditable={editable} onKeyDown={keydown} onBlur={update}>{def}</li>`
 
   handleKeydown: (idx, evt) ->
     switch evt.which

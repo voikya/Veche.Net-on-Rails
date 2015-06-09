@@ -27,7 +27,7 @@ module Lexicons
     private
 
     def clean_text
-      @text.gsub(/{.*?}/, '')
+      @text.gsub(/{{.*?}}/, '')
     end
 
     def format(str)
@@ -63,6 +63,12 @@ module Lexicons
   end
 
   class RichTextFormatter < Formatter
+    # Note: Rich text fields accept basic inline markup that is
+    # converted to the appropriate form on the front end. These
+    # consist of:
+    # {{text}} - commentary (italicized, excluded from search)
+    # ++slug++ - cross reference (link to another entry)
+
     def tokenize
       clean_text.split(/\r?\n/).reject(&:blank?)
     end
@@ -70,9 +76,6 @@ module Lexicons
     def update(value)
       if value
         @text = value.join("\n\n")
-        @text.gsub! /<span class="comment">(.*?)<\/span>/, '{{\1}}'
-        @text.gsub! /<span class="transliteration">(.*?)<\/span>/, '{\1}'
-        @text.gsub! /<i>(.*?)<\/i>/, '{{\1}}'
       else
         @text = nil
       end
@@ -82,8 +85,6 @@ module Lexicons
     private
 
     def format(str)
-      str.gsub! /{{(.*?)}}/, '<span class="comment">\1</span>'
-      str.gsub! /{(.*?)}/, '<span class="transliteration">\1</span>'
       str.split(/\r?\n/).reject(&:blank?)
     end
   end
@@ -97,7 +98,7 @@ module Lexicons
     end
 
     def summary
-      clean_text.split(/\r?\n/).first
+      clean_text.split(/\r?\n/).first.trim
     end
 
     def update(value)
