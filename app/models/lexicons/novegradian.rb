@@ -7,8 +7,10 @@ module Lexicons
     self.table_name = 'novegradian'
     @@morphology_class = NovegradianMorphology
 
-    has_many :cross_reference_links, :foreign_key => :from, :class_name => NovegradianCrossReference
-    has_many :cross_references, :through => :cross_reference_links, :source => :novegradian
+    has_many :cross_reference_links, :foreign_key => :from, :class_name => NovegradianCrossReference, :inverse_of => :referencing
+    has_many :cross_references, :through => :cross_reference_links, :source => :referenced
+    has_many :inverse_cross_reference_links, :foreign_key => :to, :class_name => NovegradianCrossReference, :inverse_of => :referenced
+    has_many :inverse_cross_references, :through => :inverse_cross_reference_links, :source => :referencing
     has_one :morphology, :foreign_key => :entry_id, :class_name => NovegradianMorphology
 
     field :word, :formatter => PlainTextFormatter

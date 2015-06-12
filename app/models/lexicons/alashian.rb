@@ -6,8 +6,10 @@ module Lexicons
 
     self.table_name = 'alashian'
 
-    has_many :cross_reference_links, :foreign_key => :from, :class_name => AlashianCrossReference
-    has_many :cross_references, :through => :cross_reference_links, :source => :alashian
+    has_many :cross_reference_links, :foreign_key => :from, :class_name => AlashianCrossReference, :inverse_of => :referencing
+    has_many :cross_references, :through => :cross_reference_links, :source => :referenced
+    has_many :inverse_cross_reference_links, :foreign_key => :to, :class_name => AlashianCrossReference, :inverse_of => :referenced
+    has_many :inverse_cross_references, :through => :inverse_cross_reference_links, :source => :referencing
 
     field :word, :formatter => PlainTextFormatter
     field :transliteration, :formatter => PlainTextFormatter

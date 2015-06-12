@@ -21,7 +21,9 @@
     if @state.content
       if @props.isEditing
         `<table className='editable-table'>
-           {this.renderEditableRows()}
+           <tbody>
+             {this.renderEditableRows()}
+           </tbody>
          </table>
         `
       else

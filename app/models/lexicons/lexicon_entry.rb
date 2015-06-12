@@ -38,7 +38,7 @@ module Lexicons
         record = new(data)
 
         (fields[:cross_references] || []).each do |xref|
-          record.cross_references << where(:slug => xref[:slug]).first
+          record.cross_reference_links.build(to: self.class.find_by_slug(xref[:slug]))
         end
 
         if fields[:morphology_table] && fields[:morphology_table].any? {|k,v| v.present?}
@@ -135,12 +135,12 @@ module Lexicons
       xrefs = (fields[:cross_references] || []).map {|ref| ref[:slug]}
       cross_references.each do |xref|
         if !xrefs.include?(xref.slug)
-          cross_references.delete(xref)
+          cross_reference_links.first.class.delete_all(:from => id, :to => xref.id)
         end
       end
       xrefs.each do |xref|
         if !cross_references.map(&:slug).include?(xref)
-          cross_references << where(:slug => xref).first
+          cross_reference_links.create(to: self.class.find_by_slug(xref).id)
         end
       end
 
