@@ -27,7 +27,7 @@ module Lexicons
     private
 
     def clean_text
-      @text.gsub(/{{.*?}}/, '')
+      @text.gsub(/{{.*?}}/, '').gsub(/\+\+.*?\+\+/, '')
     end
 
     def format(str)
