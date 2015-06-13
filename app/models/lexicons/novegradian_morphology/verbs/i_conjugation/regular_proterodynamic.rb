@@ -16,7 +16,11 @@ module Morphology
           end
 
           def _present_first_singular
-            [desinence_mutated + "ун", desinence_transliterated_mutated + "ún"]
+            if neoacute?
+              [neoacute(desinence_mutated) + "ун", neoacute_transliterated(desinence_transliterated_mutated) + "ún"]
+            else
+              [desinence_mutated + "ун", desinence_transliterated_mutated + "ún"]
+            end
           end
         end
       end

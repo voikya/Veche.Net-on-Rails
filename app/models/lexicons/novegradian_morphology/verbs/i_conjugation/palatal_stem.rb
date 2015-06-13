@@ -16,31 +16,63 @@ module Morphology
           end
 
           def _infinitive
-            [desinence + "ати", desinence_transliterated + "áti"]
+            if retracted_stress?
+              [stem + "ати", stem_transliterated + "ati"]
+            else
+              [desinence + "ати", desinence_transliterated + "áti"]
+            end
           end
 
           def _supine
-            [desinence + "ат", desinence_transliterated + "át"]
+            if retracted_stress?
+              [stem + "ат", stem_transliterated + "at"]
+            else
+              [desinence + "ат", desinence_transliterated + "át"]
+            end
+          end
+
+          def _present_first_singular
+            [desinence_mutated + "ун", desinence_transliterated_mutated + "ún"]
           end
 
           def _past_singular_masculine
-            [desinence + "але", desinence_transliterated + "ále"]
+            if retracted_stress?
+              [stem + "але", stem_transliterated + "ale"]
+            else
+              [desinence + "але", desinence_transliterated + "ále"]
+            end
           end
 
           def _past_singular_feminine
-            [desinence + "ала", desinence_transliterated + "ála"]
+            if retracted_stress?
+              [stem + "ала", stem_transliterated + "ala"]
+            else
+              [desinence + "ала", desinence_transliterated + "ála"]
+            end
           end
 
           def _past_singular_neuter
-            [desinence + "ало", desinence_transliterated + "álo"]
+            if retracted_stress?
+              [stem + "ало", stem_transliterated + "alo"]
+            else
+              [desinence + "ало", desinence_transliterated + "álo"]
+            end
           end
 
           def _past_dual
-            [desinence + "алѣ", desinence_transliterated + "álě"]
+            if retracted_stress?
+              [stem + "алѣ", stem_transliterated + "alě"]
+            else
+              [desinence + "алѣ", desinence_transliterated + "álě"]
+            end
           end
 
           def _past_plural
-            [desinence + "али", desinence_transliterated + "áli"]
+            if retracted_stress?
+              [stem + "али", stem_transliterated + "ali"]
+            else
+              [desinence + "али", desinence_transliterated + "áli"]
+            end
           end
 
           def _imperative_second_singular
@@ -71,13 +103,21 @@ module Morphology
 
           def _participle_passive_perfective
             if perfective?
-              [desinence + "ане", desinence_transliterated + "áne"]
+              if retracted_stress?
+                [stem + "ане", stem_transliterated + "ane"]
+              else
+                [desinence + "ане", desinence_transliterated + "áne"]
+              end
             end
           end
 
           def _adv_participle_perfective
             if perfective?
-              [desinence + "аве", desinence_transliterated + "áve"]
+              if retracted_stress?
+                [stem + "аве", stem_transliterated + "ave"]
+              else
+                [desinence + "аве", desinence_transliterated + "áve"]
+              end
             end
           end
         end

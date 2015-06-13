@@ -1,5 +1,6 @@
 require_relative '../periphrastic_forms'
 require_relative '../palatalization'
+require_relative '../neoacute'
 
 module Morphology
   module Novegradian
@@ -8,6 +9,7 @@ module Morphology
         module RegularStemStressed
           include Verbs::PeriphrasticForms
           include Verbs::Palatalization
+          include Verbs::Neoacute
 
           def conjugation
             "I Conjugation"
@@ -38,31 +40,61 @@ module Morphology
           end
 
           def _present_first_singular
-            [stem_mutated + "ун", stem_transliterated_mutated + "un"]
+            if neoacute?
+              [neoacute(stem_mutated) + "ун", neoacute_transliterated(stem_transliterated_mutated) + "un"]
+            elsif palatal_stem?
+              [stem + "юн", stem_transliterated[0..-2] + "iun"]
+            else
+              [stem_mutated + "ун", stem_transliterated_mutated + "un"]
+            end
           end
 
           def _present_first_dual
-            [stem + "ива", stem_transliterated + "iva"]
+            if neoacute?
+              [neoacute(stem) + "ива", neoacute_transliterated(stem_transliterated) + "iva"]
+            else
+              [stem + "ива", stem_transliterated + "iva"]
+            end
           end
 
           def _present_first_plural
-            [stem + "им", stem_transliterated + "im"]
+            if neoacute?
+              [neoacute(stem) + "им", neoacute_transliterated(stem_transliterated) + "im"]
+            else
+              [stem + "им", stem_transliterated + "im"]
+            end
           end
 
           def _present_second_singular
-            [stem + "иш", stem_transliterated + "iś"]
+            if neoacute?
+              [neoacute(stem) + "иш", neoacute_transliterated(stem_transliterated) + "iś"]
+            else
+              [stem + "иш", stem_transliterated + "iś"]
+            end
           end
 
           def _present_second_dual
-            [stem + "ита", stem_transliterated + "ita"]
+            if neoacute?
+              [neoacute(stem) + "ита", neoacute_transliterated(stem_transliterated) + "ita"]
+            else
+              [stem + "ита", stem_transliterated + "ita"]
+            end
           end
 
           def _present_second_plural
-            [stem + "ите", stem_transliterated + "ite"]
+            if neoacute?
+              [neoacute(stem) + "ите", neoacute_transliterated(stem_transliterated) + "ite"]
+            else
+              [stem + "ите", stem_transliterated + "ite"]
+            end
           end
 
           def _present_third_singular
-            [stem + "ит", stem_transliterated + "it"]
+            if neoacute?
+              [neoacute(stem) + "ит", neoacute_transliterated(stem_transliterated) + "it"]
+            else
+              [stem + "ит", stem_transliterated + "it"]
+            end
           end
 
           def _present_third_dual
@@ -70,7 +102,13 @@ module Morphology
           end
 
           def _present_third_plural
-            [stem + "ат", stem_transliterated + "at"]
+            if neoacute?
+              [neoacute(stem) + "ат", neoacute_transliterated(stem_transliterated) + "at"]
+            elsif palatal_stem?
+              [stem + "ят", stem_transliterated[0..-2] + "iat"]
+            else
+              [stem + "ат", stem_transliterated + "at"]
+            end
           end
 
           def _past_singular_masculine
@@ -115,7 +153,11 @@ module Morphology
 
           def _participle_active_imperfective
             unless perfective?
-              [stem + "екье", stem_transliterated + "ekje"]
+              if palatal_stem?
+                [stem + "екье", stem_transliterated[0..-2] + "iekje"]
+              else
+                [stem + "екье", stem_transliterated + "ekje"]
+              end
             end
           end
 
@@ -129,6 +171,8 @@ module Morphology
             if perfective?
               if past_participle_in_t?
                 [stem + "ите", stem_transliterated + "ite"]
+              elsif palatal_stem?
+                [stem + "ене", stem_transliterated[0..-2] + "iene"]
               else
                 [stem_mutated(labial_only: true) + "ене", stem_transliterated_mutated(labial_only: true) + "ene"]
               end
@@ -145,6 +189,12 @@ module Morphology
             if perfective?
               [stem + "иве", stem_transliterated + "ive"]
             end
+          end
+
+          private
+
+          def palatal_stem?
+            stem_transliterated[-1] == "j" && stem[-1] != "ь"
           end
         end
       end

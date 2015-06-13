@@ -140,18 +140,24 @@ module Morphology
           private
 
           def past_tense_base
-            if %w(с з).include? stem[-1]
-              stem
-            else
-              stem[0..-2]
+            case stem[-1]
+              when 'с', 'з'
+                stem
+              when 'т'
+                stem[0..-2] + 'к'
+              when 'д'
+                stem[0..-2] + 'г'
             end
           end
 
           def past_tense_base_transliterated
-            if %w(с з).include? stem[-1]
-              stem_transliterated
-            else
-              stem_transliterated[0..-2]
+            case stem[-1]
+              when 'с', 'з'
+                stem_transliterated
+              when 'т'
+                stem_transliterated[0..-2] + 'k'
+              when 'д'
+                stem_transliterated[0..-2] + 'g'
             end
           end
         end

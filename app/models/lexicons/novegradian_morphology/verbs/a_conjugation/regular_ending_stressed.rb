@@ -16,11 +16,11 @@ module Morphology
           end
 
           def _infinitive
-            [desinence + "ати", desinence_transliterated + "áti"]
+            [desinence + (palatal_stem? ? "яти" : "ати"), desinence_transliterated + "áti"]
           end
 
           def _supine
-            [desinence + "ат", desinence_transliterated + "át"]
+            [desinence + (palatal_stem? ? "ят" : "ат"), desinence_transliterated + "át"]
           end
 
           def _perfective
@@ -36,31 +36,31 @@ module Morphology
           end
 
           def _present_first_singular
-            [desinence + "ам", desinence_transliterated + "ám"]
+            [desinence + (palatal_stem? ? "ям" : "ам"), desinence_transliterated + "ám"]
           end
 
           def _present_first_dual
-            [desinence + "ава", desinence_transliterated + "áva"]
+            [desinence + (palatal_stem? ? "ява" : "ава"), desinence_transliterated + "áva"]
           end
 
           def _present_first_plural
-            [desinence + "аме", desinence_transliterated + "áme"]
+            [desinence + (palatal_stem? ? "яме" : "аме"), desinence_transliterated + "áme"]
           end
 
           def _present_second_singular
-            [desinence + "аш", desinence_transliterated + "áś"]
+            [desinence + (palatal_stem? ? "яш" : "аш"), desinence_transliterated + "áś"]
           end
 
           def _present_second_dual
-            [desinence + "аста", desinence_transliterated + "ásta"]
+            [desinence + (palatal_stem? ? "яста" : "аста"), desinence_transliterated + "ásta"]
           end
 
           def _present_second_plural
-            [desinence + "ате", desinence_transliterated + "áte"]
+            [desinence + (palatal_stem? ? "яте" : "ате"), desinence_transliterated + "áte"]
           end
 
           def _present_third_singular
-            [desinence + "аст", desinence_transliterated + "ást"]
+            [desinence + (palatal_stem? ? "яст" : "аст"), desinence_transliterated + "ást"]
           end
 
           def _present_third_dual
@@ -68,77 +68,83 @@ module Morphology
           end
 
           def _present_third_plural
-            [desinence + "ати", desinence_transliterated + "áti"]
+            [desinence + (palatal_stem? ? "яти" : "ати"), desinence_transliterated + "áti"]
           end
 
           def _past_singular_masculine
-            [desinence + "але", desinence_transliterated + "ále"]
+            [desinence + (palatal_stem? ? "яле" : "але"), desinence_transliterated + "ále"]
           end
 
           def _past_singular_feminine
-            [desinence + "ала", desinence_transliterated + "ála"]
+            [desinence + (palatal_stem? ? "яла" : "ала"), desinence_transliterated + "ála"]
           end
 
           def _past_singular_neuter
-            [desinence + "ало", desinence_transliterated + "álo"]
+            [desinence + (palatal_stem? ? "яло" : "ало"), desinence_transliterated + "álo"]
           end
 
           def _past_dual
-            [desinence + "алѣ", desinence_transliterated + "álě"]
+            [desinence + (palatal_stem? ? "ялѣ" : "алѣ"), desinence_transliterated + "álě"]
           end
 
           def _past_plural
-            [desinence + "али", desinence_transliterated + "áli"]
+            [desinence + (palatal_stem? ? "яли" : "али"), desinence_transliterated + "áli"]
           end
 
           def _imperative_second_singular
-            [desinence + "ай", desinence_transliterated + "ái"]
+            [desinence + (palatal_stem? ? "яй" : "ай"), desinence_transliterated + "ái"]
           end
 
           def _imperative_second_dual
-            [desinence + "айта", desinence_transliterated + "áita"]
+            [desinence + (palatal_stem? ? "яйта" : "айта"), desinence_transliterated + "áita"]
           end
 
           def _imperative_second_plural
-            [desinence + "айте", desinence_transliterated + "áite"]
+            [desinence + (palatal_stem? ? "яйте" : "айте"), desinence_transliterated + "áite"]
           end
 
           def _imperative_first_dual
-            [desinence + "аута", desinence_transliterated + "áuta"]
+            [desinence + (palatal_stem? ? "яута" : "аута"), desinence_transliterated + "áuta"]
           end
 
           def _imperative_first_plural
-            [desinence + "амте", desinence_transliterated + "ámte"]
+            [desinence + (palatal_stem? ? "ямте" : "амте"), desinence_transliterated + "ámte"]
           end
 
           def _participle_active_imperfective
             unless perfective?
-              [desinence + "акье", desinence_transliterated + "ákje"]
+              [desinence + (palatal_stem? ? "якье" : "акье"), desinence_transliterated + "ákje"]
             end
           end
 
           def _participle_passive_imperfective
             unless perfective?
-              [desinence + "аме", desinence_transliterated + "áme"]
+              [desinence + (palatal_stem? ? "яме" : "аме"), desinence_transliterated + "áme"]
             end
           end
 
           def _participle_passive_perfective
             if perfective?
-              [desinence + "ане", desinence_transliterated + "áne"]
+              [desinence + (palatal_stem? ? "яне" : "ане"), desinence_transliterated + "áne"]
             end
           end
 
           def _adv_participle_imperfective
             unless perfective?
-              [desinence + "аен", desinence_transliterated + "áien"]
+              [desinence + (palatal_stem? ? "яен" : "аен"), desinence_transliterated + "áien"]
             end
           end
 
           def _adv_participle_perfective
             if perfective?
-              [desinence + "аве", desinence_transliterated + "áve"]
+              [desinence + (palatal_stem? ? "яве" : "аве"), desinence_transliterated + "áve"]
             end
+          end
+
+          private
+
+          def palatal_stem?
+            stem_transliterated[-1] == "i" || stem_transliterated[-1] == "j"
           end
         end
       end

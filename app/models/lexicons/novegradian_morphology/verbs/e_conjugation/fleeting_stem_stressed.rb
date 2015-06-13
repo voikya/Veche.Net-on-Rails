@@ -16,15 +16,27 @@ module Morphology
           end
 
           def _infinitive
-            [stem[0..-2] + "ти", stem_transliterated[0..-2] + "ti"]
+            if palatal_stem?
+              [stem + "ти", stem_transliterated[0..-2] + "ti"]
+            else
+              [stem[0..-2] + "ти", stem_transliterated[0..-2] + "ti"]
+            end
           end
 
           def _supine
-            [stem[0..-2] + "т", stem_transliterated[0..-2] + "t"]
+            if palatal_stem?
+              [stem + "т", stem_transliterated[0..-2] + "t"]
+            else
+              [stem[0..-2] + "т", stem_transliterated[0..-2] + "t"]
+            end
           end
 
           def _present_first_singular
-            [stem + "ун", stem_transliterated + "un"]
+            if palatal_stem?
+              [stem + "юн", stem_transliterated + "un"]
+            else
+              [stem + "ун", stem_transliterated + "un"]
+            end
           end
 
           def _present_first_dual
@@ -56,52 +68,100 @@ module Morphology
           end
 
           def _present_third_plural
-            [stem + "ут", stem_transliterated + "ut"]
+            if palatal_stem?
+              [stem + "ют", stem_transliterated + "ut"]
+            else
+              [stem + "ут", stem_transliterated + "ut"]
+            end
           end
 
           def _past_singular_masculine
-            [stem[0..-2] + "ле", stem_transliterated[0..-2] + "le"]
+            if palatal_stem?
+              [stem + "ле", stem_transliterated[0..-2] + "le"]
+            else
+              [stem[0..-2] + "ле", stem_transliterated[0..-2] + "le"]
+            end
           end
 
           def _past_singular_feminine
-            [stem[0..-2] + "ла", stem_transliterated[0..-2] + "la"]
+            if palatal_stem?
+              [stem + "ла", stem_transliterated[0..-2] + "la"]
+            else
+              [stem[0..-2] + "ла", stem_transliterated[0..-2] + "la"]
+            end
           end
 
           def _past_singular_neuter
-            [stem[0..-2] + "ло", stem_transliterated[0..-2] + "lo"]
+            if palatal_stem?
+              [stem + "ло", stem_transliterated[0..-2] + "lo"]
+            else
+              [stem[0..-2] + "ло", stem_transliterated[0..-2] + "lo"]
+            end
           end
 
           def _past_dual
-            [stem[0..-2] + "лѣ", stem_transliterated[0..-2] + "lě"]
+            if palatal_stem?
+              [stem + "лѣ", stem_transliterated[0..-2] + "lě"]
+            else
+              [stem[0..-2] + "лѣ", stem_transliterated[0..-2] + "lě"]
+            end
           end
 
           def _past_plural
-            [stem[0..-2] + "ли", stem_transliterated[0..-2] + "li"]
+            if palatal_stem?
+              [stem + "ли", stem_transliterated[0..-2] + "li"]
+            else
+              [stem[0..-2] + "ли", stem_transliterated[0..-2] + "li"]
+            end
           end
 
           def _imperative_second_singular
-            [stem + "и", remove_stress(stem_transliterated) + "í"]
+            if palatal_stem?
+              [desinence[0..-2] + "и", desinence_transliterated[0..-3] + "í"]
+            else
+              [stem + "и", remove_stress(stem_transliterated) + "í"]
+            end
           end
 
           def _imperative_second_dual
-            [stem + "ѣта", remove_stress(stem_transliterated) + "ě́ta"]
+            if palatal_stem?
+              [desinence[0..-2] + "ита", desinence_transliterated[0..-3] + "íta"]
+            else
+              [stem + "ѣта", remove_stress(stem_transliterated) + "ě́ta"]
+            end
           end
 
           def _imperative_second_plural
-            [stem + "ѣте", remove_stress(stem_transliterated) + "ě́te"]
+            if palatal_stem?
+              [desinence[0..-2] + "ите", desinence_transliterated[0..-3] + "íte"]
+            else
+              [stem + "ѣте", remove_stress(stem_transliterated) + "ě́te"]
+            end
           end
 
           def _imperative_first_dual
-            [stem + "ѣута", remove_stress(stem_transliterated) + "ě́uta"]
+            if palatal_stem?
+              [desinence[0..-2] + "иўта", desinence_transliterated[0..-3] + "íwta"]
+            else
+              [stem + "ѣута", remove_stress(stem_transliterated) + "ě́uta"]
+            end
           end
 
           def _imperative_first_plural
-            [stem + "ѣмте", remove_stress(stem_transliterated) + "ě́mte"]
+            if palatal_stem?
+              [desinence[0..-2] + "имте", desinence_transliterated[0..-3] + "ímte"]
+            else
+              [stem + "ѣмте", remove_stress(stem_transliterated) + "ě́mte"]
+            end
           end
 
           def _participle_active_imperfective
             unless perfective?
-              [stem + "акье", remove_stress(stem_transliterated) + "ákje"]
+              if palatal_stem?
+                [stem + "якье", remove_stress(stem_transliterated) + "ákje"]
+              else
+                [stem + "акье", remove_stress(stem_transliterated) + "ákje"]
+              end
             end
           end
 
@@ -119,7 +179,11 @@ module Morphology
 
           def _adv_participle_imperfective
             unless perfective?
-              [stem + "и", remove_stress(stem_transliterated) + "í"]
+              if palatal_stem?
+                [desinence[0..-2] + "и", desinence_transliterated[0..-3] + "í"]
+              else
+                [stem + "и", remove_stress(stem_transliterated) + "í"]
+              end
             end
           end
 
@@ -127,6 +191,12 @@ module Morphology
             if perfective?
               [stem[0..-2] + "ве", stem_transliterated[0..-2] + "ve"]
             end
+          end
+
+          private
+
+          def palatal_stem?
+            stem_transliterated[-1] == "i"
           end
         end
       end

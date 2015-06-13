@@ -16,31 +16,59 @@ module Morphology
           end
 
           def _present_first_singular
-            [stem_mutated + "ун", stem_transliterated_mutated + "un"]
+            if neoacute?
+              [neoacute(stem_mutated) + "ун", neoacute_transliterated(stem_transliterated_mutated) + "un"]
+            else
+              [stem_mutated + "ун", stem_transliterated_mutated + "un"]
+            end
           end
 
           def _present_first_dual
-            [stem + "ива", stem_transliterated + "iva"]
+            if neoacute?
+              [neoacute(stem) + "ива", neoacute_transliterated(stem_transliterated) + "iva"]
+            else
+              [stem + "ива", stem_transliterated + "iva"]
+            end
           end
 
           def _present_first_plural
-            [stem + "им", stem_transliterated + "im"]
+            if neoacute?
+              [neoacute(stem) + "им", neoacute_transliterated(stem_transliterated) + "im"]
+            else
+              [stem + "им", stem_transliterated + "im"]
+            end
           end
 
           def _present_second_singular
-            [stem + "иш", stem_transliterated + "iś"]
+            if neoacute?
+              [neoacute(stem) + "иш", neoacute_transliterated(stem_transliterated) + "iś"]
+            else
+              [stem + "иш", stem_transliterated + "iś"]
+            end
           end
 
           def _present_second_dual
-            [stem + "ита", stem_transliterated + "ita"]
+            if neoacute?
+              [neoacute(stem) + "ита", neoacute_transliterated(stem_transliterated) + "ita"]
+            else
+              [stem + "ита", stem_transliterated + "ita"]
+            end
           end
 
           def _present_second_plural
-            [stem + "ите", stem_transliterated + "ite"]
+            if neoacute?
+              [neoacute(stem) + "ите", neoacute_transliterated(stem_transliterated) + "ite"]
+            else
+              [stem + "ите", stem_transliterated + "ite"]
+            end
           end
 
           def _present_third_singular
-            [stem + "ит", stem_transliterated + "it"]
+            if neoacute?
+              [neoacute(stem) + "ит", neoacute_transliterated(stem_transliterated) + "it"]
+            else
+              [stem + "ит", stem_transliterated + "it"]
+            end
           end
 
           def _present_third_dual
@@ -48,7 +76,11 @@ module Morphology
           end
 
           def _present_third_plural
-            [stem + "ат", stem_transliterated + "at"]
+            if neoacute?
+              [neoacute(stem) + "ат", neoacute_transliterated(stem_transliterated) + "at"]
+            else
+              [stem + "ат", stem_transliterated + "at"]
+            end
           end
         end
       end

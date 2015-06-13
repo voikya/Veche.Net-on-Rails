@@ -3,7 +3,7 @@ module Morphology
     module Verbs
       module Palatalization
         def stem_mutated(opts = {})
-          if !opts[:labial_only] || labial_stem?
+          if (!opts[:labial_only] || labial_stem?) && !no_mutation?
             mutate stem
           else
             stem
@@ -11,7 +11,7 @@ module Morphology
         end
 
         def stem_transliterated_mutated(opts = {})
-          if !opts[:labial_only] || labial_stem?
+          if (!opts[:labial_only] || labial_stem?) && !no_mutation?
             mutate_with_transliteration stem_transliterated
           else
             stem_transliterated
@@ -19,7 +19,7 @@ module Morphology
         end
 
         def desinence_mutated(opts = {})
-          if !opts[:labial_only] || labial_stem?
+          if (!opts[:labial_only] || labial_stem?) && !no_mutation?
             mutate desinence
           else
             desinence
@@ -27,7 +27,7 @@ module Morphology
         end
 
         def desinence_transliterated_mutated(opts = {})
-          if !opts[:labial_only] || labial_stem?
+          if (!opts[:labial_only] || labial_stem?) && !no_mutation?
             mutate_with_transliteration desinence_transliterated
           else
             desinence_transliterated
@@ -46,7 +46,9 @@ module Morphology
             when /(з|ж)$/ then str[0..-2] + "ғь"
             when /н$/ then str[0..-2] + "нь"
             when /(п|б|м)$/ then str + "л"
+            when /ив$/ then str[0..-2] + "ўл"
             when /в$/ then str[0..-2] + "ул"
+            when /х$/ then str[0..-2] + "ш"
             else str
           end
         end
@@ -60,10 +62,12 @@ module Morphology
             when /k$/ then str[0..-2] + "c"
             when /(g|ǧ)$/ then str[0..-2] + "ź"
             when /(s|ś)$/ then str[0..-2] + "hj"
-            when /(z|ź)$/ then str[0..-2] + "ğj"
+            when /([^d]z|ź)$/ then str[0..-2] + "ğj"
             when /n$/ then str[0..-2] + "nj"
             when /(p|b|m)$/ then str + "l"
+            when /iv$/ then str[0..-2] + "wl"
             when /v$/ then str[0..-2] + "ul"
+            when /h$/ then str[0..-2] + "ś"
             else str
           end
         end

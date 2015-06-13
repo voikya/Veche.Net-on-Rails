@@ -24,31 +24,59 @@ module Morphology
           end
 
           def _present_first_singular
-            [desinence + "юн", desinence_transliterated + "iún"]
+            if retracted_stress?
+              [stem[0..-2] + "юн", stem_transliterated[0..-2] + "iun"]
+            else
+              [desinence + "юн", desinence_transliterated + "iún"]
+            end
           end
 
           def _present_first_dual
-            [desinence + "иева", desinence_transliterated + "iéva"]
+            if retracted_stress?
+              [stem[0..-2] + "иева", stem_transliterated[0..-2] + "ieva"]
+            else
+              [desinence + "иева", desinence_transliterated + "iéva"]
+            end
           end
 
           def _present_first_plural
-            [desinence + "ием", desinence_transliterated + "iém"]
+            if retracted_stress?
+              [stem[0..-2] + "ием", stem_transliterated[0..-2] + "iem"]
+            else
+              [desinence + "ием", desinence_transliterated + "iém"]
+            end
           end
 
           def _present_second_singular
-            [desinence + "иеш", desinence_transliterated + "iéś"]
+            if retracted_stress?
+              [stem[0..-2] + "иеш", stem_transliterated[0..-2] + "ieś"]
+            else
+              [desinence + "иеш", desinence_transliterated + "iéś"]
+            end
           end
 
           def _present_second_dual
-            [desinence + "иета", desinence_transliterated + "iéta"]
+            if retracted_stress?
+              [stem[0..-2] + "иета", stem_transliterated[0..-2] + "ieta"]
+            else
+              [desinence + "иета", desinence_transliterated + "iéta"]
+            end
           end
 
           def _present_second_plural
-            [desinence + "иете", desinence_transliterated + "iéte"]
+            if retracted_stress?
+              [stem[0..-2] + "иете", stem_transliterated[0..-2] + "iete"]
+            else
+              [desinence + "иете", desinence_transliterated + "iéte"]
+            end
           end
 
           def _present_third_singular
-            [desinence + "иет", desinence_transliterated + "iét"]
+            if retracted_stress?
+              [stem[0..-2] + "иет", stem_transliterated[0..-2] + "iet"]
+            else
+              [desinence + "иет", desinence_transliterated + "iét"]
+            end
           end
 
           def _present_third_dual
@@ -56,7 +84,11 @@ module Morphology
           end
 
           def _present_third_plural
-            [desinence + "ют", desinence_transliterated + "iút"]
+            if retracted_stress?
+              [stem[0..-2] + "ют", stem_transliterated[0..-2] + "iut"]
+            else
+              [desinence + "ют", desinence_transliterated + "iút"]
+            end
           end
 
           def _past_singular_masculine

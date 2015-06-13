@@ -32,18 +32,18 @@
       %th Pl
     %tr
       %th 1
-      %td= form(m, :present_first_singular)
-      %td= form(m, :present_first_dual)
-      %td= form(m, :present_first_plural)
+      %td= form(m, :present_first_singular) unless m.third_person_only?
+      %td= form(m, :present_first_dual) unless m.third_person_only?
+      %td= form(m, :present_first_plural) unless m.third_person_only?
       %th M
       %td= form(m, :past_singular_masculine)
       %td{:rowspan => 3}= form(m, :past_dual)
       %td{:rowspan => 3}= form(m, :past_plural)
     %tr
       %th 2
-      %td= form(m, :present_second_singular)
-      %td= form(m, :present_second_dual)
-      %td= form(m, :present_second_plural)
+      %td= form(m, :present_second_singular) unless m.third_person_only?
+      %td= form(m, :present_second_dual) unless m.third_person_only?
+      %td= form(m, :present_second_plural) unless m.third_person_only?
       %th N
       %td= form(m, :past_singular_neuter)
     %tr
@@ -69,18 +69,18 @@
       %th Pl
     %tr
       %th 1
-      %td= form(m, :future_first_singular)
-      %td= form(m, :future_first_dual)
-      %td= form(m, :future_first_plural)
+      %td= form(m, :future_first_singular) unless m.third_person_only?
+      %td= form(m, :future_first_dual) unless m.third_person_only?
+      %td= form(m, :future_first_plural) unless m.third_person_only?
       %th M
       %td= form(m, :subjunctive_singular_masculine)
       %td{:rowspan => 3}= form(m, :subjunctive_dual)
       %td{:rowspan => 3}= form(m, :subjunctive_plural)
     %tr
       %th 2
-      %td= form(m, :future_second_singular)
-      %td= form(m, :future_second_dual)
-      %td= form(m, :future_second_plural)
+      %td= form(m, :future_second_singular) unless m.third_person_only?
+      %td= form(m, :future_second_dual) unless m.third_person_only?
+      %td= form(m, :future_second_plural) unless m.third_person_only?
       %th N
       %td= form(m, :subjunctive_singular_neuter)
     %tr
@@ -106,22 +106,22 @@
       %th Pl
     %tr
       %th 1
-      %td= form(m, :future_hyp_first_singular)
-      %td= form(m, :future_hyp_first_dual)
-      %td= form(m, :future_hyp_first_plural)
+      %td= form(m, :future_hyp_first_singular) unless m.third_person_only?
+      %td= form(m, :future_hyp_first_dual) unless m.third_person_only?
+      %td= form(m, :future_hyp_first_plural) unless m.third_person_only?
       %th 1
       %td
-      %td= form(m, :imperative_first_dual)
-      %td= form(m, :imperative_first_plural)
+      %td= form(m, :imperative_first_dual) unless m.third_person_only?
+      %td= form(m, :imperative_first_plural) unless m.third_person_only?
     %tr
       %th 2
-      %td= form(m, :future_hyp_second_singular)
-      %td= form(m, :future_hyp_second_dual)
-      %td= form(m, :future_hyp_second_plural)
+      %td= form(m, :future_hyp_second_singular) unless m.third_person_only?
+      %td= form(m, :future_hyp_second_dual) unless m.third_person_only?
+      %td= form(m, :future_hyp_second_plural) unless m.third_person_only?
       %th 2
-      %td= form(m, :imperative_second_singular)
-      %td= form(m, :imperative_second_dual)
-      %td= form(m, :imperative_second_plural)
+      %td= form(m, :imperative_second_singular) unless m.third_person_only?
+      %td= form(m, :imperative_second_dual) unless m.third_person_only?
+      %td= form(m, :imperative_second_plural) unless m.third_person_only?
     %tr
       %th 3
       %td= form(m, :future_hyp_third_singular)
@@ -142,11 +142,15 @@
     %tr
       %th Imperfective
       %td= form(m, :participle_active_imperfective)
-      %td= form(m, :participle_passive_imperfective)
+      %td
+        - unless m.intransitive? || m.middle_voice?
+          = form(m, :participle_passive_imperfective)
       %td= form(m, :adv_participle_imperfective)
       %td{:colspan => 4, :rowspan => 2}
     %tr
       %th Perfective
       %td
-      %td= form(m, :participle_passive_perfective)
+      %td
+        - unless m.intransitive? || m.middle_voice?
+          = form(m, :participle_passive_perfective)
       %td= form(m, :adv_participle_perfective)

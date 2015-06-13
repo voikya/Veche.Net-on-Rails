@@ -16,7 +16,7 @@ module Morphology
           end
 
           def _infinitive
-            [stem[0..-2] + "йкьи", stem_transliterated[0..-2] + "ikji"]
+            [stem[0..-2] + "йкьи", stem_transliterated[0..-2] + (stem[-2] == "и" ? "jkji" : "ikji")]
           end
 
           def _supine
@@ -45,7 +45,7 @@ module Morphology
 
           def _participle_active_imperfective
             unless perfective?
-              [stem + "акье", remove_stress(stem_transliterated_mutated) + "ákje"]
+              [stem_mutated + "акье", remove_stress(stem_transliterated_mutated) + "ákje"]
             end
           end
 
@@ -57,7 +57,7 @@ module Morphology
 
           def _participle_passive_perfective
             if perfective?
-              [stem + "ене", stem_transliterated + "éne"]
+              [stem + "ене", stem_transliterated + "ene"]
             end
           end
 

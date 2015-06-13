@@ -92,11 +92,11 @@ module Morphology
           end
 
           def _imperative_first_dual
-            [desinence + "ѣута", desinence_transliterated + "ě́uta"]
+            [desinence + "ѣута", desinence_transliterated + "jě́uta"]
           end
 
           def _imperative_first_plural
-            [desinence + "ѣмте", desinence_transliterated + "ě́mte"]
+            [desinence + "ѣмте", desinence_transliterated + "jě́mte"]
           end
 
           def _participle_active_imperfective

@@ -28,12 +28,18 @@ module Lexicons
     end
 
     def generate!
+      # Import category-specific methods
       module_name = [
         "Morphology",
         "Novegradian",
-        category.classify.pluralize,
-        group.titleize.gsub(/[^A-Za-z]/, ''),
-        subgroup.titleize.gsub(/[^A-Za-z]/, '')
+        category.classify.pluralize
+      ].join("::")
+      extend module_name.constantize
+      # Import specific morphology methods
+      module_name = [
+        module_name,
+        group.titleize.gsub(/[^A-Za-z0-9]/, ''),
+        subgroup.titleize.gsub(/[^A-Za-z0-9]/, '')
       ].join("::")
       extend module_name.constantize
       self
@@ -101,10 +107,16 @@ module Lexicons
         method = "_#{method}".to_sym
         if respond_to? method
           if res = send(method)
-            MultilingualString.new(res[0], :transliteration => res[1])
+            processed = postprocess res, method
+            MultilingualString.new(processed[0], :transliteration => processed[1])
           end
         end
       end
+    end
+
+    # Override in modules if generic postprocessing treatment is needed
+    def postprocess(string, form)
+      string
     end
 
     def remove_stress(string)
