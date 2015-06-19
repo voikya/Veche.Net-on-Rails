@@ -1,7 +1,22 @@
 #!/bin/bash
 
+# Update package list
+sudo apt-get update
+
 # Get dependencies
 sudo apt-get install -y postgresql-client libpq-dev nodejs apache2
+
+# Set up swap
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=256k
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo cat >>/etc/fstab <<'EOF'
+/swapfile       none    swap    sw      0       0
+EOF
+echo 10 | sudo tee /proc/sys/vm/swappiness
+echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
+sudo chown root:root /swapfile
+sudo chmod 0600 /swapfile
 
 # Set up Ruby
 sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
