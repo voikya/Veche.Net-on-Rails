@@ -101,7 +101,7 @@ module Morphology
               end
             end
             case word[-2]
-              when vowels
+              when *vowels
                 return word
               when "й"
                 word = word.dup

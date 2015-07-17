@@ -31,10 +31,11 @@
         slug = xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
         click = @fetchEntry.bind(@, xref.slug)
         path = "/entries/#{xref.slug}"
+        summary = "\"#{xref.summary}\"" if xref.summary
         `<li>
            <Lexicon.Link path={path} handler={click} content={slug} />
            &nbsp;
-           "{xref.summary}"
+           {summary}
          </li>
         `
 

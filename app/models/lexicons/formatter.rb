@@ -27,7 +27,7 @@ module Lexicons
     private
 
     def clean_text
-      @text.gsub(/{{.*?}}/, '')
+      @text.gsub(/{{.*?}}/, '').gsub(/\+\+.*?\+\+/, '')
     end
 
     def format(str)
@@ -98,7 +98,7 @@ module Lexicons
     end
 
     def summary
-      clean_text.split(/\r?\n/).first.trim
+      clean_text.split(/\r?\n/).first.strip
     end
 
     def update(value)

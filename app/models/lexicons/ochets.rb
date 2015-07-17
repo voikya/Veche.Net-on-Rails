@@ -5,10 +5,11 @@ module Lexicons
     include LexiconEntry
 
     self.table_name = 'ochets'
-    @@morphology_class = nil
 
-    has_many :cross_reference_links, :foreign_key => :from, :class_name => OchetsCrossReference
-    has_many :cross_references, :through => :cross_reference_links, :source => :ochets
+    has_many :cross_reference_links, :foreign_key => :from, :class_name => OchetsCrossReference, :inverse_of => :referencing
+    has_many :cross_references, :through => :cross_reference_links, :source => :referenced
+    has_many :inverse_cross_reference_links, :foreign_key => :to, :class_name => OchetsCrossReference, :inverse_of => :referenced
+    has_many :inverse_cross_references, :through => :inverse_cross_reference_links, :source => :referencing
 
     field :root_word, :formatter => PlainTextFormatter
     field :ext_root, :formatter => PlainTextFormatter
