@@ -358,7 +358,7 @@
         %td= t("мама", "máma")
         %td= t("мами", "mámi")
         %td= t("маммо", "mámmo")
-        %td mother<sup>1</sup>
+        %td mother#{footnote}
       %tr
         %td= t("маже", "máźe")
         %td= t("мажя", "maźiá")
@@ -373,12 +373,12 @@
         %td= t("дѣтинко", "dě́tinko")
         %td= t("дѣдете", "dě́dete")
         %td= t("дѣдинмо", "dědínmo")
-        %td child<sup>2</sup>
+        %td child#{footnote}
       %tr
         %td= t("дѣдин", "dědín")
         %td= t("дѣдете", "dě́dete")
         %td= t("дѣдинмо", "dědínmo")
-        %td child<sup>3</sup>
+        %td child#{footnote}
       %tr
         %td= t("син", "sín")
         %td= t("синьа", "sinjá")
@@ -441,7 +441,7 @@
         %td= t("дядя", "diádia")
         %td= t("дядѣ", "diádě")
         %td= t("дядмо", "diádmo")
-        %td uncle<sup>4</sup>
+        %td uncle#{footnote}
       %tr
         %td= t("стрийка", "stríjka")
         %td= t("стрийки", "stríjki")
@@ -451,7 +451,7 @@
         %td= t("тета", "téta")
         %td= t("тети", "téti")
         %td= t("тетмо", "tétmo")
-        %td paternal aunt<sup>5</sup>
+        %td paternal aunt#{footnote}
       %tr
         %td= t("ойка", "óika")
         %td= t("ойки", "óiki")
@@ -461,7 +461,7 @@
         %td= t("наня", "nánia")
         %td= t("нанѣ", "náně")
         %td= t("нанмо", "nánmo")
-        %td maternal aunt<sup>6</sup>
+        %td maternal aunt#{footnote}
       %tr
         %td= t("брадане", "bradáne")
         %td= t("браданьи", "bradánji")
@@ -484,12 +484,12 @@
         %td= t("братеве син", "bráteve sín")
         %td= t("братеви синьа", "brátevi sinjá")
         %td= t("синмо братевей", "sínmo brátevei")
-        %td nephew<sup>7</sup>
+        %td nephew#{footnote}
       %tr
         %td= t("шестрина докьи", "śéstrina dókji")
         %td= t("шестрини докьери", "śéstrini dókjeri")
         %td= t("докьмо шестриная", "dókjmo śestrínaia")
-        %td niece<sup>7</sup>
+        %td niece#{footnote}
       %tr
         %td= t("внуке", "vnúke")
         %td= t("внуци", "vnúci")
@@ -2910,12 +2910,24 @@
       %td= t("име", "ime", :linebreak => true)
       %td Common Slavic *jьmę "name"
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    A less formal variant of мати
 
-%p 1) A less formal variant of мати
-%p 2) Borrows the singular possessive forms (as well as plurals) from дѣдин
-%p 3) Same meaning as дѣтинко
-%p 4) Informal; substitutes for both стриеце and оеце
-%p 5) Informal
-%p 6) Informal
-%p 7) The adjective mirrors the gender of the sibling. Therefore, братеве син means the son of a brother, and шестрин син is the son of a sister, while братева докьи means the daughter of a brother and шестрина докьи is the daughter of a sister.
+  = footnote do
+    Borrows the singular possessive forms (as well as plurals) from дѣдин
+
+  = footnote do
+    Same meaning as дѣтинко
+
+  = footnote do
+    Informal; substitutes for both стриеце and оеце
+
+  = footnote do
+    Informal
+
+  = footnote do
+    Informal
+
+  = footnote do
+    The adjective mirrors the gender of the sibling. Therefore, братеве син means the son of a brother, and шестрин син is the son of a sister, while братева докьи means the daughter of a brother and шестрина докьи is the daughter of a sister.

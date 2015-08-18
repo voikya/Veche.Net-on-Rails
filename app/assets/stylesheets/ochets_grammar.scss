@@ -18,6 +18,19 @@ body.grammar.ochets {
     color: $link_color;
   }
 
+  a.footnote {
+    color: #999999;
+
+    &:hover, &:active {
+      color: $header_color;
+      background-color: $link-color;
+    }
+  }
+
+  p.footnote.highlight {
+    background-color: lighten($background_color, 50%);
+  }
+
   td.label, td.arrow, th {
     background-color: $table_background_color;
   }

@@ -183,7 +183,7 @@
   = render 'imperative_table', :title => "European Imperative", :verb => { :ala => "telefūnā", :eng => "telephone" }, :alashian => alashian, :latin => latin
 
 = section "Deverbatives" do
-  %p European-root conjugation includes an infinitive and a single participle which is active in meaning (unless modified as described in the following section). The infinitive consists of the root, the shortened augment *-a-, and the special infinitive suffix *-t<sup>1</sup>. The participle consists of the prefix *mi-, the root, and the shortened augment *-a-.
+  %p European-root conjugation includes an infinitive and a single participle which is active in meaning (unless modified as described in the following section). The infinitive consists of the root, the shortened augment *-a-, and the special infinitive suffix *-t#{footnote}. The participle consists of the prefix *mi-, the root, and the shortened augment *-a-.
   - alashian = [ { :name => "Infinitive", :ala => "τελεφούνατ", :lat => "telefūnat", :meaning => "telephone" },
                  { :name => "Participle", :ala => "μιτελεφούνα", :lat => "mitelefūna", :meaning => "telephoning" } ]
   = render 'deverbative_table', :title => "European Deverbatives", :verb => { :ala => "telefūnā", :eng => "telephone" }, :forms => alashian
@@ -264,6 +264,6 @@
 = section "Quadriconsonantal Roots" do
   %p Quadriconsonantal roots do not exist in the reciprocal scale <i>taktēb</i>. However, they are able to productively form reciprocals by switching to a European root paradigm with the t-formant. Any quadriconsonantal root can acquire the fixed pattern #{template "*C1aC2C3ēC3-ā-"} and then conjugate as though it were a loan verb, as with *balbēl “confuse” to #{t "ιτβαλβηλώ", "'itbalbēlā"} “confuse one another”. Quadriconsonantal roots may only appear with the *t-formant; zero-formant and *n-formant forms are prohibited.
 
-%hr.footnote
-
-%p 1) This *-t suffix is usually used to form abstract nouns with Semitic bases. It has been reinterpreted as an infinitive marker for European bases.
+%section.footnotes
+  = footnote do
+    This *-t suffix is usually used to form abstract nouns with Semitic bases. It has been reinterpreted as an infinitive marker for European bases.

@@ -46,8 +46,8 @@
                    { :name => "Active Part.", :ala => "μώκτιβ", :lat => "māktib", :meaning => "dictating" } ]
 
 = section "Biconsonantal Roots and 'aktēb" do
-  %p Biconsonantal roots lose their internal vowel in <i>'aktēb</i> and replace it with /ɛː/, gained by analogy with other <i>'aktēb</i> verbs. This #{template "*-C1ēC2-"} stem remains intact in all forms, except in the imperfect, which uses the stem #{template "*-C1ieC2-"}, and the active participle, which uses #{template "*-C1ūC2-"} instead<sup>1</sup>.
-  %p The root *sāl “ask” may serve as an example, becoming <i>'asēl</i> “lend” in <i>'aktēb</i>.<sup>2</sup>
+  %p Biconsonantal roots lose their internal vowel in <i>'aktēb</i> and replace it with /ɛː/, gained by analogy with other <i>'aktēb</i> verbs. This #{template "*-C1ēC2-"} stem remains intact in all forms, except in the imperfect, which uses the stem #{template "*-C1ieC2-"}, and the active participle, which uses #{template "*-C1ūC2-"} instead#{footnote}.
+  %p The root *sāl “ask” may serve as an example, becoming <i>'asēl</i> “lend” in <i>'aktēb</i>.#{footnote}
   - alashian = { :present     => %w(ωσήλ τωσήλ τωσηλεί ιωσήλ ιωσηλεί νωσηλού τωσηλού τωσηλού ιωσηλού),
                  :preterite   => %w(ασήλετ ασήλτα ασήλσ̄ε ασήλ ασηλώ ασηλνώ ασήλτυν ασήλσ̄ιν ασηλού),
                  :imperfect   => %w(ασιήλ ασιήλετ ασιήλες̄ ασιήλ ασιηλώ ασιήλεν ασιήλτυν ασιήλσ̄ιν ασιηλού),
@@ -324,7 +324,7 @@
 
   = section "C1/C2/C3 = N" do
     %p Roots with initial *N (as in *nkīr “recognize”, giving #{t "ακκήρ", "'əkhēr"} “introduce” and #{t "εννακκώρ", "'ennəkhār"} “be introduced”) undergo assimilation in all forms, with #{template "C2"} being geminated or aspirated. They are otherwise regular, although if aspiration appears, it will be accompanied by vowel reduction.
-    %p Roots with medial *N (as in *knās “gather”, giving #{t "ακνής", "'aknēs"} “insert” and #{t "εννυκνώς", "'ennuknās"} “be inserted”<sup>3</sup>) are regular.
+    %p Roots with medial *N (as in *knās “gather”, giving #{t "ακνής", "'aknēs"} “insert” and #{t "εννυκνώς", "'ennuknās"} “be inserted”#{footnote}) are regular.
     %p Root-final *N is irregular only in the two past tenses, where assimilation takes place in a number of forms. With the root *šfān “cover” we get the verbs #{t "ασ̄φήν", "'ašfēn"} “tell a secret, make someone swear to secrecy” and #{t "εννυσ̄φών", "'ennušfān"} “swear to secrecy”:
     %table.invisible
       %tr
@@ -381,8 +381,12 @@
                 :participle  => "munnaǧrək" }
     = render 'full_conjugation_table', :title => "Scale III Conjugation", :verb => { :ala => "'ennuǧrāk", :eng => "be immersed" }, :alashian => alashian, :latin => latin
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    This -ū- is the reflex of an historical Semitic *ā stative marker, seen in some other Semitic languages but largely lost in Alashian.
 
-%p 1) This -ū- is the reflex of an historical Semitic *ā stative marker, seen in some other Semitic languages but largely lost in Alashian.
-%p 2) The semantic progression from 'cause to ask' to 'lend' is not entirely clear. There was presumably an intermediate stage something along the lines of “offer”.
-%p 3) The semantic connection between between the <i>katab</i> meaning “gather” and the <i>'aktēb</i> meaning “insert” is not clear, yet this pair is seen in several Semitic languages. The semantic divergence is either very old, or else these two forms represent entirely unrelated roots that happened to merge phonetically in Semitic.
+  = footnote do
+    The semantic progression from 'cause to ask' to 'lend' is not entirely clear. There was presumably an intermediate stage something along the lines of “offer”.
+
+  = footnote do
+    The semantic connection between between the <i>katab</i> meaning “gather” and the <i>'aktēb</i> meaning “insert” is not clear, yet this pair is seen in several Semitic languages. The semantic divergence is either very old, or else these two forms represent entirely unrelated roots that happened to merge phonetically in Semitic.

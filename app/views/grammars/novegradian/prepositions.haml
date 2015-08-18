@@ -2,11 +2,11 @@
 - content_for :section_subtitle, "Предлажки"
 
 = section "Morphology of Prepositions" do
-  %p Novegradian prepositions exhibit a number of sandhi-related phenomena, changes to the form of the preposition or its object as a result of the phonological shape of the object. This is to be distinguished from case governance, described in detail starting with section 16.2, which is the phenomenon of prepositions forcing certain cases onto their objects. One example has already been discussed, the stress shift seen sometimes with the locative prepositions #{t "во", "vo"} “in” and #{t "на", "na"} “on”<sup>1</sup>.
+  %p Novegradian prepositions exhibit a number of sandhi-related phenomena, changes to the form of the preposition or its object as a result of the phonological shape of the object. This is to be distinguished from case governance, described in detail starting with section 16.2, which is the phenomenon of prepositions forcing certain cases onto their objects. One example has already been discussed, the stress shift seen sometimes with the locative prepositions #{t "во", "vo"} “in” and #{t "на", "na"} “on”#{footnote}.
   %p From a morphological/sandhi-based perspective, Novegradian prepositions can be divided into three subcategories, known as “three-form prepositions”, “two-form prepositions”, and “invariable prepositions”.
 
   = section "Three-Form Prepositions" do
-    %p Three prepositions in Novegradian have three forms: vowelled, unvowelled, and extended. These are #{t "в(о)", "v(o)"} “in”, #{t "с(о)", "s(o)"} “with”, and #{t "к(о)", "k(o)"} “toward”. The unvowelled forms are used before words beginning in a vowel or /j/ plus a vowel, and the fully-vowelled form in all other cases. A third form with /n/ (#{t "вон", "von"}, #{t "сон", "son"}, #{t "кон", "kon"}) is used with third person pronouns, as mentioned earlier, though it also appears before certain nouns beginning with /o/ or /e/<sup>2</sup>.
+    %p Three prepositions in Novegradian have three forms: vowelled, unvowelled, and extended. These are #{t "в(о)", "v(o)"} “in”, #{t "с(о)", "s(o)"} “with”, and #{t "к(о)", "k(o)"} “toward”. The unvowelled forms are used before words beginning in a vowel or /j/ plus a vowel, and the fully-vowelled form in all other cases. A third form with /n/ (#{t "вон", "von"}, #{t "сон", "son"}, #{t "кон", "kon"}) is used with third person pronouns, as mentioned earlier, though it also appears before certain nouns beginning with /o/ or /e/#{footnote}.
     %p These prepositions also have a fourth, more archaic form, no longer used in speech, but still seen in poetry. If the following word begins with /j/ (unless it is a third person pronoun), the vowel of the prepositions becomes /e/: #{t "ве", "ve"}, #{t "се", "se"}, #{t "ке", "ke"}. This is the result of a sound change in the early language known as the vocalization of tense yers. These forms can still be seen in the modern language only in a few set phrases, such as #{t "ве ймѣно", "ve jmě́no"} “in the name [of]” and #{t "ве йстинѣ", "vé jstině"} “in truth, truthfully”. Note the spelling: initial /i/ is always respelt as Й in these expressions.
 
   = section "Two-Form Prepositions" do
@@ -25,7 +25,7 @@
 = section "Locative Prepositions" do
   %p Locative prepositions in Novegradian have traditionally been divided into three classes, known as primary, secondary, and tertiary.
   %p Primary locative prepositions include only во “in”, на “on”, по “along, by”, and па “by, in the immediate vicinity of”. They all require the locative case and can also be used as directionals (see following section). Во and на are not used in exactly the same way as in English. На “on” is generally used whenever an open, unenclosed space is involved (на паркѣ “in the park”, на Рошзиѣ “in Russia”) and во “in” when the space is enclosed or in reference to a city (во школѣ “in the school”, во Паришѣ “in Paris”).
-  Secondary prepositions are those describing location relative to a single object, as the primary ones do, but which cannot also serve as directionals. Each instead has a directional equivalent. These are used with the genitive or dative/instrumental cases.<sup>3</sup>
+  Secondary prepositions are those describing location relative to a single object, as the primary ones do, but which cannot also serve as directionals. Each instead has a directional equivalent. These are used with the genitive or dative/instrumental cases.#{footnote}
   %table.prepositiontable
     %tr
       %td
@@ -231,7 +231,7 @@
                      "He is in Moscow for a meeting."
 = section "“Along”" do
   %p There are three constructions that can be used to mean “along”.
-  %p #{t "По", "po"} + #{abbrev 'loc'} and #{t "при", "pri"} + #{abbrev 'loc'} are used in the same way as the derivational equivalents<sup>4</sup>. По is used to mean along some sort of linear path, such as a road, pathway, or river. При is used to means along a coastline. Note, however, that you say #{t "на берегѣ", "na béregě"} “along the coast” (with “on”), but #{t "прив ежерѣ", "priv iéźerě"} “along the lake[shore]”. In other words, the preposition при is only used when its object is an actual body of water.
+  %p #{t "По", "po"} + #{abbrev 'loc'} and #{t "при", "pri"} + #{abbrev 'loc'} are used in the same way as the derivational equivalents#{footnote}. По is used to mean along some sort of linear path, such as a road, pathway, or river. При is used to means along a coastline. Note, however, that you say #{t "на берегѣ", "na béregě"} “along the coast” (with “on”), but #{t "прив ежерѣ", "priv iéźerě"} “along the lake[shore]”. In other words, the preposition при is only used when its object is an actual body of water.
   %p #{t "По", "po"} + #{abbrev 'datins'} is used to mean “along” (in the temporal sense) or “during” when its object is some sort of reference to travelling: #{t "по пантем", "po pantém"} “along the way”, #{t "по полетем", "po póletem"} “along the flight”.
 
 = section "“Before” and “After”" do
@@ -869,9 +869,15 @@
       %td= abbrev('datins')
       %td Temporal sense only.
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    Section 5.12
 
-%p 1) Section 5.12
-%p 2) See Section 16.1.4
-%p 3) The prepositions #{t "над", "nad"} “over”, #{t "под", "pod"} “under”, #{t "пред", "pred"} “in front of”, and #{t "зад", "zad"} “behind” are sometimes considered primary and sometimes secondary. They can be made directional by switching to the lative case like other primary prepositions, but they can never take the locative case. Ultimately, however, this is little more than a matter of classification and bears little real significance.
-%p 4) See Section 10.3.2.
+  = footnote do
+    See Section 16.1.4
+
+  = footnote do
+    The prepositions #{t "над", "nad"} “over”, #{t "под", "pod"} “under”, #{t "пред", "pred"} “in front of”, and #{t "зад", "zad"} “behind” are sometimes considered primary and sometimes secondary. They can be made directional by switching to the lative case like other primary prepositions, but they can never take the locative case. Ultimately, however, this is little more than a matter of classification and bears little real significance.
+
+  = footnote do
+    See Section 10.3.2.

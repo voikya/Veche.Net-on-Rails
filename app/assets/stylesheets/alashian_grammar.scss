@@ -18,6 +18,20 @@ body.grammar.alashian {
     color: $link_color;
   }
 
+  a.footnote {
+    color: #999999;
+
+    &:hover, &:active {
+      color: #EEEEEE;
+      background-color: $link-color;
+    }
+  }
+
+  p.footnote.highlight {
+    color: #333333;
+    background-color: lighten($background_color, 10%);
+  }
+
   td.label, td.arrow, th {
     background-color: $background-color;
   }

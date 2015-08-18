@@ -96,6 +96,20 @@ body.grammar {
     }
   }
 
+  section.footnotes {
+    margin-top: 30px;
+    border-top: solid 1px #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 90%;
+
+    p {
+      padding-left: 10px;
+      padding-right: 10px;
+      transition: background-color 0.3s;
+    }
+  }
+
   #footer {
     color: #999999;
     font-size: 12px;
@@ -137,6 +151,20 @@ body.grammar {
       text-decoration: none;
       border-bottom: solid 1px;
     }
+  }
+
+  a.footnote {
+    color: #999999;
+    background-color: #dfdfdf;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 4px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  a.linkback {
+    border: none;
   }
 
   hr {

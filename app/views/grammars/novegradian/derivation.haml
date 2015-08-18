@@ -308,7 +308,7 @@
             “telephone”
 
   = section "Calquing" do
-    %p Novegradians have long been proud of their language, and often have turned to calques or partial calques instead of loans when it is possible to decompose the foreign word. Many such cases have since become the only accepted forms and have outcompeted their original loaned counterparts, such as #{t "неборѣзе", "neborě́ze"} “skyscraper” or #{t "вуисопанти", "vuisopánti"} “highway”<sup>1</sup> (both English calques, where #{t "скайскрейпре", "skaiskréipre"} and #{t "хайвее", "haivéie"} have fallen into disuse). Others exist in free variation with the loan word, such as #{t "презуоне", "prezuóne"} “telephone” alongside #{t "телевоне", "televóne"}.
+    %p Novegradians have long been proud of their language, and often have turned to calques or partial calques instead of loans when it is possible to decompose the foreign word. Many such cases have since become the only accepted forms and have outcompeted their original loaned counterparts, such as #{t "неборѣзе", "neborě́ze"} “skyscraper” or #{t "вуисопанти", "vuisopánti"} “highway”#{footnote} (both English calques, where #{t "скайскрейпре", "skaiskréipre"} and #{t "хайвее", "haivéie"} have fallen into disuse). Others exist in free variation with the loan word, such as #{t "презуоне", "prezuóne"} “telephone” alongside #{t "телевоне", "televóne"}.
     %p Doublets often form with terms of scientific studies, for example, where both a foreign and native word exist, although the latter does not necessarily have to be a calque of the first.
     %table
       %tr
@@ -778,7 +778,7 @@
                     { :cyr => "содани", :lat => "sódani" },
                     "tribute" ] ]
       = render 'derivation_table', :headers => headers, :words => words
-      %p A few nominalizations are simply irregular: #{t "лубити", "lubíti"} “love” → #{t "лубова", "lubóva"} “love”<sup>2</sup>, #{t "пѣти", "pě́ti"} → #{t "пѣшне", "pě́śne"} “song”<sup>3</sup>, #{t "жити", "źíti"} “live” → #{t "житени", "źíteni"} “life”<sup>4</sup>.
+      %p A few nominalizations are simply irregular: #{t "лубити", "lubíti"} “love” → #{t "лубова", "lubóva"} “love”#{footnote}, #{t "пѣти", "pě́ti"} → #{t "пѣшне", "pě́śne"} “song”#{footnote}, #{t "жити", "źíti"} “live” → #{t "житени", "źíteni"} “life”#{footnote}.
       %p There are many suffixes used for turning a verb into an abstract noun. The most common is the gerundive #{t "-нье", "-nje"} (formed identically to the perfective participle, but with -нь- instead of -н-). Less common are #{t "-а", "-a"} and #{t "-ба", "-ba"}.
       - words = [ [ { :cyr => "цидати", :lat => "cidáti" },
                     "read",
@@ -1408,7 +1408,7 @@
       %ul
         %li #{t "побрѣжне", "pobrě́źne"} “coastal” (← #{t "брѣге", "brě́ge"} “beach”)
         %li #{t "Поневия", "Ponevijá"} “region around the Nevá River” (← #{t "Нева", "Nevá"} “Nevá River”)
-        %li #{t "посмортене", "posmórtene"} “upon one’s death”<sup>5</sup> (← #{t "сморти", "smórti"} “death”)
+        %li #{t "посмортене", "posmórtene"} “upon one’s death”#{footnote} (← #{t "сморти", "smórti"} “death”)
 
     = section "Под-" do
       %p The prefix под- means “under”, both physically and metaphorically. It also often indicates some sort of alternate to the base stem. Before stems beginning with a plosive, it lenites to #{t "поз-", "poz-"}.
@@ -1471,7 +1471,7 @@
       %p Whenever a prefix that must end in a vowel is added to a base that begins with a vowel, a prothetic consonant must be added to prevent hiatus. This is entirely dependent on the second vowel. If it is /a e i æ/, the consonant is /j/. If it is /o u ɨ/, the consonant is /β/. In the case of /e i æ u/, there is no visible orthographic change.
       %p When a prefix is added to a root that has undergone the historical TorT or TolT sound change (thus having a modern Novegradian form CraC or ClaC, where “C” represents any consonant), the /a/ is shifted to /o/: #{t "граде", "gráde"} “city” → #{t "пригроде", "prígrode"} “suburb”.
       %p There are two other prefixes that appear in many common nouns, though are no longer productive: #{t "су-/са-", "su-/sa-"} and #{t "о-/об-", "o-/ob-"}. The former derives from Proto-Slavic *sǫ-, so the vowel depends on the dominant stress pattern. It generally indicates some sort of connection, close relationship, or accompaniment: #{t "самраке", "sámrake"} “twilight” (from #{t "мраке", "mráke"} “darkness, gloom”), #{t "сурва", "survá"} “blizzard” (from #{t "ровати", "rováti"} “tear up”), #{t "сутма", "sutmá"} “shadow” (from #{t "тема", "temá"} “darkness”), #{t "сужѣде", "suźě́de"} “neighbor” (from #{t "шѣдѣти", "śědě́ti"} “sit”). The latter (basically *ob-, but frequently reducing to just *o-) means “around”. When it is prefixed to a word beginning in /β/, the /β/ always drops: #{t "власти", "vlásti"} “authority, rule” → #{t "облости", "óblosti"} “region, province”. All of these words have largely been dissociated from their original bases.
-      %p When a numeral is prefixed to a noun or adjective, it appears in its genitive form minus any final consonants: #{t "довуногате", "dovunogáte"} “bipedal, two-legged”. If the numeral does not decline, it is simply added as-is: #{t "столѣтия", "stolětijá"} “century, centennial”<sup>6</sup>. The numeral “one” always prefixes as an adjective with a neutral <i>-o-</i> ‘linking morpheme’  (i.e., as #{t "едно-", "iedno-"}). The same rules apply to the numeral #{t "пољ", "pół"} “half”, which prefixed as the genitive #{t "пољу-", "połu-"}.
+      %p When a numeral is prefixed to a noun or adjective, it appears in its genitive form minus any final consonants: #{t "довуногате", "dovunogáte"} “bipedal, two-legged”. If the numeral does not decline, it is simply added as-is: #{t "столѣтия", "stolětijá"} “century, centennial”#{footnote}. The numeral “one” always prefixes as an adjective with a neutral <i>-o-</i> ‘linking morpheme’  (i.e., as #{t "едно-", "iedno-"}). The same rules apply to the numeral #{t "пољ", "pół"} “half”, which prefixed as the genitive #{t "пољу-", "połu-"}.
 
   = section "Place Names" do
     %p There are five prefixes commonly used to form region names, all based on a more specific geographic term. All region names formed this way must take the collective suffix #{t "-ия", "-ija"}, which triggers palatalization of velar consonants only.
@@ -1495,7 +1495,7 @@
     = render 'derivation_table', :headers => headers, :words => words
     %p The prefix #{t "при-", "pri-"} does the same, but marks the area along a coastline.
     - words = [ [ { :cyr => "балтицеске", :lat => "baltíceske" },
-                  "Baltic (sea)<sup>7</sup>",
+                  "Baltic (sea)#{footnote}",
                   :arrow,
                   { :cyr => "Прибалтия", :lat => "Pribáltija" },
                   "Baltic states" ],
@@ -1627,7 +1627,7 @@
         %li #{t "ойсти", "óisti"} “leave” (← #{t "исти", "ísti"} “go, walk”)
 
     = section "От-" do
-      %p The prefix от-, which becomes ос- before bases beginning with a plosive, indicates movement away, much like о-. However, о- suggests movement out of sight, while от- suggests movement just a short distance away, while remaining in sight<sup>8</sup>. It also frequently indicates physical removal (and thus is more literal than без-), a mistake in performing an action, or the undoing or reciprocation of an action performed by another party.
+      %p The prefix от-, which becomes ос- before bases beginning with a plosive, indicates movement away, much like о-. However, о- suggests movement out of sight, while от- suggests movement just a short distance away, while remaining in sight#{footnote}. It also frequently indicates physical removal (and thus is more literal than без-), a mistake in performing an action, or the undoing or reciprocation of an action performed by another party.
       %p Examples:
       %ul
         %li #{t "осдати", "osdáti"} “answer, respond” (← #{t "дати", "dáti"} “give”)
@@ -1784,13 +1784,27 @@
                   "#{t "винолубе", "vinolúbe"}<br>“wine connoisseur”" ] ]
     = render 'derivation_table', :headers => headers, :words => words
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    Вуисопанти, in turn, is increasingly giving way to the fully native #{t "далница", "dálnica"}.
 
-%p 1) Вуисопанти, in turn, is increasingly giving way to the fully native #{t "далница", "dálnica"}.
-%p 2) CS *ljuby, a ū-stem noun that for some reason underwent an irregular evolution in Novegradian.
-%p 3) CS *pěsnь, consisting of a suffix *-snь that had already ceased to be productive before the Common Slavic period.
-%p 4) Unclear. CS forms *žitьje and *žiznь are reconstructed; житени almost appears to be a cross between these two, but this is unlikely. The most common explanation is that this derives from an extended Pre-Old Novegradian form *žizьnь that underwent dissimilation, perhaps influenced by forms such as the previously-mentioned *žitьje. If this is the case, then житени originally had the same derivational suffix as пѣшне above.
-%p 5) For example, #{t "посмортене обред", "posmórtene óbred"} “funereal rite”.
-%p 6) This compound includes the now-defunct stem *lět- for “year”.
-%p 7) The Baltic Sea itself is known in Novegradian as #{t "Варижеское море", "Variźeskóie móre"} “Varangian Sea”, but the adjective балтицеске has been loaned for most other purposes.
-%p 8) Compare, for instance, #{t "ойсти", "óisti"} “leave” and #{t "отѣйсти", "ótěisti"} “walk away”, both from #{t "исти", "ísti"} “go, walk”.
+  = footnote do
+    CS *ljuby, a ū-stem noun that for some reason underwent an irregular evolution in Novegradian.
+
+  = footnote do
+    CS *pěsnь, consisting of a suffix *-snь that had already ceased to be productive before the Common Slavic period.
+
+  = footnote do
+    Unclear. CS forms *žitьje and *žiznь are reconstructed; житени almost appears to be a cross between these two, but this is unlikely. The most common explanation is that this derives from an extended Pre-Old Novegradian form *žizьnь that underwent dissimilation, perhaps influenced by forms such as the previously-mentioned *žitьje. If this is the case, then житени originally had the same derivational suffix as пѣшне above.
+
+  = footnote do
+    For example, #{t "посмортене обред", "posmórtene óbred"} “funereal rite”.
+
+  = footnote do
+    This compound includes the now-defunct stem *lět- for “year”.
+
+  = footnote do
+    The Baltic Sea itself is known in Novegradian as #{t "Варижеское море", "Variźeskóie móre"} “Varangian Sea”, but the adjective балтицеске has been loaned for most other purposes.
+
+  = footnote do
+    Compare, for instance, #{t "ойсти", "óisti"} “leave” and #{t "отѣйсти", "ótěisti"} “walk away”, both from #{t "исти", "ísti"} “go, walk”.

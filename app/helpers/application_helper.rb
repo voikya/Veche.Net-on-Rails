@@ -60,4 +60,18 @@ module ApplicationHelper
     end
     return html.html_safe
   end
+
+  def footnote(&block)
+    @footnote_ref_idx ||= 0
+    @footnote_idx ||= 0
+    if block_given?
+      # Footnote text
+      @footnote_idx += 1
+      render :partial => "footnote", :locals => {:idx => @footnote_idx, :block => block}
+    else
+      # Footnote reference
+      @footnote_ref_idx += 1
+      render :partial => "footnote_ref", :locals => {:idx => @footnote_ref_idx}
+    end
+  end
 end
