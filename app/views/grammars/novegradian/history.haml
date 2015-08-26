@@ -26,12 +26,12 @@
       %th Mid-Low
       %td
         e [e]
-        %br
+        %br>
         ę [ẽ]
       %td
       %td
         o [o]
-        %br
+        %br>
         ǫ [õ]
     %tr
       %th Low
@@ -52,27 +52,27 @@
       %th Plosive
       %td
         p [p]
-        %br
+        %br>
         b [b]
       %td
         t [t]
-        %br
+        %br>
         d [d]
       %td
       %td
         k [k]
-        %br
+        %br>
         g [g]
     %tr
       %th Fricative
       %td v [β ~ w]
-      %td 
+      %td
         s [s]
-        %br
+        %br>
         z [z]
       %td
         š [ʃ]
-        %br
+        %br>
         ž [ʒ]
       %td x [x]
     %tr
@@ -92,7 +92,7 @@
       %td
       %td
         r [r]
-        %br
+        %br>
         l [l]
       %td j [j]
       %td
@@ -157,7 +157,7 @@
     %p The /w/ and /j/ rules above later became productive allophonic patterns, still seen in modern Novegradian, that continued to affect new words entering the language: овисе [ˈwo.βi.se] “office”, еропорте [je.ro.ˈpor.te] “airport”, as well as new initial /e/, /æ/, and /o/ gained through sound change.
     %p Initial /a/ gained a prothetic /j/. However, this is no longer a productive rule in Novegradian, having ceased to be productive even before the written record.
     = render 'sound_change', :examples => [ { :slavic => "*azъ", :nov => "яс", :phonetic => "[ˈja(s)]", :gloss => "I" },
-                                            { :slavic => "*abkъko", :nov => "яблоко", :phonetic => "[ˈja.blo.ko]", :gloss => "apple" },
+                                            { :slavic => "*ablъko", :nov => "яблоко", :phonetic => "[ˈja.blo.ko]", :gloss => "apple" },
                                             { :slavic => "*aje-ke", :nov => "яеце", :phonetic => "[ˈja.jɛ.tse]", :gloss => "egg" } ]
     %p Some words later lost this particular /j/, though it may still be seen in derivative forms: авити [ə.ˈβi.tɪ] (#{abbrev 'CS'} *aviti) “reveal”, but prefixed оявити [o.jə.ˈβi.tɪ] “declare”, which still has /j/.
     %p Initial /i/ and /u/ did not gain any prothetic glides. Since these sounds are frequently seen in Late Common Slavic as the final elements of diphthongs, they did not cause any problem in hiatus position.
@@ -231,7 +231,7 @@
     = render 'sound_change', :examples => [ { :slavic => "*rъtъ", :nov => "роте", :phonetic => "[ˈro.te]", :gloss => "mouth" },
                                             { :slavic => "*domъ", :nov => "дум", :phonetic => "[ˈdum]", :gloss => "house" },
                                             { :slavic => "*vъ-kǫsъ", :nov => "вокусе", :phonetic => "[ˈβo.ku.se]", :gloss => "taste" },
-                                            { :slavic => "*vъzь-mǫ", :nov => "вожмун", :phonetic => "[βozʲ.ˈmun]", :gloss => "I bring" },
+                                            { :slavic => "*vъz-ьmǫ", :nov => "вожмун", :phonetic => "[βozʲ.ˈmun]", :gloss => "I bring" },
                                             { :slavic => "*jъgo", :nov => "его", :phonetic => "[ˈjɛ.go]", :gloss => "yoke" } ]
     %p The realization of the front yer ь word-internally is more complex. It generally becomes /e/, but before /l/ and /r/ it becomes /i/. In the sequence jь, it drops entirely unless it absolutely cannot, in which case it becomes /i/ (stressed) or /e/ (unstressed):
     = render 'sound_change', :examples => [ { :slavic => "*lьgъkъ", :nov => "леғке", :phonetic => "[ˈlʲex.ke]", :gloss => "easy, light" },
@@ -287,7 +287,7 @@
                                             { :slavic => "*doktь", :nov => "докьи", :phonetic => "[ˈdo.cɪ]", :gloss => "daughter" } ]
     %p The velar clusters /kj/, /gj/, and /xj/ became [tʃ], [dʒ], and [ʃ]. The first two later simplified to [ts] and [ʒ]. [ʒ] then became [zʲ] through the process of śókanje and sometimes [z] through neoacute retraction.
     = render 'sound_change', :examples => [ { :slavic => "*plakjǫ", :nov => "плацун", :phonetic => "[ˈpla.tsʊn]", :gloss => "I cry" },
-                                            { :slavic => "*mogjǫ", :nov => "музун", :phonetic => "[ˈmu.zʲʊn]", :gloss => "I can" },
+                                            { :slavic => "*mogjǫ", :nov => "музун", :phonetic => "[ˈmu.zʊn]", :gloss => "I can" },
                                             { :slavic => "*duxja", :nov => "дужа", :phonetic => "[du.ˈzʲa]", :gloss => "soul, person" } ]
     %p /nj/ merged into a single sound, [ɲ].
     = render 'sound_change', :examples => [ { :slavic => "*viš(ь)nja", :nov => "вишньа", :phonetic => "[ˈβisʲ.ɲə]", :gloss => "cherry" },
@@ -297,8 +297,8 @@
                                             { :slavic => "*govorjǫ", :nov => "говорун", :phonetic => "[go.βo.ˈrun]", :gloss => "I talk" },
                                             { :slavic => "*voljiti", :nov => "волити", :phonetic => "[βo.ˈlʲi.tɪ]", :gloss => "prefer" } ]
     %p The labial sequences /pj bj vj mj/ were a little different. The palatalization resulted in an /l/ being added into the cluster: [plj blj vlj mlj]. Before front vowels (as well as before <i>-a</i> when in the nominative case of a noun), this /l/ is later dropped. Elsewhere the [j] dropped. This frequently lead to labial and labial+l alternations in words.
-    = render 'sound_change', :examples => [ { :slavic => "*zemja", :nov => "жемя", :phonetic => "[ˈzʲem.jə]", :gloss => "land (nom sg)" },
-                                            { :slavic => "*zemjǫ", :nov => "жемлу", :phonetic => "[ˈzʲem.lʊ]", :gloss => "land (acc sg)" },
+    = render 'sound_change', :examples => [ { :slavic => "*zemja", :nov => "жемя", :phonetic => "[ˈzʲem.jə]", :gloss => "land (#{abbrev 'nom.sg'})" },
+                                            { :slavic => "*zemjǫ", :nov => "жемлу", :phonetic => "[ˈzʲem.lʊ]", :gloss => "land (#{abbrev 'acc.sg'})" },
                                             { :slavic => "*ljubjǫ", :nov => "лублун", :phonetic => "[lu.ˈblun]", :gloss => "I love" },
                                             { :slavic => "*avjǫ", :nov => "аулун", :phonetic => "[əw.ˈlun]", :gloss => "I reveal" } ]
     %p If /mj vj/ ended up at the end of a word due to yer loss or contractions in speech, /mj/ became /ɲ/ and /vj/ became /l/. /pj/ and /bj/ simply lost their palatal element. If this happened in the nominative form of a noun, the ending may be reintroduced by morphological pressure (as in <i>Iároslali</i> below).
@@ -332,8 +332,8 @@
     %p Cókanje refers to the confusion of /ts/ and /tʃ/ in Novegradian from a period roughly during the First Progressive Palatalization up until the fourteenth or fifteenth centuries (depending on the region). Speakers would frequently use the wrong phoneme from an etymological point of view, and which words ended up being pronounced with which consonant often varied from region to region. For example, the “correct” pronunciation [ˈtʃer.ne] for “black” was common in the area to the south and west of Novegráde Velíkei while the “incorrect” [ˈtser.ne] was seen to the north and west. At the same time, the “correct” [ˈkon.tse] “end” was seen only in Novegráde Velíkei and to the west, while the “incorrect” [ˈkon.tʃe] was seen to the south, east, and north.
     %p According to one of the more widely-accepted theories, cókanje is believed to have been caused by conflicting influences in the early Novegradian-speaking area. The First Palatalization began late in Novegradian, occurring after the Second and Third had finished in the rest of the Slavic-speaking world. One of the changes happening in Novegradian during the First Palatalization was k → tʃ before front vowels. At the same time, however, Church Slavonic was becoming an influential language in the region. As a South Slavic language, it had already underwent the Third Palatalization, which, among other changes, caused k → ts after front vowels in certain circumstances. So at the same time that many former instances of /k/ were being converted to /tʃ/, Novegradian was also being flooded by /ts/ (equivalent to older /k/) from Church Slavonic loans. Speakers quickly lost the ability to keep track of which former /k/ is supposed to be pronounced [tʃ] and which [ts], causing the two phonemes to become confused.
     %p The issue was eventually resolved by converting all instances of both phonemes to /ts/ in the standard language. /tʃ/ was later reintroduced through loan words, though long after the original /tʃ/ was lost.
-    = render 'sound_change', :examples => [ { :slavic => "*čьr(x)nъOCS črъnъ", :nov => "церне", :phonetic => "[ˈtser.ne]", :gloss => "black" },
-                                            { :slavic => "*konьkъOCS konьcь", :nov => "конце", :phonetic => "[ˈkon.tse]", :gloss => "end" } ]
+    = render 'sound_change', :examples => [ { :slavic => "*čьr(x)nъ (OCS črъnъ)", :nov => "церне", :phonetic => "[ˈtser.ne]", :gloss => "black" },
+                                            { :slavic => "*konьkъ (OCS konьcь)", :nov => "конце", :phonetic => "[ˈkon.tse]", :gloss => "end" } ]
 
   = section "Śókanje" do
     %p Śókanje refers to the merger of Old Novegradian /ʃ/ and /ʒ/ with /s/ and /z/ before front vowels. Much like how /tʃ/ was pulled forward to [ts] through cókanje, /ʃ/ and /ʒ/ were pulled forward to [sʲ] and [zʲ] in all positions except before a plosive consonant. Concurrently with this change, /s/ and /z/ acquired a slight palatalization before all front vowels, also becoming [sʲ] and [zʲ].
@@ -348,7 +348,7 @@
     = render 'sound_change', :examples => [ { :slavic => "*syra", :nov => "сира", :phonetic => "[ˈsʲi.rə]", :gloss => "moist, raw (#{abbrev 'nom.sg.fem.indef'})" },
                                             { :slavic => "*syra-ja", :nov => "сирая", :phonetic => "[si.ˈra.jə]", :gloss => "moist, raw (#{abbrev 'nom.sg.fem.def'})" } ]
     %p Another complicating factor is the front yer, /ь/. This would always palatalize any preceding /s z/. If it later dropped, the [sʲ zʲ] formed by it would remain. Since their original conditioning environment had disappeared, these can be considered distinctly /sʲ zʲ/.
-    = render 'sound_change', :examples => [ { :slavic => "*vъzь-mǫ", :nov => "вожмун", :phonetic => "[βozʲ.ˈmun]", :gloss => "I bring" } ]
+    = render 'sound_change', :examples => [ { :slavic => "*vъz-ьmǫ", :nov => "вожмун", :phonetic => "[βozʲ.ˈmun]", :gloss => "I bring" } ]
     %p The motivation for the fronting of [ʃ ʒ] to [sʲ zʲ] may be found in Russian. In Russian, the distinction between /ts/ and /tʃ/ was reinforced by palatalizing (“softening”) one and leaving the other unpalatalized (“hard”), resulting in modern Russian [ts tɕ]. A similar phonomenon likely happened in Novegradian, only this time it served to maximize the distinction between [tʃ] and [ʃ], before the former began to be confused with [ts]. [tʃ] (as well as [ts]) remained “hard”, while [ʃ] and its voiced partner [ʒ] became “soft” [sʲ zʲ]. The fronting from a postalveolar to a dental articulation likely parallels the eventual total shift of [tʃ] to [ts] resulting from cókanje.
 
   = section "Lenition of /β/" do
@@ -433,7 +433,9 @@
     %p Common Slavic also had four consonantal stems, which gained a suffix in oblique forms—the S-Stem (suffix *-es-, relatively common), the R-Stem (suffix *-er-, seen only in the words “mother” and “daughter”), the N-Stem (suffix *-en-, relatively common), and the NT-Stem (suffix *-ęt-, marks animal diminutives). In Common Slavic, these all declined similarly though not identically. In Novegradian, their endings were merged, so that while they each take their own individual suffixes, they have a common set of endings—the modern sixth declension.
     %p Over the years a number of nouns have unpredictably switched declensions, especially as some older declensions were beginning to fall out of use. This was particularly common as a number of nouns removed themselves from the consonantal declensions and joined the Third and Fourth Declensions, such as *dělo “matter, dealing” (original S-Stem) and *dьnь “day” (original N-Stem).
     %p It should be noted that the development of the IE Ŏ and Ŭ stems in Novegradian is highly unusual for the Slavic languages. In Novegradian, the Ŭ and neuter Ŏ stems merged, whereas in all other Slavic languages the Ŭ stems merged with the masculine Ŏ stems. Thus where other Slavic languages had relatively distinct masculine and neuter classes (from the masculine Ŏ/Ŭ and neuter Ŏ/JŎ stems respectively), Novegradian ended up with two declensions that encompassed both masculine and neuter nouns (the third declension from neuter Ŏ and masculine Ŭ stems, and the fourth declension from masculine Ŏ and neuter JŎ stems). It has been suggested that this failure to clearly distinguish between masculine and neuter paradigms has contributed to Novegradian being the only Slavic language to have lost the neuter gender, at least in its colloquial spoken form.
-    = image_tag "novegradian/declension_merger.png", :alt => "Development of declensions from Common Slavic to Novegradian"
+    %figure
+      = image_tag "novegradian/declension_merger.png", :alt => "Development of declensions from Common Slavic to Novegradian"
+      %figcaption Development of declensions from Common Slavic to Novegradian
 
   = section "Development of Specific Case Endings" do
     %p Several case endings have more complex origins that call for more specific discussion. These are the sixth declension V-Stem nominative singular <i>-ua</i>, the third/fifth declension animate accusative singular <i>-a</i>, the fourth declension nominative singular <i>-e</i>, the fourth declension genitive singular <i>-u</i>/<i>-a</i>, and the fourth declension dative/instrumental singular <i>-em</i>/<i>-oi</i>.
@@ -451,7 +453,7 @@
     %p Most Slavic languages show some degree of mixing of Ŏ-stem and Ŭ-stem endings. In most other languages, this could be explained as a consequence of the merger of these two declensions. With Novegradian, the spread and specialization of certain Ŭ-stem endings to the fourth declension is harder to explain. All that can definitively be said is that the characteristics of this spread are very similar to the same phenomena in other Slavic languages. For instance, the Ŭ-stem genitive singular *-u has displaced the Ŏ-stem genitive *-a for a subset dominated by mass nouns, as well as a few others, much like what happened in Ukrainian or early Russian. The Ŭ-stem dative *-ovi, meanwhile, has taken over the fourth declension dative/instrumental (in the form <i>-oi</i>) for personal names and a small set of nouns referring to people, much like the “personal dative” seen in several West Slavic languages.
 
   = section "Case Loss and Merger" do
-    %p Looking at Common Slavic declension, it is clear that the dative and instrumental cases were already quite similar. In the dual, they had already merged, and for many plural nouns, the endings were quite similar. Only in the singular were they completely distinct, but note forms in certain declensions such as instrumental singular *gordomь “with the city” and dative plural *gordomъ “to the city”. The plural endings for the two cases had merged for all nouns by the 15th century (although they continued to be maintained in writing until the orthographic yers ъ/ь were removed from the spelling system in 1917; the spelling -амъ was generally used for the dative plural and -амь for the instrumental plural). The singular forms were completely merged by the 17th century at the latest, and were not distinguished in writing.
+    %p Looking at Common Slavic declension, it is clear that the dative and instrumental cases were already quite similar. In the dual, they had already merged, and for many plural nouns, the endings were quite similar. Only in the singular were they completely distinct, but note forms in certain declensions such as instrumental singular *gordomь “with the city” and dative plural *gordomъ “to the cities”. The plural endings for the two cases had merged for all nouns by the 15th century (although they continued to be maintained in writing until the orthographic yers ъ/ь were removed from the spelling system in 1917; the spelling -амъ was generally used for the dative plural and -амь for the instrumental plural). The singular forms were completely merged by the 17th century at the latest, and were not distinguished in writing.
     %p The vocative was no longer in use by the 16th century. However, as in Russian, a few archaic vocatives loaned from Church Slavonic still remain, such as #{t "боже!", "bóźe!"} “O God!”. The vocative has reappeared in the colloquial language as the suffix <i>-mo</i>, which interestingly can be combined with the few surviving original vocatives: #{t "божемо!", "bóźemo!"} “O God!”.
     %p The locative case lost some of its function, but not nearly as much as some other Slavic languages. The Novegradian locative no longer marks the direct object of verbs of contact (such as “touch”), as it did in Old Church Slavonic, but unlike other Slavic languages the locative may still be used on its own without a preposition.
 
@@ -481,7 +483,9 @@
     %p The intensive and excessive degrees of Novegradian are both more recent innovations, although the intensive is seen in Old Church Slavonic as well (and likely entered Novegradian from OCS). They were both formed by prefixed prepositions which then became generalized.
 
   = section "Numerals" do
-    %p With the exception of the animate numeral forms, Common Slavic numerals changed very little in Novegradian. The most significant changes is that 4 stopped agreeing with the noun they modified in gender, and that the numeral 2 now called for the genitive singular (like 3 and 4) instead of the nominative dual, so long as no distinct dual exists. However, in Common Slavic neuter nouns took the same form of “two”, *dъvě (modern <i>dóvě</i>), as feminine nouns; in modern Novegradian they take the same form as masculine nouns, <i>dóva</i>. The two forms of “three” in Novegradian, <i>tri</i> (#{abbrev 'masc'}/#{abbrev 'neut'}) and trě́ (#{abbrev 'fem'}), appears not to derive directly from Common Slavic *trьje (#{abbrev 'masc'}) and *tri (#{abbrev 'fem'}/#{abbrev 'neut'}). Instead, it appears that the #{abbrev 'CS'} feminine/neuter form took over, but a new feminine form was then created based on the feminine form of “two”, <i>dóvě</i>.
+    %p With the exception of the animate numeral forms, Common Slavic numerals changed very little in Novegradian. The most significant changes are that 4 stopped agreeing with the noun they modified in gender, and that the numeral 2 now called for the count form (like 3 and 4) instead of the nominative dual, so long as no distinct dual exists. However, in Common Slavic neuter nouns took the same form of “two”, *dъvě (modern <i>dóvě</i>), as feminine nouns; in modern Novegradian they take the same form as masculine nouns, <i>dóva</i>. The two forms of “three” in Novegradian, <i>tri</i> (#{abbrev 'masc'}/#{abbrev 'neut'}) and <i>trě́</i> (#{abbrev 'fem'}), appears not to derive directly from Common Slavic *trьje (#{abbrev 'masc'}) and *tri (#{abbrev 'fem'}/#{abbrev 'neut'}). Instead, it appears that the #{abbrev 'CS'} feminine/neuter form took over, but a new feminine form was then created based on the feminine form of “two”, <i>dóvě</i>.
+    %p On the other hand, the behavior of numerals has changed significantly. In Common Slavic, the numerals 1 through 4 all behaved adjectivally, agreeing in number, gender, and case with the noun they modified, while the numerals 5 through 10 behaved as nominal quantifiers, showing no agreement and forcing the noun they modified into the genitive plural (so that “five stones” and “a pile of stones” were homologous constructions). This naturally meant that a noun quantified by 1 would appear in the singular, by 2 in the dual, and by 3 or 4 in the plural. However, already by Late Common Slavic the numerals 2 through 4 were beginning to lose their adjectival properties and beginning to fall more in line with other numerals, resulting in a confused agreement situation compounded by the loss of the dual. This confusion was resolved in many ways across the Slavic family, with Novegradian developing a new class of count forms to be used alongside these numerals in the nominative and accusative cases.
+    %p Early on, Novegradian patterned much like the East Slavic languages in generalizing the dual endings to the numerals 3 and 4. In East Slavic, these eventually came to be conflated (to varying degrees of completeness) with the genitive singular for masculine and neuter nouns and the nominative plural for feminine nouns#{footnote}. In Novegradian, this new count form came to be strongly conflated with the genitive singular in endings, while preserving the stress of the nominative plural (and thus preserving the overall prosody of the noun phrase), although in the smaller second and fifth declension the count form remains formally identical to the nominative plural. Note, however, the tendency to generalize the ending <i>-a</i> for all masculine nouns in the third and fourth declensions, even if the genitive is typically in <i>-u</i>.
 
 = section "Development of Verbs" do
   = section "Verb Form Loss" do
@@ -509,10 +513,13 @@
 
 %section.footnotes
   = footnote do
-    For [ts] instead of [tʃ], see 24.3.5.
+    For [ts] instead of [tʃ], see #{link_to "Section 24.3.5", "#s24-3-5", class: 'xref'}.
 
   = footnote do
     This word ends in a front yer in other Slavic dialects: *dьnь.
 
   = footnote do
     Later developments in both Novegradian and other Slavic languages are worth noting, although they are less directly relevant. Outside of Novegradian, the nominative/vocative contrast appears to have been crucial enough that the JŎ-stem nouns eventually broke their inherited nominative/vocative syncretism by adopting the Ŭ-stem vocative *-u. Later on, both in Novegradian and elsewhere, the masculine JŎ-stems merged with the Ĭ-stems. It would ultimately be the masculine Ŏ- and <em>neuter</em> JŎ-stems that would become the Novegradian fourth declension, in an apparently reversal of the early Common Slavic trend of maximizing gender distinctions that created these chain shifts of declensions in the first place.
+
+  = footnote do
+    In Russian, this would later become the genitive singular throughout, as the nominative plural for most feminine nouns was identical in form, though not necessarily in stress, to the genitive singular. Nevertheless, the Russian count form is not entirely syncretic with the genitive singular, as it can vary in stress for some nouns and takes genitive plural adjective agreement, not genitive singular.

@@ -2,7 +2,7 @@
 - content_for :section_subtitle, "Предлажки"
 
 = section "Morphology of Prepositions" do
-  %p Novegradian prepositions exhibit a number of sandhi-related phenomena, changes to the form of the preposition or its object as a result of the phonological shape of the object. This is to be distinguished from case governance, described in detail starting with section 16.2, which is the phenomenon of prepositions forcing certain cases onto their objects. One example has already been discussed, the stress shift seen sometimes with the locative prepositions #{t "во", "vo"} “in” and #{t "на", "na"} “on”#{footnote}.
+  %p Novegradian prepositions exhibit a number of sandhi-related phenomena, changes to the form of the preposition or its object as a result of the phonological shape of the object. This is to be distinguished from case governance, described in detail starting with #{link_to "Section 16.2", "#s16-2", :class => "xref"}, which is the phenomenon of prepositions forcing certain cases onto their objects. One example has already been discussed, the stress shift seen sometimes with the locative prepositions #{t "во", "vo"} “in” and #{t "на", "na"} “on”#{footnote}.
   %p From a morphological/sandhi-based perspective, Novegradian prepositions can be divided into three subcategories, known as “three-form prepositions”, “two-form prepositions”, and “invariable prepositions”.
 
   = section "Three-Form Prepositions" do
@@ -19,7 +19,7 @@
 
   = section "Sandhi in the Prepositional Object" do
     %p When a three-form or two-form preposition is placed before certain nouns beginning with /e/ or /o/, the sandhi becomes much more involved. This only applies to nouns that in Old Novegradian began with /i/ or /u/, which later lowered to /e/ and /o/. Nouns that historically began with /e/ or /o/ are not affected.
-    %p In this situation, both three-form and two-form prepositions take their expanded forms, with -/n/ and -/β/ respectively. The first vowel of the object is then raised from /e/ to /i/ or from /o/ to /u/. These extended prepositions blocked the vowel lowering from ever occuring: #{t "оху", "óhu"} “ear” → #{t "вон ухѣ", "von úhě"} “in the ear”; #{t "Еване", "Ieváne"} “Ieváne” → #{t "ов Ивана", "ov Ivána"} “at Ieváne[‘s house]”; #{t "осту", "óstu"} “lip” → #{t "нав устѣх", "nav ustě́h"} “on the lips”, etc.
+    %p In this situation, both three-form and two-form prepositions take their expanded forms, with -/n/ and -/β/ respectively. The first vowel of the object is then raised from /e/ to /i/ or from /o/ to /u/. These extended prepositions blocked the vowel lowering from ever occuring: #{t "оху", "óhu"} “ear” → #{t "вон ухесе", "von úhese"} “in the ear”; #{t "Еване", "Ieváne"} “Ieváne” → #{t "ов Ивана", "ov Ivána"} “at Ieváne[‘s house]”; #{t "осту", "óstu"} “lip” → #{t "нав устѣх", "nav ustě́h"} “on the lips”, etc.
     %p No change occurs if there is an adjective or other modifier between the preposition and noun, nor does it affect adjectives and other modifiers that themselves underwent this historical lowering.
 
 = section "Locative Prepositions" do
@@ -161,12 +161,12 @@
     %li #{t "при", "pri"} + #{abbrev 'loc'} “in, during, throughout” (when referring to a span of time; for example, “during his rule the country entered a time of prosperity”)
   %p #{t "При", "pri"} + #{abbrev 'loc'} can also be “during the time of”, an expression particularly common in describing rulers: #{t "при Петрѣ пирвѣѣм", "pri Pétrě Pírvěiěm"} “during the reign of Peter I”.
   %p Most other concepts require periphrastic constructions, such as #{t "со ших врѣмен", "so śíh vrěmén"} + #{abbrev 'gen'} “since”, literally “from the times of”, or the more formal variant #{t "со тада врѣмена", "so tadá vrě́mena"} + #{abbrev 'gen'} “from such a time of”.
-  %p See section 12.3 “The Accusative Case” for more information and examples of the use of the accusative case in time expressions.
+  %p See #{link_to "Section 12.3 “The Accusative Case”", novegradian_grammar_page_path(:nounsyntax, anchor: 's12-3'), class: 'xref'} for more information and examples of the use of the accusative case in time expressions.
 
 = section "The Distributive По" do
   %p The preposition #{t "по", "po"} is also used in distributive expressions, a construction common in each of the Slavic languages in some form or another. In Novegradian, the по distributive is difficult to classify; it is a prepositional phrase that acts as a noun and displays some unusual internal agreement.
   %p The basic meaning of this construction is “each”, indicating that the noun within it is to be multipied rather than divided among multiple groups. For example, a sentence such as “The ten students received 50 marks” in Novegradian would mean that the 50 marks were divided among the ten students, whereas “The ten students received ‘по’ 50 marks” indicates that each received 50.
-  %p The construction is formed by placing the noun to be distributed in the dative/instrumental case after the preposition по. However, if the noun is quantified by any number other than “one” (or 21, 31, 41, 101, etc), the numeral instead must be in the accusative case and the noun regularly in the genitive.
+  %p The construction is formed by placing the noun to be distributed in the dative/instrumental case after the preposition по. However, if the noun is quantified by any number other than “one” (or 21, 31, 41, 101, etc), the numeral instead must be in the accusative case and the noun regularly in the count form or genitive.
   %p The distributive по phrase may act as either the subject or the direct object of a verb. As the direct object, it indicates that each subject is acting on that amount of objects. If the subject of a transitive verb is modified by the adjective #{t "кожне", "kóźne"} “each, every”, the direct object will almost always be a по distributive.
   = example_sentence "Кожне студенте приймѣле по пиннацити марек.",
                      "Kóźne studénte prijmě́le po pinnáciti márek.",
@@ -174,7 +174,7 @@
                      "Each student received 50 marks."
   = example_sentence "О ва треба цидати по три нигѣ трес лѣтена.",
                      "O vá tréba cidáti po trí nígě tres lě́tena.",
-                     "at you.{lat.pl} need-{nom.sg} read-{inf} {dist} three.{acc} book-{gen.sg} across summer-{gen.sg}",
+                     "at you.{lat.pl} need-{nom.sg} read-{inf} {dist} three.{acc} book-{count} across summer-{gen.sg}",
                      "You each need to read three books over the summer."
   %p When acting as a subject, the по phrase is forced after the verb; it may not appear sentence-initially. The verb always shows neuter, third person singular agreement.
   = example_sentence "Со кожна дрѣвеса пагло по яблоком.",
@@ -262,16 +262,16 @@
                      "in this-{loc.sg.neut} I.{nom} tomorrow {neg} go.{det}-{1sg} on work-{lat.sg}",
                      "Because of that I’m not going to go to work tomorrow."
   = example_sentence "Не тривожиш про создой. Яс во шем.",
-                     "Ne trivóźiś pro sózdoi. Iás vo śém.",
+                     "Ne trivoźíś pro sózdoi. Iás vo śém.",
                      "{neg} alarm-{2sg.imper}-{mid} because_of past_event-{datins.sg}. I.{nom} Ø in this-{loc.sg.neut}",
                      "Don’t worry about what happened. I’m responsible for it."
   = example_sentence "Муи во том-це вие ѣснѣ и вуиношекьѣ работати.",
                      "Muí vo tóm-ce vijé iě́sně i vuinóśekjě rabótati.",
-                     "we.{nom} Ø in {rel.loc.sg}-that.{nom} all.{nom.pl} accurate-{adv} and efficient-{adv} work-{inf}",
+                     "we.{nom} Ø in {rel.loc.sg}-that.{nom} all.{nom.pl} accurate-{adv} and efficient-{adv} work-{3pl}",
                      "We’re reponsible for ensuring that everyone works accurately and efficiently."
 
-= section "Alienable and Inalienable “With” and “Without”" do 
-  %p Novegradian has two words that translate as “with”, #{t "со", "so"} + #{abbrev 'datins'} and #{t "ими", "imí"} + #{abbrev 'acc'}, and two as “without”, #{t "бес", "bes"} + #{abbrev 'gen'} and #{t "ними", "nimí"} + #{abbrev 'gen'}. The difference has to do with the nature of the possession involved. 
+= section "Alienable and Inalienable “With” and “Without”" do
+  %p Novegradian has two words that translate as “with”, #{t "со", "so"} + #{abbrev 'datins'} and #{t "ими", "imí"} + #{abbrev 'acc'}, and two as “without”, #{t "бес", "bes"} + #{abbrev 'gen'} and #{t "ними", "nimí"} + #{abbrev 'gen'}. The difference has to do with the nature of the possession involved.
   %p #{t "Ими", "imí"} “with” and #{t "ними", "nimí"} “without” represent alienable possession, that is, possession of a temporary nature that generally involves physically carrying an item. The possessor and possessed item are viewed as strongly distinct and somewhat distanced from one another. For this reason, ими is frequently translated as “[while] taking along” and ними as “[while] not taking”. Ними can also mean “despite not having”.
   = example_sentence "Надаля шла саймен ими торте.",
                      "Nadália ślá sáimen imí tórte.",
@@ -380,7 +380,7 @@
   %p При may also be used with the lative case when the verb is indicating connecting two things together:
   = example_sentence "Постави ше забато кољо при видоруюн.",
                      "Postaví śé zabáto kóło pri vidóruiun.",
-                     "fit.{pf}-{2sg.imper} this-{nom.sg.neut} toothed-{nom.sg.neut} wheel-{nom.sg.neut} by other-{lat.sg.fem.def}",
+                     "fit.{pf}-{2sg.imper} this-{nom.sg.neut} toothed-{nom.sg.neut} wheel-{nom.sg.neut} by other-{lat.sg.neut.def}",
                      "Connect this cogwheel to the other one.",
                      :comment => "(lit. “Fit this cogwheel by the other”)"
   = example_sentence "Привеғьи ша верви при дуерин.",
@@ -390,494 +390,496 @@
 
 = section "Table of Prepositions" do
   %p Following is a comprehensive table of Novegradian prepositions.
-  %table
-    %tr
-      %th Preposition
-      %th Meaning
-      %th Case
-      %th Additional Notes
-    %tr
-      %td= t("бес", "bes")
-      %td without, empty of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("близе", "blíze")
-      %td near to, close to
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("вмести", "vmésti")
-      %td between
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("во", "vo")
-      %td in, during
-      %td= abbrev('acc')
-      %td Three forms: во, в, вон, (ве). Refers to something occuring within a long period of time, such as “during the war”
-    %tr
-      %td= t("во", "vo")
-      %td in, at
-      %td= abbrev('loc')
-      %td Three forms: во, в, вон, (ве).
-    %tr
-      %td= t("во", "vo")
-      %td into
-      %td= abbrev('lat')
-      %td Three forms: во, в, вон, (ве).
-    %tr
-      %td= t("вовиглу", "vovíglu")
-      %td on the eve of, on the day before
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("возаутру", "vozáutru")
-      %td on the day after
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("вокраги", "vókragi")
-      %td around, surrounding
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("вон", "von")
-      %td far from
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("вон", "von")
-      %td to the outside of
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("вонутри", "vonutrí")
-      %td inside, inside of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("воунѣ", "vóuně")
-      %td outside of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("деля", "délia")
-      %td for, for the sake of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("до", "do")
-      %td
-        1) up to
-        %br
-        2) before, up to
-        %br
-        3) until
-      %td= abbrev('gen')
-      %td Both spatial and temporal senses.
-    %tr
-      %td= t("ене неж", "iené neź")
-      %td unlike, different from
-      %td= abbrev('acc')
-      %td First adjectival portion declines in nominative case: #{t "ене", "iené"}, #{t "ена", "iená"}, #{t "ено", "ienó"}, #{t "ени", "iení"}.
-    %tr
-      %td= t("за", "za")
-      %td
-        1) for, in exchange for
-        %br
-        2) in, over
-      %td= abbrev('acc')
-      %td Sense 2 is temporal.
-    %tr
-      %td= t("за", "za")
-      %td
-        1) after
-        %br
-        2) for, in order to get
-      %td= abbrev('datins')
-      %td Sense 1 is temporal. Sense 2 is as in “He went out for milk”.
-    %tr
-      %td= t("зад", "zad")
-      %td behind, beyond
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("зад", "zad")
-      %td to the back of, to beyond
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("зе", "ze")
-      %td from
-      %td= abbrev('gen')
-      %td The counterpart of locative во, i.e., from an enclosed area or city
-    %tr
-      %td= t("зебод", "zebód")
-      %td from under
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("зезад", "zezád")
-      %td from behind
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("зенад", "zenád")
-      %td from over, from above
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("ими", "imí")
-      %td
-        1) with
-        %br
-        2) out of, because of
-      %td= abbrev('acc')
-      %td
-        Sense 1 is used with inanimate nouns to indicate alienable possession.
-        %br
-        Sense 2 used to give a reason for an action, such as “by mistake” or “out of stupidity”.
-    %tr
-      %td= t("ко", "ko")
-      %td
-        1) to, towards
-        %br
-        2) by
-      %td= abbrev('datins')
-      %td Three forms: ко, к, кон, (ке). Sense 2 is temporal, e.g., “by next week”.
-    %tr
-      %td= t("колѣвом", "kolě́vom")
-      %td towards the left of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("коправом", "koprávom")
-      %td towards the right of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("кроми", "krómi")
-      %td
-        1) except for, excluding
-        %br
-        2) in addition to
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("мегьу", "mégju")
-      %td during, in the course of
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("на", "na")
-      %td for
-      %td= abbrev('acc')
-      %td Refers to time after an action takes place, as in “he was sent there for a week”.
-    %tr
-      %td= t("на", "na")
-      %td on, at, in, on top of
-      %td= abbrev('loc')
-      %td Refers to open, unenclosed spaces (including such words as “park” or “Europe”).
-    %tr
-      %td= t("на", "na")
-      %td onto, into
-      %td= abbrev('lat')
-      %td Refers to open, unenclosed spaces (including such words as “park” or “Europe”).
-    %tr
-      %td= t("над", "nad")
-      %td over, above
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("над", "nad")
-      %td to over, to above
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("налѣвѣ", "nalě́ve")
-      %td to the left of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("намѣсти", "namě́sti")
-      %td instead of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("направѣ", "naprávě")
-      %td to the right of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("напроти", "napróti")
-      %td opposite, across from
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("непозшѣ", "nepózśě")
-      %td no than than, as soon as
-      %td= abbrev('acc')
-      %td
-    %tr
-      %td= t("ними", "nimí")
-      %td without
-      %td= abbrev('gen')
-      %td Used with inanimate nouns to indicate alienable lack of possession.
-    %tr
-      %td= t("нимо", "nímo")
-      %td
-        1) despite
-        %br
-        2) past, by
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("нутрин", "nutrín")
-      %td to the inside of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("о", "o")
-      %td at, next to, at someone’s house
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("о", "o")
-      %td about, concerning
-      %td= abbrev('loc')
-      %td
-    %tr
-      %td= t("о", "o")
-      %td against
-      %td= abbrev('lat')
-      %td Refers to something directed against a physical object, such as in “beat against”.
-    %tr
-      %td= t("огољо", "ogóło")
-      %td around
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("од", "od")
-      %td from, away from
-      %td= abbrev('gen')
-      %td The counterpart of locative по/па/о, i.e., from near, from the vicinity of.
-    %tr
-      %td= t("па", "pa")
-      %td by, in the immediate vicinity of
-      %td= abbrev('loc')
-      %td
-    %tr
-      %td= t("па", "pa")
-      %td into the immediately vicinity of
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("па вех", "pa véh")
-      %td throughout, to all parts of
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("пакраен", "pákraien")
-      %td to the edge of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("пакрай", "pákrai")
-      %td at the edge of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("по", "po")
-      %td
-        1) as far as, up to
-        %br
-        2) within
-      %td= abbrev('acc')
-      %td
-        Sense 1 refers vertical distance, as in “snow up to one’s knees”.
-        %br
-        Sense 2 is temporal, as in “within ten minutes”.
-    %tr
-      %td= t("по", "po")
-      %td along, during, during the course of
-      %td= abbrev('datins')
-      %td Refers to something during an event occurring over a short period of time, such as “during the flight”
-    %tr
-      %td= t("по", "po")
-      %td
-        1) along
-        %br
-        2) upon
-        %br
-        3) according to
-      %td= abbrev('loc')
-      %td
-        Sense 1 is locative, along a linear path such as road or river.
-        %br
-        Sense 2 is temporal, as in “upon completion”.
-    %tr
-      %td= t("по", "po")
-      %td after
-      %td= abbrev('lat')
-      %td After in order, not time.
-    %tr
-      %td= t("погољом", "pogółom")
-      %td around, across, all over, throughout
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("под", "pod")
-      %td under, beneath
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("под", "pod")
-      %td to under
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("послѣ", "póslě")
-      %td since
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("посрѣди", "posrě́di")
-      %td by means of, by
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("пред", "pred")
-      %td
-        1) in front of
-        %br
-        2) before
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("пред", "pred")
-      %td to the front of
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("при", "pri")
-      %td
-        1) along
-        %br
-        2) amid, amongst
-        %br
-        3) at the time of, in the presence of
-      %td= abbrev('loc')
-      %td Sense 1 refers to coastlines.
-    %tr
-      %td= t("при", "pri")
-      %td to next to
-      %td= abbrev('lat')
-      %td
-    %tr
-      %td= t("при помогьи", "pri pomogjí")
-      %td via, through, with the help of, by means of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("про", "pro")
-      %td because of
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("противе", "prótive")
-      %td
-        1) against, counter
-        %br
-        2) in comparison with
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("ради", "rádi")
-      %td for the sake of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("разом со", "rázom so")
-      %td together with, alongside
-      %td= abbrev('datins')
-      %td
-    %tr
-      %td= t("скож", "skóź")
-      %td across, stradling, on both sides of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("снутри", "snutrí")
-      %td from inside of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("со", "so")
-      %td from, off of
-      %td= abbrev('gen')
-      %td Three forms: со, с, сон, (се). The counterpart of locative на, i.e., from an unenclosed space.
-    %tr
-      %td= t("со", "so")
-      %td with
-      %td= abbrev('datins')
-      %td Three forms: со, с, сон, (се).
-    %tr
-      %td= t("слѣва", "slě́va")
-      %td from the left of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("соправа", "sopráva")
-      %td from the right of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("суон", "suón")
-      %td from outside
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("супроди", "suprodí")
-      %td
-        1) contrary to
-        %br
-        2) opposed to, anti
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("тастранѣ", "tástraně")
-      %td across from, on the opposite side of
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("трес", "tres")
-      %td
-        1) across
-        %br
-        2) through
-      %td= abbrev('gen')
-      %td
-    %tr
-      %td= t("трес", "tres")
-      %td within
-      %td= abbrev('acc')
-      %td Temporally, as in “within an hour”.
-    %tr
-      %td= t("ценайсо", "cenáiso")
-      %td after
-      %td= abbrev('datins')
-      %td Temporal sense only.
+  %table.prepositions
+    %thead
+      %tr
+        %th Preposition
+        %th Meaning
+        %th Case
+        %th Additional Notes
+    %tbody
+      %tr
+        %td= t("бес", "bes")
+        %td without, empty of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("близе", "blíze")
+        %td near to, close to
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("вмести", "vmésti")
+        %td between
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("во", "vo")
+        %td in, during
+        %td= abbrev('acc')
+        %td Three forms: во, в, вон, (ве). Refers to something occuring within a long period of time, such as “during the war”
+      %tr
+        %td= t("во", "vo")
+        %td in, at
+        %td= abbrev('loc')
+        %td Three forms: во, в, вон, (ве).
+      %tr
+        %td= t("во", "vo")
+        %td into
+        %td= abbrev('lat')
+        %td Three forms: во, в, вон, (ве).
+      %tr
+        %td= t("вовиглу", "vovíglu")
+        %td on the eve of, on the day before
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("возаутру", "vozáutru")
+        %td on the day after
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("вокраги", "vókragi")
+        %td around, surrounding
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("вон", "von")
+        %td far from
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("вон", "von")
+        %td to the outside of
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("вонутри", "vonutrí")
+        %td inside, inside of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("воунѣ", "vóuně")
+        %td outside of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("деля", "délia")
+        %td for, for the sake of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("до", "do")
+        %td
+          1) up to
+          %br
+          2) before, up to
+          %br
+          3) until
+        %td= abbrev('gen')
+        %td Both spatial and temporal senses.
+      %tr
+        %td= t("ене неж", "iené neź")
+        %td unlike, different from
+        %td= abbrev('acc')
+        %td First adjectival portion declines in nominative case: #{t "ене", "iené"}, #{t "ена", "iená"}, #{t "ено", "ienó"}, #{t "ени", "iení"}.
+      %tr
+        %td= t("за", "za")
+        %td
+          1) for, in exchange for
+          %br
+          2) in, over
+        %td= abbrev('acc')
+        %td Sense 2 is temporal.
+      %tr
+        %td= t("за", "za")
+        %td
+          1) after
+          %br
+          2) for, in order to get
+        %td= abbrev('datins')
+        %td Sense 1 is temporal. Sense 2 is as in “He went out for milk”.
+      %tr
+        %td= t("зад", "zad")
+        %td behind, beyond
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("зад", "zad")
+        %td to the back of, to beyond
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("зе", "ze")
+        %td from
+        %td= abbrev('gen')
+        %td The counterpart of locative во, i.e., from an enclosed area or city
+      %tr
+        %td= t("зебод", "zebód")
+        %td from under
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("зезад", "zezád")
+        %td from behind
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("зенад", "zenád")
+        %td from over, from above
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("ими", "imí")
+        %td
+          1) with
+          %br
+          2) out of, because of
+        %td= abbrev('acc')
+        %td
+          Sense 1 is used with inanimate nouns to indicate alienable possession.
+          %br
+          Sense 2 used to give a reason for an action, such as “by mistake” or “out of stupidity”.
+      %tr
+        %td= t("ко", "ko")
+        %td
+          1) to, towards
+          %br
+          2) by
+        %td= abbrev('datins')
+        %td Three forms: ко, к, кон, (ке). Sense 2 is temporal, e.g., “by next week”.
+      %tr
+        %td= t("колѣвом", "kolě́vom")
+        %td towards the left of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("коправом", "koprávom")
+        %td towards the right of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("кроми", "krómi")
+        %td
+          1) except for, excluding
+          %br
+          2) in addition to
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("мегьу", "mégju")
+        %td during, in the course of
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("на", "na")
+        %td for
+        %td= abbrev('acc')
+        %td Refers to time after an action takes place, as in “he was sent there for a week”.
+      %tr
+        %td= t("на", "na")
+        %td on, at, in, on top of
+        %td= abbrev('loc')
+        %td Refers to open, unenclosed spaces (including such words as “park” or “Europe”).
+      %tr
+        %td= t("на", "na")
+        %td onto, into
+        %td= abbrev('lat')
+        %td Refers to open, unenclosed spaces (including such words as “park” or “Europe”).
+      %tr
+        %td= t("над", "nad")
+        %td over, above
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("над", "nad")
+        %td to over, to above
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("налѣвѣ", "nalě́ve")
+        %td to the left of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("намѣсти", "namě́sti")
+        %td instead of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("направѣ", "naprávě")
+        %td to the right of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("напроти", "napróti")
+        %td opposite, across from
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("непозшѣ", "nepózśě")
+        %td no than than, as soon as
+        %td= abbrev('acc')
+        %td
+      %tr
+        %td= t("ними", "nimí")
+        %td without
+        %td= abbrev('gen')
+        %td Used with inanimate nouns to indicate alienable lack of possession.
+      %tr
+        %td= t("нимо", "nímo")
+        %td
+          1) despite
+          %br
+          2) past, by
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("нутрин", "nutrín")
+        %td to the inside of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("о", "o")
+        %td at, next to, at someone’s house
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("о", "o")
+        %td about, concerning
+        %td= abbrev('loc')
+        %td
+      %tr
+        %td= t("о", "o")
+        %td against
+        %td= abbrev('lat')
+        %td Refers to something directed against a physical object, such as in “beat against”.
+      %tr
+        %td= t("огољо", "ogóło")
+        %td around
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("од", "od")
+        %td from, away from
+        %td= abbrev('gen')
+        %td The counterpart of locative по/па/о, i.e., from near, from the vicinity of.
+      %tr
+        %td= t("па", "pa")
+        %td by, in the immediate vicinity of
+        %td= abbrev('loc')
+        %td
+      %tr
+        %td= t("па", "pa")
+        %td into the immediately vicinity of
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("па вех", "pa véh")
+        %td throughout, to all parts of
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("пакраен", "pákraien")
+        %td to the edge of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("пакрай", "pákrai")
+        %td at the edge of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("по", "po")
+        %td
+          1) as far as, up to
+          %br
+          2) within
+        %td= abbrev('acc')
+        %td
+          Sense 1 refers vertical distance, as in “snow up to one’s knees”.
+          %br
+          Sense 2 is temporal, as in “within ten minutes”.
+      %tr
+        %td= t("по", "po")
+        %td along, during, during the course of
+        %td= abbrev('datins')
+        %td Refers to something during an event occurring over a short period of time, such as “during the flight”
+      %tr
+        %td= t("по", "po")
+        %td
+          1) along
+          %br
+          2) upon
+          %br
+          3) according to
+        %td= abbrev('loc')
+        %td
+          Sense 1 is locative, along a linear path such as road or river.
+          %br
+          Sense 2 is temporal, as in “upon completion”.
+      %tr
+        %td= t("по", "po")
+        %td after
+        %td= abbrev('lat')
+        %td After in order, not time.
+      %tr
+        %td= t("погољом", "pogółom")
+        %td around, across, all over, throughout
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("под", "pod")
+        %td under, beneath
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("под", "pod")
+        %td to under
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("послѣ", "póslě")
+        %td since
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("посрѣди", "posrě́di")
+        %td by means of, by
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("пред", "pred")
+        %td
+          1) in front of
+          %br
+          2) before
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("пред", "pred")
+        %td to the front of
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("при", "pri")
+        %td
+          1) along
+          %br
+          2) amid, amongst
+          %br
+          3) at the time of, in the presence of
+        %td= abbrev('loc')
+        %td Sense 1 refers to coastlines.
+      %tr
+        %td= t("при", "pri")
+        %td to next to
+        %td= abbrev('lat')
+        %td
+      %tr
+        %td= t("при помогьи", "pri pomogjí")
+        %td via, through, with the help of, by means of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("про", "pro")
+        %td because of
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("противе", "prótive")
+        %td
+          1) against, counter
+          %br
+          2) in comparison with
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("ради", "rádi")
+        %td for the sake of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("разом со", "rázom so")
+        %td together with, alongside
+        %td= abbrev('datins')
+        %td
+      %tr
+        %td= t("скож", "skóź")
+        %td across, stradling, on both sides of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("снутри", "snutrí")
+        %td from inside of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("со", "so")
+        %td from, off of
+        %td= abbrev('gen')
+        %td Three forms: со, с, сон, (се). The counterpart of locative на, i.e., from an unenclosed space.
+      %tr
+        %td= t("со", "so")
+        %td with
+        %td= abbrev('datins')
+        %td Three forms: со, с, сон, (се).
+      %tr
+        %td= t("слѣва", "slě́va")
+        %td from the left of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("соправа", "sopráva")
+        %td from the right of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("суон", "suón")
+        %td from outside
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("супроди", "suprodí")
+        %td
+          1) contrary to
+          %br
+          2) opposed to, anti
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("тастранѣ", "tástraně")
+        %td across from, on the opposite side of
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("трес", "tres")
+        %td
+          1) across
+          %br
+          2) through
+        %td= abbrev('gen')
+        %td
+      %tr
+        %td= t("трес", "tres")
+        %td within
+        %td= abbrev('acc')
+        %td Temporally, as in “within an hour”.
+      %tr
+        %td= t("ценайсо", "cenáiso")
+        %td after
+        %td= abbrev('datins')
+        %td Temporal sense only.
 
 %section.footnotes
   = footnote do
-    Section 5.12
+    See #{link_to "Section 5.12", novegradian_grammar_page_path(:nominalmorphology, anchor: 's5-12'), class: 'xref'}.
 
   = footnote do
-    See Section 16.1.4
+    See #{link_to "Section 16.1.4", "#s16-1-4", class: 'xref'}.
 
   = footnote do
     The prepositions #{t "над", "nad"} “over”, #{t "под", "pod"} “under”, #{t "пред", "pred"} “in front of”, and #{t "зад", "zad"} “behind” are sometimes considered primary and sometimes secondary. They can be made directional by switching to the lative case like other primary prepositions, but they can never take the locative case. Ultimately, however, this is little more than a matter of classification and bears little real significance.
 
   = footnote do
-    See Section 10.3.2.
+    See #{link_to "Section 10.3.2", novegradian_grammar_page_path(:derivation, anchor: 's10-3-2'), class: 'xref'}.

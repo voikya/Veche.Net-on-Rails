@@ -125,14 +125,20 @@ body.grammar {
 
   h2 {
     color: #000000;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 18px;
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 10px;
+    }
   }
 
   h3 {
     color: #000000;
     font-weight: bold;
     font-size: 14px;
+    margin-top: 25px;
   }
 
   h4 {
@@ -167,6 +173,23 @@ body.grammar {
     border: none;
   }
 
+  a.xref {
+    border: none;
+
+    &:after {
+      @include fa-icon();
+      color: #999999;
+      background-color: #dfdfdf;
+      content: $fa-var-external-link;
+      border-radius: 10px;
+      vertical-align: super;
+      padding: 3px;
+      font-size: xx-small;
+      margin-left: 3px;
+      transition: color 0.3s, background-color 0.3s;
+    }
+  }
+
   hr {
     border-left: 0px;
     border-right: 0px;
@@ -183,14 +206,16 @@ body.grammar {
     padding-left: 3px;
     padding-right: 3px;
     text-align: center;
+    border-bottom: solid 1px #EFEFEF;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
   }
 
   td.label, td.arrow, th {
-    font-weight: bold;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    font-weight: 200;
+    padding: 5px 20px;
     text-align: center;
   }
 
@@ -198,6 +223,8 @@ body.grammar {
     margin: 5px;
     margin-left: 1cm;
     border-collapse: collapse;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+    background-color: #FBFBFB;
 
     &.textgloss {
       margin-left: 0.5cm;
@@ -207,15 +234,20 @@ body.grammar {
         vertical-align: top;
         text-align: left;
         padding-right: 20px;
+
+        &.index {
+          font-weight: bold;
+        }
       }
     }
 
     &.invisible {
       border: none;
+      background: transparent;
+      box-shadow: none;
 
-      td {
+      > td {
         text-align: left;
-        padding-left: 10px;
       }
     }
 
@@ -250,6 +282,33 @@ body.grammar {
 
     td.notcognate {
       color: #999999;
+    }
+  }
+
+  figure {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+    background-color: #FBFBFB;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 90%;
+    color: #333333;
+  }
+
+  .two-columns {
+    clear: both;
+
+    .col {
+      float: left;
+    }
+
+    p {
+      width: 440px;
+      margin-left: 40px;
     }
   }
 
@@ -292,6 +351,17 @@ body.grammar {
     }
   }
 
+  ol.table-notes {
+    list-style-type: lower-alpha;
+    font-size: smaller;
+    font-style: italic;
+    margin-left: 20px;
+
+    li {
+      margin-bottom: 0px;
+    }
+  }
+
   dl {
     dt {
       font-weight: bold;
@@ -301,10 +371,6 @@ body.grammar {
 
   .center {
     text-align: center;
-  }
-
-  .imgcaption {
-    font-style: italic;
   }
 
   abbr {

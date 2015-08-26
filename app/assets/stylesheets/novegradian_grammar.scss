@@ -5,7 +5,6 @@ $table_border_bottom_right: #C6D1E2;
 $table_border_top_left: #B6C1D2;
 
 body.grammar.novegradian {
-
   header {
     background-color: $background_color;
 
@@ -23,7 +22,14 @@ body.grammar.novegradian {
 
     &:hover, &:active {
       color: $header_color;
-      background-color: $link-color;
+      background-color: $link_color;
+    }
+  }
+
+  a.xref {
+    &:hover:after, &:active:after {
+      color: $header_color;
+      background-color: $link_color;
     }
   }
 
@@ -33,22 +39,124 @@ body.grammar.novegradian {
 
   td.label, td.arrow, th {
     background-color: $background_color;
+    color: white;
   }
 
-  table {
-    border: solid 3px $background_color;
-    border-bottom: solid 2px $table_border_bottom_right;
-    border-right: solid 2px $table_border_bottom_right;
-    border-top: solid 2px $table_border_top_left;
-    border-left: solid 2px $table_border_top_left;
+  table.textgloss {
+    border: solid 1px lighten($table_border_top_left, 15%);
+    border-left: solid 5px $table_border_top_left;
 
-    &.textgloss {
-      border: dotted 1px $table_border_top_left;
-      border-left: solid 5px $table_border_top_left;
+    td.index {
+      font-weight: bold;
+      color: $table_border_top_left;
+    }
+  }
+
+  table.present-future {
+    td {
+      min-width: 80px;
+    }
+  }
+
+  table.noun-declension {
+    th {
+      min-width: 70px;
+    }
+
+    td {
+      min-width: 80px;
+    }
+  }
+
+  table.prepositions {
+    td:nth-child(1) {
+      text-align: left;
+    }
+
+    td:nth-child(2) {
+      width: 200px;
+      text-align: left;
+    }
+
+    td:nth-child(4) {
+      width: 300px;
+      text-align: left;
     }
   }
 
   span.cyrillic-numeral {
     text-decoration: overline;
+  }
+
+  figure.slavic-family {
+    text-align: center;
+
+    div.family {
+      border: solid 1px #999;
+      float: left;
+      height: 20em;
+      width: 10em;
+      margin: 20px 5px 10px 5px;
+    }
+
+    h1 {
+      font-size: large;
+      background-color: #CCC;
+      width: 80%;
+      display: inline-block;
+      position: relative;
+      top: -10px;
+    }
+
+    h2 {
+      margin-top: 0px;
+      font-size: 110%;
+      font-weight: 300
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li.extinct {
+      font-style: italic;
+    }
+
+    small {
+      font-style: italic;
+      float: right;
+      margin-right: 10px
+    }
+  }
+
+  table.correlatives {
+    &.left {
+      float: left;
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    &.right {
+      float: right;
+    }
+  }
+
+  table.colors {
+    width: 200px;
+    height: 50px;
+    border: solid 1px #333333;
+    margin-left: 0;
+
+    td {
+      border: solid 1px #333333;
+    }
+  }
+
+  table.color-wrapper {
+    td {
+      text-align: left;
+      padding-left: 10px;
+    }
   }
 }

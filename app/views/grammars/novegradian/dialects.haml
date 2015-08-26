@@ -2,8 +2,8 @@
 - content_for :section_subtitle, "Мовли"
 
 = section "Major Novegradian Dialects" do
-  %p Novegradian has five major dialect zones, as shown in the map on the following page. These groups are typically identified as “Central” (including standard Novegradian), “Southern”, “Zavolotian”, “Northern”, and “Siberian”. Each of these can then in turn be divided into a number of subdialects.
-  %p It should be noted that the following discussion is purely about <em>spoken</em> dialects (as very little written variation exists). When comparing them to standard Novegradian, therefore, it is best to compare them to the spoken form of the language as described in the previous section rather than the written standard. Unless otherwise noted, most of the changes described in section 22 are also present in the various dialects, such as nominative ending loss, possessive endings, and the vocative case.
+  %p Novegradian has five major dialect zones, as shown in the map below. These groups are typically identified as “Central” (including standard Novegradian), “Southern”, “Zavolotian”, “Northern”, and “Siberian”. Each of these can then in turn be divided into a number of subdialects.
+  %p It should be noted that the following discussion is purely about <em>spoken</em> dialects (as very little written variation exists). When comparing them to standard Novegradian, therefore, it is best to compare them to the spoken form of the language as described in the previous section rather than the written standard. Unless otherwise noted, most of the changes described in #{link_to "Section 22", novegradian_grammar_page_path(:spoken), class: 'xref'} are also present in the various dialects, such as nominative ending loss, possessive endings, and the vocative case.
   = image_tag "novegradian/dialectmap.png", :alt => "A map of major Novegradian dialect zones"
   %p.imgcaption The map above shows the geographic distribution of the five major dialect groups, represented by the large dashed lines. This, however, is largely based on traditional usage, and does not indicate the widespread use of central dialects closer to Standard Novegradian in major cities throughout the country.
   %p Shaded regions represent areas where the first language of most of the population is not Novegradian, so that the majority of speakers learn Novegradian at a later age.
@@ -37,13 +37,13 @@
     %ul
       %li Final vowels in definite ending endings tend to drop: #{t "цервенай", "cervénai"} “red (#{abbrev 'nom.sg.fem'})” (standard #{t "цервеная", "cervénaia"}).
       %li Unstressed vowels in nominal endings followed by a consonant tend to drop or weaken greatly: #{t "морм", "mórm"} “sea (#{abbrev 'datins.sg'})” (standard #{t "морем", "mórem"}).
-      %li /ɨ/ pronounced as /ə/: гымати [ˈgə.mə.tɪ] (standard [ˈgɨ.mə.tɪ]).
+      %li /ɨ/ pronounced as /ə/: гымати [ˈgə.mə.tɪ] (standard [ˈgɨ.mə.tɪ]) “shout”.
       %li /n/ before a stressed front vowel is realized as a fully palatal [ɲ] instead of palatalized [nʲ]: #{t "ньет", "njét"} “no” (standard #{t "нет", "nét"}).
       %li /b/ in oblique forms of #{abbrev '2sg'} and reflexive pronouns pronounced /β/: #{t "шеве", "śevé"} “oneself (#{abbrev 'acc'})” (standard #{t "шебе", "śebé"})
 
   = section "Grammar" do
     %p Once again, the grammar of standard Novegradian has been previously discussed.
-    %p The most defining feature of the grammar of the semi-standard Finnish dialect is its use of the partitive case. It uses the partitive after numerals instead of the genitive: #{t "довѣ нигох", "dóvě nígoh"} “two books” (standard #{t "довѣ нигѣ", "dóvě nígě"}). It also uses the partitive case instead of the accusative to mark the direct object of positive stative verbs: #{t "Яс лублун Маркех", "Iás lublún Markéh"} “I love Mark” (standard #{t "Яс лублун Марка", "Iás lublún Márka"}). It is not uncommon to hear the partitive singular ending #{t "-ох", "-oh"} (already reduced from standard #{t "-ок", "-ok"}) simplify to just #{t "-о", "-o"} in casual speech.
+    %p The most defining feature of the grammar of the semi-standard Finnish dialect is its use of the partitive case. It uses the partitive after numerals instead of the genitive or count forms: #{t "довѣ нигох", "dóvě nígoh"} “two books” (standard #{t "довѣ нигѣ", "dóvě nígě"}). It also uses the partitive case instead of the accusative to mark the direct object of positive stative verbs: #{t "Яс лублун Маркех", "Iás lublún Markéh"} “I love Mark” (standard #{t "Яс лублун Марка", "Iás lublún Márka"}). It is not uncommon to hear the partitive singular ending #{t "-ох", "-oh"} (already reduced from standard #{t "-ок", "-ok"}) simplify to just #{t "-о", "-o"} in casual speech.
     %p The grammar of the Latvian dialects does not vary significantly from standard Novegradian. The most noticeable difference is the tendency to place adverbs clause-finally, instead of in front of the verb, which often sounds quite strange to other Novegradian speakers. The reduction of a number of nominative and genitive case definite adjective endings is also a distinctive feature, and is different from the reductions seen in colloquial speech of other dialects:
     %table
       %tr
@@ -112,14 +112,14 @@
       %p Additionally, many places where /e/ [je] appears at the beginning of a word in standard Novegradian that derives directly from Common Slavic, southern dialects will instead have /o/ (which can be realized as /a/, as per above, or /βo/, as per another rule described below): #{t "водене", "vódene"} “one” (standard #{t "едене", "iéden"}), #{t "вожера", "vóźera"} “lake” (standard #{t "ежеро", "iéźero"}). The presence of /o/ for standard initial /e/ is highly inconsistent across subdialects, suggesting dialect borrowing may be a contributing factor.
 
     = section "Vowel Alterations" do
-      %p /o/ is not allowed to appear word-initially in native words, as /β/ must be added before. This often leads to a stressed /βo/ versus unstressed /a/ alteration: #{abbrev 'nom.sg'} #{t "акно", "aknó"} “window”, #{abbrev 'gen.sg'} #{t "вокну", "vóknu"} (standard #{t "окно", "oknó"}, #{t "окну", "óknu"}). Standard Novegradian has a similar feature, where /w/ is added before an initial stressed /o/, though this does not appear in writing.
+      %p /o/ is not allowed to appear word-initially in native words, as /β/ must be added before. This often leads to a stressed /βo/ versus unstressed /a/ alteration: #{abbrev 'nom.sg'} #{t "акно", "aknó"} “window”, #{abbrev 'gen.sg'} #{t "вокну", "vóknu"} (standard #{t "окно", "oknó"}, #{t "окну", "óknu"}). Standard Novegradian has a similar feature, where [w] is added before an initial stressed /o/, though this does not appear in writing.
       %p Many nouns with an unstressed /e/ in the singular that undergo a stress shift to that vowel in the plural will see an /e/ → /o/ shift when stressed. This is another feature very common in East Slavic languages: #{t "вожера", "vóźera"} “sea”, #{t "ажоры", "aźóry"} “seas” (standard #{t "ежеро", "iéźero"}, #{t "ежера", "ieźerá"}).
 
     = section "Consonants" do
       %p The consonant system of southern dialects is actually quite similar to the standard.
       %p The most noticeable difference is the sporadic application of the Second Slavic Palatalization, which most forms of Novegradian skipped. This results in */k g x kv gv xv/ becoming /ts z s tsw zw sw/ before front vowels in these dialects: #{t "зўязда", "zwiazdá"} “star” (standard #{t "гуѣзда", "guě́zda"}). #{t "Веше", "véśe"} “all” (standard #{t "вехе", "véhe"}), an instance of the progressive palatalization not seen in standard Novegradian, is also commonly heard.
       %p Another feature is cókanje (#{t "цоканье", "cókanje"}), the confusion of /tʃ/ and /ts/. Standard Novegradian went through this stage, but ultimately converted all original instances of both /ts/ and /tʃ/ to /ts/. In southern dialects, the two forms now exist in allophonic variation, with [tʃ] before front vowels and /j/ and [ts] elsewhere: #{t "чидаты", "čidáty"} “read” (standard #{t "цидати", "cidáti"}), #{t "цай", "cái"} “tea” (standard #{t "цае", "cáie"}).
-      %p Standard Novegradian /ɫ/ has merged with /w/, and /ɲ/ is generally pronounced as a geminate /nn/: #{t "жоуте", "źóute"} “yellow” (standard #{t "жољте", "źółte"}), #{t "вяденне", "viadénne"} “knowledge” (standard #{t "вѣденье", "vědénje"}).
+      %p Standard Novegradian /ɫ/ has merged with /w/, and /ɲ/ is generally pronounced as a geminate /nn/: #{t "жоуте", "źóute"} “yellow” (standard #{t "жољте", "źółte"}), #{t "веденне", "vedénne"} “knowledge” (standard #{t "вѣденье", "vědénje"}).
 
   = section "Grammar" do
     %p Southern dialects have all the same nominal and adjectival declensional forms as the standard, although their pronunciation is often different. The total number of declensions has dropped, however, due to the loss of the third declension O-stems.
@@ -697,9 +697,9 @@
           %td= t("нигой", "nígoi", :linebreak => true)
           %td= t("жемией", "źémiéi", :linebreak => true)
           %td= t("ежером", "iéźerom", :linebreak => true)
-          %td= t("иртех", "irtéh", :linebreak => true)
-          %td= t("нокьех", "nókjeh", :linebreak => true)
-          %td= t("именех", "ímeneh", :linebreak => true)
+          %td= t("иртем", "irtém", :linebreak => true)
+          %td= t("нокье", "nókjem", :linebreak => true)
+          %td= t("именем", "ímenem", :linebreak => true)
         %tr
           %th Part
           %td= t("нигох", "nígoh", :linebreak => true)

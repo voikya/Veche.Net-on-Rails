@@ -2,7 +2,7 @@
 - nouns ||= []
 - forms ||= []
 
-%table
+%table.noun-declension
   %tr
     %th{:colspan => (nouns.size + 1)}= title
   - if forms.include? :meaning
@@ -51,3 +51,8 @@
       %th Lative
       - nouns.each do |noun|
         %td= t(noun[:lat][:cyr], noun[:lat][:lat], :linebreak => true) rescue "—"
+  - if forms.include? :count
+    %tr
+      %th Count
+      - nouns.each do |noun|
+        %td= t(noun[:count][:cyr], noun[:count][:lat], :linebreak => true) rescue "—"
