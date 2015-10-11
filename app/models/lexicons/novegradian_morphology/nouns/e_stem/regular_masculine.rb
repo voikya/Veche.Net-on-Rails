@@ -84,7 +84,7 @@ module Morphology
           end
 
           def _partitive_dual
-            [stem + "у", stem-transliterated + "u"]
+            [stem + "у", stem_transliterated + "u"]
           end
 
           def _partitive_plural
@@ -96,7 +96,7 @@ module Morphology
           end
 
           def _locative_dual
-            [stem + "у", stem-transliterated + "u"]
+            [stem + "у", stem_transliterated + "u"]
           end
 
           def _locative_plural
