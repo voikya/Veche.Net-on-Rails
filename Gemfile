@@ -27,6 +27,9 @@ gem 'nokogiri'
 gem 'dropbox-sdk'
 gem 'whenever'
 
+# Monitoring
+gem 'newrelic_rpm'
+
 # Assets
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
