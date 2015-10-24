@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.22'
 
 # Database
 gem 'pg'
