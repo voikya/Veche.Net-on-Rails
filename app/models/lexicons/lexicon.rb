@@ -5,7 +5,7 @@ module Lexicons
     after_initialize :load_entries_table
 
     def self.find_by_language(language)
-      find_by_slug(language)
+      find_by_slug!(language)
     end
 
     # Retrieve the result set for the given lexicon as an ActiveRecord::Relation.
