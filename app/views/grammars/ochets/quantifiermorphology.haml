@@ -29,7 +29,7 @@
         %td= underlying("-Ø")
         %td= underlying("-Ø")
     %p The nominative case is consistently formed with no ending, simply the bare quantifier stem.
-    %p The following table demonstrates the nominative of a number of different types of quantifiers: *kan- “many”, *as- “all”, *kyn- “two”, *lan- “hand(ful)”<sup>1</sup>, *liitr- “liter”, *kilo- “kilogram”, *funt- “pound”, *ptel- “bottle”. These last four are Novegradian loans of varying ages.
+    %p The following table demonstrates the nominative of a number of different types of quantifiers: *kan- “many”, *as- “all”, *kyn- “two”, *lan- “hand(ful)”#{footnote}, *liitr- “liter”, *kilo- “kilogram”, *funt- “pound”, *ptel- “bottle”. These last four are Novegradian loans of varying ages.
     - forms = [ { :stem => "*kan", :eng => "many", :ochets => "кан", :translit => "kan", :breakdown => "kan-Ø", :underlying => "ka{b+}n-Ø" },
                 { :stem => "*as", :eng => "all", :ochets => "һас", :translit => "has", :breakdown => "as-Ø", :underlying => "a{b+}s-Ø" },
                 { :stem => "*kyn", :eng => "two", :ochets => "кын", :translit => "kyn", :breakdown => "kyn-Ø", :underlying => "ky{b+}n-Ø" },
@@ -641,9 +641,9 @@
     %li #{t "иес", "ies"} ‘the rest of, the remainder of’
   %ul
     %li #{t "маккан", "makkan"} ‘more’ (for count nouns)
-    %li #{t "моолс", "mools"} ‘more’ (for mass nouns)<sup>2</sup>
+    %li #{t "моолс", "mools"} ‘more’ (for mass nouns)#{footnote}
     %li #{t "менел", "menel"} ‘fewer’ (for count nouns)
-    %li #{t "мениц", "menits"} ‘less’ (for mass nouns)<sup>3</sup>
+    %li #{t "мениц", "menits"} ‘less’ (for mass nouns)#{footnote}
   %p There are also several common temporal quantifiers. These are commonly used with infinitives, participles, or other non-finite verbal forms: #{t "наунт тидеус", "naunt tideus"} ‘reading many times’, #{t "венче шавыс", "wenče šawys"} ‘never saying’.
   %ul
     %li #{t "наунт", "naunt"} ‘many times, many iterations’
@@ -1141,8 +1141,12 @@
     %p For the most part the distributive numerals are formed with the expected distributive prefix sa-/se-. However, there are a few exceptional forms. The most obvious is the additional of a non-palatalizing suffix #{underlying "*-Aŋ"} to all of the animate forms, which would appear to be a plural marker.
     %p These forms serve as animate and inanimate quantifiers, while the inanimate forms alone can also serve as nouns (taking either animate or inanimate endings as appropriate). The only exceptions are of course the use of #{t "сееден", "seeden"} and #{t "саҕыын", "saǧyyn"} as nouns rather than <i>saŋquus</i> and <i>saŋkyn</i>.
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    Literally “palm”.
 
-%p 1) Literally “palm”.
-%p 2) From Novegradian #{t "болише", "bóliśe"} ‘more’.
-%p 3) From Novegradian #{t "менише", "méniśe"} ‘less’.
+  = footnote do
+    From Novegradian #{t "болише", "bóliśe"} ‘more’.
+
+  = footnote do
+    From Novegradian #{t "менише", "méniśe"} ‘less’.

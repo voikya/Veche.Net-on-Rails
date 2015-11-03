@@ -77,7 +77,7 @@
 
 = section "Biconsonantal Roots and kəthēb" do
   %p Biconsonantal roots may be conjugated in <i>kəthēb</i>, but only by first converting them to standard triconsonantal roots via internal extension (the addition of #{template "C2"} *W for roots with *ū, *Y for roots with *ī or *ē, and *' for roots with *ā). These then conjugate as though they were triconsonantal verbs in all forms.
-  %p Two examples are the roots *čīl “cold” and *řūn “hot”, which in <i>kəthēb</i> yield the verbs #{t "τζαιιήλ", "čəyyēl"} “cool, make cold” and #{t "ρ̄αυυήν", "řəwwēn"} “heat, make hot”. Their conjugation is essentially as though they were always triconsonantal, with the addition of an epenthetic vowel /a/ in some present tense forms to prevent an illegal cluster: #{t "τιτζαιαλεί", "tičəyalī"} “you (f) are cooling” (not **tičəylī), #{t "νερ̄αυανού", "neřəwanū"} “we are heating” (not **neřəwnū)<sup>1</sup>.
+  %p Two examples are the roots *čīl “cold” and *řūn “hot”, which in <i>kəthēb</i> yield the verbs #{t "τζαιιήλ", "čəyyēl"} “cool, make cold” and #{t "ρ̄αυυήν", "řəwwēn"} “heat, make hot”. Their conjugation is essentially as though they were always triconsonantal, with the addition of an epenthetic vowel /a/ in some present tense forms to prevent an illegal cluster: #{t "τιτζαιαλεί", "tičəyalī"} “you (f) are cooling” (not **tičəylī), #{t "νερ̄αυανού", "neřəwanū"} “we are heating” (not **neřəwnū)#{footnote}.
   - alashian = { :present     => %w(άτζαιιαλ τίτζαιιαλ τιτζαιαλεί ίτζαιιαλ ιτζαιαλεί νιτζαιαλού τιτζαιαλού τιτζαιαλού ιτζαιαλού),
                  :preterite   => %w(τζαιιήλετ τζαιιήλτα τζαιιήλσ̄ε τζαιιήλ τζιιηλώ τζαιιηλνώ τζαιιήλτυν τζαιιήλσ̄ιν τζιιηλού),
                  :imperfect   => %w(τζέιιελ τζέιιελετ τζέιιελες̄ τζέιιελ τζειιελώ τζέιιελεν τζέιιελτυν τζέιιελσ̄ιν τζειιελού),
@@ -272,7 +272,7 @@
     %p In addition, the /i/ that immediately precedes #{template "C3"} in the active participle is lowered to /e/: #{t "μύμαλλερ̄", "muməlleř"} “salting” (not **muməlliř).
 
   = section "C1 = '/H" do
-    %p Root-initial *' and *H are prone to dropping, but are not especially problematic. Such roots include *'xīr “be late, last” and *hlāk “behave”<sup>2</sup>, yielding the Scale II verbs #{t "αχχήρ", "'əxxēr"} “delay”, #{t "αχχώρ", "'əxxār"} “be delayed”, and #{t "ηαλλήκ", "həllēk"} “behave”.
+    %p Root-initial *' and *H are prone to dropping, but are not especially problematic. Such roots include *'xīr “be late, last” and *hlāk “behave”#{footnote}, yielding the Scale II verbs #{t "αχχήρ", "'əxxēr"} “delay”, #{t "αχχώρ", "'əxxār"} “be delayed”, and #{t "ηαλλήκ", "həllēk"} “behave”.
     %p These verbs are only irregular when a prefix is present, namely in the present, perfective subjunctive, and deverbatives. In these forms, the *'/H is replaced by /j/: #{t "άιαχχαρ", "'ayəxxar"} “I am delaying” (not **'a'axxar), #{t "в̄ήιαλλεκ", "vēyəllek"} “[that] he/she/they behaved” (not **vēhəllek), #{t "μύιαχχαρ", "muyəxxar"} “being delayed, delayed”.
     %p All other forms are regular.
 
@@ -470,7 +470,9 @@
                        { :name => "Passive Part.", :ala => "μύραμματζ", :lat => "murəmməč", :meaning => "reflected" } ]
         %td= render 'deverbative_table', :title => "Scale II Deverbatives", :verb => { :ala => "rəmmāč", :eng => "be reflected" }, :forms => alashian
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    The prefix vowel /e/ in <i>neřəwenū</i> is due to the initial *Ř, and is present to all #{template "C1"} = Ř roots.
 
-%p 1) The prefix vowel /e/ in <i>neřəwenū</i> is due to the initial *Ř, and is present to all #{template "C1"} = Ř roots.
-%p 2) Unusually for triconsonantal roots, *hlāk has a Scale II form but no Scale I form. The original Scale I sense, as evidenced by its cognates in other Semitic languages, was “walk”.
+  = footnote do
+    Unusually for triconsonantal roots, *hlāk has a Scale II form but no Scale I form. The original Scale I sense, as evidenced by its cognates in other Semitic languages, was “walk”.

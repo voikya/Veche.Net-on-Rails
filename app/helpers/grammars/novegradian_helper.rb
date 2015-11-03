@@ -26,6 +26,7 @@ module Grammars
       'COLL' => "Colloquial",
       'COMP' => "Comparative",
       'COND' => "Conditional",
+      'COUNT' => "Count Form",
       'CS' => "Late Common Slavic",
       'DAT' => "Dative",
       'DATINS' => "Dative-Instrumental",

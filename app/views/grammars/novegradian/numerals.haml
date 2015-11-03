@@ -2,8 +2,8 @@
 - content_for :section_subtitle, "Цедакьи ймѣни"
 
 = section "Definitions and Features" do
-  %p Numerals form a separate class in Novegradian, demonstrating behavior somewhere in between nouns/pronouns and adjectives. Like adjectives, they are modifiers of nouns; however, agreement is limited to the digits one through four, and that agreement is limited to gender (1-4) and number (1 only), animacy for all numbers, and case for all numerals but only in a few specific circumstances. They also lack many other typical adjectival features, such as the definite/indefinite distinction, grades of comparison, and the ability to be used as a predicate.
-  %p On the other hand, they also frequently cause the noun they modify to agree with themselves. Often the case of the entire noun phrase is marked on the numeral, with the noun instead having some other case forced on it in agreement. Numerals also often cause the distinction of number to be neutralized on the noun (since, after all, the numeral marks number even more specifically).
+  %p Numerals form a separate class in Novegradian, demonstrating behavior somewhere in between nouns/pronouns and adjectives. Like adjectives, they are modifiers of nouns; however, agreement is limited to the digits one through three, and that agreement is limited to gender (1-3) and number (1 only), animacy for all numbers, and case for all numerals in a few restricted circumstances. They also lack many other typical adjectival features, such as the definite/indefinite distinction, grades of comparison, and the ability to be used as a predicate.
+  %p On the other hand, they also frequently trigger agreement on the nouns they modify as well. Often the case of the entire noun phrase is marked on the numeral, with the noun instead having some other case forced on it in agreement. Numerals also often cause the distinction of number to be neutralized on the noun (since, after all, the numeral marks number even more specifically).
   %p There are also a few derivative forms of numbers that will be discussed here which function as other parts of speech. These include ordinal numbers, which are true adjectives, and a variety of adverbial numerals.
 
 = section "Inanimate Numerals" do
@@ -204,7 +204,7 @@
       %th 90
       %td= t("девидешити", "devidéśiti", :linebreak => true)
       %td= t("девитедешитех", "devitedéśiteh", :linebreak => true)
-      %td= t("девитедешитем", "devitedéśitem", :linebreak => true) 
+      %td= t("девитедешитем", "devitedéśitem", :linebreak => true)
   %p Any other whole numbers below 100 can be formed by placing a digit after a decade, and dropping the #{t "-ти", "-ti"} from the decade. Only the last digit declines: #{t "дуадеши шеньи", "duadéśi śénji"} “twenty-seven”.
   %p The hundreds are compounds of units plus forms of the word #{t "сто", "stó"} “hundred”. In their forms, older dual and genitive cases may be seen. These numbers no longer decline for case and are invariable.
   %table
@@ -238,10 +238,10 @@
     %tr
       %th 900
       %td= t("девицот", "devicót")
-  %p Higher numbers are made using the regular nouns #{t "тишикьа", "tíśikja"} “thousand” (second declension), #{t "милёне", "milióne"} “million”, #{t "билёне", "bilióne"} “billion”, etc. If the number immediately before it is between 2 and 4, it takes its genitive singular form (e.g., 2000 = #{t "довѣ тишикьин", "dóvě tíśikjin"}) and if it is between 5 and 9, the genitive plural (e.g., 7 million = #{t "шеньи милён", "śénji milión"}). See section 13.8.
+  %p Higher numbers are made using the regular nouns #{t "тишикьа", "tíśikja"} “thousand” (second declension), #{t "милёне", "milióne"} “million”, #{t "билёне", "bilióne"} “billion”, etc. If the number immediately before it is between 2 and 4, it takes its genitive singular form (e.g., 2000 = #{t "довѣ тишикьин", "dóvě tíśikjin"}) and if it is between 5 and 9, the genitive plural (e.g., 7 million = #{t "шеньи милён", "śénji milión"}). See #{link_to "Section 13.8", novegradian_grammar_page_path(:adjectivesyntax, anchor: 's13-8'), class: 'xref'}.
   %p 2,840,527 would therefore be rendered #{t "дова милёна, осемсот цетирдешити тишикьи, пицот дуадеши шеньи", "dóva milióna, osemsót cetirdéśiti tíśikji, picót duadéśi śénji"}. The commas are required in the written form, but there is no audible pause in pronunciation.
   %p Since сто “hundred” no longer declines, #{t "сотока", "sótoka"} is used to represent “hundred” when used nominally: #{t "сотоки долареу", "sótoki dólareu"} “hundreds of dollars”. Since it is grammatically a noun and not a numeral, the following noun must be in the genitive or partitive plural.
-  %p There are two other “irregular” numeral forms: the non-declining #{t "пољтругаста", "połtrugásta"} “150” and #{t "пољтрекьаста", "połtrekjásta"} “250” (literally meaning “one and half hundred” and “two and a half hundred”; see section 7.6 below). The form пољтругаста is required for 150; **сто пиздешити is not allowed. Some variation between пољтрецаста and дуѣсти пиздешити exists, the latter being more common in most circumstances, but the former being required before certain nouns, such as units of currency.
+  %p There are two other “irregular” numeral forms: the non-declining #{t "пољтругаста", "połtrugásta"} “150” and #{t "пољтрекьаста", "połtrekjásta"} “250” (literally meaning “one and half hundred” and “two and a half hundred”; see #{link_to "Section 7.6", "#s7-6", class: 'xref'} below). The form пољтругаста is required for 150; **сто пиздешити is not allowed. Some variation between пољтрецаста and дуѣсти пиздешити exists, the latter being more common in most circumstances, but the former being required before certain nouns, such as units of currency.
 
 = section "Animate Numerals" do
   %p The modern Novegradian animate numerals come from the Common Slavic collective numerals, actually nouns denoting a group of something (e.g., #{t "доваин", "dóvajin"} “a group of two, pair”). There is no form for “one”.
@@ -437,7 +437,7 @@
 = section "The Singulative One" do
   %p In addition to the regular numeral #{t "едене", "iédene"} for “one”, Novegradian also has the so-called “singulative one” #{t "пољ", "pół"}, identical in form but not in function with the word for “half”. It is used to emphasize that a given noun is one out of what is normally expected to be a group of more than one. Some nouns, such as “leg”, almost always take пољ instead of едене, since legs usually come in two or four: #{t "пољ ногѣ", "pół nogě́"} “one leg”. For nouns that do not necessarily come in groups, there is a semantic difference between the use of едене and пољ. For example, #{t "едене вѣне", "iédene vě́ne"} means “one ship” being discussed on its own, while #{t "пољ вѣна", "pół vě́na"} may better be translated as “one of the ships”, with the implication that this ship is part of a fleet.
   %p Not all instances of “one of the X” in English may be translated into Novegradian using пољ. This can only be done if there is some inherent connection between the one item and the rest of the group, such as the leg or ship in a fleet above. It cannot be used in a sentence such as “This is one of the cities I have visited”; this requires едене as the connection between “this [city]” and “cities I have visited” is too weak and entirely dependent on a single person, rather than being anything inherent.
-  %p “One boot” may be distinguished from “half of a boot” by the case of the noun after пољ: genitive for “one”, partitive for “half”: #{t "пољ сабога", "pół sabóga"} “one boot”, #{t "пољ сабогек", "pół sabógek"} “half of a boot”<sup>1</sup>.
+  %p “One boot” may be distinguished from “half of a boot” by the case of the noun after пољ: genitive for “one”, partitive for “half”: #{t "пољ сабога", "pół sabóga"} “one boot”, #{t "пољ сабогек", "pół sabógek"} “half of a boot”#{footnote}.
 
 = section "Indefinite Numerals" do
   %p Modern Novegradian has three standard indefinite numerals. #{t "Сотоки", "sótoki"} (first declension plural) means “hundreds (of)”, and is used much as in English, utilizing the nominalized form of the numeral #{t "сто", "stó"} “one hundred”. The noun #{t "тема", "temá"} (first declension singular; literally “darkness”) refers to an uncountable multitude, generally used like English “thousands of” or “tens of thousands of”. The phrase #{t "тема-тем", "temá-tem"} (first declension singular; as it literally means “darkness of darknesses”, only the first part declines) is stylistically marked and poetically refers to a seemingly infinite number of something. All of these require the following noun to be in the partitive plural: #{t "тема-тем гуѣздоу", "temá-tem guězdóu"} “a multitude (infinite number of) stars”.
@@ -567,7 +567,7 @@
       %td
         ҂
         %span.cyrillic-numeral АЦИІ
-      %td аци҃і
+      %td ҂аци҃і
       %td 1918
       %td (1000×1)+900+8+10
     %tr
@@ -578,6 +578,6 @@
       %td 2007
       %td (1000×2)+7
 
-%hr.footnote
-
-%p 1) Alternatively, “half of a boot” may also be expressed using the preposition #{t "зе", "ze"} “from” plus the genitive case: #{t "пољ зе сабога", "pół ze sabóga"}.
+%section.footnotes
+  = footnote do
+    Alternatively, “half of a boot” may also be expressed using the preposition #{t "зе", "ze"} “from” plus the genitive case: #{t "пољ зе сабога", "pół ze sabóga"}.

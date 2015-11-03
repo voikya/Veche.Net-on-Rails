@@ -35,7 +35,7 @@
                        "Two glasses of beer are better than one."
 
   = section "With Dual Nouns" do
-    %p Dual nouns and pronouns always take plural agreement from adjectives (with the exception of the dative/instrumental dual, as described in section 12.8).
+    %p Dual nouns and pronouns always take plural agreement from adjectives (with the exception of the dative/instrumental dual, as described in #{link_to "Section 12.8", novegradian_grammar_page_path(:nounsyntax, anchor: 's12-8'), class: 'xref'}).
     = example_sentence "О ме треба нов очок.",
                        "O mé tréba nóv očók.",
                        "at I.{lat} need-{nom.sg} new-{gen.pl} glasses-{gen.pl}",
@@ -114,7 +114,7 @@
 
 = section "Degrees of Adjectives" do
   = section "Comparative" do
-    %p Comparative adjectives are used to compare two nouns in terms of a given qualitative adjective. Once the comparative suffix is added, agreement must still be made with the noun being directed modified using the comparative series of adjective endings. Infinitive verbs may also be used in place of nouns, but with neuter agreement.
+    %p Comparative adjectives are used to compare two nouns in terms of a given qualitative adjective. Once the comparative suffix is added, agreement must still be made with the noun being directly modified using the comparative series of adjective endings. Infinitive verbs may also be used in place of nouns, but with neuter agreement.
     = example_sentence "Ша егра – интереснейша.",
                        "Śá iegrá – interesnéiśa.",
                        "this-{nom.sg.fem} game-{nom.sg} Ø interesting-{comp}-{nom.sg.fem}",
@@ -124,8 +124,8 @@
                        "Śá sudé iegrá – interesnéiśa(,neź) śú támo iegrú.",
                        "this-{nom.sg.fem} here game-{nom.sg} Ø interesting-{comp}-{nom.sg.fem} (, than) this-{acc.sg.fem} there game-{acc.sg}",
                        "This game is more interesting than that game."
-    = example_sentence "Вожити маленей возе-те леже, неж болиший.",
-                       "Vóźiti málenei vóze-te léźe, neź bóliśij.",
+    = example_sentence "Вожити маленей возе-те леже, неж валий.",
+                       "Vóźiti málenei vóze-te léźe, neź válij.",
                        "drive-{inf} small-{nom.sg.masc.def} car-{nom.sg}-{top} Ø easy-{comp}-{nom.sg.neut}, than Ø large-{acc.sg.masc.def}",
                        "Driving a small car is easier than driving a large one.",
                        :comment => "(неж cannot be dropped here because two verbs are being compared)"
@@ -158,7 +158,7 @@
     %p The adverb #{t "егье", "iegjé"}, when put before a comparative adjective, means “even [more]” and strengthens it further: #{t "егье болше", "iegjé bólśe"} “even bigger”.
 
   = section "Superlative" do
-    %p Superlative adjectives mark the greatest degree of some quality. For the most part, they share their forms with the comparative and rely on context to distinguish the two. In 9 below, for example, only the superlative makes sense; “the bigger mountain in the world” is nonsensical.
+    %p Superlative adjectives mark the greatest degree of some quality. For the most part, they share their forms with the comparative and rely on context to distinguish the two. In 17 below, for example, only the superlative makes sense; “the bigger mountain in the world” is nonsensical.
     = example_sentence "’Евересте – вуихьей горой во вием мирѣ.",
                        "Everéste – vuíhjei góroi vo vijém mírě.",
                        "Everest-{nom} Ø high-{comp}-{datins.sg.fem} mountain-{datins.sg} in all.{loc.sg.masc} world-{loc.sg}",
@@ -199,8 +199,8 @@
                        "he.{nom} I.{acc} direct.{pf}-{past}-{masc} along road-{loc.sg} {excess}-long-{loc.sg.fem} by_far",
                        "He led me down too long of a road!"
     %p If some modifying clause is subordinated to an excessive-degree adjective, the adverb намног must appear as well.
-    = example_sentence "Ша ленина-та воболиша намног со тѣм-це одѣвалеш би яс тѣм.",
-                       "Śá lénina-ta vóboliśa namnóg so tě́m-ce oděváleś bi iás tě́m.",
+    = example_sentence "Ша ленина-та вовала намног со тѣм-це одѣвалеш би яс тѣм.",
+                       "Śá lénina-ta vóvala namnóg so tě́m-ce oděváleś bi iás tě́m.",
                        "this-{nom.sg.fem} shirt-{nom.sg}-{top} {excess}-big-{nom.sg.fem} by_far with {rel.acc.sg}-that.{nom} dress-{past}-{masc}-{mid} {subj.sg} I.{nom} {top.datins.sg}",
                        "This shirt is too big for me to wear."
     %p Not all adjectives beginning with a stressed во- are excessive. Some are just coincidence, such as #{t "вокусне", "vókusne"} “tasty”.
@@ -232,13 +232,13 @@
 
   = section "Definite Adjectives Marking Specificity" do
     %p One of the most common uses for the definite adjectives is marking the specificity of a noun. Specificity, a distinction made in Novegradian that tends to give non-natives quite a bit of trouble, is similar to definiteness in that it singles out a single noun from all others. However, unlike definiteness, it tends to specify more of a “the one and only” sort of quality, meaning specificity is more or less independent of context, while definiteness is strongly linked to it. This distinction may best be explained through examples.
-    %p The phrase #{t "“Новеградеска(я) граница”", "Novegrádeska(ia) graníca"} means “Novegradian border”. The definite form, Новеградеская граница, refers to the entire borders of the Republic of Novegrad. A question such as “Where is the Novegradian-def border?” would be used, for example, to ask someone to identify the nation’s border on a map. The indefinite form, Новеградеска граница, refers to “any” Novegradian border, or more properly, any sections of it. A question such as “Where is the Novegradian-indef border?” would be used in asking someone for directions to the border. Notice how specificity is independent of definiteness—the “indefinite” (or perhaps more accurately, “non-specific”) phrase новеградеска граница is translated as “the Novegradian border”. Using the wrong specificity in a certain context will frequently cause unexpected results. If someone wanted directions but asks for the location of the (definite) Novegradian border, the reply will be something along the lines of “It starts at the Arctic Ocean, runs along Sweden into the Baltic Sea...” (or perhaps more likely a strange look from someone wondering why anyone would pull over to ask such a strange question).
+    %p The phrase #{t "“Новеградеска(я) граница”", "Novegrádeska(ia) graníca"} means “Novegradian border”. The definite form, Новеградеская граница, refers to the entire borders of the Republic of Novegrad. A question such as “Where is the Novegradian-#{abbrev 'def'} border?” would be used, for example, to ask someone to identify the nation’s border on a map. The indefinite form, Новеградеска граница, refers to “any” Novegradian border, or more properly, any sections of it. A question such as “Where is the Novegradian-#{abbrev 'indef'} border?” would be used in asking someone for directions to the border. Notice how specificity is independent of definiteness—the “indefinite” (or perhaps more accurately, “non-specific”) phrase новеградеска граница is translated as “the Novegradian border”. Using the wrong specificity in a certain context will frequently cause unexpected results. If someone wanted directions but asks for the location of the (definite) Novegradian border, the reply will be something along the lines of “It starts at the Arctic Ocean, runs along Sweden into the Baltic Sea...” (or perhaps more likely a strange look from someone wondering why anyone would pull over to ask such a strange question).
     %p Another example is the phrase #{t "“Новеградеске(й) универсидате”", "Novegrádeske(i) universidáte"}, “Novegradian university”. The definite/specific form Новеградескей универсидате refers to Novegrad State University (in full Новеградескей Сударестуенней Универсидате), located in Novegráde Velíkei. The indefinite/non-specific form новеградеске универсидате refers to any university in Novegrad, or to an ethnically Novegradian university. Again, these terms are independent of definiteness in the English sense. A question such as Куде новеградеске универсидате? by itself would be translated as “Where is a Novegradian university?”, but in the context of a conversation about a Novegradian university and a Finnish university, it would be translated as “Where is the Novegradian university (as opposed to the Finnish)?” The specific form “Куде Новеградескей Универсидате?” will always result in the reply “In Novegráde Velíkei”.
     %p Any adjective, not just national ones, can display specificity: Цервеней дуре <i>Cérvenei dúre</i> “Red Square (Moscow)”, цервене дуре <i>cérvene dúre</i> “a red square or plaza”.
     %p Definite adjectives, as shown in several of the above examples, often form part of place names or specific locations, such as “Novegrad University” and “Red Square”. The tendency to use definite adjectives with place names is so strong that they will be used even when an indefinite meaning is impossible, such as #{t "Варижеское море", "Variźeskóie móre"} “the Baltic Sea”. Even though there are no other ‘baltic seas’ in existance, the Baltic Sea must take the definite form.
     %p Adjectives modifying nouns that already have definite adjectives must also be definite:
-    = example_sentence "Старовѣгевей Ярославовей Дуре соходит со заложеньа Велигаево Новеграда.",
-                       "Starověgévei Iaroslávovei Dúre sohódit so zaloźénja Veligáievo Novegráda.",
+    = example_sentence "Старовѣгевей Ярославовей Дуре сохудит со заложеньа Велигаево Новеграда.",
+                       "Starověgévei Iaroslávovei Dúre sohúdit so zaloźénja Veligáievo Novegráda.",
                        "medieval-{nom.sg.masc.def} Yaroslav-{adj}-{nom.sg.masc.def} courtyard-{nom.sg} come_from-{3sg} from foundation-{gen.sg} Great-{gen.sg.masc.def} Novegrad-{gen}",
                        "The ancient Yaroslav Court dates to the foundation of Novegráde Velíkei."
     %p However, when a definite adjective modifies a noun phrase already including an adjective, there can be specificity disagreement.
@@ -250,7 +250,7 @@
 
 = section "Possessive Adjectives" do
   %p Common Slavic frequently formed possessive constructions by converting the possessor into an adjective. This process is no longer productive in Novegradian, but it has left behind many traces.
-  %p There were two main classes of possessive adjectives. In earlier forms of Novegradian (and still in the northern dialects of the language), the first was formed by adding the suffixes #{t "-ине", "-ine"} to first, second, and sixth declension stems, #{t "-ове", "-ove"} to third declension stems, and #{t "-еве", "-eve"} to fourth and fifth declension stems, identical in origin to the derivational suffixes that are still used today. These would decline as regular adjectives<sup>1</sup>. These are the original source of many surnames ending in <i>-ou</i> or <i>-ine</i>, but which now decline as regular nouns.
+  %p There were two main classes of possessive adjectives. In earlier forms of Novegradian (and still in the northern dialects of the language), the first was formed by adding the suffixes #{t "-ине", "-ine"} to first, second, and sixth declension stems, #{t "-ове", "-ove"} to third declension stems, and #{t "-еве", "-eve"} to fourth and fifth declension stems, identical in origin to the derivational suffixes that are still used today. These would decline as regular adjectives#{footnote}. These are the original source of many surnames ending in <i>-ou</i> or <i>-ine</i>, but which now decline as regular nouns.
   %p On the other hand, many names of towns and other locations in Novegrad end in #{t "-ово", "-ovo"} or #{t "-ино", "-ino"}, the neuter form of the original adjectives. Such place names generally do still decline as neuter adjectives, though this does vary; some towns advocate adjectival declension while others advocate nominal declension.
   %p Other instances of originally possessive adjectives have since adopted new meanings: #{t "братеве", "bráteve"} “fraternal” (originally, “brother’s”), #{t "материне", "máterine"} “maternal”, etc.
   %p The other form of possessive adjective was formed with the suffix *-j-, which frequently resulted in consonant mutations. These types of possessives have almost all adopted a new fixed meaning and are no longer viewed as possessives; the suffix itself ceased to be productive no later than the 14th century. However, many animal names have both a regularly-derived adjective form and a possessive form, such as #{t "кошене", "kóśene"} “feline” versus #{t "кошие", "kóśie"} “cat’s”. Both forms are now identical in meaning and are fully interchangeable. However, certain disciplines may prefer one or the other form; zoological and taxonomical fields prefer the -j- forms whenever available, for example.
@@ -295,7 +295,7 @@
                        "Iás iě́ ovíděle placákjoi.",
                        "I.{nom} she.{acc} see.{pf}-{past}-{masc} cry-{act.impf.ptcp}-{datins.sg.fem}",
                        "I saw her crying."
-    
+
   = section "Other Adjectival Adjuncts" do
     %p Transitive verbs that can nevertheless take an adjectival argument also make it dative/instrumental and indefinite, agreeing in gender and number with whatever their logical head may be.
     = example_sentence "Яс соцедовам ѣ красной.",
@@ -323,7 +323,7 @@
                        "Śé-to sáme múzun dě́lati!",
                        "this-{nom.sg}-{top} by_oneself-{nom.sg.masc} be_able-{1sg} do-{inf}",
                        "I can do it myself!"
-    %p Sentences with #{t "раде", "ráde"} are often translated into English using verbs such as “like” or “enjoy”. It lacks an English adverbial equivalent, except in the future tense where it is similar to “gladly” or “with pleasure”. It is frequently interchangeable with the verb #{t "радеети", "radéieti"} “enjoy”, except that раде cannot be negated to mean “do not enjoy”.
+    %p Sentences with #{t "раде", "ráde"} are often translated into English using verbs such as “like” or “enjoy”. It lacks an English adverbial equivalent, except in the future tense where it is similar to “gladly” or “with pleasure”. It is frequently interchangeable with the verb #{t "радети", "radéti"} “enjoy”, except that раде cannot be negated to mean “do not enjoy”.
     = example_sentence "Яс раде говорун сон ей.",
                        "Iás ráde govorún son iéi.",
                        "I.{nom} gladly-{nom.sg.masc} talk-{1sg} with-{n*} she.{datins}",
@@ -349,15 +349,144 @@
 = section "Numbers" do
   = section "Inanimate Numerals" do
     %p In Novegradian, case is generally marked on the numeral while the noun is forced to agree with the numeral modifying it.
-    %p Едене (1) is a pronominal adjective, and declines in the same way as other pronouns such as ше “this”. The following noun always appears in the same case.
+    %p Едене (1) is a pronominal adjective, and declines in the same way as other pronouns such as ше “this”. It always appears in the same case and number as the noun it modifies.
     = example_sentence "Една глава – добро, а довѣ – суѣше.",
                        "Iédna gláva – dóbro, a dóvě – suě́śe.",
                        "one-{nom.sg.fem} head-{nom.sg} Ø good-{nom.sg.neut}, whereas two.{fem}-{nom} Ø better-{nom.sg.neut}",
                        "One head is good, but two is better."
-    %p Дова/довѣ (2) in the nominative/accusative case requires the following noun to be in the nominative dual. If no distinct nominative dual form exists, the form used is identical to the genitive singular. If the numeral is in any other case, the noun must be in that case and dual, or plural if no dual is available.
-    %p Три/трѣ and цетире (3 and 4) in the nominative/accusative case require the following noun to be in the genitive singular. If the numerals are in any other case, the noun must also be in that same case and be plural.
+    %p Other numbers observe a direct/indirect case distinction, with different behaviors depending on whether the noun phrase bears a direct case (nominative or accusative) or an indirect case (all others). In the direct cases, the numeral assumes the nominative or accusative case, and then assigns a particular form to the noun, often identical to the genitive case. In indirect cases, both the numeral and noun assume the same case, more akin to a typical adjectival relationship.
+    %p The numerals дова/довѣ (2), три/трѣ (3), and цетири (4) all typically force the noun they modify to take the special count form in direct cases. This form is identical to or close to the genitive singular for masculine and neuter nouns, and the nominative plural for feminine nouns; the exact formation rules are described in the relevant nominal and adjectival morphology sections. In indirect cases, the noun takes the same case as the numeral, and is plural.
+    %p However, for the handful of nouns with a distinct dual form, the rules for дова/довѣ (2) are slightly different. In this case, the quantified noun always takes the same case as the numeral in its dual forms.
+    %p The numerals 5 through 10 all require the genitive plural in direct cases, and match cases in all other situations.
+    %p The table below summarizes the forms taken by masculine, neuter, and feminine nouns with each subgroup of numeral in both a direct case (here, the nominative) and an indirect case (the dative-instrumental). The neuter noun, #{t "око", "óko"} “eye”, has distinct dual forms.
+    %table
+      %tr
+        %th{:colspan => 2, :rowspan => 2}
+        %th Masculine Indefinite
+        %th Masculine Definite
+        %th Neuter Indefinite
+        %th Neuter Definite
+        %th Feminine Indefinite
+        %th Feminine Definite
+      %tr
+        %td
+          = t("плаве дум", "pláve dúm", :linebreak => true)
+          %br
+          “a blue house”
+        %td
+          = t("плавей дум", "plávei dúm", :linebreak => true)
+          %br
+          “the blue house”
+        %td
+          = t("плаво око", "plávo óko", :linebreak => true)
+          %br
+          “a blue eye”
+        %td
+          = t("плавое око", "plávoie óko", :linebreak => true)
+          %br
+          “the blue eye”
+        %td
+          = t("плава нига", "pláva níga", :linebreak => true)
+          %br
+          “a blue book”
+        %td
+          = t("плавая нига", "plávaia níga", :linebreak => true)
+          %br
+          “the blue book”
+      %tr
+        %th{:colspan => 8}
+      %tr
+        %th{:rowspan => 2} Genitive
+        %th Sg
+        %td= t("плава думу", "pláva dúmu", :linebreak => true)
+        %td= t("плаваево думу", "plaváievo dúmu", :linebreak => true)
+        %td= t("плава оку", "pláva óku", :linebreak => true)
+        %td= t("плаваево оку", "plaváievo óku", :linebreak => true)
+        %td= t("плавѣ нигѣ", "plávě nígě", :linebreak => true)
+        %td= t("плавѣе нигѣ", "plávěie nígě", :linebreak => true)
+      %tr
+        %th Pl
+        %td= t("плав дум", "pláv dúm", :linebreak => true)
+        %td= t("плавих дум", "plávih dúm", :linebreak => true)
+        %td= t("плав ок", "pláv ók", :linebreak => true)
+        %td= t("плавих ок", "plávih ók", :linebreak => true)
+        %td= t("плав ниг", "pláv níg", :linebreak => true)
+        %td= t("плавих ниг", "plávih níg", :linebreak => true)
+      %tr
+        %th{:colspan => 8}
+      %tr
+        %th{:rowspan => 4} Direct
+        %th 1
+        %td= t("едене плаве дум", "iédene pláve dúm", :linebreak => true)
+        %td= t("едене плавей дум", "iédene plávei dúm", :linebreak => true)
+        %td= t("едно плаво око", "iédno plávo óko", :linebreak => true)
+        %td= t("едно плавое око", "iédno plávoie óko", :linebreak => true)
+        %td= t("една плава нига", "iédna pláva níga", :linebreak => true)
+        %td= t("една плавая нига", "iédna plávaia níga", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("дова плава дума", "dóva pláva dúma", :linebreak => true)
+        %td= t("дова плавая дума", "dóva plávaia dúma", :linebreak => true)
+        %td= t("дова плава оки", "dóva pláva óki", :linebreak => true)
+        %td= t("дова плавая оки", "dóva plávaia óki", :linebreak => true)
+        %td= t("довѣ плавѣ нигѣ", "dóvě plávě nigě", :linebreak => true)
+        %td= t("довѣ плавѣе нигѣ", "dóvě plávěie nígě", :linebreak => true)
+      %tr
+        %th 3-4
+        %td= t("три плава дума", "trí pláva dúma", :linebreak => true)
+        %td= t("три плавая дума", "trí plávaia dúma", :linebreak => true)
+        %td= t("три плава оку", "trí pláva óku", :linebreak => true)
+        %td= t("три плавая оку", "trí plávaia óku", :linebreak => true)
+        %td= t("трѣ плавѣ нигѣ", "trě́ plávě nigě", :linebreak => true)
+        %td= t("трѣ плавѣе нигѣ", "trě́ plávěie nígě", :linebreak => true)
+      %tr
+        %th 5-10
+        %td= t("пети плав дум", "péti pláv dúm", :linebreak => true)
+        %td= t("пети плавих дум", "péti plávih dúm", :linebreak => true)
+        %td= t("пети плав ок", "péti pláv ók", :linebreak => true)
+        %td= t("пети плавих ок", "péti plávih ók", :linebreak => true)
+        %td= t("пети плав ниг", "péti pláv níg", :linebreak => true)
+        %td= t("пети плавих ниг", "péti plávih níg", :linebreak => true)
+      %tr
+        %th{:colspan => 8}
+      %tr
+        %th{:rowspan => 4} Indirect
+        %th 1
+        %td= t("едном плавом думом", "iédnom plávom dúmom", :linebreak => true)
+        %td= t("едном плавием думом", "iédom plávijem dúmom", :linebreak => true)
+        %td= t("едном плавом оком", "iédnom plávom ókom", :linebreak => true)
+        %td= t("едном плавием оком", "iédom plávijem ókom", :linebreak => true)
+        %td= t("едной плавой нигой", "iédnoi plávoi nígoi", :linebreak => true)
+        %td= t("едной плавоюн нигой", "iédnoi plávoiun nígoi", :linebreak => true)
+      %tr
+        %th 2
+        %td= t("довѣма плавами думам", "dóvěma plávami dumám", :linebreak => true)
+        %td= t("довѣма плавиеми думам", "dóvěma plavíjemi dumám", :linebreak => true)
+        %td= t("довѣма плавама огома", "dóvěma plávama ogóma", :linebreak => true)
+        %td= t("довѣма плавиема огома", "dóvěma plavíjema ogóma", :linebreak => true)
+        %td= t("довѣма плавами нигам", "dóvěma plávami nigám", :linebreak => true)
+        %td= t("довѣма плавиеми нигам", "dóvěma plavíjemi nigám", :linebreak => true)
+      %tr
+        %th 3-4
+        %td= t("трем плавами думам", "trém plávami dumám", :linebreak => true)
+        %td= t("трем плавиеми думам", "trém plavíjemi dumám", :linebreak => true)
+        %td= t("трем плавами огам", "trém plávami ogám", :linebreak => true)
+        %td= t("трем плавиеми огам", "trém plavíjemi ogám", :linebreak => true)
+        %td= t("трем плавами нигам", "trém plávami nigám", :linebreak => true)
+        %td= t("трем плавиеми нигам", "trém plavíjemi nigám", :linebreak => true)
+      %tr
+        %th 5-10
+        %td= t("петем плавами думам", "pétem plávami dumám", :linebreak => true)
+        %td= t("петем плавиеми думам", "pétem plavíjemi dumám", :linebreak => true)
+        %td= t("петем плавами огам", "pétem plávami ogám", :linebreak => true)
+        %td= t("петем плавиеми огам", "pétem plavíjemi ogám", :linebreak => true)
+        %td= t("петем плавами нигам", "pétem plávami nigám", :linebreak => true)
+        %td= t("петем плавиеми нигам", "pétem plavíjemi nigám", :linebreak => true)
+
+    %p All numerals in the subject position other than “one” take plural agreement on verbs and nominative plural agreement on adjectives across the copula (as in example 46 below). Since nouns in Novegradian are considered subordinated to the numerals, verbs must agree with the numeral (and thus be plural even if the noun is in the genitive singular) and trans-copular adjectives must agree with the numeral (and thus be plural and nominative, since the numeral is also nominative).
+
     = example_sentence "Зе довух зол вуиберѣте менишее.",
-                       "Ze dóvuh zól viberě́te meniśéie.",
+                       "Ze dóvuh zól vuiberě́te meniśéie.",
                        "from two-{gen} evil-{gen.pl} pick_out-{2pl.imper} less-{nom.sg.neut.def}",
                        "From two evils, choose the lesser."
     = example_sentence "Яс овидѣле дова оки-ти, горекьие во темѣ.",
@@ -366,43 +495,54 @@
                        "I saw two eyes shining in the darkness."
     = example_sentence "Цетири врѣмена асту суде – велем незоходни. Лѣтенем жарко, жимой кладно.",
                        "Cétiri vrě́mena ástu sudé – vélem nezóhodni. Lě́tenem źárko, źimói kládno.",
-                       "four-{nom} time-{gen.sg} year-{gen.sg} here Ø very dissimilar-{nom.pl}. Summer-{datins.sg} hot-{nom.sg.neut}, winter-{datins.sg} cold-{nom.sg.neut}",
+                       "four-{nom} time-{count} year-{gen.sg} here Ø very dissimilar-{nom.pl}. Summer-{datins.sg} hot-{nom.sg.neut}, winter-{datins.sg} cold-{nom.sg.neut}",
                        "The four seasons here are very different—summer is very hot, winter is very cold."
-    %p The numerals 5 through 10 all require the genitive plural if in the nominative or accusative, and the same case in all other situations, just like two through four.
     = example_sentence "Ша кола кѣнит пети марек.",
                        "Śá kóla kě́nit péti marék.",
                        "this-{nom.sg.fem} cola-{nom.sg} cost-{3sg} five-{nom} mark-{gen.pl}",
                        "This cola costs five marks."
-    %p All numerals in the subject position other than “one” take plural agreement on verbs and nominative plural agreement on adjectives across the copula (as in example 46 above). Since nouns in Novegradian are considered subordinated to the numerals, verbs must agree with the numeral (and thus be plural even if the noun is in the genitive singular) and trans-copular adjectives must agree with the numeral (and thus be plural and nominative, since the numeral is also nominative).
-    %p Adjectives modifying a numeral phrase directly, however, must agree with the number and case of the noun, not the numeral. If the noun is dual, as in example 45, the agreement is more complicated. If the noun is in the nominative or accusative dual, then the adjective appears in the genitive singular (since the vast majority of nouns lacking unique dual forms will take the genitive singular in this position). If the dual noun is in any other case, then the adjective will be in that case and plural. If in the dative/instrumental, however, the special dative-instrumental adjectival dual ending #{t "-ама", "-ama"} (definite #{t "-иема", "-ijema"}) is used<sup>2</sup>. Compare the agreement in the following examples with #{t "око", "óko"} “eye” (with a dual) and #{t "возе", "vóze"} “car” (no dual):
+
+    %p As shown in the table above, adjectives inside the numeral phrase follow the same rules as nouns. However, the same is not true of adjectives modifying the entire numeral phrase. If the adjective precedes the numeral phrase, it will always be plural and match the case of the numeral (excluding of course едене “one”, which as an adjective does not have atypical agreement rules).
+    %p The one more complicated situation is the numeral дова “two” in the dative-instrumental case. As previously discussed, adjectives have a special dative-instrumental dual ending#{footnote} #{t "-ама", "-ama"} (definite #{t "-иема", "-ijema"}), the only distinctly dual adjective form. If the noun in the numeral phrase has a distinct dual, then a preposed adjective modifying the entire numeral phrase must appear in this dual form in the dative-instrumental case. If the noun does not have a distinct dual, both the dative-instrumental plural and dative-instrumental dual endings are acceptable.
     %ul
       %li
-        = t("дова оки, котра", "dóva óki, kótra", :linebreak => true)
+        = t("кожни дова асту", "kóźni dóva ástu", :linebreak => true)
         %br
-        two-#{abbrev 'nom'} eye-#{abbrev 'nom.dl'}, that-#{abbrev 'gen.sg.neut'}
+        every-#{abbrev 'nom.pl'} two-#{abbrev 'nom'} year-#{abbrev 'count'}
+      %li
+        = t("кожнама/кожнами довѣма астам", "kóźnama/kóźnami dóvěma astám", :linebreak => true)
+        %br
+        every-#{abbrev 'datins.dl'}/every-#{abbrev 'datins.pl'} two-#{abbrev 'datins'} year-#{abbrev 'datins.pl'}
+      %li
+        = t("кожни довѣ рокѣ", "kóźni dóvě rókě", :linebreak => true)
+        %br
+        every-#{abbrev 'nom.pl'} two-#{abbrev 'nom'} hand-#{abbrev 'nom.pl'}
+      %li
+        = t("кожнама/*кожнами довѣма рогома", "kóźnama/*kóźnami dóvěma rogóma", :linebreak => true)
+        %br
+        every-#{abbrev 'datins.dl'}/*every-#{abbrev 'datins.pl'} two-#{abbrev 'datins'} hand-#{abbrev 'datins.dl'}
+
+    %p When the adjective follows the numeral phrase, the rules differ slightly. In indirect cases, the adjective is always plural (or optionally dual in the dative-instrumental) and matches the case of the numeral, much as adjectives inside the numeral phrase. In direct cases, the adjective may <em>either</em> agree with the numeral (and thus be nominative or accusative plural) <em>or</em> the noun (and thus appear the genitive plural or count forms). Typically, the preference is for the count form for 2-4 and the nominative/accusative plural for 5-10, though the nominative/accusative plural for 2-4 and genitive plural for 5-10 are possible#{footnote}. The same rules apply for dual nouns; the lone adjectival dual ending #{t "-ама", "-ama"} is not used in postposed position.
+    %ul
+      %li
+        = t("дова оки, котра/котри", "dóva óki, kótra/kótri", :linebreak => true)
+        %br
+        two-#{abbrev 'nom'} eye-#{abbrev 'nom.dl'}, that-#{abbrev 'count'}/that-#{abbrev 'nom.pl'}
       %li
         = t("довух оку, котор", "dóvuh óku, kótor", :linebreak => true)
         %br
         two-#{abbrev 'gen'} eye-#{abbrev 'gen.dl'}, that-#{abbrev 'gen.pl'}
       %li
-        = t("довѣма огома, котрама", "dóvěma ogóma, kótrama", :linebreak => true)
+        = t("пети воз, котри/котор", "péti vóz, kótri/kótor", :linebreak => true)
         %br
-        two-#{abbrev 'datins'} eye-#{abbrev 'datins.dl'}, that-#{abbrev 'datins.dl'}
-    %ul
+        five-#{abbrev 'nom'} car-#{abbrev 'gen.pl'}, that-#{abbrev 'nom.pl'}/that-#{abbrev 'gen.pl'}
       %li
-        = t("дова воза, котра", "dóva vóza, kótra", :linebreak => true)
+        = t("петех воз, котор", "péteh vóz, kótor", :linebreak => true)
         %br
-        two-#{abbrev 'nom'} car-#{abbrev 'gen.sg'}, that-#{abbrev 'gen.sg.masc'}
-      %li
-        = t("довух воз, котор", "dóvuh vóz, kótor", :linebreak => true)
-        %br
-        two-#{abbrev 'gen'} car-#{abbrev 'gen.pl'}, that-#{abbrev 'gen.pl'}
-      %li
-        = t("довѣма возам, котрами", "dóvěma vozám, kótrami", :linebreak => true)
-        %br
-        two-#{abbrev 'datins'} car-#{abbrev 'datins.pl'}, that-#{abbrev 'datins.pl'}
-    %p For all higher numbers, which form to use depends on the last portion of the number. If it ends in 1 (such as 21, 91, 131), the same rules apply as for едене (i.e., same case). If it ends in 2 (22, 62, 282), either the genitive singular or the nominative dual are used. If it ends in 3 or 4 (such as 24, 82, 644), the genitive singular is used. If it ends in 5 through 9 or 0 (49, 20, 100), the genitive plural is used. The only exception are the teens 11 through 19, which all use the genitive plural (because their last element is -цити, a contracted form of дешити “ten”, which requires the genitive plural).
-    %p Numbers over 999, such as #{t "тишикьа", "tíśikja"} “thousand”, #{t "милёне", "milióne"} “million”, and above are all technically nouns, and decline as nouns. The following noun must be in the genitive plural as usual (тишикьа километер “thousand kilometers”), although if the number continues afterwards, the rest of the number declines as expected (милёне дова “1.000.002”, not *милёне довух). If there is a modifier before these nouns, the noun/numeral must be in the genitive singular (2-4) or plural (5-10): дова милёна едене “2.000.001”, дешити милён “10.000.000”. However, the partitive singular and plural may freely be used in this situation as well, so #{t "дешити милёнеу", "déśiti milióneu"} is an acceptable variant for ten million.
+        five-#{abbrev 'gen'} car-#{abbrev 'gen.pl'}, that-#{abbrev 'gen.pl'}
+
+    %p For all higher numbers, the appropriate form of the quantified noun phrase depends on the last portion of the number. If it ends in 1 (such as 21, 91, 131), the same rules apply as for едене (i.e., typical adjectival agreement). If it ends in 2 (22, 62, 282), the same rules apply as for 2 (count forms, dual forms). If it ends in 3 or 4 (24, 83, 644), the same rules apply as for 3 and 4 (count agreement). If it ends in 5 through 9 or 0 (49, 20, 100), the same rules apply as for 5 through 10 (genitive plural agreement). The only exception are the teens 11 through 19, which all fall into the 5-10 group, since historically the -цити ending of these numbers is a contracted form of дешити “ten”.
+    %p Number words with values over 999, such as #{t "тишикьа", "tíśikja"} “thousand”, #{t "милёне", "milióne"} “million”, and above are all technically nouns, and decline as nouns. The following noun must therefore be in the genitive plural as would normally be expected in a genitive relationship (#{t "тишикьа километер", "tíśikja kilométer"} “thousand kilometers”), although if the number continues afterwards, the rest of the number declines as an appositive phrase rather than a governed one, maintaining the same case (#{t "милёне дова", "milióne dóva"} “1.000.002”, not #{t "*милёне довух", "milióne dóvuh"}, which would be interpreted as “a million twos”). If there is a modifier before these nouns, the noun/numeral must declined as a quantified noun: #{t "дова милёна едене", "dóva milióna iédene"} “2.000.001”, #{t "дешити милён", "déśiti milión"} “10.000.000”. However, the partitive singular and plural may freely be used in this situation as well, so #{t "дешити милёнеу", "déśiti milióneu"} is an acceptable variant for ten million.
     %p By inverting the numeral and the noun being modified, the value of the numeral is blurred somewhat. For example, #{t "пиннацити километер", "pinnáciti kilométer"} means “fifteen kilometers”, while #{t "километер пиннацити", "kilométer pinnáciti"} means “approximately fifteen kilometers”. This meaning can be reinforced with the adverb #{t "огољо", "ogóło"} “approximately”.
 
   = section "Animate Numerals" do
@@ -449,10 +589,6 @@
                        "There were five of us."
     %p This latter construction even applies for numerals ending in “one”, which takes a genitive plural ending: #{t "Буили их дуадеши едних", "Buíli íh duadéśi iedníh"} “There were twenty-one of them”.
 
-  = section "Adjective Agreement with Numerals" do
-    %p An adjective modifying a quantified noun directly (not across a copula) must always match the grammatical gender, case, and number of the noun it modifies, ignoring semantics. If the noun is in the genitive singular because it follows 3 or 4, for example, the adjective must also be in the genitive singular.
-    %p The one exception is with dual nouns. If the noun is in the nominative or accusative dual, adjectives will appear in the genitive singular (just as nouns lacking a dual will appear in the genitive singular in such positions). In other cases, the adjective will match that case, but in the plural (with the exception of the dative/instrumental as discussed earlier).
-
 = section "Adverbs" do
   = section "From Adjectives" do
     %p Most adverbs are derived from adjectives using the suffix #{t "-ѣ", "-ě"}. If the adjective contains the suffix #{t "-ск-", "-sk-"}, #{t "на-", "na-"} must be prefixed as well. The most unmarked position for such adverbs is immediately before the main verb.
@@ -492,7 +628,7 @@
                        "he.{nom} I.{acc} ask-{past}-{masc} on ten-{acc} time-{gen.pl} forgiveness-{gen.sg}",
                        "He’s told me ten times that he’s sorry.",
                        :comment => "(lit. “asked for forgiveness ten times”)"
-    %p The adverbs of accompaniment indicate how many people were involved in an action, but not as a core argument (that is, “they went as a pair” as opposed to “the pair went”). They could be considered equivalent to the English adverb “together”, except that they mark number explicitly. For numbers beyond seven, they are formed using the simple dative/instrumental case, but this is uncommon; beyond seven it becomes rather unnecessary and awkward to specify exact numbers, so the generic #{t "разом", "rázom"} may be used.
+    %p The adverbs of accompaniment indicate how many people were involved in an action, but not as a core argument (that is, “they went as a pair” as opposed to “the pair went”). They could be considered equivalent to the English adverb “together”, except that they mark number explicitly. For numbers beyond seven, they are formed using the simple dative/instrumental case, but this is uncommon; beyond seven it becomes rather unnecessary and awkward to specify exact numbers, so the generic #{t "разом", "rázom"} “together” may be used.
     = example_sentence "Муи ошли троем.",
                        "Muí oślí tróiem.",
                        "we.{nom} leave.{pf}-{past}-{pl} threesome",
@@ -502,7 +638,7 @@
     %p Novegradian has a full set of adverbs that indicate location and direction to or from a given point. As with several other Slavic languages, these include distinct adverbs meaning “upstairs” and “downstairs”.
     %table
       %tr
-        %th 
+        %th
         %th Up
         %th Down
         %th Upstairs
@@ -563,7 +699,7 @@
           “from downstairs”
     %table
       %tr
-        %th 
+        %th
         %th Forward
         %th Backward
         %th Left
@@ -622,22 +758,22 @@
           = t("соправа", "sopráva", :linebreak => true)
           %br
           “from the right”
+    %p All of the locative adverbs also have more colloquial forms with initial stress and a zero-ending locative: #{t "воврех", "vóvreh"} “above”, #{t "вониз", "vóniz"} “below”, #{t "наврех", "návreh"} “upstairs”, #{t "наниз", "nániz"} “downstairs”, #{t "вопред", "vópred"} “ahead”, #{t "позад", "pózad"} “behind”, #{t "налѣу", "nálěu"} “on the left”, #{t "напрау", "náprau"} “on the right”. In speech, these are far more common than the full forms listed in the table.
+    %p There is no distinction between “from above/below” and “from upstairs/downstairs”.
     = example_sentence "Койда доѣдеш до прешѣка, повради шебе колѣвом.",
                        "Kóida doiě́deś do préśěka, povradí śebé kolě́vom.",
                        "when go_up_to_by_vehicle.{pf}-{2sg} up_to intersection-{gen.sg}, turn.{pf}-{2sg.imper} {reflx.acc} leftward",
                        "When you reach the intersection, turn left."
-    %p All of the locative adverbs also have more colloquial forms with initial stress and a zero-ending locative: #{t "воврех", "vóvreh"} “above”, #{t "вониз", "vóniz"} “below”, #{t "наврех", "návreh"} “upstairs”, #{t "наниз", "nániz"} “downstairs”, #{t "вопред", "vópred"} “ahead”, #{t "позад", "pózad"} “behind”, #{t "налѣу", "nálěu"} “on the left”, #{t "напрау", "náprau"} “on the right”. In speech, these are far more common than the full forms listed in the table.
-    %p There is no distinction between “from above/below” and “from upstairs/downstairs”.
 
   = section "Велем ‘Very’" do
     %p The adverb #{t "велем", "vélem"} “very” may modify verbs as well as adjectives, unlike in English.
-    = example_sentence "Велем хокьун ѣсат Суайѕарюн.",
-                       "Vélem hókjun iě́sat Suaidzáriun.",
+    = example_sentence "Велем хокьун ѣхат Суайѕарюн.",
+                       "Vélem hókjun iě́hat Suaidzáriun.",
                        "very want-{1sg} go_by_vehicle.{det}-{sup} Switzerland-{lat}",
                        "I really want to visit Switzerland."
 
   = section "Думове ‘Homewards’" do
-    %p The semi-nominal adverb #{t "думове", "dumóve"} means “homewards”, originating from an old dative case form of дум “house” that is no longer used in Novegradian<sup>3</sup>. It can be used with any verb indicating movement toward.
+    %p The semi-nominal adverb #{t "думове", "dumóve"} means “homewards”, originating from an old dative case form of дум “house” that is no longer used in Novegradian#{footnote}. It can be used with any verb indicating movement toward.
     = example_sentence "Оне хокьет ис думове.",
                        "Óne hókjet ís dumóve.",
                        "he.{nom} want-{3sg} go.{det}-{sup} homeward",
@@ -700,8 +836,20 @@
                        "he.{nom} arrive.{pf}-{past}-{masc} in end-{loc.sg} {q}?",
                        "He finally showed up?"
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    In Old Novegradian, these possessive adjectives were always indefinite. However, as they began to lose their productivity, their declension was brought more in line with other adjectives, and since most surviving possessive adjectives were found in place names, they naturally became definite. Modern Novegradian dialects that still have productive possessive adjectives vary in their usage; some maintain the older pattern of always declining as indefinite adjectives, while others may freely switch between definite and indefinite just as any other adjective would.
 
-%p 1) In Old Novegradian, these possessive adjectives were always indefinite. However, as they began to lose their productivity, their declension was brought more in line with other adjectives, and since most surviving possessive adjectives were found in place names, they naturally became definite. Modern Novegradian dialects that still have productive possessive adjectives vary in their usage; some maintain the older pattern of always declining as indefinite adjectives, while others may freely switch between definite and indefinite just as any other adjective would.
-%p 2) This ending is typically considered to be a case of “ending spreading” rather than a true dual adjective declension, where the dual ending -ама spreads from the noun to the adjective, replacing the very similar adjectival plural -ами. However, it is never used when the noun lacks a distinct dual (and there is therefore nowhere for the ending to “spread” from).
-%p 3) It is actually the same ending that the fourth declension dative/instrumental ending for humans, #{t "-ой", "-oi"}, is derived from, although думове underwent a different phonetic development due to its reanalysis as an adverb. The form #{t "думой", "dumói"} is seen in some dialects as well, but is nonstandard.
+  = footnote do
+    This ending is typically considered to be a case of “ending spreading” rather than a true dual adjective declension, where the dual ending -ама spreads from the noun to the adjective, replacing the very similar adjectival plural -ами. However, it is never used when the noun lacks a distinct dual (and there is therefore nowhere for the ending to “spread” from).
+
+  = footnote do
+    In the National Corpus, the prevalence breakdown is roughly as follows:
+    %ul
+      %li 2-4 with count form: 75%
+      %li 2-4 with nom/acc pl: 25%
+      %li 5-10 with nom/acc pl: 90%
+      %li 5-10 with gen pl: 10%
+
+  = footnote do
+    It is actually the same ending that the fourth declension dative/instrumental ending for humans, #{t "-ой", "-oi"}, is derived from, although думове underwent a different phonetic development due to its reanalysis as an adverb. The form #{t "думой", "dumói"} is seen in some dialects as well, but is nonstandard.

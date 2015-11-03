@@ -6,7 +6,7 @@ module Grammars
       capture_haml do
         haml_tag 'table.textgloss' do
           haml_tag :tr do
-            haml_tag :td, "(#{@example_index}#{options[:subindex]})"
+            haml_tag 'td.index', "#{@example_index}#{options[:subindex]}"
             haml_tag :td do
               haml_tag 'span.native', native.html_safe
               haml_tag :br

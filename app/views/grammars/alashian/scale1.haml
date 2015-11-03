@@ -199,7 +199,7 @@
     - alashian = [ { :name => "Infinitive", :ala => "σώβ", :lat => "sāb", :meaning => "turn" },
                    { :name => "Active Part.", :ala => "σούβιβ", :lat => "sūbib", :meaning => "turning" },
                    { :name => "Passive Part.", :ala => "**μασβούβ", :lat => "**masbūb", :meaning => "" } ]
-    = render 'deverbative_table', :title => "Scale I Deverbatives", :verb => { :ala => "sabab", :eng => "turn" }, :comment => "<sup>1</sup>", :forms => alashian
+    = render 'deverbative_table', :title => "Scale I Deverbatives", :verb => { :ala => "sabab", :eng => "turn" }, :comment => "#{footnote}", :forms => alashian
 
 = section "Introduction to nuktāb Verbs" do
   %p <i>Nuktāb</i>, or Passive Scale I, is the passive voice counterpart of <i>katab</i>. Its most noticeable feature is the performative *n- prefixed onto the verbal stem in all forms, although it may assimilate to the following consonant in many cases. For this reason it is known in Comparative Semitic studies as the N-Stem.
@@ -364,7 +364,7 @@
   = section "C3 = Ř" do
     %p The #{template "C3"} consonant *Ř similarly only causes minor vowel changes in <i>katab</i> and <i>nuktāb</i>, although it has an interesting effect on the feminine singular suffix *-ī. An example root is *ftāř “open”; the active form #{t "φάταρ̄", "fatař"} means simply “open (#{abbrev 'tr'})”, while the passive form #{t "νυφτώρ̄", "nuftāř"} actually has a mediopassive meaning “open (#{abbrev 'intr'})”.
     %p In forms with the feminine singular marker *-ī (the present tense and the imperative), this suffix is replaced by *-ēyi, spelled -ηι: #{t "ιφταρ̄ήι", "yiftařēyi"} “she is opening [something]” (not **yiftařī), #{t "νιφτωρ̄ήι", "niftāřēyi"} “open! (f)” (not **niftāřī). This appears to be the result of the original feminine suffix *-ī lowering to *-ē, but since this no longer appears feminine, it was reinforced by reintroducing the feminine *-i, albeit shortened so as not to disrupt the overall stress structure of the word.
-    %p In addition to these, the <i>katab</i> active participle and <i>nuktāb</i> passive participle undergo the same vowel shift as #{template "C2"} = Ř roots, with the vowel /i/ lowering to /e/: #{t "φούτερ̄", "fūteř"} “opening” (not **fūtiř), #{t "νάφτερ̄", "nafteř"} “opening”<sup>2</sup> (not **naftiř).
+    %p In addition to these, the <i>katab</i> active participle and <i>nuktāb</i> passive participle undergo the same vowel shift as #{template "C2"} = Ř roots, with the vowel /i/ lowering to /e/: #{t "φούτερ̄", "fūteř"} “opening” (not **fūtiř), #{t "νάφτερ̄", "nafteř"} “opening”#{footnote} (not **naftiř).
     %p All other forms are regular.
 
   = section "C1 = '/H" do
@@ -454,7 +454,7 @@
     - latin = %w(siemē siemēt siemēš sēmē sēmhā siemēn siemētun siemēšin sēmhū sēmhū)
     = render 'verb_table', :title => "Scale I Imperfect Tense", :verb => { :ala => "samā", :eng => "hear" }, :alashian => alashian, :latin => latin
     %p In the <i>katab</i> perfective subjunctive, the *H simply drops and the previous vowel in lengthened in all forms, with a stress shift: #{t "в̄ασμώ", "vasmā"} “[that] I heard” (not **vasmah), #{t "в̄ησμώ", "vēsmā"} “[that] they heard” (not **vēsmah).
-    %p In the <i>katab</i> imperative, the *H is lost in the masculine singular (due to being word-final): #{t "σμώ", "smā"} “hear! (m)” (not **smāh). In the feminine singular and plural it similarly vanishes without a trace for unclear reasons<sup>3</sup>: #{t "σαμεί", "samī"} “hear! (f)” (not **samhī), #{t "σαμού", "samū"} “hear! (pl)” (not **samhū).
+    %p In the <i>katab</i> imperative, the *H is lost in the masculine singular (due to being word-final): #{t "σμώ", "smā"} “hear! (m)” (not **smāh). In the feminine singular and plural it similarly vanishes without a trace for unclear reasons#{footnote}: #{t "σαμεί", "samī"} “hear! (f)” (not **samhī), #{t "σαμού", "samū"} “hear! (pl)” (not **samhū).
     %p The final *H is simply lost in the <i>katab</i> infinitive and passive participle: #{t "σαμού", "samū"} “hear”, #{t "μασμού", "masmū"} “heard”. In the active participle, it lowers and lengthens the preceding /i/ to /eː/ before dropping; however, here there is no stress shift: #{t "σούμη", "sūmē"} “hearing”.
     %p #{template "C3"} = *H verbs in <i>nuktāb</i> conjugate biconsonantally in all forms except the deverbatives, always with -ā- as the inherent vowel. The triconsonantal root *smāh, therefore, conjugates as though it were the biconsonantal root *sām.
     %p The <i>nuktāb</i> infinitive and passive participle, however, preserve a triconsonantal structure. In the infinitive, the *H is then lost: #{t "μασσυμώ", "massumā"} “be heard” (not regular triconsonantal **massumāh or biconsonantal **massām). In the participle, the *H is lost with lowering and lengthening of the preceding /i/: #{t "νάσμη", "nasmē"} “being heard” (not triconsonantal **nasmih or biconsonantal **nassim).
@@ -510,7 +510,7 @@
         - latin = %w(lād ladī ladū ladū)
         %td= render 'imperative_table', :title => "Scale I Imperative", :verb => { :ala => "valad", :eng => "give birth" }, :alashian => alashian, :latin => latin
     %p The <i>katab</i> infinitive and active participles are regular. The passive participle undergoes the same vowel changes as previously mentioned: #{t "μηβούλ", "mēbūl"} “being carried” (not **maybūl), #{t "μουλούδ", "mūlūd"} “being born” (not **mawlūd).
-    %p In <i>nuktāb</i>, the present tense is completely regular, with the initial *Y or *W undergoing gemination as would be expected.<sup>4</sup>
+    %p In <i>nuktāb</i>, the present tense is completely regular, with the initial *Y or *W undergoing gemination as would be expected.#{footnote}
     %p In the <i>nuktāb</i> preterite, the prefixed formant *nu- merges with the *Y or *W to give nū-: #{t "νουβώλ", "nūbāl"} “he/it was carried” (not **nuybāl), #{t "νουλώδετ", "nūlādet"} “I was born” (not **nuwlādet).
     %p The <i>nuktāb</i> imperfect tense for both *Y and *W roots once again seems to have been influenced by the *Y pattern. The #{template "C1"} for both types of roots behaves as though it were *Y, the /uo/ diphthong becomes /uː/ throughout, and the usual <i>nuktāb</i> prefix *nu- becomes *ni-, probably the result of a change like *nuyuoCaC- → nüyuoCaC- → niyūCaC-.
     %table.invisible
@@ -591,7 +591,7 @@
     %p The consonant *N is historically quite prone to assimilation in Alashian (as well as the Canaanite languages). Analogy has over time led to a systematization of the process. Examples of roots with *N include *nkīr “recognize” (giving #{t "νάκαρ", "nakar"} “recognize” and #{t "νακκώρ", "nəkhār"} “be recognized”), *knās “gather, collect” (giving #{t "κάνας", "kanas"} “gather” and #{t "νυκνώς", "nuknās"} “be gathered”), and *šfān “cover” (giving #{t "σ̄άφαν", "šafan"} “cover” and #{t "νυσ̄φών", "nušfān"} “be covered”).
     %p Roots where #{template "C1"} = *N are for the most part regular, except when this *N comes in direct contact with #{template "C2"} (as in the <i>katab</i> present, perfective subjunctive, and passive participle, and in the <i>nuktāb</i> preterite, imperative, and passive participle); in this situation the *N is dropped and the #{template "C2"} becomes geminated or aspirated: #{t "ακκείρ", "'əkhīr"} “I recognize” (not **'ankīr), #{t "в̄άτακκιρ", "vatəkhir"} “[that] you recognized” (not **vatankir), #{t "μακκούρ", "məkhūr"} “recognized” (not **mankūr), #{t "νακκωρνώ", "nəkhārnā"} “we were recognized” (not **nunkārnā), #{t "νάκκιρ", "nəkhir"} “being recognized” (not **nankir).
     %p Roots where #{template "C2"} = *N are unproblematic in <i>katab</i> and <i>nuktāb</i>; they are completely regular.
-    %p Roots where #{template "C3"} = *N are irregular only in the past tenses—the preterite and imperfect. The *N assimilates into the endings in many forms. The tables below show the <i>katab</i> preterite and imperfect, though the same changes apply to <i>nuktāb</i> as well. Some of the imperfect forms are quite irregular; among other things, the *N completely drops in the 1Sg (due to having assimilated into an original *-t that has long since been lost), and the vowel /ə/ always appears in place of expected /e/ before an assimilated *N.<sup>5</sup>
+    %p Roots where #{template "C3"} = *N are irregular only in the past tenses—the preterite and imperfect. The *N assimilates into the endings in many forms. The tables below show the <i>katab</i> preterite and imperfect, though the same changes apply to <i>nuktāb</i> as well. Some of the imperfect forms are quite irregular; among other things, the *N completely drops in the 1Sg (due to having assimilated into an original *-t that has long since been lost), and the vowel /ə/ always appears in place of expected /e/ before an assimilated *N.#{footnote}
     %table.invisible
       %tr
         - alashian = %w(σ̄άφανετ σ̄άφαττα σ̄άφατζζε σ̄άφαν σ̄αφανώ σ̄αφαννώ σ̄άφαττυν σ̄άφατζζιν σ̄αφανού σ̄αφανού)
@@ -657,10 +657,18 @@
     %p Non-triconsonantal roots, while not immune to these weak-root alterations, are resistant to them. Given that the discontiguous root structure of triconsonantal roots is absent in biconsonantal roots, there appears to be a greater pressure to keep the root intact and prevent unusual vowel or consonant changes. For instance, the root *'ūn “be tired” gives the preterite form #{t "ούντα", "'ūnta"} “you (m) grew tired”, with no assimilation, rather than the expected **'ūtha based on the pattern of triconsonantal #{template "C3"} = *N roots. Generally speaking, as long as a perfectly regular form does not violate the language's phonological constraints, it is the preferred form with biconsonantal roots. However, internally-extended biconsonantal roots are fully prone to such changes, as they behave as any other triconsonantal verb.
     %p Geminate roots once again form a sort of middle ground, with more irregularities in the forms with triconsonantal structure and fewer irregularities in the forms with biconsonantal structure.
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    The form #{t "**μασβούβ", "masbūb"} is nonexistent, since the verb <i>sabab</i> is intransitive in Scale I, and so cannot have a passive form. A real passive form is <i>magnūn</i> “hidden” from *gann “hide”.
 
-%p 1) The form #{t "**μασβούβ", "masbūb"} is nonexistent, since the verb <i>sabab</i> is intransitive in Scale I, and so cannot have a passive form. A real passive form is <i>magnūn</i> “hidden” from *gann “hide”.
-%p 2) Although this is morphologically a passive participle, it has a mediopassive meaning, since the verb <i>nuftāř</i> has a mediopassive meaning. As a result both <i>fūteř</i> and <i>nafteř</i> are glossed as “opening”, the former in the transitive sense (“the man opening the door”), the latter in the mediopassive sense (“the opening door”).
-%p 3) This loss remains unexplained, since it occurs in a position where the *h should have been preserved. Older Alashian texts do suggest the *H assimilated into the neighboring consonant (with forms such as <i>sammū</i> “hear! (pl)” found in earlier Alashian translations of the Bible), but Alashian does not typically lose gemination with no apparent reason.
-%p 4) While the gemination of *W and *Y in this form is expected morphologically, it seems questionable historically—the changes *nw → ww and *ny → yy seem unlikely given general trends in Alashian. These geminated glides are most likely the result of analogy.
-%p 5) The origin of this /ə/ is a combination of reanalysis and analogy. In most of the non-third person forms, the original *n assimilated into the follow consonant, resulting in *nn in the first person plural and *tt → *tʰ in all of the other forms. Since short vowels are neutralized to schwa before aspirates, the *e became ə. This later spread to the 1Pl form as well, where there is no phonological reason for /e/ to have shifted to /ə/.
+  = footnote do
+    Although this is morphologically a passive participle, it has a mediopassive meaning, since the verb <i>nuftāř</i> has a mediopassive meaning. As a result both <i>fūteř</i> and <i>nafteř</i> are glossed as “opening”, the former in the transitive sense (“the man opening the door”), the latter in the mediopassive sense (“the opening door”).
+
+  = footnote do
+    This loss remains unexplained, since it occurs in a position where the *h should have been preserved. Older Alashian texts do suggest the *H assimilated into the neighboring consonant (with forms such as <i>sammū</i> “hear! (pl)” found in earlier Alashian translations of the Bible), but Alashian does not typically lose gemination with no apparent reason.
+
+  = footnote do
+    While the gemination of *W and *Y in this form is expected morphologically, it seems questionable historically—the changes *nw → ww and *ny → yy seem unlikely given general trends in Alashian. These geminated glides are most likely the result of analogy.
+
+  = footnote do
+    The origin of this /ə/ is a combination of reanalysis and analogy. In most of the non-third person forms, the original *n assimilated into the follow consonant, resulting in *nn in the first person plural and *tt → *tʰ in all of the other forms. Since short vowels are neutralized to schwa before aspirates, the *e became ə. This later spread to the 1Pl form as well, where there is no phonological reason for /e/ to have shifted to /ə/.

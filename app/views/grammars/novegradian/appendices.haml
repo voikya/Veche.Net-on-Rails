@@ -4,33 +4,33 @@
 = section "Colors" do
   %p Novegradian has nine basic color terms, compared to the eleven of English. A basic color term is the highest level of color terminology in a language, a term that cannot be encompassed by another larger term. For example, in English “crimson” is not a basic color term because the term “red” includes “crimson” as well as many other shades.
   %p What constitutes each color varies significantly from the Latinate pattern used throughout much of Europe, the result of the many years of relative isolation the language experienced until around the 17th century, although there has been influence as well from the Uralic languages.
-  %table.invisible
+  %table.color-wrapper
     %tr
-      %td= image_tag "novegradian/red.png", :alt => "Red"
+      %td= render 'color_table', :colors => %w(#8E0000 #D60000 #E10000 #FF0000 #FF4000 #FF5400 #FF5A00)
       %td #{t "Цервене", "cérvene"}, often translated as “red”, encompasses the range from dark reds to medium-strength oranges. Some colors that might be considered very dark purple in English are also included.
     %tr
-      %td= image_tag "novegradian/yellow.png", :alt => "Yellow"
+      %td= render 'color_table', :colors => %w(#FF6E00 #FFA600 #FFC500 #FFDC00 #FFEB00 #FFFB00 #FCFF00)
       %td #{t "Жољте", "źółte"}, or “yellow”, includes the yellows, golds, and lighter oranges. Oranges (the fruit) would be considered to be жољте.
     %tr
-      %td= image_tag "novegradian/green.png", :alt => "Green"
+      %td= render 'color_table', :colors => %w(#E6FF00 #C9FF00 #A5FF00 #44FF00 #0DFF1B #0CFF64 #0AFF93)
       %td #{t "Желене", "źeléne"}, or “green”, includes the yellow-greens, greens, and some turqoise.
     %tr
-      %td= image_tag "novegradian/lblue.png", :alt => "Light Blue"
+      %td= render 'color_table', :colors => %w(#06FFC7 #00FFED #00E6FF #00CFFF #00AFFF #0098FF #007BFF)
       %td #{t "Плаве", "pláve"}, or “light blue”, covers some blue-greens and goes to the medium blues.
     %tr
-      %td= image_tag "novegradian/dblue.png", :alt => "Dark Blue"
+      %td= render 'color_table', :colors => %w(#0057FF #0032FF #0017FF #0000FF #2400FF #4500FF #6800FF)
       %td #{t "Шинье", "śínje"}, or “dark blue”, includes the darker shades of blue as well as most purples.
     %tr
-      %td= image_tag "novegradian/brown.png", :alt => "Brown"
+      %td= render 'color_table', :colors => %w(#764C00 #6B4500 #5F3D00 #533600 #4B3100 #3D2900 #302100)
       %td #{t "Руде", "rúde"}, or “brown”, covers the range of browns as well as dull reds.
     %tr
-      %td= image_tag "novegradian/black.png", :alt => "Black"
+      %td= render 'color_table', :colors => %w(#000000)
       %td #{t "Церне", "cérne"} means “black”.
     %tr
-      %td= image_tag "novegradian/white.png", :alt => "White"
+      %td= render 'color_table', :colors => %w(#FFFFFF)
       %td #{t "Бѣле", "bě́le"} means “white”.
     %tr
-      %td= image_tag "novegradian/grey.png", :alt => "Grey"
+      %td= render 'color_table', :colors => %w(#D0D0D0 #BEBEBE #A7A7A7 #8E8E8E #797979 #5E5E5E #434343)
       %td All intermediate shades between black and white are referred to as #{t "хѣре", "hě́re"} “grey”.
   %p Two other colors, #{t "розове", "rózove"} “pink” and #{t "оранжеве", "oránźeve"} “orange”, are gaining increasing usage due to Western European influence. However, they are generally not viewed as “basic” terms at present.
 
@@ -93,14 +93,14 @@
                        "now Ø hour-{nom.sg} / second-{nom.sg.fem.def} / tenth-{nom.sg.fem.def}",
                        "It’s 1.00 / 2.00 / 10.00."
     %p Minutes are shown after the preposition со so “with” in the dative/instrumental case: 6.20 #{t "шестая со дўудешитех", "śéstaia so dwudéśiteh"}, literally “the sixth with twenty”. The minutes show feminine agreement, if needed, because of #{t "минута", "minúta"}.
-    %p Two special words for fractions of hours also exist—#{t "пољ", "pół"} “half” and #{t "цетуерте", "cetuérte"} “quarter”. The latter may be placed after an hour much like the other minutes (#{t "тритей со цетуертем", "trítei so cetuértem"} “3.15”). When either form is placed before the hour, the hour is put in the genitive case and the time is subtractive: #{t "пољ тритѣе", "pół trítěie"} “2.30”, lit. “half of the third [hour]”). Пољ is always used subtractively like this. When a specific amount of minutes are used subtractively, the preposition со (this time meaning “from”) is required, the hour again being in the genitive: #{t "дуадешити со шенмѣе", "duadéśiti so śénměie"} “6.40”, lit. “twenty [minutes] from the seventh [hour]”. In general, the additive method is used for minutes between 01 and 29, and the subtractive method for minutes between 30 and 59.
+    %p Two special words for fractions of hours also exist—#{t "пољ", "pół"} “half” and #{t "цетуерте", "cetuérte"} “quarter”. The latter may be placed after an hour much like the other minutes: #{t "тритей со цетуертем", "trítei so cetuértem"} “3.15”. When either form is placed before the hour, the hour is put in the genitive case and the time is subtractive: #{t "пољ тритѣе", "pół trítěie"} “2.30”, lit. “half of the third [hour]”. Пољ is always used subtractively like this. When a specific amount of minutes are used subtractively, the preposition со (this time meaning “from”) is required, the hour again being in the genitive: #{t "дуадешити со шенмѣе", "duadéśiti so śénměie"} “6.40”, lit. “twenty [minutes] from the seventh [hour]”. In general, the additive method is used for minutes between 01 and 29, and the subtractive method for minutes between 30 and 59.
     %p This system is the most commonly used nowadays. It replaces an older system (still seen amongst the older generations or in rural areas) where times were based entirely on the following hour: #{t "тритѣе дешити", "trítěie déśiti"} “2.10” (lit. “of the third [hour] ten [minutes]”, that is, ten minutes into the third hour of the day). This has become increasingly uncommon since the advent of digital clocks since the modern system allows for an almost literal and linear reading of the numbers off the display, rather than requiring mentally adding one to the hour number displayed. However, a few remnants remain in the common lexicon, particularly the expression of “half” as just discussed.
     %p There are no real equivalents for “am” and “pm” as used in English. Instead, an adverb of time may be employed. #{t "Еутром", "iéutrom"} “in the morning” is used roughly from 5am to noon, #{t "денем", "dénem"} “in the daytime” from noon to 5pm, #{t "вецерем", "vécerem"} “in the evening” from 5pm until 11pm, and #{t "ногьюм", "nogjiúm"} “at night” from 11pm until 5am. Equivalent adverbs (e.g., using the locative case instead) are also allowed. Alternatively, and perhaps more commonly, speakers may also give time according to a 24-hour clock.
     %p The terms for “noon” and “midnight” are #{t "пољудна", "połudná"} “noon” and #{t "пољункьи", "półunkji"}, respectively. Both of these, however, are somewhat quirky in their declension. “Noon” is first declension in the singular and fourth declension in the plural. “Midnight” is always plural.
     %p Dates are given using the genitive singular masculine definite form of an ordinal number (for #{t "ден", "dén"} “days”) followed by the genitive singular of the month: #{t "дуадеши пирваево румѣнѣ", "duadéśi pirváievo rumě́ně"} “October 21st” (lit. “of the twenty-first [day] of October”).
 
 = section "Dual Nouns" do
-  %p A small set of nouns in Novegradian retain a distinct and functional dual form. As described in sections 12.8 and 13.8, outside of frozen expressions the dual forms are only used after the numeral “two” or the modifier “both”. Such nouns mostly describe paired body parts and clothing related to them. These twenty duals are shown in the table below, alongside with their nominative plural and genitive singular form for comparison. The three forms listed under “Dual Forms” are the #{abbrev 'nom'}/#{abbrev 'acc'}/#{abbrev 'lat'}, #{abbrev 'gen'}/#{abbrev 'loc'}, and #{abbrev 'datins'}, respectively.
+  %p A small set of nouns in Novegradian retain a distinct and functional dual form. As described in #{link_to "Section 12.8", novegradian_grammar_page_path(:nounsyntax, anchor: 's12-8'), class: 'xref'} and #{link_to "Section 13.8", novegradian_grammar_page_path(:adjectivesyntax, anchor: 's13-8'), class: 'xref'}, outside of frozen expressions the dual forms are only used after the numeral “two” or the modifier “both”. Such nouns mostly describe paired body parts and clothing related to them. These twenty duals are shown in the table below, alongside with their nominative plural and genitive singular form for comparison. The three forms listed under “Dual Forms” are the #{abbrev 'nom'}/#{abbrev 'acc'}/#{abbrev 'lat'}, #{abbrev 'gen'}/#{abbrev 'loc'}, and #{abbrev 'datins'}, respectively.
   %table
     %tr
       %th Nominative Singular
@@ -358,7 +358,7 @@
         %td= t("мама", "máma")
         %td= t("мами", "mámi")
         %td= t("маммо", "mámmo")
-        %td mother<sup>1</sup>
+        %td mother#{footnote}
       %tr
         %td= t("маже", "máźe")
         %td= t("мажя", "maźiá")
@@ -373,12 +373,12 @@
         %td= t("дѣтинко", "dě́tinko")
         %td= t("дѣдете", "dě́dete")
         %td= t("дѣдинмо", "dědínmo")
-        %td child<sup>2</sup>
+        %td child#{footnote}
       %tr
         %td= t("дѣдин", "dědín")
         %td= t("дѣдете", "dě́dete")
         %td= t("дѣдинмо", "dědínmo")
-        %td child<sup>3</sup>
+        %td child#{footnote}
       %tr
         %td= t("син", "sín")
         %td= t("синьа", "sinjá")
@@ -441,7 +441,7 @@
         %td= t("дядя", "diádia")
         %td= t("дядѣ", "diádě")
         %td= t("дядмо", "diádmo")
-        %td uncle<sup>4</sup>
+        %td uncle#{footnote}
       %tr
         %td= t("стрийка", "stríjka")
         %td= t("стрийки", "stríjki")
@@ -451,7 +451,7 @@
         %td= t("тета", "téta")
         %td= t("тети", "téti")
         %td= t("тетмо", "tétmo")
-        %td paternal aunt<sup>5</sup>
+        %td paternal aunt#{footnote}
       %tr
         %td= t("ойка", "óika")
         %td= t("ойки", "óiki")
@@ -461,7 +461,7 @@
         %td= t("наня", "nánia")
         %td= t("нанѣ", "náně")
         %td= t("нанмо", "nánmo")
-        %td maternal aunt<sup>6</sup>
+        %td maternal aunt#{footnote}
       %tr
         %td= t("брадане", "bradáne")
         %td= t("браданьи", "bradánji")
@@ -484,12 +484,12 @@
         %td= t("братеве син", "bráteve sín")
         %td= t("братеви синьа", "brátevi sinjá")
         %td= t("синмо братевей", "sínmo brátevei")
-        %td nephew<sup>7</sup>
+        %td nephew#{footnote}
       %tr
         %td= t("шестрина докьи", "śéstrina dókji")
         %td= t("шестрини докьери", "śéstrini dókjeri")
         %td= t("докьмо шестриная", "dókjmo śestrínaia")
-        %td niece<sup>7</sup>
+        %td niece
       %tr
         %td= t("внуке", "vnúke")
         %td= t("внуци", "vnúci")
@@ -706,7 +706,7 @@
     %li
       Number Sign (№) — The number sign is used:
       %ol
-        %li Before a number qualifying something, but not counting it (e.g., дом № 846 “House number 846”). This corresponds to the use of animate numerals when not counting animate nouns.
+        %li Before a number qualifying something, but not counting it (e.g., дум № 846 “House number 846”). This corresponds to the use of animate numerals when not counting animate nouns.
 
 = section "Common Slavic Morphology" do
   %p The following tables outline Common Slavic inflectional morphology as it is currently understood. These charts reflect the Common Slavic dialect from which Novegradian evolved.
@@ -1943,15 +1943,15 @@
       %td Common Slavic *dъva "two"
     %tr
       %th 13. big
-      %td= t("болише", "bóliśe", :linebreak => true)
-      %td= t("большой", "bol'šój", :linebreak => true)
+      %td= t("вале", "vále", :linebreak => true)
+      %td.notcognate= t("большой", "bol'šój", :linebreak => true)
       %td.notcognate= t("великий", "velýkyj", :linebreak => true)
       %td.notcognate wielki
       %td.notcognate wulki
       %td.notcognate velký
       %td.notcognate= t("велик", "vèlik", :linebreak => true)
       %td.notcognate= t("голям", "goljam", :linebreak => true)
-      %td Common Slavic *boljьšь "larger"
+      %td Common Slavic *valъ "wave"
     %tr
       %th 14. long
       %td= t("диляне", "diliáne", :linebreak => true)
@@ -2910,12 +2910,24 @@
       %td= t("име", "ime", :linebreak => true)
       %td Common Slavic *jьmę "name"
 
-%hr.footnote
+%section.footnotes
+  = footnote do
+    A less formal variant of мати
 
-%p 1) A less formal variant of мати
-%p 2) Borrows the singular possessive forms (as well as plurals) from дѣдин
-%p 3) Same meaning as дѣтинко
-%p 4) Informal; substitutes for both стриеце and оеце
-%p 5) Informal
-%p 6) Informal
-%p 7) The adjective mirrors the gender of the sibling. Therefore, братеве син means the son of a brother, and шестрин син is the son of a sister, while братева докьи means the daughter of a brother and шестрина докьи is the daughter of a sister.
+  = footnote do
+    Borrows the singular possessive forms (as well as plurals) from дѣдин
+
+  = footnote do
+    Same meaning as дѣтинко
+
+  = footnote do
+    Informal; substitutes for both стриеце and оеце
+
+  = footnote do
+    Informal
+
+  = footnote do
+    Informal
+
+  = footnote do
+    The adjective mirrors the gender of the sibling. Therefore, братеве син means the son of a brother, and шестрин син is the son of a sister, while братева докьи means the daughter of a brother and шестрина докьи is the daughter of a sister.
