@@ -5,7 +5,6 @@ $table_border_bottom_right: #C7B86D;
 $table_border_top_left: #B7A85D;
 
 body.grammar.alashian {
-
   header {
     background-color: $background_color;
 
@@ -40,21 +39,18 @@ body.grammar.alashian {
     width: 200px;
   }
 
-  table {
-    border: solid 3px $background_color;
-    border-bottom: solid 2px $table_border_bottom_right;
-    border-right: solid 2px $table_border_bottom_right;
-    border-top: solid 2px $table_border_top_left;
-    border-left: solid 2px $table_border_top_left;
+  table.textgloss {
+    border: solid 1px lighten($table_border_top_left, 35%);
+    border-left: solid 5px $table_border_top_left;
 
-    &.textgloss {
-      border: dotted 1px $table_border_top_left;
-      border-left: solid 5px $table_border_top_left;
+    td.index {
+      font-weight: bold;
+      color: $table_border_top_left;
     }
+  }
 
-    &.header {
-      color: $header_color;
-    }
+  table.invisible {
+    margin-left: 0;
   }
 
   .adj-form {

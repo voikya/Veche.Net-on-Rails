@@ -39,65 +39,62 @@ body.grammar.ochets {
     font-weight: bold;
   }
 
-  table {
-    border: solid 3px $background_color;
-    border-bottom: solid 2px $table_border_bottom_right;
-    border-right: solid 2px $table_border_bottom_right;
-    border-top: solid 2px $table_border_top_left;
-    border-left: solid 2px $table_border_top_left;
+  table.textgloss {
+    border: solid 1px lighten($table_border_top_left, 25%);
+    border-left: solid 5px $table_border_top_left;
 
-    &.textgloss {
-      border: dotted 1px $table_border_top_left;
-      border-left: solid 5px $table_border_top_left;
+    td.index {
+      font-weight: bold;
+      color: $table_border_top_left;
+    }
+  }
+
+  table.slottable {
+    th {
+      width: 5em;
     }
 
-    &.header {
-      color: $header_color;
+    td {
+      vertical-align: top;
     }
+  }
 
-    &.slottable {
-      th {
+  table.noundecl {
+    th {
+      width: 10em;
+
+      &.lefthandrot {
         width: 5em;
-      }
-
-      td {
-        vertical-align: top;
+        max-width: 5em;
       }
     }
 
-    &.noundecl {
-      th {
-        width: 10em;
-
-        &.lefthandrot {
-          width: 5em;
-          max-width: 5em;
-        }
-      }
-
-      td {
-        text-align: center;
-      }
-
-      .rotate {
-        display: block;
-        -moz-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-      }
+    td {
+      text-align: center;
     }
 
-    &.numdecl {
-      th.num {
-        width: 5em;
-      }
-
-      .och {
-        width: 10em;
-      }
+    .rotate {
+      display: block;
+      -moz-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
     }
+  }
+
+  table.numdecl {
+    th.num {
+      width: 5em;
+    }
+
+    .och {
+      width: 10em;
+    }
+  }
+
+  table.invisible {
+    margin-left: 0;
   }
 
   #sandhitable {
