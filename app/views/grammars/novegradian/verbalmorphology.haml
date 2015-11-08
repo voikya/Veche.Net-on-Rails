@@ -47,7 +47,7 @@
       %li *луб- → #{t "лубити", "lubíti"} “to love” (hysterodynamic, i-type)
       %li *вид- → #{t "видѣти", "víděti"} “to see” (stem stressed, ě-type)
       %li *бол- → #{t "болѣти", "bolě́ti"} “to hurt, ache” (ending stressed, ě-type)
-    %p The ě-type has a variant #{t "-ати", "-ati"}, which predictably occurs after stems ending in /sʲ zʲ ts dz j/, and unpredictably after consonants that historically were once of these five.
+    %p The ě-type has a variant #{t "-ати", "-ati"}, which predictably occurs after stems ending in /sʲ zʲ ts dz j/, and unpredictably after consonants that historically were once one of these five.
     %ul
       %li *криѕ- → #{t "криѕати", "kridzáti"} “to shout” (palatal stem, ě-type)
       %li *держ- → #{t "держати", "derźáti"} “hold” (palatal stem, ě-type)
@@ -99,7 +99,7 @@
 = section "The Indicative Mood" do
   = section "The Formation of the Perfective" do
     %p As in several other Slavic languages, two processes must be discussed when it comes to the formation of perfective/imperfective pairs: perfectivization and deperfectivization.
-    %p Perfectization is the process of deriving perfective verbs from primitive imperfectives. In Novegradian this is done overwhelmingly through the use of prefixes. The addition of a perfectivizing prefix may or may not change the meaning of the verb; in other words, prefixes serve both to form simple perfectives, and to derive new perfective verbs: #{t "пизати", "pizáti"} “write (#{abbrev 'impf'})” → #{t "напизати", "napizáti"} “write (#{abbrev 'pf'})”, #{t "опизати", "opizáti"} “describe (#{abbrev 'pf'})”, #{t "перепизати", "perepizáti"} “rewrite (#{abbrev 'pf'})”, etc.
+    %p Perfectization is the process of deriving perfective verbs from primitive imperfectives. In Novegradian this is done overwhelmingly through the use of prefixes. The addition of a perfectivizing prefix may or may not change the meaning of the verb; in other words, prefixes serve both to form simple perfectives, and to derive new perfective verbs: #{t "пизати", "pizáti"} “write (#{abbrev 'impf'})” → #{t "напизати", "napizáti"} “write (#{abbrev 'pf'})”, #{t "опизати", "opizáti"} “describe (#{abbrev 'pf'})”, #{t "препизати", "prepizáti"} “rewrite (#{abbrev 'pf'})”, etc.
     %p These prefixes are always derived from prepositions (although the prepositions they were derived from didn’t necessarily survive into modern Novegradian), usually ones that at one point had some sort of semantic connection with the root which has since been lost. Some of the more common prefixes include #{t "по-", "po-"} ‘confined to, along, by’, #{t "со-", "so-"} ‘with’, #{t "на-", "na-"} ‘on’, #{t "о-", "o-"} ‘at’, #{t "при-", "pri-"} ‘attached to’, #{t "за-", "za-"} ‘behind’, and #{t "про-", "pro-"} ‘through’. Examples, using some of the same roots as above:
     %ul
       %li #{t "цидати", "cidáti"} → #{t "процидати", "procidáti"} “read”
@@ -122,7 +122,7 @@
       %li #{t "наценати", "nacenáti"} → #{t "нашнати", "naśnáti"} “begin, start”
       %li #{t "брати", "bráti"} → #{t "женти", "źénti"} “bring” (cf. Common Slavic *brati, *vъzęti)
     %p In general, the pattern any given verb requires to form its perfective counterpart must be memorized. Even though prefixation is the most common method, it is not readily predictable which prefix is required to form the simple perfective without deriving a verb with a new meaning.
-    %p In contrast, deperfectivization is the process by which a new imperfective form is created from a prefixed perfective verb, the result of the otherwise pairless derived perfectives that perfectivization creates. The vast majority of these forms, known as derived imperfectives, are formed with the suffix #{t "-ов-", "-ov"}, which is always first conjugation. This is the regular, productive pattern:
+    %p In contrast, deperfectivization is the process by which a new imperfective form is created from a prefixed perfective verb, the result of the otherwise pairless derived perfectives that perfectivization creates. The vast majority of these forms, known as derived imperfectives, are formed with the suffix #{t "-ов-", "-ov-"}, which is always first conjugation. This is the regular, productive pattern:
     %ul
       %li #{t "тулити", "tulíti"} “put away (#{abbrev 'impf'})” → #{t "затулити", "zatulíti"} “close (#{abbrev 'pf'})” → #{t "затуловати", "zatulováti"} “close (#{abbrev 'impf'})”
       %li #{t "пизати", "pizáti"} “write (#{abbrev 'impf'})” → #{t "препизати", "prepizáti"} “rewrite (#{abbrev 'pf'})” → #{t "преписовати", "prepisováti"} “rewrite (#{abbrev 'impf'})”
@@ -217,8 +217,8 @@
         %li в → ўл (#{t "дивити", "divíti"} “surprise” → #{t "диўлун", "diwlún"})
         %li м → мл (#{t "омити", "omíti"} “teach how to” → #{t "омлун", "omlún"})
 
-      %p The tables below demonstrates the regular patterns with each of the possible regular stress patterns.
-      %p In the A Conjugation, there are two regular stress patterns: stem stress and ending stress. With#{t "дѣлати", "dě́lati"} “make, do” (A Conjugation, regular stem stressed) and #{t "цидати", "cid´áti"} “read” (A Conjugation, regular ending stressed):
+      %p The tables below demonstrate the regular patterns with each of the possible regular stress patterns.
+      %p In the A Conjugation, there are two regular stress patterns: stem stress and ending stress. With #{t "дѣлати", "dě́lati"} “make, do” (A Conjugation, regular stem stressed) and #{t "цидати", "cidáti"} “read” (A Conjugation, regular ending stressed):
       %table
         %tr
           %th{:colspan => 2}
@@ -626,7 +626,7 @@
           - cyr = %w[вожм-ун вожм-еш вожм-ет вожм-ева вожм-ета вожм-ета вожм-ем вожм-ете вожм-ут]
           - lat = %w[voźmún voźméś voźmét voźméva voźméta voźméta voźmém voźméte voźmút]
           = render 'present_future_verb_table', :infinitive => {:cyr => "женти", :lat => "źénti"}, :meaning => "take, bring", :aspect => "pf", :cyrillic => cyr, :latin => lat
-          %P Unexpected stem variation /zʲe(n)/ (infintiive) ~ /βozʲm/ (present). A complex pattern combining a now-defunct prefix *вож, a now-defunct verb *е(н)ти, and historical nasalization, cf. Common Slavic *vъzęti, *vъzьmǫ.
+          %P Unexpected stem variation /zʲe(n)/ (infinitive) ~ /βozʲm/ (present). A complex pattern combining a now-defunct prefix *вож, a now-defunct verb *е(н)ти, and historical nasalization, cf. Common Slavic *vъzęti, *vъzьmǫ.
       .two-columns
         .col
           - cyr = %w[ишкь-ун ист-еш ист-ет ист-ева ист-ета ист-ета ист-ем ист-ете ист-ут]
@@ -647,7 +647,7 @@
         .col
           - cyr = %w[по-шед-ун по-шед-еш по-шед-ет по-шед-ева по-шед-ета по-шед-ета по-шед-ем по-шед-ете по-шед-ут]
           - lat = %w[pośédun pośédeś pośédet pośédeva pośédeta pośédeta pośédem pośédete pośédut]
-          = render 'present_future_verb_table', :infinitive => {:cyr => "пошѣсти", :lat => "pośě́sti"}, :meaning => "sit down", :aspect => "impf", :cyrillic => cyr, :latin => lat
+          = render 'present_future_verb_table', :infinitive => {:cyr => "пошѣсти", :lat => "pośě́sti"}, :meaning => "sit down", :aspect => "pf", :cyrillic => cyr, :latin => lat
           %p Stem vowel variation with /æ/ in infinitive and /e/ in future. This is the sole Novegradian holdover of Proto-Indo-European nasal infixes in the present tense, cf. Proto-Slavic *posēdtei, *posendun; Common Slavic *posěsti, *posędǫ. Only appears prefixed.
       .two-columns
         .col
@@ -847,7 +847,7 @@
       %p If the infinitive stem ends in /s z k g/ (i.e., the infinitive ends in -зти, -йкьи, or occasionally -сти), the consonant is not dropped, and the past tense suffix -л- is added immediately after that consonant. The /j/ off-glide seen in the velar stems is dropped.
       %table
         %tr
-          %th{:colspan => 4} Past Tense Forms of Verbs with Stem-Final /s z k g/
+          %th{:colspan => 5} Past Tense Forms of Verbs with Stem-Final /s z k g/
         %tr
           %th Infinitive
           %td
@@ -951,7 +951,7 @@
           %td= t("ѣгли", "iě́gli", :linebreak => true)
           %td= t("вѣгли", "vě́gli", :linebreak => true)
           %td= t("дагли", "dágli", :linebreak => true)
-      %p In speech it is common to pronounce this -г- as a fricative /γ/ in some or all forms. Older speakers only have this /γ/ when the syllable immediately before the -г- is stressed (e.g., да[γ]ле “I/you/he gave”, but да[g]ла “I/you/she gave”). Younger speaks frequently have /γ/ in all forms.
+      %p In speech it is common to pronounce this -г- as a fricative /ɣ/ in some or all forms. Older speakers only have this /ɣ/ when the syllable immediately before the -г- is stressed (e.g., да[ɣ]ле “I/you/he gave”, but да[g]ла “I/you/she gave”). Younger speaks frequently have /ɣ/ in all forms.
 
     = section "Irregular Verbs in the Past Tense" do
       %p A very small set of verbs have an irregular past tense, with a pattern not shared by any other verbs except for their own derivative forms. They are #{t "исти", "ísti"} “go, walk”, #{t "пошѣсти", "pośě́sti"} “sit down”, #{t "гейкьи", "géikji"} “burn”, #{t "данти", "dánti"} “blow”, #{t "женти", "źénti"} “take”, and #{t "тайти", "táiti"} “conceal, harbor”.
@@ -1034,7 +1034,7 @@
           %td= t("тайли", "táili", :linebreak => true)
       %p The past tense of исти is suppletive, based on *ш(ед)-, a root originally meaning something along the lines of “step”. The fact that the ending is always stressed on this stem means that исти and its derivatives are the only verbs that distinguish the dual and plural forms in speech.
       %p The vowel change in пошѣсти is likely the result of contamination (since the vowels of this verb were already irregular in Common Slavic due to an additional nasal element inherited from PIE). The exact origin is not certain.
-      %p The ғ found in the past tense of гейкьи is the result of dissimilation from the following /g/. Due to palatalization rules, however, it is actually even more irregular than it appears. Only in the feminine singular is ғ pronounced [γ] (i.e., [γɛ.ˈgla]); in all other forms it is pronounced [j]: [ˈjɛ.glɛ], [ˈjɛ.glo], etc.
+      %p The ғ found in the past tense of гейкьи is the result of dissimilation from the following /g/. Due to palatalization rules, however, it is actually even more irregular than it appears. Only in the feminine singular is ғ pronounced [ɣ] (i.e., [ɣɛ.ˈgla]); in all other forms it is pronounced [j]: [ˈjɛ.glɛ], [ˈjɛ.glo], etc.
       %p Both данти and женти originally had nasal vowels in their infinitive and past tense stems (Common Slavic *dǫlъ, *vъzęlъ), which uncoupled into /an en/ in the infinitive but not in the past tense. Note also that these verbs, despite being one syllable long, do not display the stress shift in the feminine singular.
       %p Тайти just sees the root-final /j/ lost in the masculine singular likely due to dialect contamination. The masculine singular ending was once very weak, and the lack of ending prompted loss of /j/ as /jl/ was illegal at the end of a word. It reappears in all other forms. This also makes it the only verb to distinguish the masculine singular from the type II neuter singular in speech: #{t "тале", "tále"} [ˈta.lɛ] vs #{t "тайлѐ", "táile"} [ˈtaj.lɛ].
 
@@ -1286,7 +1286,7 @@
       %td= t("дамте!", "dámte", :linebreak => true)
   %p There is only one third person imperative that has survived, the #{abbrev '3sg'} of буити: #{t "буди", "budí"} “let him/her/it be”. The #{abbrev '3dl'}/#{abbrev '3pl'} form #{t "буден", "budén"} “let them be” is sometimes seen in older texts, though it is no longer used. Буди is generally used for third person subjects of any number and is fully productive in the literary register, though is limited to certain expressions in colloquial speech. All other third person imperatives are formed periphrastically.
 
-  %p A number of verb classes have irregular imperatives, particularly those where the present stem ends in /j/. E-Conjugation verbs of the *-ij (e.g., крити) and *-Cj (e.g., пити) types take the ending #{t "-ей", "-ei"} in the second person rather than -и- or -ѣ-. In the first person forms, the expect -ѣ- appears, but with a /j/ glide. Verbs with a /v ~ j/ alternation (e.g., ковати) form the imperative using the <em>infinitive</em> stem rather than the present-future to avoid the repetition of /j/, while verbs with the stative suffix *-ěi- (e.g., владѣти) lose it entirely in the imperative (so that, e.g., the #{abbrev '2sg'} imperative is #{t "влади!", "vladí"} “rule!” rather than #{t "**владѣи", "**vladějí"}.
+  %p A number of verb classes have irregular imperatives, particularly those where the present stem ends in /j/. E-Conjugation verbs of the *-ij (e.g., крити) and *-Cj (e.g., пити) types take the ending #{t "-ей", "-ei"} in the second person rather than -и- or -ѣ-. In the first person forms, the expected -ѣ- appears, but with a /j/ glide. Verbs with a /v ~ j/ alternation (e.g., ковати) form the imperative using the <em>infinitive</em> stem rather than the present-future to avoid the repetition of /j/, while verbs with the stative suffix *-ěi- (e.g., владѣти) lose it entirely in the imperative (so that, e.g., the #{abbrev '2sg'} imperative is #{t "влади!", "vladí"} “rule!” rather than #{t "**владѣи", "**vladějí"}.
   %table
     %tr
       %th{:colspan => 5} Irregular Imperatives
