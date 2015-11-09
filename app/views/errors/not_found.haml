@@ -1,0 +1,14 @@
+- content_for :title, "veche.net — Page Not Found"
+
+#container
+  #title.shifted
+    = link_to root_path do
+      = image_tag 'title.png', :alt => "veche.net"
+
+  #articleset
+    %article
+      = image_tag 'header_404.png', :class => 'header'
+      %h1 404 Page Not Found
+      .content
+        %p Sorry, we seem to have gotten ourselves lost. The page you're looking for doesn't exist.
+        %p= link_to "Return to Veche.Net", root_path

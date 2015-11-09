@@ -1,0 +1,14 @@
+- content_for :title, "veche.net — Internal Server Error"
+
+#container
+  #title.shifted
+    = link_to root_path do
+      = image_tag 'title.png', :alt => "veche.net"
+
+  #articleset
+    %article
+      = image_tag 'header_500.png', :class => 'header'
+      %h1 500 Internal Server Error
+      .content
+        %p Uh-oh, looks like something isn't working correctly. We'll try to get that fixed as soon as possible.
+        %p= link_to "Return to Veche.Net", root_path

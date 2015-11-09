@@ -61,5 +61,8 @@ module VecheNet
 
     # Confine helpers to specific context
     config.action_controller.include_all_helpers = false
+
+    # Handle exceptions
+    config.exceptions_app = self.routes
   end
 end
