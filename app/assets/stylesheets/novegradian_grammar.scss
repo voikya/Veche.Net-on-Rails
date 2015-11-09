@@ -159,4 +159,11 @@ body.grammar.novegradian {
       padding-left: 10px;
     }
   }
+
+  form.download {
+    button {
+      background-color: $background_color;
+      color: $header_color;
+    }
+  }
 }

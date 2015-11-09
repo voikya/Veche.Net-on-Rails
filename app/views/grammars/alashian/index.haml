@@ -6,8 +6,8 @@
 
 %h2 E-Book
 %p The most current version of the Alashian grammar is available as a pdf e-book here:
-%p
-  = link_to "Reference Grammar of the Alashian Language", "http://cl.ly/3I0b2Y0e2B0I/alashian_web.pdf"
+%div
+  = render "download_form", :file => "alashian_grammar_web.pdf", :label => "Reference Grammar of the Alashian Language"
   (3.5 MB)
 %p &nbsp;
 %p Otherwise, the entire text of the grammar may be browsed online.

@@ -60,4 +60,11 @@ body.grammar.alashian {
   .highlight {
     color: red;
   }
+
+  form.download {
+    button {
+      background-color: $background_color;
+      color: $header_color;
+    }
+  }
 }

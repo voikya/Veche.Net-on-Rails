@@ -112,5 +112,6 @@ VecheNet::Application.routes.draw do
   post '/contact' => 'static#sendmail'
   get '/login' => 'static#login_form', :as => 'login'
   post '/login' => 'static#login'
+  post '/downloads/:file' => 'static#download', :as => 'download', :constraints => { :file => /[\w\.]+/ }
   root :to => 'static#index'
 end

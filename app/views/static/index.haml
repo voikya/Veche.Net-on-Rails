@@ -43,7 +43,7 @@
             = link_to "Grammar of the Novegradian Language", novegradian_index_path
             — the main index page to the online version of the grammar
           %li
-            = link_to "Grammar of the Novegradian Language (pdf)", 'http://cl.ly/3f3E2G2K0j05/novegradian_web.pdf'
+            = render "download_form", :file => "novegradian_grammar_web.pdf", :label => "Grammar of the Novegradian Language (pdf)"
             — a direct link to the current version of the grammar, a 3MB pdf e-book
           %li
             = link_to "Novegradian Lexicon", lexicon_path(:language => :novegradian)
@@ -86,7 +86,7 @@
             = link_to "Grammar of the Alashian Language", alashian_index_path
             — the main index page to the online version of the grammar
           %li
-            = link_to "Grammar of the Alashian Language (pdf)", 'http://cl.ly/3I0b2Y0e2B0I/alashian_web.pdf'
+            = render "download_form", :file => "alashian_grammar_web.pdf", :label => "Grammar of the Alashian Language (pdf)"
             — a direct link to the current version of the grammar, a 4MB pdf e-book
           %li
             = link_to "Alashian Lexicon", lexicon_path(:language => :alashian)

@@ -30,4 +30,16 @@ class StaticController < ApplicationController
     session[:authorization] = params[:password]
     redirect_to params[:redirect]
   end
+
+  def download
+    @filename = params[:file]
+    @downloads_path = Rails.root.join('app', 'assets', 'downloads')
+
+    if Dir.entries(@downloads_path).include? @filename
+      Download[@filename].increment!(:download_count)
+      send_file @downloads_path.join(@filename)
+    else
+      raise ActionController::RoutingError, 'Not Found'
+    end
+  end
 end

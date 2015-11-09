@@ -6,9 +6,9 @@
 
 %h2 E-Book
 %p The most current version of the Novegradian grammar is available as a pdf e-book here:
-%p
-  = link_to "Reference Grammar of the Novegradian Language", "http://cl.ly/3f3E2G2K0j05/novegradian_web.pdf"
-  (3.3 MB)
+%div
+  = render "download_form", :file => "novegradian_grammar_web.pdf", :label => "Reference Grammar of the Novegradian Language"
+  (3.2 MB)
 %p &nbsp;
 %p Otherwise, the entire text of the grammar may be browsed online.
 %p &nbsp;
