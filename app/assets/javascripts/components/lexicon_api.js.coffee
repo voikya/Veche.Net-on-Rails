@@ -63,6 +63,7 @@ class @Lexicon.API
         data = JSON.parse(request.responseText)
         Lexicon.Event.trigger 'api:create:response', data
         Lexicon.Event.trigger 'api:finish'
+        Lexicon.Router.transition "/entries/#{data.slug}"
     Lexicon.Event.trigger 'api:start'
     request.send JSON.stringify(data)
 

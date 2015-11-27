@@ -5,90 +5,64 @@ module Lexicons
     end
 
     module ClassMethods
-      attr_reader :formatters
+      attr_reader :formatters, :fields
 
-      # Delegate calls to Entry::each to Entry#all, an ActiveRecord::Relation.
-      # This ensures the class object is iterable as well.
-      def each(&block)
-        all.each(&block)
-      end
-
-      # Array of fields that are included when doing a search over "any" field.
+      # Array of fields that are included when doing a search over "any" field
       def scopable_fields
-        [
-          :transliteration,
-          :definition,
-          :idioms,
-          :notes
-        ]
+        raise NotImplementedError
       end
 
-      def create_from_json(params)
-        data = {}
-        fields = params.reduce({}) do |memo, (k, v)|
-          memo[k.gsub('-', '_').to_sym] = v
-          memo
-        end
-        fields.reject{|k,v| [:cross_references, :morphology_table].include?(k)}.each do |field, value|
-          if attribute_method?(field) && @formatters[field]
-            data[field] = @formatters[field].new(field, nil).update(value)
-          end
-        end
-
-        record = new(data)
-
-        (fields[:cross_references] || []).each do |xref|
-          record.cross_reference_links.build(to: self.class.find_by_slug(xref[:slug]))
-        end
-
-        if fields[:morphology_table] && fields[:morphology_table].any? {|k,v| v.present?}
-          record.morphology = morphology_class.new(fields[:morphology_table])
-        end
-
-        record
-      end
-
-      def create_from_json!(params)
-        record = create_from_json(params)
-        record.save!
-        record
-      end
-
-      private
-
-      # Register a field and assign it a formatter class. Creates attribute
-      # accessors as a side-effect. Call this method for all presentable fields.
-      # Pass in custom:true if the field does not correspond to a DB column and
-      # should not have accessors created.
+      # Register a field and assign it a formatter class, while creating a serializer
+      # for that field on the lexicon entry class. Call this method for all
+      # presentable fields.
       def field(name, opts)
-        @formatters ||= {}
-        @formatters[name] = opts[:formatter]
-        attr_accessible(name) unless opts[:custom]
+        @formatters ||= []
+        @formatters << {:field => name, :opts => opts}
+        @fields ||= []
+        @fields << name
+
+        attr_accessible(name)
+
+        if opts[:reader] && opts[:writer] && opts[:class]
+          # Need to handle serialization/deserialization manually
+          reader = instance_method(opts[:reader])
+          writer = instance_method(opts[:writer])
+
+          define_method name.to_sym do
+            formatter = opts[:formatter].new(reader.bind(self).call, :class => opts[:class])
+            instance_variable_set :"@#{name}", formatter
+          end
+
+          define_method :"#{name}=" do |value|
+            formatter = opts[:formatter].new(reader.bind(self).call, :class => opts[:class])
+            formatter.set(value)
+            instance_variable_set :"@#{name}", formatter
+          end
+
+          after_save do
+            formatter = instance_variable_get :"@#{name}"
+            if formatter
+              data = formatter.dump
+            end
+            writer.bind(self).call(data)
+          end
+        else
+          # Use Rails serializer
+          serialize name, opts[:formatter]
+        end
       end
-    end
-
-    # Return a summary (equivalent to the first line of the definition)
-    def definition_summary
-      formatter(:definition).summary
-    end
-
-    # Return array of instantiated formatters
-    def formatters(opts = {})
-      self.class.formatters.map do |k, _|
-        formatter(k, opts)
-      end.compact
     end
 
     # Mark up the instance with ephemeral annotations for display purposes.
     # For now this is used to indicate where search terms found a match.
     def annotate(scopes)
       @matches ||= []
-      # Iterate over each provided field and condition.
+      # Iterate over each provided field and condition
       scopes.each do |field, condition|
-        text = send(field)
+        text = send(field).for_reading.to_s
         plaintext_condition = condition.gsub('*', '')
         local_matches = []
-        # Loop until all matching instances are found.
+        # Loop until all matching instances are found
         loop do
           search_start = (local_matches.empty?) ? 0 : local_matches.last.end
           start_index = text.index(plaintext_condition, search_start)
@@ -97,83 +71,50 @@ module Lexicons
           is_match = true
           if condition[0] == '*' && start_index != 0 && text[start_index - 1] =~ /\p{Word}/
             is_match = false
-          elsif condition[-1] == '*' && end_index != text.length && text[end_index + 1] =~ /\p{Word}/
+          elsif condition[-1] == '*' && end_index != text.length && text[end_index + 1] =~ /\{Word}/
             is_match = false
           end
           range = (start_index...end_index)
           local_matches << range
-          @matches << ConditionMatch.new(formatter: formatter(field), text: text, range: range)
+          @matches << ConditionMatch.new(formatter: send(field), text: text, range: range)
         end
       end
     end
 
-    # Retrieve an array of all search matches.
+    # Retrieve an array of all search matches
     def matches
       @matches
     end
 
-    # JSON representation
-    def to_json(opts={})
+    # Generate a hash suitable for conversion to JSON for viewing
+    def to_read_hash
       {
-        :slug => self.slug,
-        :fields => formatters(opts).map(&:to_json)
-      }.to_json
+        slug: slug,
+        fields: self.class.formatters.map do |formatter|
+          if value = send(formatter[:field]).for_reading
+            {
+              name: formatter[:field].to_s.dasherize,
+              value: value,
+              type: formatter[:opts][:formatter].name.split('::').last.gsub('Formatter', '')
+            }
+          end
+        end.compact
+      }
     end
 
-    def update_from_json(params)
-      fields = params.reduce({}) do |memo, (k, v)|
-        memo[k.gsub('-', '_').to_sym] = v
-        memo
-      end
-      fields.reject{|k,v| [:cross_references, :morphology_table].include?(k)}.each do |field, value|
-        if respond_to?(field) && self.class.formatters[field]
-          format = formatter(field, include_empty: true)
-          send("#{field}=".to_sym, format.update(value))
+    # Generate a hash suitable for conversion to JSON, including metadata
+    # needed for editing
+    def to_edit_hash
+      {
+        slug: slug,
+        fields: self.class.formatters.map do |formatter|
+          {
+            name: formatter[:field].to_s.dasherize,
+            value: send(formatter[:field]).for_editing,
+            type: formatter[:opts][:formatter].name.split('::').last.gsub('Formatter', '')
+          }
         end
-      end
-
-      xrefs = (fields[:cross_references] || []).map {|ref| ref[:slug]}
-      cross_references.each do |xref|
-        if !xrefs.include?(xref.slug)
-          cross_reference_links.first.class.delete_all(:from => id, :to => xref.id)
-        end
-      end
-      xrefs.each do |xref|
-        if !cross_references.map(&:slug).include?(xref)
-          cross_reference_links.create(to: self.class.find_by_slug(xref).id)
-        end
-      end
-
-      if fields[:morphology_table] && fields[:morphology_table].any? {|k,v| v.present?}
-        if morphology
-          morphology.update_attributes(fields[:morphology_table])
-        else
-          self.morphology = self.class.morphology_class.new(fields[:morphology_table])
-        end
-      end
-    end
-
-    def update_from_json!(params)
-      update_from_json(params)
-      save!
-    end
-
-    def cross_references=(val)
-    end
-
-    def morphology_table=(val)
-    end
-
-    private
-
-    # Create an initialized formatter for a given field.
-    def formatter(field, opts={})
-      text = send(field)
-      if (text && text.present?) || opts[:include_empty]
-        self.class.formatters[field].new(field, send(field))
-      else
-        nil
-      end
+      }
     end
 
     # Generate a new slug

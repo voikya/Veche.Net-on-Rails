@@ -31,58 +31,46 @@ module Lexicons
     end
 
     def index
-      @lexicon.scope_entries(search_params)
-      render :json => @lexicon.entries
+      render :json => @lexicon.scope_entries(search_params).entries
     end
 
     def show
-      @entry = @lexicon.entry(params[:slug])
-      if @entry.respond_to?(:morphology) && @entry.morphology
-        partial = "lexicons/lexicon/morphology/" +
-                  @language.downcase.to_s +
-                  "_" +
-                  @entry.morphology.category.to_s.pluralize
-        @entry.morphology_table = render_to_string :partial => partial, :locals => {:m => @entry.morphology.generate!}
-      end
-      render :json => @entry
+      render :json => @lexicon.entry(params[:slug]).to_read_hash
     end
 
     def new
       require_authorization! or return
-      @entry = @lexicon.lexicon_class.new
-      if @entry.respond_to?(:morphology)
-        @entry.morphology_table = @entry.morphology_hash
-      end
-      render :json => @entry.to_json(include_empty: true)
+      render :json => @lexicon.lexicon_class.new.to_edit_hash
     end
 
     def edit
       require_authorization! or return
-      @entry = @lexicon.entry(params[:slug])
-      if @entry.respond_to?(:morphology)
-        @entry.morphology_table = @entry.morphology_hash
-      end
-      render :json => @entry.to_json(include_empty: true)
+      render :json => @lexicon.entry(params[:slug]).to_edit_hash
     end
 
     def create
       require_authorization! or return
-      @entry = @lexicon.lexicon_class.create_from_json! params
-      render :json => @entry
+      fields = params.reduce({}) do |memo, (k, v)|
+        memo[k.gsub('-', '_').to_sym] = v
+        memo
+      end.reject do |k,v|
+        !@lexicon.lexicon_class.fields.include?(k)
+      end
+      @entry = @lexicon.lexicon_class.create fields
+      render :json => @entry.to_read_hash
     end
 
     def update
       require_authorization! or return
-      @entry = @lexicon.entry(params[:slug])
-      @entry.update_from_json! params
-      if @entry.respond_to?(:morphology) && @entry.morphology
-        partial = "lexicons/lexicon/morphology/" +
-                  @language.downcase.to_s +
-                  "_" +
-                  @entry.morphology.category.to_s.pluralize
-        @entry.morphology_table = render_to_string :partial => partial, :locals => {:m => @entry.morphology.generate!}
+      fields = params.reduce({}) do |memo, (k, v)|
+        memo[k.gsub('-', '_').to_sym] = v
+        memo
+      end.reject do |k,v|
+        !@lexicon.lexicon_class.fields.include?(k)
       end
-      render :json => @entry
+      @entry = @lexicon.entry(params[:slug])
+      @entry.update_attributes fields
+      render :json => @entry.to_read_hash
     end
 
     private

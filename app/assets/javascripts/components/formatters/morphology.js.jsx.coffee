@@ -3,47 +3,46 @@
 
 @Lexicon.Formatters.Morphology = React.createClass
   componentWillMount: ->
-    @setState(content: @props.data.value)
+    content = (if Utils.objectIsEmpty(@props.data.value) then null else @props.data.value)
+    template = Object.keys(@props.data.value).reduce ((m,c) -> m[c] = null; m), {}
+    @setState(content: content, template: template, visible: !!content)
 
   componentWillReceiveProps: (nextProps) ->
-    @setState(content: nextProps.data.value)
+    v = (if Utils.objectIsEmpty(nextProps.data.value) then null else nextProps.data.value)
+    @setState(content: v, visible: !!v)
 
   render: ->
     editable = @props.isEditing
     className = Utils.classSet(@props.data.name, 'editable' if editable)
-    if editable and @state.content instanceof Object
-      init = @initializeWithEmptyData
+    if editable
+      init = => @setState(visible: true)
       `<div className={className} onClick={init}>{this.renderMorphologyTable()}</div>`
     else
       content = __html: @state.content
       `<div className={className} dangerouslySetInnerHTML={content} />`
 
   renderMorphologyTable: ->
-    unless Utils.objectIsEmpty(@state.content)
-      `<table className='editable-table'>{this.renderMorphologyFields()}</table>`
+    if @state.visible
+      `<table className='editable-table'><tbody>{this.renderMorphologyFields()}</tbody></table>`
 
   renderMorphologyFields: ->
-    for key, value of @state.content
-      unless key == '_visible'
-        update = @update.bind(@, key)
-        `<tr>
-           <th>{key}</th>
-           <td contentEditable={true} onBlur={update}>{value}</td>
-         </tr>
-        `
-
-  initializeWithEmptyData: ->
-    if Utils.objectIsEmpty(@state.content)
-      content = @state.content
-      content._visible = true
-      @setState(content: content)
+    for key, value of (@state.content ? @state.template)
+      update = @update.bind(@, key)
+      `<tr>
+         <th>{key}</th>
+         <td contentEditable={true} onBlur={update}>{value}</td>
+       </tr>
+      `
 
   update: (field, evt) ->
-    content = @state.content
-    delete content._visible
+    content = @state.content ? @state.template
     value = evt.target.textContent
+    console.log value
     if value.length
       content[field] = value
     else
       content[field] = null
-    @setState(content: content)
+    if Utils.objectIsEmpty(content)
+      @setState(content: null)
+    else
+      @setState(content: content)

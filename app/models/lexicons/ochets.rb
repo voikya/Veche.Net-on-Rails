@@ -1,27 +1,39 @@
-require_relative 'formatter'
-
 module Lexicons
   class Ochets < ActiveRecord::Base
     include LexiconEntry
 
+    # Table for lexicon entries
     self.table_name = 'ochets'
 
-    has_many :cross_reference_links, :foreign_key => :from, :class_name => OchetsCrossReference, :inverse_of => :referencing
-    has_many :cross_references, :through => :cross_reference_links, :source => :referenced
-    has_many :inverse_cross_reference_links, :foreign_key => :to, :class_name => OchetsCrossReference, :inverse_of => :referenced
-    has_many :inverse_cross_references, :through => :inverse_cross_reference_links, :source => :referencing
+    # Lexicon entry associations
+    has_and_belongs_to_many :cross_references,
+      :class_name => Ochets,
+      :join_table => :ochets_crossrefs,
+      :foreign_key => :from,
+      :association_foreign_key => :to
+    has_and_belongs_to_many :inverse_cross_references,
+      :class_name => Ochets,
+      :join_table => :ochets_crossrefs,
+      :foreign_key => :to,
+      :association_foreign_key => :from
 
-    field :root_word, :formatter => PlainTextFormatter
-    field :ext_root, :formatter => PlainTextFormatter
-    field :root_transliteration, :formatter => PlainTextFormatter
-    field :ext_root_transliteration, :formatter => PlainTextFormatter
-    field :definition, :formatter => DefinitionFormatter
-    field :derivatives, :formatter => DerivativeFormatter
-    field :idioms, :formatter => ExampleFormatter
-    field :etymology, :formatter => RichTextFormatter
+    # Entry fields and formatter definitions
+    field :root_word,                :formatter => Formatters::PlainTextFormatter
+    field :ext_root,                 :formatter => Formatters::PlainTextFormatter
+    field :root_transliteration,     :formatter => Formatters::PlainTextFormatter
+    field :ext_root_transliteration, :formatter => Formatters::PlainTextFormatter
+    field :definition,               :formatter => Formatters::DefinitionFormatter
+    field :derivatives,              :formatter => Formatters::DerivativeFormatter
+    field :idioms,                   :formatter => Formatters::ExampleFormatter
+    field :etymology,                :formatter => Formatters::RichTextFormatter
+    field :cross_references,         :formatter => Formatters::CrossReferenceFormatter,
+                                     :reader    => :cross_references,
+                                     :writer    => :cross_reference_ids=,
+                                     :class     => Ochets
 
     alias_attribute :word, :root_word
 
+    # Hooks
     before_create :generate_slug
 
     # Array of fields that are included when doing a search over "any" field.

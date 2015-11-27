@@ -1,26 +1,38 @@
-require_relative 'formatter'
-
 module Lexicons
   class Alashian < ActiveRecord::Base
     include LexiconEntry
 
+    # Table for lexicon entries
     self.table_name = 'alashian'
 
-    has_many :cross_reference_links, :foreign_key => :from, :class_name => AlashianCrossReference, :inverse_of => :referencing
-    has_many :cross_references, :through => :cross_reference_links, :source => :referenced
-    has_many :inverse_cross_reference_links, :foreign_key => :to, :class_name => AlashianCrossReference, :inverse_of => :referenced
-    has_many :inverse_cross_references, :through => :inverse_cross_reference_links, :source => :referencing
+    # Lexicon entry associations
+    has_and_belongs_to_many :cross_references,
+      :class_name => Alashian,
+      :join_table => :alashian_crossrefs,
+      :foreign_key => :from,
+      :association_foreign_key => :to
+    has_and_belongs_to_many :inverse_cross_references,
+      :class_name => Alashian,
+      :join_table => :alashian_crossrefs,
+      :foreign_key => :to,
+      :association_foreign_key => :from
 
-    field :word, :formatter => PlainTextFormatter
-    field :transliteration, :formatter => PlainTextFormatter
-    field :pronunciation, :formatter => PlainTextFormatter
-    field :part_of_speech, :formatter => PlainTextFormatter
-    field :root, :formatter => RootFormatter
-    field :definition, :formatter => DefinitionFormatter
-    field :idioms, :formatter => ExampleFormatter
-    field :notes, :formatter => NoteFormatter
-    field :etymology, :formatter => RichTextFormatter
+    # Entry fields and formatter definitions
+    field :word,             :formatter => Formatters::PlainTextFormatter
+    field :transliteration,  :formatter => Formatters::PlainTextFormatter
+    field :pronunciation,    :formatter => Formatters::PlainTextFormatter
+    field :part_of_speech,   :formatter => Formatters::PlainTextFormatter
+    field :root,             :formatter => Formatters::RootFormatter
+    field :definition,       :formatter => Formatters::DefinitionFormatter
+    field :idioms,           :formatter => Formatters::ExampleFormatter
+    field :notes,            :formatter => Formatters::NoteFormatter
+    field :etymology,        :formatter => Formatters::RichTextFormatter
+    field :cross_references, :formatter => Formatters::CrossReferenceFormatter,
+                             :reader    => :cross_references,
+                             :writer    => :cross_reference_ids=,
+                             :class     => Alashian
 
+    # Hooks
     before_create :generate_slug
 
     # Array of fields that are included when doing a search over "any" field.
@@ -52,11 +64,11 @@ module Lexicons
     # in this table to search through
     def self.map_search_params(field)
       {
-        :word => :word,
-        :part_of_speech => :part_of_speech,
+        :word            => :word,
+        :part_of_speech  => :part_of_speech,
         :transliteration => :transliteration,
-        :root => :root,
-        :definition => :definition
+        :root            => :root,
+        :definition      => :definition
       }[field]
     end
   end

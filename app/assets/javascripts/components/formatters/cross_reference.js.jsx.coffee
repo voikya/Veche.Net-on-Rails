@@ -26,7 +26,7 @@
       if @props.isEditing
         update = @update.bind(@, idx)
         keydown = @handleKeydown.bind(@, idx)
-        `<li onKeyDown={keydown} onBlur={update} contentEditable={true}>{xref.slug}</li>`
+        `<li onKeyDown={keydown} onBlur={update} contentEditable={true}>{xref}</li>`
       else
         slug = xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
         click = @fetchEntry.bind(@, xref.slug)
@@ -44,7 +44,7 @@
       when 13 # Enter
         evt.preventDefault()
         content = @state.content
-        content.splice(idx + 1, 0, {slug: "new_xref", summary: "[reload to fetch definition]"})
+        content.splice(idx + 1, 0, "new_xref")
         @setState(content: content)
       when 8 # Backspace
         if React.findDOMNode(@).querySelectorAll('li')[idx].textContent.length == 0
@@ -56,13 +56,13 @@
 
   initializeWithEmptyData: ->
     unless @state.content
-      @setState(content: [{slug: "new_xref", summary: "[reload to fetch definition]"}])
+      @setState(content: ["new_xref"])
 
   update: (idx, evt) ->
     newXref = React.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
     newContent = @state.content
     if newXref.length
-      newContent[idx] = {slug: newXref, summary: "[reload to fetch definition]"}
+      newContent[idx] = newXref
     else
       newContent.splice(idx, 1)
     newContent = null unless newContent.length

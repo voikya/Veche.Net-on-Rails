@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151108232336) do
+ActiveRecord::Schema.define(:version => 20151119042233) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(:version => 20151108232336) do
     t.integer  "from"
     t.integer  "to"
     t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "downloads", :force => true do |t|
@@ -84,7 +83,6 @@ ActiveRecord::Schema.define(:version => 20151108232336) do
     t.integer  "from"
     t.integer  "to"
     t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "novegradian_morphology", :force => true do |t|
@@ -124,7 +122,6 @@ ActiveRecord::Schema.define(:version => 20151108232336) do
     t.integer  "from"
     t.integer  "to"
     t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_from_fk", column: "from"
