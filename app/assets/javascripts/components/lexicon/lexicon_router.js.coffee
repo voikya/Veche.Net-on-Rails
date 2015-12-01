@@ -50,5 +50,5 @@ class @Lexicon.Router
 
   @transition: (path) ->
     fullPath = "#{@basePath}#{path}"
-    if window.history && window.location.pathname != fullPath
+    if window.history and window.location.pathname != fullPath
       window.history.pushState null, null, fullPath

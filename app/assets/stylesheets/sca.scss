@@ -1,0 +1,295 @@
+body.veche-sca {
+  color: #212121;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+  header {
+    background-color: black;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 5em;
+    color: white;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", sans;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    z-index: 2;
+    transition: height 0.3s;
+
+    h1 {
+      position: absolute;
+      font-weight: 300;
+      top: 0;
+      left: 0;
+      margin: 10px;
+    }
+  }
+
+  main {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .left-column {
+    padding: 25px 25px 25px 0px;
+    float: left;
+    margin-right: 20px;
+    width: 40%;
+  }
+
+  .right-column {
+    padding: 25px 0px 25px 25px;
+    border-left: solid 1px black;
+    margin-left: 45%;
+  }
+
+  table.ipa-consonant-chart {
+    border: solid 1px black;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+
+    td {
+      border: solid 1px black;
+      white-space: nowrap;
+      min-width: 10px;
+
+      &.impossible {
+        background-color: #CCC;
+      }
+    }
+
+    th {
+      border: solid 1px black;
+      font-size: x-small;
+      font-weight: 400;
+      padding: 0 2px 0 2px;
+    }
+  }
+
+  table.ipa-nonpulmonic-chart {
+    border: solid 1px black;
+    border-collapse: collapse;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    width: 48%;
+
+    td {
+      border-left: solid 1px black;
+
+      &.label {
+        border-left: none;
+        border-right: solid 1px black;
+        font-size: x-small;
+        font-weight: 400;
+        padding: 0 2px 0 2px;
+        text-align: left;
+      }
+    }
+
+    th {
+      border: solid 1px black;
+      font-size: x-small;
+      font-weight: 400;
+      padding: 0 2px 0 2px;
+    }
+  }
+
+  table.ipa-vowel-chart {
+    text-align: center;
+    border: solid 1px black;
+    float: right;
+    width: 48%;
+
+    th {
+      font-size: x-small;
+      font-weight: 400;
+    }
+  }
+
+  table.ipa-other-chart {
+    border: solid 1px black;
+    width: 48%;
+    margin-bottom: 10px;
+    float: left;
+
+    td {
+      white-space: nowrap;
+
+      &.label {
+        white-space: normal;
+        font-size: x-small;
+        font-weight: 400;
+      }
+    }
+  }
+
+  table.ipa-suprasegmental-chart {
+    border: solid 1px black;
+    width: 38%;
+    margin-top: 10px;
+    float: right;
+
+    td.label {
+      font-size: x-small;
+      font-weight: 400;
+    }
+  }
+
+  table.ipa-tone-chart {
+    border: solid 1px black;
+    width: 38%;
+    margin-top: 10px;
+    float: right;
+    clear: right;
+
+    td.label {
+      font-size: x-small;
+      font-weight: 400;
+    }
+  }
+
+  table.ipa-diacritic-chart {
+    border: solid 1px black;
+    width: 58%;
+    margin-top: 10px;
+    border-collapse: collapse;
+
+    td {
+      border-left: solid 1px black;
+      border-bottom: solid 1px black;
+
+      &.label {
+        border-left: none;
+        border-right: solid 1px black;
+        font-size: x-small;
+        font-weight: 400;
+      }
+    }
+  }
+
+  #phoneme-editor {
+    border-top: solid 1px black;
+    margin-top: 25px;
+    padding-top: 25px;
+    position: relative;
+
+    .display {
+      display: inline-block;
+      border: dotted 1px #999999;
+      padding: 20px 40px 20px 40px;
+      margin: 0 auto;
+      font-size: 5em;
+      font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'DejaVu Sans', 'Arial Unicode MS', sans-serif;
+      text-align: center;
+      width: 50%;
+    }
+
+    .checkbox {
+      display: inline-block;
+      height: 1em;
+      width: 1em;
+      border-radius: 2px;
+      margin-right: 10px;
+      vertical-align: middle;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:before {
+        @include fa-icon();
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        line-height: 1.1em;
+      }
+
+      &[data-state=true] {
+        background-color: green;
+
+        &:before {
+          content: $fa-var-plus;
+        }
+      }
+
+      &[data-state=false] {
+        background-color: #B90000;
+
+        &:before {
+          content: $fa-var-minus;
+        }
+      }
+
+      &[data-state=undefined] {
+        background-color: grey;
+
+        &:before {
+          content: $fa-var-circle;
+          font-size: 60%;
+          top: 4px;
+        }
+      }
+    }
+
+    .save-view {
+      background-color: #EFEFEF;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      position: relative;
+
+      div.save-status {
+        margin-left: 30px;
+        padding: 5px 0px;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      &[data-state=unsaved] div.save-status {
+        color: #A00000;
+      }
+
+      &[data-state=saved] div.save-status {
+        color: green;
+      }
+
+      button {
+        border: none;
+        background-color: #CCCCCC;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        cursor: pointer;
+        padding: 5px 0px;
+        font: inherit;
+      }
+    }
+  }
+
+  .symbol {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'DejaVu Sans', 'Arial Unicode MS', sans-serif;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: lightblue;
+    }
+
+    &.combining {
+      &:hover {
+        background-color: palegoldenrod;
+      }
+    }
+  }
+}

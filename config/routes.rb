@@ -98,6 +98,17 @@ VecheNet::Application.routes.draw do
     get '/:language(/*subpath)' => 'lexicon#init', :as => 'lexicon'
   end
 
+  scope 'sound-changes', :module => :sound_changes do
+    scope :constraints => lambda {|request| request.headers['Accept'] == 'application/json'} do
+      get '/:language/ipa/:symbol' => 'sca#show_ipa_phoneme'
+      get '/:language/phonemes/:symbol' => 'sca#show_phoneme'
+      get '/:language/phonemes' => 'sca#show_phonology'
+      put '/:language/phonemes/:symbol' => 'sca#update_phoneme'
+      post '/:language/phonemes' => 'sca#create_phoneme'
+    end
+    get '/:language(/*subpath)' => 'sca#init', :as => 'sca'
+  end
+
   scope 'linguistics' do
     get '/baltic_sprachbund' => 'linguistics#baltic_sprachbund', :as => 'linguistics_baltic_sprachbund'
     get '/slavic_numerals' => 'linguistics#slavic_numerals', :as => 'linguistics_slavic_numerals'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151119042233) do
+ActiveRecord::Schema.define(:version => 20151128014905) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -124,6 +124,40 @@ ActiveRecord::Schema.define(:version => 20151119042233) do
     t.datetime "created_at", :null => false
   end
 
+  create_table "sca_features", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "boolean",     :default => false
+    t.string   "affects"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "sca_languages", :force => true do |t|
+    t.integer  "parent_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "slug"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "sca_phoneme_features", :force => true do |t|
+    t.integer  "phoneme_id"
+    t.integer  "feature_id"
+    t.boolean  "value",        :default => false
+    t.string   "custom_value"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  create_table "sca_phonemes", :force => true do |t|
+    t.string   "symbol"
+    t.integer  "language_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_from_fk", column: "from"
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_to_fk", column: "to"
 
@@ -135,5 +169,12 @@ ActiveRecord::Schema.define(:version => 20151119042233) do
 
   add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_from_fk", column: "from"
   add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_to_fk", column: "to"
+
+  add_foreign_key "sca_languages", "sca_languages", name: "sca_languages_parent_id_fk", column: "parent_id"
+
+  add_foreign_key "sca_phoneme_features", "sca_features", name: "sca_phoneme_features_feature_id_fk", column: "feature_id"
+  add_foreign_key "sca_phoneme_features", "sca_phonemes", name: "sca_phoneme_features_phoneme_id_fk", column: "phoneme_id"
+
+  add_foreign_key "sca_phonemes", "sca_languages", name: "sca_phonemes_language_id_fk", column: "language_id"
 
 end

@@ -1,1 +1,2 @@
-//= require_tree ./components
+//= require_tree ./components/lexicon
+//= require_tree ./components/sca
