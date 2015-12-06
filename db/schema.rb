@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151128014905) do
+ActiveRecord::Schema.define(:version => 20151201042648) do
 
   create_table "alashian", :force => true do |t|
     t.string   "word"
@@ -158,6 +158,25 @@ ActiveRecord::Schema.define(:version => 20151128014905) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "sca_sound_change_groups", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "language_id"
+    t.integer  "order"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "sca_sound_changes", :force => true do |t|
+    t.string   "input"
+    t.string   "output"
+    t.string   "environment"
+    t.integer  "order"
+    t.integer  "group_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_from_fk", column: "from"
   add_foreign_key "alashian_crossrefs", "alashian", name: "alashian_crossrefs_to_fk", column: "to"
 
@@ -176,5 +195,9 @@ ActiveRecord::Schema.define(:version => 20151128014905) do
   add_foreign_key "sca_phoneme_features", "sca_phonemes", name: "sca_phoneme_features_phoneme_id_fk", column: "phoneme_id"
 
   add_foreign_key "sca_phonemes", "sca_languages", name: "sca_phonemes_language_id_fk", column: "language_id"
+
+  add_foreign_key "sca_sound_change_groups", "sca_languages", name: "sca_sound_change_groups_language_id_fk", column: "language_id"
+
+  add_foreign_key "sca_sound_changes", "sca_sound_change_groups", name: "sca_sound_changes_group_id_fk", column: "group_id"
 
 end

@@ -53,6 +53,46 @@ class @VecheSCA.API
     VecheSCA.Event.trigger 'api:start'
     request.send()
 
+  @getRules: ->
+    request = @_newRequest('GET', "#{@endpoint}/rules")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        VecheSCA.Event.trigger 'api:rules:response', data
+        VecheSCA.Event.trigger 'api:finish'
+    VecheSCA.Event.trigger 'api:start'
+    request.send()
+
+  @getRule: (order) ->
+    request = @_newRequest('GET', "#{@endpoint}/rules/#{order}")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        VecheSCA.Event.trigger 'api:rule:response', data
+        VecheSCA.Event.trigger 'api:finish'
+    VecheSCA.Event.trigger 'api:start'
+    request.send()
+
+  @createRule: (rule) ->
+    request = @_newRequest('POST', "#{@endpoint}/rules")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        VecheSCA.Event.trigger 'api:rules:response', data
+        VecheSCA.Event.trigger 'api:finish'
+    VecheSCA.Event.trigger 'api:start'
+    request.send JSON.stringify(rule)
+
+  @saveRule: (order, rule) ->
+    request = @_newRequest('PUT', "#{@endpoint}/rules/#{order}")
+    request.onload = =>
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        VecheSCA.Event.trigger 'api:rule:response', data
+        @getRules()
+    VecheSCA.Event.trigger 'api:start'
+    request.send JSON.stringify(rule)
+
   @_newRequest: (method, uri) ->
     request = new XMLHttpRequest()
     request.open(method, uri, true)

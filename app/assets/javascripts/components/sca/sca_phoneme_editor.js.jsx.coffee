@@ -16,7 +16,7 @@
       symbol = @state.symbol
       features = @state.features
       update = @setFeatureState
-      setSymbol = (symbol) -> @setState(symbol: symbol, saved: false)
+      setSymbol = (evt) => @setState(symbol: evt.target.value, saved: false)
       saved = @state.saved
       persisted = @state.persisted
       saveCallback = @save

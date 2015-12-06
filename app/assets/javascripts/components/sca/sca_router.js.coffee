@@ -9,7 +9,11 @@ class @VecheSCA.Router
     window.onpopstate = @init.bind(@, @basePath)
     @parseCurrentPath()
     try
-      false
+      @route '/phonology', (params) ->
+        VecheSCA.Event.trigger 'transition:phonology'
+      @route '/rules', (params) ->
+        VecheSCA.Event.trigger 'transition:rules'
+      VecheSCA.Event.trigger 'transition:main'
     catch e
       if e == "route-found"
         return true
@@ -43,3 +47,4 @@ class @VecheSCA.Router
     fullPath = "#{@basePath}#{path}"
     if window.history and window.location.pathname != fullPath
       window.history.pushState null, null, fullPath
+      @init(@basePath)

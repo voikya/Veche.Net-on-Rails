@@ -3,6 +3,8 @@ module SoundChanges
     self.table_name = 'sca_languages'
 
     has_many :phonemes, :class_name => SoundChanges::Phoneme
+    has_many :sound_change_groups, :class_name  => SoundChanges::SoundChangeGroup,
+                                   :foreign_key => :language_id
     belongs_to :parent, :class_name => SoundChanges::Language
 
     def phonology

@@ -20,11 +20,44 @@ body.veche-sca {
     transition: height 0.3s;
 
     h1 {
-      position: absolute;
+      position: relative;
       font-weight: 300;
-      top: 0;
-      left: 0;
-      margin: 10px;
+      margin: 0px 10px 10px 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      font-weight: 200;
+    }
+
+    li {
+      float: left;
+      margin: 0px 50px 0px 0px;
+      cursor: pointer;
+    }
+  }
+
+  div.loading {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 76px;
+    overflow: hidden;
+    background-color: black;
+    z-index: 3;
+    transition: top 0.3s;
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      left: -200px;
+      width: 200px;
+      height: 4px;
+      background-color: #2980b9;
+      -webkit-animation: loading 2s linear infinite;
+      animation: loading 2s linear infinite;
     }
   }
 
@@ -239,40 +272,40 @@ body.veche-sca {
         }
       }
     }
+  }
 
-    .save-view {
-      background-color: #EFEFEF;
-      margin-right: 30px;
-      margin-bottom: 20px;
-      position: relative;
+  .save-view {
+    background-color: #EFEFEF;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    position: relative;
 
-      div.save-status {
-        margin-left: 30px;
-        padding: 5px 0px;
-        font-style: italic;
-        font-weight: bold;
-      }
+    div.save-status {
+      margin-left: 30px;
+      padding: 5px 0px;
+      font-style: italic;
+      font-weight: bold;
+    }
 
-      &[data-state=unsaved] div.save-status {
-        color: #A00000;
-      }
+    &[data-state=unsaved] div.save-status {
+      color: #A00000;
+    }
 
-      &[data-state=saved] div.save-status {
-        color: green;
-      }
+    &[data-state=saved] div.save-status {
+      color: green;
+    }
 
-      button {
-        border: none;
-        background-color: #CCCCCC;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 100px;
-        cursor: pointer;
-        padding: 5px 0px;
-        font: inherit;
-      }
+    button {
+      border: none;
+      background-color: #CCCCCC;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100px;
+      cursor: pointer;
+      padding: 5px 0px;
+      font: inherit;
     }
   }
 
@@ -289,6 +322,121 @@ body.veche-sca {
     &.combining {
       &:hover {
         background-color: palegoldenrod;
+      }
+    }
+  }
+
+  .rules-view {
+    padding: 0px 20px;
+
+    button {
+      border: solid 1px #999;
+      background-color: #DDD;
+      font-size: 75%;
+      padding: 5px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #CCC;
+      }
+
+      &.fa-edit {
+        float: right;
+        border: none;
+        background: transparent;
+        padding: 5px;
+
+        &:hover {
+          color: #B90000;
+        }
+      }
+    }
+
+    .rules-list {
+      padding: 0;
+    }
+
+    .sound-change-group {
+      border: solid 1px #999999;
+      background-color: #EFEFEF;
+      padding: 2px;
+      box-shadow: #CCC 3px 3px 3px;
+      list-style-type: none;
+      margin: 10px 0px;
+    }
+
+    .sound-change-group-inner {
+      border-left: solid 3px #BBB;
+      margin: 0;
+      padding: 3px 10px;
+    }
+
+    h3 {
+      margin: 0;
+      color: #666;
+      font-size: 1em;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    p.description {
+      margin: 0;
+      font-style: italic;
+      color: #999;
+      font-size: 0.8em;
+    }
+
+    div.primary {
+      font-family: sans-serif;
+      font-size: smaller;
+      font-weight: bold;
+    }
+  }
+
+  #rule-editor {
+    border-top: solid 1px black;
+    margin-top: 25px;
+    padding-top: 25px;
+    position: relative;
+
+    input {
+      width: 400px;
+      display: block;
+      font-size: 12pt;
+      margin: 10px 0px;
+    }
+
+    textarea {
+      font-size: 10pt;
+      font-style: italic;
+      width: 400px;
+      height: 100px;
+      border: solid 1px #EFEFEF;
+    }
+
+    fieldset {
+      border: solid 1px #EFEFEF;
+      margin: 10px 0px;
+      width: 85%;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      float: right;
+      cursor: pointer;
+
+      &:hover {
+        color: #B90000;
+      }
+    }
+
+    li.sound-change {
+      input {
+        display: inline-block;
+        width: 100px;
+        margin: 0px 10px;
+        text-align: center;
       }
     }
   }

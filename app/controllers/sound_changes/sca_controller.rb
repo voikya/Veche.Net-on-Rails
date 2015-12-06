@@ -37,6 +37,34 @@ module SoundChanges
       render :json => phoneme.reload
     end
 
+    def show_rules
+      render :json => @language.sound_change_groups.sort { |a,b| a[:order] <=> b[:order] }
+    end
+
+    def show_rule
+      render :json => @language.sound_change_groups.first(:order => params[:order])
+    end
+
+    def create_rule
+      group = SoundChanges::SoundChangeGroup.create(
+        :title => params[:title],
+        :description => params[:description],
+        :order => params[:order],
+        :language_id => @language.id
+      )
+      render :json => @language.reload.sound_change_groups
+    end
+
+    def update_rule
+      group = @language.sound_change_groups.first(:order => params[:order])
+      group.update_attributes(
+        :title => params[:title],
+        :description => params[:description],
+        :sound_changes_attributes => params[:sound_changes] || []
+      )
+      render :json => group.reload
+    end
+
     private
 
     def set_language

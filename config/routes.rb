@@ -105,6 +105,11 @@ VecheNet::Application.routes.draw do
       get '/:language/phonemes' => 'sca#show_phonology'
       put '/:language/phonemes/:symbol' => 'sca#update_phoneme'
       post '/:language/phonemes' => 'sca#create_phoneme'
+
+      get '/:language/rules' => 'sca#show_rules'
+      get '/:language/rules/:order' => 'sca#show_rule'
+      post '/:language/rules' => 'sca#create_rule'
+      put '/:language/rules/:order' => 'sca#update_rule'
     end
     get '/:language(/*subpath)' => 'sca#init', :as => 'sca'
   end
