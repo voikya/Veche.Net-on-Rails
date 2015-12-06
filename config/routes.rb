@@ -86,6 +86,11 @@ VecheNet::Application.routes.draw do
     get '/:page' => 'alashian#show', :as => 'alashian_grammar_page'
   end
 
+  scope 'tunisian', :module => :grammars do
+    get '/' => 'tunisian#index', :as => 'tunisian_index'
+    get '/:page' => 'tunisian#show', :as => 'tunisian_grammar_page'
+  end
+
   scope 'lexicon', :module => :lexicons do
     scope :constraints => lambda {|request| request.headers['Accept'] == 'application/json'} do
       get '/:language/entries' => 'lexicon#index', :as => 'lexicon_entries'

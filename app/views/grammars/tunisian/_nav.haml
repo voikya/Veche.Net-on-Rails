@@ -1,0 +1,16 @@
+.global-controls
+  - if @previous_page
+    = link_to icon('arrow-left'), tunisian_grammar_page_path(@previous_page[:doc].to_sym), :class => 'back'
+  - else
+    %span.back.disabled= icon('arrow-left')
+  = link_to icon('arrow-up'), tunisian_index_path, :class => 'up'
+  = link_to icon('home'), root_path, :class => 'home'
+  - if @next_page
+    = link_to icon('arrow-right'), tunisian_grammar_page_path(@next_page[:doc].to_sym), :class => 'forward'
+  - else
+    %span.forward.disabled= icon('arrow-right')
+
+.nav-title Tunisian Grammar
+%ul.index
+  - current = @current_page ? @current_page[:doc].to_sym : nil
+  = nav_entry "Background", :background, current

@@ -1,0 +1,62 @@
+$background_color: #336633;
+$header_color: #CCCC66;
+$link_color: #669900;
+$table_border_bottom_right: #C7B86D;
+$table_border_top_left: #B7A85D;
+
+body.grammar.tunisian {
+  header {
+    background-color: $background_color;
+
+    h1, p {
+      color: $header_color;
+    }
+  }
+
+  a {
+    color: $link_color;
+  }
+
+  a.footnote {
+    color: #999999;
+
+    &:hover, &:active {
+      color: #EEEEEE;
+      background-color: $link-color;
+    }
+  }
+
+  p.footnote.highlight {
+    color: #333333;
+    background-color: lighten($background_color, 10%);
+  }
+
+  td.label, td.arrow, th {
+    background-color: $background-color;
+  }
+
+  th.etymology {
+    width: 200px;
+  }
+
+  table.textgloss {
+    border: solid 1px lighten($table_border_top_left, 35%);
+    border-left: solid 5px $table_border_top_left;
+
+    td.index {
+      font-weight: bold;
+      color: $table_border_top_left;
+    }
+  }
+
+  table.invisible {
+    margin-left: 0;
+  }
+
+  form.download {
+    button {
+      background-color: $background_color;
+      color: $header_color;
+    }
+  }
+}
