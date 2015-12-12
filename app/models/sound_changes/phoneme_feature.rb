@@ -3,6 +3,8 @@ module SoundChanges
     self.table_name = 'sca_phoneme_features'
     attr_accessible :phoneme_id, :feature_id, :value, :custom_value
 
+    default_scope includes(:feature)
+
     belongs_to :phoneme, :class_name => SoundChanges::Phoneme
     belongs_to :feature, :class_name => SoundChanges::Feature
 

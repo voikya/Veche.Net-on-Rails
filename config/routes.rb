@@ -110,6 +110,8 @@ VecheNet::Application.routes.draw do
       get '/:language/rules/:order' => 'sca#show_rule'
       post '/:language/rules' => 'sca#create_rule'
       put '/:language/rules/:order' => 'sca#update_rule'
+
+      get '/:language/rules/:rule_order/changes/:change_order' => 'sca#show_change'
     end
     get '/:language(/*subpath)' => 'sca#init', :as => 'sca'
   end

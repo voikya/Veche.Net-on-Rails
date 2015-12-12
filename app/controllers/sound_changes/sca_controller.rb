@@ -32,7 +32,7 @@ module SoundChanges
     end
 
     def update_phoneme
-      phoneme = @language.phonemes.select{|p| p.symbol == params[:symbol]}.first
+      phoneme = @language.phonemes.select{ |p| p.symbol == params[:symbol] }.first
       phoneme.set_features(params[:features])
       render :json => phoneme.reload
     end
@@ -42,7 +42,7 @@ module SoundChanges
     end
 
     def show_rule
-      render :json => @language.sound_change_groups.first(:order => params[:order])
+      render :json => @language.sound_change_groups.where(:order => params[:order]).first
     end
 
     def create_rule
@@ -56,13 +56,19 @@ module SoundChanges
     end
 
     def update_rule
-      group = @language.sound_change_groups.first(:order => params[:order])
+      group = @language.sound_change_groups.where(:order => params[:order]).first
       group.update_attributes(
         :title => params[:title],
         :description => params[:description],
         :sound_changes_attributes => params[:sound_changes] || []
       )
       render :json => group.reload
+    end
+
+    def show_change
+      group = @language.sound_change_groups.where(:order => params[:rule_order]).first
+      change = group.sound_changes.where(:order => params[:change_order]).first
+      render :json => change.decompose.map(&:to_s)
     end
 
     private

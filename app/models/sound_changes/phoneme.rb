@@ -3,6 +3,8 @@ module SoundChanges
     self.table_name = 'sca_phonemes'
     attr_accessible :symbol, :language_id
 
+    default_scope includes(:phoneme_features)
+
     belongs_to :language, :class_name => SoundChanges::Language
     has_many :phoneme_features, :class_name => SoundChanges::PhonemeFeature
     has_many :features, :through => :phoneme_features
@@ -140,6 +142,22 @@ module SoundChanges
             pf && pf.custom_value == v
         end
       end
+    end
+
+    # Return another phoneme that matches the current phoneme's features with the
+    # given feature set overlaid
+    def apply_features(feature_set)
+      raise ArgumentError unless feature_set.is_a?(SoundChanges::FeatureSet)
+      current_features = SoundChanges::FeatureSet.new(phoneme_features.to_a)
+      feature_set.set.each do |feature_overlay|
+        current_features.set.reject! { |s| s.name == feature_overlay.name }
+        current_features.set << feature_overlay
+      end
+      feature_str = current_features.to_s
+
+      SoundChanges::Phoneme.where(:language_id => language_id)
+                           .to_a
+                           .find { |p| p.is?(feature_str) }
     end
 
     private

@@ -34,4 +34,10 @@ VecheNet::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Enable bullet gem
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.rails_logger = true
+  end
 end

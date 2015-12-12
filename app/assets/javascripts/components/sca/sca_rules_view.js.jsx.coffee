@@ -23,7 +23,7 @@
     if @state.rules.length == 0
       `<p>No sound changes defined.</p>`
     else
-      groups = [`<VecheSCA.SCASoundChangeGroup group={group} />` for group in @state.rules]
+      groups = [`<VecheSCA.SCASoundChangeGroup group={group} key={group.id} />` for group in @state.rules]
       `<ul className="rules-list">
          {groups}
        </ul>

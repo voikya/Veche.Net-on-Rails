@@ -43,6 +43,8 @@ gem 'haml'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
+  gem 'bullet'
   gem 'capistrano', '~> 3.3.0'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'

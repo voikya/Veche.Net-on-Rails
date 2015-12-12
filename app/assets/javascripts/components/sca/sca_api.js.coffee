@@ -93,6 +93,18 @@ class @VecheSCA.API
     VecheSCA.Event.trigger 'api:start'
     request.send JSON.stringify(rule)
 
+  @getDecomposedSoundChange: (ruleOrder, changeOrder) ->
+    request = @_newRequest('GET', "#{@endpoint}/rules/#{ruleOrder}/changes/#{changeOrder}")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        data.ruleOrder = ruleOrder
+        data.changeOrder = changeOrder
+        VecheSCA.Event.trigger 'api:soundChange:response', data
+        VecheSCA.Event.trigger 'api:finish'
+    VecheSCA.Event.trigger 'api:start'
+    request.send()
+
   @_newRequest: (method, uri) ->
     request = new XMLHttpRequest()
     request.open(method, uri, true)
