@@ -1,7 +1,4 @@
 module SoundChanges
-  POSITION_INDICATOR_TOKEN = '_'.freeze
-  WORD_BOUNDARY_TOKEN      = '#'.freeze
-
   class SoundChange < ActiveRecord::Base
     self.table_name = 'sca_sound_changes'
 
@@ -22,6 +19,39 @@ module SoundChanges
 
     def to_s
       "#{input} → #{output} / #{environment}"
+    end
+
+    def run(word)
+      phonemes = sound_change_group.language.phonemes.all
+      parser = SoundChanges::Parser.new(phonemes)
+
+      # Split the sound change into simple find-and-replace operations
+      decompose.each do |sc|
+        # Splice the input into the environment to get the phoneme sub-array
+        # to match.
+        input = parser.tokenize(sc.input)
+        env = parser.tokenize(sc.environment)
+        idx_in_env = env.index(SoundChanges::POSITION_INDICATOR_TOKEN)
+        env[idx_in_env] = input
+        env.flatten!
+
+        # Get the starting indices of each matching instance of the combined
+        # input/environment array
+        matching_indices = word.each_index.select { |i| word[i].symbol == env[0].symbol }
+        (1...env.length).each do |offset|
+          break if matching_indices.empty?
+          matching_indices.select! do |i|
+            word[i + offset] == env[offset]
+          end
+        end
+
+        # Splice the output phoneme array into each matching environment
+        matching_indices.each do |i|
+          word[i + idx_in_env, input.length] = parser.tokenize(sc.output)
+        end
+      end
+
+      word
     end
 
     def decompose
@@ -89,73 +119,7 @@ module SoundChanges
       raise ArgumentError unless %i(input output environment).include?(field)
       string_to_parse = send(field)
       phonemes = sound_change_group.language.phonemes.all
-      features = Feature.all
-      tokens = []
-
-      # Associative and non-associative strings are mutually exclusive
-      if associative?(string_to_parse)
-        # If the string is associative (e.g., of the form "p, t, k"), listing
-        # out multiple potential values, generate an AssociativeSet.
-        set = string_to_parse.split(',').map do |str|
-          str = str.strip
-          phonemes.find { |p| p.symbol == str }
-        end
-        tokens << SoundChanges::AssociativeSet.new(set)
-      else
-        # Iterate through the string, parsing out tokens, until there is
-        # nothing left int he string to parse
-        loop do
-          break if string_to_parse.length.zero?
-          case string_to_parse[0]
-            when '['
-              # Feature token
-              _, feature_str, string_to_parse = string_to_parse.partition(/\[[^\]]*\]/)
-              feature = SoundChanges::FeatureSet.parse(feature_str)
-              tokens << feature
-            when '_'
-              # Position indicator token
-              string_to_parse[0] = ""
-              tokens << POSITION_INDICATOR_TOKEN
-            when '#'
-              # Word boundary token
-              string_to_parse[0] = ""
-              tokens << WORD_BOUNDARY_TOKEN
-            else
-              # Symbol token
-              token = ""
-              last_exact_match = nil
-              # A symbol may be multiple characters in length (e.g., "ch" or "tʲ").
-              # This parser takes a greedy approach, iterating with longer and longer
-              # strings until it can no longer find a matching Phoneme object.
-              loop do
-                # Add one character to the current search
-                token += string_to_parse[token.length]
-                possible_phonemes = phonemes.select { |p| p.symbol =~ /^#{token}/ }
-                if possible_phonemes.length == 1
-                  # Only one match, this is the token
-                  tokens << possible_phonemes.first
-                  break
-                elsif possible_phonemes.length == 0
-                  # Zero matches, revert to the last known match
-                  if last_exact_match
-                    tokens << last_exact_match
-                    break
-                  else
-                    raise "No such phoneme <#{string_to_parse[0]}> defined"
-                  end
-                end
-                # If multiple matches, loop again
-                if exact_match = possible_phonemes.find { |p| p.symbol == token }
-                  last_exact_match = exact_match
-                end
-              end
-              # Remove appropriate substring corresponding to the matching token
-              # from the string left to parse
-              string_to_parse = string_to_parse[tokens.last.symbol.length..-1]
-          end
-        end
-      end
-      tokens
+      SoundChanges::Parser.new(phonemes).tokenize(string_to_parse)
     end
 
     def decompose_features(tokens)
@@ -164,9 +128,9 @@ module SoundChanges
         case current_token
           when SoundChanges::Phoneme
             output.map! { |s| s += current_token.symbol }
-          when POSITION_INDICATOR_TOKEN
+          when SoundChanges::POSITION_INDICATOR_TOKEN
             output.map! { |s| s += "_" }
-          when WORD_BOUNDARY_TOKEN
+          when SoundChanges::WORD_BOUNDARY_TOKEN
             output.map! { |s| s += "#" }
           when SoundChanges::FeatureSet
             matches = phonemes.select { |p| p.is?(current_token.to_s) }

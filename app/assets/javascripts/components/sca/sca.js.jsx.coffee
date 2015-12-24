@@ -42,7 +42,12 @@
 
   renderMainView: ->
     `<main>
-       <div>Main View</div>
+       <div className="left-column">
+         <VecheSCA.SCARulesView />
+       </div>
+       <div className="right-column">
+         <VecheSCA.SCAVocabularyView />
+       </div>
      </main>
     `
 
@@ -61,7 +66,7 @@
   renderRulesView: ->
     `<main>
        <div className="left-column">
-         <VecheSCA.SCARulesView />
+         <VecheSCA.SCARulesView editable="true" />
        </div>
        <div className="right-column">
          <VecheSCA.SCAPhonologyTable />

@@ -31,5 +31,24 @@ module SoundChanges
         :other      => other.sort.map(&:symbol)
       }
     end
+
+    def run(*words)
+      parser = SoundChanges::Parser.new(phonemes)
+      parsed = words.map { |w| parser.tokenize(w) }
+
+      parsed.map.with_index do |w, idx|
+        forms = sound_change_groups.map do |change|
+          {
+            :title => change.title,
+            :form  => (w = change.run(w)).map(&:symbol).join
+          }
+        end
+        {
+          :original => words[idx],
+          :final => forms.last[:form],
+          :forms => forms
+        }
+      end
+    end
   end
 end

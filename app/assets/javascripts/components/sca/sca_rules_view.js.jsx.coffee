@@ -9,12 +9,10 @@
     VecheSCA.Event.register 'api:rules:response', @setRules
 
   render: ->
-    newGroup = @createGroup
     groups = @renderGroups()
+    controls = @renderControls()
     `<div className="rules-view">
-       <div className="controls">
-         <button onClick={newGroup}>New Group</button>
-       </div>
+       {controls}
        {groups}
      </div>
     `
@@ -23,10 +21,21 @@
     if @state.rules.length == 0
       `<p>No sound changes defined.</p>`
     else
-      groups = [`<VecheSCA.SCASoundChangeGroup group={group} key={group.id} />` for group in @state.rules]
+      editable = @props.editable
+      groups = [`<VecheSCA.SCASoundChangeGroup group={group}
+                                               key={group.id}
+                                               editable={editable} />` for group in @state.rules]
       `<ul className="rules-list">
          {groups}
        </ul>
+      `
+
+  renderControls: ->
+    if @props.editable
+      newGroup = @createGroup
+      `<div className="controls">
+         <button onClick={newGroup}>New Group</button>
+       </div>
       `
 
   setRules: (data) ->

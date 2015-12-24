@@ -469,4 +469,31 @@ body.veche-sca {
       }
     }
   }
+
+  .vocab-input {
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    input {
+      margin: 0;
+      width: 40%;
+    }
+
+    button {
+      border: solid 1px #999;
+      background-color: #DDD;
+      font-size: 75%;
+      padding: 5px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #CCC;
+      }
+    }
+  }
 }

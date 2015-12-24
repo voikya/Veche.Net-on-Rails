@@ -21,5 +21,12 @@ module SoundChanges
         :sound_changes => sound_changes
       }
     end
+
+    def run(word)
+      sound_changes.each do |sc|
+        word = sc.run(word)
+      end
+      word
+    end
   end
 end

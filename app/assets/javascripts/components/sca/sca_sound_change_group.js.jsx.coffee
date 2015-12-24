@@ -13,9 +13,9 @@
     title = @props.group.title
     description = @props.group.description
     soundChanges = @renderSoundChanges()
-    editGroup = @editGroup
+    editButton = @renderEditButton()
     `<li className="sound-change-group">
-       <button onClick={editGroup} className="fa fa-edit"></button>
+       {editButton}
        <div className="sound-change-group-inner">
          <h3>{title}</h3>
          <p className="description">{description}</p>
@@ -30,16 +30,24 @@
       toggleDecomposed = @toggleDecomposed.bind(@, soundChange.order)
       decomposed = @renderDecomposed(soundChange.order)
       className = Utils.classSet("sound-change", "decomposed" if active)
+      rule = @renderSingleRule(soundChange)
       `<div className={className} key={soundChange.order}>
          <button className="fa toggle-decomposed"
                  data-active={active}
                  onClick={toggleDecomposed}></button>
          <div className="primary">
-           {soundChange.input} → {soundChange.output} / {soundChange.environment}
+           {rule}
          </div>
          {decomposed}
        </div>
       `
+
+  renderSingleRule: (soundChange) ->
+    if soundChange.environment is "_"
+      # Don't render the environment if it is global
+      "#{soundChange.input} → #{soundChange.output}"
+    else
+      "#{soundChange.input} → #{soundChange.output} / #{soundChange.environment}"
 
   renderDecomposed: (order) ->
     return null unless @state.isShowingDecomposed[order - 1]
@@ -52,6 +60,11 @@
       `
     else
       `<div className="decomposed">Loading...</div>`
+
+  renderEditButton: ->
+    if @props.editable
+      editGroup = @editGroup
+      `<button onClick={editGroup} className="fa fa-edit"></button>`
 
   editGroup: ->
     VecheSCA.API.getRule(@props.group.order)

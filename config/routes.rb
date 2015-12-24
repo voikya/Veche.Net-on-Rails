@@ -112,6 +112,8 @@ VecheNet::Application.routes.draw do
       put '/:language/rules/:order' => 'sca#update_rule'
 
       get '/:language/rules/:rule_order/changes/:change_order' => 'sca#show_change'
+
+      get '/:language/run' => 'sca#run'
     end
     get '/:language(/*subpath)' => 'sca#init', :as => 'sca'
   end

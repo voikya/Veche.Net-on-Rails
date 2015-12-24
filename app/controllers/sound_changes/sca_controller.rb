@@ -71,6 +71,11 @@ module SoundChanges
       render :json => change.decompose.map(&:to_s)
     end
 
+    def run
+      words = params[:words].split(",")
+      render :json => @language.run(*words)
+    end
+
     private
 
     def set_language

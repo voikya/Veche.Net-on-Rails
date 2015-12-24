@@ -105,6 +105,17 @@ class @VecheSCA.API
     VecheSCA.Event.trigger 'api:start'
     request.send()
 
+  @runSoundChanges: (words) ->
+    params = Utils.serialize(words: words.join(","))
+    request = @_newRequest('GET', "#{@endpoint}/run?#{params}")
+    request.onload = ->
+      if request.status == 200
+        data = JSON.parse(request.responseText)
+        VecheSCA.Event.trigger 'api:run:response', data
+        VecheSCA.Event.trigger 'api:finish'
+    VecheSCA.Event.trigger 'api:start'
+    request.send()
+
   @_newRequest: (method, uri) ->
     request = new XMLHttpRequest()
     request.open(method, uri, true)

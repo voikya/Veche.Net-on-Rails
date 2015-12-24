@@ -86,15 +86,20 @@ module SoundChanges
     VOWEL_SORT_L1     = %w([+front]
                            [-front,-back]
                            [+back])
-    VOWEL_SORT_L2     = %w([-rounded]
+    VOWEL_SORT_L2     = %w([+high]
+                           [-high,-low]
+                           [+low])
+    VOWEL_SORT_L3     = %w([-rounded]
                            [+rounded])
-    VOWEL_SORT_L3     = %w([?-long]
+    VOWEL_SORT_L4     = %w([?-long]
                            [+long])
+    VOWEL_SORT_L5     = %w([?-stress]
+                           [+stress])
     def <=>(other)
       if consonantal?
         feature_checks = [CONSONANT_SORT_L1, CONSONANT_SORT_L2, CONSONANT_SORT_L3]
       elsif vocalic?
-        feature_checks = [VOWEL_SORT_L1, VOWEL_SORT_L2]
+        feature_checks = [VOWEL_SORT_L1, VOWEL_SORT_L2, VOWEL_SORT_L3, VOWEL_SORT_L4, VOWEL_SORT_L5]
       else
         # Ill-defined entities go the end
         return 1
@@ -130,10 +135,10 @@ module SoundChanges
           when "?"
             # Use "?+" and "?-" to mean "+/- or undefined"
             if feature_opts[1] == "+"
-              pf = phoneme_features.select{ |pf| pf.name == feature_opts[1..-1].to_sym }.first
+              pf = phoneme_features.select{ |pf| pf.name == feature_opts[2..-1].to_sym }.first
               pf.nil? || pf.value == true
             elsif feature_opts[1] == "-"
-              pf = phoneme_features.select{ |pf| pf.name == feature_opts[1..-1].to_sym }.first
+              pf = phoneme_features.select{ |pf| pf.name == feature_opts[2..-1].to_sym }.first
               pf.nil? || pf.value == false
             end
           else
