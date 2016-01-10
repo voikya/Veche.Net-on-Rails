@@ -1,0 +1,39 @@
+- verb ||= {}
+- independent ||= []
+- bound ||= []
+- independent_pronunciation ||= []
+- bound_pronunciation ||= []
+
+%table
+  %thead
+    %tr
+      %th{:colspan => 3} Perfect Tense: <i>#{verb[:tun]}</i> “#{verb[:eng]}”
+    %tr
+      %th
+      %th Independent
+      %th Bound
+  %tbody
+    %tr
+      %th 1Sg <i>iô</i>
+      %td= form independent[0], "[#{independent_pronunciation[0]}]"
+      %td= form bound[0], "[#{bound_pronunciation[0]}]"
+    %tr
+      %th 2Sg <i>tu</i>
+      %td= form independent[1], "[#{independent_pronunciation[1]}]"
+      %td= form bound[1], "[#{bound_pronunciation[1]}]"
+    %tr
+      %th 3Sg <i>eu/ele</i>
+      %td= form independent[2], "[#{independent_pronunciation[2]}]"
+      %td= form bound[2], "[#{bound_pronunciation[2]}]"
+    %tr
+      %th 1Pl <i>nos</i>
+      %td= form independent[3], "[#{independent_pronunciation[3]}]"
+      %td= form bound[3], "[#{bound_pronunciation[3]}]"
+    %tr
+      %th 2Pl <i>vos</i>
+      %td= form independent[4], "[#{independent_pronunciation[4]}]"
+      %td= form bound[4], "[#{bound_pronunciation[4]}]"
+    %tr
+      %th 3Pl <i>els</i>
+      %td= form independent[5], "[#{independent_pronunciation[5]}]"
+      %td= form bound[5], "[#{bound_pronunciation[5]}]"

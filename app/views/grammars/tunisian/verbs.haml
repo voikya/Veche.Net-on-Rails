@@ -1,0 +1,1648 @@
+- content_for :title, "Grammar of the Tunisian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_subtitle, "La Môrphologgie Fêlie"
+
+= section "Features" do
+  %p Much like the other Romance languages, Tunisian verbs are highly inflected for person, number, tense, mood, and voice. Most verbs consist of just two morphemes, a stem and a single inflectional ending. Naturally, each ending carries a heavy functional load, simultaneously marking each of these features. For instance, <i>pîdsams</i> “we think” consists of the stem *pîds- and the ending <i>-ams</i>, which marks the first person singular present active indicative. Some stems also include derivational prefixes or suffixes in addition to the verb root.
+  %p Many verbs undergo stem vowel changes when they are conjugated in various vowels. While varying degrees of such vowel changes are common in other Romance languages, in Tunisian they have actually taken the form of ablaut with a limited but real contrastive function, as in <i>dib</i> “I need” versus <i>deb</i> “he/she needs”.
+  %p Tunisian verbs inflect for three moods: the indicative, subjunctive, and imperative. Of these, the indicative is by far the most robust, inflecting for the present, imperfect, perfect, preterite, and two different future tenses. The subjunctive mood only has two forms, a present and past, with the latter in retreat. The imperative mood has always existed in just a single form, though it has actually been gaining some ground on the subjunctive. In some dialects, the subjunctive has completely disappeared, but this is not permitted in standard Tunisian.
+  %p Conjugated verbs can be either simplex or complex. Simplex tenses consist of just a single conjugated verb, and include the present, imperfect, preterite, future II, present subjunctive, and imperative. Complex tenses consist of an auxiliary verb plus a non-finite form (infinitive or participle), and include the perfect, future I, and past subjunctive.
+  %p Individual Tunisian verbs have three inherent qualities: conjugation class, transitivity, and aspect. The conjugation class determines how exactly the verb conjugates and what endings it takes; this is described in more detail in the following section. Transitivity determines whether a verb is able to take a direct object (transitive) or not (intransitive), and this in turns affects the conjugation in certain forms, such as the formation of the perfect tense; this can be manipulated through the use of certain reflexive pronouns or auxiliary verbs.
+  %p Tunisian treatment of aspect is somewhat more complex, and does not have a clear equivalent in other Romance languages. Verbs belong to one of three categories: inherently perfective, inherently imperfective, or biaspectual. Inherently perfective verbs describe a single event that cannot be drawn out over a period of time; these verbs completely lack imperfect tense forms. Inherently imperfective verbs describe actions that always take place over a period of time and cannot be single point events; these verbs completely lack perfects and preterites. Biaspectual verbs can freely appear with both perfective and imperfective meanings, and can conjugate in the perfect, imperfect, and preterite tenses.
+
+= section "Verb Roots and Conjugations" do
+  %p Tunisian verbs belong to one of four conjugation classes, numbered I, II, III, and IV. These classes are inherent to individual verb stems and are arbitrary; that is, any connotation that each conjugation may have once had has long since been completely lost. The four conjugations differ primarily in the vowels of certain endings, though in some tenses the actual endings may vary across conjugations.
+  %p Conjugation I, also known as the A-Class, can be distinguished by the vowel /a/ in several present tense forms and the infinitive ending <i>-â</i>. This is the largest conjugation class and the only class that is completely open, in that new loanwords and coinages can continually appear as new Conjugation I verbs. This class includes many old words of Latin origin such as <i>levâ</i> “wash” and <i>pîdsâ</i> “think”, medieval and modern Arabic loans such as <i>źeliâ</i> “insult”, and modern internationalisms such as <i>teléfoniâ</i> “telephone”.
+  %p Conjugation II, or the É-Class, is the second most frequent conjugation class. This class is partially open; it no longer allows any new primitive stems, but productively accepts new words formed with certain derivational suffixes, such as the causative -z-/-s-. It is distinguished by the vowel /e/ in several present tense forms and the stressed infinitive ending <i>-ê</i>. Primitive examples include <i>debê</i> “need” and <i>yspê</i> “taste”, while a derived example is <i>bleicsê</i> “whiten” from <i>bleic</i> “white”.
+  %p Conjugation III, or the E-Class, is the rarest of the four conjugation classes and is completely closed, consisting entirely of inherited verbs of Latin origin. These verbs are generally marked by an unstressed infinitive ending in <i>-ê</i> or <i>-î</i> and vowelless present tense endings. Examples include <i>péridê</i> “lose”, <i>veidê</i> “sell”, and <i>udî</i> “hear”.
+  %p Conjugation IV, or the I-Class, is another partially-open class that only accepts new verbs that contain particular derivational suffixes, most frequently the stative suffix -sc-. It is marked by infinitives ending in a stressed <i>-î</i> and by the vowel /i/ in present tense endings. Examples include <i>dremî</i> “sleep”, <i>pretî</i> “leave”, and <i>chenoschî</i> “recognize”.
+
+= section "Ablaut Patterns" do
+  %p Tunisian verbs display two types of ablaut, known as the I-Ablaut and the Reduction-Ablaut. These terms will be used to identify whenever ablaut patterns regularly occur in verbal paradigms.
+  %p The I-Ablaut is a change triggered by the current or former presence of /i/ in the following syllable, and generally consists in a raising and fronting of the base vowel. The Reduction-Ablaut is triggered by historical stress patterns, where unstressed vowels will reduce to neutral vowels and unstressed diphthongs will reduce to long monophthongs. Falling diphthongs pattern as distinct vowels from their components, while rising diphthongs pattern as glide + vowel; that is, /ei/ patterns separately from /e/ and /i/, while /ie/ behaves as /je/ and patterns with /e/.
+  %p Short vowels have two different forms under Reduction-Ablaut. Word-initially, they collapse as high vowels, with /a e i/ merging as /i/ and /o u/ merging as /u/. Everywhere else, they all reduce to schwa.
+  %p The table below shows every Tunisian vowel and diphthong and their counterparts under the I- and Reduction-Ablauts. A blank indicates no change.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Short Vowels
+      %tr
+        %th Base Vowel
+        %th I-Ablaut
+        %th Reduction-Ablaut
+    %tbody
+      %tr
+        %td /a/
+        %td /e/
+        %td /i ~ ə/
+      %tr
+        %td /e/
+        %td /i/
+        %td /i ~ ə/
+      %tr
+        %td /i/
+        %td
+        %td /i ~ ə/
+      %tr
+        %td /o/
+        %td /e/
+        %td /u ~ ə/
+      %tr
+        %td /u/
+        %td /ju/
+        %td /u ~ ə/
+      %tr
+        %td /ə/
+        %td /i/
+        %td
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Long Vowels
+      %tr
+        %th Base Vowel
+        %th I-Ablaut
+        %th Reduction-Ablaut
+    %tbody
+      %tr
+        %td /aː/
+        %td /aj/
+        %td
+      %tr
+        %td /eː/
+        %td
+        %td
+      %tr
+        %td /iː/
+        %td
+        %td
+      %tr
+        %td /oː/
+        %td /uj/
+        %td
+      %tr
+        %td /uː/
+        %td
+        %td
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Diphthongs
+      %tr
+        %th Base Vowel
+        %th I-Ablaut
+        %th Reduction-Ablaut
+    %tbody
+      %tr
+        %td /aj/
+        %td
+        %td /iː/
+      %tr
+        %td /ej/
+        %td
+        %td /iː/
+      %tr
+        %td /oj/
+        %td
+        %td /iː/
+      %tr
+        %td /uj/
+        %td
+        %td /iː/
+      %tr
+        %td /aw/
+        %td
+        %td
+      %tr
+        %td /ew/
+        %td
+        %td
+      %tr
+        %td /iw/
+        %td
+        %td
+      %tr
+        %td /ow/
+        %td
+        %td
+
+  %p Some recent loanwords do not orthographically distinguish the full and reduced grades, even though the difference is there in pronunciation: <i>teléfone</i> /təl.ˈfo.nə/ “he/she is calling” (full grade), <i>teléfoniams</i> /təl.fə.ˈnjamz/ “we are calling” (not <i>*teléfeniams</i>). I-Ablaut is always indicated if it is present: <i>teléféne</i> /təl.ˈfe.nə/ “I am calling”.
+
+= section "The Infinitive" do
+  %p The infinitive is the basic, unmarked form of the verb, lacking explicit marking for person, tense, and mood. It is also the citation form of verbs, and most verbs cited in this grammar will appear in the infinitive unless otherwise indicated. Unusually for a Romance language, the Tunisian infinitive has two forms, a singular and a plural.
+  %p Conjugation I verbs form their infinitive by adding the stressed suffix <i>-â</i> to the stem with Reduction Ablaut.
+  %p Conjugation II verbs form the infinitive with the stressed suffix <i>-ê</i> plus Reduction Ablaut.
+  %p Conjugation III verbs form the infinitive one of the unstressed suffixes <i>-ê</i> or <i>-î</i>. Which stems take which suffix cannot be predicted; the suffixes are arbitrarily associated with particular verbs. There is no ablaut in the stem.
+  %p Conjugation IV verbs form the infinitive with the stressed suffix <i>-î</i>. Reduction ablaut in generally not present, although a few particular subclasses will have it. In particular, verbs with a metathesizing /r/ will show reduction in the infinitive.
+  %p Plurals for all conjugations are formed with the suffix <i>-nes</i> /nəz/ added directly to the stem, with no ablaut present. There is no contrast between the conjugations. This suffix is never stressed. If the stem ends in /n/, the two consonants merge into one.
+  %table
+    %thead
+      %tr
+        %th Stem
+        %th Conjugation
+        %th Singular<br>Infinitive
+        %th Plural<br>Infinitive
+    %tbody
+      %tr
+        %td *lav- “wash”
+        %td I
+        %td
+          <i>levâ</i>
+          %br
+          \/lə.ˈvaː/
+        %td
+          <i>lavnes</i>
+          %br
+          \/ˈlav.nəz/
+      %tr
+        %td *cheit- “sing”
+        %td I
+        %td
+          <i>chîtâ</i>
+          %br
+          \/kiː.ˈtaː/
+        %td
+          <i>cheitnes</i>
+          %br
+          \/ˈkejt.nəz/
+      %tr
+        %td *am- “love”
+        %td I
+        %td
+          <i>imâ</i>
+          %br
+          \/i.ˈmaː/
+        %td
+          <i>amnes</i>
+          %br
+          \/ˈam.nəz/
+      %tr
+        %td *déb- “need”
+        %td II
+        %td
+          <i>debê</i>
+          %br
+          \/də.ˈbeː/
+        %td
+          <i>débnes</i>
+          %br
+          \/ˈdeb.nəz/
+      %tr
+        %td *viçon- “see”
+        %td II
+        %td
+          <i>viçenê</i>
+          %br
+          \/vi.ʃə.ˈneː/
+        %td
+          <i>viçones</i>
+          %br
+          \/vi.ˈʃo.nəz/
+      %tr
+        %td *séd- “sit”
+        %td II
+        %td
+          <i>sedê</i>
+          %br
+          \/sə.ˈdeː/
+        %td
+          <i>sédnes</i>
+          %br
+          \/ˈsed.nəz/
+      %tr
+        %td *veid- “sell”
+        %td III
+        %td
+          <i>veidê</i>
+          %br
+          \/ˈvej.deː/
+        %td
+          <i>veidnes</i>
+          %br
+          \/ˈvejd.nəz/
+      %tr
+        %td *lég- “read”
+        %td III
+        %td
+          <i>léggê</i>
+          %br
+          \/ˈle.geː/
+        %td
+          <i>légnes</i>
+          %br
+          \/ˈleg.nəz/
+      %tr
+        %td *ud- “hear”
+        %td III
+        %td
+          <i>udî</i>
+          %br
+          \/ˈu.diː/
+        %td
+          <i>udnes</i>
+          %br
+          \/ˈud.nəz/
+      %tr
+        %td *ysc- “know”
+        %td IV
+        %td
+          <i>yschî</i>
+          %br
+          \/is.ˈkiː/
+        %td
+          <i>yscnes</i>
+          %br
+          \/ˈisk.nəz/
+      %tr
+        %td *chenosc- “recognize”
+        %td IV
+        %td
+          <i>chenoschî</i>
+          %br
+          \/kə.nos.ˈkiː/
+        %td
+          <i>chenoscnes</i>
+          %br
+          \/kə.ˈnosk.nəz/
+      %tr
+        %td *dorom- “sleep”
+        %td IV
+        %td
+          <i>dremî</i>
+          %br
+          \/drə.ˈmiː/
+        %td
+          <i>doromnes</i>
+          %br
+          \/ˈdo.rom.nəz/
+
+  %p Three verbs have irregular infinitives.
+  %table
+    %thead
+      %tr
+        %th Stem
+        %th Conjugation
+        %th Singular<br>Infinitive
+        %th Plural<br>Infinitive
+    %tbody
+      %tr
+        %td *es-/s- “be”
+        %td n/a
+        %td
+          <i>ystâ</i>
+          %br
+          \/is.ˈtaː/
+        %td
+          <i>ystnes</i>
+          %br
+          \/ˈis.nəz/
+      %tr
+        %td *lév- “take”
+        %td I
+        %td
+          <i>loâ</i>
+          %br
+          \/waː/
+        %td
+          <i>loânes</i>
+          %br
+          \/ˈwaː.nəz/
+      %tr
+        %td *v- “go”
+        %td IV
+        %td
+          <i>unî</i>
+          %br
+          \/u.ˈniː/
+        %td
+          <i>unes</i>
+          %br
+          \/ˈu.nəz/
+
+= section "The Present Tense" do
+  = section "Regular Forms" do
+    %p The following table shows the regular present-tense forms in each of the four conjugations. The verbs shown are <i>prelâ</i> “speak”, <i>debê</i> “need”, <i>veidê</i> “sell”, and <i>chenoschî</i> “recognize”.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 5} Tunisian Regular Present Tense
+        %tr
+          %th
+          %th I
+          %th II
+          %th III
+          %th IV
+      %tbody
+        %tr
+          %th
+          %td
+            <i>prelâ</i>
+            %br
+            “speak”
+          %td
+            <i>debê</i>
+            %br
+            “need”
+          %td
+            <i>veidê</i>
+            %br
+            “sell”
+          %td
+            <i>chenoschî</i>
+            %br
+            “recognize”
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "prel", "[ˈprɛl]"
+          %td= form "dib", "[ˈdʲib]"
+          %td= form "veid", "[ˈvejd]"
+          %td= form "chenésc", "[kə.ˈnʲɛsk]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "prals", "[ˈpraːlz]"
+          %td= form "debs", "[ˈdʲɛbz]"
+          %td= form "veids", "[ˈvejdz]"
+          %td= form "chenoscs", "[kə.ˈnosks]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "pral", "[ˈpraːl]"
+          %td= form "deb", "[ˈdʲɛb]"
+          %td= form "veid", "[ˈvejd]"
+          %td= form "chenosc", "[kə.ˈnosk]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "prelams", "[prə.ˈlaːmz]"
+          %td= form "debéms", "[də.ˈbɛmz]"
+          %td= form "veidms", "[ˈvej.dɪmz]"
+          %td= form "cheneschims", "[kə.nəs.ˈkimz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "prelats", "[prə.ˈlaːts]"
+          %td= form "debéts", "[də.ˈbɛts]"
+          %td= form "veidts", "[ˈvej.dɪts]"
+          %td= form "cheneschits", "[kə.nəs.ˈkits]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "pralê", "[ˈpraː.leː]"
+          %td= form "débê", "[ˈdʲe.beː]"
+          %td= form "veidô", "[ˈvej.dɔː]"
+          %td= form "chenoschiô", "[kə.nos.ˈkjɔə]"
+
+    %p The first person singular consists of the bare verbal stem featuring the I-Ablaut in the final syllable.
+    %p The second person singular consists of the verbal stem plus the suffix <i>-s</i>. This is pronounced [s] after voiceless consonants and [z] everywhere else. If the stem ends in a coronal fricative, orthographically the form is regular, but an epenthetic [ɪ] is inserted between the stem and ending: <i>pîdsâ</i> “think” → <i>peidss</i> [ˈpejt.sɪs].
+    %p The third person singular consists of the bare verbal stem with no ablaut. Consequently, the first and third person singulars are identical for most verbs if the stem cannot undergo I-Ablaut.</p>
+    %p The first person plural consists of the verbal stem, a thematic vowel, and the ending <i>-ms</i>, pronounced [mz]. In the first, second, and fourth conjugations the thematic vowel is a stressed /a/, /e/, and /i/ respectively, while the verbal stem appears in its reduced grade. In the third conjugation, the stem appears in its full grade, but the thematic vowel is absent, and consequently an epenthetic [ɪ] is regularly inserted.
+    %p The second person plural behaves just like the first person plural, only with the ending <i>-ts</i>.
+    %p The third person plural adds the endings <i>-ô</i> (I/II), <i>-ê</i> (III), or <i>-iô</i> (IV) to the full grade of the verbal stem.
+    %p Some of these endings can result in fully predictable spelling changes even though the pronunciation is completely regular. Notice above, for instance, how the stem for “recognize” varies between <i>*chenosc-</i> when by itself or before a consonant and <i>*chenosch-</i> when before a front vowel. Similarly, the stem for “need”, which is always pronounced /deb/ in the full grade, is spelled <i>*deb-</i> in monosyllabic forms (since graphical <i>e</i> in a monosyllable is always /e/) and <i>*déb-</i> in polysyllabic forms (since graphical <i>e</i> in polysyllabic forms is always /ə/). More generally, Tunisian spelling, at least as far as conjugation is concerned, generally opts for the most appropriate spelling for a given pronunciation, regardless of the spelling of other related forms.
+
+  = section "Semi-Regular Forms" do
+    %p Verbs that do not follow the regular pattern outlined in the previous section, but whose patterns can still be predicted based on the phonological structure of the stem, are known as semi-regular verbs or minor conjugations (as opposed to the four mentioned before, which are known as the major conjugations).
+
+    = section "Stems Ending in /j/" do
+      %p All verb stems ending in /j/ belong to Conjugation I. This was due to all /j/-final stems in other conjugations either shifting to Conjugation I by dissimilation or losing the /j/ entirely by assimilation, as it is much more salient before a back vowel (i.e., Cja) than before a front vowel (i.e., Cje or Cji). However, their conjugation seems to share some traits of both the A and I conjugations, due to this underlying /j/ vocalizing as /i/ in certain positions. The present tense of <i>źeliâ</i> “insult” is shown below.
+      = render 'present_tense',
+        :verb          => {:tun => "źeliâ", :eng => "insult"},
+        :forms         => %w(źéle źalis źale źelims źelits źaliê),
+        :pronunciation => %w(ˈðe.lə ˈðaː.liz ˈðaː.lə ðə.ˈlʲimz ðə.ˈlʲits ˈðaː.ljeː)
+
+      %p In the first and third persons singular, the yod remains in place and vocalizes as /ə/. I-Ablaut still occurs in the first person singular, but on the preceding vowel.
+      %p In the second person singular, first person plural, and second person plural, the yod vocalizes as /i/ (unstressed in 2Sg, stressed in 1Pl/2Pl). This results in the 1Pl and 2Pl forms superficially looking like Conjugation III forms, except unlike Conjugation III, the stem appears in a reduced grade.
+      %p The third person plural is completely regular.
+
+    = section "Stems Ending in /r/" do
+      %p Tunisian prohibits coda /r/. There are three types of verbal stems where such an /r/ affects the present tense conjugation: stem-final /r/ after a vowel, as in <i>çirê</i> “want”; stem-final /r/ after a consonant, as in <i>comprâ</i> “compare”; and the so-called metathesizing /r/, as in <i>dremî</i> “sleep”.
+      %p Stem-final /r/ after a vowel, as in <i>çirê</i> “want” (Conjugation III) is resolved in two ways. When word-final, the /r/ drops entirely, and the preceding vowel is lengthened if possible. Before a consonant, it is resolved through pleophony, the insertion of an epenthetic vowel afterwards that is dependent on the quality of the vowel preceding it. Specifically, if the preceding vowel is /a/, the epenthetic vowel is /ə/; if the preceding vowel is /e/ or /i/, the epenthetic vowel is /i/; and if the preceding vowel is /o/ or /u/, the epenthetic vowel is /o/. Diphthongs pattern as their nucleus and long vowels as their short counterparts. Thus, in the case of <i>çirê</i>, the stem becomes <i>*çî</i> word-finally and <i>*çiri-</i> before a consonant.
+      = render 'present_tense',
+        :verb          => {:tun => "çirê", :eng => "want"},
+        :forms         => %w(çî çiris çî çirims çirits çirô),
+        :pronunciation => %w(ˈʃiː ˈʃi.riz ˈʃiː ˈʃi.rimz ˈʃi.rits ˈʃi.rɔː)
+
+      %p The metathesizing /r/ phonomenon occurs in stems that formerly had the structure *CVrC-, but that now alternate between *CrVC and *CVrVC. Examples include the verbs <i>dremî</i> “sleep” and <i>frevî</i> “boil”. These stems have the following three grades:
+      %ul
+        %li In the full grade, they take the form *CVrVC-, where the first V represents the original vowel and the second V is the pleophonic echo vowel as mentioned above. The full grade stems of these two verbs are <i>*dorom-</i> and <i>*fériv-</i>.
+        %li Under I-Ablaut, they take the form *CVriC-, where the pleophonic vowel always surfaces as /i/. This likely suggests that at the time the I-Ablaut was first emerging, this pleophonic vowel was reduced and relatively indistinct, and was thus affected to a much greater extent by later front vowels than normal short vowels were. The I-Ablaut forms of these two verbs are <i>*dorim-</i> and <i>*fériv-</i>.
+        %li In the reduced grade, they take the form *CrVC, where V represents the reduced counterpart of the full vowel. These forms were likely at one point also pleophonic, but stress-induced reductions caused the original pre-rhotic vowel to drop. The reduced grade forms of these two verbs are <i>*drem-</i> and <i>*frev-</i>.
+
+      %p With these special graded forms in mind, it then becomes possible to conjugate these verbs regularly. Shown below is <i>dremî</i>:
+      = render 'present_tense',
+        :verb          => {:tun => "dremî", :eng => "sleep"},
+        :forms         => %w(dorim doroms dorom dremims dremits doromiô),
+        :pronunciation => %w(ˈdɔ.rim ˈdɔ.romz ˈdɔ.rom drə.ˈmimz drə.ˈmits dɔ.rɔ.ˈmjɔə)
+
+      %p Verbs with stem-final /r/ after a consonant will be covered in section 4.5.2.5 as a case of final consonant clusters.
+
+    = section "Stems Ending in /n/" do
+      %p Tunisian also has restrictions on root-final /n/. Where /r/ drops with compensatory lengthening or acquires an epenthetic support vowel, /n/ tends to weaken to /j/, resulting in diphthongs word-internally or /iː/ word-finally. Shown below are the conjugations of <i>viçenê</i> “see” (II) and <i>pînâ</i> “fight” (I); the former is a typical /n/-final stem, while the latter shows the further vocalization of /j/ as /iː/ after diphthongs.
+      = render 'present_tense',
+        :verb          => {:tun => "viçenê", :eng => "see"},
+        :forms         => %w(viçî viçois viçî viçenéms viçenéts viçonê),
+        :pronunciation => %w(ˈvi.ʃiː ˈvi.ʃojz ˈvi.ʃiː vi.ʃə.ˈnʲɛmz vi.ʃə.ˈnʲɛts ˈvi.ʃɔ.neː)
+      = render 'present_tense',
+        :verb          => {:tun => "pînâ", :eng => "fight"},
+        :forms         => %w(poî poîs poî pînams pînats poinê),
+        :pronunciation => %w(ˈpɔ.jiː ˈpɔ.jiːz ˈpɔ.jiː piː.ˈnaːmz piː.ˈnaːts ˈpoj.neː)
+
+    = section "Stems Containing Velar + Front Vowel" do
+      %p Historically, Tunisian palatalized the velar stops /k g/ to /ʃ ʒ/ before stressed front vowels. This causes problems in verbal stems containing these sequences where the stress shifts on and off that particular front vowel, leading to a /k ~ ʃ/ or /g ~ ʒ/ alternation within the same verb paradigm. While these alternations still exist in some dialects (e.g., <i>çeî</i> “I eat” vs. <i>chenams</i> “we eat”), in the standard they have been levelled out in favor of the plosive. The following tables show the conjugation of <i>chîtâ</i> “sing” and <i>glâ</i> “freeze”.
+      = render 'present_tense',
+        :verb          => {:tun => "chîtâ", :eng => "sing"},
+        :forms         => %w(cheit cheits cheit chîtams chîtats cheitê),
+        :pronunciation => %w(ˈkejt ˈkejts ˈkejt kiː.ˈtaːmz kiː.ˈtaːts ˈkej.teː)
+      = render 'present_tense',
+        :verb          => {:tun => "glâ", :eng => "freeze"},
+        :forms         => %w(ghil ghels ghel glams glats ghélê),
+        :pronunciation => %w(ˈgil ˈgɛlz ˈgɛl ˈglaːmz ˈglaːts ˈge.leː)
+
+      %p This sort of environment can also appear at the end of a stem, when the stem ends in /k g/ and is followed by a stressed front vowel. Here, the alternation is fully permissable, as apparently stem-final consonant changes are not considered as salient as stem-initial ones. Below is the conjugation of <i>leçê</i> “shine”:
+      = render 'present_tense',
+        :verb          => {:tun => "leçê", :eng => "shine"},
+        :forms         => %w(liuc lucs lucs leçéms leçéts luccê),
+        :pronunciation => %w(ˈljuk ˈluks ˈluk lə.ˈʃɛmz lə.ˈʃɛts ˈlu.keː)
+
+    = section "Stems Ending in Consonant Clusters" do
+      %p There are two types of semi-regular verbs with stems ending in consonant clusters: vowelless stems, where a historical vowel may sporadically reappear to break up the cluster, and true clustered stems, where an epenthetic vowel appears word-finally to support the cluster.
+      %p Vowelless stems are verb stems that once ended in -CVC, but due to Tunisian vowel reduction, the vowel was lost in reduced-grade forms. This vowel will then reappear in full grade or I-Ablaut forms. Note that vowelless stems may actually contain vowels, and in fact often do; the name simply refers to the disappearing vowel in the stem. Examples include <i>yspê</i> “taste” (Conjugation II with full grade stem <i>*isap-</i>) and <i>ifchê</i> “cause” (Conjugation III with full grade stem <i>*éféc-</i>)#{footnote}.
+      = render 'present_tense',
+        :verb          => {:tun => "yspê", :eng => "taste"},
+        :forms         => %w(ysép ysaps ysap yspéms yspéts ysapê),
+        :pronunciation => %w(ˈi.sɛp ˈi.sʌps ˈi.sʌp is.ˈpɛmz is.ˈpɛts ˈi.sʌ.peː)
+      = render 'present_tense',
+        :verb          => {:tun => "ifchê", :eng => "cause"},
+        :forms         => %w(efic efécs eféc efécms efécts efécô),
+        :pronunciation => %w(ˈe.fik ˈe.fɛks ˈe.fɛk ˈe.fɛ.kɪmz ˈe.fɛ.kɪts ˈe.fe.kɔː)
+
+      %p True clustered stems are stems that have always ended in a cluster, so there is no vowel to reappear in full grade forms. In these verbs, an epenthetic /ə/ is inserted at the end of the first person singular and third person singular forms, perhaps a faint remnant of the verb endings that were once present in Old Tunisian. Examples include <i>îtrâ</i> “enter” (I) and <i>solbê</i> “unlock” (III). Note that not all verb stems ending in clusters get this epenthetic vowel; many are completely regular, and will simply tolerate the word-final cluster. The distribution appears to reflect the phonotactics of an earlier form of Tunisian which was less tolerant of word-final clusters than the modern language.
+      = render 'present_tense',
+        :verb          => {:tun => "îtrâ", :eng => "enter"},
+        :forms         => %w(eitre eitrs eitre îtrams îtrats eitrê),
+        :pronunciation => %w(ˈej.trə ˈej.tɪrz ˈej.trə iː.ˈtraːmz iː.ˈtraːts ˈej.treː)
+      = render 'present_tense',
+        :verb          => {:tun => "solbê", :eng => "unlock"},
+        :forms         => %w(sélbe solbs solbe solbms solbts solbê),
+        :pronunciation => %w(ˈsʲɛl.bə ˈsolbz ˈsol.bə ˈsol.bɪmz ˈsol.bɪts ˈsol.beː)
+
+  = section "Irregular Forms" do
+    %p Of course, not all verbs have a predictable conjugation. Some are simply irregular, with paradigms that have to be memorized individually. Only two are completely exceptional: <i>istâ</i> “be” (which, interestingly, lacks third person forms) and <i>râ</i> “be (emphatic), really be”, which has an Arabic-derived conjugation.
+    = render 'present_tense',
+      :verb          => {:tun => "ystâ", :eng => "be"},
+      :forms         => ["som", "es", nil, "sums", "ests", nil],
+      :pronunciation => ["ˈsom", "ˈɛs", nil, "ˈsumz", "ˈɛsts", nil]
+    = render 'present_tense',
+      :verb          => {:tun => "râ", :eng => "be (emphatic)"},
+      :forms         => %w(râne râc râ rânâ râcm râm),
+      :pronunciation => %w(ˈraː.nə ˈraːk ˈraː ˈraː.naː ˈraː.kɪm ˈraːm)
+
+    %p The present tense of <i>ystâ</i> is actually the only irregular conjugation preserved from Latin. All other irregular Latin present tense verbs were regularized or lost on the way to modern Tunisian. However, a number of new verbs have become irregular. These include <i>loâ</i> “take”, <i>unî</i> “go”, <i>vivê</i> “live”, <i>ebê</i> “have”, and <i>yddâ</i> “give”.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 6} Tunisian Irregular Present Tense
+        %tr
+          %th
+          %th
+            <i>loâ</i>
+            %br
+            “take”
+          %th
+            <i>unî</i>
+            %br
+            “go”
+          %th
+            <i>vivê</i>
+            %br
+            “live”
+          %th
+            <i>ebê</i>
+            %br
+            “have”
+          %th
+            <i>yddâ</i>
+            %br
+            “give”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "lî", "[ˈlʲiː]"
+          %td= form "vî", "[ˈviː]"
+          %td= form "viv", "[ˈviv]"
+          %td= form "ai", "[ˈaj]"
+          %td= form "dî", "[ˈdʲiː]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "levs", "[ˈlʲɛvz]"
+          %td= form "veis", "[ˈvejz]"
+          %td= form "viûs", "[ˈvi.juz]"
+          %td= form "ais", "[ˈajz]"
+          %td= form "dads", "[ˈdaːdz]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "lev", "[ˈlʲɛv]"
+          %td= form "vei", "[ˈvej]"
+          %td= form "viv", "[ˈviv]"
+          %td= form "ae", "[ˈaj]"
+          %td= form "dad", "[ˈdaːd]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "loâms", "[ˈwaːmz]"
+          %td= form "unims", "[u.ˈnʲimz]"
+          %td= form "viûms", "[ˈvi.jumz]"
+          %td= form "ems", "[ˈɛmz]"
+          %td= form "yddams", "[id.ˈdaːmz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "loâts", "[ˈwaːts]"
+          %td= form "units", "[u.ˈnʲits]"
+          %td= form "viûts", "[ˈvi.juts]"
+          %td= form "ets", "[ˈɛts]"
+          %td= form "yddats", "[id.ˈdaːts]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "lévê", "[ˈlʲe.veː]"
+          %td= form "véniô", "[ve.ˈnjɔə]"
+          %td= form "vivô", "[ˈvi.vɔː]"
+          %td= form "aiê", "[ˈaː.jeː]"
+          %td= form "dadê", "[ˈdaː.deː]"
+
+= section "The Imperfect Tense" do
+  = section "Regular Forms" do
+    %p Conjugations III and IV merge in the imperfect tense. The table below shows the regular imperfect tense forms.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 5} Tunisian Regular Imperfect Tense
+        %tr
+          %th
+          %th I
+          %th II
+          %th III
+          %th IV
+        %tr
+          %th
+          %th
+            %i prelâ
+            %br
+            “speak”
+          %th
+            %i debê
+            %br
+            “need”
+          %th
+            %i veidê
+            %br
+            “sell”
+          %th
+            %i chenoschî
+            %br
+            “recognize”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "prelâm", "[prə.ˈlaːm]"
+          %td= form "debêm", "[də.ˈbeəm]"
+          %td= form "veidîm", "[ˈvej.diːm]"
+          %td= form "chenéschîm", "[kə.ˈnʲɛs.kiːm]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "prelâs", "[prə.ˈlaːz]"
+          %td= form "debês", "[də.ˈbeəz]"
+          %td= form "veidîs", "[ˈvej.diːz]"
+          %td= form "chenéschîs", "[kə.ˈnʲɛs.kiːz]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "prelâ", "[prə.ˈlaː]"
+          %td= form "debê", "[də.ˈbeə]"
+          %td= form "veidî", "[ˈvej.diː]"
+          %td= form "chenéschî", "[kə.ˈnʲɛs.kiː]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "praliâms", "[prʌ.ˈljaːmz]"
+          %td= form "débiâms", "[de.ˈbjaːmz]"
+          %td= form "veidîms", "[ˈvej.diːmz]"
+          %td= form "chenéschîms", "[kə.ˈnʲɛs.kiːmz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "praliâts", "[prʌ.ˈljaːts]"
+          %td= form "débiâts", "[de.ˈbjaːts]"
+          %td= form "veidîts", "[ˈvej.diːts]"
+          %td= form "chenéschîts", "[kə.ˈnʲɛs.kiːts]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "prelaiê", "[prə.ˈlaː.jeː]"
+          %td= form "debaiê", "[də.ˈbaː.jeː]"
+          %td= form "veidaiê", "[ˈvej.dʌ.jeː]"
+          %td= form "chenoscaiê", "[kə.ˈnos.kʌ.jeː]"
+
+    %p The first person singular consists of the verb stem, a long theme vowel, and the suffix <i>-m</i>. The theme vowel is /aː/ for Conjugation I, /eː/ for Conjugation II, and /iː/ for Conjugations III and IV. In Conjugations I and II, the stem is reduced and unstressed, while in III and IV, the stem is stressed and has I-Ablaut.
+    %p The second person singular consists of the stem, theme vowel, and the suffix <i>-s</i>. Stress and stem grades are as in first person singular.
+    %p In the third person singular, only the theme vowel is added to the stem. Stress and stem grades are as before.
+    %p The first person plural has two endings: <i>-iâms</i> (I/II) and <i>-îms</i> (III/IV), with no theme vowel differentiation. Stress is as in the other imperfect forms, but in Conjugations I and II, the stem appears in the full grade, not the reduced grade.
+    %p The second person plural behaves identically to the first person plural, with the suffixes <i>-iâts</i> (I/II) and <i>-îts</i> (III/IV).
+    %p The third person plural consists of the suffix <i>-aiê</i> in all conjugations. In Conjugations I and II, the vowel /a/ of the ending is stressed, and the stem appears in the full grade. In Conjugations III and IV, the stem is stressed and it appears in the full grade (without I-Ablaut).
+    %p The distribution of the full and reduced grade in Conjugations I and II in the imperfect are the inverse of those in the present; in the imperfect, the reduced grade is used in all vowels except the first and second persons plural. In Conjugations III and IV, however, the I-Ablaut is used in all forms other than the third person plural, where the regular full grade is used instead.
+
+  = section "Semi-Regular Forms" do
+    = section "Stems Ending in /j/" do
+      %p Stems with final /j/ are largely regular in the imperfect. The only irregularity is that this /j/ vocalizes to a stressed /i/ in the first and second persons plural, where the orthographic <i>i</i> is doing double duty as both the vowel /i/ of the stem and the consonant /j/ of the ending, so that a form such as <i>teléfoniâms</i> is pronounced /təl.fə.ˈni.jamz/, not */təl.fo.ˈnjaːmz/ as would regularly be expected.
+      = render 'imperfect_tense',
+        :verb          => {:tun => "źeliâ", :eng => "insult"},
+        :forms         => %w(źeliâm źeliâs źeliâ źaliâms źaliâts źeliaiê),
+        :pronunciation => %w(ðə.ˈljaːm ðə.ˈljaːz ðə.ˈljaː ðʌ.ˈlʲi.jʌmz ðʌ.ˈlʲi.jʌts ðə.ˈljaː.jeː)
+
+    = section "Stems Ending in /r/" do
+      %p Stems with final /r/ are regular in the imperfect; or they are regular insofar as the standard creation of the different grades of metathesizing /r/ stems is considered regular.
+      = render 'imperfect_tense',
+        :verb          => {:tun => "çirê", :eng => "want"},
+        :forms         => %w(çirîm çirîs çirî çirîms çirîts çiraiê),
+        :pronunciation => %w(ˈʃi.riːm ˈʃi.riːz ˈʃi.riː ˈʃi.riːmz ˈʃi.riːts ˈʃi.rʌ.jeː)
+      = render 'imperfect_tense',
+        :verb          => {:tun => "dremî", :eng => "sleep"},
+        :forms         => %w(dorimîm dorimîs dorimî dorimîmz dorimîts doromaiê),
+        :pronunciation => %w(ˈdɔ.ri.miːm ˈdɔ.ri.miːz ˈdɔ.ri.miː ˈdɔ.ri.miːmz ˈdɔ.ri.miːts ˈdɔ.rɔ.mʌ.jeː)
+
+    = section "Stems Ending in /n/" do
+      %p Stems ending in /n/ are completely regular in the imperfect.
+      = render 'imperfect_tense',
+        :verb          => {:tun => "viçenê", :eng => "see"},
+        :forms         => %w(viçenêm viçenês viçenê viçoniâms viçoniâts viçenaiê),
+        :pronunciation => %w(vi.ʃə.ˈnʲeəm vi.ʃə.ˈnʲeəz vi.ʃə.ˈnʲeə vi.ʃɔ.ˈnjaːmz vi.ʃɔ.ˈnjaːts vi.ʃə.ˈnaː.jeː)
+
+    = section "Stems Containing Velar + Front Vowel" do
+      %p Velar + front vowel sequences in stems like <i>chîtâ</i> are completely regular in the imperfect; since the stress never falls on the stem, the palatalizing environment never appears. On the other hand, in Conjugations III and IV, where the stress can fall on the first syllable, the same sort of alternation could be possible in theory; in practice, however, all such verbs have undergone paradigmatic levelling and now appear with the fricative in all forms, as in <i>jestî</i> “be ready” (older <i>gestî</i>).
+      %p Stem-final palatalization, however, freely appears throughout the paradigm aside from the third person plural.
+      = render 'imperfect_tense',
+        :verb          => {:tun => "leçê", :eng => "shine"},
+        :forms         => %w(leçêm leçês leçê luçiâms luçiâts leccaiê),
+        :pronunciation => %w(lə.ˈʃeəm lə.ˈʃeəz lə.ˈʃeə lu.ˈʃjaːmz lu.ˈʃjaːts lə.ˈkaː.jeː)
+
+    = section "Stems Ending in Consonant Clusters" do
+      %p Stems ending in final consonant clusters always appear without any epenthetic vowels in the imperfect, no matter the subtype.
+      = render 'imperfect_tense',
+        :verb          => {:tun => "ifchê", :eng => "cause"},
+        :forms         => %w(efchîm efchîs efchî efchîms efchîts efcaiê),
+        :pronunciation => %w(ˈɛf.kiːm ˈɛf.kiːz ˈɛf.kiː ˈɛf.kiːmz ˈɛf.kiːts ˈɛf.kʌ.jeː)
+      = render 'imperfect_tense',
+        :verb          => {:tun => "îtrâ", :eng => "enter"},
+        :forms         => %w(eitrâm eitrâs eitrâ îtriâms îtriâts eitraiê),
+        :pronunciation => %w(ej.ˈtraːm ej.ˈtraːz ej.ˈtraː iː.ˈtrjaːmz iː.ˈtrjaːts ej.ˈtraː.jeː)
+
+  = section "Irregular Forms" do
+    = render 'imperfect_tense',
+      :verb          => {:tun => "ystâ", :eng => "be"},
+      :forms         => %w(erîm erîs êr irîms irîts erê),
+      :pronunciation => %w(ˈe.riːm ˈe.riːz ˈeə ˈi.riːmz ˈi.riːts ˈe.reː)
+
+= section "The Perfect Tense" do
+  %p The Perfect Tense is a compound tense, consisting of an auxiliary plus a passive participle. The auxiliary verb used is a reduced form of the present tense of “be” for intransitive verbs (including reflexive verbs) and a reduced form of the present tense of “have” for transitive verbs. The auxiliaries are shown below.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 6} Perfect Auxiliaries
+      %tr
+        %th
+        %th Reduced “Be”
+        %th Full “Be”
+        %th
+        %th Reduced “Have”
+        %th Full “Have”
+    %tbody
+      %tr
+        %th 1Sg <i>iô</i>
+        %td= form "sem/-em", "[səm, əm]"
+        %td= form "som", "[ˈsom]"
+        %th{:rowspan => 6}
+        %td= form "ai/-ai", "[aj, aj]"
+        %td= form "ai", "[ˈaj]"
+      %tr
+        %th 2Sg <i>tu</i>
+        %td= form "es/-es", "[ɛs, əs]"
+        %td= form "es", "[ˈɛs]"
+        %td= form "ais/-es", "[ajz, əs]"
+        %td= form "ais", "[ˈajz]"
+      %tr
+        %th 3Sg <i>eu/ele</i>
+        %td= form "e/-e", "[e, ə]"
+        %td —
+        %td= form "ae/-ae", "[aj, aj]"
+        %td= form "ae", "[ˈaj]"
+      %tr
+        %th 1Pl <i>nos</i>
+        %td= form "sems/-esms", "[səmz, əsɪmz]"
+        %td= form "sums", "[ˈsumz]"
+        %td= form "ems/-ems", "[ɛmz, əms]"
+        %td= form "ems", "[ˈɛmz]"
+      %tr
+        %th 2Pl <i>vos</i>
+        %td= form "ests/-ests", "[ɛsts, əsts]"
+        %td= form "ests", "[ˈɛsts]"
+        %td= form "ets/-ets", "[ɛts, əts]"
+        %td= form "ets", "[ˈɛts]"
+      %tr
+        %th 3Pl <i>els</i>
+        %td= form "sô/-ço", "[sɔː, ʃɔ]"
+        %td —
+        %td= form "aiê/-çé", "[ʌ.jeː, ʃe]"
+        %td= form "aiê", "[ˈaː.jeː]"
+
+  %p Each of the auxiliaries has both an independent (preposed) and bound (postposed) form. The past participle (the formation of which will be discussed later) retains full gender and number agreement when used in combination with an independent auxiliary, but will always appear in the bare masculine singular when used with bound auxiliaries. When present, participle agreement with the “be” auxiliary is with the subject, and with the “have” auxiliary is with the direct object.
+  = render 'perfect_tense',
+    :verb        => {:tun => "unî", :eng => "come"},
+    :independent => ['sem unit(e)', 'es unit(e)', 'e unit(e)', 'sems units', 'ests units', 'sô units'],
+    :bound       => %w(unit-em unit-es unit-e unit-esms unit-ests unit-ço),
+    :independent_pronunciation => ['səm u.ˈnʲit(ə)', 'ɛs u.ˈnʲit(ə)', 'e u.ˈnʲit(ə)', 'səmz u.ˈnʲits', 'ɛsts u.ˈnʲits', 'sɔː u.ˈnʲits'],
+    :bound_pronunciation      => %w(u.ˈnʲi.təm u.ˈnʲi.təs u.ˈnʲi.tə u.ˈnʲi.tə.sɪmz u.ˈnʲi.təsts u.ˈnʲi.tʃɔ)
+  = render 'perfect_tense',
+    :verb        => {:tun => "yscribê", :eng => "write"},
+    :independent => ['ai yscrébt(e/s)', 'ais yscrébt(e/s)', 'ae yscrébt(e/s)', 'ems yscrébt(e/s)', 'ets yscrébt(e/s)', 'aiê yscrébt(e/s)'],
+    :bound       => %w(yscrébt-ai yscrébt-es yscrébt-ae yscrébt-ems yscrébt-ets yscrébt-çé),
+    :independent_pronunciation => ['aj ˈis.krɛpt(ə/s)', 'ajz ˈis.krɛpt(ə/s)', 'aj ˈis.krɛpt(ə/s)', 'ɛmz ˈis.krɛpt(ə/s)', 'ɛts ˈis.krɛpt(ə/s)', 'a.jeː ˈis.krɛpt(ə/s)'],
+    :bound_pronunciation       => %w(ˈis.krɛp.taj ˈis.krɛp.təs ˈis.krɛp.taj ˈis.krɛp.təmz ˈis.krɛp.təts ˈis.krɛp.tʃe)
+
+= section "The Preterite Tense" do
+  = section "Regular Forms" do
+    %p The preterite tense, though once widely used as a general perfective past tense, nowadays has a rather limited distribution, restricted by and large to narration (primarily in the written language) and marking immediate past or immediate future. It is also particularly prone to irregularities, which in combination with its restricted usage has resulted in many verbs having two preterite forms: an inherited irregular conjugation and a newer, regularized conjugation.
+    %p The table below shows the regular preterite conjugation.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 5} Tunisian Regular Preterite Tense
+        %tr
+          %th
+          %th I
+          %th II
+          %th III
+          %th IV
+      %tbody
+        %tr
+          %th
+          %th
+            %i prelâ
+            %br
+            “speak”
+          %th
+            %i debê
+            %br
+            “need”
+          %th
+            %i veidê
+            %br
+            “sell”
+          %th
+            %i chenoschî
+            %br
+            “recognize”
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "prels", "[ˈprɛlz]"
+          %td= form "debs", "[ˈdʲɛbz]"
+          %td= form "vîdéts", "[viː.ˈdʲɛts]"
+          %td= form "chenéscs", "[kə.ˈnʲɛsks]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "prélist", "[ˈpre.list]"
+          %td= form "débost", "[ˈdʲe.bost]"
+          %td= form "vîdést", "[viː.ˈdʲɛst]"
+          %td= form "chenéschist", "[kə.ˈnʲɛs.kist]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "prels", "[ˈprɛlz]"
+          %td= form "debs", "[ˈdʲɛbz]"
+          %td= form "vîdéts", "[viː.ˈdʲɛts]"
+          %td= form "chenéscs", "[kə.ˈnʲɛsks]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "prélrims", "[ˈprɛl.dimz]"
+          %td= form "débroms", "[ˈdʲe.bromz]"
+          %td= form "vîdréms", "[viː.ˈdrɛmz]"
+          %td= form "chenéscrims", "[kə.ˈnʲɛs.krimz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "prélrists", "[ˈprɛl.dists]"
+          %td= form "débrosts", "[ˈdʲe.brosts]"
+          %td= form "vîdrésts", "[viː.ˈdrɛsts]"
+          %td= form "chenéscrists", "[kə.ˈnʲɛs.krists]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "prélrî", "[ˈprɛl.diː]"
+          %td= form "débrô", "[ˈdʲe.brɔː]"
+          %td= form "vîdrê", "[viː.ˈdreə]"
+          %td= form "chenéscrî", "[kə.ˈnʲɛs.kriː]"
+
+    %p Each conjugation uses a different type of verb stem. Conjugations I and IV use the I-grade of the stem, due to the following theme vowel /i/ in most of the preterite endings. Conjugation II, which has the theme vowel /o/, uses the full grade. Conjugation III, which is ending-stressed in the preterite, uses the reduced grade throughout.
+    %p The preterite endings for all conjugations are 1Sg <i>-s</i>, 2Sg <i>-Vst</i>, 3Sg <i>-s</i>, 1Pl <i>-rVms</i>, 2Pl <i>-rVsts</i>, 3Pl <i>-V̂</i>, where <i>V</i> represents the conjugation's theme vowel. This theme vowel is /i/ in Conjugations I and IV, /o/ in Conjugation II, and /e/ in Conjugation III.
+    %p Note that Conjugation III features an augmented stem in the first and third persons singular, with the suffix *-ét- added after the verbal stem and before the preterite endings.
+
+  = section "Semi-Regular Forms" do
+    %p The Tunisian preterite has very few semi-regular forms. Only two subcategories apply.
+
+    = section "Stems Ending in /j/" do
+      %p Stem-final /j/ vocalizes to /i/, and then regular preterite endings are added. If stem-final [i] comes in contact with an ending beginning with [i], the two merge into a long vowel: <i>*teléféni-</i> + <i>-ist</i> → <i>teléfénîst</i> “you phoned/are about to phone”. With <i>teléfoniâ</i> “telephone”:
+      = render 'preterite_tense',
+        :verb          => {:tun => "teléfoniâ", :eng => "telephone"},
+        :forms         => %w(teléfénis teléfénîst teléfénis teléfénirims teléfénirists teléfénirî),
+        :pronunciation => %w(təl.ˈfe.nis təl.ˈfe.niːst təl.ˈfe.nis təl.ˈfe.ni.rimz təl.ˈfe.ni.rists təl.ˈfe.ni.riː)
+
+    = section "Stems Ending in /m/ or /n/" do
+      %p Stem-final /m/ and /n/ denasalize in the plural forms of the preterite, becoming /b/ and /d/ respectively. This results in the immediately-preceding vowel diphthongizing and acquiring a /j/ off-glide <em>prior</em> to applying I-ablaut; since diphthongs have no I-grade equivalent, this often gives the appearance of diphthongization instead of applying I-ablaut. Historically, this was because *mr and *nr clusters were disallowed, and an intervening stop was introduced, giving *mbr and *ndr; the nasals were subsequently elided.
+      %p In addition, stem-final /n/ (but not /m/) will elide to /j/ in the first and third person singular forms as well, again taking place before the application of I-ablaut.
+      %p Shown below are the conjugations of <i>cremâ</i> “call” (standard grade stem *cram-) and <i>chenâ</i> “eat” (standard grade stem *chên-):
+      = render 'preterite_tense',
+        :verb          => {:tun => "cremâ", :eng => "call"},
+        :forms         => %w(crems crémist crems craibrims craibrists craibrî),
+        :pronunciation => %w(ˈkrɛmz ˈkre.mist ˈkrɛmz ˈkraj.brimz ˈkraj.brists ˈkraj.briː)
+      = render 'preterite_tense',
+        :verb          => {:tun => "chenâ", :eng => "eat"},
+        :forms         => %w(cheis chinist cheis cheidrims cheidrists cheidrî),
+        :pronunciation => %w(ˈkejz ˈki.nist ˈkejz ˈkej.drimz ˈkei.drists ˈkej.driː)
+
+  = section "Irregular Forms" do
+    %p Latin had four types of irregularly-formed perfect stems (the predecessor of the Tunisian preterite). Of these, one (reduplication) was completely eliminated through analogical processes and another (vowel lengthening) disappeared through regular sound change. The two remaining class (waw perfects and sigmatic perfects) are the main source of modern irregular preterites. However, the distinction between these two classes has muddled, due to how both classes have historically influenced the regular preterites, and consequently modern Tunisian irregular preterites have features of both systems.
+    %p Irregular preterites occur only among Conjugation II and III verbs. They follow a special paradigm that combines aspects of the regular Conjugation II and III paradigms. There are two broad types, though they follow the same basic conjugation rules. Some, such as <i>diccê</i> “say”, <i>yscribê</i> “write”, and <i>iôccê</i> “arrive” have a preterite stem consisting of the regular verb stem + /s/: <i>*dics-</i>, <i>*yscrips-</i>, <i>*iôcs-</i>. Others, such as <i>ponê</i> “put”, <i>seitê</i> “feel”, and <i>tenê</i> “hold” actually replace the stem-final consonant with /s/ in the preterite: <i>*pos-</i>, <i>*seis-</i>, <i>tés-</i>.
+    %p The endings used by the first type are -Ø, -ost, -Ø, -roms, -rosts, -rô, all ending-stressed when applicable. The 1Sg and 3Sg endings are zero since the usual -s marker has been incorporated into the verb stem. In the plural forms, the stem-final /s/ will usually undergo metathesis with the immediately preceding consonant in order to avoid a -Csr- cluster.
+    %p The endings used by the second type as -s, -ost, -s, -roms, -rosts, -rô, all ending-stressed when applicable. Here the 1Sg and 3Sg endings are always explicitly marked orthographically, even though there is no difference in pronunciation. This is due to the fact that replacing the stem-final consonant with /s/ gives more of an appearance of suppletivism, so the regular preterite endings are applied as they would normally be, whereas the first type has more of an appearance of a stem where this /s/ has just been generalized, and thus is already present in the 1Sg and 3Sg forms.
+    %p In modern Tunisian, almost all verbs with irregular preterites may also be conjugated regularly, with the irregular forms typically having more of a literary or formal feel. In colloquial usage, the first type of irregular preterite is almost always regularized, while the second type tends to be more resilient.
+    %p Shown below are the preterite conjugations, both regular and irregular, of four verbs. <i>Diccê</i> and <i>yscribê</i> represent the first type, while <i>ponê</i> and <i>tenê</i> represent the second type.
+    = render 'preterite_tense',
+      :verb          => {:tun => "diccê", :eng => "say"},
+      :forms         => %w(dics decsost dics descroms descrosts descrô),
+      :pronunciation => %w(ˈdʲiks dək.ˈsost ˈdʲiks dəs.ˈkromz dəs.ˈkrosts dəs.ˈkrɔə),
+      :forms_alt         => %w(dics dicost dics dicroms dicrosts dicrô),
+      :pronunciation_alt => %w(ˈdʲiks ˈdʲi.kost ˈdʲiks ˈdʲi.kromz ˈdʲi.krosts ˈdʲi.krɔː)
+    = render 'preterite_tense',
+      :verb          => {:tun => "yscribê", :eng => "write"},
+      :forms         => %w(yscrips yscrepsost yscrips yscresproms yscresprosts yscresprô),
+      :pronunciation => %w(ˈis.krips is.krəp.ˈsost ˈis.krips is.krəs.ˈpromz is.krəs.ˈprosts is.krəs.ˈprɔə),
+      :forms_alt         => %w(yscribs yscribost yscribs yscribroms yscribrosts yscribrô),
+      :pronunciation_alt => %w(ˈis.krips ˈis.kri.bost ˈis.krips ˈis.kri.bromz ˈis.kri.brosts ˈis.kri.brɔː)
+    = render 'preterite_tense',
+      :verb          => {:tun => "ponê", :eng => "put"},
+      :forms         => %w(poss pesost poss pesroms pesrosts pesrô),
+      :pronunciation => %w(ˈpos pə.ˈsost ˈpos pəs.ˈromz pəs.ˈrosts pəs.ˈrɔə),
+      :forms_alt         => %w(penéts penést penéts peidréms peidrésts peidrê),
+      :pronunciation_alt => %w(pə.ˈnʲɛts pə.ˈnʲɛst pə.ˈnʲɛts pej.ˈdrɛmz pej.ˈdrɛsts pej.ˈdreə)
+    = render 'preterite_tense',
+      :verb          => {:tun => "tenê", :eng => "hold"},
+      :forms         => %w(tess tesost tess tesroms tesrosts tesrô),
+      :pronunciation => %w(ˈtʲɛs tə.ˈsost ˈtʲɛs təs.ˈromz təs.ˈrosts təs.ˈrɔə),
+      :forms_alt         => %w(teis tinost teis teidroms teidrosts teidrô),
+      :pronunciation_alt => %w(ˈtʲejz ˈtʲi.nost ˈtʲejz ˈtʲej.dromz ˈtʲej.drosts ˈtʲej.drɔː)
+
+    %p A handful of verbs have truly irregular preterite stems with no option for regular forms.
+
+= section "The Future Tenses" do
+  %p Tunisian has two future tenses, a synthetic form (typically called Future I) and an analytic form (typically called Future II). The synthetic future is almost completely absent in colloquial usage, and is mostly confined to higher registers and the literary standard.
+
+  = section "Regular Forms" do
+    %p The Future I is formed identically across all four conjugation classes. It consists of the full grade stem plus the suffixes -rai, -rais, -rai, -rms, -rts, -rê.
+    %table
+      %thead
+        %tr
+          %th
+          %th I
+          %th II
+          %th III
+          %th IV
+        %tr
+          %th
+          %td
+            %i prelâ
+            %br
+            “speak”
+          %td
+            %i debê
+            %br
+            “need”
+          %td
+            %i veidê
+            %br
+            “sell”
+          %td
+            %i chenoschî
+            %br
+            “recognize
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "pralrai", "[ˈpraːl.daj]"
+          %td= form "débrai", "[ˈdʲe.braj]"
+          %td= form "veidrai", "[ˈvej.draj]"
+          %td= form "chenoscrai", "kə.ˈnos.kraj]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "pralrais", "[ˈpraːl.dajz]"
+          %td= form "débrais", "[ˈdʲe.brajz]"
+          %td= form "veidrais", "[ˈvej.drajz]"
+          %td= form "chenoscrais", "[kə.ˈnos.krajz]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "pralrai", "[ˈpraːl.daj]"
+          %td= form "débrai", "[ˈdʲe.braj]"
+          %td= form "veidrai", "[ˈvej.draj]"
+          %td= form "chenoscrai", "[kə.ˈnos.kraj]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "pralrms", "[ˈpraːl.dɪmz]"
+          %td= form "débrms", "[ˈdʲe.bɪrmz]"
+          %td= form "veidrms", "[ˈvej.dɪrmz]"
+          %td= form "chenoscrms", "[kə.ˈnos.kɪrmz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "pralrts", "[ˈpraːl.dɪts]"
+          %td= form "débrts", "[ˈdʲe.bɪrts]"
+          %td= form "veidrts", "[ˈvej.dɪrts]"
+          %td= form "chenoscrts", "[kə.ˈnos.kɪrts]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "pralrê", "[ˈpraːl.deː]"
+          %td= form "débrê", "[ˈdʲe.breː]"
+          %td= form "veidrê", "[ˈvej.dreː]"
+          %td= form "chenoscrê", "[kə.ˈnos.kreː]"
+
+    %p The Future II consists of an auxiliary verb, the definite article <i>il</i> (singular subject; <i>l-</i> before a vowel) or <i>ls</i> (plural subject, pronounced [uz]), and the singular or plural infinitive of the main verb. The auxiliary marks person and number, though has very irregular conjugation: <i>viuc</i>, <i>vucs</i>, <i>vuc</i>, <i>vumsc</i>, <i>vutsc</i>, <i>vuct</i>. In colloquial usage, the form <i>vûsc</i> has been generalized to all plural forms as well as the second person singular, yielding the following forms: <i>viuc</i>, <i>vûsc</i>, <i>vuc</i>, <i>vûsc</i>, <i>vûsc</i>, <i>vûsc</i>.
+    %table
+      %thead
+        %tr
+          %th
+          %th I
+          %th II
+          %th III
+          %th IV
+        %tr
+          %th
+          %td
+            %i prelâ
+            %br
+            “speak”
+          %td
+            %i debê
+            %br
+            “need”
+          %td
+            %i veidê
+            %br
+            “sell”
+          %td
+            %i chenoschî
+            %br
+            “recognize”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "viuc il prelâ", "[ˈvjuk il prə.ˈlaː]"
+          %td= form "viuc il debê", "[ˈvjuk il də.ˈbeə]"
+          %td= form "viuc il veidê", "[ˈvjuk il ˈvej.deː]"
+          %td= form "viuc il chenoschî", "[ˈvjuk il kə.ˈnos.kiː]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "vucs il prelâ", "[ˈvuks il prə.ˈlaː]"
+          %td= form "vucs il debê", "[ˈvuks il də.ˈbeə]"
+          %td= form "vucs il veidê", "[ˈvuks il ˈvej.deː]"
+          %td= form "vucs il chenoschî", "[ˈvuks il kə.ˈnos.kiː]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "vuc il prelâ", "[ˈvuk il prə.ˈlaː]"
+          %td= form "vuc il debê", "[ˈvuk il də.ˈbeə]"
+          %td= form "vuc il veidê", "[ˈvuk il ˈvej.deː]"
+          %td= form "vuc il chenoschî", "[ˈvuk il kə.ˈnos.kiː]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "vumsc ls pralnes", "[ˈvumsk us ˈpraːl.nəs]"
+          %td= form "vumsc ls débnes", "[ˈvumsk uz ˈdʲɛb.nəs]"
+          %td= form "vumsc ls veidnes", "[ˈvumsk uz ˈvejd.nəs]"
+          %td= form "vumsc ls chenoscnes", "[ˈvumsk us kə.ˈnosk.nəs]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "vutsc ls pralnes", "[ˈvutsk us ˈpraːl.nəs]"
+          %td= form "vutsc ls débnes", "[ˈvutsk uz ˈdʲɛb.nəs]"
+          %td= form "vutsc ls veidnes", "[ˈvutsk uz ˈvejd.nəs]"
+          %td= form "vutsc ls chenoscnes", "[ˈvutsk us kə.ˈnosk.nəs]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "vuct ls pralnes", "[ˈvukt us ˈpraːl.nəs]"
+          %td= form "vuct ls débnes", "[ˈvukt uz ˈdʲɛb.nəs]"
+          %td= form "vuct ls veidnes", "[ˈvukt uz ˈvejd.nəs]"
+          %td= form "vuct ls chenoscnes", "[ˈvukt us kə.ˈnosk.nəs]"
+
+  = section "Semi-Regular Forms" do
+    %p Only Future I poses an issue with semi-regular and irregular verbs, since Future II is regularly formed from the infinitive. For the most part, the semi-regular Future I forms mirror those of the preterite.
+
+    = section "Stems Ending in /j/" do
+      %p Stem-final /j/ vocalizes to /i/ in the Future I. In addition, the 1Pl and 2Pl endings become pleophonic, realized as <i>-rims</i> and <i>-rits</i> rather than <i>-rms</i> and <i>-rts</i>.
+      = render 'future_tense',
+        :verb          => {:tun => "teléfoniâ", :eng => "telephone"},
+        :forms         => %w(teléfonirai teléfonirais teléfonirai teléfonirims teléfonirits teléfonirê),
+        :pronunciation => %w(təl.ˈfɔ.ni.raj təl.ˈfɔ.ni.rajz təl.ˈfɔ.ni.raj təl.ˈfɔ.ni.rimz təl.ˈfɔ.ni.rits təl.ˈfɔ.ni.reː)
+
+    = section "Stems Ending in /m/ or /n/" do
+      %p Stem-final /m/ and /n/ denasalize in the Future I, becoming /b/ and /d/ respectively. The vowel immediately preceding it acquires a /j/ off-glide. As in the preterite, this is due to historical *mr/*nr becoming *mbr/*ndr, with subsequent weakening of the nasal element.
+      = render 'future_tense',
+        :verb          => {:tun => "cremâ", :eng => "call"},
+        :forms         => %w(craibrai craibrais craibrai craibrms craibrts craibrê),
+        :pronunciation => %w(ˈkraj.braj ˈkraj.brajz ˈkraj.braj ˈkraj.bɪrmz ˈkraj.bɪrts ˈkraj.breː)
+      = render 'future_tense',
+        :verb          => {:tun => "chenâ", :eng => "eat"},
+        :forms         => %w(cheidrai cheidrais cheidrai cheidrms cheidrts cheidrê),
+        :pronunciation => %w(ˈkej.draj ˈkej.drajz ˈkej.draj ˈkej.dɪrmz ˈkej.dɪrts ˈkej.dreː)
+
+  = section "Irregular Forms" do
+    %p Four verbs have irregular Future I forms: <i>ystâ</i> “be”, <i>loâ</i> “take”, <i>unî</i> “go”, and <i>ebê</i> “have”. All four add regular endings to an irregular stem.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 5} Tunisian Irregular Future Tense
+        %tr
+          %th
+          %td
+            %i ystâ
+            %br
+            “be”
+          %td
+            %i loâ
+            %br
+            “take”
+          %td
+            %i unî
+            %br
+            “go”
+          %td
+            %i ebê
+            %br
+            “have”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "irai", "[ˈi.raj]"
+          %td= form "lurai", "[ˈlu.raj]"
+          %td= form "vêrai", "[ˈveə.raj]"
+          %td= form "ibrai", "[ˈi.braj]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "irais", "[ˈi.rajz]"
+          %td= form "lurais", "[ˈlu.rajz]"
+          %td= form "vêrais", "[ˈveə.rajz]"
+          %td= form "ibrais", "[ˈi.brajz]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "irai", "[ˈi.raj]"
+          %td= form "lurai", "[ˈlu.raj]"
+          %td= form "vêrai", "[ˈveə.raj]"
+          %td= form "ibrai", "[ˈi.braj]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "irims", "[ˈi.rimz]"
+          %td= form "ludrms", "[ˈlu.dɪrmz]"
+          %td= form "vêdrms", "[ˈveə.dɪrmz]"
+          %td= form "ibrms", "[ˈi.bɪrmz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "irits", "[ˈi.rits]"
+          %td= form "ludrts", "[ˈlu.dɪrts]"
+          %td= form "vêdrts", "[ˈveə.dɪrts]"
+          %td= form "ibrts", "[ˈi.bɪrts]"
+        </tr>
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "irê", "[ˈi.reː]"
+          %td= form "ludrê", "[ˈlu.dreː]"
+          %td= form "vêdrê", "[ˈveə.dreː]"
+          %td= form "ibrê", "[ˈi.breː]"
+
+= section "The Subjunctive Mood" do
+  %p Formal and literary registers of Tunisian have three tenses in the subjunctive mood: an analytic present subjunctive, and periphrastic past and future subjunctives. The past subjunctive consists of the present subjunctive of <i>ystâ</i> or <i>ebê</i> plus a participle (just like the perfect tense), while the future subjunctive consists of a special auxiliary verb, an article, and an infinitive (just like the Future II). The subjunctive is mostly absent in colloquial usage.
+
+  = section "Regular Forms" do
+    %p For most verbs, the behavior of the present subjunctive closely parallels that of the present indicative, and it is common for several verb forms to be identical in both moods. In fact, the only distinct endings are those for the 1Pl and 2Pl forms, with Conjugation I verbs taking <i>-éms</i> and <i>-éts</i> and all other verbs taking <i>-ams</i> and <i>-ats</i>, and for some verbs the 3Pl form (with <i>-ô</i> being used across all conjugations, rather than only Conjugation III). However, unlike the present indicative, all verbs share a single stress pattern with the 1Pl and 2Pl being ending-stressed and all other forms stem-stressed, and instead of the full grade on stem-stressed forms, the I-ablaut appears throughout. The contrast between Conjugations II, III, and IV is lost completely.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 5} Tunisian Regular Present Subjunctive Tense
+        %tr
+          %th
+          %th I
+          %th II
+          %th III
+          %th IV
+        %tr
+          %th
+          %td
+            %i prelâ
+            %br
+            “speak”
+          %td
+            %i debê
+            %br
+            “need”
+          %td
+            %i veidê
+            %br
+            “sell”
+          %td
+            %i chenoschî
+            %br
+            “recognize”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "prel", "[ˈprɛl]"
+          %td= form "dib", "[ˈdʲib]"
+          %td= form "veid", "[ˈvejd]"
+          %td= form "chenésc", "[kə.ˈnʲɛsk]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "prels", "[ˈprɛlz]"
+          %td= form "dibs", "[ˈdʲibz]"
+          %td= form "veids", "[ˈvejdz]"
+          %td= form "chenéscs", "[kə.ˈnʲɛsks]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "prel", "[ˈprɛl]"
+          %td= form "dib", "[ˈdʲib]"
+          %td= form "veid", "[ˈvejd]"
+          %td= form "chenésc", "[kə.ˈnʲɛsk]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "preléms", "[prə.ˈlɛmz]"
+          %td= form "debams", "[də.ˈbaːmz]"
+          %td= form "vîdams", "[vi.ˈdaːmz]"
+          %td= form "chenescams", "[kə.nəs.ˈkaːmz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "preléts", "[prə.ˈlɛts]"
+          %td= form "debats", "[də.ˈbaːts]"
+          %td= form "vîdats", "[viː.ˈdaːts]"
+          %td= form "chenescats", "[kə.nəs.ˈkaːts]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "prélê", "[ˈpre.leː]"
+          %td= form "dibê", "[ˈdʲi.beː]"
+          %td= form "veidê", "[ˈvej.deː]"
+          %td= form "chenéschê", "[kə.ˈnʲɛs.keː]"
+
+    %p The past subjunctive is always regular, and is formed following the same rules as the perfect indicative, with the exception that the auxiliary appears in the present subjunctive and cannot appear in a bound form. Shown below are the past subjunctive forms of the intransitive verb <i>unî</i> “go” and the transitive verb <i>yscribê</i> “write”:
+    %table
+      %thead
+        %tr
+          %th{:colspan => 3} Past Subjunctive
+        %tr
+          %th
+          %th <i>unî</i> “go”
+          %th <i>yscribê</i> “write”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "sî unit(e)", "[siː u.ˈnʲit(ə)]"
+          %td= form "ai yscrébt(e/s)", "[aj ˈis.krɛpt(ə/s)]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "sîs unit(e)", "[siːz u.ˈnʲit(ə)]"
+          %td= form "ais yscrébt(e/s)", "[ajz ˈis.krɛpt(ə/s)]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "sî unit(e)", "[siː u.ˈnʲit(ə)]"
+          %td= form "ae yscrébt(e/s)", "[aj ˈis.krɛpt(ə/s)]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "sims units", "[simz u.ˈnʲits]"
+          %td= form "iams yscrébt(e/s)", "[jamz ˈis.krɛpt(ə/s)]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "sits units", "[sits u.ˈnʲits]"
+          %td= form "iats yscrébt(e/s)", "[jats ˈis.krɛpt(ə/s)]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "siê units", "[sjeː u.ˈnʲits]"
+          %td= form "aiê yscrébt(e/s)", "[a.jeː ˈis.krɛpt(ə/s)]"
+
+    %p The future subjunctive is formed identically to the indicative Future II, but with a special subjunctive auxiliary. Much like the Future II, this auxiliary does not use regular verbal endings seen anywhere else in the language.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 3} Future Subjunctive
+        %tr
+          %th
+          %td
+            %i unî
+            %br
+            “go”
+          %td
+            %i yscribê
+            %br
+            “write”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "vîc l-unî", "[ˈviːk lu.ˈnʲiː]"
+          %td= form "vîc l-uscribê", "[ˈviːk ˈlus.kri.beː]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "viecs l-unî", "[ˈvjɛks lu.ˈnʲiː]"
+          %td= form "viecs l-uscribê", "[ˈvjɛks ˈlus.kri.beː]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "viec l-unî", "[ˈvjɛk lu.ˈnʲiː]"
+          %td= form "viec l-uscribê", "[ˈvjɛk ˈlus.kri.beː]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "uvémsc ls unes", "[u.ˈvɛmsk uz ˈu.nəs]"
+          %td= form "uvémsc ls yscribnes", "[u.ˈvɛmsk uz ˈis.krib.nəs]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "uvétsc ls unes", "[u.ˈvɛtsk uz ˈu.nəs]"
+          %td= form "uvétsc ls yscribnes", "[u.ˈvɛtsk uz ˈis.krib.nəs]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "viect ls unes", "[ˈvjɛkt uz ˈu.nəs]"
+          %td= form "viect ls yscribnes", "[ˈvjɛkt uz ˈis.krib.nəs]"
+
+  = section "Semi-Regular Forms" do
+    %p Just about every class of semi-regular verb in the present indicative also exists in the present subjunctive under much the same conditions. However, the subjunctive will not create new changes or consonant alternations that do not already exit in the present indicative; for instance, if the present indicative does not have a palatalization alternation, the present subjunctive also will not, even if the environment is correct for palatalization to take place.
+
+    = section "Stems Ending in /j/" do
+      %p Stem-final /j/ vocalizes as /ə/ in the first person singular and third person singular, and as /i/ in the second person singular. In all plural forms it remains consonantal, unlike the indicative present. With <i>źeliâ</i> “insult”:
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "źeliâ", :eng => "insult"},
+        :forms         => %w(źéle źélis źéle źeliéms źeliéts źéliê),
+        :pronunciation => %w(ˈðe.lə ˈðe.liz ˈðe.lə ðə.ˈljɛmz ðə.ˈljɛts ˈðe.ljeː)
+
+    = section "Stems Ending in /r/" do
+      %p As in the indicative present, stem-final /r/ disappears with compensatory lengthening when word-final, and acquires a pleophonic echo vowel when followed by a consonant.
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "çirê", :eng => "want"},
+        :forms         => %w(çî çiris çî çerams çerats çirê),
+        :pronunciation => %w(ˈʃiː ˈʃi.riz ˈʃiː ʃə.ˈraːmz ʃə.ˈraːts ˈʃi.reː)
+
+      %p Stems with a metathesizing /r/ behave as in the present tense, bearing in mind that the I-ablaut form *CVriC- appears whenever the stem is stressed.
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "dremî", :eng => "sleep"},
+        :forms         => %w(dorim dorims dorim dremams dremats dorimê),
+        :pronunciation => %w(ˈdɔ.rim ˈdɔ.rimz ˈdɔ.rim drə.ˈmaːmz drə.ˈmaːts ˈdɔ.ri.meː)
+
+    = section "Stems Ending in /n/" do
+      %p Stem-final /n/ weakens to /j/ when postvocalic, as in the indicative present.
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "viçenê", :eng => "see"},
+        :forms         => %w(viçî viçois viçî viçenams viçenats viçénê),
+        :pronunciation => %w(ˈvi.ʃiː ˈvi.ʃojz ˈvi.ʃiː vi.ʃə.ˈnaːmz vi.ʃə.ˈnaːts ˈvi.ʃe.neː)
+
+    = section "Stems Containing Velar + Front Vowel" do
+      %p Stems containing a velar + front vowel combination decline as in the present indicative.
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "chîtâ", :eng => "sing"},
+        :forms         => %w(cheit cheits cheit chîtéms chîtéts cheitê),
+        :pronunciation => %w(ˈkejt ˈkejts ˈkejt kiː.ˈtʲɛmz kiː.ˈtʲɛts ˈkej.təː)
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "glâ", :eng => "freeze"},
+        :forms         => %w(ghil ghels ghel glems glets ghélê),
+        :pronunciation => %w(ˈgil ˈgɛlz ˈgɛl ˈglɛmz ˈglɛts ˈge.leː)
+
+      %p Stem-final velars can be grouped into two subtypes. If the consonant undergoes palatalization in the present indicative, then it will also undergo palatalization in the present subjunctive in the same forms, even if the environment is not one that would normally trigger palatalization; <i>leçê</i> “shine” below demonstrates this class. On the other hand, if the consonant does not undergo any changes in the present indicative, then no palatalization will take place in the subjunctive; <i>crecâ</i> “try, attempt” demonstrates this class.
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "leçê", :eng => "shine"},
+        :forms         => %w(liuc liucs liuc leçams leçats liuccê),
+        :pronunciation => %w(ˈljuk ˈljuks ˈljuk lə.ˈʃaːmz lə.ˈʃaːts ˈlju.keː)
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "crecâ", :eng => "try"},
+        :forms         => %w(crec crecs crec creccéms creccéts créccê),
+        :pronunciation => %w(ˈkrɛk ˈkrɛks ˈkrɛk krə.ˈkɛmz krə.ˈkɛts ˈkre.keː)
+
+    = section "Stems Ending in Consonant Clusters" do
+      %p Stem-final consonant clusters behave the same way as in the present indicative. In particular, the expanded present-tense stems used by verbs with vowelless roots are the same in the present subjunctive. However, if the verb belongs to Conjugation III (and thus always has strong forms in the present indicative), it will undergo reduction in the subjunctive; compare present indicative <i>efécms</i> and present subjunctive <i>ifcams</i> “we cause”.
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "yspê", :eng => "taste"},
+        :forms         => %w(ysép yséps ysép yspams yspats ysépê),
+        :pronunciation => %w(ˈi.sɛp ˈi.sɛps ˈi.sɛp is.ˈpaːmz is.ˈpaːts ˈi.se.peː)
+      = render 'present_subjunctive_tense',
+        :verb          => {:tun => "ifchê", :eng => "cause"},
+        :forms         => %w(efic efics efic ifcams ifcats eficcê),
+        :pronunciation => %w(ˈe.fik ˈe.fiks ˈe.fik if.ˈkaːmz if.ˈkaːts ˈe.fi.keː)
+
+  = section "Irregular Forms" do
+    %p Several verbs have irregular subjunctive forms. Note that they appear to have mutually influenced each other, as can be seen in the first person/third person singular forms.
+    %table
+      %thead
+        %tr
+          %th{:colspan => 6} Tunisian Irregular Present Subjunctive Tense
+        %tr
+          %th
+          %td
+            %i ystâ
+            %br
+            “be”
+          %td
+            %i loâ
+            %br
+            “take”
+          %td
+            %i unî
+            %br
+            “go”
+          %td
+            %i ebê
+            %br
+            “have”
+          %td
+            %i yddâ
+            %br
+            “give”
+      %tbody
+        %tr
+          %th 1Sg <i>iô</i>
+          %td= form "sî", "[ˈsʲiː]"
+          %td= form "lî", "[ˈliː]"
+          %td= form "vî", "[ˈviː]"
+          %td= form "ai", "[ˈaj]"
+          %td= form "dî", "[ˈdʲiː]"
+        %tr
+          %th 2Sg <i>tu</i>
+          %td= form "sîs", "[ˈsʲiːz]"
+          %td= form "livs", "[ˈlivz]"
+          %td= form "veis", "[ˈvejz]"
+          %td= form "ais", "[ˈajz]"
+          %td= form "deds", "[ˈdʲɛdz]"
+        %tr
+          %th 3Sg <i>eu/ele</i>
+          %td= form "sî", "[ˈsʲiː]"
+          %td= form "lî", "[ˈliː]"
+          %td= form "vî", "[ˈviː]"
+          %td= form "ae", "[ˈaj]"
+          %td= form "dî", "[ˈdʲiː]"
+        %tr
+          %th 1Pl <i>nos</i>
+          %td= form "sims", "[ˈsʲimz]"
+          %td= form "loêms", "[ˈweəmz]"
+          %td= form "unams", "[u.ˈnaːmz]"
+          %td= form "iams", "[ˈjaːmz]"
+          %td= form "yddéms", "[id.ˈdʲɛmz]"
+        %tr
+          %th 2Pl <i>vos</i>
+          %td= form "sits", "[ˈsʲits]"
+          %td= form "loêts", "[ˈweəts]"
+          %td= form "unats", "[u.ˈnaːts]"
+          %td= form "iats", "[ˈjaːts]"
+          %td= form "yddéts", "[id.ˈdʲɛts]"
+        %tr
+          %th 3Pl <i>els</i>
+          %td= form "siê", "[ˈsjeə]"
+          %td= form "livê", "[ˈli.veː]"
+          %td= form "vinê", "[ˈvi.neː]"
+          %td= form "aiê", "[ˈaː.jeː]"
+          %td= form "dédê", "[ˈdʲe.deː]"
+
+= section "The Imperative Mood" do
+  %p The Tunisian imperative mood exists solely in the present tense, and only has second person forms. The singular consists of the bare strong grade stem with no endings; it is almost always identical with the third person singular of the present indicative, including verbs with semi-regular conjugations. The plural adds an unstressed <i>-it</i> to the singular; this suffix may cause the reappearance of stem-final consonants lost in the singular (e.g., /r/, /n/, /j/), but will never cause palatalization.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Tunisian Imperatives
+      %tr
+        %th
+        %th 2Sg
+        %th 2Pl
+    %tbody
+      %tr
+        %td <i>prelâ</i> “speak”
+        %td= form "pral!", "[ˈpraːl]"
+        %td= form "pralit!", "[ˈpraː.lit]"
+      %tr
+        %td <i>debê</i> “need”
+        %td= form "deb!", "[ˈdʲɛb]"
+        %td= form "débit!", "[ˈdʲe.bit]"
+      %tr
+        %td <i>veidê</i> “sell”
+        %td= form "veid!", "[ˈvejd]"
+        %td= form "veidit!", "[ˈvej.dit]"
+      %tr
+        %td <i>chenoschî</i> “recognize”
+        %td= form "chenosc!", "[kə.ˈnosk]"
+        %td= form "chenoschit!", "[kə.ˈnos.kit]"
+      %tr
+        %td <i>źeliâ</i> “insult”
+        %td= form "źale!", "[ˈðaː.lə]"
+        %td= form "źaliit!", "[ˈðaː.li.jit]"
+      %tr
+        %td <i>çirê</i> “want”
+        %td= form "çî!", "[ˈʃiː]"
+        %td= form "çirit!", "[ˈʃi.rit]"
+      %tr
+        %td <i>dremî</i> “sleep”
+        %td= form "dorom!", "[ˈdɔ.rom]"
+        %td= form "doromit!", "[ˈdɔ.rɔ.mit]"
+      %tr
+        %td <i>viçenê</i> “see”
+        %td= form "viçî!", "[ˈvi.ʃiː]"
+        %td= form "viçonit!", "[ˈvi.ʃɔ.nit]"
+      %tr
+        %td <i>chîtâ</i> “sing”
+        %td= form "cheit!", "[ˈkejt]"
+        %td= form "cheitit!", "[ˈkej.tit]"
+      %tr
+        %td <i>yspê</i> “taste”
+        %td= form "ysap!", "[ˈi.sʌp]"
+        %td= form "yspit!", "[ˈis.pit]"
+      %tr
+        %td <i>îtrâ</i> “enter”
+        %td= form "eitre!", "[ˈej.trə]"
+        %td= form "eitrit!", "[ˈej.trit]"
+
+  %p A few verbs have irregular imperative forms. Note that most of these are syncretic with the third person singular present subjunctive, rather than the present indicative. Several of these verbs have multiple possible imperative forms.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Tunisian Irregular Imperatives
+      %tr
+        %th
+        %th 2Sg
+        %th 2Pl
+    %tbody
+      %tr
+        %td <i>ystâ</i> “be”
+        %td= form "sî!", "[ˈsʲiː]"
+        %td= form "seît!", "[ˈsʲe.jit]"
+      %tr
+        %td <i>loâ</i> “take”
+        %td= form "lî!", "[ˈliː]"
+        %td= form "lévit! leît!", "[ˈle.vit, ˈle.jit]"
+      %tr
+        %td <i>unî</i> “go”
+        %td= form "vî!", "[ˈviː]"
+        %td= form "vénit, vît!", "[ˈve.nit, ˈviːt]"
+      %tr
+        %td <i>ebê</i> “have”
+        %td= form "ab!", "[ˈaːb]"
+        %td= form "abit!", "[ˈaː.bit]"
+      %tr
+        %td <i>yddâ</i> “give”
+        %td= form "dî! dâ! dad!", "[ˈdiː, ˈdaː, ˈdaːd]"
+        %td= form "dadit! daît!", "[ˈdaː.dit, ˈdaː.jit]"
+
+= section "Participles" do
+  %p Tunisian verbs can form two participles: a present active and a past passive. These forms are morphologically adjectives, showing gender and number agreement like any other adjective, but retain a few distinctly verbal qualities such as the ability to take direct objects. These syntactic features will be discussed in more detail later.
+  %p The present active participle is generally quite regularly formed. The masculine singular (i.e., the simplest form) consists of the weak-grade verbal stem plus the suffix <i>-eit</i>. This suffix is always stressed. If the stem ends in a velar consonant and undergoes palatalization in the present tense, then palatalization will occur in the present participle as well.
+  %p The past passive participle in more complicated in formation. The basic suffixes are <i>-ast</i> for Conjugation I, <i>-ost</i> for Conjugations II and III, and <i>-ist</i> for Conjugation IV. In Conjugation III, the root is strong-grade and stressed; everywhere else, the root is weak-grade and the ending is stressed. The suffix <i>-ist</i> always triggers palatalization of stem-final velars, with <i>-sc-</i> in addition becoming <i>-ç-</i>. These regular suffixes describe the vast majority of Tunisian verbs, and for historical reasons are often known as weak participles.
+  %p All verbs have both participles. Even intransitive verbs, which cannot normally appear in the passive voice, have past passive participles, since they are required to form the perfect tense.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Tunisian Regular and Weak Participles
+      %tr
+        %th
+        %th Present
+        %th Past
+    %tbody
+      %tr
+        %td <i>prelâ</i> “speak”
+        %td= form "preleit", "[prə.ˈlejt]"
+        %td= form "prelast", "[prə.ˈlaːst]"
+      %tr
+        %td <i>debê</i> “need”
+        %td= form "debeit", "[də.ˈbejt]"
+        %td= form "debost", "[də.ˈbost]"
+      %tr
+        %td <i>veidê</i> “sell”
+        %td= form "vîdeit", "[viː.ˈdʲejt]"
+        %td= form "veidost", "[ˈvej.dost]"
+      %tr
+        %td <i>chenoschî</i> “recognize”
+        %td= form "chenescheit", "[kə.nəs.ˈkejt]"
+        %td= form "cheneçist", "[kə.nə.ˈʃist]"
+      %tr
+        %td <i>źeliâ</i> “insult”
+        %td= form "źelieit", "[ðə.ˈljejt]"
+        %td= form "źeliast", "[ðə.ˈljaːst]"
+      %tr
+        %td <i>çirê</i> “want”
+        %td= form "çereit", "[ʃə.ˈrejt]"
+        %td= form "çirost", "[ˈʃi.rost]"
+      %tr
+        %td <i>dremî</i> “sleep”
+        %td= form "dremeit", "[drə.ˈmejt]"
+        %td= form "dremist", "[drə.ˈmist]"
+      %tr
+        %td <i>viçenê</i> “see”
+        %td= form "viçeneit", "[vi.ʃə.ˈnʲejt]"
+        %td= form "viçenost", "[vi.ʃə.ˈnost]"
+      %tr
+        %td <i>chîtâ</i> “sing”
+        %td= form "chîteit", "[kiː.ˈtʲejt]"
+        %td= form "chîtast", "[kiː.ˈtaːst]"
+      %tr
+        %td <i>yspê</i> “taste”
+        %td= form "yspeit", "[is.ˈpejt]"
+        %td= form "yspost", "[ˈis.post]"
+      %tr
+        %td <i>îtrâ</i> “enter”
+        %td= form "îtreit", "[iː.ˈtrejt]"
+        %td= form "îtrast", "[iː.ˈtraːst]"
+
+  %p Tunisian also has a number of strong (irregular) passive participles, all belonging to Conjugation II and III verbs. Their unifying feature is that the participle-forming suffix is added directly to the verbal stem with no intervening vowel, which may trigger other irregularities. There is a strong, but not absolute, correlation between verbs that have strong past passive participles and irregular preterites. As in the preterite, there are two subclasses: some verbs simply add <i>-t</i> (not <i>-st</i>!) directly to the strong-grade stem, and others first replace the stem-final consonant with /s/ before adding <i>-t</i>. Unlike the preterite, verbs with strong participles do not have the option of using regularized weak forms instead.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Tunisian Irregular and Strong Participles
+      %tr
+        %th
+        %th Present
+        %th Past
+    %tbody
+      %tr
+        %td <i>capê</i> “understand”
+        %td= form "chepeit", "[kə.ˈpejt]"
+        %td= form "chept", "[ˈkɛpt]"
+      %tr
+        %td <i>crudê</i> “close”
+        %td= form "credeit", "[krə.ˈdʲejt]"
+        %td= form "crust", "[ˈkrust]"
+      %tr
+        %td <i>diccê</i> “say”
+        %td= form "decceit", "[də.ˈkejt]"
+        %td= form "dict", "[ˈdʲi.kɪt]"
+      %tr
+        %td <i>faccê</i> “make, do”
+        %td= form "fecceit", "[fə.kejt]"
+        %td= form "fect", "[ˈfɛ.kɪt]"
+      %tr
+        %td <i>iôccê</i> “arrive”
+        %td= form "iôcceit", "[jɔː.ˈkejt]"
+        %td= form "iôct", "[ˈjɔə.kɪt]"
+      %tr
+        %td <i>iprê</i> “open”
+        %td= form "ipreit", "[i.ˈprejt]"
+        %td= form "iprit", "[ˈi.prit]"
+      %tr
+        %td <i>yscribê</i> “write”
+        %td= form "yscribeit", "[is.kri.ˈbejt]"
+        %td= form "yscrébt", "[ˈis.krɛpt]"
+      %tr
+        %td <i>léggê</i> “read”
+        %td= form "leggeit", "[lə.ˈgejt]"
+        %td= form "lect", "[ˈlɛ.kɪt]"
+      %tr
+        %td <i>ys-morê</i> “die”
+        %td= form "ys-mereit", "[is.mə.ˈrejt]"
+        %td= form "morot", "[ˈmɔ.rot]"
+      %tr
+        %td <i>ponê</i> “put”
+        %td= form "peneit", "[pə.ˈnʲejt]"
+        %td= form "post", "[ˈpost]"
+      %tr
+        %td <i>rompê</i> “break”
+        %td= form "rempeit", "[rəm.ˈpejt]"
+        %td= form "ropt", "[ˈro.pɪt]"
+      %tr
+        %td <i>seitê</i> “feel”
+        %td= form "sîteit", "[siː.ˈtʲejt]"
+        %td= form "seist", "[ˈsʲejst]"
+      %tr
+        %td <i>tenê</i> “hold”
+        %td= form "teneit", "[tə.ˈnʲejt]"
+        %td= form "test", "[ˈtʲɛst]"
+      %tr
+        %td <i>veiccê</i> “win”
+        %td= form "vîcceit", "[viː.ˈkejt]"
+        %td= form "vect", "[ˈvɛ.kɪt]"
+
+  %p Prefixed derivatives of verbs with strong participles themselves have strong participles: <i>veiccê</i> “win” → <i>cheveiccê</i> “convince” → <i>chevéct</i> “convinced”, <i>capê</i> “understand” → <i>rçipê</i> “receive” → <i>rçipt</i> “received”.
+  %p The verbs that tend to be irregular throughout the language—verbs like “be”, “go”, “give”, etc.—actually tend to have fairly regular participles.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Tunisian Participles
+      %tr
+        %th
+        %th Present
+        %th Past
+    %tbody
+      %tr
+        %td <i>ystâ</i> “be”
+        %td= form "ysteit", "[is.ˈtʲejt]"
+        %td= form "ystast", "[is.ˈtaːst]"
+      %tr
+        %td <i>loâ</i> “take”
+        %td= form "loêit", "[ˈwejt]"
+        %td= form "levast", "[lə.ˈvaːst]"
+      %tr
+        %td <i>unî</i> “go”
+        %td= form "uneit", "[u.ˈnʲejt]"
+        %td= form "unist", "[u.ˈnʲist]"
+      %tr
+        %td <i>ebê</i> “have”
+        %td= form "ebeit", "[e.ˈbejt]"
+        %td= form "abost", "[ˈaː.bost]"
+      %tr
+        %td <i>yddâ</i> “give”
+        %td= form "deit", "[ˈdʲejt]"
+        %td= form "dast", "[ˈdaːst]"
+
+= section "Negation" do
+  %p For most verbs, negation is handled by a circumfix consisting of the prefixed clitic <i>n-</i>/<i>m-</i>/<i>no-</i> and the particle <i>mî</i>/<i>mic</i>. The prefixed element always comes at the absolute beginning of the verb phrase, attaching itself to whatever word (whether verb or clitic pronoun) comes first. The particle behaves more like an unbound adverb; its most neutral position is at the end of the verb complex (after any clitics or participles, but before secondary infinitives), but may also appear at the beginning or end of the clause. The details of word order will be discussed later.
+  %p The prefixed negative clitic takes one of three forms, depending on the following element. If it is attached directly to the verb and the verb begins with /p/ or /b/, it takes the form <i>m-</i>, pronounced [ɪm]: <i>m-pet mî il diccê</i> [ɪm.ˈpɛt miː il ˈdʲi.keː] “I cannot say”. If it is attached directly to the verb and the verb begins with any other sound, it takes the form <i>n-</i>, pronounced [ɪn] before a consonant and [n] before a vowel: <i>n-viv mî îç</i> [ɪn.ˈviv miː ˈiːʃ] “I don't live here”, <i>n-ische mî</i> [ˈnʲis.kə miː] “I don't know”. The form <i>no-</i> is used when the clitic is followed by yet another clitic: <i>no-t chenésc mî</i> [not kə.ˈnʲɛsk miː] “I don't know/recognize you”.
+  %p The negative particle has two forms, a bound form <i>mî</i> and an unbound form <i>mîc</i>. The bound form is used whenever the particle appears in its default position at the end of the verb complex, and the unbound form in all other positions, although there is some variation in clause-final position: <i>n-dics mî icf!</i> [ɪn.ˈdʲiks miː ˈik.ɪf] “I didn't say that”, <i>mic n-dics icf!</i> [ˈmik ɪn.ˈdʲiks ˈik.ɪf] “I did <em>not</em> say that!”.
+  %p The future auxiliaries (indicative and subjunctive) have irregular negative forms. The initial /v/ changes to /b/, and thus the prefixed negative clitic is always <i>m-</i>: <i>viuc il prelâ</i> [ˈvjuk lil prə.ˈlaː] “I will speak”, <i>m-biuc mî prelâ</i> [ɪm.ˈbjuk miː prə.ˈlaː] “I will not speak”.
+
+= section "The Passive Voice" do
+  %p Tunisian forms passives with the clitic <i>s-</i> (before a vowel) or <i>ys-</i> (before a consonant) attached to the otherwise regularly-conjugated verb: <i>s-iprê</i> [ˈsʲi.preː] “be opened”, <i>ys-léggê</i> [ˈis.le.geː] “be read”. In constructions with multiple or auxiliary verbs, the clitic attaches to either the first or second verb according to specific rules that will be outlined later. This clitic is considered part of the citation form of the verb. When added to words beginning with the letter <i>y</i> (representing a historic epenthetic vowel), this vowel converts to <i>u</i>: <i>s-uscribê</i> [ˈsus.kri.beː] “be written”.
+  %p Old Tunisian could also form passives using the verb <i>ystâ</i> “be” plus a passive participle, but this is no longer idiomatic outside of certain fixed expressions.
+  %p This same construction is used to form reflexive verbs, except that reflexive verbs also entail a special derived reflexive stem, to be discussed later in Derivational Morphology: <i>levâ</i> [lə.ˈvaː] “to wash”, <i>s-îlvâ</i> [ˈsʲiːl.vaː] “to wash oneself, bathe”.
+
+%section.footnotes
+  = footnote do
+    Note that while Conjugation III and IV verbs typically have infinitives in the full grade, vowelless stems always have infinitives in the reduced grade. Thus, the infinitive is <i>ifchê</i> “to cause”, not <i>*eféccê</i>.

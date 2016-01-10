@@ -4,9 +4,10 @@ module Grammars
     before_filter :set_context
 
     @@pages = [
-      {:index => 1, :doc => 'background',  :title => 'Background' },
-      {:index => 2, :doc => 'phonology',   :title => 'Phonology'  },
-      {:index => 3, :doc => 'orthography', :title => 'Orthography'}
+      {:index => 1, :doc => 'background',  :title => 'Background'       },
+      {:index => 2, :doc => 'phonology',   :title => 'Phonology'        },
+      {:index => 3, :doc => 'orthography', :title => 'Orthography'      },
+      {:index => 4, :doc => 'verbs',       :title => 'Verbal Morphology'}
     ]
 
     def index

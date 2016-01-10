@@ -27,5 +27,13 @@ module Grammars
         end
       end
     end
+
+    def form(word, pronunciation)
+      if word
+        "<i>#{word}</i><br/>#{pronunciation}".html_safe
+      else
+        "&mdash;".html_safe
+      end
+    end
   end
 end
