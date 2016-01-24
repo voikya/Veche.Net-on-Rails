@@ -1,0 +1,32 @@
+- content_for :title, "veche.net — Unsupported Browser"
+- content_for :javascript_initializers do
+  :coffeescript
+    document.cookie = 'sawBrowserWarning=true'
+    $(document).ready ->
+      $('a.go-back').click -> history.back()
+
+#container.small
+  #title
+    = link_to root_path do
+      = image_tag 'title.png', :alt => "veche.net"
+
+  #content-box
+    = image_tag 'header_404.png', :class => 'header'
+    %h1 Unsupported Browser
+    .content
+      %p You are currently using a <em>very</em> outdated browser. Since this is a personal site, supporting old browsers takes a lot of additional work for a very small audience, so I've decided not to support versions of Internet Explorer prior to v10. Please upgrade your version of Internet Explorer, or use another browser.
+      %p If you wish, you may return to the previous page anyways by <a class="go-back">clicking this link</a>. The site may not work properly, however.
+      %ul.upgrade-options
+        %li
+          = icon 'edge'
+          = link_to "Microsoft Edge", "https://www.microsoft.com/en-us/windows/microsoft-edge"
+        %li
+          = icon 'chrome'
+          = link_to "Google Chrome", "https://www.google.com/chrome/"
+        %li
+          = icon 'firefox'
+          = link_to "Mozilla Firefox", "https://www.mozilla.org/en-US/firefox/desktop/"
+        %li
+          = icon 'safari'
+          = link_to "Apple Safari", "http://www.apple.com/safari/"
+      %p= link_to "#{icon 'arrow-left'} Return to Veche.Net".html_safe, root_path

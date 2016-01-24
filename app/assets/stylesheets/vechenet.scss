@@ -32,8 +32,10 @@ a.contact {
 
 body.vechenet {
   font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: $vechenet-bg-dark;
   background: -moz-linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
   background: -webkit-linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
+  background: -ms-linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
   background: linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
   background-attachment: fixed;
   padding: 0;
@@ -171,6 +173,7 @@ body.vechenet {
     height: 100%;
     background: -moz-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
     background: -webkit-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    background: -ms-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
     background: linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -184,6 +187,7 @@ body.vechenet {
     &:hover {
       background: -moz-linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
       background: -webkit-linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
+      background: -ms-linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
       background: linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
 
       div.article-inner-wrapper {
@@ -204,7 +208,7 @@ body.vechenet {
 
     svg {
       width: 150%;
-      margin-left: 1px;
+      margin-left: 70px;
     }
   }
 
@@ -219,6 +223,7 @@ body.vechenet {
     border-bottom-left-radius: 25px;
     background: -moz-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
     background: -webkit-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    background: -ms-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
     background: linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
   }
 
@@ -415,6 +420,8 @@ body.vechenet {
     top: 20px;
     position: relative;
     cursor: pointer;
+
+    img { border: none; }
   }
 
   #content-box {

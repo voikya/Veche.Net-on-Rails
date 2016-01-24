@@ -117,6 +117,7 @@ VecheNet::Application.routes.draw do
 
   get '/404' => 'errors#not_found'
   get '/500' => 'errors#internal_error'
+  get '/unsupported' => 'errors#unsupported'
 
   root :to => 'static#index'
 end

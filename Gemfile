@@ -13,7 +13,7 @@ gem 'react-rails'
 # Libraries
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass', '~> 4.5.0'
 gem 'magnific-popup-rails'
 
 # Configuration

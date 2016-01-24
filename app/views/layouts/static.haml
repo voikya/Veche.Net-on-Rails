@@ -9,6 +9,18 @@
     = yield :javascript_initializers
     = csrf_meta_tags
     %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
+    /[if IE]
+      -# Not supporting IE<10
+      -# All versions ≥10 do not support conditional comments, so this will be ignored
+      :javascript
+        var ca = document.cookie.split(';');
+        var matched = false;
+        for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while(c.charAt(0) == ' ') c = c.substring(1);
+          if (c.indexOf('sawBrowserWarning=') == 0) matched = true;
+        }
+        if(!matched) window.location = '/unsupported';
   %body.vechenet
     = yield
 

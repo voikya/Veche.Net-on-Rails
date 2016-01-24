@@ -8,4 +8,7 @@ class ErrorsController < ActionController::Base
   def internal_error
     render :status => 500
   end
+
+  def unsupported
+  end
 end
