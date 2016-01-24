@@ -8,6 +8,7 @@
       = stylesheet_link_tag 'noscript', :media => 'all'
     = yield :javascript_initializers
     = csrf_meta_tags
+    = render 'layouts/favicon'
     %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
     /[if IE]
       -# Not supporting IE<10

@@ -6,6 +6,7 @@
     = javascript_include_tag 'application'
     = yield :javascript_initializers
     = csrf_meta_tags
+    = render 'layouts/favicon'
   %body.government{:class => @language.to_s}
     #content
       %header
