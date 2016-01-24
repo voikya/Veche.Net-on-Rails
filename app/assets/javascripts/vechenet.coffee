@@ -3,12 +3,14 @@ class VechenetHomepage
     @currentArticle = null
     @$navUp = $('a.nav-up')
     @$navDown = $('a.nav-down')
+    @scrollTimer = null
+    @scrollEvent = null
 
     $('article#languages .article-wrapper').on 'click', @setArticle.bind(@, 'languages')
     $('article#programming .article-wrapper').on 'click', @setArticle.bind(@, 'programming')
     $('article#about .article-wrapper').on 'click', @setArticle.bind(@, 'about')
     $('.article-contents-image, h1').on 'click', @unsetArticle.bind(@)
-    $('.article-contents-inner').scroll @scroll.bind(@)
+    $('.article-contents-inner').scroll @throttledScroll.bind(@)
     @$navUp.on 'click', @goToPreviousSection.bind(@)
     @$navDown.on 'click', @goToNextSection.bind(@)
 
@@ -32,6 +34,16 @@ class VechenetHomepage
         else
           break
       $current.attr('data-section')
+
+  throttledScroll: (evt) ->
+    # Store the most recent scroll event
+    @scrollEvent = evt
+    unless @scrollTimer?
+      # Throttle scroll event handler to 100ms
+      @scrollTimer = setTimeout((=>
+        @scrollTimer = null
+        @scroll(@scrollEvent)
+      ), 100)
 
   scroll: (evt) ->
     $block = $(evt.target)
