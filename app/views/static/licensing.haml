@@ -1,0 +1,26 @@
+- content_for :title, "veche.net — Licensing"
+
+#container.small.licensing
+  #title
+    = link_to root_path do
+      = image_tag 'title.png', :alt => "veche.net"
+
+  #content-box
+    = image_tag 'capitol-columns.png', :class => 'header'
+    %h1 Licensing Information
+    .content
+      %p This site makes use of some images, code, and other resources that are free to use but are subject to certain licensing restrictions, generally requiring attribution and sometimes forbidding commercial usage (which this site is not). Listed below are third-party resources that have been used on this site and their sources. Not all of the following require attribution, but I wish to provide it anyways in appreciation of the authors' work.
+      %h2 Fonts
+      %ul
+        %li= link_to "FontAwesome", "https://fortawesome.github.io/Font-Awesome/"
+        %li= link_to "Lato", "http://www.latofonts.com/"
+        %li= link_to "Silubr", "http://robert-pfeffer.net/schriftarten/nachgeladener_rahmen.html?silubr.html"
+      %h2 Images
+      %ul
+        %li= link_to "Codex Zographensis", "https://commons.wikimedia.org/wiki/File:ZographensisColour.jpg"
+        %li= link_to "Edwin Smith Papyrus", "https://commons.wikimedia.org/wiki/File:Edwin_Smith_Papyrus_v2.jpg"
+        %li= link_to "Idalion Decree", "https://commons.wikimedia.org/wiki/File:Cabinet_des_M%C3%A9dailes,_Paris_-_Idalion_Decree.jpg"
+        %li= link_to "Kultigin Monument", "https://commons.wikimedia.org/wiki/File:Kultigin_Monument_of_Orkhon_Inscriptions.jpeg"
+        %li= link_to "The Power of Words", "https://commons.wikimedia.org/wiki/File:Power_of_Words_by_Antonio_Litterio.jpg"
+
+      %p= link_to "#{icon 'arrow-left'} Return to Veche.Net".html_safe, root_path

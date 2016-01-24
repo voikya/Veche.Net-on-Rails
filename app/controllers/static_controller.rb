@@ -42,4 +42,7 @@ class StaticController < ApplicationController
       raise ActionController::RoutingError, 'Not Found'
     end
   end
+
+  def licensing
+  end
 end

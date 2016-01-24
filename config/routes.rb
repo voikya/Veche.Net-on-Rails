@@ -113,6 +113,7 @@ VecheNet::Application.routes.draw do
   get '/login' => 'static#login_form', :as => 'login'
   post '/login' => 'static#login'
   post '/downloads/:file' => 'static#download', :as => 'download', :constraints => { :file => /[\w\.]+/ }
+  get '/licensing' => 'static#licensing', :as => 'licensing'
 
   get '/404' => 'errors#not_found'
   get '/500' => 'errors#internal_error'
