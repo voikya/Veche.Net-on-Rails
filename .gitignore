@@ -21,6 +21,7 @@ config/database.yml
 config/newrelic.yml
 *.swp
 /utils
+/resources
 /vagrant/.vagrant
 .capistrano
 /config/deploy/production.rb

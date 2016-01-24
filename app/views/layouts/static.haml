@@ -4,11 +4,14 @@
     %title= yield :title
     = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
+    %noscript
+      = stylesheet_link_tag 'noscript', :media => 'all'
     = yield :javascript_initializers
     = csrf_meta_tags
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
   %body.vechenet
     = yield
 
     #footer
       © 2006-#{Time.now.year} Martin Posthumus
-      = link_to "Contact", contact_path, :class => 'contact'
+      = link_to "#{icon 'envelope-o'} Contact".html_safe, contact_path, :class => 'contact'

@@ -1,0 +1,30 @@
+body.vechenet {
+  main {
+    overflow-y: scroll;
+  }
+
+  article {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px 0px;
+  }
+
+  div.article-wrapper {
+    display: none;
+  }
+
+  div.article-contents {
+    -webkit-backface-visibility: inherit;
+    backface-visibility: inherit;
+    transform: none;
+    position: relative;
+  }
+
+  div.article-contents-inner {
+    left: 0;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+  }
+}

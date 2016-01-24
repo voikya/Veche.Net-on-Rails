@@ -1,112 +1,73 @@
 class VechenetHomepage
   constructor: ->
-    @$title = $('#title')
-    @nav = @loadNavigationElements()
-    @setCurrentView()
-    @isShifted = !!@currentView
-    @$title.on 'click', @clearCurrentView.bind(@)
+    @currentArticle = null
+    @$navUp = $('a.nav-up')
+    @$navDown = $('a.nav-down')
 
-  loadNavigationElements: ->
-    $navField = $('nav.buttonframe')
-    navigationElements = []
-    self = this
-    idx = 0
-    $('article').each ->
-      $article = $(@)
-      navigationElements.push(new NavigationElement($article, idx, $navField, self))
-      $article.addClass('hidden')
-      idx += 1
-    navigationElements
+    $('article#languages .article-wrapper').on 'click', @setArticle.bind(@, 'languages')
+    $('article#programming .article-wrapper').on 'click', @setArticle.bind(@, 'programming')
+    $('article#about .article-wrapper').on 'click', @setArticle.bind(@, 'about')
+    $('.article-contents-image, h1').on 'click', @unsetArticle.bind(@)
+    $('.article-contents-inner').scroll @scroll.bind(@)
+    @$navUp.on 'click', @goToPreviousSection.bind(@)
+    @$navDown.on 'click', @goToNextSection.bind(@)
 
-  setCurrentView: ->
-    @currentView = window.location.hash?.substring(1)
-    if @currentView
-      @$title.addClass 'shifted'
-      @isShifted = true
+  setArticle: (id, evt) ->
+    $('body').addClass "#{id}-selected"
+    $("##{id}").addClass 'flipped'
+    @currentArticle = id
+    @scroll($.Event 'scroll', target: $("##{id} .article-contents-inner")[0])
+
+  unsetArticle: (evt) ->
+    $('body').removeClass 'languages-selected programming-selected about-selected'
+    $('article').removeClass 'flipped'
+    @currentArticle = null
+
+  getCurrentSection: ->
+    if @currentArticle
+      $block = $("##{@currentArticle} .article-contents-inner")
+      for section in $block.find('section')
+        if !$current or $(section).position().top < $block.height() / 2
+          $current = $(section)
+        else
+          break
+      $current.attr('data-section')
+
+  scroll: (evt) ->
+    $block = $(evt.target)
+    scrollHeight = $block.scrollTop()
+    if scrollHeight is 0
+      @$navUp.addClass 'disabled'
     else
-      @$title.removeClass 'shifted'
-    wasFound = false
-    for nav in @nav
-      isCurrent = (@currentView == nav.id())
-      wasFound = (wasFound or isCurrent)
-      nav.setState (@currentView == nav.id()), wasFound
-
-  clearCurrentView: ->
-    window.location.hash = ''
-    if @isShifted
-      @isShifted = false
-      @setCurrentView()
-
-class NavigationElement
-  constructor: (@$target, @index, @$buttonLocation, @page) ->
-    @$wrapper = $('<div class="button-wrapper"></div>').appendTo(@$buttonLocation)
-    @$button = $('<div class="button"></div>').appendTo(@$wrapper)
-    $('<img/>').attr('src', @$target.attr('data-nav-button'))
-               .attr('title', @$target.attr('data-title'))
-               .appendTo(@$button)
-    @current = false
-    @$button.on 'mouseover', @mouseover.bind(@)
-    @$button.on 'mouseout', @mouseout.bind(@)
-    @$button.on 'click', @click.bind(@)
-
-  id: ->
-    @$target.attr('id')
-
-  mouseover: (event) ->
-    if @page.isShifted
-      @$wrapper.animate left: '-10px', 500
+      @$navUp.removeClass 'disabled'
+    if scrollHeight is $block[0].scrollHeight - $block.height()
+      @$navDown.addClass 'disabled'
     else
-      @$button.animate width: '350px', 500
+      @$navDown.removeClass 'disabled'
+    current = @getCurrentSection()
+    $block.closest('.article-contents').attr('data-current-section', current)
 
-  mouseout: (event) ->
-    if @page.isShifted
-      @$wrapper.animate left: '-310px', 500
+  goToPreviousSection: ->
+    previousSection = $("section[data-section=#{@getCurrentSection()}]").prev("section")
+    $contents = $("##{@currentArticle} .article-contents-inner")
+    if previousSection.length
+      scrollHeight = $contents.scrollTop()
+      prevSectionOffset = previousSection.position().top # Should be negative
+      $contents.scrollTop(scrollHeight + prevSectionOffset)
     else
-      @$button.animate width: '300px', 500
+      $contents.scrollTop 0
+    @scroll($.Event 'scroll', target: $contents[0])
 
-  click: (event) ->
-    id = @$target.attr('id')
-    @$target.removeAttr('id')
-    window.location.hash = "##{id}"
-    @$target.attr('id', id)
-    @page.setCurrentView()
-
-  setState: (isCurrent, afterCurrentElement) ->
-    oldState = @current
-    @current = isCurrent
-    if @page.isShifted
-      @shift(afterCurrentElement)
+  goToNextSection: ->
+    nextSection = $("section[data-section=#{@getCurrentSection()}]").next("section")
+    $contents = $("##{@currentArticle} .article-contents-inner")
+    if nextSection.length
+      scrollHeight = $contents.scrollTop()
+      nextSectionOffset = nextSection.position().top
+      $contents.scrollTop(scrollHeight + nextSectionOffset)
     else
-      @reset()
-    if @current == oldState
-      return
-    else
-      if @current
-        setTimeout( =>
-          @$target.fadeIn 500, => @$target.removeClass 'hidden'
-        , 500)
-      else
-        @$target.fadeOut 500, => @$target.addClass 'hidden'
-
-  shift: (afterCurrentElement)->
-    topOffset = ((@index - (if afterCurrentElement then 1 else 0)) * 110 + 50)
-    @$wrapper.animate(left: '-3000px', 500, =>
-      @$wrapper.fadeOut(0, =>
-        @$button.css('width', '350px')
-        @$wrapper.css(position: 'fixed', left: '-310px', top: "#{topOffset}px", 'z-index': 11)
-        unless @current
-          @$wrapper.fadeIn(400 * (@index + 1))
-      )
-    )
-
-  reset: ->
-    @$wrapper.fadeOut(400, =>
-      @$button.css('width', '300px')
-      @$wrapper.css(left: '-3000px', top: 0, position: 'relative')
-               .fadeIn(0)
-               .css(display: 'inline-block')
-               .animate(left: 0, 500)
-    )
+      $contents.scrollTop($contents[0].scrollHeight)
+    @scroll($.Event 'scroll', target: $contents[0])
 
 window.classes ?= {}
 window.classes.VechenetHomepage = VechenetHomepage

@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default :to => "republicofnovegrad@gmail.com", :from => "republicofnovegrad@gmail.com"
+  default :to => "martin@veche.net", :from => "martin@veche.net"
   layout 'mailer'
 
   def contact(subject, message, email)

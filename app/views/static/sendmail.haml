@@ -1,15 +1,13 @@
 - content_for :title, "veche.net — Contact"
 
-#container
-  #title.shifted
+#container.small
+  #title
     = link_to root_path do
       = image_tag 'title.png', :alt => "veche.net"
-  %nav.buttonframe
 
-  #articleset
-    %article
-      = image_tag 'header_contact.png', :class => 'header'
-      %h1 Contact
-      .content
-        %p Your message has been sent.
-        %p= link_to "Return to Veche.Net Main Page", root_path
+  #content-box
+    = image_tag 'header_contact.png', :class => 'header'
+    %h1 Contact
+    .content
+      %p Your message has been sent.
+      %p= link_to "Return to Veche.Net Main Page", root_path

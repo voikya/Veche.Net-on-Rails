@@ -26,6 +26,7 @@ gem 'RubySunrise'
 gem 'nokogiri'
 gem 'dropbox-sdk'
 gem 'whenever'
+gem 'inline_svg'
 
 # Monitoring
 gem 'newrelic_rpm'

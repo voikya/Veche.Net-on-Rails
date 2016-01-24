@@ -6,116 +6,133 @@
       new window.classes.VechenetHomepage()
 
 #container
-  #title= image_tag 'title.png', :alt => "veche.net"
-  %nav.buttonframe
+  %h1 veche.net
 
-  #articleset
-    %article{:id => "government", :data => {:title => "Government", :nav_button => image_path("tab_government.jpg")}}
-      = image_tag 'header_government.png', :class => 'header'
-      %h1 Government of the Republic of Novegrad
-      .content
-        %p The Republic of Novegrad is an alternative history ("althist")/fictional nation ("concountry") project, based on the premise that the medieval northern European Feudal Republic of Novegrad survived to the present day; in reality it was a merchant empire inhabited by Slavic and Finnic peoples up until it was annexed by an expanding Muscovy in the 15th century.
-        %h2 Links
-        %ul
-          %li
-            = link_to "Government of the Republic of Novegrad", government_index_path(:lang => :en)
-            — a mock homepage for the government of the modern-day nation
-          %li
-            = link_to "Government of the Republic of Novegrad (in Novegradian)", government_index_path(:lang => :nv)
-            — a work-in-progress translation of the above into Novegradian, the fictional official language of Novegrad
-          %li
-            = link_to "Novegrad FAQ", government_about_path(:lang => :en)
-            — a brief description of the nature and goals for this project and website
-        %h2 External Links
-        %ul
-          %li
-            = link_to "Novgorod Republic (Wikipedia)", 'http://en.wikipedia.org/wiki/Novgorod_Republic'
-            — for some background on the real nation that inspired this all
+  %a.nav-up
+    %i.fa.fa-chevron-up
+  %a.nav-down
+    %i.fa.fa-chevron-down
 
-    %article{:id => "novegradian", :data => {:title => "Novegradian", :nav_button => image_path("tab_novegradian.jpg")}}
-      = image_tag 'header_novegradian.png', :class => 'header'
-      %h1 The Novegradian Language
-      .content
-        %p Novegradian (#{t "новеградескей лизике", "novegrádeskei lizíke"}) is a finctional language ("conlang"), designed to be as realistic as possible. It is a Slavic language, derived from the reconstructed language known as Proto-Slavic, the ancestor of all of the other Slavic languages, including Russian, Polish, Serbian, and Bulgarian. It was inspired by and is partially based on the fragmentary documents surviving from the 11th–15th centuries containing what is now known as the Old Novgorodian Dialect, a highly divergent Slavic vernacular.
-        %h2 Links
-        %ul
-          %li
-            = link_to "Grammar of the Novegradian Language", novegradian_index_path
-            — the main index page to the online version of the grammar
-          %li
-            = render "download_form", :file => "novegradian_grammar_web.pdf", :label => "Grammar of the Novegradian Language (pdf)"
-            — a direct link to the current version of the grammar, a 3MB pdf e-book
-          %li
-            = link_to "Novegradian Lexicon", lexicon_path(:language => :novegradian)
-            — a searchable online dictionary of Novegradian, including declension charts and word etymologies
-        %h2 External Links
-        %ul
-          %li
-            = link_to "Old Novgorod dialect (Wikipedia)", 'http://en.wikipedia.org/wiki/Old_Novgorod_dialect'
-            — for some background on the real language spoken in medieval Novgorod
-          %li
-            = link_to "Birchbark Letter Photographs (University of Chicago)", 'http://slavic.uchicago.edu/archived/bblphotos.shtml'
-            — photographs of some of the real birchbark letters written in the Old Novgorodian dialect, as well as some other artifacts from the region
+  %main
+    %article#languages
+      .article-wrapper
+        .article-inner-wrapper
+          %h2 languages
+          = inline_svg 'gothic.svg'
+        .triangle
+      .article-contents
+        .article-contents-image(data-section='intro')
+        .article-contents-image(data-section='novegradian')
+        .article-contents-image(data-section='alashian')
+        .article-contents-image(data-section='ochets')
+        .article-contents-image(data-section='linguistics')
+        .article-contents-inner
+          %section(data-section='intro')
+            %h2 Languages and Linguistics
+            %p There is perhaps nothing else that has had as great an impact on the development of humankind as language. While many animal species possess communication, human speech has developed an effectively infinite productivity. This means that there is no concept that any given language is incapable of conveying, as each language is capable of freely expanding its vocabulary when needed. Similarly, human speech is no longer restricted to the immediate environment&mdash;we can tell others with great precision about things that happened long ago, far away, or even things that are entirely imaginary.
+            %p Nevertheless, although there are some universal traits of language, there is a great diversity in the way different languages construct the same ideas. Linguistics goes far beyond the formulation of rigid grammatical rules; it is the study of language as a continually-evolving medium.
+            %p The evolution of language has long fascinated me. The process is simultaneously very chaotic and random, yet governed by and large by well-understood patterns and tendencies. Over the span of a thousand years, a language can change to the point of being unrecognizable.
+            %p This section includes a few articles I've written on various topics in historical linguistics, as well as a number of experiments in constructed languages. These constructed languages are attempts to realistically derive new modern-day languages from real ancient languages using known linguistic principles. While fanciful to some extent, they also entail a great deal of research into the language family in question, neighboring languages, and the history of the region.
 
-    %article{:id => "ochets", :data => {:title => "Očets", :nav_button => image_path("tab_ochets.jpg")}}
-      = image_tag 'header_ochets.png', :class => 'header'
-      %h1 The Očets Language
-      .content
-        %p Očets (#{t "һочец сеие", "hočets seie"}) is a fictional language ("conlang") related to the Yeniseian language family, a nearly-extinct group of languages spoken in central Siberia that have recently gained some widespread attention in the linguistics community as possibly being the first demonstrated link between Old and New World languages, with strong evidence of a relationship with the Tlingit-Eyak-Athabaskan (or Na-Dené) family of western North America. Očets itself is intended to be a cousin of the Yeniseian languages, sharing a common ancestor but many centuries removed.
-        %p Očets exists in the same alternative timeline as Novegradian, and has been undergone extensive influence from the Novegradian language, as well as a number of Uralic, Turkic, and Iranian languages spoken or once spoken in the Ob River valley. It is an exercise in language contact and to some extent language death as well as general historical linguistics.
-        %p At present Očets is still undergoing development, and information will be added as it becomes available.
-        %h2 Links
-        %ul
-          %li
-            = link_to "Grammar of the Očets Language", ochets_index_path
-            — the main index page to the online version of the grammar
-        %h2 External Links
-        %ul
-          %li
-            = link_to "Yeniseian Languages (Wikipedia)", 'http://en.wikipedia.org/wiki/Yeniseian_languages'
-            — for some background on the Yeniseian family
+          %section(data-section='novegradian')
+            %h2 The Novegradian Language
+            %p Novegradian (#{t "новеградескей лизике", "novegrádeskei lizíke"}) is a fictional language ("conlang"), designed to be as realistic as possible. It is a Slavic language, derived from the reconstructed language known as Proto-Slavic, the ancestor of all of the other Slavic languages, including Russian, Polish, Serbian, and Bulgarian. It was inspired by and is partially based on the fragmentary documents surviving from the 11th–15th centuries containing what is now known as the Old Novgorodian Dialect, a highly divergent Slavic vernacular.
+            %h3 Links
+            %ul
+              %li
+                = link_to "Grammar of the Novegradian Language", novegradian_index_path
+                — the main index page to the online version of the grammar
+              %li
+                = render "download_form", :file => "novegradian_grammar_web.pdf", :label => "Grammar of the Novegradian Language (pdf)"
+                — a direct link to the current version of the grammar, a 3MB pdf e-book
+              %li
+                = link_to "Novegradian Lexicon", lexicon_path(:language => :novegradian)
+                — a searchable online dictionary of Novegradian, including declension charts and word etymologies
+              %li
+                = link_to "The Republic of Novegrad", government_index_path(:lang => :en)
+                — the homepage of the government of the fictional Republic of Novegrad, where Novegradian is spoken (note: this page is very old and unlikely to be updated; it is left for historical purposes)
+            %h3 External Links
+            %ul
+              %li
+                = link_to "Old Novgorod dialect (Wikipedia)", 'http://en.wikipedia.org/wiki/Old_Novgorod_dialect'
+                — for some background on the real language spoken in medieval Novgorod
+              %li
+                = link_to "Birchbark Letter Photographs (University of Chicago)", 'http://slavic.uchicago.edu/archived/bblphotos.shtml'
+                — photographs of some of the real birchbark letters written in the Old Novgorodian dialect, as well as some other artifacts from the region
 
-    %article{:id => "alashian", :data => {:title => "Alashian", :nav_button => image_path("tab_alashian.jpg")}}
-      = image_tag 'header_alashian.png', :class => 'header'
-      %h1 The Alashian Language
-      .content
-        %p Alashian (#{t "Αλλασούν Ναλασκιώ", "Hallasūn Nalaskyā"}) is a fictional language ("conlang") in the Semitic language family, closely related to such languages as Arabic and Hebrew. It is supposed to be spoken on part of the island of Cyprus, where over the centuries it has been significantly influenced by (in turn) Aramaic, Greek, Arabic, and Turkish.
-        %h2 Links
-        %ul
-          %li
-            = link_to "Grammar of the Alashian Language", alashian_index_path
-            — the main index page to the online version of the grammar
-          %li
-            = render "download_form", :file => "alashian_grammar_web.pdf", :label => "Grammar of the Alashian Language (pdf)"
-            — a direct link to the current version of the grammar, a 4MB pdf e-book
-          %li
-            = link_to "Alashian Lexicon", lexicon_path(:language => :alashian)
-            — a searchable online dictionary of Alashian, including listings by root and word etymologies
+          %section(data-section='alashian')
+            %h2 The Alashian Language
+            %p Alashian (#{t "Αλλασούν Ναλασκιώ", "Hallasūn Nalaskyā"}) is a fictional language ("conlang") in the Semitic language family, closely related to such languages as Arabic and Hebrew. It is supposed to be spoken on part of the island of Cyprus, where over the centuries it has been significantly influenced by (in turn) Aramaic, Greek, Arabic, and Turkish.
+            %h3 Links
+            %ul
+              %li
+                = link_to "Grammar of the Alashian Language", alashian_index_path
+                — the main index page to the online version of the grammar
+              %li
+                = render "download_form", :file => "alashian_grammar_web.pdf", :label => "Grammar of the Alashian Language (pdf)"
+                — a direct link to the current version of the grammar, a 4MB pdf e-book
+              %li
+                = link_to "Alashian Lexicon", lexicon_path(:language => :alashian)
+                — a searchable online dictionary of Alashian, including listings by root and word etymologies
 
-    %article{:id => "linguistics", :data => {:title => "Linguistics", :nav_button => image_path("tab_linguistics.jpg")}}
-      = image_tag 'header_linguistics.png', :class => 'header'
-      %h1 Linguistics
-      .content
-        %p This section contains various articles and other information related to real-world linguistics written by myself. For the most part my primary interests lie in the Slavic and Semitic languages, but I may at times write about other groups as well.
-        %h2 Links
-        %ul
-          %li= link_to "Language Contact in the Medieval East Baltic", linguistics_baltic_sprachbund_path
-          %li= link_to "The Development of Slavic Numeral Agreement", linguistics_slavic_numerals_path
-          %li= link_to "Verbs of Motion in the Russian Aspectual System", linguistics_verbs_of_motion_path
+          %section(data-section='ochets')
+            %h2 The Očets Language
+            %p Očets (#{t "һочец сеие", "hočets seie"}) is a fictional language ("conlang") related to the Yeniseian language family, a nearly-extinct group of languages spoken in central Siberia that have recently gained some widespread attention in the linguistics community as possibly being the first demonstrated link between Old and New World languages, with strong evidence of a relationship with the Tlingit-Eyak-Athabaskan (or Na-Dené) family of western North America. Očets itself is intended to be a cousin of the Yeniseian languages, sharing a common ancestor but many centuries removed.
+            %p Očets exists in the same alternative timeline as Novegradian, and has been undergone extensive influence from the Novegradian language, as well as a number of Uralic, Turkic, and Iranian languages spoken or once spoken in the Ob River valley. It is an exercise in language contact and to some extent language death as well as general historical linguistics.
+            %p At present Očets is still undergoing development, and information will be added as it becomes available.
+            %h3 Links
+            %ul
+              %li
+                = link_to "Grammar of the Očets Language", ochets_index_path
+                — the main index page to the online version of the grammar
+            %h3 External Links
+            %ul
+              %li
+                = link_to "Yeniseian Languages (Wikipedia)", 'http://en.wikipedia.org/wiki/Yeniseian_languages'
+                — for some background on the Yeniseian family
 
-    %article{:id => "programming", :data => {:title => "Programming", :nav_button => image_path("tab_programming.jpg")}}
-      = image_tag 'header_programming.png', :class => 'header'
-      %h1 Programming and Computer Science
-      .content
-        %p In addition to languages and linguistics, programming and web development have both been interests of mine for a long time. Recently I've been doing most of my work in Ruby (with a variety of frameworks, including Rails, Sinatra, and Hobbit) and JavaScript/CoffeeScript, but I also consider myself proficient in PHP, Python, and C, and have done some work in Java, Objective-C, and Haskell. Web development is my main interest, but I have done some tinkering in offline programs and mobile (particularly Android) development in my spare time as well.
-        %h2 Links
-        %ul
-          %li
-            = link_to "Profile", programming_profile_path
+          %section(data-section='linguistics')
+            %h2 Linguistics
+            %p This section contains various articles and other information related to real-world linguistics written by myself. For the most part my primary interests lie in the Slavic and Semitic languages, but I may at times write about other groups as well.
+            %h3 Links
+            %ul
+              %li= link_to "Language Contact in the Medieval East Baltic", linguistics_baltic_sprachbund_path
+              %li= link_to "The Development of Slavic Numeral Agreement", linguistics_slavic_numerals_path
+              %li= link_to "Verbs of Motion in the Russian Aspectual System", linguistics_verbs_of_motion_path
 
-    %article{:id => "about", :data => {:title => "About", :nav_button => image_path("tab_about.jpg")}}
-      = image_tag 'header_about.png', :class => 'header'
-      %h1 About
-      .content
-        %p I am a web and software developer living in Maryland. I studied Slavic Linguistics and Computer Science at the University of Chicago. Languages and linguistics have long been a passion of mine, as can be seen in the materials here on this site. I speak English and Russian, have extensively studied Spanish, Modern Hebrew, and Serbo-Croatian, and have also had some formal training in Georgian. From a more linguistics-oriented perspective, my main interests lie in Slavic, Semitic, Uralic, and Paleo-Siberian languages.
-        %p Veche.net is my personal site, first launched (albeit at a different domain) back in 2006. It is named for the historical Novgorod #{link_to "Veche", 'http://en.wikipedia.org/wiki/Veche'}, a quirky, unique, and quasi-democratic legislative body that governed the entirety of the Novgorodian Lands during their independence in the Middle Ages.
+
+    %article#programming
+      .article-wrapper
+        .article-inner-wrapper
+          %h2 programming
+          = inline_svg 'c.svg'
+        .triangle
+      .article-contents
+        .article-contents-image(data-section='programming')
+        .article-contents-inner
+          %section(data-section='programming')
+            %h2 Programming
+            %p I'm a full-stack web developer based in the Washington, DC area. Recently I've been doing most of my work in Ruby (with a variety of frameworks, including Rails and Sinatra, as well as straight Rack applications) and JavaScript/CoffeeScript, but I also consider myself proficient in PHP, Python, and C, and have done some work in Java, Objective-C, and Haskell. Web development is my main interest, but I have done some tinkering in offline programs and mobile (particularly Android) development in my spare time as well.
+            %p This site itself is a Ruby-on-Rails application, albeit somewhat of a heterogenosus one, since it incorporates multiple different projects and experiments that get updated at varying times.
+            %p This site's source is open and viewable on #{link_to "#{icon 'github'}Github (voikya/Veche.Net-on-Rails)".html_safe, "https://github.com/voikya/Veche.Net-on-Rails"}.
+            %h3 Links
+            %ul
+              %li= link_to "#{icon 'github'}voikya on GitHub".html_safe, "https://github.com/voikya"
+              %li= link_to "Programming Profile", programming_profile_path
+
+    %article#about
+      .article-wrapper
+        .article-inner-wrapper
+          %h2 about
+          = inline_svg 'icons.svg'
+        .triangle
+      .article-contents
+        .article-contents-image(data-section='about')
+        .article-contents-inner
+          %section(data-section='about')
+            %h2 About
+            %p I am a web and software developer living in Maryland, just outside Washington, DC. I studied Slavic Linguistics and Computer Science at the University of Chicago. Languages and linguistics have long been a passion of mine, as can be seen in the materials here on this site. I speak English and Russian, have extensively studied Spanish, Modern Hebrew, and Serbo-Croatian, and have also had some formal training in Georgian. From a more linguistics-oriented perspective, my main interests lie in the Slavic, Semitic, Uralic, and Paleo-Siberian languages.
+            %p Veche.net is my personal site, first launched (albeit at a different domain) back in 2006. It is named for the historical Novgorod #{link_to "Veche", 'http://en.wikipedia.org/wiki/Veche'}, a quirky, unique, and quasi-democratic legislative body that governed the entirety of the Novgorodian Lands during their independence in the Middle Ages.
+            %h3 Links
+            %ul
+              %li= link_to "#{icon 'envelope-o'} Get in Contact".html_safe, contact_path

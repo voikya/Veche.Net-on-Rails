@@ -1,16 +1,25 @@
+$vechenet-bg-dark: #A3C2F0;
+$vechenet-bg-light: #C5F0EF;
+$vechenet-col-dark: #004F7B;
+$vechenet-col-light: #105F8B;
+$vechenet-col-light-hover: #E0BA45;
+$vechenet-col-dark-hover: #D0AA35;
+
+$vechenet-link: #4F7CA3;
+$vechenet-header: #105F8B;
+
 html {
   height: 100%;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 a.contact {
   background-color: #EFEFEF;
-  padding: 2px 4px;
+  padding: 2px 8px;
   border-radius: 2px;
-  font-size: smaller;
   margin-left: 10px;
-  background-color: #EFEFEF;
-  border: none !important;
+  text-decoration: none;
+  font-size: smaller;
 
   &:link, &:visited {
     color: #69B1FF;
@@ -18,134 +27,361 @@ a.contact {
 
   &:hover, &:active {
     color: #900;
-    text-decoration: underline;
   }
 }
 
 body.vechenet {
-  position: relative;
-  text-align: center;
-  min-height: 100%;
-  margin: 0 auto;
-  background-image: image-url('vechenet-bg.png');
-  height: 100%;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: -moz-linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
+  background: -webkit-linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
+  background: linear-gradient(top, $vechenet-bg-light 0%, $vechenet-bg-dark 100%);
+  padding: 0;
+  margin: 0;
 
-  #container {
-    min-height: 90%;
-    margin: 0 auto -3em;
-    margin-bottom: 3em;
+  &.languages-selected,
+  &.programming-selected,
+  &.about-selected {
+    main {
+      top: 75px;
+      bottom: 50px;
+      transition: top 1s, bottom 1s;
+    }
+
+    h1 {
+      line-height: 60px;
+      transition: line-height 1s;
+    }
+
+    a.nav-up, a.nav-down {
+      opacity: 1;
+      transition: opacity 1s;
+    }
   }
 
-  #title {
-    position: relative;
-    margin: 0 auto;
-    top: 100px;
-    transition: top 0.5s;
+  a.nav-up, a.nav-down {
+    position: absolute;
+    font-size: 30px;
+    color: #173548;
+    opacity: 0;
+    transition: opacity 1s 1s;
     cursor: pointer;
 
-    &.shifted {
-      top: 20px;
+    &:not(.disabled):hover {
+      text-shadow: 0px 0px 5px white;
     }
 
-    a {
-      border: none;
+    &.disabled {
+      color: #999999;
+      cursor: default;
     }
   }
 
-  #articleset {
-    margin-top: 50px;
+  a.nav-up {
+    top: 0;
+    margin: 35px 50%;
+  }
+
+  a.nav-down {
+    bottom: 0;
+    margin: 15px 50%;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+    color: $vechenet-header;
+    margin: 0;
+    padding: 10px 100px;
+    line-height: 130px;
+    cursor: pointer;
+
+    transition: line-height 1s 1s;
+  }
+
+  h2 {
+    margin: 0;
+    color: white;
+    font-weight: 200;
+    padding: 20px 40px;
+    font-size: 24px;
+  }
+
+  main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 20px 100px;
+    top: 150px;
+    bottom: 100px;
+    overflow: hidden;
+
+    background-color: #173548;
+    border-top: solid 3px #EFEFEF;
+    border-bottom: solid 3px #EFEFEF;
+    white-space: nowrap;
+
+    perspective: 800px;
+
+    transition: top 1s 1s, bottom 1s 1s;
   }
 
   article {
-    background-color: #EFEFEF;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width: 700px;
-    text-align: left;
-    font-size: small;
-    color: #666;
-
-    img.header {
-      width: 700px;
-      height: 200px;
-      box-shadow: 0px 3px 4px #333;
-    }
-
-    .content {
-      margin: 20px;
-      margin-top: -40px;
-      padding-bottom: 20px;
-    }
-
-    &.hidden {
-      display: none;
-    }
-  }
-
-  .buttonframe {
-    position: relative;
-    margin: 0 auto;
-    top: 150px;
-    width: 800px;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .button-wrapper {
-    width: 350px;
-    position: relative;
+    width: 33%;
+    margin: 0;
     display: inline-block;
-    margin: 10px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: width 0s 1s, margin-left 1s 1s;
 
-    .button {
-      width: 300px;
-      height: 100px;
-      overflow: hidden;
-      box-shadow: 3px 3px 4px #333;
-      cursor: pointer;
+    &:hover {
+      will-change: width, margin-left;
+
+      div.article-wrapper { will-change: transform; }
+      div.article-contents { will-change: transform; }
+    }
+
+    &.flipped {
+      width: 100%;
+
+      div.article-wrapper {
+        transform: rotateY(180deg);
+        width: 100%;
+        transition: transform 1s, width 1s 1s;
+      }
+
+      div.article-contents {
+        transform: none;
+        width: 30%;
+        transition: transform 1s, width 0s 1s;
+      }
+
+      div.article-contents-inner {
+        width: 230%;
+        transition: width 1s 1s;
+      }
+    }
+  }
+
+  div.article-wrapper {
+    width: 90%;
+    height: 100%;
+    background: -moz-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    background: -webkit-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    background: linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 1s 1s, width 1s 1s;
+    overflow: hidden;
+
+    &:hover {
+      background: -moz-linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
+      background: -webkit-linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
+      background: linear-gradient(top, $vechenet-col-light-hover 0%, $vechenet-col-dark-hover 100%);
+
+      div.article-inner-wrapper {
+        svg path { fill: #BE991E; }
+      }
+    }
+  }
+
+  div.article-inner-wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 150%;
+      margin-left: 1px;
+    }
+
+    svg {
+      width: 150%;
+      margin-left: 1px;
+    }
+  }
+
+  div.article-contents {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    transition: transform 1s 1s, width 0s 1s;
+    border-bottom-left-radius: 25px;
+    background: -moz-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    background: -webkit-linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+    background: linear-gradient(top, $vechenet-col-light 0%, $vechenet-col-dark 100%);
+  }
+
+  div.article-contents-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+
+    /* By default images will align to the top left. For some images it may
+       look better to override and center. */
+    &[data-section=intro]       { background-image: image-url('fountainpen.jpg');  }
+    &[data-section=novegradian] { background-image: image-url('cyrillic.jpg');     }
+    &[data-section=alashian]    { background-image: image-url('cypriot.jpg');      }
+    &[data-section=ochets]      { background-image: image-url('oldturkic.jpg');    }
+    &[data-section=linguistics] { background-image: image-url('hieratic.jpg');
+                                  background-position: center center;              }
+    &[data-section=programming] { background-image: image-url('ruby.jpg');         }
+    &[data-section=about]       { background-image: image-url('silverspring.jpg');
+                                  background-position: center center;              }
+  }
+
+  div.article-contents-inner {
+    background-color: #EFEFEF;
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width 1s 0s;
+    white-space: normal;
+    border-top-right-radius: 25px;
+    overflow-y: scroll;
+
+    h2 {
+      background-color: #CCCCCC;
+      color: #666;
+      padding: 20px 40px;
+    }
+
+    h3 {
+      color: #333333;
+      padding: 0px 40px;
+      font-weight: normal;
+    }
+
+    p {
+      padding: 0px 40px;
+      color: #333333;
+    }
+
+    a {
+      color: $vechenet-link;
+
+      &:hover {
+        color: #900;
+      }
+    }
+
+    ul {
+      padding: 0px 40px;
+    }
+
+    li {
+      list-style-type: none;
+      margin-left: 10px;
+
+      &:before {
+        content: '\203a';
+        font-weight: bold;
+        padding: 0px 1px 0px 0px;
+        font-size: 1.3em;
+        line-height: 1em;
+        margin-left: -10px;
+      }
+    }
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+
+  article#languages {
+    .article-contents[data-current-section=intro] .article-contents-image[data-section=intro] {
+      opacity: 1;
+    }
+    .article-contents[data-current-section=novegradian] .article-contents-image[data-section=novegradian] {
+      opacity: 1;
+    }
+    .article-contents[data-current-section=alashian] .article-contents-image[data-section=alashian] {
+      opacity: 1;
+    }
+    .article-contents[data-current-section=ochets] .article-contents-image[data-section=ochets] {
+      opacity: 1;
+    }
+    .article-contents[data-current-section=linguistics] .article-contents-image[data-section=linguistics] {
+      opacity: 1;
+    }
+  }
+
+  article#programming {
+    div.article-wrapper { margin-left: 5%; }
+
+    .article-contents[data-current-section=programming] .article-contents-image[data-section=programming] {
+      opacity: 1;
+    }
+  }
+
+  article#about {
+    div.article-wrapper { margin-left: 10%; }
+
+    .article-contents[data-current-section=about] .article-contents-image[data-section=about] {
+      opacity: 1;
+    }
+  }
+
+  &.languages-selected {
+    article#programming { margin-left: 100%; transition: width 0s 1s, margin-left 1s; }
+    article#about { margin-left: 100%; transition: width 0s 1s, margin-left 1s; }
+  }
+
+  &.programming-selected {
+    article#languages { margin-left: -100%; transition: width 0s 1s, margin-left 1s; }
+    article#programming { margin-left: 67%; transition: width 0s 1s, margin-left 1s; }
+    article#about { margin-left: 100%; transition: width 0s 1s, margin-left 1s; }
+  }
+
+  &.about-selected {
+    article#languages { margin-left: -100%; transition: width 0s 1s, margin-left 1s; }
+    article#programming { margin-left: -100%; transition: width 0s 1s, margin-left 1s; }
+    article#about { margin-left: 134%; transition: width 0s 1s, margin-left 1s; }
+  }
+
+  .triangle {
+    height: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    border-bottom-right-radius: 25px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: -400px;
+      border-top: 400px solid transparent;
+      border-right: 400px solid $vechenet-col-light;
     }
   }
 
   #footer {
-    position: relative;
-    width: 100%;
-    height: 3em;
+    bottom: 10px;
+    position: absolute;
+    padding: 0 100px;
+    color: $vechenet-header;
     font-size: small;
-    color: white;
-  }
-
-  h1 {
-    font-size: large;
-    color: #EFEFEF;
-    background-color: black;
-    position: relative;
-    padding: 5px 20px;
-    top: -80px;
-    opacity: 0.75;
-    font-size: x-large;
-    font-family: Trebuchet MS, sans;
-  }
-
-  h2 {
-    font-size: medium;
-    color: #03C;
-    font-style: italic;
-  }
-
-  a {
-    &:link, &:visited {
-      color: #4F7CA3;
-      border-bottom: dashed 1px;
-      text-decoration: none;
-    }
-
-    &:hover, &:active {
-      color: #900;
-      border-bottom: solid 1px;
-      text-decoration: none;
-    }
+    font-weight: 200;
   }
 
   form.download {
@@ -156,8 +392,8 @@ body.vechenet {
       margin: 0;
       padding: 0;
       background: none;
-      color: #4F7CA3;
-      border-bottom: dashed 1px;
+      color: $vechenet-link;
+      border-bottom: solid 1px;
       text-decoration: none;
       cursor: pointer;
       font: inherit;
@@ -169,51 +405,106 @@ body.vechenet {
       }
     }
   }
-
-  span.date {
-    font-weight: bold;
-  }
 }
 
-span.mail1:before {
-  content: "republicofnovegrad";
-}
+#container.small {
+  text-align: center;
 
-span.mail2:before {
-  content: "gmail.com";
-}
-
-.field {
-  display: block;
-  margin-bottom: 5px;
-
-  label {
-    display: block;
-    font-size: 80%;
-  }
-
-  input[type=text], textarea {
-    width: 75%;
-    color: #666;
-    background-color: #FFFFFF;
-    border: solid 1px #CCCCCC;
-    padding: 5px;
-  }
-
-  textarea {
-    min-height: 100px;
-  }
-
-  input[type=submit] {
-    border: solid 1px #CCCCCC;
-    background-color: #EFEFEF;
-    padding: 5px 10px;
-    color: #666;
+  #title {
+    top: 20px;
+    position: relative;
     cursor: pointer;
+  }
+
+  #content-box {
+    background-color: #EFEFEF;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 700px;
+    text-align: left;
+    color: #666;
+  }
+
+  img.header {
+    width: 700px;
+    height: 200px;
+    box-shadow: 0px 3px 4px #333;
+  }
+
+  h1 {
+    color: #EFEFEF;
+    background-color: black;
+    position: relative;
+    padding: 5px 20px;
+    top: -60px;
+    opacity: 0.75;
+    font-size: x-large;
+    line-height: 1em;
+    cursor: default;
+  }
+
+  .content {
+    margin: -20px 20px 20px 20px;
+    padding-bottom: 20px;
+  }
+
+  span.mail1:before {
+    content: "martin";
+  }
+
+  span.mail2:before {
+    content: "veche.net";
+  }
+
+  .field {
+    display: block;
+    margin-bottom: 5px;
+
+    label {
+      display: block;
+      font-size: small;
+    }
+
+    input[type=text], textarea {
+      width: 75%;
+      color: #666;
+      background-color: #FFFFFF;
+      border: solid 1px #CCCCCC;
+      padding: 5px;
+    }
+
+    textarea {
+      min-height: 80px;
+    }
+
+    input[type=submit] {
+      border: solid 1px #CCCCCC;
+      background-color: #EFEFEF;
+      padding: 5px 10px;
+      color: #666;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #E0E0E0;
+      }
+    }
+  }
+
+  a {
+    color: $vechenet-link;
+    font-size: smaller;
+    text-decoration: none;
 
     &:hover {
-      background-color: #E0E0E0;
+      color: #900;
     }
+  }
+
+  &~ #footer {
+    width: 100%;
+    text-align: center;
+    padding: 0;
   }
 }
 
