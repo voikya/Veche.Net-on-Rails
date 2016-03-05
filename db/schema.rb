@@ -124,59 +124,6 @@ ActiveRecord::Schema.define(:version => 20151225044857) do
     t.datetime "created_at", :null => false
   end
 
-  create_table "sca_features", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.boolean  "boolean",     :default => false
-    t.string   "affects"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-  end
-
-  create_table "sca_languages", :force => true do |t|
-    t.integer  "parent_id"
-    t.string   "name"
-    t.text     "description"
-    t.string   "slug"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "sca_phoneme_features", :force => true do |t|
-    t.integer  "phoneme_id"
-    t.integer  "feature_id"
-    t.boolean  "value",        :default => false
-    t.string   "custom_value"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-  end
-
-  create_table "sca_phonemes", :force => true do |t|
-    t.string   "symbol"
-    t.integer  "language_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "sca_sound_change_groups", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "language_id"
-    t.integer  "order"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "sca_sound_changes", :force => true do |t|
-    t.string   "input"
-    t.string   "output"
-    t.string   "environment"
-    t.integer  "order"
-    t.integer  "group_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "tunisian", :force => true do |t|
     t.string   "word"
     t.string   "pronunciation"
@@ -213,17 +160,6 @@ ActiveRecord::Schema.define(:version => 20151225044857) do
 
   add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_from_fk", column: "from"
   add_foreign_key "ochets_crossrefs", "ochets", name: "ochets_crossrefs_to_fk", column: "to"
-
-  add_foreign_key "sca_languages", "sca_languages", name: "sca_languages_parent_id_fk", column: "parent_id"
-
-  add_foreign_key "sca_phoneme_features", "sca_features", name: "sca_phoneme_features_feature_id_fk", column: "feature_id"
-  add_foreign_key "sca_phoneme_features", "sca_phonemes", name: "sca_phoneme_features_phoneme_id_fk", column: "phoneme_id"
-
-  add_foreign_key "sca_phonemes", "sca_languages", name: "sca_phonemes_language_id_fk", column: "language_id"
-
-  add_foreign_key "sca_sound_change_groups", "sca_languages", name: "sca_sound_change_groups_language_id_fk", column: "language_id"
-
-  add_foreign_key "sca_sound_changes", "sca_sound_change_groups", name: "sca_sound_changes_group_id_fk", column: "group_id"
 
   add_foreign_key "tunisian_crossrefs", "tunisian", name: "tunisian_crossrefs_from_fk", column: "from"
   add_foreign_key "tunisian_crossrefs", "tunisian", name: "tunisian_crossrefs_to_fk", column: "to"
