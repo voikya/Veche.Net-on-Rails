@@ -54,6 +54,18 @@ body.grammar.tunisian {
     margin-left: 0;
   }
 
+  table.correlatives {
+    &.left {
+      float: left;
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    &.right {
+      float: right;
+    }
+  }
+
   form.download {
     button {
       background-color: $background_color;
