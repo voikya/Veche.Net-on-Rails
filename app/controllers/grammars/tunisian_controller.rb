@@ -8,7 +8,8 @@ module Grammars
       {:index => 2, :doc => 'phonology',   :title => 'Phonology'         },
       {:index => 3, :doc => 'orthography', :title => 'Orthography'       },
       {:index => 4, :doc => 'verbs',       :title => 'Verbal Morphology' },
-      {:index => 5, :doc => 'nouns',       :title => 'Nominal Morphology'}
+      {:index => 5, :doc => 'nouns',       :title => 'Nominal Morphology'},
+      {:index => 6, :doc => 'pronouns',    :title => 'Pronouns'          }
     ]
 
     def index
