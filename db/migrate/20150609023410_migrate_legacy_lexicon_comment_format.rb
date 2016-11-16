@@ -1,6 +1,6 @@
 class MigrateLegacyLexiconCommentFormat < ActiveRecord::Migration
   def up
-    Lexicons::Novegradian.each do |entry|
+    Lexicons::Novegradian.all.each do |entry|
       changed = false
       [:definition, :notes, :important_forms, :etymology, :cognates].each do |field|
         if entry.send(field) && (entry.send(field).match(/(?<!\{)\{(?!\{)/) || entry.send(field).match(/(?<!\})\}(?!\})/))
@@ -10,7 +10,7 @@ class MigrateLegacyLexiconCommentFormat < ActiveRecord::Migration
       end
       entry.save! if changed
     end
-    Lexicons::Alashian.each do |entry|
+    Lexicons::Alashian.all.each do |entry|
       changed = false
       [:definition, :notes, :etymology].each do |field|
         if entry.send(field) && (entry.send(field).match(/(?<!\{)\{(?!\{)/) || entry.send(field).match(/(?<!\})\}(?!\})/))
@@ -20,7 +20,7 @@ class MigrateLegacyLexiconCommentFormat < ActiveRecord::Migration
       end
       entry.save! if changed
     end
-    Lexicons::Ochets.each do |entry|
+    Lexicons::Ochets.all.each do |entry|
       changed = false
       [:definition, :etymology].each do |field|
         if entry.send(field) && (entry.send(field).match(/(?<!\{)\{(?!\{)/) || entry.send(field).match(/(?<!\})\}(?!\})/))
