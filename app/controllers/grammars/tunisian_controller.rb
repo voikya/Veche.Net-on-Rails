@@ -10,7 +10,8 @@ module Grammars
       {:index => 4, :doc => 'verbs',       :title => 'Verbal Morphology'       },
       {:index => 5, :doc => 'nouns',       :title => 'Nominal Morphology'      },
       {:index => 6, :doc => 'pronouns',    :title => 'Pronouns'                },
-      {:index => 7, :doc => 'adjectives',  :title => 'Adjectives and Numerals' }
+      {:index => 7, :doc => 'adjectives',  :title => 'Adjectives and Numerals' },
+      {:index => 8, :doc => 'derivation',  :title => 'Derivational Morphology' }
     ]
 
     def index
