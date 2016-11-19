@@ -5,7 +5,6 @@ gem 'rails',                 '4.2.7.1'
 
 # Database
 gem 'pg',                    '0.19.0'
-gem 'foreigner',             '1.7.4'
 
 # Frameworks
 gem 'react-rails',           '1.9.0'
