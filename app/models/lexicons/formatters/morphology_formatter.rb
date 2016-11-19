@@ -19,7 +19,8 @@ module Lexicons
 
       def set(value)
         if value.present?
-          @content.assign_attributes(value)
+          valid_attributes = @content_class::ATTRIBUTES
+          @content.assign_attributes(value.permit(valid_attributes))
         else
           @content = nil
         end

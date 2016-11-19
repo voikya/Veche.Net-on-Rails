@@ -26,7 +26,7 @@ module Lexicons
       end
 
       def serialize
-        @content.join("\n\n")
+        @content && @content.join("\n\n")
       end
 
       def tokenize

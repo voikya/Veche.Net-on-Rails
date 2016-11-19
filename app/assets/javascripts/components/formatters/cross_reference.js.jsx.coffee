@@ -47,7 +47,7 @@
         content.splice(idx + 1, 0, "new_xref")
         @setState(content: content)
       when 8 # Backspace
-        if React.findDOMNode(@).querySelectorAll('li')[idx].textContent.length == 0
+        if ReactDOM.findDOMNode(@).querySelectorAll('li')[idx].textContent.length == 0
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
@@ -59,7 +59,7 @@
       @setState(content: ["new_xref"])
 
   update: (idx, evt) ->
-    newXref = React.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
+    newXref = ReactDOM.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
     newContent = @state.content
     if newXref.length
       newContent[idx] = newXref

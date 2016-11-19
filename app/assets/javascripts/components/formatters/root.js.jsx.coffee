@@ -36,6 +36,6 @@
       exact: true
 
   update: (evt) ->
-    newContent = React.findDOMNode(@).textContent.split(',').map (r) -> r.trim()
+    newContent = ReactDOM.findDOMNode(@).textContent.split(',').map (r) -> r.trim()
     newContent = null unless newContent.length
     @setState(content: newContent)

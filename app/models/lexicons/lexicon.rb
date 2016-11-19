@@ -1,6 +1,5 @@
 module Lexicons
   class Lexicon < ActiveRecord::Base
-    attr_accessible :name, :lexicon_table, :alphabet
     attr_accessor :lexicon_class
     after_initialize :load_entries_table
 

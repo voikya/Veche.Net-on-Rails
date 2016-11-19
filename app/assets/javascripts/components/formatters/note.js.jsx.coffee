@@ -43,7 +43,7 @@
         content.splice(idx + 1, 0, "New paragraph")
         @setState(content: content)
       when 8 # Backspace
-        if React.findDOMNode(@).querySelectorAll('p')[idx].textContent.length == 0
+        if ReactDOM.findDOMNode(@).querySelectorAll('p')[idx].textContent.length == 0
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
@@ -55,7 +55,7 @@
       @setState(content: ["New Note"])
 
   update: (idx, evt) ->
-    newParagraph = React.findDOMNode(@).querySelectorAll('p')[idx].innerHTML.trim()
+    newParagraph = ReactDOM.findDOMNode(@).querySelectorAll('p')[idx].innerHTML.trim()
     newContent = @state.content
     if newParagraph.length
       newContent[idx] = newParagraph

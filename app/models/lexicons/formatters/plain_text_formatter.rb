@@ -12,7 +12,11 @@ module Lexicons
       # Serialize a formatter to a string to be stored in the database
       def self.dump(obj)
         if obj
-          new(nil).tap{|f| f.set(obj)}.serialize
+          if obj.class <= PlainTextFormatter
+            obj.serialize
+          else
+            new(nil).tap{|f| f.set(obj)}.serialize
+          end
         else
           nil
         end

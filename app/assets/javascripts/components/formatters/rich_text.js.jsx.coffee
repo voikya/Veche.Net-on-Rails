@@ -36,7 +36,7 @@
         content.splice(idx + 1, 0, "New paragraph")
         @setState(content: content)
       when 8 # Backspace
-        if React.findDOMNode(@).childNodes[idx].textContent.length == 0
+        if ReactDOM.findDOMNode(@).childNodes[idx].textContent.length == 0
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
@@ -48,7 +48,7 @@
       @setState(content: ["New paragraph"])
 
   update: (idx, evt) ->
-    newParagraph = React.findDOMNode(@).childNodes[idx].innerHTML.trim()
+    newParagraph = ReactDOM.findDOMNode(@).childNodes[idx].innerHTML.trim()
     newContent = @state.content
     if newParagraph.length
       newContent[idx] = newParagraph

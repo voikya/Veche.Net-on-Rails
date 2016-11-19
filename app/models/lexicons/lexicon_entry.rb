@@ -21,8 +21,6 @@ module Lexicons
         @fields ||= []
         @fields << name
 
-        attr_accessible(name)
-
         if opts[:reader] && opts[:writer] && opts[:class]
           # Need to handle serialization/deserialization manually
           reader = instance_method(opts[:reader])

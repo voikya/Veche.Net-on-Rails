@@ -39,7 +39,7 @@
         content.splice(idx + 1, 0, "New Definition")
         @setState(content: content)
       when 8 # Backspace
-        if React.findDOMNode(@).querySelectorAll('li')[idx].textContent.length == 0
+        if ReactDOM.findDOMNode(@).querySelectorAll('li')[idx].textContent.length == 0
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
@@ -51,7 +51,7 @@
       @setState(content: ["New definition"])
 
   update: (idx, evt) ->
-    newDefinition = React.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
+    newDefinition = ReactDOM.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
     newContent = @state.content
     if newDefinition.length
       newContent[idx] = newDefinition

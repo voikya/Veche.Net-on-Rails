@@ -8,9 +8,10 @@ module Lexicons
     has_many :extensions, :foreign_key => :base_id, :class_name => NovegradianMorphology
     belongs_to :novegradian_morphology, :foreign_key => :base_id
 
-    attr_accessible :entry_id, :base_id, :category, :stem, :stem_transliterated,
-                    :desinence, :desinence_transliterated, :tertiary,
-                    :tertiary_transliterated, :group, :subgroup, :flags
+    ATTRIBUTES = [
+      :entry_id, :base_id, :category, :stem, :stem_transliterated, :desinence, :desinence_transliterated,
+      :tertiary, :tertiary_transliterated, :group, :subgroup, :flags
+    ]
 
     def as_json(options={})
       {
