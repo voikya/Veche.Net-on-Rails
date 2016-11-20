@@ -1642,6 +1642,51 @@
   %p Tunisian forms mediopassives with the clitic <i>s-</i> (before a vowel) or <i>ys-</i> (before a consonant) attached to the otherwise regularly-conjugated verb: <i>s-iprê</i> [ˈsi.preː] “open, be opened”, <i>ys-léggê</i> [ˈis.le.geː] “be read”. In constructions with multiple or auxiliary verbs, the clitic attaches to either the first or second verb according to specific rules that will be outlined later. This clitic is considered part of the citation form of the verb. When added to words beginning with the letter <i>y</i> (representing a historic epenthetic vowel), this vowel converts to <i>u</i>: <i>s-uscribê</i> [ˈsus.kri.beː] “be written”.
   %p Old Tunisian could also form passives using the verb <i>ystâ</i> “be” plus a passive participle, but this is no longer idiomatic outside of certain fixed expressions.
 
+= section "Stative Verbs" do
+  %p Stative verbs are a special subparadigm of Conjugation IV verbs that follow a defective and highly idiosyncratic pattern. These verbs denote that a particular state or quality is present at a particular point in time, but at the same time is ephemeral and not an inherent quality of the subject being described. They often derive from adjectival bases, such as <i>novî</i> [nɔ.ˈviː] “appear new” or <i>rosî</i> [rɔ.ˈsiː] “appear red, blush”, but a handful do not, such as <i>jestî</i> “be ready” or <i>nodî</i> “bore, be boring”.
+  %p These stative verbs all belong to Conjugation IV and can only appear in compound tenses (i.e., the perfect or future), and conjugate in the present tense using a compound construction not used by other verbs. They also have a defective preterite form, their sole finite form that does not require an auxiliary verb. To further complicate matters, they switch between active and middle voice depending on tense.
+  %p In the present tense, stative verbs appear using a conjugated form of <i>ystâ</i> “be” plus a present participle. The participle will agree with the subject in gender and number.
+  = render 'present_tense',
+    :verb          => {:tun => "rosî", :eng => "appear red, blush"},
+    :forms         => ["som resén(e)", "es resén(e)", "resén(e)", "sums reseis", "ests reseis", "reseis"],
+    :pronunciation => ["som rə.ˈsɛn(ə)", "ɛs rə.ˈsɛn(ə)", "rə.ˈsɛn(ə)", "sumz rə.ˈsejz", "ɛsts rə.ˈsejz", "rə.ˈsejz"]
+  = render 'present_tense',
+    :verb          => {:tun => "jestî", :eng => "be ready"},
+    :forms         => ["som jestén(e)", "es jestén(e)", "jestén(e)", "sums jesteis", "ests jesteis", "jesteis"],
+    :pronunciation => ["som ʒəs.ˈtɛn(ə)", "ɛs ʒəs.ˈtɛn(ə)", "ʒəs.ˈtɛn(ə)", "sumz ʒəs.ˈtɛjz", "ɛsts ʒəs.ˈtejz", "ʒəs.ˈtejz"]
+
+  %p The perfect and future tenses operate as expected, except that they must appear in the middle voice in the perfect.
+  = render 'perfect_tense',
+    :verb        => {:tun => "rosî", :eng => "appear red, blush"},
+    :independent => ["sem yst-resist(e)", "es yst-resist(e)", "e st-resist(e)", "sems yst-resiçs", "ests yst-resiçs", "sô st-resiçs"],
+    :bound       => ["yst-resist-em", "yst-resist-es", "yst-resist-e", "yst-resist-esms", "yst-resist-ests", "yst-resist-ço"],
+    :independent_pronunciation => ["səm is.trə.ˈsist(ə)", "ɛs is.trə.ˈsist(ə)", "ɛs.trə.ˈsist(ə)", "səmz is.trə.ˈsistʃ", "ɛsts is.trə.ˈsistʃ", "sɔːs.trə.ˈsistʃ"],
+    :bound_pronunciation       => ["is.trə.ˈsis.təm", "is.trə.ˈsis.təs", "is.trə.ˈsis.tə", "is.trə.ˈsis.tə.sɪmz", "is.trə.ˈsis.təsts", "is.trə.ˈsis.tʃɔ"]
+  = render 'perfect_tense',
+    :verb        => {:tun => "jestî", :eng => "be ready"},
+    :independent => ["sem ys-jestist(e)", "es ys-jestist(e)", "e s-jestist(e)", "sems ys-jestiçs", "ests ys-jestiçs", "sô s-jestiçs"],
+    :bound       => ["ys-jestist-em", "ys-jestist-es", "ys-jestist-e", "ys-jestist-esms", "ys-jestist-ests", "ys-jestist-ço"],
+    :independent_pronunciation => ["səm iz.ʒəs.ˈtist(ə)", "ɛs iz.ʒəs.ˈtist(ə)", "ɛz.ʒəs.ˈtist(ə)", "səmz iz.ʒəs.ˈtistʃ", "ɛsts iz.ʒəs.ˈtistʃ", "sɔːz.ʒəs.ˈtistʃ"],
+    :bound_pronunciation       => ["iz.ʒəs.ˈtis.təm", "iz.ʒəs.ˈtis.təs", "iz.ʒəs.ˈtis.tə", "iz.ʒəs.ˈtis.tə.sɪmz", "iz.ʒəs.ˈtis.təsts", "iz.ʒəs.ˈtis.tʃɔ"]
+  = render 'future_tense',
+    :verb          => {:tun => "rosî", :eng => "appear red, blush"},
+    :forms         => ["viuc il rosî", "vucs il rosî", "vuc il rosî", "vumsc ls rosnes", "vutsc ls rosnes", "vuct ls rosnes"],
+    :pronunciation => ["ˈvjuk il rɔ.ˈsiː", "ˈvuks il rɔ.ˈsiː", "ˈvuk il rɔ.ˈsiː", "ˈvumsk uz ˈros.nəz", "ˈvutsk uz ˈros.nəz", "ˈvukt uz ˈros.nəz"]
+  = render 'future_tense',
+    :verb          => {:tun => "jestî", :eng => "be ready"},
+    :forms         => ["viuc il jestî", "vucs il jestî", "vuc il jestî", "vumsc ls jéstnes", "vutsc ls jéstnes", "vuct ls jéstnes"],
+    :pronunciation => ["ˈvjuk il ʒəs.ˈtiː", "ˈvuks il ʒəs.ˈtiː", "ˈvuk il ʒəs.ˈtiː", "ˈvumsk uz ˈʒɛst.nəz", "ˈvutsk uz ˈʒɛst.nəz", "ˈvukt uz ˈʒɛst.nəz"]
+
+  %p Perhaps somewhat surprisingly, the sole inflected finite form is the preterite. In the first and second persons, stative verbs follow the regular preterite paradigm. In the third person, the form used is always the strong stem + <i>-s</i>, for both singular and plural. Note, however, that the boundary behavior in the third person is more typical of adjectives than of verbs, such as how st+s collapses into çs in the third person in <i>jéçs</i> “he/she/it was ready”, but not in the first person singular <i>jists</i> “I was ready”.
+  = render 'preterite_tense',
+    :verb          => {:tun => "rosî", :eng => "appear red, blush"},
+    :forms         => %w(ress résist ross résrims résrists ross),
+    :pronunciation => ["ˈrɛs", "ˈre.sist", "ˈroz", "ˈrɛs.rimz", "ˈrɛs.rists", "ˈroz"]
+  = render 'preterite_tense',
+    :verb          => {:tun => "jestî", :eng => "be ready"},
+    :forms         => %w(jists jistist jéçs jistrims jistrists jéçs),
+    :pronunciation => ["ˈʒists", "ˈʒis.tist", "ˈʒɛstʃ", "ˈʒis.trimz", "ˈʒis.trists", "ˈʒɛstʃ"]
+
 %section.footnotes
   = footnote do
     Note that while Conjugation III and IV verbs typically have infinitives in the full grade, vowelless stems always have infinitives in the reduced grade. Thus, the infinitive is <i>ifchê</i> “to cause”, not <i>*eféccê</i>.
