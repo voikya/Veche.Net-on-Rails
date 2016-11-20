@@ -23,7 +23,7 @@ gem 'dotenv-rails',          '2.1.1'
 gem 'rubystats',             '0.2.5'
 gem 'RubySunrise',           '0.3.1'
 gem 'nokogiri',              '1.6.8.1'
-gem 'dropbox-sdk',           '1.6.5'
+gem 'dropbox-sdk-v2',        '0.0.3'
 gem 'whenever',              '0.9.7'
 gem 'inline_svg',            '0.11.0'
 
