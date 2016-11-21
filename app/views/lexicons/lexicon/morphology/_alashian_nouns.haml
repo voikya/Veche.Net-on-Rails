@@ -1,0 +1,24 @@
+- numbers = [:singular, :plural]
+- numbers.delete(:singular) if m.pl_tantum?
+- numbers.delete(:plural) if m.sg_tantum?
+- states = [:absolute, :determinate, :partitive, :construct]
+- states = [:determinate] if m.determinate?
+
+%table.nouns
+  %thead
+    %tr
+      %th.morphology-info{:colspan => (states.length + 1)}
+        #{m.declension} (Subtype #{m.subtype})
+    %tr
+      %th
+      - states.each do |state|
+        %th= state.to_s.titleize
+  %tbody
+    - numbers.each do |number|
+      %tr
+        %th{:scope => :row}= number.to_s.titleize
+        - states.each do |state|
+          %td
+            = form = m.send "#{state}_#{number}".to_sym
+            %br
+            %span.transliteration= form.transliteration

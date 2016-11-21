@@ -1,3 +1,5 @@
+require_relative 'alashian_morphology/alashian_root'
+
 module Lexicons
   class Alashian < ActiveRecord::Base
     include LexiconEntry
@@ -16,6 +18,9 @@ module Lexicons
       :join_table => :alashian_crossrefs,
       :foreign_key => :to,
       :association_foreign_key => :from
+    has_one :morphology,
+      :foreign_key => :entry_id,
+      :class_name  => AlashianMorphology
 
     # Entry fields and formatter definitions
     field :word,             :formatter => Formatters::PlainTextFormatter
@@ -31,6 +36,10 @@ module Lexicons
                              :reader    => :cross_references,
                              :writer    => :cross_reference_ids=,
                              :class     => Alashian
+    field :morphology_table, :formatter => Formatters::MorphologyFormatter,
+                             :reader    => :morphology,
+                             :writer    => :morphology=,
+                             :class     => AlashianMorphology
 
     # Hooks
     before_create :generate_slug
@@ -60,6 +69,11 @@ module Lexicons
       :word
     end
 
+    # The class of the morphology oject
+    def self.morphology_class
+      AlashianMorphology
+    end
+
     # Convert a search parameter into one or more corresponding columns
     # in this table to search through
     def self.map_search_params(field)
@@ -70,6 +84,10 @@ module Lexicons
         :root            => :root,
         :definition      => :definition
       }[field]
+    end
+
+    def parsed_root
+      AlashianRoot.new(root_before_type_cast)
     end
   end
 end
