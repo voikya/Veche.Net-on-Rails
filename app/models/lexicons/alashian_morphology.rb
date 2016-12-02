@@ -50,21 +50,25 @@ module Lexicons
     end
 
     def template(*args)
-      root.force_triconsonantal! if args.include?(:c3)
+      if args.any? { |arg| arg =~ /^t?c3/ }
+        parsed_root = root.force_triconsonantal
+      else
+        parsed_root = root
+      end
       args.map.with_index do |component, idx|
         if component.is_a? Symbol
           if [:c1, :c2, :c3, :c4, :tc1, :tc2, :tc3, :tc4].include?(component)
             # Unless the consonant is surrounded by vowels on both sides,
             # we need to ensure that it is not aspirated.
-            previous_is_vowel = idx > 0 && (args[idx - 1] == :v || args[idx - 1].is_a?(String))
-            next_is_vowel = idx < args.length - 1 && (args[idx + 1] == :v || args[idx + 1].is_a?(String))
+            previous_is_vowel = idx > 0 && (args[idx - 1] =~ /t?v/ || args[idx - 1].is_a?(String))
+            next_is_vowel = idx < args.length - 1 && (args[idx + 1] =~ /t?v/ || args[idx + 1].is_a?(String))
             if previous_is_vowel && next_is_vowel
-              root.send(component)
+              parsed_root.send(component)
             else
-              root.send(:"#{component}_unaspirated")
+              parsed_root.send(:"#{component}_unaspirated")
             end
           else
-            root.send(component)
+            parsed_root.send(component)
           end
         else
           component
@@ -113,33 +117,35 @@ module Lexicons
         })
       end
 
-      stressed = stressed
-        .gsub(/(ι(?=[αωεου])|(?<=[α])ι|(?<=[αε])υ|(?<=[αωηιυ])ι(?=[αωειου])|(?<=[αωεηιυ])[υη](?=[αωειου]))/, {
-          # Convert consonantal ι/υ/η to y/w/h for matching purposes
-          'ι' => 'y',
-          'υ' => 'w',
-          'η' => 'h'
-        })
-        .sub(STRESSED_VOWEL_REGEX, {
-          # Apply stess rules
-          'α'  => 'ά',
-          'ω'  => 'ώ',
-          'ε'  => 'έ',
-          'η'  => 'ή',
-          'ι'  => 'ί',
-          'ει' => 'εί',
-          'υ'  => 'ύ',
-          'ου' => 'ού',
-          'ιη' => 'ιή',
-          'υω' => 'υώ'
-        })
-        .gsub(/[ywh']/, {
-          # Restore semivowels and remove ' (to disambiguate stress)
-          'y'  => 'ι',
-          'w'  => 'υ',
-          'h'  => 'η',
-          '\'' => ''
-        })
+      stressed = stressed.gsub(/((?:\p{Word}|')+)/) do |word|
+        word
+          .gsub(/(ι(?=[αωεου])|(?<=[α])ι|(?<=[αε])υ|(?<=[αωηιυ])ι(?=[αωειου])|(?<=[αωεηιυ'])[υη](?=[αωειουἠ]))/, {
+            # Convert consonantal ι/υ/η to y/w/h for matching purposes
+            'ι' => 'y',
+            'υ' => 'w',
+            'η' => 'h'
+          })
+          .sub(STRESSED_VOWEL_REGEX, {
+            # Apply stess rules
+            'α'  => 'ά',
+            'ω'  => 'ώ',
+            'ε'  => 'έ',
+            'η'  => 'ή',
+            'ι'  => 'ί',
+            'ει' => 'εί',
+            'υ'  => 'ύ',
+            'ου' => 'ού',
+            'ιη' => 'ιή',
+            'υω' => 'υώ'
+          })
+          .gsub(/[ywh']/, {
+            # Restore semivowels and remove ' (to disambiguate stress)
+            'y'  => 'ι',
+            'w'  => 'υ',
+            'h'  => 'η',
+            '\'' => ''
+          })
+      end
 
       if is_capitalized_vowel
         stressed = stressed.sub(/^./, {

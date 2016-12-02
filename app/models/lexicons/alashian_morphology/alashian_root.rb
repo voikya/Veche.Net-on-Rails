@@ -48,8 +48,11 @@ module Lexicons
     V = "(" + %w(a ā ē e ie i ī uo u ū ə).join("|") + ")"
 
     ASPIRATES = %w(ph th kh tsh čh)
+    PLOSIVES = %w(p ph b t th d k kh g)
+    ASPIRATABLE = %w(p t k)
 
     def initialize(root)
+      @root = root
       case root
         when /^#{C}#{V}#{C}$/
           # Biconsonantal
@@ -69,6 +72,14 @@ module Lexicons
       end
     end
 
+    def force_triconsonantal
+      if @c3.nil?
+        self.class.new(@root).force_triconsonantal!
+      else
+        self
+      end
+    end
+
     def force_triconsonantal!
       if @c3.nil?
         @c3 = @c2
@@ -79,13 +90,18 @@ module Lexicons
                 when "ā" then "h"
               end
       end
+      self
     end
 
     def sound_stem?
       !!@sound_stem
     end
 
-    [:c1, :c2, :c3, :c4, :v].each do |var|
+    def geminate_stem?
+      @c2 == @c3
+    end
+
+    [:c1, :c2, :c3, :c4].each do |var|
       define_method :"t#{var}" do
         return instance_variable_get(:"@#{var}")
       end
@@ -96,6 +112,16 @@ module Lexicons
           when "tsh" then "s"
           when /.h/  then component[0]
           else            component
+        end
+      end
+
+      define_method :"t#{var}_lenited" do
+        component = send(:"t#{var}")
+        case component
+          when "b" then "v"
+          when "d" then "ḏ"
+          when "g" then "ǧ"
+          else          component
         end
       end
 
@@ -112,18 +138,60 @@ module Lexicons
           else         component
         end
       end
+
+      define_method :"#{var}_lenited" do
+        component = send(var)
+        case component
+          when "β" then "в̄"
+          when "δ" then "δ̄"
+          when "γ" then "γ̄"
+          else          component
+        end
+      end
     end
 
-    def initial_aspirate?
-      ASPIRATES.include?(@c1)
+    def tv
+      @v
     end
 
-    def medial_aspirate?
-      @c3 && ASPIRATES.include?(@c2)
+    def v
+      TRANSLITERATION_HASH[@v]
     end
 
-    def final_aspirate?
-      ASPIRATES.include?([@c4, @c3, @c2].compact.first)
+    def short_v
+      case @v
+        when "ā" then "α"
+        when "ē" then "ε"
+        when "ī" then "ι"
+        when "ū" then "υ"
+      end
+    end
+
+    def short_tv
+      case @v
+        when "ā" then "a"
+        when "ē" then "e"
+        when "ī" then "i"
+        when "ū" then "u"
+      end
+    end
+
+    {
+      :aspirate    => ASPIRATES,
+      :aspiratable => ASPIRATABLE,
+      :plosive     => PLOSIVES,
+    }.each do |consonant_class, consonant_set|
+      define_method :"initial_#{consonant_class}?" do
+        consonant_set.include?(@c1)
+      end
+
+      define_method :"medial_#{consonant_class}?" do
+        @c3 && consonant_set.include?(@c2)
+      end
+
+      define_method :"final_#{consonant_class}?" do
+        consonant_set.include?([@c4, @c3, @c2].compact.first)
+      end
     end
   end
 end
