@@ -51,6 +51,8 @@ module Lexicons
     PLOSIVES = %w(p ph b t th d k kh g)
     ASPIRATABLE = %w(p t k)
 
+    attr_writer :c1, :c2, :c3, :c4, :v
+
     def initialize(root)
       @root = root
       case root
@@ -80,15 +82,19 @@ module Lexicons
       end
     end
 
-    def force_triconsonantal!
+    def force_triconsonantal!(medial_consonant = nil)
       if @c3.nil?
         @c3 = @c2
-        @c2 = case @v
-                when "ī" then "y"
-                when "ū" then "w"
-                when "ē" then "h"
-                when "ā" then "h"
-              end
+        if medial_consonant
+          @c2 = medial_consonant
+        else
+          @c2 = case @v
+                  when "ī" then "y"
+                  when "ū" then "w"
+                  when "ē" then "h"
+                  when "ā" then "h"
+                end
+        end
       end
       self
     end
@@ -215,6 +221,26 @@ module Lexicons
 
       define_method :"final_#{consonant_class}?" do
         consonant_set.include?([@c4, @c3, @c2].compact.first)
+      end
+    end
+
+    def medial_cluster
+      if @c4
+        if PLOSIVES.include?(@c3)
+          c2_lenited + c3
+        else
+          c2 + c3
+        end
+      end
+    end
+
+    def medial_cluster_transliterated
+      if @c4
+        if PLOSIVES.include?(@c3)
+          tc2_lenited + tc3
+        else
+          tc2 + tc3
+        end
       end
     end
   end

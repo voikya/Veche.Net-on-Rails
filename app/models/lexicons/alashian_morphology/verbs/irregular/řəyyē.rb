@@ -2,9 +2,9 @@ module Morphology
   module Alashian
     module Verbs
       module Irregular
-        module Amar
+        module Rayye
           def conjugation
-            "Active Scale I Verb"
+            "Active Scale II Verb"
           end
 
           def subtype
@@ -12,163 +12,163 @@ module Morphology
           end
 
           def _present_first_singular
-            ["αμωρ", "'amār"]
+            ["αρ̄αιιἠ", "'ařəyyē"]
           end
 
           def _present_second_singular_masculine
-            ["τιμωρ", "timār"]
+            ["τερ̄αιιἠ", "teřəyyē"]
           end
 
           def _present_second_singular_feminine
-            ["τιμαρει", "timarī"]
+            ["τερ̄αιαυει", "teřəyawī"]
           end
 
           def _present_third_singular_masculine
-            ["ιμωρ", "yimār"]
+            ["ιερ̄αιιἠ", "yeřəyyē"]
           end
 
           def _present_third_singular_feminine
-            ["ιμαρει", "yimarī"]
+            ["ιερ̄αιαυει", "yeřəyawī"]
           end
 
           def _present_first_plural
-            ["νιμαρου", "nimarū"]
+            ["νερ̄αιαυου", "neřəyawū"]
           end
 
           def _present_second_plural
-            ["τιμαρου", "timarū"]
+            ["τερ̄αιαυου", "teřəyawū"]
           end
 
           def _present_third_plural
-            ["ιμαρου", "yimarū"]
+            ["ιερ̄αιαυου", "yeřəyawū"]
           end
 
           def _preterite_first_singular
-            ["αμαρετ (μωρετ)", "'amaret (māret)"]
+            ["ρ̄αιιητ", "řəyyēt"]
           end
 
           def _preterite_second_singular_masculine
-            ["αμαρτα (μωρτα)", "'amarta (mārta)"]
+            ["ρ̄αιιητα", "řəyyēta"]
           end
 
           def _preterite_second_singular_feminine
-            ["αμαρσ̄ε (μωρσ̄ε)", "'amarše (mārše)"]
+            ["ρ̄αιιησ̄ε", "řəyyēše"]
           end
 
           def _preterite_third_singular_masculine
-            ["αμαρ (μωρ)", "'amar (mār)"]
+            ["ρ̄αιιη", "řəyyē"]
           end
 
           def _preterite_third_singular_feminine
-            ["αμβρω (μωρω)", "'ambrā (mārā)"]
+            ["ρ̄ιιηυω", "řiyyēwā"]
           end
 
           def _preterite_first_plural
-            ["αμαρνω (μωρνω)", "'amarnā (mārnā)"]
+            ["ρ̄αιιηνω", "řəyyēnā"]
           end
 
           def _preterite_second_plural_masculine
-            ["αμαρτυν (μωρτυν)", "'amartun (mārtun)"]
+            ["ρ̄αιιητυν", "řəyyētun"]
           end
 
           def _preterite_second_plural_feminine
-            ["αμαρσ̄ιν (μωρσ̄ιν)", "'amaršin (māršin)"]
+            ["ρ̄αιιησ̄ιν", "řəyyēšin"]
           end
 
           def _preterite_third_plural
-            ["αμβρου (μωρου)", "'ambrū (mārū)"]
+            ["ρ̄ιιηυου", "řiyyēwū"]
           end
 
           def _imperfect_first_singular
-            ["ιεμερ (μιηρ)", "yemer (mier)"]
+            ["ρ̄εϊιου", "řeyyū"]
           end
 
           def _imperfect_second_singular_masculine
-            ["ιεμερετ (μιηρετ)", "yemeret (mieret)"]
+            ["ρ̄εϊιουτ", "řeyyūt"]
           end
 
           def _imperfect_second_singular_feminine
-            ["ιεμερες̄ (μιηρες̄)", "yemereš (miereš)"]
+            ["ρ̄εϊιους̄", "řeyyūš"]
           end
 
           def _imperfect_third_singular_masculine
-            ["ημερ (μηρ)", "'ēmer (mēr)"]
+            ["ρ̄εϊιου", "řeyyū"]
           end
 
           def _imperfect_third_singular_feminine
-            ["ημβρω (μηρω)", "'ēmbrā (mērā)"]
+            ["ρ̄εϊιουω", "řeyyūwā"]
           end
 
           def _imperfect_first_plural
-            ["ιεμερεν (μιηρεν)", "yemeren (mieren)"]
+            ["ρ̄εϊιουν", "řeyyūn"]
           end
 
           def _imperfect_second_plural_masculine
-            ["ιεμερτυν (μιηρτυν)", "yemertun (miertun)"]
+            ["ρ̄εϊιουτυν", "řeyyūtun"]
           end
 
           def _imperfect_second_plural_feminine
-            ["ιεμερσ̄ιν (μιηρσ̄ιν)", "yemeršin (mieršin)"]
+            ["ρ̄εϊιουσ̄ιν", "řeyyūšin"]
           end
 
           def _imperfect_third_plural
-            ["ημβρου (μηρου)", "'ēmbrū (mērū)"]
+            ["ρ̄εϊιουου", "řeyyūwū"]
           end
 
           def _pf_subjunctive_first_singular
-            ["в̄ωμαρ", "vāmar"]
+            ["в̄αρ̄αιιη", "vařəyyē"]
           end
 
           def _pf_subjunctive_first_plural
-            ["в̄ανιμαρ", "vanimar"]
+            ["в̄ενειρ̄αιιη", "venīřəyyē"]
           end
 
           def _pf_subjunctive_second
-            ["в̄ατιμαρ", "vatimar"]
+            ["в̄ετειρ̄αιιη", "vetīřəyyē"]
           end
 
           def _pf_subjunctive_third
-            ["в̄ημαρ", "vēmar"]
+            ["в̄ηρ̄αιιη", "vēřəyyē"]
           end
 
           def _impf_subjunctive_first_singular
-            ["αμωρα", "'amāra"]
+            ["αρ̄αιιωυα", "'ařəyyāwa"]
           end
 
           def _impf_subjunctive_second_singular_masculine
-            ["τιμωρα", "timāra"]
+            ["τερ̄αιιωυα", "teřəyyāwa"]
           end
 
           def _impf_subjunctive_second_singular_feminine
-            ["τιμωρια", "timāriya"]
+            ["τερ̄αιιωυια", "teřəyyāwiya"]
           end
 
           def _impf_subjunctive_third_singular_masculine
-            ["ιμωρα", "yimāra"]
+            ["ιερ̄αιιωυα", "yeřəyyāwa"]
           end
 
           def _impf_subjunctive_third_singular_feminine
-            ["ιμωρια", "yimāriya"]
+            ["ιερ̄αιιωυια", "yeřəyyāwiya"]
           end
 
           def _impf_subjunctive_first_plural
-            ["νιμωρυα", "nimāruwa"]
+            ["νερ̄αιιωυυα", "neřəyyāwuwa"]
           end
 
           def _impf_subjunctive_second_plural
-            ["τιμωρυα", "timāruwa"]
+            ["τερ̄αιιωυυα", "teřəyyāwuwa"]
           end
 
           def _impf_subjunctive_third_plural
-            ["ιμωρυα", "yimāruwa"]
+            ["ιερ̄αιιωυυα", "yeřəyyāwuwa"]
           end
 
           def _volitive_first_singular
-            _present_first_singular.zip(["αννα", "anna"]).map(&:join)
+            _present_first_singular.zip(["να", "na"]).map { |a| a.join.sub('ἠ', 'η') }
           end
 
           def _volitive_second_singular_masculine
-            _present_second_singular_masculine.zip(["αννα", "anna"]).map(&:join)
+            _present_second_singular_masculine.zip(["να", "na"]).map { |a| a.join.sub('ἠ', 'η') }
           end
 
           def _volitive_second_singular_feminine
@@ -176,7 +176,7 @@ module Morphology
           end
 
           def _volitive_third_singular_masculine
-            _present_third_singular_masculine.zip(["αννα", "anna"]).map(&:join)
+            _present_third_singular_masculine.zip(["να", "na"]).map { |a| a.join.sub('ἠ', 'η') }
           end
 
           def _volitive_third_singular_feminine
@@ -196,15 +196,15 @@ module Morphology
           end
 
           def _imperative_masculine_singular
-            ["μωρ", "mār"]
+            ["ρ̄αιιη", "řəyyē"]
           end
 
           def _imperative_feminine_singular
-            ["μαρει", "marī"]
+            ["ρ̄αιιευει", "řəyyewī"]
           end
 
           def _imperative_plural
-            ["μαρου", "marū"]
+            ["ρ̄αιιευου", "řəyyewū"]
           end
 
           def _precative_masculine_singular
@@ -220,15 +220,11 @@ module Morphology
           end
 
           def _infinitive
-            ["αμουρ", "'amūr"]
+            ["μαρ̄αιιου", "mařəyyū"]
           end
 
           def _active_participle
-            ["ουμιρ", "'ūmir"]
-          end
-
-          def _passive_participle
-            ["μαμουρ", "mamūr"]
+            ["μυρ̄αιιει", "muřayyī"]
           end
         end
       end

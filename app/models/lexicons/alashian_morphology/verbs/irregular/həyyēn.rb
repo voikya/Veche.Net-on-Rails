@@ -2,9 +2,9 @@ module Morphology
   module Alashian
     module Verbs
       module Irregular
-        module Amar
+        module Hayyen
           def conjugation
-            "Active Scale I Verb"
+            "Active Scale II Verb"
           end
 
           def subtype
@@ -12,155 +12,155 @@ module Morphology
           end
 
           def _present_first_singular
-            ["αμωρ", "'amār"]
+            ["αηαιιαν", "'ahəyyan"]
           end
 
           def _present_second_singular_masculine
-            ["τιμωρ", "timār"]
+            ["τιηαιιαν", "tihəyyan"]
           end
 
           def _present_second_singular_feminine
-            ["τιμαρει", "timarī"]
+            ["τιηανει", "tihənī"]
           end
 
           def _present_third_singular_masculine
-            ["ιμωρ", "yimār"]
+            ["ιηαιιαν", "yihəyyan"]
           end
 
           def _present_third_singular_feminine
-            ["ιμαρει", "yimarī"]
+            ["ιηανει", "yihənī"]
           end
 
           def _present_first_plural
-            ["νιμαρου", "nimarū"]
+            ["νιηανου", "nihənū"]
           end
 
           def _present_second_plural
-            ["τιμαρου", "timarū"]
+            ["τιηανου", "tihənū"]
           end
 
           def _present_third_plural
-            ["ιμαρου", "yimarū"]
+            ["ιηανου", "yihənū"]
           end
 
           def _preterite_first_singular
-            ["αμαρετ (μωρετ)", "'amaret (māret)"]
+            ["ηαιιηνετ", "həyyēnet"]
           end
 
           def _preterite_second_singular_masculine
-            ["αμαρτα (μωρτα)", "'amarta (mārta)"]
+            ["ηαιιητα", "həyyētha"]
           end
 
           def _preterite_second_singular_feminine
-            ["αμαρσ̄ε (μωρσ̄ε)", "'amarše (mārše)"]
+            ["ηαιιητζζε", "həyyēčhe"]
           end
 
           def _preterite_third_singular_masculine
-            ["αμαρ (μωρ)", "'amar (mār)"]
+            ["ηαιιην", "həyyēn"]
           end
 
           def _preterite_third_singular_feminine
-            ["αμβρω (μωρω)", "'ambrā (mārā)"]
+            ["ηιιηνω", "hiyēnā"]
           end
 
           def _preterite_first_plural
-            ["αμαρνω (μωρνω)", "'amarnā (mārnā)"]
+            ["ηαιιηννω", "həyyēnnā"]
           end
 
           def _preterite_second_plural_masculine
-            ["αμαρτυν (μωρτυν)", "'amartun (mārtun)"]
+            ["ηαιιηττυν", "həyyēthun"]
           end
 
           def _preterite_second_plural_feminine
-            ["αμαρσ̄ιν (μωρσ̄ιν)", "'amaršin (māršin)"]
+            ["ηαιιητζζιν", "həyyēčhin"]
           end
 
           def _preterite_third_plural
-            ["αμβρου (μωρου)", "'ambrū (mārū)"]
+            ["ηιιηνου", "hiyēnū"]
           end
 
           def _imperfect_first_singular
-            ["ιεμερ (μιηρ)", "yemer (mier)"]
+            ["ηεϊιε", "heyye"]
           end
 
           def _imperfect_second_singular_masculine
-            ["ιεμερετ (μιηρετ)", "yemeret (mieret)"]
+            ["ηεϊιετ", "heyyet"]
           end
 
           def _imperfect_second_singular_feminine
-            ["ιεμερες̄ (μιηρες̄)", "yemereš (miereš)"]
+            ["ηεϊιες̄", "heyyeš"]
           end
 
           def _imperfect_third_singular_masculine
-            ["ημερ (μηρ)", "'ēmer (mēr)"]
+            ["ηεϊιεν", "heyyen"]
           end
 
           def _imperfect_third_singular_feminine
-            ["ημβρω (μηρω)", "'ēmbrā (mērā)"]
+            ["ηεϊιενω", "heyyenā"]
           end
 
           def _imperfect_first_plural
-            ["ιεμερεν (μιηρεν)", "yemeren (mieren)"]
+            ["ηεϊιεν", "heyyen"]
           end
 
           def _imperfect_second_plural_masculine
-            ["ιεμερτυν (μιηρτυν)", "yemertun (miertun)"]
+            ["ηεϊιαττυν", "heyyəthun"]
           end
 
           def _imperfect_second_plural_feminine
-            ["ιεμερσ̄ιν (μιηρσ̄ιν)", "yemeršin (mieršin)"]
+            ["ηεϊιατζζιν", "heyyəčhin"]
           end
 
           def _imperfect_third_plural
-            ["ημβρου (μηρου)", "'ēmbrū (mērū)"]
+            ["ηεϊιενου", "heyyenū"]
           end
 
           def _pf_subjunctive_first_singular
-            ["в̄ωμαρ", "vāmar"]
+            ["в̄αηαιιεν", "vahəyyen"]
           end
 
           def _pf_subjunctive_first_plural
-            ["в̄ανιμαρ", "vanimar"]
+            ["в̄ενειηαιιεν", "venīhəyyen"]
           end
 
           def _pf_subjunctive_second
-            ["в̄ατιμαρ", "vatimar"]
+            ["в̄ετειηαιιεν", "vetīhəyyen"]
           end
 
           def _pf_subjunctive_third
-            ["в̄ημαρ", "vēmar"]
+            ["в̄ηηαιιεν", "vēhəyyen"]
           end
 
           def _impf_subjunctive_first_singular
-            ["αμωρα", "'amāra"]
+            ["αηαιιωνα", "'ahəyyāna"]
           end
 
           def _impf_subjunctive_second_singular_masculine
-            ["τιμωρα", "timāra"]
+            ["τιηαιιωνα", "tihəyyāna"]
           end
 
           def _impf_subjunctive_second_singular_feminine
-            ["τιμωρια", "timāriya"]
+            ["τιηαιιωνια", "tihəyyāniya"]
           end
 
           def _impf_subjunctive_third_singular_masculine
-            ["ιμωρα", "yimāra"]
+            ["ιηαιιωνα", "yihəyyāna"]
           end
 
           def _impf_subjunctive_third_singular_feminine
-            ["ιμωρια", "yimāriya"]
+            ["ιηαιιωνια", "yihəyyāniya"]
           end
 
           def _impf_subjunctive_first_plural
-            ["νιμωρυα", "nimāruwa"]
+            ["νιηαιιωνυ'α", "nihəyyānuwa"]
           end
 
           def _impf_subjunctive_second_plural
-            ["τιμωρυα", "timāruwa"]
+            ["τιηαιιωνυ'α", "tihəyyānuwa"]
           end
 
           def _impf_subjunctive_third_plural
-            ["ιμωρυα", "yimāruwa"]
+            ["ιηαιιωνυ'α", "yihəyyānuwa"]
           end
 
           def _volitive_first_singular
@@ -196,15 +196,15 @@ module Morphology
           end
 
           def _imperative_masculine_singular
-            ["μωρ", "mār"]
+            ["ηαιιην", "həyyēn"]
           end
 
           def _imperative_feminine_singular
-            ["μαρει", "marī"]
+            ["ηαιιενει", "həyyenī"]
           end
 
           def _imperative_plural
-            ["μαρου", "marū"]
+            ["ηαιιενου", "həyyenū"]
           end
 
           def _precative_masculine_singular
@@ -220,15 +220,11 @@ module Morphology
           end
 
           def _infinitive
-            ["αμουρ", "'amūr"]
+            ["μαηαιιουν", "mahəyyūn"]
           end
 
           def _active_participle
-            ["ουμιρ", "'ūmir"]
-          end
-
-          def _passive_participle
-            ["μαμουρ", "mamūr"]
+            ["μυηαιιν", "muhəyyin"]
           end
         end
       end
