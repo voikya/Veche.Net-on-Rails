@@ -125,6 +125,18 @@ module Lexicons
         end
       end
 
+      define_method :"t#{var}_geminated_or_aspirated" do
+        component = send(:"t#{var}")
+        case component
+          when "ph", "th", "kh", "tsh", "čh"
+            component
+          when "p", "t", "k", "č"
+            component + "h"
+          else
+            component * 2
+        end
+      end
+
       define_method var do
         return TRANSLITERATION_HASH[instance_variable_get(:"@#{var}")]
       end
@@ -146,6 +158,18 @@ module Lexicons
           when "δ" then "δ̄"
           when "γ" then "γ̄"
           else          component
+        end
+      end
+
+      define_method "#{var}_geminated_or_aspirated" do
+        component = send(var)
+        case component
+          when "ππ", "ττ", "κκ", "τσ", "τζζ"
+            component
+          when "τζ"
+            "τζζ"
+          else
+            component * 2
         end
       end
     end
