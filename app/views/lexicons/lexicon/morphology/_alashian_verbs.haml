@@ -15,28 +15,31 @@
       %th Volitive
     %tr
       %th 1st Sg
-      %td= form(m, :present_first_singular)
-      %td= form(m, :preterite_first_singular)
-      %td= form(m, :imperfect_first_singular)
-      %td= form(m, :pf_subjunctive_first_singular)
-      %td= form(m, :impf_subjunctive_first_singular)
-      %td= form(m, :volitive_first_singular)
+      - unless m.logical_plural?
+        %td= form(m, :present_first_singular)
+        %td= form(m, :preterite_first_singular)
+        %td= form(m, :imperfect_first_singular)
+        %td= form(m, :pf_subjunctive_first_singular)
+        %td= form(m, :impf_subjunctive_first_singular)
+        %td= form(m, :volitive_first_singular)
     %tr
       %th 2nd Sg Masc
-      %td= form(m, :present_second_singular_masculine)
-      %td= form(m, :preterite_second_singular_masculine)
-      %td= form(m, :imperfect_second_singular_masculine)
-      %td= form(m, :pf_subjunctive_second)
-      %td= form(m, :impf_subjunctive_second_singular_masculine)
-      %td= form(m, :volitive_second_singular_masculine)
+      - unless m.logical_plural?
+        %td= form(m, :present_second_singular_masculine)
+        %td= form(m, :preterite_second_singular_masculine)
+        %td= form(m, :imperfect_second_singular_masculine)
+        %td= form(m, :pf_subjunctive_second)
+        %td= form(m, :impf_subjunctive_second_singular_masculine)
+        %td= form(m, :volitive_second_singular_masculine)
     %tr
       %th 2nd Sg Fem
-      %td= form(m, :present_second_singular_feminine)
-      %td= form(m, :preterite_second_singular_feminine)
-      %td= form(m, :imperfect_second_singular_feminine)
-      %td= form(m, :pf_subjunctive_second)
-      %td= form(m, :impf_subjunctive_second_singular_feminine)
-      %td= form(m, :volitive_second_singular_feminine)
+      - unless m.logical_plural?
+        %td= form(m, :present_second_singular_feminine)
+        %td= form(m, :preterite_second_singular_feminine)
+        %td= form(m, :imperfect_second_singular_feminine)
+        %td= form(m, :pf_subjunctive_second)
+        %td= form(m, :impf_subjunctive_second_singular_feminine)
+        %td= form(m, :volitive_second_singular_feminine)
     %tr
       %th 3rd Sg Masc
       %td= form(m, :present_third_singular_masculine)
@@ -95,16 +98,24 @@
       %th Deverbatives
     %tr
       %th Masc Sg
-      %td= form(m, :imperative_masculine_singular)
-      %td= form(m, :precative_masculine_singular)
+      - if m.logical_plural?
+        %td
+        %td
+      - else
+        %td= form(m, :imperative_masculine_singular)
+        %td= form(m, :precative_masculine_singular)
       %td
       %td
       %th Infinitive
       %td= form(m, :infinitive)
     %tr
       %th Fem Sg
-      %td= form(m, :imperative_feminine_singular)
-      %td= form(m, :precative_feminine_singular)
+      - if m.logical_plural?
+        %td
+        %td
+      - else
+        %td= form(m, :imperative_feminine_singular)
+        %td= form(m, :precative_feminine_singular)
       %td
       %td
       %th Active<br/>Participle
