@@ -49,7 +49,7 @@ module Lexicons
 
     ASPIRATES = %w(ph th kh tsh čh)
     PLOSIVES = %w(p ph b t th d k kh g)
-    ASPIRATABLE = %w(p t k)
+    ASPIRATABLE = %w(p t k ph th kh tsh čh)
 
     attr_writer :c1, :c2, :c3, :c4, :v
 
