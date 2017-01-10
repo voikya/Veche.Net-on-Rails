@@ -117,9 +117,9 @@ module Lexicons
         })
       end
 
-      stressed = stressed.gsub(/((?:\p{Word}|')+)/) do |word|
+      stressed = stressed.gsub(/((?:\p{Word}|'|’)+)/) do |word|
         word
-          .gsub(/(ι(?=[αωεου])|(?<=[α])ι|(?<=[αε])υ|(?<=[αωηιυ])ι(?=[αωειου])|(?<=[αωεηιυ'])[υη](?=[αωειουἀἠ]))/, {
+          .gsub(/(ι(?=[αωεου’])|(?<=[α])ι|(?<=[αε])υ|(?<=[αωηιυ])ι(?=[αωειου])|(?<=[αωεηιυ'])[υη](?=[αωειουἀἠ]))/, {
             # Convert consonantal ι/υ/η to y/w/h for matching purposes
             'ι' => 'y',
             'υ' => 'w',

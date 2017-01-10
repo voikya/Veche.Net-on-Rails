@@ -68,8 +68,7 @@ module Lexicons
         when /^#{C}a#{C}#{C}ē#{C}$/
           # Quadriconsonantal
           @c1, @c2, @c3, @c4 = $1, $2, $3, $4
-        when /^#{C}/
-          @c1 = $1
+        else
           @sound_stem = true
       end
     end
