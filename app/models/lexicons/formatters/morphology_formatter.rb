@@ -28,7 +28,11 @@ module Lexicons
 
       def for_reading
         if @content && !@content.new_record?
-          partial = "lexicons/lexicon/morphology/novegradian" +
+          language = case @content
+            when NovegradianMorphology then 'novegradian'
+            when AlashianMorphology then 'alashian'
+          end
+          partial = "lexicons/lexicon/morphology/#{language}" +
                     "_" +
                     @content.category.to_s.pluralize
           ActionView::Base.new(Rails.configuration.paths['app/views'])

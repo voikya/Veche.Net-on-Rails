@@ -1,0 +1,132 @@
+%table.verbs
+  %thead
+    %tr
+      %th.morphology-info{:colspan => 7}
+        = m.conjugation
+        .subtype (Subtype #{m.subtype})
+  %tbody
+    %tr
+      %th
+      %th Present
+      %th Preterite
+      %th Imperfect
+      %th Pf. Subj.
+      %th Impf. Subj.
+      %th Volitive
+    %tr
+      %th 1st Sg
+      - unless m.logical_plural?
+        %td= form(m, :present_first_singular)
+        %td= form(m, :preterite_first_singular)
+        %td= form(m, :imperfect_first_singular)
+        %td= form(m, :pf_subjunctive_first_singular)
+        %td= form(m, :impf_subjunctive_first_singular)
+        %td= form(m, :volitive_first_singular)
+    %tr
+      %th 2nd Sg Masc
+      - unless m.logical_plural?
+        %td= form(m, :present_second_singular_masculine)
+        %td= form(m, :preterite_second_singular_masculine)
+        %td= form(m, :imperfect_second_singular_masculine)
+        %td= form(m, :pf_subjunctive_second)
+        %td= form(m, :impf_subjunctive_second_singular_masculine)
+        %td= form(m, :volitive_second_singular_masculine)
+    %tr
+      %th 2nd Sg Fem
+      - unless m.logical_plural?
+        %td= form(m, :present_second_singular_feminine)
+        %td= form(m, :preterite_second_singular_feminine)
+        %td= form(m, :imperfect_second_singular_feminine)
+        %td= form(m, :pf_subjunctive_second)
+        %td= form(m, :impf_subjunctive_second_singular_feminine)
+        %td= form(m, :volitive_second_singular_feminine)
+    %tr
+      %th 3rd Sg Masc
+      %td= form(m, :present_third_singular_masculine)
+      %td= form(m, :preterite_third_singular_masculine)
+      %td= form(m, :imperfect_third_singular_masculine)
+      %td= form(m, :pf_subjunctive_third)
+      %td= form(m, :impf_subjunctive_third_singular_masculine)
+      %td= form(m, :volitive_third_singular_masculine)
+    %tr
+      %th 3rd Sg Fem
+      %td= form(m, :present_third_singular_feminine)
+      %td= form(m, :preterite_third_singular_feminine)
+      %td= form(m, :imperfect_third_singular_feminine)
+      %td= form(m, :pf_subjunctive_third)
+      %td= form(m, :impf_subjunctive_third_singular_feminine)
+      %td= form(m, :volitive_third_singular_feminine)
+    %tr
+      %th 1st Pl
+      %td= form(m, :present_first_plural)
+      %td= form(m, :preterite_first_plural)
+      %td= form(m, :imperfect_first_plural)
+      %td= form(m, :pf_subjunctive_first_plural)
+      %td= form(m, :impf_subjunctive_first_plural)
+      %td= form(m, :volitive_first_plural)
+    %tr
+      %th 2nd Pl Masc
+      %td= form(m, :present_second_plural)
+      %td= form(m, :preterite_second_plural_masculine)
+      %td= form(m, :imperfect_second_plural_masculine)
+      %td= form(m, :pf_subjunctive_second)
+      %td= form(m, :impf_subjunctive_second_plural)
+      %td= form(m, :volitive_second_plural)
+    %tr
+      %th 2nd Pl Fem
+      %td= form(m, :present_second_plural)
+      %td= form(m, :preterite_second_plural_feminine)
+      %td= form(m, :imperfect_second_plural_feminine)
+      %td= form(m, :pf_subjunctive_second)
+      %td= form(m, :impf_subjunctive_second_plural)
+      %td= form(m, :volitive_second_plural)
+    %tr
+      %th 3rd Pl
+      %td= form(m, :present_third_plural)
+      %td= form(m, :preterite_third_plural)
+      %td= form(m, :imperfect_third_plural)
+      %td= form(m, :pf_subjunctive_third)
+      %td= form(m, :impf_subjunctive_third_plural)
+      %td= form(m, :volitive_third_plural)
+    %tr
+      %th
+      %th Imperative
+      %th Precative
+      %th
+      %th
+      %th
+      %th Deverbatives
+    %tr
+      %th Masc Sg
+      - if m.logical_plural?
+        %td
+        %td
+      - else
+        %td= form(m, :imperative_masculine_singular)
+        %td= form(m, :precative_masculine_singular)
+      %td
+      %td
+      %th Infinitive
+      %td= form(m, :infinitive)
+    %tr
+      %th Fem Sg
+      - if m.logical_plural?
+        %td
+        %td
+      - else
+        %td= form(m, :imperative_feminine_singular)
+        %td= form(m, :precative_feminine_singular)
+      %td
+      %td
+      %th Active<br/>Participle
+      %td= form(m, :active_participle)
+    %tr
+      %th Pl
+      %td= form(m, :imperative_plural)
+      %td= form(m, :precative_plural)
+      %td
+      %td
+      %th Passive<br/>Participle
+      %td
+        - unless m.intransitive?
+          = form(m, :passive_participle)

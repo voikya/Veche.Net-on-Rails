@@ -103,14 +103,14 @@
   %p With #{t "ταργήν", "targēn"} “translate”:
   - alashian = { :present     => %w(άταργαν τίταργαν τιταργανεί ίταργαν ιταργανεί νιταργανού τιταργανού τιταργανού ιταργανού),
                  :preterite   => %w(ταργήνετ ταργήντα ταργήνσ̄ε ταργήν τιργηνώ ταργηννώ ταργήντυν ταργήνσ̄ιν τιργηνού),
-                 :imperfect   => %w(τέργεν τέργενετ τέργενες̄ τεργήν τεργενώ τέργενεν τέργεντυν τέργενσ̄ιν τεργενού),
+                 :imperfect   => %w(τέργεν τέργενετ τέργενες̄ τέργεν τεργενώ τέργενεν τέργεντυν τέργενσ̄ιν τεργενού),
                  :subjunctive => %w(в̄άταργεν в̄ετείταργεν в̄ετείταργεν в̄ήταργεν в̄ήταργεν в̄ενείταργεν в̄ετείταργεν в̄ετείταργεν в̄ήταργεν),
                  :imperative  => %w(ταργήν ταργενεί ταργενού),
                  :infinitive  => "ματαργούν",
                  :participle  => "μύταργιν" }
   - latin = { :present     => %w('atargan titargan titarganī yitargan yitarganī nitarganū titarganū titarganū yitarganū),
               :preterite   => %w(targēnet targēnta targēnše targēn tirgēnā targēnnā targēntun targēnšin tirgēnū),
-              :imperfect   => %w(tergen tergenet tergeneš tergēn tergenā tergenen tergentun tergenšin tergenū),
+              :imperfect   => %w(tergen tergenet tergeneš tergen tergenā tergenen tergentun tergenšin tergenū),
               :subjunctive => %w(vatargen vetītargen vetītargen vētargen vētargen venītargen vetītargen vetītargen vētargen),
               :imperative  => %w(targēn targenī targenū),
               :infinitive  => "matargūn",
@@ -282,12 +282,12 @@
 
   = section "C3 = '" do
     %p Root-final *' behaves quite erratically, but has all of the same irregularities as Scale I verbs. The root *brī' “pure, clear, free” will be used to demonstrate; its Scale II realizations are #{t "βαρρή", "bərrē"} “purify, liberate, pronounce free (of a debt, claim, etc)” and #{t "βαρρώ", "bərrā"} “be purified, pronounced free”.
-    %p In the present tense of both <i>kəthēb</i> and <i>kəthāb</i> verbs, the glottal stop drops entirely when word-final and assimilates into the preceding consonant when there is a suffix, causing gemination.
+    %p In the present tense of <i>kəthēb</i>, the glottal stop drops entirely when word-final and assimilates into the preceding consonant when there is a suffix, causing gemination. In <i>kəthāb</i>, only the former occurs, since the glottal stop never comes in contact with another consonant.
     - alashian = %w(άβαρρα τίβαρρα τιβαρρεί ίβαρρα ιβαρρεί νιβαρρού τιβαρρού τιβαρρού ιβαρρού ιβαρρού)
     - latin = %w('abərra tibərra tibərrī yibərra yibərrī nibərrū tibərrū tibərrū yibərrū yibərrū)
     = render 'verb_table', :title => "Scale II Present Tense", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
     %p The preterite features the same special set of suffixes as seen in Scale I. In the first person singular, the glottal stop drops and the two vowels on either side contract to an unstressed long vowel /aː/. In the first person plural, it assimilates into the following /n/, causing gemination. In the second person masculine forms, the /t/ of the ending becomes an aspirated /tʰ/, while in the feminine forms the /ʃ/ becomes /tʃʰ/. In the third person masculine singular the glottal stop simply drops, while the other third person forms are regular.
-    - alashian = %w(βαρρήτ βαρρήττα βαρρήτζζε βαρρή βαρρηώ βαρρηνώ βαρρήττυν βαρρήτζζιν βαρρηού βαρρηού)
+    - alashian = %w(βαρρήτ βαρρήττα βαρρήτζζε βαρρή βιρρηώ βαρρηννώ βαρρήττυν βαρρήτζζιν βιρρηού βιρρηού)
     - latin = %w(bərrēt bərētha bərrēčhe bərrē birrē'ā bərrēnnā bərēthun bərēčhin birrē'ū birrē'ū)
     = render 'verb_table', :title => "Scale II Preterite Tense", :verb => { :ala => "bərrē", :eng => "purify" }, :alashian => alashian, :latin => latin
     %p The imperfect is similarly messy. When word-final (1Sg/3SgM), the glottal stop simply drops. When surrounded on both sides by /e/ (1Pl/2SgM/2SgF), it drops and the two vowels contract to an unstressed /eː/. In the second person plural forms, the suffix becomes aspirated as in the preterite.
@@ -330,7 +330,7 @@
 
   = section "C3 = Y/W" do
     %p The consonants *Y and *W in #{template "C3"} position will monophthongize or drop entirely when word-final or checked by another consonant. At times they will disappear intervocalically as well. Two such roots are *zmāy “thirsty”, yielding #{t "ζαμμή", "zəmmē"} “make thirsty” and #{t "ζαμμώ", "zəmmā"} “be made thirsty”, and *bdāw “empty, desolate”, yielding #{t "βαδδή", "bəddē"} “empty” and #{t "βαδδώ", "bəddā"} “be emptied”.
-    %p In the <i>kəthēb</i> present tense, the word-final sequences *-ay and *-aw collapse into an unstressed *-ē and -ū respectively: #{t "άζαμμη", "'azəmmē"} “I make thirst” (not **'azəmmay), #{t "τίβαδδου", "tibəddū"} “you (m) empty” (not **tibəddaw). Suffixed forms are regular: #{t "νιζαμιού", "nizəmyū"} “we make thirst”, #{t "ιβαδυεί", "yibədwī"} “she empties”.
+    %p In the <i>kəthēb</i> present tense, the word-final sequences *-ay and *-aw collapse into an unstressed *-ē and -ū respectively: #{t "άζαμμἠ", "'azəmmē"} “I make thirst” (not **'azəmmay), #{t "τίβαδδοὐ", "tibəddū"} “you (m) empty” (not **tibəddaw). Suffixed forms are regular: #{t "νιζαμιού", "nizəmyū"} “we make thirst”, #{t "ιβαδυεί", "yibədwī"} “she empties”.
     %p The <i>kəthēb</i> preterite forms lose the final *Y/W in all cases other than the third person singular feminine and third person plural: #{t "ζαμμήτα", "zəmmēta"} “you (m) made thirst” (not **zəmmēyta), #{t "βιδδηυώ", "biddēwā"} “she emptied”. In the first person singular, contraction takes place: #{t "ζαμμήτ", "zəmmēt"} “I made thirst” (not **zəmmēyet), #{t "βαδδήτ", "bəddēt"} “I emptied” (not **bəddēwet).
     %p In the <i>kəthēb</i> imperfect, the sequences *-ey and *-eye- both collapse into *-ē-, with a stress shift if appropriate: #{t "ζεμμής̄", "zemmēš"} “you (f) were making thirst” (not **zemmeyeš), #{t "ζεμμή", "zemmē"} “he was making thirst” (not **zemmey). The third person singular feminine and third person plural are regular. When #{template "C3"} = *W, the result of *-ew and *-ewe- contraction may be either *-ū- or *-ē- (as in <i>katab</i>), with the latter being more common nowadays: #{t "βεδδούν", "beddūn"} / #{t "βεδδήν", "beddēn"} “we were emptying” (not **beddewen).
     %p In the <i>kəthēb</i> perfective subjunctive, #{template "C3"} simply drops and the vowel immediately beforehand lengthens in compensation, with stress shifting to the last syllable: #{t "в̄αζαμμή", "vazəmmē"} “[that] I made thirst” (not **vazəmmey), #{t "в̄ετειβαδδή", "vetībəddē"} “[that] you (m) counted” (not **vetībəddew).

@@ -6,7 +6,7 @@ module Lexicons
     end
 
     def form(morphology_object, method)
-      m = morphology_object.send method
+      m = morphology_object.send(method)
       if m && m.to_s.present?
         %Q(#{m}<br/><span class="transliteration">#{m.transliteration}</span>).html_safe
       else

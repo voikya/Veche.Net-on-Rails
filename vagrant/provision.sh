@@ -25,7 +25,7 @@ curl -O https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm
 curl -O https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer.asc
 gpg --verify rvm-installer.asc
 bash rvm-installer stable
-source /etc/profile.d/rvm.sh && rvm install 2.1.5
+source /etc/profile.d/rvm.sh && rvm install 2.3.3
 cd /veche
 
 # Set up gems
@@ -43,7 +43,7 @@ sudo apt-get install -y postgresql-client
 sudo rm /etc/apache2/sites-available/000-default.conf
 sudo rm /etc/apache2/sites-enabled/000-default.conf
 cat >~/000-veche.conf <<'EOF'
-PassengerRuby /usr/local/rvm/gems/ruby-2.1.5@vechenet/wrappers/ruby
+PassengerRuby /usr/local/rvm/gems/ruby-2.3.3@vechenet/wrappers/ruby
 PassengerAppEnv development
 
 <VirtualHost *:80>

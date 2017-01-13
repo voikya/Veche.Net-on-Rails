@@ -53,8 +53,10 @@ module Lexicons
       fields = params.reduce({}) do |memo, (k, v)|
         memo[k.gsub('-', '_').to_sym] = v
         memo
+      end.reject do |k,v|
+        !@lexicon.lexicon_class.fields.include?(k)
       end
-      @entry = @lexicon.lexicon_class.create fields.permit(@lexicon.lexicon_class.fields)
+      @entry = @lexicon.lexicon_class.create fields
       render :json => @entry.to_read_hash
     end
 
@@ -63,9 +65,11 @@ module Lexicons
       fields = params.reduce({}) do |memo, (k, v)|
         memo[k.gsub('-', '_').to_sym] = v
         memo
+      end.reject do |k,v|
+        !@lexicon.lexicon_class.fields.include?(k)
       end
       @entry = @lexicon.entry(params[:slug])
-      @entry.update_attributes fields.permit(@lexicon.lexicon_class.fields)
+      @entry.update_attributes fields
       render :json => @entry.to_read_hash
     end
 
