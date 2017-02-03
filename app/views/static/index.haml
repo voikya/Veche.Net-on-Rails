@@ -25,6 +25,7 @@
         .article-contents-image(data-section='novegradian')
         .article-contents-image(data-section='alashian')
         .article-contents-image(data-section='ochets')
+        .article-contents-image(data-section='tunisian')
         .article-contents-image(data-section='linguistics')
         .article-contents-inner
           %section(data-section='intro')
@@ -91,6 +92,16 @@
                 = link_to "Yeniseian Languages (Wikipedia)", 'http://en.wikipedia.org/wiki/Yeniseian_languages'
                 — for some background on the Yeniseian family
 
+          %section(data-section='tunisian')
+            %h2 The Tunisian Language
+            %p Tunisian (<i>la leigge tenésiane</i>) is a fictional language ("conlang") in the Romance language family, closely related to such languages as French, Spanish, Portuguese, Italian, and Romanian. It attempts to imagine what an African Romance language, descended from the Latin spoken in the African provinces of the Roman Empire, might have looked like. In actuality we have only very scarce examples of African Latin, yet tantalizingly there exist a number of references to the existence of a Romance language in North Africa as late as the 12th century.
+            %p At present Tunisian is still undergoing development, and information will be added as it becomes available.
+            %h3 Links
+            %ul
+              %li
+                = link_to "Grammar of the Tunisian Language", tunisian_index_path
+                — the main index page to the online version of th egrammar
+
           %section(data-section='linguistics')
             %h2 Linguistics
             %p This section contains various articles and other information related to real-world linguistics written by myself. For the most part my primary interests lie in the Slavic and Semitic languages, but I may at times write about other groups as well.
@@ -100,6 +111,7 @@
               %li= link_to "The Development of Slavic Numeral Agreement", linguistics_slavic_numerals_path
               %li= link_to "Verbs of Motion in the Russian Aspectual System", linguistics_verbs_of_motion_path
 
+          %div{:style => "height: 100px;"}
 
     %article#programming
       .article-wrapper

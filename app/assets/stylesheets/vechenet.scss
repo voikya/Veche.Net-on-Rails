@@ -238,6 +238,7 @@ body.vechenet {
     &[data-section=novegradian] { background-image: image-url('cyrillic.jpg');     }
     &[data-section=alashian]    { background-image: image-url('cypriot.jpg');      }
     &[data-section=ochets]      { background-image: image-url('oldturkic.jpg');    }
+    &[data-section=tunisian]    { background-image: image-url('arabic.jpg');       }
     &[data-section=linguistics] { background-image: image-url('hieratic.jpg');
                                   background-position: center center;              }
     &[data-section=programming] { background-image: image-url('ruby.jpg');         }
@@ -319,6 +320,9 @@ body.vechenet {
       opacity: 1;
     }
     .article-contents[data-current-section=ochets] .article-contents-image[data-section=ochets] {
+      opacity: 1;
+    }
+    .article-contents[data-current-section=tunisian] .article-contents-image[data-section=tunisian] {
       opacity: 1;
     }
     .article-contents[data-current-section=linguistics] .article-contents-image[data-section=linguistics] {
