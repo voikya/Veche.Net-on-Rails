@@ -114,27 +114,24 @@
       %td <i>*šuud</i> — “happiness”
   %p Očets nouns inflect for case, number, definiteness, and possessor. There are also several miscellaneous affixes.
   %p All nouns are also inherently front-vowel roots, back-vowel roots, or “epicene” roots, as determined by the final vowel of the root (or next-to-last if the last is a schwa). Front-vowel roots only take affixes with front vowels, while back-vowel roots only take affixes with back vowels. Epicene nouns can go either way according to some somewhat complex rules. This is complicated, however, by the fact that certain affixes are harmony-neutral and therefore invariable. These are subdivided further into two types: “weak” neutral vowels which simply ignore harmony rules, and “strong” neutral vowels which force all subsequent vowels to follow their own harmony pattern, ignoring whatever the noun root may normally call for. Compare, for instance, the following:
-  = example_sentence :ochets => "котыынемакаи",
-                     :translit => "kotyynemakai",
-                     :breakdown => "ko-tyy-n-em-a-kai",
-                     :underlying => "*ko{b}-tyy{b+}s-n-è{f}m-A{b}-kA{b}i",
-                     :gloss => "#{abbrev '2sg'}-brother-#{abbrev 'pl'}-#{abbrev 'tra'}-#{abbrev 'ind'}-and",
-                     :eng => "and [as] your brothers"
-  = example_sentence :ochets => "котыынеечеи",
-                     :translit => "kotyyneečei",
-                     :breakdown => "ko-tyy-n-e-e-čei",
-                     :underlying => "*ko{b}-tyy{b+}s-n-è{f+}-A{f}-kA{f}i",
-                     :gloss => "#{abbrev '2sg'}-brother-#{abbrev 'pl'}-#{abbrev 'obj'}-#{abbrev 'ind'}-and",
-                     :eng => "and [to] your brothers"
+  = example_sentence "котыынемакаи",
+                     "kotyynemakai",
+                     "ko{b}-tyy{b+}s-n-è{f}m-A{b}-kA{b}i",
+                     "{2sg}-brother-{pl}-{tra}-{ind}-and",
+                     "and [as] your brothers"
+  = example_sentence "котыынеечеи",
+                     "kotyyneečei",
+                     "ko{b}-tyy{b+}s-n-è{f+}-A{f}-kA{f}i",
+                     "{2sg}-brother-{pl}-{obj}-{ind}-and",
+                     "and [to] your brothers"
   %p The first word means “and your brothers” in the translative case, while the second means the same thing in the objective case. Both are back-vowel roots, as can be seen in the root vowel /ɨ:/. However, in both of these words, after the plural suffix is a case ending containing a neutral vowel /e/. In the first case, it is weak, so even though the suffix introduces a front vowel /e/, the plural possessive suffix afterwards still contains a back vowel—the case suffix had no effect on harmony at all, despite its own dissonance with the otherwise back-vowel-dominated word. Thus both the indirective suffix and clitic “and” show back-vowel harmony, according to the root <i>*tyys</i>.
   %p In the second example, however, this /e/ is strong, and therefore “resets” the harmony of the word for all morphemes after it; thus the indirective suffix and clitic “and” show front-vowel harmony, despite the root.
   %p Due to the complexity of both the harmony system and sandhi, a special notation will be used to indicate underlying forms alongside surface forms. Underlying forms will always be preceded by an asterisk, like so:
-  = example_sentence :ochets => "тадаҕнее",
-                     :translit => "tadaǧnee",
-                     :breakdown => "ta-daǧn-e-e",
-                     :underlying => "*tV-da{b+}ǧə{0}n-è{f+}-A{f}",
-                     :gloss => "#{abbrev 'def'}-vegetable-#{abbrev 'obj'}-#{abbrev 'ind'}",
-                     :eng => "[to] the plant"
+  = example_sentence "тадаҕнее",
+                     "tadaǧnee",
+                     "tV-da{b+}ǧə{0}n-è{f+}-A{f}",
+                     "{def}-vegetable-{obj}-{ind}",
+                     "[to] the plant"
   %p The first line above represents native script, the second transliteration, the third a simplified breakdown, the fourth a breakdown of the underlying form, and the fifth a gloss.
   %p Hyphens indicate morpheme boundaries. Superscripts indicate whether a vowel is f(ront), b(ack), or 0 (suppressed). A plus sign after the superscript means this is a harmony-determining vowel, that is, that all vowels following it must match its harmony pattern. In the above example, the back /f/ of the root <i>*daǧən</i> “vegetable” triggers back harmony, but this is then suppressed in favor of front vowel harmony by the objective suffix *-e-, which consists of a strong neutral vowel. Therefore, all affixes following this will have front vowels. If there were an affix between the root and the accusative suffix, it would have back vowel harmony, since it precedes the syllable inducing front vowels.
   %p When a majuscule vowel appears, this represents a vowel whose quality determined by harmony. “A” represents /e ~ a/, “O” /ø ~ o/, “U” /y ~ u/, and “I” /i ~ ɨ/. An affix *-A- will therefore appear as /a/ on the surface if back vowel harmony is required, or as /e/ if front vowel harmony is needed. The vowels “è” and “ì”, featuring a grave accent, will not trigger palatalization of the previous consonant, while regular “e” and “i” will. A plain “V” with no other markings represents a vowel whose qualities are determined by some other rule; in this case, the definite prefix *tV- tends to match the first vowel of the following syllable.
@@ -2328,19 +2325,17 @@
 = section "Relative Suffix" do
   %p The primary function of the relative suffix *-d- is to relativize a postpositional or otherwise oblique phrase, thereby allowing it to directly modify a noun almost like an adjective would (e.g., #{t "туҕвуулд тахаака", "tuǧwuuld taxaaka"} “the man [that is] in the house” from #{underlying "*tV{b}-ǧuu{b+}-I{b→0}l-d tV{b}-xaa{b+}k-A{b}"}). It is inserted after any case/number suffixes, and suppresses the indirective suffix even if the word is definite. Once again, its usage will be discussed at a later point.
   %p One irregular behavior of this suffix, however, is that it is required on postpositional/oblique phrases serving as the complement of the verb “to be”. Here it will be forced to take a predicate agreement suffix, which comes at the very end of the noun and will result in the indirective marker reappearing if it was suppressed by the relative suffix, though only if the predicate agreement suffix begins with a consonant. For example:
-  = example_sentence :ochets => "Cуулҥа туҕвуулдан.",
+  = example_sentence "Cуулҥа туҕвуулдан.",
                      :translit => "Suulŋa tuǧwuuldan.",
-                     :breakdown => "S-uul-ŋ-a tu-ǧwuu-l-d-an.",
-                     :underlying => "*t-iuu{b+}l-ŋ-A{b} tV{b}-ǧuu{b+}-I{b→0}l-d-À{b}n",
-                     :gloss => "#{abbrev 'def'}-friend-#{abbrev 'anim.pl'}-#{abbrev 'ind'} #{abbrev 'def'}-house-#{abbrev 'loc'}-#{abbrev 'rel'}-#{abbrev '3pl.anim.pred'}",
-                     :eng => "The friends are in the house",
+                     "t-iuu{b+}l-ŋ-A{b} tV{b}-ǧuu{b+}-I{b→0}l-d-À{b}n",
+                     "{def}-friend-{anim.pl}-{ind} {def}-house-{loc}-{rel}-{3pl.anim.pred}",
+                     "The friends are in the house",
                      :comment => "(no indirective on “house”)"
-  = example_sentence :ochets => "Cиниигене туҕвуулдады.",
-                     :translit => "Siniigene tuǧwuuldady.",
-                     :breakdown => "Si-niige-n-e tu-ǧwuu-l-d-a-dy.",
-                     :underlying => "*tV{f}-nii{f}ge{f+}-n-À{f} tV{b}-ǧuu{b+}-I{b→0}l-d-À{b}-dÌ{b}",
-                     :gloss => "#{abbrev 'def'}-book-#{abbrev 'inan.pl'}-#{abbrev 'ind'} #{abbrev 'def'}-house-#{abbrev 'loc'}-#{abbrev 'rel'}-#{abbrev 'ind'}-#{abbrev '3.inan.pred'}",
-                     :eng => "The books are in the house",
+  = example_sentence "Cиниигене туҕвуулдады.",
+                     "Siniigene tuǧwuuldady.",
+                     "*tV{f}-nii{f}ge{f+}-n-À{f} tV{b}-ǧuu{b+}-I{b→0}l-d-À{b}-dÌ{b}",
+                     "{def}-book-{inan.pl}-{ind} {def}-house-{loc}-{rel}-{ind}-{3.inan.pred}",
+                     "The books are in the house",
                      :comment => "(with indirective on “house”)"
 
 = section "Foreign Loans" do

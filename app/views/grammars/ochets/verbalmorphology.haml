@@ -159,12 +159,12 @@
           %br
           қавыҥ ‘convince’
           %br
-          қөишееҥ ‘feed’
+          қашееҥ ‘feed’
       %tr
         %td š-
         %td mental states, actions involving thought or planning, seeing or hearing
         %td
-          шазҕаҥ ‘speak’
+          шызҕаҥ ‘speak’
           %br
           штаноҥ ‘remember’
           %br
@@ -559,7 +559,7 @@
       %td 3rd Person Subject + Object Agreement Marker
       %td TAM Marker
       %td 1st/2nd Person Subject Agreement Marker
-      %td
+      %td (Passive)
       %td Imperative
       %td Root
       %td Subject Agreement Markers (opt.)
@@ -682,6 +682,8 @@
         = underlying("n{+6}-d{+5}-kÀl{+4}-š{+3}-ain{0}-šIŋ{-1}")
         %br
         “We see ourselves [separately].”
+
+    %p Note that there is a special passive morpheme that can appear in slot +2, but it is no longer productive, having in effect become a meaningless morpheme that simply must be present in the conjugation of a few particular verbs. It typically takes the form #{underlying("-a{b+}t-")} when preceded by a consonant (and forcing back vowel harmony), or as simply #{underlying("-t-")} (with no harmony implications) after a vowel.
 
   = section "Present Definite" do
     %p The present definite is formed in the same way as for unergative verbs, except with the full agreement marker in slot +5. The first and second person agreement continue to be expressed as -č- and -g-, and the same rules apply regarding the realization of the TAM morpheme in different forms.
@@ -1013,7 +1015,7 @@
           = render 'verb_table', :title => "сташитеҥ “to wake up” —  Present Indefinite", :forms => forms
 
   = section "Present Definite" do
-    %p The present definite is formed in a similar pattern. The TAM marker #{underlying "*-kÀn-"} is generalized to -ai-/-ei- in all forms, while the theme in +3 appears as -w- when followed by a vowel, or as a vocalized -u- when followed by a consonant.
+    %p The present definite is formed in a similar pattern. The TAM marker #{underlying "*-kÀn-"} is generalized to -ai-/-ei- in all forms, while the theme in +3 appears as -w- when followed by a vowel, or as a vocalized weak -ù- when followed by a consonant.
     - forms = { :sg1  => { :cyr => "шеиушит(еш)", :lat => "šeiušit(eš)", :und => "š{+5}-kÀn{+4}-w{+3}-šit{0}-(Àš){-1}" },
                 :sg2  => { :cyr => "кеиушит(ек)", :lat => "keiušit(ek)", :und => "k{+5}-kÀn{+4}-w{+3}-šit{0}-(Àk){-1}" },
                 :sg3a => { :cyr => "һадеиушит", :lat => "hadeiušit", :und => "ad{+5}-kÀn{+4}-w{+3}-šit{0}" },
@@ -1024,7 +1026,7 @@
     = render 'verb_table', :title => "сташитеҥ “to wake up” —  Present Definite", :forms => forms
 
   = section "Past Indefinite" do
-    %p In the past indefinite, the TAM marker #{underlying "*-šIl-"} surfaces as a metathesized -lš- in all forms, while the +3 theme always appears as -uw- when followed by a vowel and -u- when followed by a consonant. An epenthetic -a-/-e- is inserted after the +5 subject markers.
+    %p In the past indefinite, the TAM marker #{underlying "*-šIl-"} surfaces as a metathesized -lš- in all forms, while the +3 theme always appears as -ùw- when followed by a vowel and -ù- when followed by a consonant. An epenthetic -a-/-e- is inserted after the +5 subject markers.
     - forms = { :sg1  => { :cyr => "шалшукол(аш)", :lat => "šalšukol(aš)", :und => "š{+5}-šIl{+4}-w{+3}-kol{0}-(Àš){-1}" },
                 :sg2  => { :cyr => "калшукол(ак)", :lat => "kalšukol(ak)", :und => "k{+5}-šIl{+4}-w{+3}-kol{0}-(Àk){-1}" },
                 :sg3a => { :cyr => "һадалшукол", :lat => "hadalšukol", :und => "ad{+5}-šIl{+4}-w{+3}-kol{0}" },
@@ -2069,6 +2071,10 @@
       %td sauǧa
       %td back
     %tr
+      %td sul
+      %td sulla
+      %td go and come back
+    %tr
       %td aǧ
       %td aǧa
       %td ashore
@@ -2190,7 +2196,7 @@
           - forms = { :sg1  => { :cyr => "вау шиштәде(ш)", :lat => "wau šištəde(š)", :und => "wau šIl{+4}-š{+3}-t{+2}-de{0}-(Àš){-1}" },
                       :sg2  => { :cyr => "вау шиктәде(к)", :lat => "wau šiktəde(k)", :und => "wau šIl{+4}-k{+3}-t{+2}-de{0}-(Àk){-1}" },
                       :sg3a => { :cyr => "вау ашидде", :lat => "wau ašidde", :und => "wau a{+5}-šIl{+4}-t{+2}-de{0}" },
-                      :sg3i => { :cyr => "вау икодде", :lat => "wau ikodde", :und => "wau i{+5}-šIl{+4}-t{+2}-de{0}" },
+                      :sg3i => { :cyr => "вау ишидде", :lat => "wau išidde", :und => "wau i{+5}-šIl{+4}-t{+2}-de{0}" },
                       :pl1  => { :cyr => "вау шиштәдешиҥ", :lat => "wau šištədešiŋ", :und => "wau šIl{+4}-š{+3}-t{+2}-de{0}-šIŋ{-1}" },
                       :pl2  => { :cyr => "вау шиктәдекүҥ", :lat => "wau šiktədeküŋ", :und => "wau šIl{+4}-k{+3}-t{+2}-de{0}-kÙŋ{-1}" },
                       :pl3a => { :cyr => "вау анчидде", :lat => "wau ančidde", :und => "wau an{+5}-šIl{+4}-t{+2}-de{0}" } }
@@ -2646,7 +2652,7 @@
   = section "Present Indefinite" do
     %p For intransitive verbs:
     %p The root is inserted into slot 0.
-    %p Slot +2 is occupied by an intransitive marker #{underlying "*aa"}, which surfaces as -aa- in the first and second persons and as a reduced -a- in the third person.
+    %p Slot +2 is occupied by an intransitive marker #{underlying "*aa"}, which surfaces as -aa- in the first and second persons and as a reduced -a- in the third person. If the verb root begins with a vowel, the intransitive marker becomes -at- for all persons.
     %p Slot +3 is the subject agreement marker: -š- in the first person, -k- in the second person, and -Ø- in the third person.
     %p Slot +4 is the present indefinite TAM marker #{underlying "*kÀl"}, which appears only in the third person. It surfaces as -al- in the third person singular animate, -ǧl- in the third person plural animate, and -kl- in the third person inanimate.
     %p In intransitive verbs, slot +5 contains the third person subject agreement markers, which are -a- for the animate singular, -a- for the animate plural (underlyingly #{underlying "*-an-"}, hence the ǧ in the TAM marker#{footnote}). The inanimate marker is -ii-.

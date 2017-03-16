@@ -20,37 +20,77 @@ module Grammars
       'COM' => "Comitative",
       'DAT' => "Dative",
       'DEF' => "Definite",
+      'DET' => "Determiner",
+      'DISTRIB' => "Distributive",
       'DL' => "Dual",
       'GEN' => "Genitive",
+      'HAR' => "Harmonic Vowel",
+      'IMPER' => "Imperative",
+      'IMPERS' => "Impersonal",
       'INAN' => "Inanimate",
       'IND' => "Indirective",
+      'INDEF' => "Indefinite",
       'INF' => "Infinitive",
       'INF_PREFIX' => "Infitive Prefix",
       'INS' => "Instrumental",
+      'INTERR' => "Interrogative Particle",
+      'INTRANS' => "Intransitive",
       'LAT' => "Lative",
       'LOC' => "Locative",
+      'NEG' => "Negative",
       'NOM' => "Nominative",
       'NOUN' => "Nominal",
       'OBJ' => "Objective",
       'OBJECT' => "Object",
+      'PASS' => "Passive Voice",
+      'PAST' => "Past Tense",
       'PL' => "Plural",
       'POS' => "Possessive",
-      'PRES' => "Present",
+      'PRES' => "Present Tense",
       'PRED' => "Predicative",
+      'PTCPL' => "Participle",
+      'QUOT' => "Quotative",
+      'REC' => "Recipient",
       'REL' => "Relative",
       'SG' => "Singular",
-      'SUBJECT' => "Subject",
+      'SPLT' => "Split-Transitive",
+      'STATIVE' => "Stative",
+      'SUBJ' => "Subject",
+      'THEME' => "Theme Vowel",
       'TRA' => "Translative",
-      'VERB' => "Verb"
+      'VERB' => "Verb",
+      '?' => "Unknown Morpheme"
     }
 
     def abbrev(string)
-      str = string.split('.')
-      meaning = []
-      str.each do |s|
-        meaning << (@@abbreviations_hash[s.upcase] or raise "Abbreviation #{s.upcase} is not defined")
+      string = string.gsub('{', '').gsub('}', '')
+      html = ""
+      # Input format like "abbrev", "+1", or "abbrev|+1"
+      if string['|']
+        # Both abbreviation and slot
+        abbrev, _, slot = string.partition("|")
+      elsif string =~ /^[+-]?[0-9]$/
+        # Slot only
+        slot = string
+      else
+        # Abbreviation only
+        abbrev = string
       end
-      "<abbr title='#{meaning.join(' ')}'>#{string.gsub('*', '')}</abbr>".html_safe
+
+      if abbrev
+        parts = abbrev.split('.')
+        meaning = []
+        parts.each do |s|
+          meaning << (@@abbreviations_hash[s.upcase.gsub(/[<>]/, '')] or raise "Abbreviation #{s.upcase} is not defined")
+        end
+        html += "<abbr title='#{meaning.join(' ')}'>#{abbrev.gsub('*', '')}</abbr>"
+      end
+
+      if slot
+        html += "<sup>#{slot}</sup>"
+      end
+
+      html.html_safe
     end
 
     def underlying(string)
@@ -58,38 +98,24 @@ module Grammars
     end
 
     # Custom example sentence helper for Očets
-    def example_sentence(fields)
+    def example_sentence(native, translit, breakdown, gloss, eng, options = {})
       @example_index += 1
       capture_haml do
         haml_tag 'table.textgloss' do
           haml_tag :tr do
             haml_tag :td, "(#{@example_index})"
             haml_tag :td do
-              if fields[:ochets]
-                haml_tag 'span.native', fields[:ochets].html_safe
-                haml_tag :br
-              end
-              if fields[:translit]
-                haml_tag 'span.translit', fields[:translit].html_safe
-                haml_tag :br
-              end
-              if fields[:breakdown]
-                haml_tag 'span.translit', fields[:breakdown].html_safe
-                haml_tag :br
-              end
-              if fields[:underlying]
-                haml_tag 'span.underlying', underlying(fields[:underlying])
-                haml_tag :br
-              end
-              if fields[:gloss]
-                haml_tag 'span.gloss', fields[:gloss].gsub(/{.*?}/) { |m| abbrev(m[1..-2]) }.html_safe
-                haml_tag :br
-              end
-              if fields[:eng]
-                haml_tag 'span.eng', "“#{fields[:eng].html_safe}”"
-              end
-              if fields[:comment]
-                haml_tag :span, fields[:comment].html_safe
+              haml_tag 'span.native', native.html_safe
+              haml_tag :br
+              haml_tag 'span.translit', translit.html_safe
+              haml_tag :br
+              haml_tag 'span.breakdown', underlying(breakdown).html_safe
+              haml_tag :br
+              haml_tag 'span.gloss', gloss.gsub(/{.*?}/) { |m| abbrev(m[1..-2]) }.html_safe
+              haml_tag :br
+              haml_tag 'span.eng', "“#{eng}”".html_safe
+              if options[:comment]
+                html_tag :span, options[:comment].html_safe
               end
             end
           end

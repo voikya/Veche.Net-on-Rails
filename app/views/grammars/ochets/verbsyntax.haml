@@ -1,38 +1,917 @@
 - content_for :title, "Grammar of the Očets Language — #{strip_tags(@current_page[:title])}"
-- content_for :section_title, "#{@current_page[:index]}. #{@current_page[:title]} / Лывауссыс сиинтакс"
-
-= render :partial => 'navigation'
+- content_for :section_subtitle, "Лывауссыс сиинтакс"
 
 = section "The Tense System" do
-  X
-= section "The Copula 'To Be'" do
-  X
+  %p For all the syntactic complexity surrounding the different Očets verb conjugations (so much so that this grammar will discuss the syntax of each conjugation separately), the tense system is notably consistent. The same five finite forms exist for nearly all verbs with consistent meanings, making them a good starting point for discussing common features of Očets verb usage.
+  %p Aside from the imperative mood, the four other tenses (present and paste definite and indefinite) represent a somewhat complex blend of tense, aspectual, and modal meaning, with the indefinite forms very loosely having imperfect meaning and the definite forms having perfective meaning. However, there is a notable 1st+2nd vs 3rd person contrast, where verbs with third person subjects often have very different semantics in relation to non-third person subjects within a single tense.
+
+  = section "The Present Indefinite Tense" do
+    %p The present indefinite is a nonpast tense with progressive, indefinite, potential, or inferential semantics. The table below summarizes the most common meanings, using the first and third person singular forms of the verb #{t "че-деҥ", "če-deŋ"} “go” as an example.
+    %table
+      %tbody
+        %tr
+          %th
+          %th Positive
+          %th Negative
+        %tr
+          %th 1Sg
+          %td
+            = t("квоштәде", "kwoštəde")
+            %br
+            I am going
+            %br
+            I will be going
+          %td
+            = t("вен квоштаде", "wen kwoštade")
+            %br
+            I am not going
+            %br
+            I will not be going
+            %br
+            I probably won’t go
+        %tr
+          %th 3SgA
+          %td
+            = t("һакодде", "hakodde")
+            %br
+            He/she must be going
+            %br
+            He/she will go (I am told)
+          %td
+            = t("вен акодде", "wen akodde")
+            %br
+            He/she must not be going
+            %br
+            He/she won’t go (I am told)
+
+    %p In the first and second persons, the most common usage of the present indefinite is as a simple present progressive, indicating an action taking place at the present moment.
+    = example_sentence "Наи енц телефоонас шыгзәҕа-и?",
+                       "Nai ents telefoonas šygzəǧa-i?",
+                       "nai ents telefoo{b+}n-A{b}s šI{b}-k-zǧ-i?",
+                       "{2sg.nom} now telephone-{ins} {det|+6}-{2sg.subj|+3}-speak{0}-{interr}?",
+                       "Are you talking on the phone right now?"
+    = example_sentence "Һеш Урал проспехтилд куартеерал кашпау.",
+                       "Heš Ural prospextild kuarteeral kašpau.",
+                       "heš ural prospe{f+}t-Ì{f}l-d kuarteera{b+}-Ì{0}l ka{b}-š-pau{b+}",
+                       "{1sg.nom} Ural avenue-{loc}-{rel} apartment-{loc} {pres.indef|+4}-{1.subj|+3}-live{0}",
+                       "I live in an apartment on Ural Avenue."
+
+    %p As a nonpast tense, it also can serve as a future progressive or imperfective future. Such actions typically have an unspecified time frame with no implication of finishing an action, just being in the state of performing it.
+    = example_sentence "Һеш таспаатала лободе вашшауш.",
+                       "Heš taspaatala lobode waššauš.",
+                       "heš t-spaata{b+}-Ì{0}l-A{b} lobo{b+}d-è{f+} w-kÀ{b}l-wau{b+}-À{0}š.",
+                       "{1sg.nom} {def}-Saturday-{loc}-{ind} work-{obj} {1sg.subj.3.inan.obj|+5}-{pres.indef|+4}-do{0}-{1sg.subj|-1}",
+                       "I will be working on Saturday."
+    = example_sentence "Тууллаа ҥауваххуҥ наунда вен-һакнасқан ҕос.",
+                       "Tuullaa ŋauwaxxuŋ naunda wen-haknasqan ǧos.",
+                       "t-huu{b+}n-lA{b}-A{b} ŋ-kÀ{b}l-w-wa{b+}x-kU{b}ŋ naun-da wen-[a-kə{f+→b}n-s]-qa{b+}-∅ ǧos.",
+                       "{def}-morning-{lat}-{ind} {2pl.subj|+5}-{pres.indef|+4}-{theme|+3}-strengthen{0}-{2pl.subj|-1} {2pl.gen} {neg}-[{stative}-sick-{ptcpl.splt.pres}]-start-{inf} for",
+                       "You will need to rest tomorrow if you don't want to get sick."
+
+    %p When negated, the present indefinite typically indicates likelihood of inaction rather than certainty. Such sentences are often translated into English with the adverb “probably (not)” or the auxiliary verbs “may not” or “might not”.
+    = example_sentence "Века тотобусее шиичних, тоҥ вечиц наквоиныл коштах.",
+                       "Weka totobusee šiičnix, toŋ wečits nakwoinyl koštax.",
+                       "we-k-a t-otobu{f+}s-è{f+}-A{f} šI{f}n-š-ni{f+}x, toŋ we-čits nə-kwoi{b+}n-Ì{b}l kÀ{b}l-š-t-a{b+}x.",
+                       "{neg}-{det}-{har} {def}-bus-{ind}-{obj} {past.def|+4}-{1.subj|+3}-reach{0}, {3sg.inan.tra} {neg}-from_here {impers}-time-{loc} {pres.indef|+4}-{1.subj|+3}-{indef|+2}-arrive{0}",
+                       "I missed the bus and may not arrive on time."
+    = example_sentence "Тисиче вепа каитыл һиваукос чи шиил.",
+                       "Tisiče wepa kaityl hiwaukos či šiil.",
+                       "t-si{f+}č-A{f} we-p-a kai{b+}t-Ì{b}l iw-kÀ{b}l-w-ko{b+}s či šii{f+}-Ì{0}l-A{f}.",
+                       "{def}-snow-{ind} {neg}-{det}-{har} front-{loc} {3.inan.subj|+5}-{pres.indef|+4}-{theme|+3}-melt{0} this year-{loc}",
+                       "The snow will probably not melt early this year."
+
+    %p In the third person, the present indefinite usually has an inferential meaning rather than a progressive one. That is, it indicates that the speaker is not personally witness to the action, but rather inferred it or was informed from another source. This is common with reported speech.
+    = example_sentence "Ныҕвуу венчәҕенди, һааҕлус ваан.",
+                       "Nyǧwuu wenčəǧendi, haaǧlus waan.",
+                       "nI{b}-ǧwuu{b+} wA{f}-šəǧe{f+}-n-dÌ{f}, an-kÀ{0}l-u{b+}s waan.",
+                       "{3pl.anim}-house {neg}-light-{abe}-{3.inan}, {3pl.anim|+5}-{pres.indef|+4}-sleep{0} {3pl.anim.nom}",
+                       "Their lights are out; they must be asleep."
+    = example_sentence "Кан квои иинди-че иүҥиитаин.",
+                       "Kan kwoi yindi-če yüŋiitain.",
+                       "kan kwoi yi{f+}n-dÌ{f}-če [yu{b+→f}n]-ii{f+}-a{0}t-ai{b+}n.",
+                       "many bear here-{3.inan}-{quot} [there]{+6}-{3.inan.subj|+5}-{pass|+2}-see{0}",
+                       "There are many bears here [I am told]."
+
+  = section "The Present Definite Tense" do
+    %p The present definite is a nonpast tense generally having perfective semantics. The table below summarizes the most common meanings.
+    %table
+      %tbody
+        %tr
+          %th
+          %th Positive
+          %th Negative
+        %tr
+          %th 1Sg
+          %td
+            = t("че квожде", "če kwožde")
+            %br
+            I will go
+          %td
+            = t("вече кожде", "weče kožde")
+            %br
+            I won’t go
+        %tr
+          %th 3SgA
+          %td
+            = t("че акоде", "če akode")
+            %br
+            He/she is going
+            %br
+            He/she will go
+          %td
+            = t("вече акоде", "weče akode")
+            %br
+            He/she is not going
+            %br
+            He/she won’t go
+
+    %p With first and second person subjects, the present definite almost always has future meaning, indicating an action that will occur at a specific time or with an implication of completion. Unlike the present indefinite, the present definite tends to mark an action perceived as a single event rather than a process (“go” as opposed to “going”).
+    = example_sentence "Тууллаа Николаие какаиштолаш.",
+                       "Tuullaa Nikolaie kakaištolaš.",
+                       "t-huu{b+}n-lA{b}-A{b} Nikolai{b+}-è{f+} k-a-kÀn{b}-š-to{b+}l-À{b}š.",
+                       "{def}-morning-{lat}-{ind} Nikolai-{obj} {det|+6}-{3sg.anim.rec|+5}-{pres.def|+4}-{1.subj|+3}-pay{0}-{1sg.subj|-1}",
+                       "I will pay Nikolai tomorrow."
+    = example_sentence "Наи тууллаа кеиушит кеи топорала.",
+                       "Nai tuullaa keiušit kei toporala.",
+                       "nai t-huu{b+}n-lA{b}-A{b} k-kÀ{f}n-w-ši{f+}t kei t-pora{b+}-Ì{0}l-A{b}.",
+                       "{2sg.nom} {def}-morning-{lat}-{ind} {det|+5}-{pres.def|+4}-{theme|+3}-wake{0} fifth {def}-hour-{loc}-{ind}",
+                       "You must get up at 5am tomorrow."
+
+    %p Repeated actions, including present actions, may use the present definite so long as each individual action is similarly perceived as a point event.
+    = example_sentence "Һеш Москуалд шитыызна ҕу квошшан сааслаа Хууд Сишиил.",
+                       "Heš Moskuald šityyzna ǧu kwoššan saaslaa Xuud Sišiil.",
+                       "heš Moskua{b+}-Ì{0}l-d ši{f+}-tyy{b+}s-nA{b} homeward kÀ{b}n-š-ča{b+}n s-haa{b+}s-lA{b}-A{b} xuu{b+}d t-šii{f+}-Ì{0}l.",
+                       "{1sg.subj} Moscow-{loc}-{rel} {1sg}-brother-{lat} homeward {pres.def|+4}-{1.subj|+3}-go{0} {distrib}-all-{loc}-{ind} new {def}-year-{loc}",
+                       "I visit my brother in Moscow every New Years."
+    = example_sentence "Чи лееке қеиҕҕөшек тонәҥ саасла қаил.",
+                       "Či leeke qeiǧǧöšek tonəŋ saasla qail.",
+                       "či lee{f+}k-è{f+} q-kÀ{f}n-k-ǧö{f+}š-À{f}k to{b+}n-ŋ s-haa{b+}s-lA{b} qai{b+}-Ì{0}l.",
+                       "this medicine-{obj} {det|+6}-{pres.def|+4}-{1.subj|+3}-receive{0}-{2sg.subj|-1} time-{tra} {distrib}-all-{loc} day-{loc}",
+                       "You must take this medication once each day."
+
+    %p A negated present definite verb indicates far more certainty that an action is not taking place or will not take place than the negated present indefinite.
+    = example_sentence "Веша һеҕлии сеиҥе каиџәҕаш.",
+                       "Weša heǧlii seiŋe kaiǰəǧaš.",
+                       "we-š-a heǧlii{f+} t-ei{f+}-ŋ-A{f} kÀ{b}n-š-zəǧ-À{b}š",
+                       "{neg}-{det}-{har} English {def}-language-{tra}-{ind} {pres.def|+4}-{1.subj|+3}-speak{0}-{1sg.subj|-1}",
+                       "I don't speak English."
+    = example_sentence "Вала каитыл кождеш ҥа толободәчише.",
+                       "Wala kaityl koždeš ŋa tolobodəčiše.",
+                       "we{0}-ala kai{b+}t-Ì{b}l kÀ{b+}n-š-de{f+}-À{0}š ŋa t-lobo{b+}d-či{f+}s-A{f}.",
+                       "{neg}-away front-{loc} {pres.def|+4}-{1.subj|+3}-go{0}-{1sg.subj|-1} today {def}-work-{abl}-{ind}",
+                       "I will not be able to leave work early today."
+
+    %p In the third person, the present definite is used primarily as a non-inferential counterpart to the third person present indefinite. That is, it represents actions happening at the present moment or less commonly in the future that the speaker can personally attest to. It does not have any inherent perfective or imperfective meaning.
+    = example_sentence "Тышшаита вени сесәл һише һииҥно канытырд енц.",
+                       "Tyššaita weni sesəl hiše hiiŋno kanytyrd ents.",
+                       "t-[i{f+→b}š]-čai{b+}t-A{b} we{f}n-Ì{f+} se{f+}səl i{f+}š-è{f+} iw{f+}-kÀ{0}n-wo{b+} kÀ{b}n-I{b}t-y{b+}r-dÌ{0} ents.",
+                       "{def}-[meat]-man-{ind} no-{obj} reinder meat-{obj} {3.inan.subj|+5}-{pres.def|+4}-not_be{0} {pres.def|+3}-{3sg.anim.subj|+2}-with-{3.inan.obj} now",
+                       "The butcher does not have any reindeer right now [I asked him]."
+    = example_sentence "Кан квои иинди-че иүҥииҥнатаин.",
+                       "Kan kwoi yindi-če yüŋiiŋnatain.",
+                       "kan kwoi yi{f+}n-dÌ{f}-če [yu{b+→f}n]-ii{f+}-kÀ{0}n-a{b+}t-ai{b+}n.",
+                       "many bear here-{3.inan}-{quot} [there]{+6}-{3.inan.subj|+5}-{pres.def|+4}-{pass|+2}-see{0}",
+                       "There are many bears here [I have seen them]."
+
+    %p Generic, timeless actions also usually appear in the present definite, in contrast to the present indefinite that tends to suggest an action is happening at the present moment.
+    = example_sentence "Тышыы шоиа квоохыл һикокаил.",
+                       "Tyšyy šoia kwooxyl hikokail.",
+                       "t-šyy{b+}-∅ šoia kwoo{b+}x-Ì{b}l i{f+}-kÀ{b}n-kai{b+}l.",
+                       "{def}-sun-{ind} upwards east-{loc} {3.inan.subj|+5}-{pres.def|+4}-dawn{0}",
+                       "The sun rises in the east."
+    = example_sentence "Сииџилд че-кчан һикан наҥ ҕөсиис сеҕди.",
+                       "Siiǰild če-kčan hikan naŋ ǧösiis seǧdi.",
+                       "sii{f+}ǰ-Ì{f}l-d če-k-ča{b+}n-∅ i{f+}w-kÀ{0}n-è{b+}n na{b+}ŋ ǧösiis se{f+}ǧ-dÌ{f}",
+                       "spring-{loc}-{rel} {det}-{det}-go_by_vehicle-{inf} {3.inan|+5}-{pres.def|+4}-be{0} mud on_account_of difficult-{3.inan}",
+                       "It is difficult to travel in the spring because of the mud."
+
+  = section "The Past Indefinite Tense" do
+    %p The past indefinite for the most part serves as an imperfective past tense. The table below summarizes the most common meanings.
+    %table
+      %tbody
+        %tr
+          %th
+          %th Positive
+          %th Negative
+        %tr
+          %th 1Sg
+          %td
+            = t("шиштәде", "šištəde")
+            %br
+            I was going
+            %br
+            I used to go
+          %td
+            = t("вен шиштәде", "wen šištəde")
+            %br
+            I was not going
+            %br
+            I didn’t use to go
+        %tr
+          %th 3SgA
+          %td
+            = t("һишидде", "hišidde")
+            %br
+            He/she must have gone
+            %br
+            He/she went (I am told)
+          %td
+            = t("вен ишидде", "wen išidde")
+            %br
+            He/she must not have gone
+            %br
+            He/she didn’t go (I am told)
+
+    %p In the first and second persons, the past indefinite marks a past action which was not completed or took place over a period of time. Almost any verb with a duration specified will require the past indefinite.
+    = example_sentence "Шүн пора шынц тапаркыла шахалшузәхшыҥ.",
+                       "Šün pora šynts taparkyla šaxalšuzəxšyŋ.",
+                       "šün pora{b+} šynts t-pa{b+}rk-Ì{b}l-A{b} šA{b}-xÀ{b}-šI{0}l-w-zə{b+}ǧ-šI{b}ŋ.",
+                       "{1pl.nom} hour during {def}-park-{loc}-{ind} {det|+6}-{1pl.subj|+5}-{past.indef|+4}-{theme|+3}-talk{0}-{1pl.subj|-1}",
+                       "We spoke in the park for an hour."
+    = example_sentence "Сетелефоонды вытоуҥыла нашшаашышшаавауш.",
+                       "Setelefoondy wytouŋyla naššaašyššaawauš.",
+                       "t-telefoo{b+}n-dÌ{b} wÌ{b}-tou{b+}-ŋ-Ì{b}l-A{b} [ne{f+→b}s-šee{f+→b}]-šI{b}l-š-aa{b+}-wau{b+}-š.",
+                       "{def}-telephone-{gen} {det}-make_noise-{inf}-{loc}-{ind} [evening-eat]{+6}-{past.indef|+4}-{1.subj|+3}-{intrans|+2}-make{0}-{1sg.subj|=1}",
+                       "I was preparing dinner when the phone rang."
+
+    %p In the third person, as in the present, the past indefinite has an inferential sense rather than an imperfective one, indicating that the speaker did not personally witness the action but either inferred it or learned of it from another source.
+    = example_sentence "Селеуе һаинакору тоҥ диишлаттүве.",
+                       "Seleue hainakoru toŋ diišlattüwe.",
+                       "t-leu{f+}-A{f} a-in-a-ko{b+}ru toŋ d-ii{f+}-šI{0}l-a{b+}t-tüwe{f+}.",
+                       "{def}-ground-{ind} {3sg.anim|+5}-{pres.indef|+4}-{stative|+1}-wet{0} thus {det|+6}-{3.inan.subj.3.inan.obj|+5}-{past.indef|+4}-{pass|+2}-rain{0}",
+                       "The ground is wet; it must have rained."
+    = example_sentence "Дипломатемәд лобод Пегинил куучилүүш.",
+                       "Diplomateməd lobod Peginil kuučilüüš.",
+                       "diploma{b+}t-èm-d lobo{b+}d Pegi{f+}n-Ì{f}l k-uu{b+}-šI{f}l-üü{f+}š.",
+                       "diplomat-{tra}-{rel} work Beijing-{loc} {det|+6}-{3.anim.subj.3.inan.obj|+5}-{past.indef|+4}-keep{0}",
+                       "He worked as a diplomat in Beijing [he told me]."
+
+  = section "The Past Definite Tense" do
+    %p The past definite mostly acts as a perfective past tense, although it can also have iterative or progressive meanings at times. The table below summarizes the most common meanings.
+    %table
+      %tbody
+        %tr
+          %th
+          %th Positive
+          %th Negative
+        %tr
+          %th 1Sg
+          %td
+            = t("че шижде", "če šižde")
+            %br
+            I went
+          %td
+            = t("вече шижде", "weče šižde")
+            %br
+            I didn’t go
+        %tr
+          %th 3SgA
+          %td
+            = t("че ишиде", "če išide")
+            %br
+            He/she went
+            %br
+            He/she used to go
+          %td
+            = t("вече ишиде", "weče išide")
+            %br
+            He/she didn’t go
+            %br
+            He/she didn’t use to go
+
+    %p In the first and second persons, the past definite most commonly denotes perfective aspect; that is, it marks past actions perceived as a single point event rather than a state or process.
+    = example_sentence "Тынанц һауҥқаил һеш Москуала тренес сул шышшан.",
+                       "Tynants hauŋqail heš Moskuala trenes sul šyššan.",
+                       "t-I{b}n-a{b+}n-s aun-qai{b+}-Ì{0}l heš Moskua{b+}-lA{b} tre{f+}n-À{f}s sul šI{b}l-š-ča{b+}n.",
+                       "{def}-{?}-be-{ptcpl.splt.past} seven-day-{loc} {1sg.nom} Moscow-{lat} train-{ins} round_trip {past.def|+4}-{1.subj|+3}-go_by_vehicle{0}",
+                       "I took the train to Moscow last week."
+    = example_sentence "Тыхыкаилее каичкас несес навәшныгаинак?",
+                       "Tyxykailee kaičkas neses nawəšnygainak?",
+                       "t-xykai{b+}l-è{f+}-A{f} kaička{b+}-À{0}s ne{f+}s-À{f}s n-w-šI{b}n-k-ai{b+}n-À{b}k?",
+                       "{def}-aurora-{obj}-{ind} yesterday-{ins} evening-{ins} {det|+6}-{2.subj.3.inan.obj|+5}-{past.def|+4}-{2.subj|+3}-see{0}-{2sg.subj|-1}",
+                       "Did you see the aurora last night?"
+
+    %p It is also typically used to mark repeated past actions.
+    = example_sentence "Ту шеедоомыл сааслаа һауҥқаил шеешнышаасахшыҥ.",
+                       "Tu šeedoomyl saaslaa hauŋqail šeešnyšaasaxšyŋ.",
+                       "tu šee{f+}-doo{b+}m-Ì{b}l s-aa{b+}s-lA{b}-A{b} aun-qai{b+}-Ì{0}l šee{f+}-šI{b}n-š-aa{b+}-sa{b+}ǧ-šI{b}ŋ.",
+                       "that eat-place-{loc} {distrib}-all-{loc}-{ind} seven-day-{loc} eat{+6}-{past.def|+4}-{1.subj|+3}-{intrans|+2}-sit.{pl}{0}-{1pl.subj|-1}",
+                       "We used to eat at that restaurant every week."
+    = example_sentence "Шыннапанцаса седенsе һүсил хашнәвуюн.",
+                       "Šynnapantsasa sedendze hüsil xašnəwuiun.",
+                       "šI{b}d-na{b}-pa{b+}n-À{b}s-A{b} t-de{f+}n-dÌ{0}-A{f} hüsil x-šI{0}n-w-uiu{b+}n.",
+                       "{1sg}-{ptcpl.splt.past>}-be_young-{<ptcpl.splt.past}-{ins}-{ind} {def}-lake-{gen}-{ind} near {1pl.subj|+5}-{past.def|+4}-{theme|+3}-play{0}",
+                       "When I was young we would play by the lake."
+
+    %p In the third person, the past definite simply denotes a non-inferential past action which can have either perfective or imperfective meaning. This means the speaker knows the action took place due to having witnessed it or being directly involved in it.
+    = example_sentence "Торҥ вод че-ссениле һичиеҕле һалишынатад.",
+                       "Torŋ wod če-ssenile hičieǧle hališynatad.",
+                       "to{b+}r-ŋ wo{b+}d če{f+}-t-se{f+}n-∅-Ì{f}l-A{f} hI{f}d-čie{f+}ǧl-A{f} he{f→b}l-i-šI{b}n-aa{b+}-ta{b+}d.",
+                       "direct-{tra} {3sg.anim.pos} {det}-{det}-drag-{inf}-{loc}-{ind} small{+6}-{3.inan.subj|+5}-{past.def|+4}-{intrans|+2}-strike{0}",
+                       "Her sled broke as soon as she started dragging it [I saw]."
+    = example_sentence "Сише пивашнуқо тоҥ чеебге тос нашнышакаш.",
+                       "Siše piwašnuqo toŋ čeebge tos našnyšakaš.",
+                       "t-i{f+}š-A{f} p-i{f}w-šI{0}n-w-qo{b+} toŋ čee{f+}b-ŋ-è{f+} tos na{b}-šI{b}n-š-a{b+}k-À{b}š.",
+                       "{def}-meat-{ind} {det|+6}-{3.inan.subj|+5}-{past.def|+4}-{theme|+3}-rot{0} {3sg.inan.tra} dog.{pl}-{pl}-{obj} {3sg.inan.ins} {3pl.anim.rec|+5}-{past.def|+4}-{1.subj|+3}-give{0}-{1sg.subj|-1}",
+                       "The meat went bad and I gave it the dogs."
+
+    %p The past definite in all persons is also used to state simple facts or definitions perceived to be general knowledge. Possibly related to this is the tendency to use the past definite in contexts with the “speaker” is anonymous, such as in news reports describing a situation from a neutral perspective rather than the writer‘s first person account.
+    = example_sentence "Қомаллаа киломеетрил гымыл хилчее иаус-иаусыда шиичис пивешнуџинд.",
+                       "Qomallaa kilomeetril gymyl xilčee iaus-iausyda šiičis piwešnuǰind.",
+                       "qoma{b+}t-lA{b}-A{b} kilomee{f}tr-Ì{f}l gy{b}+m-Ì{b}l xil-čee{f+} iau{b+}-iau{b+}s-Ì{b}d-A{b} šii{f+}-či{f}s p-i{f}w-šI{0}n-w-ǰi{f+}nd.",
+                       "several-{loc}-{ind} kilometer-{loc} away-{loc} sky-stone ten.{inan}-ten.{inan}-{abl}-{ind} year-{abl} {det|+6}-{3.inan.subj|+5}-{past.def|+4}-{theme|+3}-fall{0}",
+                       "A meteorite crashed a few kilometers away about ten years ago."
+    = example_sentence "Чи һуунаса тогродоводеце назказакье һашныкышкыр.",
+                       "Či huunasa togrodowodetse nazkazakje hašnykyškyr.",
+                       "či{f+} huu{b+}n-À{b}s-A{b} t-grodowode{f+}ts-A{f} nazkaza{b+}kj-è{f+} a-šI{b}n-kyšky{b+}r.",
+                       "this morning-{ins}-{ind} {def}-mayor-{ind} heckler-{obj} {3.anim.rec|+5}-{past.def|+4}-shout",
+                       "The mayor shouted at a heckler this morning (news report)."
+
+  = section "The Imperative" do
+    %p The imperative is a tenseless form used to indicate a command or order. In practice, however, it tends to have a fairly limited set of uses when compared to imperatives in many other languages. In general, the Očets imperative is only used when speaking with children, animals, or informally with one’s spouse, siblings, or close friends. In other contexts, use of the imperative is considered quite coarse.
+    = example_sentence "Һок һус дотее левешшигүр.",
+                       "Hok hus dotee leweššigür.",
+                       "hok us do{b+}t-è{f+}-A{f} l-wA{f}-d-ši{f+}gür.",
+                       "{2sg.pos} sleep room-{obj}-{ind} {det|+6}-{3.inan.obj|+5}-{imper|+1}-sweep{0}",
+                       "Clean your bedroom."
+    = example_sentence "Һор селиемиче даде!",
+                       "Hor seliemiče dade!",
+                       "or t-lie{f+}m-či{f+}s-A{f} d-dè{b+}!",
+                       "down {def}-table-{abl}-{ind} {imper|+1}-go{0}",
+                       "Get off the table!"
+    = example_sentence "Һал деҥ!",
+                       "Hal deŋ!",
+                       "al dè{b+}-ŋ!",
+                       "away go.{imper|0}-{2pl|-1}",
+                       "Go away!"
+
+    %p In common usage, positive imperatives are most commonly expressed using leading questions in the indicative mood instead. Both positive and negative verbs may be used in such formations.
+    = example_sentence "Вефа-и каиусах?-че шкашиот.",
+                       "Wefa-i kaiusax?-če škašiot.",
+                       "we-f-a-i k-kÀ{b}n-w-sa{b+}x-če š-ka-∅-š-io{b+}t.",
+                       "{neg}-{det}-{har}-{interr} {2sg.subj|+5}-{pres.def|+4}-{theme|+3}-sit{0}-{quot} {det|+6}-{2sg.rec|+5}-{pres.indef|+4}-{1.subj|+3}-request{0}",
+                       "Please have a seat. (Won’t you have a seat please?)"
+    = example_sentence "Века-и шакаиканцоҕ?",
+                       "Weka-i šakaikantsoǧ?",
+                       "we-k-a-i ša{b}-kÀ{b}n-k-a{b+}ntsoǧ?",
+                       "{neg}-{det}-{har}-{interr} {1sg.rec|+5}-{pres.def|+4}-{2.subj|+3}-forgive{0}",
+                       "Forgive me. (Won’t you forgive me?)"
+    = example_sentence "Қыхакшее?",
+                       "Qyxakšee?",
+                       "q-xa{b}-∅-k-šee{f+}?",
+                       "{det|+6}-{1pl.rec|+5}-{pres.indef|+4}-{2.subj|+3}-feed{0}",
+                       "Feed us! (Will you feed us?)"
+
+    %p Negative imperatives (i.e., prohibitives) will be discussed later.
+
+= section "The Copula ‘To Be’" do
+  = section "Шаҥ ‘Be’ and Шүҥ ‘Not Be’" do
+    %p The primary copula in Očets is the verb #{t "шаҥ", "šaŋ"} “to be”, which has a special negated counterpart #{t "шүҥ", "šüŋ"} “to not be”.
+    %p In the present definite and two past tenses, the use of both #{t "шаҥ", "šaŋ"} and #{t "шүҥ", "šüŋ"} are fairly unproblematic. Both the subject and complement appear in the nominative case.
+    = example_sentence "Таичиһаста татур һаалылд таҕыы һикан.",
+                       "Taičihasta tatur haalyld taǧyy hikan.",
+                       "t-aičiha{b+}st-À{b} t-tu{b+}r haa{b+}l-Ì{b}l-d t-ǧyy{b+} hikan",
+                       "{def}-hotel-{indir} {def}-left side-{loc}-{rel} {def}-second be.{3sg.inan.pres.def}",
+                       "The hotel is the second building on the left."
+    = example_sentence "Товод лынываус саиа иесәҥ месем һишина.",
+                       "Towod lynywaus saia iesəŋ mesem hišina.",
+                       "t-wod lÌ{b}-nÌ-wau{b+}-s sai{b+}-À{b} ie{f+}s-ŋ me{f+}sem hišina",
+                       "{def}-{3sg.anim.poss} {det}-{ptcpl.splt.past}-make-{ptcpl.splt.past} tea-{indir} excessive-{tra} sweet be.{3sg.inan.past.def}",
+                       "The tea he made was too sweet."
+
+    %p However, a pronominal complement typically appears in the translative case:
+    = example_sentence "Тофотографиалд чаита һешүм һаикан.",
+                       "Tofotografiald čaita hešüm haikan.",
+                       "t-fotografia{b+}-Ì{0}l-d čai{b+}t-A{b} hešüm haikan",
+                       "{def}-photograph-{loc}-{rel} person-{indir} {1sg.tra} be.{3sg.anim.pres.def}",
+                       "The person in the photograph is me."
+
+    %p A complement consisting of a postpositional phrase or a non-nominative case must have the relative suffix attached. Predicate agreement markers are mandatory, as the relative suffix may not appear word-finally on an unbound form.
+    = example_sentence "Тодоноҥа силиемзее дыылдәды һикан.",
+                       "Todonoŋa siliemzee dyyldədy hikan",
+                       "t-do{b+}n-n-À{b} t-lie{f+}m-dI{f}-A{f} dyy{b+}l-d-dÌ{b} hikan",
+                       "{def}-knife-{pl}-{indir} {def}-table-{gen}-{indir} on-{rel}-{3.inan.pred} be.{3.inan.pres.def}",
+                       "The knives are on the table."
+    = example_sentence "Һаш шии һешкәдди һишина.",
+                       "Haš šii heškəddi hišina.",
+                       "ha{b+}š šii{f+} he{f+}šk-d-dÌ{f} hišina",
+                       "twenty year {1sg.dat}-{rel}-{3.inan.pred} be.{3.inan.past.def}",
+                       "I was twenty years old. (lit. “Twenty years were to me”)"
+
+    %p In the present indefinite, #{t "шаҥ", "šaŋ"} is not particularly common; usually predicative agreement markers are used instead, attached to the complement directly.
+    = example_sentence "Налсаш.",
+                       "Nalsaš.",
+                       "na{b+}ls-À{b}š",
+                       "doctor-{1sg.pred}",
+                       "I am a doctor."
+    = example_sentence "Ҕвуулдәшыҥ.",
+                       "Ǧwuuldəšyŋ.",
+                       "ǧwuu{b+}-Ì{0}l-d-šI{b}ŋ",
+                       "house-{loc}-{rel}-{1pl.pred}",
+                       "We are at home."
+
+    %p A pronominal complement in the present indefinite is usually accomplished by attaching a predicative agreement marker to the subject:
+    = example_sentence "Оленад.",
+                       "Olenad.",
+                       "Olena{b+}-À{0}d",
+                       "Olena-{3sg.anim.pred}",
+                       "It is Olena."
+
+    %p The presence of conjugated forms of #{t "шаҥ", "šaŋ"} in the present indefinite is strongly emphatic. In this case, it behaves just as in other tenses, and no predicative agreement marker is needed.
+    = example_sentence "Господ Совининеш шин.",
+                       "Gospod Sowinineš šin.",
+                       "gospo{b+}d Sowini{f+}n-À{f}š šin",
+                       "mister Sovinin-{1sg.pred} be.{1sg.pres.indef}",
+                       "I _am_ Mr. Sovinin."
+
+    %p A conjugated form of #{t "шаҥ", "šaŋ"} is also seen in clefts. In a cleft construction, a third person present indefinite form of #{t "шаҥ", "šaŋ"} is optionally combined with its logical subject in the translative case, and the relative suffix #{t "-д", "-d"} attached to whichever word comes last; this relativized expression then serves as an argument of the main verb. This construction is highly unusual in that it is the only time the relative suffix may ever be attached directly to a finite verb.
+    = example_sentence "Һешүм һаанд каичкас надәшныгаинак.",
+                       "Hešüm haand kaičkas nadəšnygainak.",
+                       "hešüm haan-d kaička{b+}-À{0}s n-d-šI{b}n-k-ai{b+}n-À{b}k.",
+                       "{1sg.tra} be.{3sg.anim.pres.indef}-{rel} yesterday {det|+6}-{2.subj.3sg.anim.obj|+5}-{past.def|+4}-{2.subj|+3}-see{0}-{2sg.subj|-1}",
+                       "It was me whom you saw yesterday."
+    = example_sentence "Куетанала һиинд хашнумыжоршыҥ.",
+                       "Kuetanala hiind xašnumyžoršyŋ.",
+                       "kuetana{b+}-Ì{0}l-A hiin-d x-šI{b→0}n-w-myžo{b+}r-šI{b}ŋ",
+                       "May-{loc}-{indir} be.{3.inan.pres.indef}-{rel} {1pl.subj|+5}-{past.def|+4}-{theme|+3}-wed{0}-{1pl.subj|-1}",
+                       "It was in May that we got married."
+
+    %p Conversely, the negative verb #{t "шүҥ", "šüŋ"} behaves quite consistently across all tenses. It takes a complement in the nominative case or relativized, and does not permit use of the predicative agreement suffixes.
+    = example_sentence "Кассуҕла һош ғу-деӈиле шиниисе ҕвуулд һачино.",
+                       "Kassuğla hoš ğu-deŋile šiniise ğwuuld hačino.",
+                       "kassu{b+}ŋ-lA{b} hoš ğu-de{f+}-ŋ-Ì{f}l-A{f} ši{f+}-nii{f+}t-A{f} ğuu{b+}-Ì{0}l-d hačino",
+                       "there-{lat} {1sg.poss} homeward-go-{inf}-{loc}-{indir} {1sg}-sister-{indir} house-{loc}-{rel} not_be.{3sg.anim.past.def}",
+                       "My sister was not at home when I stopped by."
+    = example_sentence "Ос пан һекуо.",
+                       "Os pan hekuo.",
+                       "os pa{b+}n hekuo",
+                       "already young not_be.{2sg.pres.def}",
+                       "You are not young anymore."
+
+  = section "Қышаҥ ‘Become’" do
+    %p The verb #{t "қышаҥ", "qyšaŋ"} means “become”, and is essentially #{t "шаҥ", "šaŋ"} “be” with a Q-determiner. It acts as a more typical intransitive verb, taking a complement in the translative case (for nouns) or relativized and in the translative case (for phrases). Note that the determiner vowel is always back (i.e., <i>qy-</i>, not <i>qi-</i>), as all copular stems have back vowels, with front vowels being secondary phenomena.
+    = example_sentence "Шобдаа вет механикес қышииша.",
+                       "Šobdaa wet mexanikes qyšiiša.",
+                       "š-o{b+}b-dA{b}-A{b+} wet mexani{f+}k-À{f}s qI{b}-šii{0}ša{b+}",
+                       "{1sg.poss}-father-{gen}-{indir} like mechanic-{ins} {det}-become.{1sg.past.def}",
+                       "I became a mechanic like my father."
+
+    %p Given its ability to take a relativized complement, it may be used in some circumstances where “become” cannot be used in English. A relativized complement is typically only used with #{t "қышаҥ", "qyšaŋ"} when it represents a permanent change of state rather than an ephemeral quality; thus, in the following example, ‘become with-mold’ is valid because being moldy is an inherent quality, whereas something such as *‘we became in-house’ to mean ‘we went inside the house’ is invalid as it represents a transient state.
+    = example_sentence "Сене даугды һырдәҥ қишлен.",
+                       "Sene daugdy hyrdəŋ qišlen.",
+                       "t-ie{f+}n-A{f} dau{b+}k-dÌ{b} hyr-d-ŋ q-išlen",
+                       "{def}-bread-{det} mold-{gen} with-{rel}-{tra} {det}-become.{3.inan.past.indef}",
+                       "The bread became moldy."
+
+  = section "Incorporative Шаҥ" do
+    %p The verb #{t "шаҥ", "šaŋ"} is able to optionally incorporate simplex postpositions and certain adverbs.
+    %p Simplex and some complex postpositions may be incorporated when the complement of the verb “be” is a postpositional phrase and the phrase describes an inherent quality of the subject, not an ephemeral one. The object of the postpositional then becomes the complement of the new verb. This new complement must appear in the translative case. Any transparent case endings on the postposition are dropped when incorporated; for instance, #{t "ноотәҥ", "nootəŋ"} “about” (underlyingly #{t "ноот", "noot"} “apperance, face” with a translative ending) is incorporated as *noot-. These two sentences are therefore equivalent:
+    = example_sentence "Чи нииге тақалдаа нооткәдды һикан.",
+                       "Či niige taqaldaa nootkəddy hikan.",
+                       "či niige{f+} t-qa{b+}l-dI{b→0}-A{b} noo{f+}t-ŋ-d-dÌ{b} hikan",
+                       "this book {def}-war-{gen}-{indir} appearance-{tra}-{rel}-{3.inan.pred} be.{3.inan.pres.def}",
+                       "This book is about the war."
+    = example_sentence "Чи нииге тақалҥа ноотикан.",
+                       "Či niige taqalŋa nootikan.",
+                       "či niige{f+} t-qa{b+}l-ŋ-A{b} [noo{b+}t]-ikan",
+                       "this book {def}-war-{tra}-{indir} about-be.{3.inan.pres.def}",
+                       "This book is about the war."
+
+    %p Adverbial incorporation is for the most part limited to adverbs of time such as #{t "һенц", "hents"} “now”, #{t "хал", "xal"} ”still”, and #{t "һос", "hos"} ”already”. The complement (if nominal) remains in the nominative case, as there is no promotion.
+    = example_sentence "Каац порандам һосикан!",
+                       "Kaats porandam hosikan!",
+                       "kaa{b+}ts pora{b+}-ŋ-d-À{b}m [ho{b+}s]-ikan",
+                       "six hour-{tra}-{rel}-{impers.pred} already-be.{3.inan.pres.def}",
+                       "It is already six o'clock!"
+    = example_sentence "Иуҥџак халкын?",
+                       "Yuŋǰak xalkyn?",
+                       "yu{b+}-i-À{b}k [xa{b+}l]-kyn",
+                       "there-{interr}-{2sg.pred} still-be.{2sg.pres.indef}",
+                       "Are you still there?"
+
+    %p Negated forms are formed regularly, meaning with the coverb #{t "вен", "wen"}, <em>not</em> the suppletive verb #{t "шүҥ", "šüŋ"}.
+    = example_sentence "Чиц-деҥ порандам вен халикан.",
+                       "Čits-deŋ porandam wen xalikan.",
+                       "cits-de{f+}-ŋ pora{b+}-ŋ-d-À{b}m wen [xa{b+}l]-ikan",
+                       "away-go-{inf} time-{tra}-{rel}-{impers.pred} {neg} still-be.{3.inan.pres.def}",
+                       "It is not yet time to go."
+
+    %p There is one exceptional case of incorporation that fits none of these conditions, seen in the verb #{t "һычаҥ", "hyčaŋ"} ”pass (time)”, featuring an unanalyzable incorporate *In-. This form appears to be very old, and although it is no longer transparent in Očets, it is almost certainly cognate to Ket *bin-a with the same meaning, consisting of the incorporate *bin- “self” and the root *-a “become” (seen in the past definite of Očets #{t "шаҥ", "šaŋ"}), suggesting a phrase such as “two days passed” was once rendered as something along the lines of “two days were”, with the incorporate serving as a dummy complement. In Očets, the use of this incorporate presumably spread to all forms of #{t "шаҥ", "šaŋ"} by analogy once *-a ceased to function as a distinct root.
+    = example_sentence "Сенеце хорчанәҥа-х һинишина.",
+                       "Senetse xorčanəŋa-x hinišina.",
+                       "t-ne{f+}ts-A{f} xorča{b+}-n-ŋ-I{b→0}-A{b}-x I{f}n-i{f+}šina",
+                       "{def}-winter-{det} short_distance-{pl}-{tra}-{pl}-{det}-very {?}-be.{3.inan.past.def}",
+                       "The winter passed very slowly."
+
 = section "Use of Unergative Verbs (Conjugation Ia)" do
-  X
-= section "Use of Transitive Verbs (Conjuagtion Ib)" do
-  X
+  %p Unergative verbs are intransitive verbs in which the syntactic subject is the semantic agent. This includes verbs like “run”, “sing”, or “dance” where the subject is also the logical instigator of the action; this also means that their subjects are almost always animate. Note that not all unergative verbs belong to Conjugation Ia, but all Conjugation Ia verbs are unergative.
+  %p This class is morphologically and syntatically the simplest in Očets, as Conjugation Ia verbs almost always take a single argument that appears in the nominative case. Impersonal unergative verbs always appear in the third person
+  = example_sentence "Каитыл тачинцин.",
+                     "Kaityl tačintsin.",
+                     "kai{b+}t-Ì{b}l t-ad-šI{f}n-si{f+}n",
+                     "front-{loc} {det|+6}-{3sg.anim.subj|+5}-{past.def|+4}-go_to_sleep{0}",
+                     "She went to bed early."
+  = example_sentence "Тристис маркас чиды саалҥ каиџҕоиш.",
+                     "Tristis markas čidy saalŋ kaiǰǧoiš.",
+                     "tri{f+}st-Ì{f}s ma{b+}rk-À{b}s čidy saa{b+}l-ŋ k-kÀ{b}n-š-ǧo{b+}i-À{b→0}š",
+                     "three_hundred-{ins} mark-{ins} this.{gen} place-{tra} {det|+6}-{pres.def|+4}-{1.subj|+3}-pay{0}-{1sg.subj|-1}",
+                     "I will pay 300 marks for this."
+
+  %p The subject agreement markers in position -1 are mandatory with plural subjects, but optional with singular ones. In practice, its usage seems to correlate to the distance of the subject from the verb complex: a verb with a more distant or entirely absent subject is more likely to show -1 subject marking, while a verb with a nearby subject is likely to drop it.
+  = example_sentence "Наи вен еигил-и шүнна?",
+                     "Nai wen eigil-i šünna?",
+                     "nai wen kÀ{f}n-k-i{f+}l-i šünna",
+                     "{2sg.nom} {neg} {pres.def|+4}-{2.subj}-sing{0}-{interr} {1pl.lat}",
+                     "Will you sing for us?"
+  = example_sentence "Наи вына тууллаа һеигилек-и шүнна?",
+                     "Nai wyna tuullaa heigilek-i šünna?",
+                     "nai wyn-a t-uu{b+}n-lA{b}-A{b} kÀ{f}n-k-i{f+}l-i šünna",
+                     "{2sg.nom} {neg}-{har} {def}-morning-{lat}-{indir} {pres.def|+4}-{2.subj}-sing{0}-{interr} {1pl.lat}",
+                     "Will you sing for us tomorrow?"
+
+= section "Use of Transitive Verbs (Conjugation Ib)" do
+  %p Conjugation Ib consists of transitive verbs, consisting of both a subject marked in the nominative case and a direct object usually marked in the objective case.
+  = example_sentence "Чис халыл веичееш.",
+                     "Čis xalyl weičeeš.",
+                     "či-s xa{b+}l-Ì{b}l w-kÀ{f}n-č-šee{f+}-š",
+                     "this-{obj} still-{loc} {1.subj.3.inan.obj|+5}-{pres.def|+4}-{1.subj|+3}-eat{0}-{1sg.subj|-1}",
+                     "I will eat this later."
+  = example_sentence "Шөме тукуучурее куунәҕаа.",
+                     "Šöme tukuučuree kuunəǧaa.",
+                     "š-ö{f+}m-A{f} tV-kuuču{b+}r-è{f+}-A{f} k-uu-kÀ{b→0}n-ǧaa{b+}",
+                     "{1sg.poss}-mother.{poss}-{indir} {def}-letter-{obj}-{indir} {det|+6}-{3.anim.subj.3.inan.obj|+5}-{pres.def|+4}-seek{0}",
+                     "My mother is looking for the letter."
+
+  %p Certain verbs denoting physical contact mark their direct object in the locative case instead. Object agreement works as normal.
+  = example_sentence "Һешүл тат шинних.",
+                     "Hešül tat šinnix.",
+                     "hešül ta-t šI{f}-d-ni{f+}x",
+                     "{1sg.loc} {proh}-{det} {1sg.obj|+5}-{imper|+1}-touch{0}",
+                     "Do not touch me."
+  = example_sentence "Ту ношшаивуса бысе ладәшныштадаш.",
+                     "Tu noššaiwusa byse ladəšnyštadaš.",
+                     "tu noššaiwu{b+}-À{b→0}s-A{b} by{b+}s-è{f+} lA{b}-d-šI{b}n-š-ta{b+}d-À{b}š",
+                     "that gun-{ins} rabbit-{obj}-{ind} {det|+6}-{1.subj.3sg.anim.obj|+5}-{past.def|+4}-{1.subj|+3}-strike{0}-{1sg.subj|-1}",
+                     "I shot (lit. 'struck') a rabbit with that gun."
+
+  %p Since transitive verbs have obligatory object marking, it is not possible to simply drop the direct object as can be done in English (cf. “I am reading” vs “I am reading a book”). An expression such as “I am reading”, known formally as an agentive intransitive, are instead expressed using a verbal noun in the locative case, translating literally as “I am in reading”.
+  = example_sentence "Ниигес тевеждеуш.",
+                     "Niiges teweždeuš.",
+                     "niige{f+}-s tÀ{f}-w-kÀ{f}l-š-deu{f+}-À{f→0}š",
+                     "book-{obj} {det|+6}-{1.subj.3.inan.obj|+5}-{pres.indef|+4}-{1.subj|+3}-read{0}-{1sg.subj|-1}",
+                     "I am reading a book."
+  = example_sentence "Тидеуҥилдеш.",
+                     "Tideuŋildeš.",
+                     "tÌ{f}-deu{f+}-ŋ-Ì{f}l-d-À{f}š",
+                     "{det}-read-{inf}-{loc}-{rel}-{1sg.pred}",
+                     "I am reading."
+  = example_sentence "Шоба шиҕыҕакаи кычоҥылдан чилааҥ.",
+                     "Šoba šiǧyǧakai kyčoŋyldan čilaaŋ.",
+                     "š-o{b+}b-A{b} ši{f+}-ǧy{b+}ǧ-A{b}-kA{b}i kI{b}čo{b+}-ŋ-Ì{b}l-d-À{b}n čilaaŋ",
+                     "{1sg.pos}-father-{indir} {1sg.pos}-uncle-{indir}-and hunt-{inf}-{loc}-{rel}-{3pl.anim.pred} be.{3pl.anim.past.indef}",
+                     "My father and uncle were hunting."
+
+  %p In other cases it is sometimes possible to have a dummy object (typically third person inanimate), but only if discourse-appropriate. For instance, “I know” may typically be translated literally as “I know it/that” if there is a clear antecedent that the object could be referring to, such as in response to a question like “Did you know...?”. This structure is less likely in the “I am reading” example above because in the course of a normal discourse, it is less likely for the referent to have already been mentioned.
+  = example_sentence "Шевегиддик-и?",
+                     "Šewegiddik-i?",
+                     "šA{f}-w-kÀ{f}l-k-i{f+}ddi-À{f→0}k-i",
+                     "{det|+6}-{2sg.subj.3.inan.obj|+5}-{pres.indef|+4}-{2.subj|+3}-understand-{2sg.subj|-1}-{interr}",
+                     "Do you understand [it]?"
+
+  %p Special mention must be made of the +2 passive marker that appears as a relic the conjugation of a handful of verbs, many of which no longer have a clear passive meaning. This morpheme originally served as a valency-reducing operator, serving to convert a transitive one into an intransitive one, typically with passive meaning, but occasionally with active meaning if a special impersonal subject marker *-d- was present; this marker is still seen in some forms of the Unaccusative Ic conjugation. When present, the +5 slot obligatorily takes the form <i>-a-</i> if the subject (patient) is animate and <i>-ii-</i> if inanimate, the +3 slot contains the usual first or second person markers if the subject is first or second person. The -1 subject agreement markers behave as expected.
+  %p The passive is most commonly seen in what would normally be considered zero-valency verbs, that is, verbs with no core arguments. The most common examples are weather phenomena such as #{t "зитүвеҥ", "zitüweŋ"} “rain”, #{t "зисичиҥ", "zisičiŋ"} “snow”, and #{t "пихееҥ", "pixeeŋ"} “become dark/night”, which always appear with inanimate agreement markers even though there is nothing to agree with:
+  = example_sentence "Зииканаттүве.",
+                     "Ziikanattüwe.",
+                     "d-ii{f+}-kÀ{b}n-a{b+}t-tü{f+}we",
+                     "{det|+6}-{3.inan.subj|+5}-{pres.def|+4}-{pass|+2}-rain{0}",
+                     "It is raining."
+  = example_sentence "Һет пииканатхее.",
+                     "Het piikanatxee.",
+                     "het p-ii{f+}-kÀ{b}n-a{b+}t-xee{f+}",
+                     "soon {det|+6}-{3.inan.subj|+5}-{pres.def|+4}-{pass|+2}-become_night{0}",
+                     "It will be dark soon."
+
+  %p Perhaps surprisingly, some of these verbs actually do have transitive forms <em>without</em> the passive morpheme, where a direct object may be specified.
+  = example_sentence "Һешүл зишәшинтүве.",
+                     "Hešül zišəšintüwe.",
+                     "hešül d-i{f+}š-šI{f}n-tü{f+}we",
+                     "{1sg.loc} {det|+6}-{3.inan.subj.1sg.obj|+5}-{past.def|+4}-rain{0}",
+                     "It rained on me/I got rained on."
+
+  %p Non-zero-valency verbs employing the passive morpheme consist solely of a few idiomatic forms such as #{t "шыласанд", "šylasand"} “to be welcomed” (lit. “to be well-regarded”) and #{t "наинд", "naind"} “there is/are, to be present” (lit. ”to be seen [there]”)#{footnote}. These forms may freely take animate and non-third-person subject agreement.
+  = example_sentence "Шаҥҥуула һоқәм шаваигацаҥкуҥ!",
+                     "Šaŋŋuula hoqəm šawaigatsaŋkuŋ!",
+                     "šA{b}n-ǧuu{b+}-Ì{b→0}l-A{b} hoqəm š-w-kÀ{b}n-k-a{b+}t-sa{b+}n-kÙ{b}ŋ",
+                     "{1pl.pos}-house-{loc}-{indir} well {det|+6}-{2.subj.3.inan.obj|+5}-{pres.def|+4}-{2.subj|+3}-{pass|+2}-regard-{2pl.subj|-1}",
+                     "Welcome to our home!"
+  = example_sentence "Чуулда че-һахыла нывәшышшатаинаш.",
+                     "Čuulda če-haxyla nywəšyššatainaš.",
+                     "č-iuu{b+}l-dÀ{b} če{f+}-a{b+}x-Ì{b}l-A{b} n-w-šI{b}n-š-a{b+}t-ai{b+}n-À{b}š",
+                     "{2sg.pos}-friend-{gen} {det}-go_and_arrive-{loc}-{indir} {det|+6}-{1.subj.3.inan.obj|+5}-{past.indef|+4}-{1.subj|+3}-{pass|+2}-see{0}-{1sg.subj|-1}",
+                     "I was not there when your friend arrived."
+
 = section "Use of Unaccusative Verbs (Conjugation Ic)" do
-  X
+  %p Conjugation Ic consists of unaccusative verbs. Unaccusative verbs are another type of intransitive verb, except in this case the subject is semantically patient-like: the subject undergoes an action rather than instigating it, such as “fall” or ”die”. This is why unaccusative verbal subject agreement is handled using some of the same morphemes as transitive object agreement; an expression such as “I fell” morphologically appears more like ”[it] fell me”, suggesting ergative verbal alignment at some point in the past.
+  = example_sentence "Һас селеуле фахәшнусаҕ.",
+                     "Has seleule faxəšnusaǧ.",
+                     "ha{b+}s t-le{f+}u-Ì{f→0}l-A{f} f-x-šI{b→0}n-w-sa{b+}ǧ",
+                     "all {def}-ground-{loc}-{indir} {det|+6}-{1pl.subj|+5}-{past.def|+4}-{theme|+3}-sit.{pl}{0}",
+                     "We all sat down on the ground."
+  = example_sentence "Квооқоҕды кыс ваделшуџинд",
+                     "Kwooqoǧdy kys wadelšuǰind.",
+                     "koo-qo{b+}x-dÌ{b} kys w-a{b+}d-šI{f}l-w-ǰi{f+}nd",
+                     "ice-hole-{gen} through {det|+6}-{3sg.anim.subj|+5}-{past.indef|+4}-{theme|+3}-fall{0}",
+                     "He fell through a hole in the ice."
+
+  %p Most, though certainly not all Conjugation Ic verbs have a transitive counterpart in Conjugation Ib employing the same verbal root, although sometimes with different determiners. Although the transitive—unaccusative contrast is transparent in Očets, it can map onto a variety of categories in other languages, most commonly:
+  %ul
+    %li
+      Causative/Non-Causative
+      %ul
+        %li #{t "сычоҥ", "syčoŋ"} “kill” → #{t "стачоҥ", "stačoŋ"} “die”
+        %li #{t "пысыыҥ", "pysyyŋ"} “raise” → #{t "птасыыҥ", "ptasyyŋ"} “grow”
+        %li #{t "шишитеҥ", "šišiteŋ"} “rouse” → #{t "сташитеҥ", "stašiteŋ"} “wake up”
+    %li
+      Transitive/Reflexive
+      %ul
+        %li #{t "сыкволаҥ", "sykwolaŋ"} “wash” → #{t "стакволаҥ", "stakwolaŋ"} “wash oneself”
+        %li #{t "пыбулг", "pybulg"} “worry” → #{t "штабулг", "štabulg"} “get oneself worked up, worry oneself”
+        %li #{t "норәҥ", "norəŋ"} “dress” → #{t "ныдаһорәҥ", "nydahorəŋ"} “get dressed”
+    %li
+      Active/Mediopassive
+      %ul
+        %li #{t "қоорәҥ", "qoorəŋ"} “break (something)” → #{t "стақоорәҥ", "staqoorəŋ"} “break, be broken”
+        %li #{t "сымыжороҥ", "symyžoroŋ"} “marry” → #{t "стамыжороҥ", "stamyžoroŋ"} “get married”
+        %li #{t "туюн", "tuiun"} “play (a game)” → #{t "стуюн", "stuiun"} “play (with each other)”
+
+  %p Conjugation Ic does have one additional usage in a construction known as spontaneous subject demotion. This is an impersonal construction that takes a Conjugation Ia or Ib verb and reduces the agency of the subject to add a sense of inevitability or lack of control; this often translates with phrases like “feel like” or “couldn’t help but”. The verb switches to Conjugation Ic and takes on fixed third person inanimate agreement. The agent is then marked by the objective case. If the original verb was transitive, its original object switches to the instrumental case.
+  = example_sentence "Таџаадее һиваивус.",
+                     "Taǰaadee hiwaiwus.",
+                     "t-ǰaa{b+}d-è{f+}-A{f} iw{f+}-kÀ{b}n-w-u{b+}s",
+                     "{def}-children-{obj}-{indir} {3.inan.subj|+5}-{pres.def|+4}-{theme|+3}-sleep{0}",
+                     "The children are exhausted."
+  = example_sentence "Sобаиҥее куодоныла воона киваваичи.",
+                     "Dzobaiŋee kuodonyla woona kiwawaiči.",
+                     "dÌ{b→0}-o{b+}b-ŋ-è{f+}-A{f} kuo{b+}d-n-Ì{b}l-A{b} woona k-iw{f+}-kÀ{b}l-w-a{b+}iči",
+                     "{3sg.pos}-parent-{pl}-{obj}-{indir} holiday-{pl}-{loc}-{indir} {3sg.lat} {det|+6}-{3.inan.subj|+5}-{pres.indef|+4}-{theme|+3}-visit{0}",
+                     "Her parents can’t help but visit her on holidays."
+
+  %p However, if the agent is pronominal, it uses the dative case instead.
+  = example_sentence "Һешк һивеиусее.",
+                     "Hešk hiweiusee.",
+                     "hešk i{f+}w-kÀ{f}n-w-see{f+}",
+                     "{1.dat} {3.inan.subj|+5}-{pres.def|+4}-{theme|+3}-eat{0}",
+                     "I’m hungry."
+
+  %p In spontaneous subject demotion constructions, the -1 subject agreement marker is always optional and always agrees with the <em>agent</em>, not the (impersonal) subject.
+  = example_sentence "Веша һешк қады ноотәҥ һенц һиваиузҕаш.",
+                     "Weša hešk qady nootəŋ hents hiwaiuzǧaš.",
+                     "we-š-a hešk qady noo{b+}t-ŋ hents i{f+}w-kÀ{b}n-w-zǧa{b+}-À{b→0}š",
+                     "{neg}-{det}-{har} {1sg.dat} this.{gen} appearance-{tra} now {3.inan.subj|+5}-{pres.def|+4}-{theme|+3}-talk{0}-{1sg.subj|-1}",
+                     "I don’t feel like discussing this now."
+
 = section "Use of Verbs of Communication (Conjugation II)" do
-  X
+  %p Conjugation II, also known as the Verbs of Communication, consists primarily of ditransitive verbs. Ditransitive verbs take three arguments; these correspond to the subject, direct object, and indirect object in languages such as English. However, Očets Conjugation II ditransitives have secundative (or dechticaetiative) alignment, making these particular terms inappropriate. Whereas in most Indo-European languages the patient is treated as a normal object (for instance, receiving accusative case marking) and the indirect object receives special treatment not present in a monotransitive sentence (e.g., dative case marking), in Očets, it is actually the patient that receives special treatment, being marked by the instrumental case rather than the objective.
+  %p Consequently, the terms “direct object” and “indirect object” are not really appropriate when discussing Očets ditransitives, as the “direct” object actually has oblique marking and the “indirect” object has direct marking. The normative terms in Očets are “theme” and ”recipient”, with the table below showing the correspondences with an indirective language such as English:
+  %table
+    %thead
+      %tr
+        %th{:colspan => 2} Indirective Language
+        %th{:colspan => 2} Secundative Language
+      %tr
+        %th Verbal Argument
+        %th Case Marking
+        %th Verbal Argument
+        %th Case Marking
+    %tbody
+      %tr
+        %td Subject
+        %td Nominative
+        %td Subject
+        %td Nominative
+      %tr
+        %td Direct Objective
+        %td Accusative
+        %td Theme
+        %td Instrumental
+      %tr
+        %td Indirect Object
+        %td Dative
+        %td Recipient
+        %td Objective
+
+    %p Under normal circumstances the verb does not show agreement with the theme, but only the subject and recipient.
+    = example_sentence "Кынанәҥ ваан сакворды карас хошнак.",
+                       "Kynanəŋ waan sakwordy karas xošnak.",
+                       "kÌ{b}-na{b+}n-∅-ŋ waan sa{b+}-kwo{b+}r-dÌ{b} ka{b+}r-À{b}s xa{b+}-šI{b→0}n-a{b+}k",
+                       "{det}-drink-{inf}-{tra} {3pl.anim.nom} {com}-water-{gen} cup-{ins} {1pl.indir.obj|+5}-{past.def|+4}-give{0}",
+                       "They gave us a glass of water to drink."
+    = example_sentence "Һеш шиқоичаитее тават шытвоозаса кошижжееш.",
+                       "Heš šiqoičaitee tawat šytwoozasa košižžeeš.",
+                       "heš ši{f+}-qoičai{b+}t-è{f+}-A{f} t-wa{b+}t šI{b}t-woo{b+}z-À{b}s-A{b} k-a{b+}-šI{f}n-š-ǰee{f+}-À{f→0}š",
+                       "{1sg.nom} {1sg.pos}-neighbor-{obj}-{indir} {def}-old {1sg.pos}-car-{ins}-{indir} {det|+6}-{3sg.indir.obj|+5}-{past.def|+4}-{1.subj|+3}-sell{0}-{1sg.subj|-1}",
+                       "I sold my old car to my neighbor."
+    = example_sentence "Висич қанас шакуухлак?",
+                       "Wisič qanas šakuuxlak?",
+                       "wis-ič qa{b}-n-À{b}s ša{b+}-k-uu{b+}xl-À{b}k",
+                       "what-{abl} that-{pl}-{ins} {1sg.indir.obj|+5}-{2.subj|+3}-lie-{2sg.subj}",
+                       "Why are you lying to me about such things?"
+
+    %p Subordinate clauses playing the role of theme—typical of verbs denoting speech—are handled using a quotative construction. These are handled by taking the original quote as the speaker would have said it and placing the quotative particle #{t "че", "če"} directly afterwards. In Očets there is therefore no contrast between reported speech (“He said that he will arrive tomorrow”) and direct quotation (“He said ‘I will arrive tomorrow’”).
+    = example_sentence "Манаҥосла һилил?-че товозителее шашникииш.",
+                       "Manaŋosla hilil?-če towozitelee šašnikiiš.",
+                       "mA{b}n-a{b+}ŋu-lA{b} i{f+}l-Ì{f}l-če t-wozite{f+}l-è{f+}-A{f} š-a{b+}-šI{f→0}}n-k-ii{f+}-À{f→0}š",
+                       "{super}-how_much.{inan}-{loc} far-{loc}-{quot} {def}-driver-{obj}-{indir} {det|+6}-{3sg.anim.indir.obj|+5}-{past.def|+4}-{1.subj|+3}-ask-{1sg.subj}",
+                       "‘How much further?’ I asked the driver."
+    = example_sentence "Венеит һиквоахаш-че воо шышашнывы.",
+                       "Weneit hikwoaxaš-če woo šyšašnywy.",
+                       "wen-eit i-kÀ{b+}n-a{b+}x-À{b}š-če woo šI{b}-ša{b+}-šI{b}n-wy{b+}",
+                       "{neg}-toward {3.inan.subj|+5}-{pres.def|+4}-go_and_arrive{0}-{1sg.subj}-{quot} {3sg.anim.nom} {det|+6}-{1sg.indir.object|+5}-{past.def|+4}-say{0}",
+                       "She told me that she could not make it."
+
+    %p A verbal noun in the instrumental case may also used in place of a quotative construction.
+    = example_sentence "Сеџееззее лазҕаҥас қышакаиҥноҥ-и?",
+                       "Seǰeezzee lazǧaŋas qyšakaiŋnoŋ-i?",
+                       "t-ǰee{f+}s-dA{f}-À{f} la-zǧa{b+}-ŋ-À{b}s qI{b}-ša{b+}-kA{b}n-k-no{b+}ŋ-i?",
+                       "{def}-shopkeeper-{gen}-{indir} {det}-speak-{inf}-{ins} {det|+6}-{1sg.indir.obj|+5}-{pres.def|+4}-{2.subj|+3}-remind{0}-{interr}",
+                       "Remind me to call the shopkeeper."
+
+    %p Since the recipient is marked on the verb directly, a clause without a recipient must use the passive construction. The patient is promoted to subject, while the agent is marked by the instrumental case and by <em>mandatory</em> -1 verbal agreement. It is highly unusual for an Očets verb to agree with an oblique argument; this appears to be due to analogical spread, given the otherwise strong tendency for the -1 agreement marker to always mark the agent. If the patient is quotative, it must be followed by the quotative marker.
+    = example_sentence "Вен вешпел-че шишнавыш.",
+                       "Wen wešpel-če šišnawyš.",
+                       "wen w-kÀ{f}l-š-pe{f+}l-če š-i-šI{b→0}n-a{b+}-wy{b+}-À{b→0}š",
+                       "{neg} {1sg.subj.3.inan.obj|+5}-{pres.indef|+4}-{1.subj|+3}-know{0}-{quot} {det|+6}-{3.inan.subj|+5}-{past.def|+4}-{pass|+1}-say{0}-{1sg.subj|-1}",
+                       "I said I don’t know."
+    = example_sentence "Һочец сеие вына шыдәскоолала һиаст.",
+                       "Hočets seie wyna šydəskoolala hiast.",
+                       "očets t-e{f+}i-A{f} wyn-a šI{b}d-skoola{b+}-Ì{b→0}l-A{b} i-a{b+}-st",
+                       "Očets {def}-language-{indir} {neg}-{har} {1sg.pos}-school-{loc}-{indir} {3.inan.subj|+5}-{pass|+1}-teach",
+                       "Očets is not taught in my school."
+
 = section "Use of Verbs of Motion (Conjugation III)" do
-  X
-= section "Use of Possessive Verbs (Conjuagtion IV)" do
-  X
+  %p Conjugation III consists of the verbs of motion, or verbs that almost always include a directional component. This group includes both intransitive verbs describing the movement of oneself such as “go”, “walk”, “run”, or “swim”, as well as transitive verbs describing induced motion of other things such as “carry”, “bring”, “pull”, or “throw”. They are marked principally by the presence of a directional coverb, and an unusual indefinite tense marker #{underlying "-t{+2}-"}.
+  %p A certain subset of the Verbs of Motion can be described as primitive. This is a closed class of verbs existing solely in Conjugation III, lacking any counterparts in other conjugations. This includes most verbs pertaining to locomotion, such as those listed above. The base form, conveying no directional information, also follows the same paradigm but with a special coverb #{t "чеи", "čei"} that only appears in definite and non-finite forms.
+  = example_sentence "Шивооза вече һакоде.",
+                     "Šiwooza weče hakode.",
+                     "ši{f+}-woo{b+}z-A{b} we-če a{b+}-kÀ{f}n-de{f+}",
+                     "{1sg.pos}-car-{indir} {neg}-{det} {3sg.anim.subj|+5}-{pres.def|+4}-go{0}",
+                     "My car is not working. (lit. ‘going’)"
+  = example_sentence "Таксәдооблаа тууллаа лаҥкочан.",
+                     "Taksədooblaa tuullaa laŋkočan.",
+                     "t-aksdoo{b+}m-lA{b}-A{b} t-uu{b+}l-lA{b}-A{b} l-a{b+}n-kÀ{b}l-t-ča{b+}n",
+                     "{def}-grocery_store-{lat}-{indir} {def}-morning-{lat}-{indir} {det|+6}-{3pl.anim.subj|+5}-{pres.indef|+4}-{indef|+2}-go_by_vehicle{0}",
+                     "They’ll drive to the grocery store tomorrow."
+  = example_sentence "Чи һакындаа һешкәд че-ҕҕөшеҥ наик һиинеулү-и?",
+                     "Či hakyndaa heškəd če-ǧǧöšeŋ naik hiineulü-i?",
+                     "či aky{b+}-n-dÌ{b}-A{b} hešk-d če-d-ǧöše-ŋ naik i-in-a-ö{f+}lü-i",
+                     "this bag-{pl}-{gen}-{indir} {1sg.dat}-{rel} {det}-{det}-carry-{inf} {2sg.dat} {3.inan.subj|+5}-{pres.indef|+4}-{stat|+1}-be_possible{0}-{interr}",
+                     "Can you carry these bags for me?"
+
+  %p However, there are also derived verbs. These verbs typically derive from a base Conjugation I form, and switch freely into Conjugation III when a directional sense is added to the verb. Derived Conjugation III verbs never have a base form with the #{t "чеи", "čei"} coverb. This is an open class, though is prone to some idiomatic usages described in more detail below.
+  = example_sentence "Наи чин шакокфолс?",
+                     "Nai čin šakokfols?",
+                     "nai čin ša{b+}-kÀ{b}n-k-fo{b+}ls",
+                     "{2sg.subj} hither.{det} {1sg.indir.obj|+5}-{pres.def|+4}-{2.subj|+3}-help{0}",
+                     "Could you (come) help me?
+  = example_sentence "Сауҕа саһөлүностыл шадакууч!",
+                     "Sauǧa sahölünostyl šadakuuč!",
+                     "sauǧa sa-hölü{f+}-no{b+}st-Ì{b}l ša{b+}-dÀ{b}-kuu{b+}č",
+                     "return.{det} {det}-be_possible-{inf}-{loc} {1sg.indir.obj|+5}-{imper|+1}-write{0}",
+                     "Write me (back) when you have a chance!"
+  = example_sentence "Чени ниуулҥе ҕу ҥнанчыһас.",
+                     "Čeni niuulŋe ǧu ŋnančyhas.",
+                     "ka{b→f}n-Ì{f+} n-iuu{b+}l-ŋ-è ǧu k-na{b+}ŋ-šI{b}n-a{b+}s",
+                     "many-{obj} {3pl.anim.poss}-friend-{pl}-{obj} homeward.{det} {det|+6}-{3pl.anim.subj.3pl.anim.indir.obj|+5}-{past.def|+4}-invite{0}",
+                     "They invited many of their friends (to their home)."
+
+  %p The directional coverbs each have two forms: a short form when directly preceeding the verb, and a long form when separated from the verb by one or more other words.
+  = example_sentence "Һаксәд күдеҥәҥ талааллаа вау шышшанчыҥ.",
+                     "Haksəd küdeŋəŋ talaallaa wau šyššančyŋ.",
+                     "a{b+}ks-dI{b→0} k-ü{b+}d-ŋ-ŋ t-laa{b+}d-lA{b}-A{b} wau šI{b}n-š-ča{b+}n-šI{b}ŋ",
+                     "food-{gen} {det}-buy-{inf}-{tra} {def}-city-{lat}-{indir} in.{det} {past.def|+4}-{1.subj|+3}-go_by_vehicle{0}-{1pl.subj|-1}",
+                     "We drove to town to buy food."
+  = example_sentence "Һаксәд күдеҥәҥ ваук талааллаа шышшанчыҥ.",
+                     "Haksəd küdeŋəŋ wauk talaallaa šyššančyŋ.",
+                     "a{b+}ks-dI{b→0} k-ü{b+}d-ŋ-ŋ wauk t-laa{b+}d-lA{b}-A{b} šI{b}n-š-ča{b+}n-šI{b}ŋ",
+                     "food-{gen} {det}-buy-{inf}-{tra} in.{det} {def}-city-{lat}-{indir} {past.def|+4}-{1.subj|+3}-go_by_vehicle{0}-{1pl.subj|-1}",
+                     "We drove to town to buy food."
+
+  %p Primitive verbs using the coverb #{t "чеи", "čei"} drop it in the present indefinite and past indefinite tenses.
+  = example_sentence "Покоипсыл тон Қузулла квоштәчанаш.",
+                     "Pokoipsyl ton Quzulla kwoštəčanaš.",
+                     "po{b}-koi{b+}ps-Ì{b}l to{b+}n Kaza{b+}n-lA{b} kÀ{b}l-š-t-ča{b+}n-À{b}š",
+                     "{dist}-month-{loc} once Kazan-{lat} {pres.indef|+4}-{1.subj|+3}-{indef|+2}-go_by_vehicle{0}-{1sg.subj|-1}",
+                     "I go to Kazan once a month."
+  = example_sentence "Покоипсыл тон чеи Қузулла кошшанаш.",
+                     "Pokoipsyl ton čei Quzulla koššanaš.",
+                     "po{b}-koi{b+}ps-Ì{b}l to{b+}n čei Kaza{b+}n-lA{b} kÀ{b}n-š-ča{b+}n-À{b}š",
+                     "{dist}-month-{loc} once {det} Kazan-{lat} {pres.def|+4}-{1.subj|+3}-go_by_vehicle{0}-{1sg.subj|-1}",
+                     "I will go to Kazan once a month."
+
+  %p Negation is handled by cliticizing the negative or prohibitive particles to the coverb. In the case of non-directional primitive verbs in the indefinite tenses, the use of the coverb is optional; negatives both with and without it are permissible.
+  = example_sentence "Вечина һаун порады каитыл һанчыһах.",
+                     "Wečina haun porady kaityl hančyhax.",
+                     "we-čina hau{b+}n pora{b+}-dI{b} kai{b+}t-Ì{b}l a{b+}n-šI{b}l-a{b+}x",
+                     "{neg}-hither.{det} seven hour-{gen} front-{loc} {3pl.subj|+5}-{past.def|+4}-arrive{0}",
+                     "They did not arrive before 7."
+  = example_sentence "Венала шаҥҥуучише хал квоштәдешиҥ.",
+                     "Wenala šaŋŋuučiše xal kwoštədešiŋ.",
+                     "wen-ala šən{b}-ǧuu{b+}-či{f+}s-A{f} xal kÀ{f}l-š-t-de{f+}-šI{f}ŋ",
+                     "{neg}-away.{det} {1pl.pos}-house-{abl}-{indir} still {pres.indef|+4}-{1.subj|+3}-{indef|+2}-go{0}-{1pl.subj|-1}",
+                     "We haven’t left home yet."
+  = example_sentence "Таквора даде!",
+                     "Takwora dade!",
+                     "ta-kora d-de{f+}",
+                     "{proh}-into_water.{det} {imper|+1}-go{0}",
+                     "Don't go into the water!"
+
+  = section "The Simple Directional Coverbs: <i>šoia</i>, <i>or</i>, <i>wauk</i>, <i>kra</i>" do
+    %p The coverbs <i>šoia</i> “up, upwards”, <i>or</i> “down, downwards”, <i>wauk</i> “in, into”, and <i>kra</i> “out” indicate simple motion in the corresponding directions. These coverbs effectively take the place of many motive adverbs and adpositions such as “out” (not needed) or “into” (indicated by the lative case):
+    %p XXX The dogs ran outside.
+
+    %p Destinations are typically marked just by the lative case, as the coverb itself specifies the manner of motion:
+    %p XXX Go into the cellar and bring up some potatoes.
+    %p XXX They already went into the train station.
+
+    %p The coverbs <i>šoia</i> and <i>or</i> can contextually also mean “[to] upstairs” or “[to] downstairs”.
+    %p XXX Bring this to your father upstairs.
+
+    %p These coverbs may also be used with non-motion verbs with a strong directional sense:
+    %p XXX I shot my rifle into the air.
+
+  = section "The Deictic Coverbs: <i>čina</i>, <i>čits</i>, <i>as</i>, <i>eita</i>, <i>ala</i>" do
+    %p The coverbs <i>čina</i> “hither, to here”, <i>čits</i> “hence, from here”, <i>as</i> “along”, <i>eita</i> “towards”, and <i>ala</i> “away” are known as the deictic coverbs, since they encode information about movement either relative to the speaker or relative to an external location.
+    %p <i>Čina</i> “hither” and <i>čits</i> “hence”, in their most basic sense, mark literal movement towards or away from the speaker at the time of speech.
+    %p XXX
+    %p XXX
+
+    %p However, they also often indicate a first person benefactive or malefactive respectively, marking an action as either benefitting or harming the speaker.
+    %p XXX
+    %p XXX (stole from me?)
+    %p XXX (engine broke down on me)
+
+    %p <i>Čina</i> and <i>čits</i> can also mark second person deixis as well as second person benefactives and malefactives, but often require an explicit second person reference if not strongly implied by context, such as a second person dative pronoun.
+    %p XXX
+    %p XXX I brought you a gift (since "I brought myself" a gift is somewhat illogical)
+
+    %p The coverbs <i>eita</i> “towards” and <i>ala</i> “away” work much the same way, but relative to an external (third person) focal point.
+    %p XXX
+    %p XXX
+    %p XXX
+
+    %p The coverb <i>as</i> “along”, in its literal sense, marks movement along, by, or past something. The reference point may be expressed in the locative, lative, or ablative cases, with the locative case being neutral relative to the speaker, and the lative and ablative cases explicitly marking motion towards or away from the speaker:
+    %p XXX by me
+    %P XXX along the wall towards/away from me
+
+    %p It also is used when both the origin and destination of motion are specified and of equal relevance.
+    %p XXX from X to Y
+
+  = section "The Structural Coverb: <i>ǧuu</i>" do
+    %p The coverb <i>ǧuu</i> “homeward, into a building” marks movement in the direction of a building. Though clearly related to the noun #{t "ҕвуу", "ǧwuu"} “house, home”, it can be used to refer to any structure, even ones that would never be considered a ҕвуу.
+    %p The most common usage nevertheless refers to homes, either one’s own or someone else’s. In the latter case, the owner of the home may appear in the lative case.
+    %p XXX going home
+    %p XXX going to someone's home
+
+    %p With other buildings, the use of <i>ǧuu</i> indicates general movement in the direction of the building, rather than explicit movement into it (cf. English “go to the store” vs “go into the store”).
+    %p XXX
+
+    %p This coverb is also used with a handful of destinations that are not buildings at all, such as as XXX “city park” (but not XXX “national park”), XXX “work”, or XXX “marketplace”.
+
+  = section "The Riverine-Navigational Coverbs: <i>uuk</i>, <i>syyk</i>, <i>euk</i>, <i>čik</i>" do
+    %p upriver/south, downriver/north, upriver on the ice, downriver on the ice
+
+  = section "The Translative Coverbs: <i>tata</i>, <i>sauǧa</i>" do
+    %p across, back
+
+    "my heart sways back and forth (about)" = "I wonder about, worry about"
+
+  = section "The Riparian Coverbs: <i>wilas</i>, <i>wileita</i>, <i>wilala</i>" do
+    %p along the riverbank, from the river to the forest, from the forest to the river
+
+  = section "The Water Coverbs: <i>kora</i>, <i>iiǧa</i>, <i>aǧa</i>" do
+    %p into water, out of water, ashore
+
+  = section "Pseudo-Coverbs" do
+    #p left, right
+
+= section "Use of Possessive Verbs (Conjugation IV)" do
+  %p XXX
 = section "Use of Stative Verbs (Conjugation V)" do
-  X
+  %p XXX
 = section "Use of Incorporative Verbs (Conjugation VI)" do
-  X
+  %p XXX
+= section "Determiners" do
+  %p XXX
 = section "Syntax of Negation" do
-  X
+  %p XXX
 = section "Using Two Verbs" do
-  X
+  %p XXX
 = section "Impersonal Constructions" do
-  X
+  %p existential too
+  %p animacy agreement is logical (e.g., "I cannot pay for this" = "to me it cannot pay" uses animate agreement due to the logical animate subject)
 = section "Modal Forms" do
-  X
+  %p XXX
 
-%p &nbsp;
-%p &nbsp;
-
-= render :partial => 'navigation'
+%section.footnotes
+  = footnote do
+    These citation forms are given as the present passive participle, since there is no passive infinitive. The corresponding active infinitives are #{"шысан", "šysan"} “respect, regard” and #{"наин", "nain"} “see”.
