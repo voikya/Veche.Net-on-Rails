@@ -29,7 +29,7 @@
         keydown = @handleKeydown.bind(@, idx)
       else
         def = Utils.markupToHtml(def)
-      `<li contentEditable={editable} onKeyDown={keydown} onBlur={update}>{def}</li>`
+      `<li contentEditable={editable} onKeyDown={keydown} onBlur={update} key={idx}>{def}</li>`
 
   handleKeydown: (idx, evt) ->
     switch evt.which

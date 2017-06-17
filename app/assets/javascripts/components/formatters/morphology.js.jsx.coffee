@@ -28,7 +28,7 @@
   renderMorphologyFields: ->
     for key, value of (@state.content ? @state.template)
       update = @update.bind(@, key)
-      `<tr>
+      `<tr key={key}>
          <th>{key}</th>
          <td contentEditable={true} onBlur={update}>{value}</td>
        </tr>

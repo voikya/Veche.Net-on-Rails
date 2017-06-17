@@ -118,15 +118,15 @@ module Lexicons
     # Generate a new slug
     def generate_slug
       unless self.slug.present?
-        if self.class.where(:slug => self.word).length.zero?
-          self.slug = self.word
+        if self.class.where(:slug => self.word.serialize).length.zero?
+          self.slug = self.word.serialize
         else
           idx = 2
           loop do
-            break if self.class.where(:slug => "#{self.word}#{idx}").length.zero?
+            break if self.class.where(:slug => "#{self.word.serialize}#{idx}").length.zero?
             idx += 1
           end
-          self.slug = "#{self.word}#{idx}"
+          self.slug = "#{self.word.serialize}#{idx}"
         end
       end
     end

@@ -42,7 +42,7 @@
        </div>
       `
   renderResultListItems: (list) ->
-    list.map (w) -> `<Lexicon.SearchResultItem slug={w} />`
+    list.map (w) -> `<Lexicon.SearchResultItem slug={w} key={w} />`
 
   receiveSearchResults: (data) ->
     @setState

@@ -26,13 +26,14 @@
       if @props.isEditing
         update = @update.bind(@, idx)
         keydown = @handleKeydown.bind(@, idx)
-        `<li onKeyDown={keydown} onBlur={update} contentEditable={true}>{xref}</li>`
+        return null if $.type(xref) isnt "string"
+        `<li onKeyDown={keydown} onBlur={update} contentEditable={true} key={xref}>{xref}</li>`
       else
         slug = xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
         click = @fetchEntry.bind(@, xref.slug)
         path = "/entries/#{xref.slug}"
         summary = "\"#{xref.summary}\"" if xref.summary
-        `<li>
+        `<li key={xref.slug}>
            <Lexicon.Link path={path} handler={click} content={slug} />
            &nbsp;
            {summary}

@@ -200,7 +200,7 @@ class Lexicon
                               memo.push $(cur).text()
                               memo
                             , [])
-                              .join(",")
+                            .join(",")
         when 'morphology_table'
           mt = {}
           $(@).find('tr').each ->

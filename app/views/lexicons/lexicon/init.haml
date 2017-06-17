@@ -1,3 +1,3 @@
 - content_for :title, "#{@lexicon.name} Lexicon"
 
-= react_component('Lexicon.Lexicon', @data, {tag: 'body', class: 'lexicon'})
+%body.lexicon= react_component('Lexicon.Lexicon', @data, {tag: 'div', class: 'lexicon-container'})

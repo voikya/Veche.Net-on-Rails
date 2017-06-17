@@ -8,6 +8,12 @@ body.lexicon {
   overflow: hidden;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
+  .lexicon-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
   #lexicon-wrapper {
     position: relative;
     height: 100%;

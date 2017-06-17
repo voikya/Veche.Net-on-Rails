@@ -16,24 +16,26 @@
     checkbox = @advancedSearchCheckbox
     `<div id="advanced-search">
        <table>
-         <tr>
-           {field('Word', 'word')}
-           {field('Part of Speech', 'part_of_speech')}
-         </tr>
-         <tr>
-           {field('Transliteration', 'transliteration')}
-           {field('Root', 'root')}
-         </tr>
-         <tr>
-           {field('Definition', 'definition')}
-           {field('Any', 'any')}
-         </tr>
-         <tr>
-           <td colSpan="6">
-             {checkbox('Whole Word Matches Only', 'whole_word')}
-             {checkbox('Exact Matches Only', 'exact')}
-           </td>
-         </tr>
+         <tbody>
+           <tr>
+             {field('Word', 'word')}
+             {field('Part of Speech', 'part_of_speech')}
+           </tr>
+           <tr>
+             {field('Transliteration', 'transliteration')}
+             {field('Root', 'root')}
+           </tr>
+           <tr>
+             {field('Definition', 'definition')}
+             {field('Any', 'any')}
+           </tr>
+           <tr>
+             <td colSpan="6">
+               {checkbox('Whole Word Matches Only', 'whole_word')}
+               {checkbox('Exact Matches Only', 'exact')}
+             </td>
+           </tr>
+         </tbody>
        </table>
      </div>
     `
@@ -43,13 +45,13 @@
     disabled = !@props.visible
     callback = @handleSelectChange.bind(@, key)
     [
-      `<th>{label}</th>`,
-      `<td>
+      `<th key="label">{label}</th>`,
+      `<td key="options">
          <select name={key + "_opts"} disabled={disabled} onChange={callback}>
            {options}
          </select>
        </td>`,
-      `<td>
+      `<td key="text">
          <input type="text" name={key} disabled={disabled} onChange={callback} />
        </td>`
     ]
@@ -59,9 +61,9 @@
       `<option value="contains">is</option>`
     else
       [
-        `<option value="contains">contains</option>`,
-        `<option value="begins_with">begins with</option>`,
-        `<option value="ends_with">ends with</option>`
+        `<option value="contains" key="contains">contains</option>`,
+        `<option value="begins_with" key="begins_with">begins with</option>`,
+        `<option value="ends_with" key="ends_with">ends with</option>`
       ]
 
   advancedSearchCheckbox: (label, key) ->
