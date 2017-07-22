@@ -30,13 +30,23 @@
     @setState(opts) if @props.admin
 
   render: ->
+    # Props
+    admin = @props.admin
+    entryCount = @props.entryCount
+    language = @props.language
+    lexemeField = @props.lexemeField
+    structure = @props.structure
+    # State
+    isEditing = @state.isEditing
+    # Nodes
     loading = `<div className="loading" />` if @state.isLoading
+
     `<div id="lexicon-wrapper">
-       <Lexicon.LexiconHeader language={this.props.language} lexemeField={this.props.lexemeField} />
+       <Lexicon.LexiconHeader language={language} lexemeField={lexemeField} />
        {loading}
        <main>
          <Lexicon.SearchResults />
-         <Lexicon.Entry language={this.props.language.name} entryCount={this.props.entryCount} isAdmin={this.props.admin} isEditing={this.state.isEditing} />
+         <Lexicon.Entry language={language.name} entryCount={entryCount} isAdmin={admin} isEditing={isEditing} structure={structure} />
        </main>
      </div>
     `

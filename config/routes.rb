@@ -97,9 +97,9 @@ VecheNet::Application.routes.draw do
       post '/:language/entries' => 'lexicon#create'
       get '/:language/entries/:slug' => 'lexicon#show', :as => 'lexicon_entry'
       put '/:language/entries/:slug' => 'lexicon#update'
-      get '/:language/entries/:slug/edit' => 'lexicon#edit', :as => 'lexicon_edit_entry'
       get '/:language/new' => 'lexicon#new', :as => 'lexicon_new_entry'
     end
+    get '/:language/entries/:slug/morphology' => 'lexicon#show_morphology'
     get '/:language(/*subpath)' => 'lexicon#init', :as => 'lexicon'
   end
 

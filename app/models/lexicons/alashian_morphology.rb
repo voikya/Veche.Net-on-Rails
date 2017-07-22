@@ -14,6 +14,17 @@ module Lexicons
     # one that supports lookbehind such as https://www.debuggex.com/
     STRESSED_VOWEL_REGEX = /(?:(?:(ω|η|ει|ου|ιη|υω)(?=[^αωεηιου]*$))|(?:([αεηιυω]|ει|ου|ιη|υω)(?=(?:[^αωεηιουἠ]+(?:[αειυἠ]|οὐ)){1,2}[^αωεηιουἠ]*$))|(?:(?:(?<=^)|(?<=^[^αωεηιου])|(?<=^[^αωεηιου][^αωεηιου])|(?<=^[^αωεηιου][^αωεηιου][^αωεηιου]))([αειυ])(?=[^αωεηιου]*$)))/
 
+    def self.structure
+      [
+        { :key => "category" },
+        { :key => "group" },
+        { :key => "subgroup" },
+        { :key => "stem" },
+        { :key => "stem_transliterated" },
+        { :key => "flags" }
+      ]
+    end
+
     def as_json(options={})
       {
         :category => category,

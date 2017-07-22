@@ -12,6 +12,18 @@ module Lexicons
         raise NotImplementedError
       end
 
+      # Hash structure defining the type and ordering of all fields, used by the front end
+      # for defining views
+      def structure_definition
+        formatters.map do |formatter|
+          {
+            name: formatter[:field].to_s.dasherize,
+            type: formatter[:opts][:formatter].name.split('::').last.gsub('Formatter', ''),
+            meta: json_metadata_for(formatter[:field])
+          }
+        end
+      end
+
       # Register a field and assign it a formatter class, while creating a serializer
       # for that field on the lexicon entry class. Call this method for all
       # presentable fields.
@@ -49,6 +61,10 @@ module Lexicons
           serialize name, opts[:formatter]
         end
       end
+
+      def json_metadata_for(field)
+        nil
+      end
     end
 
     # Mark up the instance with ephemeral annotations for display purposes.
@@ -57,7 +73,7 @@ module Lexicons
       @matches ||= []
       # Iterate over each provided field and condition
       scopes.each do |field, condition|
-        text = send(field).for_reading.to_s
+        text = send(field).as_json.to_s
         plaintext_condition = condition.gsub('*', '')
         local_matches = []
         # Loop until all matching instances are found
@@ -84,12 +100,19 @@ module Lexicons
       @matches
     end
 
+    def as_json(opts = {})
+      self.class.formatters.reduce({}) do |hash, formatter|
+        hash[formatter[:field].to_s.dasherize] = send(formatter[:field]).as_json
+        hash
+      end.merge(slug: slug)
+    end
+
     # Generate a hash suitable for conversion to JSON for viewing
     def to_read_hash
       {
         slug: slug,
         fields: self.class.formatters.map do |formatter|
-          if value = send(formatter[:field]).for_reading
+          if value = send(formatter[:field]).as_json
             {
               name: formatter[:field].to_s.dasherize,
               value: value,

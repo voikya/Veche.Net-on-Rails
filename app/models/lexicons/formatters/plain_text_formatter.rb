@@ -39,13 +39,13 @@ module Lexicons
         end
       end
 
-      # Format for reading
-      def for_reading
+      # Format for JSON
+      def as_json
         @content
       end
 
-      # Format for editing
-      def for_editing
+      # Format for HTML
+      def as_html
         @content
       end
 

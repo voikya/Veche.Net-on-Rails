@@ -13,6 +13,21 @@ module Lexicons
       :tertiary, :tertiary_transliterated, :group, :subgroup, :flags
     ]
 
+    def self.structure
+      [
+        { :key => "category" },
+        { :key => "group" },
+        { :key => "subgroup" },
+        { :key => "stem" },
+        { :key => "stem_transliterated" },
+        { :key => "desinence" },
+        { :key => "desinence_transliterated" },
+        { :key => "tertiary" },
+        { :key => "tertiary_transliterated" },
+        { :key => "flags" }
+      ]
+    end
+
     def as_json(options={})
       {
         :category => category,

@@ -14,10 +14,10 @@ module Lexicons
     class ImportantFormsFormatter < RichTextFormatter
       def initialize(value)
         if value.present?
-          @content = value.split(/\r?\n/).reduce({}) do |forms_hash, line|
-            key, _, value = line.partition("|").map(&:strip)
-            forms_hash[key] = value
-            forms_hash
+          @content = value.split(/\r?\n/).reduce([]) do |forms_array, line|
+            key, _, value = line.gsub(/[\[\]]/, '').partition("|").map(&:strip)
+            forms_array << { key: key, value: value }
+            forms_array
           end
         else
           @content = nil
@@ -26,7 +26,7 @@ module Lexicons
 
       # Update a formatter with a new value
       def set(value)
-        if value.is_a?(Hash) && value.keys.length > 0
+        if value.is_a?(Array) && value.length > 0
           @content = value
         else
           @content = nil
@@ -35,7 +35,7 @@ module Lexicons
 
       def serialize
         if @content
-          @content.map {|k,v| "[[#{k}| #{v}]]"}.join("\n")
+          @content.map { |c| "[[#{c.key}| #{c.value}]]" }.join("\n")
         else
           nil
         end

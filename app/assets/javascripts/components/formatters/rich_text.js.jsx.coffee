@@ -9,50 +9,55 @@
     @setState(content: nextProps.data.value)
 
   render: ->
-    editable = @props.isEditing
-    className = Utils.classSet(@props.data.name, 'editable' if editable)
-    init = @initializeWithEmptyData
-    `<div className={className} onClick={init}>
-       {this.renderParagraphs()}
+    if @props.isEditing
+      @renderForEditing()
+    else
+      @renderForReading()
+
+  renderForReading: ->
+    name = @props.data.name
+    paragraphs = @state.content.map (p, idx) ->
+      p = Utils.markupToHtml(p)
+      `<p key={idx}>{p}</p>`
+    `<div className={name}>
+       {paragraphs}
      </div>
     `
 
-  renderParagraphs: ->
-    if @state.content
-      editable = @props.isEditing
-      @state.content.map (p, idx) =>
-        if editable
-          update = @update.bind(@, idx)
-          keydown = @handleKeydown.bind(@, idx)
-        else
-          p = Utils.markupToHtml(p)
-        `<p contentEditable={editable} onKeyDown={keydown} onBlur={update} key={idx}>{p}</p>`
+  renderForEditing: ->
+    content = @state.content ? [""]
+    className = Utils.classSet(@props.data.name, 'editable', 'empty' unless @state.content)
+    placeholder = Utils.titleize(@props.data.name)
+    paragraphs = content.map (p, idx) =>
+      update = @update.bind(@, idx)
+      keydown = @handleKeydown.bind(@, idx)
+      `<textarea key={idx} value={p} onChange={update} onKeyDown={keydown} placeholder={placeholder} />`
+    `<div className={className}>
+       {paragraphs}
+     </div>
+    `
 
   handleKeydown: (idx, evt) ->
     switch evt.which
       when 13 # Enter
         evt.preventDefault()
         content = @state.content
-        content.splice(idx + 1, 0, "New paragraph")
+        content.splice(idx + 1, 0, "")
         @setState(content: content)
+        break
       when 8 # Backspace
-        if ReactDOM.findDOMNode(@).childNodes[idx].textContent.length == 0
+        if ReactDOM.findDOMNode(@).querySelectorAll('textarea')[idx].value.length == 0
           evt.preventDefault()
           content = @state.content
+          return unless content?
           content.splice(idx, 1)
           content = null unless content.length
           @setState(content: content)
-
-  initializeWithEmptyData: ->
-    unless @state.content
-      @setState(content: ["New paragraph"])
+        break
 
   update: (idx, evt) ->
-    newParagraph = ReactDOM.findDOMNode(@).childNodes[idx].innerHTML.trim()
-    newContent = @state.content
-    if newParagraph.length
-      newContent[idx] = newParagraph
-    else
-      newContent.splice(idx, 1)
-    newContent = null unless newContent.length
-    @setState(content: newContent)
+    newPara = ReactDOM.findDOMNode(@).querySelectorAll('textarea')[idx].value.trim()
+    Utils.next =>
+      newContent = @state.content ? []
+      newContent[idx] = newPara
+      @setState(content: newContent)

@@ -85,5 +85,18 @@ module Lexicons
         :definition      => :definition
       }[field]
     end
+
+    def self.json_metadata_for(field)
+      case field
+        when :morphology_table
+          morphology_class.structure
+      else
+        super
+      end
+    end
+
+    def morphology_formatter
+      morphology_table
+    end
   end
 end

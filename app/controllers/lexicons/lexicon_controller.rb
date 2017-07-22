@@ -23,6 +23,7 @@ module Lexicons
     def init
       @data = {
         language: @lexicon,
+        structure: @lexicon.lexicon_class.structure_definition,
         lexemeField: @lexicon.lexicon_class.indexed_column,
         entryCount: @lexicon.record_count,
         basePath: lexicon_path(:language => @language),
@@ -35,17 +36,16 @@ module Lexicons
     end
 
     def show
-      render :json => @lexicon.entry(params[:slug]).to_read_hash
+      render :json => @lexicon.entry(params[:slug])
+    end
+
+    def show_morphology
+      render :text => @lexicon.entry(params[:slug]).morphology_formatter.as_html
     end
 
     def new
       require_authorization! or return
       render :json => @lexicon.lexicon_class.new.to_edit_hash
-    end
-
-    def edit
-      require_authorization! or return
-      render :json => @lexicon.entry(params[:slug]).to_edit_hash
     end
 
     def create
@@ -70,7 +70,7 @@ module Lexicons
       end
       @entry = @lexicon.entry(params[:slug])
       @entry.update_attributes fields
-      render :json => @entry.to_read_hash
+      render :json => @entry
     end
 
     private

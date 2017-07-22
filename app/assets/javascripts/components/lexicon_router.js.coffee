@@ -14,13 +14,13 @@ class @Lexicon.Router
       @route '/entries', (params) ->
         Lexicon.API.advancedSearch(params)
       @route '/new', (params) ->
-        Lexicon.API.newEntry()
+        # TODO
       @route '/entries/{slug}/edit', (slug, params) ->
         Lexicon.Event.trigger 'edit:on'
-        Lexicon.API.editEntry(slug)
+        Lexicon.API.getEntry(slug)
       false
     catch e
-      if e == "route-found"
+      if e is "route-found"
         return true
       else
         throw e

@@ -283,11 +283,18 @@ body.lexicon {
       &:hover {
         background-color: #ECF6FF;
       }
-      &:empty {
+      &.empty {
         background-color: #FFF1AD;
+
+        input::placeholder, textarea::placeholder {
+          color: #FFCC66;
+        }
       }
-      &:empty:before {
-        color: #FFCC66;
+
+      input, textarea {
+        border: none;
+        font: inherit;
+        background-color: transparent;
       }
     }
 
@@ -298,7 +305,6 @@ body.lexicon {
     div.word {
       font-size: xx-large;
       display: inline-block;
-      &:empty:before { content: "Word"; }
     }
 
     div.root-word {
@@ -336,7 +342,10 @@ body.lexicon {
       font-style: italic;
       padding-left: 5px;
       display: inline-block;
-      &:empty:before { content: "Transliteration"; }
+
+      &.editable {
+        padding-left: 0;
+      }
     }
 
     div.root-transliteration {
@@ -368,13 +377,17 @@ body.lexicon {
       font-family: Verdana, Arial, Helvetica, sans-serif;
       display: block;
 
-      &:empty:before { content: "Pronunciation"; }
+      input {
+        width: 100%;
+      }
     }
 
     div.part-of-speech {
       display: block;
 
-      &:empty:before { content: "Part of Speech"; }
+      input {
+        width: 100%;
+      }
     }
 
     div.root {
@@ -385,7 +398,13 @@ body.lexicon {
         content: "Root: ";
       }
 
-      &:empty:before { content: "Root"; }
+      &.empty:before {
+        display: none;
+      }
+
+      input {
+        width: 90%;
+      }
 
       a.root {
         &:before {
@@ -399,7 +418,9 @@ body.lexicon {
     div.definition {
       display: block;
 
-      &:empty:before { content: "Definition"; }
+      input {
+        width: 90%;
+      }
     }
 
     div.important-forms {
@@ -427,7 +448,9 @@ body.lexicon {
         font-style: italic;
       }
 
-      &:empty:before { content: "Notes"; }
+      textarea {
+        width: 100%;
+      }
     }
 
     div.cognates {
@@ -438,7 +461,9 @@ body.lexicon {
         content: "cf. ";
       }
 
-      &:empty:before { content: "Cognates"; }
+      textarea {
+        width: 100%;
+      }
     }
 
     div.etymology {
@@ -449,7 +474,9 @@ body.lexicon {
         content: "Etym: ";
       }
 
-      &:empty:before { content: "Etymology"; }
+      textarea {
+        width: 100%;
+      }
     }
 
     div.cross-references {

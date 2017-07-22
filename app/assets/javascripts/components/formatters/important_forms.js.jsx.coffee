@@ -6,75 +6,85 @@
     @setState(content: @props.data.value)
 
   componentWillReceiveProps: (nextProps) ->
-    @setState(content: nextProps.data.value)
+    @setState(content: @props.data.value)
 
   render: ->
-    editable = @props.isEditing
-    className = Utils.classSet(@props.data.name, 'editable' if editable)
-    init = @initializeWithEmptyData
-    `<div className={className} onClick={init}>
-       {this.renderForms()}
+    if @props.isEditing
+      @renderForEditing()
+    else
+      @renderForReading()
+
+  renderForReading: ->
+    name = @props.data.name
+    forms = @state.content.map (form, idx) =>
+      content = Utils.markupToHtml(form.value)
+      `<p key={idx}>
+         <span className="label">{form.key}:</span>
+         &nbsp;
+         <span>{content}</span>
+       </p>
+      `
+    `<div className={name}>
+       {forms}
      </div>
     `
 
-  renderForms: ->
+  renderForEditing: ->
+    className = Utils.classSet(@props.data.name, 'editable', 'empty' unless @state.content)
     if @state.content
-      if @props.isEditing
-        `<table className='editable-table'>
+      forms = @state.content.map (form, idx) =>
+        update = @update.bind(@, idx)
+        keydown = @handleKeydown.bind(@, idx)
+        `<tr key={idx}>
+           <th>
+             <input type="text" value={form.key} onKeyDown={keydown.bind(this, 'key')} onChange={update.bind(this, 'key')} />
+           </th>
+           <td>
+             <input type="text" value={form.value} onKeyDown={keydown.bind(this, 'value')} onChange={update.bind(this, 'value')} />
+           </td>
+         </tr>
+        `
+      `<div className={className}>
+         <table className='editable-table'>
            <tbody>
-             {this.renderEditableRows()}
+             {forms}
            </tbody>
          </table>
-        `
-      else
-        Object.keys(@state.content).map (f) =>
-          content = Utils.markupToHtml(@props.data.value[f])
-          `<p>
-             <span className="label">{f}:</span>
-             <span>{content}</span>
-           </p>
-          `
-
-  renderEditableRows: ->
-    Object.keys(@state.content ? {}).map (f, idx) =>
-      v = @state.content[f]
-      update = @update.bind(@, f)
-      keydown = @handleKeydown.bind(@, f)
-      `<tr>
-         <th contentEditable={true} onKeyDown={keydown.bind(this, 'key')} onBlur={update.bind(this, 'key')}>{f}</th>
-         <td contentEditable={true} onKeyDown={keydown.bind(this, 'value')} onBlur={update.bind(this, 'value')}>{v}</td>
-       </tr>
+       </div>
+      `
+    else
+      placeholder = Utils.titleize(@props.data.name)
+      initWithEmptyObject = @initWithEmptyObject
+      `<div className={className}>
+         <input type="text" placeholder={placeholder} onClick={initWithEmptyObject} />
+       </div>
       `
 
-  handleKeydown: (field, type, evt) ->
+  emptyObject: ->
+    key: "Key",
+    value: "Value"
+
+  initWithEmptyObject: ->
+    @setState(content: [@emptyObject()])
+
+  handleKeydown: (idx, type, evt) ->
     switch evt.which
       when 13 # Enter
         evt.preventDefault()
         content = @state.content
-        content["New Form"] = "Value"
+        content.splice(idx + 1, 0, @emptyObject())
         @setState(content: content)
       when 8 # Backspace
-        if evt.target.textContent.length == 0
+        if evt.target.value.length == 0
           evt.preventDefault()
           content = @state.content
-          if type == 'key'
-            delete content[field]
-          else if type == 'value'
-            content[field] = null
-          content = null if Utils.objectIsEmpty(content)
+          if type is 'key'
+            content.splice(idx, 1)
+          content = null unless content.length
           @setState(content: content)
 
-  initializeWithEmptyData: ->
-    unless @state.content
-      @setState(content: {"New Form": "Value"})
-
-  update: (field, type, evt) ->
-    content = @state.content
-    newValue = evt.target.innerHTML.trim()
-    if type == 'key' and newValue != field
-      content[newValue] = content[field]
-      delete content[field]
-    else if type == 'value'
-      content[field] = newValue
-    content = null if Utils.objectIsEmpty(content)
-    @setState(content: content)
+  update: (idx, type, evt) ->
+    newContent = @state.content
+    newContent[idx][type] = evt.target.value.trim()
+    newContent = null unless newContent.length
+    @setState(content: newContent)

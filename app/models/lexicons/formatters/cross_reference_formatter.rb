@@ -25,7 +25,7 @@ module Lexicons
         end
       end
 
-      def for_reading
+      def as_json
         if @content
           @content.map do |xref|
             {
@@ -33,12 +33,6 @@ module Lexicons
               :summary => xref.definition.summary
             }
           end
-        end
-      end
-
-      def for_editing
-        if @content
-          @content.map(&:slug)
         end
       end
     end

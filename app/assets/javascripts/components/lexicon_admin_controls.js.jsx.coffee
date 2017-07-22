@@ -43,14 +43,17 @@
       `<Lexicon.Link path={path} handler={handler} content={content} />`
 
   transitionToEdit: ->
-    Lexicon.API.editEntry(@props.slug)
+    slug = @props.slug
+    Lexicon.Router.transition "/entries/#{slug}/edit"
+    Lexicon.Event.trigger 'edit:on'
 
   transitionOutOfEdit: ->
+    Lexicon.Event.trigger 'edit:off'
     if @props.slug
-      Lexicon.API.getEntry(@props.slug)
+      slug = @props.slug
+      Lexicon.Router.transition "/entries/#{slug}"
     else
       Lexicon.Router.transition '/'
-      Lexicon.Event.trigger 'edit:off'
 
   transitionToAdd: ->
-    Lexicon.API.newEntry()
+    Lexicon.Router.transition "/new"

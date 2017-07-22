@@ -8,6 +8,10 @@ class @Utils
   @classSet: (classes...) ->
     (c for c in classes when c).join(' ')
 
+  # Convert a dashed/underscored string to title case
+  @titleize: (str) ->
+    str.split(/[-_ ]/).map((part) -> part.charAt(0).toUpperCase() + part.slice(1)).join(" ")
+
   # True if the provided object has no data in it, false otherwise
   @objectIsEmpty: (obj) ->
     isEmpty = true
@@ -25,6 +29,10 @@ class @Utils
         el
     )
     [].concat.apply([], componentArray)
+
+  # Run in next event loop
+  @next: (func) ->
+    setTimeout(func, 1)
 
   ### PRIVATE HELPERS ###
 

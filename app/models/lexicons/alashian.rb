@@ -86,8 +86,21 @@ module Lexicons
       }[field]
     end
 
+    def self.json_metadata_for(field)
+      case field
+        when :morphology_table
+          morphology_class.structure
+      else
+        super
+      end
+    end
+
     def parsed_root
       AlashianRoot.new(root_before_type_cast)
+    end
+
+    def morphology_formatter
+      morphology_table
     end
   end
 end

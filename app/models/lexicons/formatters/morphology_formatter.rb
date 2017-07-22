@@ -26,7 +26,13 @@ module Lexicons
         end
       end
 
-      def for_reading
+      def as_json
+        if @content
+          @content.as_json
+        end
+      end
+
+      def as_html
         if @content && !@content.new_record?
           language = case @content
             when NovegradianMorphology then 'novegradian'
@@ -38,12 +44,6 @@ module Lexicons
           ActionView::Base.new(Rails.configuration.paths['app/views'])
                           .extend(Lexicons::LexiconHelper)
                           .render(partial: partial, locals: { m: @content.generate! })
-        end
-      end
-
-      def for_editing
-        if @content
-          @content.as_json
         end
       end
     end

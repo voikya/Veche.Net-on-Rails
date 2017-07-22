@@ -9,62 +9,76 @@
     @setState(content: nextProps.data.value)
 
   render: ->
-    editable = @props.isEditing
-    className = Utils.classSet(@props.data.name, 'editable' if editable)
-    init = @initializeWithEmptyData
-    `<div className={className} onClick={init}>
-       {this.renderCrossReferenceList()}
+    if @props.isEditing
+      @renderForEditing()
+    else
+      @renderForReading()
+
+  renderForReading: ->
+    name = @props.data.name
+    xrefs = @state.content.map (xref, idx) =>
+      slug = xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
+      click = @fetchEntry.bind(@, xref.slug)
+      path = "/entries/#{xref.slug}"
+      summary = "\"#{xref.summary}\"" if xref.summary
+      `<li key={xref.slug}>
+         <Lexicon.Link path={path} handler={click} content={slug} />
+         &nbsp;
+         {summary}
+       </li>
+      `
+    `<div className={name}>
+       <ul>{xrefs}</ul>
      </div>
     `
 
-  renderCrossReferenceList: ->
+  renderForEditing: ->
+    className = Utils.classSet(@props.data.name, 'editable', 'empty' unless @state.content)
     if @state.content
-      `<ul>{this.renderCrossReferences()}</ul>`
-
-  renderCrossReferences: ->
-    @state.content.map (xref, idx) =>
-      if @props.isEditing
+      xrefs = @state.content.map (xref, idx) =>
         update = @update.bind(@, idx)
         keydown = @handleKeydown.bind(@, idx)
-        return null if $.type(xref) isnt "string"
-        `<li onKeyDown={keydown} onBlur={update} contentEditable={true} key={xref}>{xref}</li>`
-      else
-        slug = xref.slug.replace(/^([^0-9]*)([0-9]*)$/, '$1<sup>$2</sup>')
-        click = @fetchEntry.bind(@, xref.slug)
-        path = "/entries/#{xref.slug}"
-        summary = "\"#{xref.summary}\"" if xref.summary
-        `<li key={xref.slug}>
-           <Lexicon.Link path={path} handler={click} content={slug} />
-           &nbsp;
-           {summary}
+        `<li key={idx}>
+           <input type="text" value={xref.slug} onChange={update} onKeyDown={keydown} />
          </li>
         `
+      `<div className={className}>
+         {xrefs}
+       </div>
+      `
+    else
+      placeholder = Utils.titleize(@props.data.name)
+      initWithEmptyObject = @initWithEmptyObject
+      `<div className={className}>
+         <input type="text" placeholder={placeholder} onClick={initWithEmptyObject} />
+       </div>
+      `
+
+  emptyObject: ->
+    slug: ""
+
+  initWithEmptyObject: ->
+    @setState(content: [@emptyObject()])
 
   handleKeydown: (idx, evt) ->
     switch evt.which
       when 13 # Enter
         evt.preventDefault()
         content = @state.content
-        content.splice(idx + 1, 0, "new_xref")
+        content.splice(idx + 1, 0, @emptyObject())
         @setState(content: content)
       when 8 # Backspace
-        if ReactDOM.findDOMNode(@).querySelectorAll('li')[idx].textContent.length == 0
+        if evt.target.value.length == 0
           evt.preventDefault()
           content = @state.content
           content.splice(idx, 1)
           content = null unless content.length
           @setState(content: content)
 
-  initializeWithEmptyData: ->
-    unless @state.content
-      @setState(content: ["new_xref"])
-
   update: (idx, evt) ->
-    newXref = ReactDOM.findDOMNode(@).querySelectorAll('li')[idx].innerHTML.trim()
     newContent = @state.content
-    if newXref.length
-      newContent[idx] = newXref
-    else
+    newContent[idx].slug = evt.target.value.trim()
+    if newContent[idx].slug.length == 0
       newContent.splice(idx, 1)
     newContent = null unless newContent.length
     @setState(content: newContent)

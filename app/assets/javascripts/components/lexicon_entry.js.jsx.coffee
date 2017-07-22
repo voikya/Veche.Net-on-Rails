@@ -7,11 +7,8 @@
   componentWillMount: ->
     # Set up event listeners
     Lexicon.Event.register 'api:entry:response', @receiveEntry
-    Lexicon.Event.register 'api:edit:response', @receiveEdit
-    Lexicon.Event.register 'api:update:response', @receiveUpdate
-    Lexicon.Event.register 'api:new:response', @receiveEdit
+    Lexicon.Event.register 'api:update:response', @receiveEntry
     Lexicon.Event.register 'api:create:response', @receiveEntry
-    Lexicon.Event.register 'edit:off', @clearEntry
 
   render: ->
     if @state.entry?
@@ -31,9 +28,19 @@
       `
 
   renderFields: ->
-    @state.entry.fields.map (field) =>
+    @props.structure.map (field) =>
       component = Lexicon.Formatters[field.type] || Lexicon.Formatters.MissingFormatter
-      React.createElement component, {data: field, isEditing: @props.isEditing, ref: field.name, key: field.name}
+      value = @state.entry[field.name]
+      if value or @isEditing
+        React.createElement component,
+          data:
+            name: field.name
+            value: value
+            meta: field.meta
+          slug: @state.entry.slug
+          isEditing: @props.isEditing
+          ref: field.name
+          key: field.name
 
   renderAdminControls: ->
     if @props.isAdmin
@@ -47,6 +54,7 @@
       data = {}
       for field of @refs
         data[field] = @refs[field].state.content
+      debugger
       if @state.entry.slug
         Lexicon.API.updateEntry(@state.entry.slug, data)
       else
@@ -54,18 +62,6 @@
 
   receiveEntry: (data) ->
     @setState(entry: data)
-    Lexicon.Event.trigger 'edit:off'
-
-  receiveEdit: (data) ->
-    # Ensure edit mode is enabled before updating the current entry,
-    # since otherwise the view may attempt to render empty or otherwise
-    # unexpected data.
-    Lexicon.Event.trigger 'edit:on'
-    @setState(entry: data)
-
-  receiveUpdate: (data) ->
-    @setState(entry: data)
-    Lexicon.Event.trigger 'edit:off'
 
   clearEntry: ->
     unless @state.entry.slug

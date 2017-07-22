@@ -3,46 +3,72 @@
 
 @Lexicon.Formatters.Morphology = React.createClass
   componentWillMount: ->
-    content = (if Utils.objectIsEmpty(@props.data.value) then null else @props.data.value)
-    template = Object.keys(@props.data.value).reduce ((m,c) -> m[c] = null; m), {}
-    @setState(content: content, template: template, visible: !!content)
+    Lexicon.Event.register 'api:morphology:response', (data) => @setState(html: data)
+    @setState(content: @props.data.value)
+    Lexicon.API.getMorphology(@props.slug)
 
   componentWillReceiveProps: (nextProps) ->
-    v = (if Utils.objectIsEmpty(nextProps.data.value) then null else nextProps.data.value)
-    @setState(content: v, visible: !!v)
+    @setState(content: @props.data.value)
 
   render: ->
-    editable = @props.isEditing
-    className = Utils.classSet(@props.data.name, 'editable' if editable)
-    if editable
-      init = => @setState(visible: true)
-      `<div className={className} onClick={init}>{this.renderMorphologyTable()}</div>`
+    if @props.isEditing
+      @renderForEditing()
     else
-      content = __html: @state.content
-      `<div className={className} dangerouslySetInnerHTML={content} />`
+      @renderForReading()
 
-  renderMorphologyTable: ->
-    if @state.visible
-      `<table className='editable-table'><tbody>{this.renderMorphologyFields()}</tbody></table>`
+  renderForReading: ->
+    name = @props.data.name
+    html = { __html: @state.html }
+    if html
+      `<div className={name} dangerouslySetInnerHTML={html} />`
+    else
+      `<div className={name}>
+         Loading...
+       </div>
+      `
+
+  renderForEditing: ->
+    className = Utils.classSet(@props.data.name, 'editable', 'empty' unless @state.content)
+    if @state.content
+      fieldRows = @renderMorphologyFields()
+      `<div className={className}>
+         <table className='editable-table'>
+           <tbody>{fieldRows}</tbody>
+         </table>
+       </div>
+      `
+    else
+      placeholder = Utils.titleize(@props.data.name)
+      initWithEmptyObject = @initWithEmptyObject
+      `<div className={className}>
+         <input type="text" placeholder={placeholder} onClick={initWithEmptyObject} />
+       </div>
+      `
 
   renderMorphologyFields: ->
-    for key, value of (@state.content ? @state.template)
-      update = @update.bind(@, key)
-      `<tr key={key}>
-         <th>{key}</th>
-         <td contentEditable={true} onBlur={update}>{value}</td>
+    @props.data.meta.map (field) =>
+      update = @update.bind(@, field.key)
+      value = @state.content[field.key] ? ""
+      `<tr key={field.key}>
+         <th>{field.key}</th>
+         <td><input type="text" value={value} onChange={update} /></td>
        </tr>
       `
 
+  emptyObject: ->
+    @props.data.meta.reduce((hash, field) ->
+      hash[field] = null
+      hash
+    , {})
+
+  initWithEmptyObject: ->
+    @setState(content: @emptyObject())
+
   update: (field, evt) ->
-    content = @state.content ? @state.template
-    value = evt.target.textContent
-    console.log value
-    if value.length
-      content[field] = value
-    else
-      content[field] = null
-    if Utils.objectIsEmpty(content)
+    newContent = @state.content
+    newContent[field] = evt.target.value.trim()
+    newContent[field] = null unless newContent[field].length
+    if Utils.objectIsEmpty(newContent)
       @setState(content: null)
     else
-      @setState(content: content)
+      @setState(content: newContent)
