@@ -25,7 +25,7 @@
     unless @props.isEditing
       path = "/new"
       content = "<i class='fa fa-plus-square'></i>"
-      handler = @transitionToAdd
+      handler = @props.newHandler
       `<Lexicon.Link path={path} handler={handler} content={content} />`
 
   renderSaveControl: ->
@@ -54,6 +54,3 @@
       Lexicon.Router.transition "/entries/#{slug}"
     else
       Lexicon.Router.transition '/'
-
-  transitionToAdd: ->
-    Lexicon.Router.transition "/new"

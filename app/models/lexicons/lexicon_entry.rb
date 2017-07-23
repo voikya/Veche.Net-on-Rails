@@ -107,37 +107,6 @@ module Lexicons
       end.merge(slug: slug)
     end
 
-    # Generate a hash suitable for conversion to JSON for viewing
-    def to_read_hash
-      {
-        slug: slug,
-        fields: self.class.formatters.map do |formatter|
-          if value = send(formatter[:field]).as_json
-            {
-              name: formatter[:field].to_s.dasherize,
-              value: value,
-              type: formatter[:opts][:formatter].name.split('::').last.gsub('Formatter', '')
-            }
-          end
-        end.compact
-      }
-    end
-
-    # Generate a hash suitable for conversion to JSON, including metadata
-    # needed for editing
-    def to_edit_hash
-      {
-        slug: slug,
-        fields: self.class.formatters.map do |formatter|
-          {
-            name: formatter[:field].to_s.dasherize,
-            value: send(formatter[:field]).for_editing,
-            type: formatter[:opts][:formatter].name.split('::').last.gsub('Formatter', '')
-          }
-        end
-      }
-    end
-
     # Generate a new slug
     def generate_slug
       unless self.slug.present?

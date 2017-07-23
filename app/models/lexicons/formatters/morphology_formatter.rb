@@ -5,7 +5,7 @@ module Lexicons
     class MorphologyFormatter < PlainTextFormatter
       def initialize(value, opts={})
         @content_class = opts[:class]
-        @content = value || @content_class.new
+        @content = value
       end
 
       def dump
@@ -20,6 +20,7 @@ module Lexicons
       def set(value)
         if value.present?
           valid_attributes = @content_class::ATTRIBUTES
+          @content ||= @content_class.new
           @content.assign_attributes(value.permit(valid_attributes))
         else
           @content = nil

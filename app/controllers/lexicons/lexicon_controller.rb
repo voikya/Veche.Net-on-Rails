@@ -43,11 +43,6 @@ module Lexicons
       render :text => @lexicon.entry(params[:slug]).morphology_formatter.as_html
     end
 
-    def new
-      require_authorization! or return
-      render :json => @lexicon.lexicon_class.new.to_edit_hash
-    end
-
     def create
       require_authorization! or return
       fields = params.reduce({}) do |memo, (k, v)|
@@ -57,7 +52,7 @@ module Lexicons
         !@lexicon.lexicon_class.fields.include?(k)
       end
       @entry = @lexicon.lexicon_class.create fields
-      render :json => @entry.to_read_hash
+      render :json => @entry
     end
 
     def update

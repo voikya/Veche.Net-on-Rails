@@ -5,10 +5,16 @@
   componentWillMount: ->
     Lexicon.Event.register 'api:morphology:response', (data) => @setState(html: data)
     @setState(content: @props.data.value)
-    Lexicon.API.getMorphology(@props.slug)
+    Lexicon.API.getMorphology(@props.slug) unless @props.isEditing
 
   componentWillReceiveProps: (nextProps) ->
-    @setState(content: @props.data.value)
+    if nextProps.slug isnt @props.slug
+      @setState
+        content: nextProps.data.value
+        html: null
+      Lexicon.API.getMorphology(nextProps.slug) unless nextProps.isEditing
+    else
+      @setState(content: nextProps.data.value)
 
   render: ->
     if @props.isEditing

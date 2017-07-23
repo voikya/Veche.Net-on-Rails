@@ -43,6 +43,26 @@ class @Lexicon.API
     Lexicon.Event.trigger 'api:start'
     request.send()
 
+  @createEntry: (data) ->
+    request = @jsonRequest('POST', "#{@endpoint}/entries")
+    request.onload = ->
+      if request.status == 200
+        responseData = JSON.parse(request.responseText)
+        Lexicon.Event.trigger 'api:create:response', responseData
+        Lexicon.Event.trigger 'api:finish'
+    Lexicon.Event.trigger 'api:start'
+    request.send JSON.stringify(data)
+
+  @updateEntry: (slug, data) ->
+    request = @jsonRequest('PUT', "#{@endpoint}/entries/#{slug}")
+    request.onload = ->
+      if request.status == 200
+        responseData = JSON.parse(request.responseText)
+        Lexicon.Event.trigger 'api:update:response', responseData
+        Lexicon.Event.trigger 'api:finish'
+    Lexicon.Event.trigger 'api:start'
+    request.send JSON.stringify(data)
+
   @jsonRequest: (method, uri) ->
     request = @_newRequest(method, uri)
     request.setRequestHeader 'Accept', 'application/json'

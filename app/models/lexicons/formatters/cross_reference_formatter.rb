@@ -19,7 +19,7 @@ module Lexicons
 
       def set(value)
         if value.present?
-          @content = value.map {|slug| @content_class.find_by_slug(slug)}
+          @content = value.map { |obj| @content_class.find_by_slug(obj[:slug]) }
         else
           @content = nil
         end

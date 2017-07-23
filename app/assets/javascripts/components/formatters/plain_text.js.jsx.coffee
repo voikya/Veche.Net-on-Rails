@@ -21,7 +21,7 @@
 
   renderForEditing: ->
     content = @state.content ? ""
-    className = Utils.classSet(@props.data.name, 'editable', 'empty' unless @state.content.length)
+    className = Utils.classSet(@props.data.name, 'editable', 'empty' unless @state.content?.length)
     placeholder = Utils.titleize(@props.data.name)
     update = @update
     `<div className={className}>

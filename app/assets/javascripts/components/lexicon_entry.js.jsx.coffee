@@ -31,7 +31,7 @@
     @props.structure.map (field) =>
       component = Lexicon.Formatters[field.type] || Lexicon.Formatters.MissingFormatter
       value = @state.entry[field.name]
-      if value or @isEditing
+      if value or @props.isEditing
         React.createElement component,
           data:
             name: field.name
@@ -47,22 +47,30 @@
       slug = @state.entry?.slug
       isEditing = @props.isEditing
       saveHandler = @saveEntry
-      `<Lexicon.AdminControls slug={slug} isEditing={isEditing} saveHandler={saveHandler} />`
+      newHandler = @newEntry
+      `<Lexicon.AdminControls slug={slug} isEditing={isEditing} saveHandler={saveHandler} newHandler={newHandler} />`
 
   saveEntry: ->
     if @props.isAdmin and @props.isEditing
       data = {}
       for field of @refs
         data[field] = @refs[field].state.content
-      debugger
       if @state.entry.slug
         Lexicon.API.updateEntry(@state.entry.slug, data)
       else
         Lexicon.API.createEntry(data)
 
   receiveEntry: (data) ->
+    if @state.entry? and data.slug isnt @state.entry.slug
+      Lexicon.Router.transition "/entries/#{data.slug}"
+      @clearEntry()
     @setState(entry: data)
+    Lexicon.Event.trigger 'edit:off'
 
   clearEntry: ->
     unless @state.entry.slug
       @setState(entry: null)
+
+  newEntry: ->
+    @setState(entry: {})
+    Lexicon.Event.trigger 'edit:on'
