@@ -3,6 +3,9 @@ module Lexicons
     attr_accessor :lexicon_class
     after_initialize :load_entries_table
 
+    has_many :characters, -> { order "primary_order, secondary_order, tertiary_order" }
+    has_many :alphabet, -> { where(:canonical => true).order(:primary_order) }, :class_name => "Lexicons::Character"
+
     def self.find_by_language(language)
       find_by_slug!(language)
     end
@@ -49,6 +52,15 @@ module Lexicons
     # Total number of records in the lexicon
     def record_count
       @lexicon_class.count
+    end
+
+    def as_json(opts = {})
+      {
+        :id => id,
+        :name => name,
+        :slug => slug,
+        :alphabet => alphabet.map(&:character)
+      }
     end
 
     private

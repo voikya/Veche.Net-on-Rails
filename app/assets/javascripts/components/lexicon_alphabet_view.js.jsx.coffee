@@ -15,7 +15,7 @@
     `
 
   getLetterNodes: ->
-    @props.alphabet.split(' ').map (l) =>
+    @props.alphabet.map (l) =>
       callback = @handleClick.bind(@, l)
       path = "/entries?word=#{l}*"
       `<td key={l}>

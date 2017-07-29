@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120193323) do
+ActiveRecord::Schema.define(version: 20170729042546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(version: 20161120193323) do
     t.datetime "updated_at"
   end
 
+  create_table "characters", force: :cascade do |t|
+    t.string  "character"
+    t.integer "primary_order"
+    t.integer "secondary_order"
+    t.integer "tertiary_order"
+    t.boolean "canonical",       default: false
+    t.integer "lexicon_id"
+    t.integer "weight",          default: 1
+  end
+
   create_table "downloads", force: :cascade do |t|
     t.string   "file",           limit: 255
     t.integer  "download_count",             default: 0
@@ -61,7 +71,6 @@ ActiveRecord::Schema.define(version: 20161120193323) do
   create_table "lexicons", force: :cascade do |t|
     t.string "name",          limit: 255
     t.string "lexicon_table", limit: 255
-    t.text   "alphabet"
     t.string "slug",          limit: 255
   end
 
@@ -220,6 +229,7 @@ ActiveRecord::Schema.define(version: 20161120193323) do
   add_foreign_key "alashian_crossrefs", "alashian", column: "from", name: "alashian_crossrefs_from_fk"
   add_foreign_key "alashian_crossrefs", "alashian", column: "to", name: "alashian_crossrefs_to_fk"
   add_foreign_key "alashian_morphology", "alashian", column: "entry_id"
+  add_foreign_key "characters", "lexicons"
   add_foreign_key "novegradian_crossrefs", "novegradian", column: "from", name: "novegradian_crossrefs_from_fk"
   add_foreign_key "novegradian_crossrefs", "novegradian", column: "to", name: "novegradian_crossrefs_to_fk"
   add_foreign_key "novegradian_morphology", "novegradian", column: "entry_id", name: "novegradian_morphology_entry_id_fk"

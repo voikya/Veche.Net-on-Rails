@@ -7,6 +7,10 @@ module Lexicons
     module ClassMethods
       attr_reader :formatters, :fields
 
+      def lexicon
+        Lexicon.find_by_language(table_name)
+      end
+
       # Array of fields that are included when doing a search over "any" field
       def scopable_fields
         raise NotImplementedError
@@ -64,6 +68,36 @@ module Lexicons
 
       def json_metadata_for(field)
         nil
+      end
+
+      # Split a word into individual characters
+      def tokenize(word)
+        characters = lexicon.characters
+        tokens = []
+
+        loop do
+          # Greedily tokenize by finding the longest prefix, removing the matching prefix, and
+          # repeating until there are no characters left. Unknown characters (e.g., undefined
+          # punctuation) will be ignored.
+          character = characters.select { |c| word.start_with?(c.character) }
+                                .max { |a, b| a.character.length <=> b.character.length }
+
+          if character
+            tokens << character
+            word = word[character.character.length..word.length]
+          else
+            # Unknown glyph
+            word = word[1..word.length]
+          end
+          break if word.empty?
+        end
+
+        tokens
+      end
+
+      # Returns true if the character is defined for the lexicon
+      def character?(character_string)
+        lexicon.characters.any? { |c| c.character == character_string }
       end
     end
 
