@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Get dependencies
-sudo apt-get install -y postgresql-client libpq-dev nodejs apache2
+sudo apt-get install -y build-essential postgresql-client libpq-dev nodejs apache2
 
 # Set up swap
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=256k
