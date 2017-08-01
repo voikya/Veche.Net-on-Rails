@@ -23,23 +23,24 @@ module Lexicons
       :class_name  => AlashianMorphology
 
     # Entry fields and formatter definitions
-    field :word,             :formatter => Formatters::PlainTextFormatter
-    field :transliteration,  :formatter => Formatters::PlainTextFormatter
-    field :pronunciation,    :formatter => Formatters::PlainTextFormatter
-    field :part_of_speech,   :formatter => Formatters::PlainTextFormatter
-    field :root,             :formatter => Formatters::RootFormatter
-    field :definition,       :formatter => Formatters::DefinitionFormatter
-    field :idioms,           :formatter => Formatters::ExampleFormatter
-    field :notes,            :formatter => Formatters::NoteFormatter
-    field :etymology,        :formatter => Formatters::RichTextFormatter
-    field :cross_references, :formatter => Formatters::CrossReferenceFormatter,
-                             :reader    => :cross_references,
-                             :writer    => :cross_reference_ids=,
-                             :class     => Alashian
-    field :morphology_table, :formatter => Formatters::MorphologyFormatter,
-                             :reader    => :morphology,
-                             :writer    => :morphology=,
-                             :class     => AlashianMorphology
+    field :word,              :formatter => Formatters::PlainTextFormatter
+    field :transliteration,   :formatter => Formatters::PlainTextFormatter
+    field :pronunciation,     :formatter => Formatters::PlainTextFormatter
+    field :part_of_speech_id, :formatter => Formatters::PartOfSpeechFormatter,
+                              :name      => :part_of_speech
+    field :root,              :formatter => Formatters::RootFormatter
+    field :definition,        :formatter => Formatters::DefinitionFormatter
+    field :idioms,            :formatter => Formatters::ExampleFormatter
+    field :notes,             :formatter => Formatters::NoteFormatter
+    field :etymology,         :formatter => Formatters::RichTextFormatter
+    field :cross_references,  :formatter => Formatters::CrossReferenceFormatter,
+                              :reader    => :cross_references,
+                              :writer    => :cross_reference_ids=,
+                              :class     => Alashian
+    field :morphology_table,  :formatter => Formatters::MorphologyFormatter,
+                              :reader    => :morphology,
+                              :writer    => :morphology=,
+                              :class     => AlashianMorphology
 
     # Hooks
     before_create :generate_slug
@@ -88,6 +89,8 @@ module Lexicons
 
     def self.json_metadata_for(field)
       case field
+      when :part_of_speech_id
+          PartOfSpeech.for(lexicon)
         when :morphology_table
           morphology_class.structure
       else

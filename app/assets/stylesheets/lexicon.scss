@@ -385,8 +385,25 @@ body.lexicon {
     div.part-of-speech {
       display: block;
 
-      input {
-        width: 100%;
+      span {
+        font-size: 7pt;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        margin: 8px 5px 5px 0px;
+        padding: 3px 6px;
+        border-radius: 3px;
+      }
+
+      .part-of-speech--type {
+        background-color: palegoldenrod;
+      }
+
+      .part-of-speech--class-membership {
+        background-color: #EFEFEF;
+      }
+
+      .part-of-speech--form {
+        background-color: lavender;
       }
     }
 

@@ -21,7 +21,7 @@ module Lexicons
       def structure_definition
         formatters.map do |formatter|
           {
-            name: formatter[:field].to_s.dasherize,
+            name: formatter[:name].to_s.dasherize,
             type: formatter[:opts][:formatter].name.split('::').last.gsub('Formatter', ''),
             meta: json_metadata_for(formatter[:field])
           }
@@ -33,11 +33,11 @@ module Lexicons
       # presentable fields.
       def field(name, opts)
         @formatters ||= []
-        @formatters << {:field => name, :opts => opts}
+        @formatters << {:field => name, :name => opts[:name] || name, :opts => opts}
         @fields ||= []
-        @fields << name
+        @fields << (opts[:name] || name)
 
-        if opts[:reader] && opts[:writer] && opts[:class]
+        if opts[:reader] && opts[:writer]
           # Need to handle serialization/deserialization manually
           reader = instance_method(opts[:reader])
           writer = instance_method(opts[:writer])
@@ -60,6 +60,17 @@ module Lexicons
             end
             writer.bind(self).call(data)
           end
+        elsif opts[:name]
+          # Simple aliases suffice
+          define_method :"#{opts[:name]}=" do |value|
+            send(:"#{name}=", value)
+          end
+
+          define_method :"#{opts[:name]}" do
+            send(name.to_sym)
+          end
+
+          serialize name, opts[:formatter]
         else
           # Use Rails serializer
           serialize name, opts[:formatter]
@@ -136,7 +147,7 @@ module Lexicons
 
     def as_json(opts = {})
       self.class.formatters.reduce({}) do |hash, formatter|
-        hash[formatter[:field].to_s.dasherize] = send(formatter[:field]).as_json
+        hash[formatter[:name].to_s.dasherize] = send(formatter[:field]).as_json
         hash
       end.merge(slug: slug)
     end

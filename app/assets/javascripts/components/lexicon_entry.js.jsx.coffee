@@ -9,6 +9,7 @@
     Lexicon.Event.register 'api:entry:response', @receiveEntry
     Lexicon.Event.register 'api:update:response', @receiveEntry
     Lexicon.Event.register 'api:create:response', @receiveEntry
+    Lexicon.Event.register 'edit:off', @clearEntry
 
   render: ->
     if @state.entry?
