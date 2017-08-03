@@ -5,7 +5,7 @@ module Lexicons
 
     def initialize(base_class)
       @base_class = base_class
-      @results = base_class.order(base_class.indexed_column)
+      @results = base_class.search_dataset
       @filters = []
       @scopes = {}
       @include_partial_matches = false

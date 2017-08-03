@@ -16,6 +16,12 @@ module Lexicons
         raise NotImplementedError
       end
 
+      # Default dataset to be used when searching. Should join in any values needed
+      # for other tables (e.g., part of speech)
+      def search_dataset
+        self.order(indexed_column)
+      end
+
       # Hash structure defining the type and ordering of all fields, used by the front end
       # for defining views
       def structure_definition

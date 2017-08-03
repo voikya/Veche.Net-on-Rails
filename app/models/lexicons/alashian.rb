@@ -45,6 +45,10 @@ module Lexicons
     # Hooks
     before_create :generate_slug
 
+    def self.search_dataset
+      super.joins("LEFT OUTER JOIN (SELECT id, CONCAT_WS(' ', type, class_membership, form) AS part_of_speech FROM parts_of_speech) ps ON alashian.part_of_speech_id = ps.id")
+    end
+
     # Array of fields that are included when doing a search over "any" field.
     def self.scopable_fields
       [
