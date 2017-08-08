@@ -15,13 +15,18 @@ module Lexicons
     STRESSED_VOWEL_REGEX = /(?:(?:(ω|η|ει|ου|ιη|υω)(?=[^αωεηιου]*$))|(?:([αεηιυω]|ει|ου|ιη|υω)(?=(?:[^αωεηιουἠ]+(?:[αειυἠ]|οὐ)){1,2}[^αωεηιουἠ]*$))|(?:(?:(?<=^)|(?<=^[^αωεηιου])|(?<=^[^αωεηιου][^αωεηιου])|(?<=^[^αωεηιου][^αωεηιου][^αωεηιου]))([αειυ])(?=[^αωεηιου]*$)))/
 
     def self.structure
+      lexicon = Lexicon.find_by_slug(:alashian)
       [
-        { :key => "category" },
-        { :key => "group" },
-        { :key => "subgroup" },
+        { :key => "category",
+          :options => MorphologyDefinition.categories_for_lexicon(lexicon) },
+        { :key => "group",
+          :options => MorphologyDefinition.groups_for_lexicon(lexicon) },
+        { :key => "subgroup",
+          :options => MorphologyDefinition.subgroups_for_lexicon(lexicon) },
         { :key => "stem" },
         { :key => "stem_transliterated" },
-        { :key => "flags" }
+        { :key => "flags",
+          :options => MorphologyDefinition.flags_for_lexicon(lexicon) }
       ]
     end
 

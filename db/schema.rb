@@ -11,24 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170729042546) do
+ActiveRecord::Schema.define(version: 20170802022659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "alashian", force: :cascade do |t|
-    t.string   "word",            limit: 255
-    t.string   "transliteration", limit: 255
-    t.string   "pronunciation",   limit: 255
-    t.string   "part_of_speech",  limit: 255
-    t.string   "root",            limit: 255
+    t.string   "word",              limit: 255
+    t.string   "transliteration",   limit: 255
+    t.string   "pronunciation",     limit: 255
+    t.string   "root",              limit: 255
     t.text     "definition"
     t.text     "idioms"
     t.text     "notes"
     t.text     "etymology"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "slug",            limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "slug",              limit: 255
+    t.integer  "part_of_speech_id"
   end
 
   add_index "alashian", ["slug"], name: "index_alashian_on_slug", unique: true, using: :btree
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(version: 20170729042546) do
     t.string "slug",          limit: 255
   end
 
+  create_table "morphology_definitions", force: :cascade do |t|
+    t.string  "category"
+    t.string  "group"
+    t.string  "subgroup"
+    t.string  "flag"
+    t.string  "category_key"
+    t.string  "group_key"
+    t.string  "subgroup_key"
+    t.string  "flag_key"
+    t.integer "lexicon_id"
+  end
+
   create_table "news", force: :cascade do |t|
     t.string "group",       limit: 255
     t.string "en_headline", limit: 255
@@ -85,20 +97,20 @@ ActiveRecord::Schema.define(version: 20170729042546) do
   end
 
   create_table "novegradian", force: :cascade do |t|
-    t.string   "word",            limit: 255
-    t.string   "transliteration", limit: 255
-    t.string   "pronunciation",   limit: 255
-    t.string   "part_of_speech",  limit: 255
-    t.string   "root",            limit: 255
+    t.string   "word",              limit: 255
+    t.string   "transliteration",   limit: 255
+    t.string   "pronunciation",     limit: 255
+    t.string   "root",              limit: 255
     t.text     "definition"
     t.text     "important_forms"
     t.text     "idioms"
     t.text     "notes"
     t.text     "etymology"
     t.text     "cognates"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "slug",            limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "slug",              limit: 255
+    t.integer  "part_of_speech_id"
   end
 
   add_index "novegradian", ["slug"], name: "index_novegradian_on_slug", unique: true, using: :btree
@@ -146,6 +158,13 @@ ActiveRecord::Schema.define(version: 20170729042546) do
     t.integer  "from"
     t.integer  "to"
     t.datetime "created_at", default: "now()", null: false
+  end
+
+  create_table "parts_of_speech", force: :cascade do |t|
+    t.string  "type"
+    t.string  "class_membership"
+    t.string  "form"
+    t.integer "lexicon_id"
   end
 
   create_table "sca_features", force: :cascade do |t|
@@ -226,16 +245,20 @@ ActiveRecord::Schema.define(version: 20170729042546) do
     t.datetime "created_at", default: "now()"
   end
 
+  add_foreign_key "alashian", "parts_of_speech", column: "part_of_speech_id"
   add_foreign_key "alashian_crossrefs", "alashian", column: "from", name: "alashian_crossrefs_from_fk"
   add_foreign_key "alashian_crossrefs", "alashian", column: "to", name: "alashian_crossrefs_to_fk"
   add_foreign_key "alashian_morphology", "alashian", column: "entry_id"
   add_foreign_key "characters", "lexicons"
+  add_foreign_key "morphology_definitions", "lexicons"
+  add_foreign_key "novegradian", "parts_of_speech", column: "part_of_speech_id"
   add_foreign_key "novegradian_crossrefs", "novegradian", column: "from", name: "novegradian_crossrefs_from_fk"
   add_foreign_key "novegradian_crossrefs", "novegradian", column: "to", name: "novegradian_crossrefs_to_fk"
   add_foreign_key "novegradian_morphology", "novegradian", column: "entry_id", name: "novegradian_morphology_entry_id_fk"
   add_foreign_key "novegradian_morphology", "novegradian_morphology", column: "base_id", name: "novegradian_morphology_base_id_fk"
   add_foreign_key "ochets_crossrefs", "ochets", column: "from", name: "ochets_crossrefs_from_fk"
   add_foreign_key "ochets_crossrefs", "ochets", column: "to", name: "ochets_crossrefs_to_fk"
+  add_foreign_key "parts_of_speech", "lexicons"
   add_foreign_key "sca_languages", "sca_languages", column: "parent_id", name: "sca_languages_parent_id_fk"
   add_foreign_key "sca_phoneme_features", "sca_features", column: "feature_id", name: "sca_phoneme_features_feature_id_fk"
   add_foreign_key "sca_phoneme_features", "sca_phonemes", column: "phoneme_id", name: "sca_phoneme_features_phoneme_id_fk"

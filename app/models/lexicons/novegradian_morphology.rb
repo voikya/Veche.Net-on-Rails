@@ -14,17 +14,22 @@ module Lexicons
     ]
 
     def self.structure
+      lexicon = Lexicon.find_by_slug(:novegradian)
       [
-        { :key => "category" },
-        { :key => "group" },
-        { :key => "subgroup" },
+        { :key => "category",
+          :options => MorphologyDefinition.categories_for_lexicon(lexicon) },
+        { :key => "group",
+          :options => MorphologyDefinition.groups_for_lexicon(lexicon) },
+        { :key => "subgroup",
+          :options => MorphologyDefinition.subgroups_for_lexicon(lexicon) },
         { :key => "stem" },
         { :key => "stem_transliterated" },
         { :key => "desinence" },
         { :key => "desinence_transliterated" },
         { :key => "tertiary" },
         { :key => "tertiary_transliterated" },
-        { :key => "flags" }
+        { :key => "flags",
+          :options => MorphologyDefinition.flags_for_lexicon(lexicon) }
       ]
     end
 

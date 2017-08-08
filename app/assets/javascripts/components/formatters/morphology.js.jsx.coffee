@@ -4,7 +4,9 @@
 @Lexicon.Formatters.Morphology = React.createClass
   componentWillMount: ->
     Lexicon.Event.register 'api:morphology:response', (data) => @setState(html: data)
-    @setState(content: @props.data.value)
+    @setState
+      content: @props.data.value
+      flags: new Set(@props.data.value?.flags?.split(' '))
     Lexicon.API.getMorphology(@props.slug) unless @props.isEditing
 
   componentWillReceiveProps: (nextProps) ->
@@ -55,15 +57,40 @@
     @props.data.meta.map (field) =>
       update = @update.bind(@, field.key)
       value = @state.content[field.key] ? ""
+      input = null
+      if field.options?.length
+        if field.key is 'category'
+          options = [`<option value="" key="">---</option>`]
+          options = options.concat(field.options.map((o) -> `<option value={o.key} key={o.key}>{o.label}</option>`))
+          input = `<select value={value} onChange={update} required>{options}</select>`
+        else if field.key is 'group'
+          options = [`<option value="" key="">---</option>`]
+          options = options.concat(field.options.filter((o) => o.category_prerequisite is @state.content.category)
+                                                .map((o) -> `<option value={o.key} key={o.key}>{o.label}</option>`))
+          input = `<select value={value} onChange={update} required>{options}</select>`
+        else if field.key is 'subgroup'
+          options = [`<option value="" key="">---</option>`]
+          options =  options.concat(field.options.filter((o) => o.category_prerequisite is @state.content.category and o.group_prerequisite is @state.content.group)
+                                                 .map((o) -> `<option value={o.key} key={o.key}>{o.label}</option>`))
+          input = `<select value={value} onChange={update} required>{options}</select>`
+        else if field.key is 'flags'
+          input = field.options.filter((o) => !o.category_prerequisite? or o.category_prerequisite is @state.content.category)
+                               .map((o) =>
+                                 isChecked = @state.flags.has(o.key)
+                                 toggleFlag = @toggleFlag.bind(@, o.key)
+                                 `<Lexicon.Checkbox label={o.label} value={o.key} isChecked={isChecked} toggleFlag={toggleFlag} key={o.key} />`
+                               )
+      else
+        input = `<input type="text" value={value} onChange={update} />`
       `<tr key={field.key}>
          <th>{field.key}</th>
-         <td><input type="text" value={value} onChange={update} /></td>
+         <td>{input}</td>
        </tr>
       `
 
   emptyObject: ->
     @props.data.meta.reduce((hash, field) ->
-      hash[field] = null
+      hash[field.key] = null
       hash
     , {})
 
@@ -74,7 +101,20 @@
     newContent = @state.content
     newContent[field] = evt.target.value.trim()
     newContent[field] = null unless newContent[field].length
+    if field is 'category'
+      # Clear out all flags on category change
+      newContent.flags = null
+      @setState(flags: new Set())
     if Utils.objectIsEmpty(newContent)
       @setState(content: null)
     else
       @setState(content: newContent)
+
+  toggleFlag: (flag) ->
+    if @state.flags.has(flag)
+      @state.flags.delete(flag)
+    else
+      @state.flags.add(flag)
+    newContent = @state.content
+    newContent.flags = if @state.flags.size then Array.from(@state.flags).join(' ') else null
+    @setState(content: newContent)
