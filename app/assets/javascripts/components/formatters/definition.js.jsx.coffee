@@ -6,7 +6,7 @@
     @setState(content: @props.data.value)
 
   componentWillReceiveProps: (nextProps) ->
-    @setState(content: @props.data.value)
+    @setState(content: nextProps.data.value)
 
   render: ->
     if @props.isEditing
