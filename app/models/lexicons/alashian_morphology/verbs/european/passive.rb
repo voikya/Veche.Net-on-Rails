@@ -216,6 +216,10 @@ module Morphology
           end
 
           def _active_participle
+            nil
+          end
+
+          def _passive_participle
             ["μαν" + stem + "α", "man" + stem_transliterated + "a"]
           end
         end
