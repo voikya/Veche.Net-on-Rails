@@ -56,7 +56,7 @@
         break
 
   update: (idx, evt) ->
-    newPara = ReactDOM.findDOMNode(@).querySelectorAll('textarea')[idx].value.trim()
+    newPara = ReactDOM.findDOMNode(@).querySelectorAll('textarea')[idx].value
     Utils.next =>
       newContent = @state.content ? []
       newContent[idx] = newPara

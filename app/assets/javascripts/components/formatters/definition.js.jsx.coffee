@@ -59,7 +59,7 @@
         break
 
   update: (idx, evt) ->
-    newDefinition = ReactDOM.findDOMNode(@).querySelectorAll('input')[idx].value.trim()
+    newDefinition = ReactDOM.findDOMNode(@).querySelectorAll('input')[idx].value
     Utils.next =>
       newContent = @state.content ? []
       newContent[idx] = newDefinition
