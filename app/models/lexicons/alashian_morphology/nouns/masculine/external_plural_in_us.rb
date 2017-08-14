@@ -14,7 +14,7 @@ module Morphology
           def _absolute_singular
             [
               stem,
-              stem_transliterated.gsub(/[ywh]$/, '')
+              stem_transliterated.gsub(/iy$/, 'i')
             ]
           end
 
