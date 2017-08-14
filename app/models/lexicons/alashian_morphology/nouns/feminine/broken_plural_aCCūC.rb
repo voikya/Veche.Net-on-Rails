@@ -14,13 +14,13 @@ module Morphology
           def _absolute_plural
             if root.initial_aspirate?
               [
-                template("α", :c1, :c2, "ου", :c3).gsub(/η$/, ''),
-                template("'ə", :tc1, :tc2, "ū", :tc3).gsub(/h$/, '')
+                template("α", :c1_lenited, :c2, "ου", :c3).gsub(/η$/, ''),
+                template("'ə", :tc1_lenited, :tc2, "ū", :tc3).gsub(/h$/, '')
               ]
             else
               [
-                template("α", :c1, :c2, "ου", :c3).gsub(/η$/, ''),
-                template("'a", :tc1, :tc2, "ū", :tc3).gsub(/h$/, '')
+                template("α", :c1_lenited, :c2, "ου", :c3).gsub(/η$/, ''),
+                template("'a", :tc1_lenited, :tc2, "ū", :tc3).gsub(/h$/, '')
               ]
             end
           end
