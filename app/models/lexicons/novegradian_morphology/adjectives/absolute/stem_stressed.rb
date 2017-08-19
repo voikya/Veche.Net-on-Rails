@@ -200,7 +200,7 @@ module Morphology
 
           def gen_pl_stem_transliterated(word, epenthetic_vowel)
             vowels = %w(a e i o u y ě á é í ó ú ý ě́)
-            if vowels.include?(word[-2]) || (word[-1] == "j" && vowels.include?(word[-3]))
+            if vowels.include?(word[-2]) || (word[-1] == "j" && vowels.include?(word[-3])) || word[-3..-2] == "ě́"
               return word
             elsif word[-1] == "j"
               return word[0..-3] + epenthetic_vowel + word[-2..-1]
