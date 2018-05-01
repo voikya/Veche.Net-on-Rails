@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802022659) do
+ActiveRecord::Schema.define(version: 20180503022127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -223,7 +223,6 @@ ActiveRecord::Schema.define(version: 20170802022659) do
   create_table "tunisian", force: :cascade do |t|
     t.string   "word",                 limit: 255
     t.string   "pronunciation",        limit: 255
-    t.string   "part_of_speech",       limit: 255
     t.string   "root",                 limit: 255
     t.text     "definition"
     t.text     "important_forms"
@@ -235,6 +234,7 @@ ActiveRecord::Schema.define(version: 20170802022659) do
     t.string   "slug",                 limit: 255
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.integer  "part_of_speech_id"
   end
 
   add_index "tunisian", ["slug"], name: "index_tunisian_on_slug", unique: true, using: :btree
@@ -267,4 +267,5 @@ ActiveRecord::Schema.define(version: 20170802022659) do
   add_foreign_key "sca_sound_changes", "sca_sound_change_groups", column: "group_id", name: "sca_sound_changes_group_id_fk"
   add_foreign_key "tunisian_crossrefs", "tunisian", column: "from", name: "tunisian_crossrefs_from_fk"
   add_foreign_key "tunisian_crossrefs", "tunisian", column: "to", name: "tunisian_crossrefs_to_fk"
+  add_foreign_key "tunisian", "parts_of_speech", column: "part_of_speech_id"
 end
