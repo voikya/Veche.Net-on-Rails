@@ -1,0 +1,29 @@
+- numbers = [:singular, :plural]
+- numbers.delete(:singular) if m.pl_tantum?
+- numbers.delete(:plural) if m.sg_tantum?
+- definiteness = [:indefinite, :definite]
+- definiteness.delete(:indefinite) if m.always_definite?
+- definiteness.delete(:indefinite) if m.mass_noun?
+- states = [:absolute, :construct]
+
+%table.nouns
+  %thead
+    %tr
+      %th.morphology-info{:colspan => (numbers.length * 2 + 1)}
+        #{m.declension} (Subtype #{m.subtype})
+    %tr
+      %th
+      %th{:colspan => numbers.length} Absolute
+      %th{:colspan => numbers.length} Construct
+    %tr
+      %th
+      - 2.times do
+        - numbers.each do |number|
+          %th= number.to_s.titleize
+  %tbody
+    - definiteness.each do |definite_state|
+      %tr
+        %th{:scope => :row}= m.mass_noun? ? "Common" : definite_state.to_s.titleize
+        - states.each do |state|
+          - numbers.each do |number|
+            %td= m.send "#{definite_state}_#{number}_#{state}".to_sym

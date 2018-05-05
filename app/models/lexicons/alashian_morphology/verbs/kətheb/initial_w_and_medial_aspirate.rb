@@ -1,4 +1,4 @@
-require_relative 'regular'
+require_relative 'initial_w'
 
 module Morphology
   module Alashian

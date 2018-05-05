@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503022127) do
+ActiveRecord::Schema.define(version: 20180505042254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -245,6 +245,19 @@ ActiveRecord::Schema.define(version: 20180503022127) do
     t.datetime "created_at", default: "now()"
   end
 
+  create_table "tunisian_morphology", force: :cascade do |t|
+    t.integer  "entry_id"
+    t.string   "category"
+    t.string   "strong"
+    t.string   "weak"
+    t.string   "ablaut"
+    t.string   "group"
+    t.string   "subgroup"
+    t.string   "flags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   add_foreign_key "alashian", "parts_of_speech", column: "part_of_speech_id"
   add_foreign_key "alashian_crossrefs", "alashian", column: "from", name: "alashian_crossrefs_from_fk"
   add_foreign_key "alashian_crossrefs", "alashian", column: "to", name: "alashian_crossrefs_to_fk"
@@ -265,7 +278,8 @@ ActiveRecord::Schema.define(version: 20180503022127) do
   add_foreign_key "sca_phonemes", "sca_languages", column: "language_id", name: "sca_phonemes_language_id_fk"
   add_foreign_key "sca_sound_change_groups", "sca_languages", column: "language_id", name: "sca_sound_change_groups_language_id_fk"
   add_foreign_key "sca_sound_changes", "sca_sound_change_groups", column: "group_id", name: "sca_sound_changes_group_id_fk"
+  add_foreign_key "tunisian", "parts_of_speech", column: "part_of_speech_id"
   add_foreign_key "tunisian_crossrefs", "tunisian", column: "from", name: "tunisian_crossrefs_from_fk"
   add_foreign_key "tunisian_crossrefs", "tunisian", column: "to", name: "tunisian_crossrefs_to_fk"
-  add_foreign_key "tunisian", "parts_of_speech", column: "part_of_speech_id"
+  add_foreign_key "tunisian_morphology", "tunisian", column: "entry_id"
 end

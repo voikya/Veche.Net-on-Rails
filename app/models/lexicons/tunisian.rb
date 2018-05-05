@@ -5,6 +5,11 @@ module Lexicons
     # Table for lexicon entries
     self.table_name = 'tunisian'
 
+    # Lexicon entry associations
+    has_one :morphology,
+      :foreign_key => :entry_id,
+      :class_name => TunisianMorphology
+
     # Entry fields and formatter definitions
     field :word,              :formatter => Formatters::PlainTextFormatter
     field :pronunciation,     :formatter => Formatters::PlainTextFormatter
@@ -16,6 +21,10 @@ module Lexicons
     field :notes,             :formatter => Formatters::NoteFormatter
     field :etymology,         :formatter => Formatters::RichTextFormatter
     field :cognates,          :formatter => Formatters::RichTextFormatter
+    field :morphology_table,  :formatter => Formatters::MorphologyFormatter,
+                              :reader    => :morphology,
+                              :writer    => :morphology=,
+                              :class     => TunisianMorphology
 
     # Hooks
     before_create :generate_slug
@@ -47,6 +56,11 @@ module Lexicons
       :word
     end
 
+    # The class of the morphology object
+    def self.morphology_class
+      TunisianMorphology
+    end
+
     # Convert a search parameter into one or more corresponding columns
     # in this table to search through
     def self.map_search_params(field)
@@ -61,9 +75,15 @@ module Lexicons
       case field
         when :part_of_speech_id
           PartOfSpeech.for(lexicon)
+        when :morphology_table
+          morphology_class.structure
         else
           super
       end
+    end
+
+    def morphology_formatter
+      morphology_table
     end
   end
 end

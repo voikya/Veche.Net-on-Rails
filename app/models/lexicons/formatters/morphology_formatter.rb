@@ -38,6 +38,7 @@ module Lexicons
           language = case @content
             when NovegradianMorphology then 'novegradian'
             when AlashianMorphology then 'alashian'
+            when TunisianMorphology then 'tunisian'
           end
           partial = "lexicons/lexicon/morphology/#{language}" +
                     "_" +
