@@ -1,0 +1,110 @@
+%table.verbs
+  %thead
+    %tr
+      %th.morphology-info{:colspan => 7}
+        = m.conjugation
+        .subtype Subtype #{m.subtype}
+  %tbody
+    %tr
+      %th{:rowspan => 5}
+      %th Infinitive
+      %td{:colspan => 2}= m.infinitive_singular
+      %th Inf. Pl.
+      %td{:colspan => 2}= m.infinitive_plural
+    %tr
+      %th{:colspan => 3} Present Participle
+      %th{:colspan => 3} Past Participle
+    %tr
+      %th M
+      %th F
+      %th Pl
+      %th M
+      %th F
+      %th Pl
+    %tr
+      %td= m.present_participle_masculine
+      %td= m.present_participle_feminine
+      %td= m.present_participle_plural
+      %td= m.past_participle_masculine
+      %td= m.past_participle_feminine
+      %td= m.past_participle_plural
+    %tr
+      %th 1sg <i>yó</i>
+      %th 2Sg <i>tú</i>
+      %th 3Sg <i>eu/ele</i>
+      %th 1Pl <i>nos</i>
+      %th 2Pl <i>vos</i>
+      %th 3Pl <i>els</i>
+    %tr
+      %th Present
+      %td= m.present_first_singular unless m.third_person_only?
+      %td= m.present_second_singular unless m.third_person_only?
+      %td= m.present_third_singular
+      %td= m.present_first_plural unless m.third_person_only?
+      %td= m.present_second_plural unless m.third_person_only?
+      %td= m.present_third_plural
+    %tr
+      %th Imperfect
+      %td= m.imperfect_first_singular unless m.third_person_only?
+      %td= m.imperfect_second_singular unless m.third_person_only?
+      %td= m.imperfect_third_singular
+      %td= m.imperfect_first_plural unless m.third_person_only?
+      %td= m.imperfect_second_plural unless m.third_person_only?
+      %td= m.imperfect_third_plural
+    %tr
+      %th Preterite
+      %td= m.preterite_first_singular unless m.third_person_only?
+      %td= m.preterite_second_singular unless m.third_person_only?
+      %td= m.preterite_third_singular
+      %td= m.preterite_first_plural unless m.third_person_only?
+      %td= m.preterite_second_plural unless m.third_person_only?
+      %td= m.preterite_third_plural
+    %tr
+      %th Subjunctive
+      %td= m.subjunctive_first_singular unless m.third_person_only?
+      %td= m.subjunctive_second_singular unless m.third_person_only?
+      %td= m.subjunctive_third_singular
+      %td= m.subjunctive_first_plural unless m.third_person_only?
+      %td= m.subjunctive_second_plural unless m.third_person_only?
+      %td= m.subjunctive_third_plural
+    %tr
+      %th Perfect I
+      %td= m.perfect_complex_first_singular unless m.third_person_only?
+      %td= m.perfect_complex_second_singular unless m.third_person_only?
+      %td= m.perfect_complex_third_singular
+      %td= m.perfect_complex_first_plural unless m.third_person_only?
+      %td= m.perfect_complex_second_plural unless m.third_person_only?
+      %td= m.perfect_complex_third_plural
+    %tr
+      %th Perfect II
+      %td= m.perfect_simple_first_singular unless m.third_person_only?
+      %td= m.perfect_simple_second_singular unless m.third_person_only?
+      %td= m.perfect_simple_third_singular
+      %td= m.perfect_simple_first_plural unless m.third_person_only?
+      %td= m.perfect_simple_second_plural unless m.third_person_only?
+      %td= m.perfect_simple_third_plural
+    %tr
+      %th Future I
+      %td= m.future_simple_first_singular unless m.third_person_only?
+      %td= m.future_simple_second_singular unless m.third_person_only?
+      %td= m.future_simple_third_singular
+      %td= m.future_simple_first_plural unless m.third_person_only?
+      %td= m.future_simple_second_plural unless m.third_person_only?
+      %td= m.future_simple_third_plural
+    %tr
+      %th Future II
+      %td= m.future_complex_first_singular unless m.third_person_only?
+      %td= m.future_complex_second_singular unless m.third_person_only?
+      %td= m.future_complex_third_singular
+      %td= m.future_complex_first_plural unless m.third_person_only?
+      %td= m.future_complex_second_plural unless m.third_person_only?
+      %td= m.future_complex_third_plural
+    %tr
+      %th Imperative
+      %td
+      %td= m.imperative_second_singular unless m.third_person_only?
+      %td
+      %td
+      %td= m.imperative_second_plural unless m.third_person_only?
+      %td
+      %td

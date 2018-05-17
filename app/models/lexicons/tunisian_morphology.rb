@@ -68,13 +68,15 @@ module Lexicons
       else
         method = "_#{method}".to_sym
         if respond_to? method
-          postprocess send(method)
+          postprocess send(method), method
         end
       end
     end
 
-    def postprocess(string)
-      remove_grave_accents(string)
+    def postprocess(string, form)
+      string = remove_grave_accents(string)
+      string = add_mediopassive_clitic(string, form) if mediopassive?
+      string
     end
 
     def remove_grave_accents(string)
@@ -86,7 +88,31 @@ module Lexicons
         else
           word
         end
+      end.map do |word|
+        word.sub(/(^è|(?<=-)è)/, 'e') # Initial è > e
+            .gsub('èi', 'ei')         # No grave in diphthongs
       end.join(' ')
+    end
+
+    def add_mediopassive_clitic(string, form)
+      if form == :_imperative_second_singular || form == :_imperative_second_plural
+        string + "-s"
+      else
+        case string[0]
+          when "y"
+            "s-u" + string[1..-1]
+          when *VOWELS
+            "s-" + string
+          when "r"
+            "yst-" + string
+          else
+            "ys-" + string
+        end
+      end
+    end
+
+    def vowel?(letter)
+      VOWELS.include?(letter)
     end
   end
 end
