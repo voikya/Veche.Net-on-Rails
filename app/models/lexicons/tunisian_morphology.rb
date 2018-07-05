@@ -81,7 +81,7 @@ module Lexicons
 
     def remove_grave_accents(string)
       # Convert è > e if it is the only vowel and not directly adjacent to another vowel
-      string.split(' ').map do |word|
+      string.split(/(?=-)|\s/).map do |word|
         vowel_sequences = word.scan(/[#{VOWELS.join}]+/)
         if vowel_sequences.length == 1 && vowel_sequences.first["è"]
           word.sub('è', 'e')
@@ -92,6 +92,7 @@ module Lexicons
         word.sub(/(^è|(?<=-)è)/, 'e') # Initial è > e
             .gsub('èi', 'ei')         # No grave in diphthongs
       end.join(' ')
+         .gsub(' -', '-')
     end
 
     def add_mediopassive_clitic(string, form)
@@ -103,7 +104,7 @@ module Lexicons
             "s-u" + string[1..-1]
           when *VOWELS
             "s-" + string
-          when "r"
+          when "r", "s", "z"
             "yst-" + string
           else
             "ys-" + string
