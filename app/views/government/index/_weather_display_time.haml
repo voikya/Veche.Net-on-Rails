@@ -4,7 +4,7 @@
       - time = @weather.date.strftime('%H:00')
       - zone = @weather.dst ? "Novegráde Velíkei Daylight Savings Time (UTC+4)" : "Novegráde Velíkei Standard Time (UTC+3)"
       - date = @weather.date.strftime('%d %B %Y')
-      - diff = "#{@weather.date.minute} #{@weather.date.minute == 1 ? "minute" : "minutes"} ago"
+      - diff = "#{@weather.date.min} #{@weather.date.min == 1 ? "minute" : "minutes"} ago"
       %p Data last updated at #{time} #{zone} on #{date} (#{diff})
     - when :nv
       - time = @weather.date.strftime('%H:00')
@@ -25,7 +25,7 @@
           when 12 then "снѣженѣ"         |
         end                              |
       - date += " #{@weather.date.year}"
-      - diff = @weather.date.minute
+      - diff = @weather.date.min
       - diff = "#{diff} " + case diff    |
           when 1, 21, 31, 41, 51 then "минута" |
           when (2..4), (22..24), (32..34), (42..44), (52..54) then "минутѣ" |
