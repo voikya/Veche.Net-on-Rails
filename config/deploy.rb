@@ -1,7 +1,7 @@
 require "whenever/capistrano"
 
 # config valid only for current version of Capistrano
-lock '3.3.5'
+lock '3.6.1'
 
 set :application, 'veche_net'
 set :repo_url, 'git@github.com:voikya/Veche.Net-on-Rails.git'
