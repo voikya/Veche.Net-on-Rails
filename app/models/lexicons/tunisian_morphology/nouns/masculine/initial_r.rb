@@ -3,9 +3,9 @@ require_relative 'regular'
 module Morphology
   module Tunisian
     module Nouns
-      module Feminine
+      module Masculine
         module InitialR
-          include Feminine::Regular
+          include Masculine::Regular
 
           def subtype
             "Initial R"
@@ -13,10 +13,6 @@ module Morphology
 
           def _indefinite_plural_construct
             "uist " + plural
-          end
-
-          def _definite_singular_absolute
-            "il " + singular
           end
 
           def _definite_plural_absolute

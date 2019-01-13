@@ -99,16 +99,18 @@ module Lexicons
       if form == :_imperative_second_singular || form == :_imperative_second_plural
         string + "-s"
       else
-        case string[0]
-          when "y"
-            "s-u" + string[1..-1]
-          when *VOWELS
-            "s-" + string
-          when "r", "s", "z"
-            "yst-" + string
-          else
-            "ys-" + string
-        end
+        string.split(", ").map do |s|
+          case s[0]
+            when "y"
+              "s-u" + s[1..-1]
+            when *VOWELS
+              "s-" + s
+            when "r", "s", "z"
+              "yst-" + s
+            else
+              "ys-" + s
+          end
+        end.join(", ")
       end
     end
 

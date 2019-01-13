@@ -15,6 +15,7 @@ module Morphology
 
           def plural
             strong.sub(/á$/, "ares")
+                  .sub(/ó$/, "ores")
           end
         end
       end
