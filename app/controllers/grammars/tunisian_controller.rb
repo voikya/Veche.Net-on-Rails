@@ -11,7 +11,8 @@ module Grammars
       {:index => 5, :doc => 'nouns',       :title => 'Nominal Morphology'      },
       {:index => 6, :doc => 'pronouns',    :title => 'Pronouns'                },
       {:index => 7, :doc => 'adjectives',  :title => 'Adjectives and Numerals' },
-      {:index => 8, :doc => 'derivation',  :title => 'Derivational Morphology' }
+      {:index => 8, :doc => 'derivation',  :title => 'Derivational Morphology' },
+      {:index => 9, :doc => 'verb_phrase', :title => 'The Verb Phrase'         }
     ]
 
     def index
