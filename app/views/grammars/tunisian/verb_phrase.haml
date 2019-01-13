@@ -1,0 +1,516 @@
+- content_for :title, "Grammar of the Tunisian Language — #{strip_tags(@current_page[:title])}"
+- content_for :section_subtitle, "La Phrase Fêlie"
+
+= section "Structure of the Verb Phrase" do
+  %p Traditionally, the Tunisian verb phrase (<i>la phrase fêlie</i>) is considered to be the minimal set of words necessary to form a valid clause by themselves, consisting of the verb itself and its bound dependencies, but excluding dependent noun phrases. There are two types of verb phrases: the simple phrase (consisting of a single finite conjugated verb and any associated clitics) and the complex phrase (consisting of an auxiliary verb head, a dependent non-finite verb form, and any associated clitics).
+  %p The simple phrase (<i>la phrase simple</i>) consists of a single constituent; though there may be more than one word present in the phrase due to clitics, no word not part of the verb phrase itself may intervene between component parts of the verb phrase, with the one exception of the negative particle which is separable. Excluding the negative particle, all other words must appear either before or after the entire verb phrase:
+  %ul
+    %li <i>Jovan <b>ysplic mi-l</b> toe.</i> “Jovan is explaining it to me now.”
+    %li <i>Jovan toe <b>ysplic mi-l</b>.</i> “Jovan now is explaining it to me.”
+    %li <i>*Jovan <b>ysplic mi</b> toe<b>-l</b>.</i>
+    %li <i>*Jovan <b>ysplic</b> toe <b>mi-l</b>.</i>
+
+  %p In contrast, the negative particle <i>mî/mic</i> is separable:
+  %ul
+    %li <i>Jovan <b>nu-m l-usplic mî</b> toe.</i> “Jovan is not explaining it to me now.”
+    %li <i>Jovan toe <b>nu-m l-usplic mî</b>.</i> “Jovan is not now explaining it to me.”
+    %li <i>Jovan <b>nu-m l-usplic</b> toe <b>mic</b>.</i> “Jovan is not explaining it to me now.”
+
+  %p The complex phrase (<i>la phrase complecse</i>) consists of two constituents, an auxiliary verb head and a dependent verb, generally an infinitive or participle. Each independently is capable of supporting a set of clitics, although the ordering rules are much more complicated. The auxiliary and main verb are separable, although in most cases doing so produces a marked construction.
+  %ul
+    %li <i>Jovan <b>mi l-ae ysplecast</b> gesê.</i> “Jovan explained it to me yesterday.”
+    %li <i>Jovan <b>mi l-ae</b> gesê <b>ysplecast</b>.</i> “Jovan explained it yesterday to me.”
+    %li <i>Jovan <b>nu-m l-ae mî ysplecast</b> gesê.</i> “Jovan did not explain it to me yesterday.”
+    %li <i>Jovan <b>n-ae mî mi l-usplecast</b> gesê.</i> “Jovan did not explain it to me yesterday.”
+    %li <i>Jovan <b>n-ae mî</b> gesê <b>ysplecast mi-l</b>.</i> “Jovan did not explain it to me <i>yesterday</i>.”
+    %li <i>Jovan gesê <b>n-ae mi l-usplecast mic</b>.</i> “Yesterday Jovan did <i>not</i> explain it to me.”
+
+  %p Clitics are phonologically bound to their head. In complex phrases, they can be phonologically bound either to the auxiliary or the dependent verb, with exact positioning conditioned by syntactic and semantic factors. Individual clitics have a fixed order depending on whether they appear before (proclitic) or after (enclitic) their host:
+  %table
+    %thead
+      %tr
+        %th{:colspan => 5} Proclitic Order
+      %tr
+        %th I
+        %th II
+        %th III
+        %th IV
+        %th V
+    %tbody
+      %tr
+        %td Negative
+        %td Adverbial
+        %td Indir. Obj.
+        %td Dir. Obj.
+        %td Mediopass.
+
+  %table
+    %thead
+      %tr
+        %th{:colspan => 3} Enclitic Order
+      %tr
+        %th I
+        %th II
+        %th III
+    %tbody
+      %tr
+        %td Indir. Obj.
+        %td Dir. Obj.
+        %td Adverbial
+
+  %p As can be seen above, not all clitics may appear as both proclitics and enclitics. Two types, the negative clitic <i>n-</i> “not” and the mediopassive <i>ys</i>, are required to precede the verb, regardless of the placement of other clitics.
+  = example_sentence "A dads mi-l?",
+                     "[ʌ ˈdaːdz mil]",
+                     "{interr} give-{2sg.pres} {1sg.dat}-{loc}",
+                     "Are you giving it to me?"
+  = example_sentence "N-sem t-in s-unist mic.",
+                     "[ɪn.səm tin su.ˈnist ˈmik]",
+                     "{neg}-be.{1sg.aux} {2sg.dat}-{ell} {med}-go.{ptcp.past}-{masc} {neg}",
+                     "I did not leave on you"
+  = example_sentence "Ys-vî m-in!",
+                     "[iz.ˈviː min]",
+                     "{med}-go.{2sg.imper} {1sg.dat}-{ell}",
+                     "Leave me alone!"
+
+= section "The Present Tense" do
+  %p The Present Tense (<i>il prisén</i>) is a simple tense, functioning much like the present tense in other Romance languages. It consists of a single conjugated verb and an optional set of clitics. In most circumstances object clitics will come directly after the verb, although a negated verb will pull all clitics to the front.
+  %table
+    %thead
+      %tr
+        %th{:colspan => 10} Clitic Positions: Present Tense
+      %tr
+        %th
+        %td -V
+        %td -IV
+        %td -III
+        %td -II
+        %td I
+        %td 0
+        %td I
+        %td II
+        %td III
+    %tbody
+      %tr
+        %th Positive
+        %td
+        %td
+        %td
+        %td
+        %td Mediopass.
+        %td Verb
+        %td Indir. Obj.
+        %td Dir. Obj.
+        %td Adverbial
+      %tr
+        %th Negative
+        %td Negative
+        %td Adverbial
+        %td Indir. Obj.
+        %td Dir. Obj.
+        %td Mediopass.
+        %td Verb
+        %td
+        %td
+        %td
+
+  %p The most common usages of the present of the present are to indicate an action happening at the present moment, a state that began in the past and is still true at the present, or an atemporal action that is always true.
+  = example_sentence "Marie eitre by prote.",
+                     "[ˈmaːr.jə ˈej.trə bi ˈprɔ.tə]",
+                     "Marie enter-{3sg.pres} by door",
+                     "Marie is walking in through the door."
+  = example_sentence "Cuir y çéne pôl iccest sê.",
+                     "[ˈkwir i ˈʃe.nə pul ˈi.kəst ˈseə]",
+                     "prepare-{1sg.pres} {acc} dinner for this.{masc} evening",
+                     "I am preparing dinner for tonight."
+  = example_sentence "Ysc il prelâ by freicciss.",
+                     "[ˈisk il prə.ˈlaː bi ˈfrej.kiz]",
+                     "know-{1sg} {def.masc} speak-{inf} in French-{pl}",
+                     "I know how to speak French."
+  = example_sentence "A ystudis ît univêrstâ ît Loc-Tenés?",
+                     "[ʌ is.ˈtu.diz iːt ˈu.ni.veːs.taː iːt ˈlok.tə.ˈnɛs]",
+                     "{interr} study-{2sg.pres} in university in city-Tunis?",
+                     "Do you study at the university in Tunis?"
+  = example_sentence "L-acce ys-ghel a zéru drajs.",
+                     "[ˈlaː.kə iz.ˈgɛl ʌ ˈze.ru ˈdraːʒz]",
+                     "{def.fem}-water {med}-freeze-{3sg.pres} at zero degree-{pl}",
+                     "Water freezes at 0°."
+  = example_sentence "Il treis ys sucr fac mal pôl sanitâ.",
+                     "[il ˈtrejz is ˈsu.kɪr ˈfaːk ˈmaːl pul ˈsaː.ni.taː]",
+                     "{def.masc} too_much of sugar do-{3sg.pres} bad-{masc} for health",
+                     "Too much sugar is bad for your health."
+
+  %p The present may also refer to iterative or habitual events that may not be happening at the present moment, but began in the past and are expected to continue into the future.
+  = example_sentence "Pret a treval çésche elbe a séfte s sâts e médi-sâte.",
+                     "[ˈprɛt ʌ trə.ˈvaːl ˈʃɛs.kə ˈɛl.bə ʌ ˈsɛf.tə s ˈsaːts i ˈme.di.ˈsaː.tə]",
+                     "leave-{1sg} to work every-{fem} morning at seven-{fem} of hour-{pl} and half.{comb}-{fem}-hour",
+                     "I leave for work every morning at 07:30."
+  = example_sentence "Il réstaurant yc us credén a sçends.",
+                     "[il ˈrɛs.tu.rʌn i.kuz krə.ˈdɛn ʌ ˈʃɛndz]",
+                     "{def.masc} restaurant {rel.def} {3pl.gen} be_closed-{ptcp.pres}-{masc} at second-{pl}",
+                     "Their restaurant is closed on Mondays."
+
+  %p In some circumstances the present tense may be used with non-present meaning. The so-called historical or narrative present refers to the use of the present tense for past events, particularly common in narration in order to relate an event in a more striking way.
+  = example_sentence "Il dî eld indave iô by çeo e yst-raccéndre cu Jacum.",
+                     "[il ˈdiː ˈɛld in.ˈda.və ˈjɔə bi ˈʃew e is.trʌ.ˈkɛn.drə ku ˈʒaː.kum]",
+                     "{def.masc} day other-{masc} walk-{1sg.impf} {1sg.nom} in street and {med}-encounter-{1sg.pres} with Jacum",
+                     "The other day I was walking along the street and I run into Jacum."
+  = example_sentence "Ls finiçiais fondê y Caredine com cronie a secl nôvî p.C.",
+                     "[uz ˈfi.ni.ʃajz ˈfon.deː i ˈkaː.rə.di.nə kom ˈkrɔ.njə ʌ ˈsɛ.ku ˈnɔə.viː ˈpri.mə t ˈkrist]",
+                     "{def.pl} Phoenician-{pl} found-{3pl.pres} {acc} Carthage as colony in century ninth-{masc} BC",
+                     "The Phoenicians found Carthage as a colony in the 9th century BC."
+
+  %p Generally in conjunction with a time expression, the present may express a future event that is expected to happen soon.
+  = example_sentence "Iô ys-cûc a une sâte.",
+                     "[ˈjɔə is.ˈkuːk ʌ u.nə ˈsaː.tə]",
+                     "{1sg.nom} {med}-lay_down-{1sg.pres} in {indef.fem} hour",
+                     " I'm going to bed in an hour."
+  = example_sentence "Il film ys-cumizt a uis décce n minuts.",
+                     "[il ˈfiwm is.ˈku.mist ʌ ujz ˈde.kə n ˈmi.nuts]",
+                     "{def.masc} film {med}-start-{3sg.pres} in {indef.pl} ten-{fem} of minute-{pl}",
+                     "The film is starting in ten minutes."
+
+  %p The present may also have an imperative sense, giving a command expected to be performed in the near future. The semantics of the imperative present in contrast to the imperative proper are somewhat complex; it is somewhat softer than a normal imperative when addressing a familiar person, but is seen as ruder than imperative in more formal contexts (perhaps because the use of the indicative mood rather than the imperative presents the command as a fact rather than a proposition). It can also only be used for actions that are to occur in a perceived near future, although what this means is highly contextually-dependent.
+  = example_sentence "Deçit crams a patr yc ti.",
+                     "[də.ˈʃit ˈkraːmz ʌ ˈpaː.tr ik ti]",
+                     "at_once call-{2sg.pres} to father {rel.def} {2sg.gen}",
+                     "Please call your father right away."
+  = example_sentence "Nu-s-veis mî atên ch icaps y hemlâ.",
+                     "[nuz.ˈvejz miː ʌ.ˈteən k ˈi.kʌps i xəm.ˈlaː]",
+                     "{neg}-{med}-go-{2sg.pres} not until {rel} complete-{2sg.pres} {acc} clean-{inf}",
+                     "You are not leaving until you finish cleaning up."
+
+  %p Whe negated, all verbal clitics are drawn to the preverbal position.
+  = example_sentence "Ele dic mi lutot.",
+                     "[ˈe.lə ˈdik mi lu.ˈtot]",
+                     "{3sg.fem.nom} say-{3sg.pres} {1sg.dat} everything",
+                     "She tells me everything."
+  = example_sentence "Ele nu-m dic némic.",
+                     "[ˈe.lə num ˈdik ˈne.mik]",
+                     "{3sg.fem.nom} {neg}-{1sg.dat} say-{3sg.pres} nothing",
+                     "She doesn’t tell me anything."
+
+= section "The Imperfect Tense" do
+  %p The Imperfect Tense (<i>l-impriféct</i>) is a simple tense and one of three indicative past tenses used in Tunisian. It functions much as the imperfect of other Romance languages. Syntactically it behaves identically to the present tense, consisting of a single conjugated verb and a number of clitics whose placement rules mirror the present.
+  %p The imperfect denotes a past state or process as opposed to a momentary action. As such, it is used to indicate actions that took place over a period of time, as well as generic statements of past conditions.
+  = example_sentence "Il patr yc mi seirvive com û colonél ît ascrs.",
+                     "[il ˈpaː.tr ik mi ˈsej.vi.və kom uː ˈkɔ.lu.nil iːt ˈaːs.kɪrz]",
+                     "{def.masc} father {rel.def} {1sg.gen} serve-{3sg.impf} as {indef.masc} colonel in army-{pl}",
+                     "My father served as a colonel in the miliary."
+  = example_sentence "Ls par prelavê uis sâts.",
+                     "[us ˈpaːr prə.ˈlaː.veː ujs ˈsaːts]",
+                     "{def.pl} two-{masc} talk-{3pl.impf} {indef.pl} hour-{pl}",
+                     "The two of them talked for hours."
+  = example_sentence "Alindre iunitâ c nos, vecmatre yst-restave î dom iôc nostre.",
+                     "[ˈaː.lin.drə ˈju.ni.taː k nos ˈvɛk.mʌ.trə ˈis.trəs.tʌ.və iː ˈdom joːk ˈnos.trə]",
+                     "during childhood {rel.def} {1pl.gen}, grandmother {med}-stay-{3sg.impf} in home with {1pl.obl}",
+                     "When we were young, our grandmother lived with us in our home."
+  = example_sentence "Catrine âvics suifrive delores yd çeove.",
+                     "[ˈkaː.tri.nə ˈaː.viks ˈsuj.fri.və də.ˈlɔ.rəz it ˈʃew.və]",
+                     "Catrine sometimes suffer-{3sg.impf} pain-{pl} of head",
+                     "Catrine occasionally would suffer from headaches."
+
+  %p It also indicates habitual or iterative events that took place in the past.
+  = example_sentence "Ls géntores yc mi visetavê y Iorupe çesc istat.",
+                     "[uz ˈʒɛn.tɔ.rəz ik mi ˈvi.sə.tʌ.veː i ˈjɔ.ru.pə ˈʃɛsk ˈis.tʌt]",
+                     "{def.pl} parent-{pl} {rel.def} {1sg.gen} visit-{3pl.impf} {acc} Europe each-{masc} summer",
+                     "My parents used to visit Europe every summer."
+  = example_sentence "Vinive a treval by biçi temp ch yst-restave î loc.",
+                     "[ˈvi.ni.və ʌ trə.ˈvaːl bi ˈbi.ʃi tɛm k ˈis.trəs.tʌ.və iː ˈlok]",
+                     "go-{1sg.impf} to work by bicycle when {rel} {med}-live-{1sg.impf} in city",
+                     "I used to bike to work when I lived in the city."
+
+  %p Interrupted actions typically appear in the imperfect, since a duration of time can be split but a point cannot.
+  = example_sentence "Témpeste chedust-e temp che tû dorimivs.",
+                     "[ˈtɛm.pəs.tə kə.ˈdus.tə tɛm kə ˈtuː ˈdɔ.ri.mivz]",
+                     "rain fall-{past.ptcp}-be-{3sg.clitic} when {rel} {2sg.nom} sleep-{2sg.impf}",
+                     "It rained while you were asleep."
+  = example_sentence "Ys-naccedust-em cu had endre pasage a dom.",
+                     "[is.nʌ.kə.ˈdus.təm cu ˈxaːd ˈɛn.drə ˈpaː.sʌ.ʒə ʌ ˈdom]",
+                     "{med}-trip-{past.ptcp}-be-{1sg.clitic} with curb during walk to home",
+                     "I tripped on the curb while walking home."
+
+  %p With a handful of verbs such as <i>çirey</i> “want”, <i>deseźâ</i> “desire, wish”, <i>iôccey</i> “come”, or <i>pydsâ</i> “think” the imperfect tense may be used with present tense meaning. This form expresses courtesy towards the addressee.
+  = example_sentence "Çirive qaote masche iôc û lezt.",
+                     "[ˈʃi.ri.və ˈqaw.tə ˈmaːs.kə joːk uː ˈlɛst]",
+                     "want-{1sg.impf} coffee-{dim} small-{fem} with {indef.masc} milk",
+                     "I would like a small coffee with milk."
+  = example_sentence "Dimenave-t fevor dî preçê",
+                     "[di.mə.ˈnaː.vət fe.ˈvor diː prə.ˈʃeə]",
+                     "ask-{1sg.impf}-{2sg.dat} favor of please-{inf}",
+                     "I would like to ask you a favor."
+  = example_sentence "Cridive che caps il çirediccey yc mi.",
+                     "[ˈkri.di.və kə ˈkaːps il ˈʃi.rə.ˈdi.kej ik mi]",
+                     "believe-{1sg.impf} {rel} understand-{2sg.pres} {def.masc} intention {rel.def} {1sg.gen}",
+                     "I believe you know what I mean."
+
+  %p Negated imperfects, in addition to inverting the above senses, are also used to refer to events that never occurred, in contrast to denying that a specific event occurred at a specific time.
+  = example_sentence "M-viçenive mais cuse copsî inand.",
+                     "[ɪm.vi.ʃə.ˈni.və majz ˈku.sə kup.ˈsiː ˈi.nʌn]",
+                     "{neg}-see-{1sg.impf} never nothing thus before",
+                     "I have never seen such a thing before."
+  = example_sentence "Ls géntores yc mi nu-m-uddavê mais la libritâ tisme com ych ebive a frat.",
+                     "[uz ˈʒɛn.tɔ.rəz ik mi nu.mud.ˈdaː.veː majz lʌ ˈli.bri.taː ˈtiz.mə kom ik ˈe.bi.və ʌ ˈfraːt]",
+                     "{def.pl} parent-{pl} {rel.def} {1sg.gen} {neg}-{1sg.dat}-give-{3pl.impf} never {def.fem} freedom same-{fem} as {rel.def} have-{3sg.impf} to brother",
+                     "My parents never gave me the same freedom as my brother had."
+
+= section "The Perfect Tense" do
+  %p The Perfect Tense (<i>il priféct</i>) is a complex tense, consisting of a past participle and an auxiliary verb. Its formation and syntax is somewhat complicated, due to the fact that it can take four separate surface forms: full and reduced auxiliaries, and “have”- and “be”-type auxiliaries.
+  %p The choice of “have” vs “be” auxiliaries depends on the transitivity of the verb. Transitive verbs use a variant of the present tense of <i>ebê</i> “have” as the auxiliary verb, while intransitive verbs use a variant of the present tense of <i>ystâ</i> “be”. Mediopassive verbs always use <i>ystâ</i>.
+  = example_sentence "Lect-ai y libr.",
+                     "[lik.ˈtaj i ˈli.bɪr]",
+                     "read-{past.ptcp}-have-{1sg.clitic} {acc} book",
+                     "I read the book."
+  = example_sentence "Il libr ys-lect-e.",
+                     "[il ˈli.bɪr ˈis.lik.tə]",
+                     "{def.masc} book {med}-read-{past.ptcp}-be-{3sg.clitic}",
+                     "The book was read."
+  = example_sentence "Pretist-em indirid dî dom.",
+                     "[prə.ˈtis.təm ˈin.di.rid diː ˈdom]",
+                     "leave-{past.ptcp}-be-{1sg.clitic} late from house",
+                     "I left home late."
+
+  %p The choice of full vs reduced auxiliaries is more complicated, with a number of syntactic considerations. At a high level, the full auxiliary is used:
+  %ul
+    %li when the verb is negated
+    %li when the verb phrase is the first element in a subordinate clause
+
+  %p The reduced auxiliary is used:
+  %ul
+    %li in non-negated independent clauses
+    %li in non-negated subordinate clauses when the verb phrase is not the first element
+    %li often but not mandatorily in yes/no interrogatives, whether or not the verb is negated
+
+  %p Negation is the most common driving factor. In positive verbs, the reduced auxiliaries are preferred, which attach themselves to the end of the participle. When negated, the negative clitic <i>n-</i> exerts its typical pull on other clitics, forcing the verbal auxiliary to the front of the participle, where it must appear in its full form rather than its reduced form.
+  = example_sentence "Viçenust-ai y Tasire î bibliothécce.",
+                     "[ˈviʃ.nus.taj i ˈtaː.zi.rə iː ˈbi.blu.ti.kə]",
+                     "see-{past.ptcp}-have-{1sg.clitic} {acc} Tasire in library",
+                     "I saw Tasire at the library."
+  = example_sentence "N-ai mî viçenuste y Tasire î bibliothécce.",
+                     "[naj miː ˈviʃ.nus.tə i ˈtaː.zi.rə iː ˈbi.blu.ti.kə]",
+                     "{neg}-have-{1sg.pres} {neg} see-{past.ptcp}-{fem} {acc} Tasire in library",
+                     "I didn’t see Tasire at the library."
+  = example_sentence "La some yd biléts s-augmentast-e.",
+                     "[lʌ ˈsɔ.mə id ˈbi.lits ˈsawg.mən.ˈtaːs.tə]",
+                     "{def.fem} price of ticket-{pl} {med}-increase-{past.ptcp}-be-{3sg.clitic}",
+                     "The price of tickets increased."
+  = example_sentence "La some yd biléts nu-s-e augmentaste mî.",
+                     "[lʌ ˈsɔ.mə id ˈbi.lits nu.se ˈawg.mən.ˈtaːs.tə miː]",
+                     "{def.fem} price of ticket-{pl} {neg}-{med}-be-{3sg.pres} increase-{past.ptcp}-{fem} {neg}",
+                     "The price of tickets did not increase."
+
+  %p However, there is one exception to the above. With simple yes/no interrogatives, both full and reduced auxiliaries are possible with essentially the same meaning, whether the verb is negated or not. This is due to the frequent tendency to front the main verb (participle) in yes/no questions, and the postposed auxiliary automatically cliticizes to the participle in that case.
+  = example_sentence "Chemprast-es (ais chempraçs) tomats î hânut?",
+                     "[kəm.ˈpraːs.təs (ajs kəm.ˈpraːʃtʃ) ˈtɔ.mʌts iː ˈxaː.nut]",
+                     "buy-{past.ptcp}-have-{2sg.clitic} (have-{2sg.pres} buy-{past.ptcp}-{pl}) tomato-{pl} in store",
+                     "Did you buy some tomatoes at the store?"
+  = example_sentence "M-péridust-ae-l (n-ae li péridust) mî Pétre y protepiéçs?",
+                     "[ɪm.ˈpe.ri.ˈdus.tajl (naj li ˈpe.ri.ˈdust) miː ˈpe.trə i ˈprɔ.tə.ˈpjɛs]",
+                     "{neg}-lose-{past.ptcp}-have-{3sg.clitic}-{3sg.dat} ({neg}-have-{3sg.pres} {3sg.dat} lose-{past.ptcp}-{masc}) {neg} Pétre {acc} wallet",
+                     "Didn’t Pétre lose his wallet?
+
+  %p When reduced-form (clitic) auxiliaries are used, all gender marking is suppressed on the participle, so that it always appears in its masculine singular form. The verb phrase also patterns much like a simple verb, with most clitics tailing the verb:
+  %table
+    %thead
+      %tr
+        %th Clitic Positions: Perfect Tense (Reduced Auxiliary)
+      %tr
+        %td -II
+        %td -I
+        %td 0
+        %td I
+        %td II
+        %td III
+        %td IV
+    %tbody
+      %tr
+        %td Negative
+        %td Mediopass.
+        %td Verb
+        %td Auxiliary
+        %td Indir. Obj.
+        %td Dir. Obj.
+        %td Adverbial
+
+  = example_sentence "Iâ dast-ai-t-ls.",
+                     "[ˈjaː dʌs.ˈtaj.tuz]",
+                     "already give-{past.ptcp}-have-{1sg.clitic}-{2sg.dat}-{3pl.acc}",
+                     "I already gave them to you."
+  = example_sentence "Iâ prelast-esms.",
+                     "[ˈjaː prə.ˈlaːs.tə.sɪmz]",
+                     "already speak-{past.ptcp}-be-{1pl.clitic}",
+                     "We already spoke."
+  = example_sentence "Iâ ys-dast-çu-t.",
+                     "[ˈjaː ˈiz.dʌs.tʃut]",
+                     "already {med}-give-{past.ptcp}-be-{3pl.clitic}-{2sg.dat}",
+                     "They were already given to you."
+
+  %p With full-form auxiliaries, the participle must express gender and number agreement. If the auxiliary is <i>ystâ</i> (i.e., intransitive verbs), the participle agrees in gender and number with the subject of the sentence. If the auxiliary verb is <i>ebê</i> (i.e., transitive verbs), the participle must agree in gender and number with the direct object.
+  = example_sentence "Ele s-e yschetaste a sésche s sâts.",
+                     "[ˈe.lə se ˈis.kə.ˈtaːs.tə ʌ ˈsɛs.kə s ˈsaːts]",
+                     "{3sg.nom.fem} {med}-be-{3sg.pres} wake-{past.ptcp}-{fem} at six-{fem} of hour-{pl}",
+                     "She woke up at 6am."
+  = example_sentence "Ai chenasç par yn pûlgais.",
+                     "[aj kə.ˈnaːʃtʃ ˈpaːr in ˈpuːl.gajz]",
+                     "have-{1sg.pres} eat-{past.ptcp}-{pl} two-{masc} of orange-{pl}",
+                     "I ate two oranges."
+
+  %p Word order also becomes more complicated with full-form auxiliaries. The full form auxiliary must always precede the main participle, but verbal clitics are able to attach to either the auxiliary or the participle. Negative and mediopassive clitics will always attach to the auxiliary verb. Other clitics will typically attach to the beginning of the participle when negated or to the end of the participle when not negated.
+  = example_sentence "Nacciresust-ai in apartmint.",
+                     "[nʌ.ˈki.rə.ˈsus.taj in ˈaː.pʌt.mint]",
+                     "take_out_rent-{ptcp.past}-have-{1sg.clitic} {abl} apartment",
+                     "I rented an apartment from him."
+  = example_sentence "Apartmints perils ys-nacciresust-çu in.",
+                     "[ˈaː.pʌt.mints pə.ˈriwz iz.nʌ.ˈki.rə.ˈsus.tʃu in]",
+                     "apartment-{pl} several-{pl} {med}-take_out_rent-{ptcp.past}-be-{3pl.clitic} {abl}",
+                     "Several apartments were rented from him."
+  = example_sentence "N-ai l-in nacciresust mî.",
+                     "[naj lin nʌ.ˈki.rə.ˈsust miː]",
+                     "{neg}-have-{1sg.pres} {3sg.acc}-{abl} take_out_rent-{ptcp.past}-{masc} {neg}",
+                     "I did not rent it from him."
+  = example_sentence "L-apartmints ilis n-us sô in nacciresuçs mî.",
+                     "[ˈlaː.pʌt.mints ˈi.liz nus soː in nʌ.ˈki.rə.ˈsuʃtʃ miː]",
+                     "{def.pl}-apartment those-{pl} {neg}-{med} be-{3pl.pres} {abl} take_out_rent-{ptcp.past}-{pl} {neg}",
+                     "Those apartments were not rented from him."
+
+  %p However, if an adverb or other word splits the verb phrase so the auxiliary and participle are separated, then pronominal clitics will always follow the participle in all cases. The split verb phrase essentially cancels out the tendency for negative clitics to pull other clitics forward.
+  = example_sentence "N-sem li raspondust mî a mésage.",
+                     "[ɪn.səm li rʌs.ˈpon.dust miː ʌ ˈme.sʌ.ʒə]",
+                     "{neg}-be-{1sg.pres} {3sg.dat} respond-{masc} {neg} to message",
+                     "I did not respond to her message."
+  = example_sentence "N-sem a mésage raspondust-l mic, ma sim cremast-em-l pus.",
+                     "[ɪn.səm ʌ ˈme.sʌ.ʒə rʌs.ˈpon.dus.tu mik mʌ ˈsim krə.ˈmas.tə.mu ˈpus]",
+                     "{neg}-be-{1sg.pres} to message respond-{past.ptcp}-{3sg.dat} {neg} but yes call-{past.ptcp}-be-{1sg.clitic}-{3sg.dat} later",
+                     "I did not respond to her message, but I did call her later."
+
+  %p The term ‘Perfect’ is historical, since the tense derives from a Vulgar Latin present perfect construction, still used as such in several other Romance languages such as Spanish. However, as in modern French, the Tunisian perfect tense is used as a simple past—a past perfective rather than a present perfect.
+  %p The most common usage for the perfect is to indicate a single past event that occurred at a specific time—actions instead of processes.
+  = example_sentence "Chenast-ems pesc pôl çéne.",
+                     "[kə.ˈnaːs.təmz ˈpɛsk poːl ˈʃe.nə]",
+                     "eat-{past.ptcp}-have-{1pl.clitic} fish for dinner",
+                     "We had fish for dinner."
+  = example_sentence "Yschembast-ai-m ls lires pôl euros ît aéroporut.",
+                     "[ˈis.kəm.ˈbaːs.tajm uz ˈli.rəz poːl ˈew.ruz iːt ˈaj.ru.ˈpɔ.rut]",
+                     "exchange-{past.ptcp}-have-{1sg.clitic}-{1sg.dat} {def.pl} lira-{pl} for euro-{pl} in airport",
+                     "I changed my lire for euros at the airport."
+  = example_sentence "Il vend totdune s-elćast-e.",
+                     "[il ˈvɛn ˈtoː.du.nə sɛl.ˈθaːs.tə]",
+                     "{def.masc} wind suddenly {med}-lift-{past.ptcp}-be-{3sg.clitic}",
+                     "The wind suddenly picked up."
+
+  %p Sequences of events are typically expressed using the perfect. In contrast, the imperfect tends to express background information or simultaneity. The two sentences below are identical except for the use of th perfect or imperfect tenses; the perfect requires that one event follows as a result of the other.
+  = example_sentence "Yst-rnegast-em temp c ai raveglast c aiê frast y yscutr yc mi.",
+                     "[is.trɪ.nə.ˈgaːs.təm tɛm kaj rʌ.və.ˈglaːst kʌ.jeː ˈfraːst ˈjis.ku.tr ik mi]",
+                     "{med}-anger-{past.ptcp}-be-{1sg.clitic} when {rel} have-{1sg.pres} realize-{past.ptcp}-{masc} {rel} have-{3pl.pres} steal-{past.ptcp}-{masc} {acc} scooter {rel.def} {1sg.gen}",
+                     "I was angry when (as a result of) I saw my scooter was stolen."
+  = example_sentence "Yst-rnegave temp c ai raveglast c aiê frast y yscutr yc mi.",
+                     "[is.trɪ.nə.ˈgaː.və tɛm kaj rʌ.və.ˈglaːst kʌ.jeː ˈfraːst ˈjis.ku.tr ik mi]",
+                     "{med}-anger-{1sg.impf} when {rel} have-{1sg.pres} realize-{past.ptcp}-{masc} {rel} have-{3pl.pres} steal-{past.ptcp}-{masc} {acc} scooter {rel.def} {1sg.gen}",
+                     "I was angry when (at the same time) I saw my scooter was stolen."
+
+  %p A repeated event may appear in the perfect rather than the imperfect when there is an implication of completion of a set or totality. This could be thought of as a point event occurring at the end of the iteration.
+  = example_sentence "Aschetast-ai y tots emisius gime icceste.",
+                     "[ʌs.kə.ˈtaːs.taj i ˈtots ˈe.mi.sjuz ˈʒi.mə ˈi.kəs.tə]",
+                     "listen-{past.ptcp}-have-{1sg.clitic} {acc} all-{pl} broadcast-{pl} week this-{fem}",
+                     "I listened to every radio broadcast this week."
+  = example_sentence "Viejast-em î tots paiss î Iorupe.",
+                     "[vjə.ˈʒaːs.təm iː ˈtots ˈpajz iː ˈjɔ.ru.pə]",
+                     "travel-{past.ptcp}-be-{1sg.clitic} in all-{pl} country-{pl} in Europe",
+                     "I travelled to every country in Europe."
+
+  %p Typically verbs with stative meaning may appear in the perfect in order to indicate perceived completion of an action or to indicate state at a specific instant in time.
+  = example_sentence "Indast-em a gâre a uis çeicdécce n minuts.",
+                     "[in.ˈdaːs.təm ʌ ˈgaː.rə ʌ ujs ˈʃej.de.kə n ˈmi.nuts]",
+                     "walk-{past.ptcp}-be-{1sg.clitic} to train_station in {indef.pl} fifteen-{fem} of minute-{pl}",
+                     "I walked the train station in fifteen minutes."
+  = example_sentence "Come ystast-e la clase c ti?",
+                     "[ˈkɔ.mə is.ˈtaːs.tə lʌ ˈklaː.sə k ti]",
+                     "how be-{past.ptcp}-be-{3sg.clitic} {def.fem} class {rel.def} {2sg.gen}",
+                     "How was your class?"
+
+= section "The Preterite Tense" do
+  %p The Preterite Tense (<i>il pritérit</i>) is a simple tense typically representing a past perfect. While it once was widely used as a simple past in Old Tunisian, in the modern language its role is marginal. A distinction must also be made between its usage in the spoken and written language.
+  %p In written Tunisian, the preterite continues to be used as a simple past in narrative contexts, such as in stories, newspapers, books, and legal documents. In this context it serves essentially the same function as the perfect tense does in the spoken language, and the choice of preterite versus perfect is largely stylistic. This situation is comparable to the use of the cognate <i>passé simple</i> conjugation in French, and indeed was likely influenced by it; the 15th through 18th actually saw an increase in the use of the preterite in Tunisian texts.
+  = example_sentence "Sérig s-elćs, inds pôl case, ys-frims coite tesure e mirs âfure.",
+                     "[ˈse.rig ˈsɛlθs inz poːl ˈkaː.sə ˈis.frimz ˈkoj.tə tə.ˈsu.rə e ˈmirz ˈaː.fu.rə]",
+                     "Sérig {med}-get_up-{3sg.pret}, walk-{3sg.pret} around room, {med}-stop-{3sg.pret} beside window and look-{3sg.pret} to_outside",
+                     "Sérig got up, paced around the room, stopped by the window, and looked out."
+  = example_sentence "Il raprésental freiccisî crifs il raspondey a uis dufts temp dimenâ.",
+                     "[ir rʌ.ˈpre.sən.ˈtaːl frej.ki.ˈziː ˈkrifs ir rʌs.ˈpon.dej a ujz ˈdufts tɛm di.mə.ˈnaː]",
+                     "{def.masc} representative French-{masc} refuse-{3sg.pret} {def.masc} respond-{inf} to {indef.pl} doubt-{pl} upon ask-{inf}",
+                     "The French representative refused to take questions when asked."
+  = example_sentence "La vie d fê prime endre Tenés e Dsaîr s-ipréts a l-ên 1884.",
+                     "[lʌ ˈvi.jə t ˈfeə ˈpri.mə ˈɛn.drə tə.ˈnɛs e ˈdzaː.jir si.ˈprɛts ʌ ˈleən 1884]",
+                     "{def.fem} way of iron first-{fem} between Tunis and Algiers {med}-open-{3sg.pret} in {def.masc}-year 1884",
+                     "The first railroad between Tunis and Algiers opened in 1884."
+  = example_sentence "Disértminds yt trâspreture tûrneis duirrî trése d gims.",
+                     "[di.ˈzer.minz it ˈtraːs.prə.ˈtu.rə ˈtuːr.nejz ˈdujr.riː ˈtre.sə d ˈʒimz]",
+                     "strike-{pl} of transportation alternating-{pl} last-{3pl.pret} three-{fem} of week-{pl}",
+                     "Rolling transportation strikes lasted for three weeks."
+
+  %p In the spoken language, the preterite is much more restricted. As a simple past, it remains in common use with verbs of speech. In particular, the preterite is preferred to the perfect with direct quotations when the verb follows the quotation (although the perfect remains preferred when the verb comes before the quotation).
+  = example_sentence "“Nu-l-usc mî” dics ele.",
+                     "[ˈnu.lusk miː ˈdiks ˈe.lə]",
+                     "“{neg}-{3sg.acc}-know-{1sg.pres} {neg}” say-{3sg.pret} {3sg.fem.nom}",
+                     "“I don’t know” she said."
+  = example_sentence "Ele dict-ae “Nu-l-usc mî”.",
+                     "[ˈe.lə dik.ˈtaj ˈnu.lusk miː]",
+                     "{3sg.fem.nom} say-{past.ptcp}-have-{3sg.clitic} “{neg}-{3sg.acc}-know-{1sg.pres} {neg}”",
+                     "She said “I don’t know”. (perfect)"
+  = example_sentence "“Féccivs mi sême pôl tredivure” raspendéts iô.",
+                     "[ˈfe.kivz mi ˈseə.mə poːl trə.ˈdi.vu.rə rʌs.pən.ˈdɛts ˈjɔə]",
+                     "“make-{2sg.impf} {1sg.dat} forgive.{gerund} for delay” respond-{1sg.pret} {1sg.nom}",
+                     "“Sorry I'm late” I replied."
+
+  %p The preterite is also commonly used with a handful of verbs denoting life events, such as <i>naschey</i> “be born”, <i>ys-cunegâ</i> “marry”, and <i>ys-morey</i> “die”, that are not recurring or arbitrary events but that tend to happen once at a fixed date. This is likely an extension of the narrative use of the preterite in the written language. In contrast, the perfect will continue to be used when referring to such events in a more general manner, such as with indefinite agents.
+  = example_sentence "Vecpatr ys-morus temp ch ebivê-m seft d embals.",
+                     "[ˈvɛk.pʌ.tr is.ˈmɔ.rus tɛm k ˈe.bi.veːm ˈsɛft d ˈɛm.bʌlz]",
+                     "grandfather {med}-die-{pret.3sg} when {rel} have-{3pl.impf}-{1sg.dat} seven-{masc} of year-{pl}",
+                     "My grandfather died when I was seven."
+  = example_sentence "Nass a l-ên 1990.",
+                     "[ˈnaːs ʌ ˈleən 1990]",
+                     "be_born-{1sg.pret} in {def.masc}-year 1990",
+                     "I was born in 1990."
+  = example_sentence "Ls fils yc mi ls par nesrô a nuvambr.",
+                     "[us ˈfilz ik mi us ˈpaːr nəs.ˈrɔə ʌ nu.ˈvaːm.bɪr]",
+                     "{def.pl} child-{pl} {rel.def} {1sg.gen} {def.pl} two-{masc} be_born-{3pl.pret} in November",
+                     "My children were both born in November."
+  = example_sentence "Cots d ômnes nast-çu l-ên îtor?",
+                     "[ˈkots d ˈɔəm.nəz ˈnaːs.tʃu ˈleən ˈiː.tor]",
+                     "how_many-{pl} of people-{pl} be_born-{past.ptcp}-be-{3pl} {def.masc}-year previous?",
+                     "How many people were born last year? (perfect)"
+
+  %p In spoken Tunisian, the preterite does have one use that does not exist in the written language: it may mark an event that either happened in the immediate past, or will happen in the immediate future. It typically accompanies such adverbs as [adesso]XXX “just (now)”, [ara]XXX “just about”, or [directly]XXX “in a moment”. This is the only usage in colloquial speech that remains an open class (i.e., able to be used with arbitrary verbs rather than the narrow set described above).
+
+  %p XXX Her train just arrived from Algiers.
+  %p XXX I just saw Inêse outside.
+  %p XXX It will be finished in just a moment.
+  %p XXX Are you ready yet?
+
+  %p Due to the limited manner in which the preterite is used in modern Tunisian, it appears almost exclusively in the first and third persons (since narration in the second person is rare).
+
+= section "The Future Tense" do
+  %p XXX
+
+= section "The Subjunctive Mood" do
+  %p XXX
+
+= section "The Imperative Mood" do
+  %p XXX
+
+= section "Negation" do
+  %p XXX
+
+= section "Passive Voice" do
+  %p XXX
+
+= section "Mediopassive Voice" do
+  %p XXX
+
+= section "Stative Verbs" do
+  %p XXX
+
+= section "Infinitives" do
+  %p XXX
+
+= section "Participles" do
+  %p XXX
