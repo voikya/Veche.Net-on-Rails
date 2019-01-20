@@ -97,7 +97,7 @@ module Lexicons
 
     def add_mediopassive_clitic(string, form)
       if form == :_imperative_second_singular || form == :_imperative_second_plural
-        string + "-s"
+        string.split(", ").map { |s| s + "-s" }.join(", ")
       else
         string.split(", ").map do |s|
           case s[0]

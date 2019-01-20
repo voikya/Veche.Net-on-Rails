@@ -43,14 +43,15 @@
       %td= m.present_first_plural unless m.third_person_only?
       %td= m.present_second_plural unless m.third_person_only?
       %td= m.present_third_plural
-    %tr
-      %th Imperfect
-      %td= m.imperfect_first_singular unless m.third_person_only?
-      %td= m.imperfect_second_singular unless m.third_person_only?
-      %td= m.imperfect_third_singular
-      %td= m.imperfect_first_plural unless m.third_person_only?
-      %td= m.imperfect_second_plural unless m.third_person_only?
-      %td= m.imperfect_third_plural
+    - unless m.stative?
+      %tr
+        %th Imperfect
+        %td= m.imperfect_first_singular unless m.third_person_only?
+        %td= m.imperfect_second_singular unless m.third_person_only?
+        %td= m.imperfect_third_singular
+        %td= m.imperfect_first_plural unless m.third_person_only?
+        %td= m.imperfect_second_plural unless m.third_person_only?
+        %td= m.imperfect_third_plural
     %tr
       %th Preterite
       %td= m.preterite_first_singular unless m.third_person_only?
@@ -83,28 +84,33 @@
       %td= m.perfect_simple_first_plural unless m.third_person_only?
       %td= m.perfect_simple_second_plural unless m.third_person_only?
       %td= m.perfect_simple_third_plural
+    - unless m.stative?
+      %tr
+        %th Future I
+        %td= m.future_simple_first_singular unless m.third_person_only?
+        %td= m.future_simple_second_singular unless m.third_person_only?
+        %td= m.future_simple_third_singular
+        %td= m.future_simple_first_plural unless m.third_person_only?
+        %td= m.future_simple_second_plural unless m.third_person_only?
+        %td= m.future_simple_third_plural
     %tr
-      %th Future I
-      %td= m.future_simple_first_singular unless m.third_person_only?
-      %td= m.future_simple_second_singular unless m.third_person_only?
-      %td= m.future_simple_third_singular
-      %td= m.future_simple_first_plural unless m.third_person_only?
-      %td= m.future_simple_second_plural unless m.third_person_only?
-      %td= m.future_simple_third_plural
-    %tr
-      %th Future II
+      - if m.stative?
+        %th Future
+      - else
+        %th Future II
       %td= m.future_complex_first_singular unless m.third_person_only?
       %td= m.future_complex_second_singular unless m.third_person_only?
       %td= m.future_complex_third_singular
       %td= m.future_complex_first_plural unless m.third_person_only?
       %td= m.future_complex_second_plural unless m.third_person_only?
       %td= m.future_complex_third_plural
-    %tr
-      %th Imperative
-      %td
-      %td= m.imperative_second_singular unless m.third_person_only?
-      %td
-      %td
-      %td= m.imperative_second_plural unless m.third_person_only?
-      %td
-      %td
+    - unless m.stative?
+      %tr
+        %th Imperative
+        %td
+        %td= m.imperative_second_singular unless m.third_person_only?
+        %td
+        %td
+        %td= m.imperative_second_plural unless m.third_person_only?
+        %td
+        %td

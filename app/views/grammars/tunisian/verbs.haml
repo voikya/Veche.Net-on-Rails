@@ -418,7 +418,7 @@
 
       %p With these special graded forms in mind, it then becomes possible to conjugate these verbs regularly. Shown below is <i>dremí</i>:
       = render 'present_tense',
-        :verb          => {:tun => "dremî", :eng => "sleep"},
+        :verb          => {:tun => "dremí", :eng => "sleep"},
         :forms         => %w(dorim dorums dorum dremims dremits dorumió),
         :pronunciation => %w(du.ˈriːm du.ˈruːmz du.ˈruːm drə.ˈmiːmz drə.ˈmits ˈdɔ.ru.mjoː)
 
@@ -636,7 +636,7 @@
     = section "Stems Ending in /j/" do
       %p Stems with final /j/ are largely regular in the imperfect. The only irregularity is that this /j/ is dropped before the first person plural and second person plural endings, which always begin with /i/ already.
       = render 'imperfect_tense',
-        :verb          => {:tun => "źeliâ", :eng => "insult"},
+        :verb          => {:tun => "źeliá", :eng => "insult"},
         :forms         => %w(źeliave źeliavs źeliave źelivams źelivats źeliavé),
         :pronunciation => %w(ðə.ˈljaː.və ðə.ˈljaːvz ðə.ˈljaː.və ðə.ˈli.vaːmz ðə.ˈli.vʌts ðə.ˈljaː.veː)
 
@@ -655,7 +655,7 @@
         :pronunciation => %w(ˈvi.ʃə.ni.və ˈvi.ʃə.nivz ˈvi.ʃə.ni.və ˈvi.ʃə.ni.vaːmz ˈvi.ʃə.ni.vʌts ˈvi.ʃə.ni.veː)
 
     = section "Stems Containing Velar + Front Vowel" do
-      %p Velar + front vowel sequences in stems like <i>chyntá</i> are completely regular in the imperfect; since the stress never falls on the stem, the palatalizing environment never appears. On the other hand, in Conjugations III and IV, where the stress can fall on the first syllable, the same sort of alternation could be possible in theory; in practice, however, all such verbs have undergone paradigmatic levelling and now appear with the fricative in all forms, as in <i>jestí</i> “be ready” (older <i>gestî</i>).
+      %p Velar + front vowel sequences in stems like <i>chyntá</i> are completely regular in the imperfect; since the stress never falls on the stem, the palatalizing environment never appears. On the other hand, in Conjugations III and IV, where the stress can fall on the first syllable, the same sort of alternation could be possible in theory; in practice, however, all such verbs have undergone paradigmatic levelling and now appear with the fricative in all forms, as in <i>jestí</i> “be ready” (older <i>gestí</i>).
       %p In Conjugations II, III and IV, stem-final palatalization freely appears throughout the paradigm.
       = render 'imperfect_tense',
         :verb          => {:tun => "leçé", :eng => "shine"},
@@ -1131,7 +1131,7 @@
           %td= form "dibs", "[ˈdibz]"
           %td= form "vinds", "[ˈvinz]"
           %td= form "chenèscs", "[kə.ˈnɛsks]"
-        %td
+        %tr
           %th 3Sg <i>eu/ele</i>
           %td= form "prel", "[ˈpreːl]"
           %td= form "dib", "[ˈdib]"
@@ -1153,7 +1153,7 @@
           %th 3Pl <i>els</i>
           %td= form "prèlé", "[pri.ˈleə]"
           %td= form "dibé", "[di.ˈbeə]"
-          %td= form "vindê", "[ˈvin.deː]"
+          %td= form "vindé", "[ˈvin.deː]"
           %td= form "chenèsché", "[kə.ˈnɛs.keː]"
 
     %p The past subjunctive is always regular, and is formed following the same rules as the perfect indicative, with the exception that the auxiliary appears in the present subjunctive and cannot appear in a bound form. Shown below are the past subjunctive forms of the intransitive verb <i>uní</i> “go” and the transitive verb <i>yscribey</i> “write”:
@@ -1618,15 +1618,15 @@
   %p The perfect and future tenses operate as expected, except that they must appear in the middle voice in the perfect.
   = render 'perfect_tense',
     :verb        => {:tun => "rosí", :eng => "appear red, blush"},
-    :independent => ["sem yst-rosit(e)", "es yst-rosit(e)", "e st-rosit(e)", "sems yst-rosits", "esç yst-rosits", "só st-rosits"],
+    :independent => ["yst-sem rosit(e)", "s-es rosit(e)", "s-e rosit(e)", "yst-sems rosits", "s-esç rosits", "yst-só rosits"],
     :bound       => ["yst-rosit-em", "yst-rosit-es", "yst-rosit-e", "yst-rosit-esms", "yst-rosit-esç", "yst-rosit-çu"],
-    :independent_pronunciation => ["səm is.ˈtrɔ.sit(ə)", "ɛs is.ˈtrɔ.sit(ə)", "ɛs.ˈtrɔ.sit(ə)", "səmz is.ˈtrɔ.sits", "ɛstʃ is.ˈtrɔ.sits", "soːs.ˈtrɔ.sits"],
+    :independent_pronunciation => ["ˈist.səm ˈrɔ.sit(ə", "ˈsɛs ru.sit(ə)", "ˈse ru.sit(ə", "ˈist.səmz ˈrɔ.sits", "ˈsɛstʃ ru.sits", "ist.ˈsɔə ˈrɔ.sits"],
     :bound_pronunciation       => ["is.ˈtrɔ.si.təm", "is.ˈtrɔ.si.təs", "is.ˈtrɔ.si.tə", "is.ˈtrɔ.si.tə.sɪmz", "is.ˈtrɔ.si.təstʃ", "is.ˈtrɔ.si.tʃu"]
   = render 'perfect_tense',
     :verb        => {:tun => "jèstí", :eng => "be ready"},
-    :independent => ["sem ys-jèstit(e)", "es ys-jèstit(e)", "e s-jèstit(e)", "sems ys-jèstits", "esç ys-jèstits", "só s-jèstits"],
+    :independent => ["yst-sem jèstit(e)", "s-es jèstit(e)", "s-e jèstit(e)", "yst-sems jèstits", "s-esç jèstits", "yst-só jèstits"],
     :bound       => ["ys-jèstit-em", "ys-jèstit-es", "ys-jèstit-e", "ys-jèstit-esms", "ys-jèstit-esç", "ys-jèstit-çu"],
-    :independent_pronunciation => ["səm iz.ˈʒɛs.tit(ə)", "ɛs iz.ˈʒɛs.tit(ə)", "ɛz.ˈʒɛs.tit(ə)", "səmz iz.ˈʒɛs.tits", "ɛstʃ iz.ˈʒɛs.tits", "soːz.ˈʒɛs.tits"],
+    :independent_pronunciation => ["ˈist.səm ˈʒɛs.tit(ə)", "ˈsɛz ʒis.tit(ə)", "ˈse ʒis.tit(ə)", "ˈist.səmz ˈʒɛs.tits", "ist.ˈsɔə ˈʒɛs.tits"],
     :bound_pronunciation       => ["iz.ˈʒɛs.ti.təm", "iz.ˈʒɛs.ti.təs", "iz.ˈʒɛs.ti.tə", "iz.ˈʒɛs.ti.tə.sɪmz", "iz.ˈʒɛs.ti.təstʃ", "iz.ˈʒɛs.ti.tʃu"]
   = render 'future_tense',
     :verb          => {:tun => "rosí", :eng => "appear red, blush"},
@@ -1639,7 +1639,7 @@
 
   %p Perhaps somewhat surprisingly, the sole inflected finite form is the preterite. In the first and second persons, stative verbs follow the regular preterite paradigm. In the third person, the form used is always the strong stem + <i>-s</i>, for both singular and plural. Note, however, that the boundary behavior in the third person is more typical of adjectives than of verbs, such as how st+s collapses into çs in the third person in <i>jeçs</i> “he/she/it was ready”.
   = render 'preterite_tense',
-    :verb          => {:tun => "rosî", :eng => "appear red, blush"},
+    :verb          => {:tun => "rosí", :eng => "appear red, blush"},
     :forms         => %w(resís resís ross resírims resírisç ross),
     :pronunciation => ["rə.ˈsiːs", "rə.ˈsiːs", "ˈroz", "rə.ˈsiː.riːmz", "rə.ˈsi.ristʃ", "ˈroz"]
   = render 'preterite_tense',

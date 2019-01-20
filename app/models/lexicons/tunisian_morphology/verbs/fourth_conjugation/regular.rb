@@ -1,10 +1,10 @@
 module Morphology
   module Tunisian
     module Verbs
-      module ThirdConjugation
+      module FourthConjugation
         module Regular
           def conjugation
-            "Conjugation III"
+            "Conjugation IV"
           end
 
           def subtype
@@ -12,7 +12,7 @@ module Morphology
           end
 
           def _infinitive_singular
-            strong + "ey"
+            strong + "í"
           end
 
           def _infinitive_plural
@@ -32,15 +32,15 @@ module Morphology
           end
 
           def _past_participle_masculine
-            strong + "ut"
+            strong + "it"
           end
 
           def _past_participle_feminine
-            strong + "ute"
+            strong + "ite"
           end
 
           def _past_participle_plural
-            strong + "uts"
+            strong + "its"
           end
 
           def _present_first_singular
@@ -56,15 +56,15 @@ module Morphology
           end
 
           def _present_first_plural
-            strong + "ms"
+            weak + "ims"
           end
 
           def _present_second_plural
-            strong + "ts"
+            weak + "its"
           end
 
           def _present_third_plural
-            strong + "ó"
+            strong + "ió"
           end
 
           def _imperfect_first_singular
