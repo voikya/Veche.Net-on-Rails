@@ -1,0 +1,28 @@
+%table.adjectives
+  %thead
+    %tr
+      %th.morphology-info{:colspan => 3}
+        #{m.declension} (Subtype #{m.subtype})
+    %tr
+      %th
+      %th Masculine
+      %th Feminine
+  %tbody
+    - unless m.pl_only?
+      %tr
+        %th Singular
+        %td= m.masculine_singular
+        %td= m.feminine_singular
+    - unless m.sg_only?
+      %tr
+        %th Plural
+        %td{:colspan => 2}= m.plural
+    - if m.preposed_variants?
+      %tr
+        %th{:colspan => 3} Preposed Variants
+      %tr
+        %th Singular
+        %td{:colspan => 2}= m.preposed_singular
+      %tr
+        %th Plural
+        %td{:colspan => 2}= m.preposed_plural
