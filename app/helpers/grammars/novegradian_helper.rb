@@ -114,7 +114,7 @@ module Grammars
       capture_haml do
         haml_tag 'table.textgloss' do
           haml_tag :tr do
-            haml_tag :td, "(#{@example_index})"
+            haml_tag 'td.index', @example_index.to_s
             haml_tag :td do
               dialog.each_with_index do |d, idx|
                 haml_tag 'span.native', "#{d[:speaker]}: #{d[:sentence].html_safe}"
