@@ -144,7 +144,9 @@ module Morphology
           private
 
           def palatal_stem?
-            stem_transliterated[-1] == "i" || stem_transliterated[-1] == "j"
+            stem_transliterated[-1] == "i" ||
+              stem_transliterated[-2..-1] == "ij" ||
+              stem_transliterated[-2..-1] == "íj"
           end
         end
       end
