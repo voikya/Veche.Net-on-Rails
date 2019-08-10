@@ -13,6 +13,7 @@
     if nextProps.slug isnt @props.slug
       @setState
         content: nextProps.data.value
+        flags: new Set(nextProps.data.value?.flags?.split(' '))
         html: null
       Lexicon.API.getMorphology(nextProps.slug) unless nextProps.isEditing
     else
