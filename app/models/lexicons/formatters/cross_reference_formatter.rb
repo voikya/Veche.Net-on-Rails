@@ -27,7 +27,13 @@ module Lexicons
 
       def as_json
         if @content
-          @content.map do |xref|
+          @content.sort_by do |xref|
+            @content_class.tokenize(xref.send(@content_class.indexed_column).serialize).map do |character|
+              next if character.unweighted?
+
+              [character.primary_order, character.secondary_order, character.tertiary_order]
+            end
+          end.map do |xref|
             {
               :slug => xref.slug,
               :summary => xref.definition.summary
