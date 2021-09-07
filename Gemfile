@@ -38,7 +38,7 @@ gem 'uglifier',               '4.1.20'
 gem 'haml',                   '5.0.4'
 
 group :development do
-  gem 'better_errors',        '2.5.1'
+  gem 'better_errors',        '2.8.0'
   gem 'binding_of_caller',    '0.8.0'
   gem 'capistrano',           '3.6.1'
   gem 'capistrano-passenger', '0.2.0'
