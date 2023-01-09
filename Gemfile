@@ -24,7 +24,7 @@ gem 'RubySunrise',            '0.3.1'
 gem 'nokogiri',               '1.10.8'
 gem 'dropbox-sdk-v2',         '0.0.3'
 gem 'whenever',               '0.10.0'
-gem 'inline_svg',             '1.5.2'
+gem 'inline_svg',             '1.7.2'
 
 # Monitoring
 gem 'newrelic_rpm',           '4.8.0.341'
